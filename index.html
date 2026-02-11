@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSAIC | Sonic Rebellion</title>
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --red: #dc2626;
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .mono { font-family: 'Space Mono', monospace; }
+        
+        /* Textura de fondo sutil */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            opacity: 0.1; pointer-events: none; z-index: 999;
+        }
+
+        /* HEADER */
+        .main-nav {
+            position: sticky; top: 0; z-index: 1000;
+            background: var(--bg);
+            border-bottom: 2px solid white;
+            padding: 15px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        .logo {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.8rem; font-weight: 800; font-style: italic;
+            letter-spacing: -2px; cursor: pointer;
+        }
+        .logo span { color: var(--red); }
+
+        .nav-links a {
+            color: #71717a; text-decoration: none;
+            font-family: 'Space Mono'; font-size: 11px;
+            text-transform: uppercase; font-weight: 700; margin: 0 15px;
+        }
+        .nav-links a:hover { color: white; }
+
+        .terminal-btn {
+            background: white; color: black; border: 2px solid black;
+            padding: 8px 15px; font-family: 'Space Mono'; font-size: 10px;
+            font-weight: 900; text-transform: uppercase; cursor: pointer;
+        }
+
+        /* RELEASES BAR (Spotify mini) */
+        .releases-bar { background: #111; padding: 20px 40px; border-bottom: 4px solid var(--red); }
+        .section-tag { color: var(--red); font-family: 'Space Mono'; font-size: 11px; font-weight: 900; margin-bottom: 15px; display: flex; align-items: center; }
+        .red-dot { width: 8px; height: 8px; background: var(--red); margin-right: 10px; }
+
+        .releases-scroll { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 10px; }
+        .release-item { min-width: 130px; }
+        .img-container { position: relative; aspect-ratio: 1/1; background: #222; margin-bottom: 8px; overflow: hidden; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.4s; }
+        .release-item:hover img { filter: grayscale(0); transform: scale(1.05); }
+
+        .spotify-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4); display: flex; justify-content: center; align-items: center;
+            opacity: 0; transition: 0.3s;
+        }
+        .img-container:hover .spotify-overlay { opacity: 1; }
+
+        .spotify-mini-btn {
+            background: var(--red); color: white;
+            width: 26px; height: 26px; /* Icono más pequeño */
+            border-radius: 50%; display: flex; justify-content: center; align-items: center;
+        }
+        .spotify-mini-btn svg { width: 14px; }
+        .release-item h4 { font-family: 'Space Mono'; font-size: 9px; text-transform: uppercase; }
+
+        /* HERO GRID */
+        .content-wrapper { max-width: 1300px; margin: 0 auto; padding: 40px 20px; }
+        .hero-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; height: 500px; margin-bottom: 60px; }
+        .hero-main { position: relative; border: 4px solid white; overflow: hidden; background: #222; }
+        .hero-main img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); opacity: 0.7; }
+        
+        .hero-content { position: absolute; bottom: 40px; left: 40px; z-index: 10; }
+        
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-3px, 2px); }
+            40% { transform: translate(3px, -2px); }
+            100% { transform: translate(0); }
+        }
+        .glitch-title { font-family: 'Syne'; font-size: 5rem; line-height: 0.8; cursor: pointer; }
+        .glitch-title:hover { animation: glitch 0.3s infinite; text-shadow: 3px 0 var(--red), -3px 0 #00ff00; }
+        .stencil-tag { background: var(--red); padding: 3px 10px; font-size: 11px; font-weight: 900; display: inline-block; margin-bottom: 10px; }
+
+        .hero-side { display: flex; flex-direction: column; gap: 20px; }
+        .side-note { flex: 1; background: #111; border: 2px solid #333; padding: 25px; display: flex; flex-direction: column; justify-content: flex-end; transition: 0.3s; }
+        .side-note:hover { border-color: var(--red); }
+        .side-note span { font-family: 'Syne'; color: var(--red); font-size: 1.5rem; }
+        .side-note h4 { font-family: 'Space Mono'; font-size: 12px; text-transform: uppercase; margin-top: 10px; }
+
+        /* NOTICIAS 3 COLUMNAS */
+        .news-3-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 80px; }
+        .news-card { cursor: pointer; }
+        .n-img { height: 190px; background: #222; overflow: hidden; margin-bottom: 15px; border: 1px solid #333; }
+        .n-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.4s; }
+        .news-card:hover img { filter: grayscale(0); }
+        .n-cat { font-family: 'Space Mono'; color: var(--red); font-size: 10px; font-weight: 700; text-transform: uppercase; }
+        .news-card h4 { font-family: 'Syne'; font-size: 1.3rem; margin: 10px 0; line-height: 1; }
+        .news-card p { font-family: 'Space Mono'; font-size: 11px; color: #888; }
+
+        /* SECCIÓN MANDA TU RUIDO (ESTILO EXACTO A IMAGEN) */
+        .ruido-cta {
+            background-color: white;
+            color: black;
+            padding: 60px 80px;
+            border: 10px solid black;
+            box-shadow: 25px 25px 0px var(--red);
+            margin: 80px 0;
+            position: relative;
+        }
+        .radar-label {
+            background: black; color: white;
+            padding: 4px 12px; font-family: 'Space Mono';
+            font-size: 10px; font-weight: 900;
+            display: inline-block; text-transform: uppercase;
+            margin-bottom: 30px;
+            transform: rotate(-1deg);
+        }
+        .ruido-cta h2 {
+            font-family: 'Syne'; font-size: 6.5rem;
+            line-height: 0.8; font-weight: 900;
+            font-style: italic; text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        .ruido-cta h2 span { color: var(--red); }
+        
+        .cta-description {
+            border-left: 8px solid black;
+            padding-left: 25px;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+        .cta-description p {
+            font-family: 'Space Mono'; font-weight: 700;
+            font-size: 1.2rem; line-height: 1.1; text-transform: uppercase;
+        }
+        .cta-buttons { display: flex; gap: 20px; }
+        .btn-black {
+            background: black; color: white; border: none;
+            padding: 18px 35px; font-family: 'Space Mono';
+            font-weight: 900; font-size: 12px; cursor: pointer;
+            box-shadow: 6px 6px 0px #ccc; text-transform: uppercase;
+        }
+        .btn-outline {
+            background: transparent; color: black; border: 4px solid black;
+            padding: 18px 35px; font-family: 'Space Mono';
+            font-weight: 900; font-size: 12px; cursor: pointer;
+            box-shadow: 6px 6px 0px #ccc; text-transform: uppercase;
+        }
+
+        /* FOOTER */
+        .fanzine-footer {
+            background: #000; border-top: 8px solid var(--red);
+            padding: 80px 40px 40px;
+        }
+        .f-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; max-width: 1300px; margin: 0 auto 60px; }
+        .f-brand h2 { font-family: 'Syne'; font-size: 3rem; margin-bottom: 10px; font-style: italic; }
+        .f-brand p { font-family: 'Space Mono'; font-size: 12px; color: #555; line-height: 1.5; text-transform: uppercase; font-weight: 700; }
+        .f-col h5 { font-family: 'Space Mono'; color: var(--red); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
+        .f-col a { display: block; color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; margin-bottom: 12px; text-transform: uppercase; font-weight: 700; }
+        .f-col a:hover { color: white; padding-left: 5px; transition: 0.2s; }
+        
+        .f-bottom {
+            max-width: 1300px; margin: 0 auto; border-top: 1px solid #222; padding-top: 30px;
+            display: flex; justify-content: space-between;
+            font-size: 10px; color: #444; font-family: 'Space Mono'; text-transform: uppercase;
+        }
+
+        @media (max-width: 900px) {
+            .hero-grid, .news-3-col, .f-top { grid-template-columns: 1fr; }
+            .ruido-cta h2 { font-size: 3.5rem; }
+            .hero-grid { height: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="main-nav">
+        <h1 class="logo">MUSAIC<span>.</span></h1>
+        <div class="nav-links">
+            <a href="#">Música</a>
+            <a href="#">Escena</a>
+            <a href="#" style="color: #00ff00;">BYTEMOS</a>
+            <a href="#">Cultura</a>
+            <a href="#">Cine</a>
+        </div>
+        <button class="terminal-btn">Terminal [01]</button>
+    </nav>
+
+    <section class="releases-bar">
+        <div class="section-tag"><span class="red-dot"></span> NUEVOS DECIBELIOS</div>
+        <div class="releases-scroll">
+            <div class="release-item">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?auto=format&fit=crop&q=80&w=400">
+                    <div class="spotify-overlay">
+                        <div class="spotify-mini-btn">
+                            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm5.508 17.302c-.216.354-.673.466-1.026.25-2.848-1.74-6.433-2.133-10.654-1.168-.404.093-.812-.162-.904-.565-.093-.404.162-.812.565-.904 4.634-1.06 8.583-.614 11.77 1.334.352.215.465.673.249 1.026v.027z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <h4>Eternal Sunshine</h4>
+            </div>
+            <div class="release-item">
+                <div class="img-container"><img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&q=80&w=400"></div>
+                <h4>Blue Lips</h4>
+            </div>
+            <div class="release-item">
+                <div class="img-container"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=400"></div>
+                <h4>Everything I Thought</h4>
+            </div>
+            <div class="release-item">
+                <div class="img-container"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=400"></div>
+                <h4>Las Mujeres Ya No Lloran</h4>
+            </div>
+        </div>
+    </section>
+
+    <main class="content-wrapper">
+        <section class="hero-grid">
+            <div class="hero-main">
+                <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=1200">
+                <div class="hero-content">
+                    <span class="stencil-tag">DESTACADO</span>
+                    <h2 class="glitch-title">EL RENACIMIENTO<br>VISUAL</h2>
+                </div>
+            </div>
+            <div class="hero-side">
+                <div class="side-note">
+                    <span>02</span>
+                    <h4>Terror en 8-bits: Gamers y lo Analógico</h4>
+                </div>
+                <div class="side-note">
+                    <span>03</span>
+                    <h4>El Under Argentino: Revolución Post-Punk</h4>
+                </div>
+            </div>
+        </section>
+
+        <h3 class="news-3-col" style="grid-column: 1/-1; font-family: 'Syne'; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px;">ÚLTIMO RUIDO</h3>
+        <section class="news-3-col">
+            <article class="news-card">
+                <div class="n-img"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=600"></div>
+                <span class="n-cat">Cine</span>
+                <h4>Cine-Sónico: Bandas sonoras de síntesis</h4>
+            </article>
+            <article class="news-card">
+                <div class="n-img"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=600"></div>
+                <span class="n-cat">Bytemos</span>
+                <h4>Cyberpunk Local: Modding y resistencia</h4>
+            </article>
+            <article class="news-card">
+                <div class="n-img"><img src="https://images.unsplash.com/photo-1514525253361-bee8d48700df?auto=format&fit=crop&q=80&w=600"></div>
+                <span class="n-cat">Escena</span>
+                <h4>Sótanos de Buenos Aires: El nuevo Under</h4>
+            </article>
+        </section>
+
+        <!-- SECCIÓN MANDA TU RUIDO -->
+        <section class="ruido-cta">
+            <span class="radar-label">Radar de Bandas Independientes</span>
+            <h2>MANDA TU <br><span>RUIDO.</span></h2>
+            <div class="cta-description">
+                <p>¿Tu banda está haciendo algo diferente? Buscamos el próximo grito del under.</p>
+            </div>
+            <div class="cta-buttons">
+                <button class="btn-black">Mandar Estreno</button>
+                <button class="btn-outline">Solicitar Entrevista</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fanzine-footer">
+        <div class="f-top">
+            <div class="f-brand">
+                <h2 class="logo">MUSAIC<span>.</span></h2>
+                <p>Un diario ruidoso para mentes distorsionadas. Música, Cultura y Cine filtrados a través del lente del under independiente.</p>
+            </div>
+            <div class="f-col">
+                <h5>FANZINE</h5>
+                <a href="#">Quiénes Somos</a>
+                <a href="#">Terminal</a>
+                <a href="#">Contacto</a>
+            </div>
+            <div class="f-col">
+                <h5>REDES</h5>
+                <a href="#">Instagram</a>
+                <a href="#">Spotify</a>
+                <a href="#">Twitter / X</a>
+            </div>
+        </div>
+        <div class="f-bottom">
+            <span>© 2026 MUSAIC V2.5</span>
+            <span>EL SILENCIO ES RUIDO QUE NO SE ATREVE A SER ESCUCHADO</span>
+        </div>
+    </footer>
+
+</body>
+</html>

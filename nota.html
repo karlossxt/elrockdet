@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYTEMOS | Tercer Mundo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #080808;
+            --neon-green: #00ff00;
+            --red: #dc2626;
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Space Mono', monospace;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO CRT / SCANLINES (Líneas de la pantalla vieja) */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(
+                rgba(18, 16, 16, 0) 50%, 
+                rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03)
+            );
+            z-index: 1000;
+            background-size: 100% 3px, 3px 100%;
+            pointer-events: none;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; position: relative; }
+
+        /* BOTÓN CERRAR */
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--red); color: white;
+            padding: 15px 25px; font-weight: 900;
+            border: none; cursor: pointer;
+            box-shadow: 6px 6px 0px white;
+            z-index: 1100; font-family: 'Space Mono';
+        }
+
+        /* HEADER IMAGEN */
+        .post-header { position: relative; margin-bottom: 60px; }
+        .img-frame {
+            border: 6px solid var(--neon-green);
+            padding: 5px; background: var(--bg);
+            position: relative;
+        }
+        .img-frame img { width: 100%; display: block; filter: grayscale(1) contrast(1.2); }
+        
+        .tag-bytemos {
+            position: absolute; top: -20px; left: -20px;
+            background: var(--neon-green); color: black;
+            padding: 10px 20px; font-weight: 900;
+            transform: rotate(-5deg); font-size: 1.2rem;
+            box-shadow: 4px 4px 0px black;
+        }
+
+        /* TÍTULO GIGANTE */
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(4rem, 10vw, 8rem);
+            color: var(--neon-green);
+            line-height: 0.8; margin: 40px 0;
+            text-transform: uppercase;
+        }
+
+        /* LAYOUT: CONTENIDO | SIDEBAR */
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        /* INFO AUTOR */
+        .meta-bar {
+            border-top: 1px solid #333; border-bottom: 1px solid #333;
+            padding: 15px 0; margin-bottom: 40px;
+            color: var(--neon-green); font-size: 0.8rem;
+            display: flex; gap: 20px;
+        }
+
+        /* CUERPO DEL TEXTO */
+        .content p {
+            font-size: 1.8rem; font-weight: 700;
+            line-height: 1.2; color: var(--neon-green);
+            margin-bottom: 40px;
+        }
+        .content p::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: white; font-weight: 900;
+        }
+
+        /* CAJA INTERFERENCIA IA */
+        .ai-box {
+            background: var(--neon-green); color: black;
+            padding: 30px; margin-top: 40px;
+            width: 80%; transform: rotate(1deg);
+            box-shadow: 10px 10px 0px white;
+        }
+        .ai-box h3 { border-bottom: 3px solid black; padding-bottom: 10px; margin-bottom: 20px; font-family: 'Syne'; }
+
+        /* SIDEBAR: PLAYLIST */
+        .sidebar-playlist {
+            background: #111; border: 4px solid white;
+            padding: 25px; position: sticky; top: 100px;
+            box-shadow: 10px 10px 0px var(--red);
+        }
+        .playlist-header { 
+            display: flex; justify-content: space-between; 
+            border-bottom: 2px solid #333; padding-bottom: 15px; margin-bottom: 25px;
+        }
+        .playlist-header h4 { font-family: 'Syne'; line-height: 0.9; }
+        .live-tag { background: var(--red); color: white; font-size: 10px; padding: 2px 6px; }
+
+        .track-item { display: flex; gap: 15px; margin-bottom: 20px; font-size: 11px; }
+        .track-num { font-family: 'Syne'; font-size: 1.5rem; color: #333; }
+        .track-item:hover .track-num { color: var(--red); }
+
+        .btn-spotify {
+            width: 100%; background: white; color: black;
+            border: none; padding: 12px; font-weight: 900;
+            margin-top: 20px; text-transform: uppercase; cursor: pointer;
+            box-shadow: 4px 4px 0px #555;
+        }
+
+        /* SECCIÓN MÁS RUIDO (FINAL) */
+        .mas-ruido { margin-top: 100px; border-top: 4px solid var(--red); padding-top: 40px; }
+        .mas-ruido h2 { font-family: 'Syne'; font-size: 3rem; font-style: italic; margin-bottom: 40px; }
+        
+        .grid-relacionados { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .rel-card { background: #111; padding: 15px; border: 1px solid #222; cursor: pointer; }
+        .rel-card:hover { border-color: white; }
+        .rel-img { height: 180px; background: #222; margin-bottom: 15px; overflow: hidden; }
+        .rel-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
+        .rel-card span { color: var(--red); font-size: 10px; text-transform: uppercase; font-weight: 900; }
+        .rel-card h5 { font-family: 'Syne'; font-size: 1rem; margin-top: 5px; }
+
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar">CERRAR [X]</button>
+
+    <div class="container">
+        
+        <!-- HEADER -->
+        <header class="post-header">
+            <div class="tag-bytemos">#BYTEMOS</div>
+            <div class="img-frame">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1200" alt="Gamer">
+            </div>
+        </header>
+
+        <!-- TÍTULO -->
+        <h1 class="post-title">TERCER<br>MUNDO</h1>
+
+        <div class="main-layout">
+            
+            <!-- CONTENIDO PRINCIPAL -->
+            <div class="main-content">
+                <div class="meta-bar">
+                    <span>FRECUENCIA DE RAFA GLITCH</span>
+                    <span>|</span>
+                    <span>27 OCT, 2023</span>
+                </div>
+
+                <article class="content">
+                    <p>Reparar consolas con piezas de desecho, traducir juegos de forma pirata y crear mundos que reflejan nuestras calles.</p>
+                </article>
+
+                <!-- CAJA IA -->
+                <div class="ai-box">
+                    <h3>INTERFERENCIA IA</h3>
+                    <p>#CIRCUITOS DE CARTÓN: LA REBELDÍA DEL SILICIO PERIFÉRICO.</p>
+                    <p style="font-size: 12px; margin-top: 15px;">"EL MODDING EN CONTEXTOS DE PRECARIEDAD REDEFINE LA TECNOLOGÍA NO COMO UN BIEN DE CONSUMO..."</p>
+                </div>
+            </div>
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar-playlist">
+                <div class="playlist-header">
+                    <h4>PLAYLIST DE<br>LA SEMANA</h4>
+                    <div><span class="live-tag">LIVE</span></div>
+                </div>
+
+                <div class="track-list">
+                    <div class="track-item">
+                        <span class="track-num">01</span>
+                        <div>
+                            <strong>INHALER</strong><br>YOUR HOUSE
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-num">02</span>
+                        <div>
+                            <strong>THE VOIDZ</strong><br>ALL THE SAME
+                        </div>
+                    </div>
+                    <div class="track-item">
+                        <span class="track-num">03</span>
+                        <div>
+                            <strong>FONTAINES D.C.</strong><br>STARBURSTER
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-spotify">Escuchar en Spotify</button>
+            </aside>
+        </div>
+
+        <!-- MÁS RUIDO -->
+        <section class="mas-ruido">
+            <h2>MÁS RUIDO >>></h2>
+            <div class="grid-relacionados">
+                <div class="rel-card">
+                    <div class="rel-img"><img src="https://images.unsplash.com/photo-1514525253361-bee8d48700df?auto=format&fit=crop&q=80&w=400"></div>
+                    <span>ESCENA NACIONAL</span>
+                    <h5>EL UNDER ARGENTINO: MÁS QUE UNA MODA</h5>
+                </div>
+                <div class="rel-card">
+                    <div class="rel-img"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=400"></div>
+                    <span>BYTEMOS</span>
+                    <h5>TERROR EN 8-BITS: EL FENÓMENO ANALÓGICO</h5>
+                </div>
+                <div class="rel-card">
+                    <div class="rel-img"><img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=400"></div>
+                    <span>CULTURA</span>
+                    <h5>EL RENACIMIENTO DE LOS PAISAJES VISUALES</h5>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
