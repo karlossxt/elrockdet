@@ -64,31 +64,57 @@
             font-weight: 900; text-transform: uppercase; cursor: pointer;
         }
 
-        /* RELEASES BAR (Spotify mini) */
-        .releases-bar { background: #111; padding: 10px 40px; border-bottom: 4px solid var(--red); }
-        .section-tag { color: var(--red); font-family: 'Space Mono'; font-size: 11px; font-weight: 900; margin-bottom: 15px; display: flex; align-items: center; }
-        .red-dot { width: 8px; height: 8px; background: var(--red); margin-right: 10px; }
+            <style>
+        /* ... (tus otros estilos anteriores se mantienen igual) ... */
 
-        .releases-scroll { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 10px; }
-        .release-item { min-width: 60px; }
-        .img-container { position: relative; aspect-ratio: 1/1; background: #222; margin-bottom: 4px; overflow: hidden; }
-        .img-container img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.4s; }
-        .release-item:hover img { filter: grayscale(0); transform: scale(1.05); }
-
-        .spotify-overlay {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.4); display: flex; justify-content: center; align-items: center;
-            opacity: 0; transition: 0.3s;
+        /* RELEASES BAR (Versión Ultra Compacta) */
+        .releases-bar { 
+            background: #111; 
+            padding: 5px 40px !important; /* Muy delgada verticalmente */
+            border-bottom: 2px solid var(--red); 
         }
-        .img-container:hover .spotify-overlay { opacity: 1; }
+
+        .section-tag { 
+            font-size: 9px !important; 
+            margin-bottom: 5px !important; 
+        }
+
+        .releases-scroll { 
+            display: flex; 
+            gap: 15px; 
+            overflow-x: auto; 
+            padding-bottom: 5px; 
+        }
+
+        .release-item { 
+            min-width: 50px !important; /* Ancho muy reducido */
+        }
+
+        .img-container { 
+            position: relative; 
+            aspect-ratio: 1/1; 
+            background: #222; 
+            margin-bottom: 2px; 
+            overflow: hidden; 
+        }
 
         .spotify-mini-btn {
-            background: var(--red); color: white;
-            width: 20px; height: 20px; /* Icono más pequeño */
-            border-radius: 50%; display: flex; justify-content: center; align-items: center;
+            width: 18px !important; 
+            height: 18px !important;
         }
-        .spotify-mini-btn svg { width: 10px; }
-        .release-item h4 { font-family: 'Space Mono'; font-size: 7px; text-transform: uppercase; }
+
+        .spotify-mini-btn svg { 
+            width: 8px !important; 
+        }
+
+        .release-item h4 { 
+            font-family: 'Space Mono'; 
+            font-size: 6px !important; /* Texto minúsculo */
+            line-height: 1;
+            text-transform: uppercase; 
+        }
+    </style> <!-- ASEGÚRATE DE QUE ESTA ETIQUETA ESTÉ ASÍ -->
+
 
         /* HERO GRID */
         .content-wrapper { max-width: 1300px; margin: 0 auto; padding: 40px 20px; }
@@ -324,5 +350,6 @@
 </body>
 
 </html>
+
 
 
