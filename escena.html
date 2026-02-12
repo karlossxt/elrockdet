@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Archivo Editorial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --white: #eeeeee;
+            /* Colores por sección */
+            --red: #dc2626;      /* Escena Nacional */
+            --cyan: #00d4ff;     /* Pantallas */
+            --green: #00ff00;    /* Bytemos */
+            --current-color: var(--red); /* Color por defecto */
+        }
+
+        /* LÓGICA DE TEMAS */
+        .pantallas-archive { --current-color: var(--cyan); }
+        .escena-archive { --current-color: var(--red); }
+        .bytemos-archive { --current-color: var(--green); }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--white); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+        /* TEXTURA */
+        body::before {
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            opacity: 0.1; pointer-events: none; z-index: 999;
+        }
+
+        /* NAVBAR */
+        .main-nav {
+            position: sticky; top: 0; z-index: 1000; background: var(--bg);
+            border-bottom: 2px solid white; padding: 15px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-family: 'Syne'; font-size: 1.8rem; font-weight: 800; font-style: italic; letter-spacing: -2px; text-decoration: none; color: white; }
+        .logo span { color: var(--current-color); }
+        .nav-links a { color: #71717a; text-decoration: none; font-family: 'Space Mono'; font-size: 11px; text-transform: uppercase; font-weight: 700; margin: 0 15px; }
+        .nav-links a:hover { color: white; }
+
+        /* HEADER EDITORIAL */
+        .section-header {
+            background-color: var(--current-color);
+            padding: 120px 40px 60px; position: relative; overflow: hidden; border-bottom: 8px solid black;
+        }
+        .section-header::after {
+            content: "RAW DATA"; position: absolute; bottom: -40px; right: -20px;
+            font-family: 'Syne'; font-size: 15rem; opacity: 0.1; font-style: italic; pointer-events: none;
+        }
+        .back-link { font-family: 'Space Mono'; color: black; text-decoration: none; font-size: 12px; font-weight: 900; text-transform: uppercase; z-index: 10; position: relative; }
+        .section-title { font-family: 'Syne'; font-size: clamp(4rem, 12vw, 10rem); line-height: 0.8; text-transform: uppercase; font-style: italic; color: black; position: relative; z-index: 10; }
+
+        /* EFECTO GLITCH ESPECÍFICO PARA BYTEMOS */
+        .bytemos-archive .section-title { animation: glitch-text 0.4s infinite; }
+        @keyframes glitch-text {
+            0% { text-shadow: 3px 0 red, -3px 0 cyan; }
+            25% { text-shadow: -3px 0 red, 3px 0 cyan; }
+            50% { text-shadow: 2px -2px red, -2px 2px cyan; }
+            100% { text-shadow: 0; }
+        }
+
+        /* GRID */
+        .archive-container { max-width: 1300px; margin: 0 auto; padding: 80px 20px; }
+        .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px 40px; }
+        .article-card { text-decoration: none; color: inherit; display: block; transition: 0.3s; }
+        .card-image { height: 250px; background-color: #18181b; margin-bottom: 20px; overflow: hidden; border: 1px solid #333; }
+        .card-image img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
+        .article-card:hover .card-image img { filter: grayscale(0); transform: scale(1.05); }
+        .card-tag { font-family: 'Space Mono'; color: var(--current-color); font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        .card-title { font-family: 'Syne'; font-size: 1.5rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 15px; }
+
+        /* FOOTER */
+        .fanzine-footer { background: #000; border-top: 8px solid var(--current-color); padding: 80px 40px 40px; margin-top: 100px; }
+        .f-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; max-width: 1300px; margin: 0 auto 60px; }
+        .f-col h5 { font-family: 'Space Mono'; color: var(--current-color); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
+        .f-col a { display: block; color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; margin-bottom: 12px; font-weight: 700; text-transform: uppercase; }
+        .f-bottom { max-width: 1300px; margin: 0 auto; border-top: 1px solid #222; padding-top: 30px; display: flex; justify-content: space-between; font-size: 10px; color: #444; font-family: 'Space Mono'; text-transform: uppercase; }
+
+        @media (max-width: 900px) { .article-grid, .f-top { grid-template-columns: 1fr; } }
+    </style>
+</head>
+
+<!-- CAMBIA ESTA CLASE SEGÚN LA SECCIÓN -->
+<body class="escena-archive">
+
+    <nav class="main-nav">
+        <a href="index.html" class="logo">ELROCK.<span>.</span></a>
+        <div class="nav-links">
+            <a href="musica.html">Música</a>
+            <a href="escena.html">Escena</a>
+            <a href="bytemos.html" style="color: var(--green);">BYTEMOS</a>
+            <a href="pantallas.html">Pantallas</a>
+        </div>
+        <button style="background: white; border:none; padding: 8px 15px; font-family:'Space Mono'; font-size:10px; font-weight:900;">TERMINAL [01]</button>
+    </nav>
+
+    <header class="section-header">
+        <a href="index.html" class="back-link">← Database / Home</a>
+        
+        <!-- El título cambiará según la sección -->
+        <h1 class="section-title">ESCENA NACIONAL</h1> 
+        
+        <div style="font-family:'Space Mono'; font-size:12px; margin-top:20px; color:black; font-weight:700;">
+            [ ESTADO: EN LÍNEA ] // 
+        </div>
+    </header>
+
+    <main class="archive-container">
+        <div class="article-grid">
+            <!-- NOTA 1 -->
+            <a href="#" class="article-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800">
+                </div>
+                <span class="card-tag">Retro-Gaming</span>
+                <h2 class="card-title">La estética del error: CRT y nostalgia</h2>
+            </a>
+
+            <!-- NOTA 2 -->
+            <a href="#" class="article-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=800">
+                </div>
+                <span class="card-tag">Hardware</span>
+                <h2 class="card-title">Modding en los sótanos: PC de guerra</h2>
+            </a>
+
+            <!-- NOTA 3 -->
+            <a href="#" class="article-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800">
+                </div>
+                <span class="card-tag">Cyberpunk</span>
+                <h2 class="card-title">Mundos Virtuales: Resistencia Digital</h2>
+            </a>
+        </div>
+    </main>
+
+    <footer class="fanzine-footer">
+        <div class="f-top">
+            <div class="f-brand">
+                <h2 class="logo" style="font-size: 2rem; color: white;">EL ROCK DE TODOS LOS DÍAS</h2>
+                <p style="color: #444; margin-top: 10px; font-family: 'Space Mono'; font-size: 11px;">REGISTRO INDEPENDIENTE DE CULTURA Y RUIDO.</p>
+            </div>
+            <div class="f-col">
+                <h5>Navegación</h5>
+                <a href="#">Archivo</a>
+                <a href="#">Demos</a>
+                <a href="#">Prensa</a>
+            </div>
+            <div class="f-col">
+                <h5>Social</h5>
+                <a href="#">Instagram</a>
+                <a href="#">Discord</a>
+                <a href="#">X / Twitter</a>
+            </div>
+        </div>
+        <div class="f-bottom">
+            <span>© 2026 EL ROCK</span>
+            <span>DATA IS THE NEW PUNK</span>
+        </div>
+    </footer>
+
+</body>
+</html>
