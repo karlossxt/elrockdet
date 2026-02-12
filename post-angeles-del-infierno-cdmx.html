@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCENA | Ángeles del Infierno en la Arena CDMX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --metal-red: #b91c1c;
+            --silver: #94a3b8;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+        
+        .scanlines { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(185, 28, 28, 0.03) 50%, rgba(0, 0, 0, 0.3) 50%); z-index: 1000; pointer-events: none; }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--metal-red); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        .tag { background: white; color: black; padding: 5px 15px; font-family: 'Space Mono'; font-weight: 900; font-size: 12px; margin-bottom: 20px; display: inline-block; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+        .post-title span { color: var(--metal-red); }
+
+        .img-frame { border: 4px solid #1a1a1a; margin-bottom: 40px; position: relative; padding: 5px; background: #000; }
+        .img-frame img { width: 100%; display: block; filter: grayscale(0.5) contrast(1.2); }
+        .img-frame::after { content: "PACTO CON EL DIABLO // 2026"; position: absolute; bottom: 15px; right: 15px; font-family: 'Space Mono'; font-size: 10px; color: var(--metal-red); background: black; padding: 2px 10px; }
+
+        .meta { border-top: 1px solid #222; border-bottom: 1px solid #222; padding: 15px 0; margin-bottom: 40px; display: flex; justify-content: space-between; font-family: 'Space Mono'; font-size: 11px; color: var(--metal-red); }
+
+        .content p { font-size: 1.25rem; color: #d1d5db; margin-bottom: 25px; }
+        .content p:first-of-type::first-letter { font-size: 5rem; float: left; margin-right: 12px; line-height: 0.8; color: var(--metal-red); font-weight: 900; font-family: 'Syne'; }
+
+        /* DOSSIER DEL SHOW */
+        .show-dossier {
+            background: #111; border: 2px dashed var(--silver);
+            padding: 35px; margin: 50px 0;
+        }
+        .show-dossier h3 { font-family: 'Syne'; font-size: 1.8rem; margin-bottom: 20px; text-transform: uppercase; color: var(--metal-red); }
+        .dossier-item { margin-bottom: 15px; font-family: 'Space Mono'; font-size: 13px; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        .dossier-item b { color: var(--metal-red); }
+
+        .footer-note { margin-top: 80px; padding-top: 40px; border-top: 1px solid #222; text-align: center; font-family: 'Space Mono'; color: #444; font-size: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <article class="container">
+        <header class="post-header">
+            <span class="tag">#METAL // VIVO EN CDMX</span>
+            <h1 class="post-title">ÁNGELES DEL INFIERNO:<br><span>EL PACTO LLEGA A LA ARENA</span></h1>
+        </header>
+
+        <div class="img-frame">
+            <!-- Imagen sugerida: Ángeles del Infierno en vivo -->
+            <img src="https://images.unsplash.com/photo-1549834125-82d3c48159a3?q=80&w=2070" alt="Angeles del Infierno CDMX">
+        </div>
+
+        <div class="meta">
+            <span>REGISTRO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>FECHA: 15 FEBRERO, 2026</span>
+            <span>VENUE: ARENA CDMX</span>
+        </div>
+
+        <div class="content">
+            <p>El heavy metal en español toma la batuta este domingo 15 de febrero. La legendaria banda española <strong>Ángeles del Infierno</strong> llega a la Arena CDMX para liderar un cartel diseñado para los amantes del rock duro y el metal clásico.</p>
+            
+            <p>El evento, titulado <strong>"Todos Somos Ángeles"</strong>, promete un recorrido por himnos inmortales como "Maldito sea tu nombre" y "Al otro lado del silencio", piezas fundamentales que han forjado el carácter de miles de rockeros en México.</p>
+
+            <div class="show-dossier">
+                <h3>EXPEDIENTE DEL SHOW</h3>
+                <div class="dossier-item"><b>INICIO DE CEREMONIA:</b> 20:00 HRS</div>
+                <div class="dossier-item"><b>CONCEPTO:</b> ACÚSTICA TÉCNICA Y CERCANÍA TOTAL</div>
+                <div class="dossier-item"><b>ACCESO:</b> GESTIÓN VÍA SUPERBOLETOS</div>
+                <div class="dossier-item"><b>CONVOCATORIA:</b> METALHEADS & ROCKERS SIN FRONTERAS</div>
+            </div>
+
+            <p>A diferencia de los estadios abiertos, la acústica y comodidad de la Arena permitirán una experiencia más técnica y potente. Se espera una reunión generacional, consolidando a la banda como uno de los pilares del género que más convocatoria mantiene en territorio azteca.</p>
+        </div>
+
+        <footer class="footer-note">
+            EL ROCK DE TODOS LOS DÍAS // METAL © 2026
+        </footer>
+    </article>
+
+</body>
+</html>

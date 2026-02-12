@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÚSICA | My Chemical Romance: The Black Parade en CDMX</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --emo-red: #991b1b;
+            --bone-white: #e2e8f0;
+            --gray: #1a1a1a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--bone-white); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+        
+        .scanlines { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(153, 27, 27, 0.05) 50%, rgba(0, 0, 0, 0.3) 50%); z-index: 1000; pointer-events: none; }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: white; color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid var(--emo-red); cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px var(--emo-red);
+        }
+
+        .tag { background: var(--emo-red); color: white; padding: 5px 15px; font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+        .post-title span { color: var(--emo-red); }
+
+        .img-frame { border: 5px solid white; margin-bottom: 40px; position: relative; background: #000; }
+        .img-frame img { width: 100%; display: block; filter: grayscale(1) contrast(1.2); }
+        .img-frame::after { content: "JOIN THE BLACK PARADE"; position: absolute; bottom: 10px; left: 10px; font-family: 'Space Mono'; font-size: 10px; color: white; background: rgba(0,0,0,0.7); padding: 2px 10px; }
+
+        .meta { border-top: 1px solid #222; border-bottom: 1px solid #222; padding: 15px 0; margin-bottom: 40px; display: flex; justify-content: space-between; font-family: 'Space Mono'; font-size: 11px; color: var(--emo-red); }
+
+        .content p { font-size: 1.25rem; color: #cbd5e1; margin-bottom: 25px; }
+        .content p:first-of-type::first-letter { font-size: 5rem; float: left; margin-right: 12px; line-height: 0.8; color: white; font-weight: 900; font-family: 'Syne'; }
+
+        /* GUÍA DE SUPERVIVENCIA */
+        .survival-guide {
+            background: white; color: black;
+            padding: 35px; margin: 50px 0;
+            border-left: 15px solid var(--emo-red);
+            box-shadow: 10px 10px 0px var(--emo-red);
+        }
+        .survival-guide h3 { font-family: 'Syne'; font-size: 2rem; margin-bottom: 20px; text-transform: uppercase; }
+        .guide-item { margin-bottom: 15px; font-family: 'Space Mono'; font-size: 13px; font-weight: 700; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        .guide-item span { color: var(--emo-red); }
+
+        .footer-note { margin-top: 800x; padding-top: 40px; border-top: 1px solid #222; text-align: center; font-family: 'Space Mono'; color: #444; font-size: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <article class="container">
+        <header class="post-header">
+            <span class="tag">#CONCIERTO // EMO REVIVAL</span>
+            <h1 class="post-title">MY CHEMICAL ROMANCE:<br><span>EL REGRESO DEL DESFILE NEGRO</span></h1>
+        </header>
+
+        <div class="img-frame">
+            <!-- Imagen sugerida: Gerard Way en uniforme o poster del tour -->
+            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=2070" alt="MCR CDMX 2026">
+        </div>
+
+        <div class="meta">
+            <span>REGISTRO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>FECHA: 13-14 FEBRERO, 2026</span>
+            <span>ESTADIO GNP SEGUROS, CDMX</span>
+        </div>
+
+        <div class="content">
+            <p>La nostalgia "emo" alcanza su punto máximo este 13 y 14 de febrero. Tras años de espera, <strong>My Chemical Romance</strong> regresa a la Ciudad de México para presentar su gira mundial centrada en su álbum más icónico: <em>The Black Parade</em>.</p>
+            
+            <p>El antiguo Foro Sol, ahora Estadio GNP Seguros, será el escenario donde Gerard Way y compañía interpreten el disco íntegro, sumando éxitos de su discografía que marcaron a toda una generación.</p>
+
+            <div class="survival-guide">
+                <h3>GUÍA DE SUPERVIVENCIA</h3>
+                <div class="guide-item"><span>PUERTAS:</span> 16:30 HRS</div>
+                <div class="guide-item"><span>INICIO SHOW:</span> 19:00 HRS</div>
+                <div class="guide-item"><span>BOLETOS:</span> REVISAR REMANENTES EN TICKETMASTER</div>
+                <div class="guide-item"><span>TRANSPORTE:</span> SE RECOMIENDA METRO LÍNEA 9 (CIUDAD DEPORTIVA)</div>
+            </div>
+
+            <p>Se espera un lleno total con más de 60,000 personas por noche. La ciudad se prepara para teñirse de negro una vez más, confirmando que la relevancia de la banda de Nueva Jersey sigue intacta.</p>
+        </div>
+
+        <footer class="footer-note">
+            EL ROCK DE TODOS LOS DÍAS // MÚSICA © 2026
+        </footer>
+    </article>
+
+</body>
+</html>
