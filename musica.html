@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUSAIC | Archivo de Música</title>
+    <title>ELROCK | Archivo de Música</title>
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bg: #0d0d0d;
             --red: #dc2626;
             --white: #eeeeee;
             --zinc-900: #18181b;
+            --green: #00ff00;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -31,9 +36,32 @@
             opacity: 0.1; pointer-events: none; z-index: 999;
         }
 
-        /* CABECERA DE SECCIÓN (Look Editorial) */
+        /* NAVBAR GLOBAL */
+        .main-nav {
+            position: sticky; top: 0; z-index: 1000;
+            background: var(--bg);
+            border-bottom: 2px solid white;
+            padding: 15px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        .logo {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.8rem; font-weight: 800; font-style: italic;
+            letter-spacing: -2px; cursor: pointer; text-decoration: none; color: white;
+        }
+        .logo span { color: var(--red); }
+
+        .nav-links a {
+            color: #71717a; text-decoration: none;
+            font-family: 'Space Mono'; font-size: 11px;
+            text-transform: uppercase; font-weight: 700; margin: 0 15px;
+        }
+        .nav-links a:hover { color: white; }
+
+        /* CABECERA DE SECCIÓN */
         .section-header {
-            background-color: var(--red); /* Cambia este color según la sección */
+            background-color: var(--red);
             padding: 120px 40px 60px;
             position: relative;
             overflow: hidden;
@@ -63,11 +91,10 @@
             position: relative;
             z-index: 10;
         }
-        .back-link:hover { text-decoration: underline; }
 
         .section-title {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(4rem, 15vw, 10rem);
+            font-size: clamp(4rem, 12vw, 10rem);
             line-height: 0.8;
             text-transform: uppercase;
             font-style: italic;
@@ -112,7 +139,6 @@
             gap: 60px 40px;
         }
 
-        /* CARD DE ARTÍCULO (Reutilizable) */
         .article-card {
             text-decoration: none;
             color: inherit;
@@ -151,7 +177,7 @@
         .card-title {
             font-family: 'Syne';
             font-size: 1.5rem;
-            line-height: 1;
+            line-height: 1.1;
             text-transform: uppercase;
             margin-bottom: 15px;
         }
@@ -161,38 +187,79 @@
             font-size: 12px;
             color: #a1a1aa;
             line-height: 1.4;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
+        }
+
+        /* FOOTER ESTILO FANZINE (Restaurado) */
+        .fanzine-footer {
+            background: #000;
+            border-top: 8px solid var(--red);
+            padding: 80px 40px 40px;
+            margin-top: 100px;
+            position: relative;
+            z-index: 10;
+        }
+        .f-top { 
+            display: grid; 
+            grid-template-columns: 2fr 1fr 1fr; 
+            gap: 60px; 
+            max-width: 1300px; 
+            margin: 0 auto 60px; 
+        }
+        .f-brand h2 { font-family: 'Syne'; font-size: 3rem; margin-bottom: 10px; font-style: italic; }
+        .f-brand p { font-family: 'Space Mono'; font-size: 12px; color: #555; line-height: 1.5; text-transform: uppercase; font-weight: 700; }
+        
+        .f-col h5 { font-family: 'Space Mono'; color: var(--red); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
+        .f-col a { display: block; color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; margin-bottom: 12px; text-transform: uppercase; font-weight: 700; }
+        .f-col a:hover { color: white; padding-left: 5px; transition: 0.2s; }
+        
+        .f-bottom {
+            max-width: 1300px; margin: 0 auto; border-top: 1px solid #222; padding-top: 30px;
+            display: flex; justify-content: space-between;
+            font-size: 10px; color: #444; font-family: 'Space Mono'; text-transform: uppercase;
         }
 
         /* ESTILO ESPECIAL BYTEMOS (Neon) */
-        .bytemos-archive .section-header { background-color: #00ff00; }
+        .bytemos-archive .section-header { background-color: var(--green); }
         .bytemos-archive .section-title { color: black; }
         .bytemos-archive .back-link, .bytemos-archive .section-meta { color: black; }
         .bytemos-archive .meta-line { background: black; }
+        .bytemos-archive .fanzine-footer { border-top-color: var(--green); }
+        .bytemos-archive .f-col h5 { color: var(--green); }
 
         /* RESPONSIVE */
-        @media (max-width: 1024px) { .article-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 1024px) { 
+            .article-grid, .f-top { grid-template-columns: repeat(2, 1fr); } 
+            .f-brand { grid-column: 1 / -1; }
+        }
         @media (max-width: 600px) { 
-            .article-grid { grid-template-columns: 1fr; }
+            .article-grid, .f-top { grid-template-columns: 1fr; }
             .section-title { font-size: 4rem; }
         }
     </style>
 </head>
-<body>
+<body class="musica-archive"> <!-- Cambia a "bytemos-archive" para el look neón -->
 
-    <!-- Puedes añadir aquí tu Navbar global -->
+    <!-- NAVBAR -->
+    <nav class="main-nav">
+        <a href="index.html" class="logo">ELROCK.<span>.</span></a>
+        <div class="nav-links">
+            <a href="musica.html" style="color: white;">Música</a>
+            <a href="#">Escena</a>
+            <a href="#" style="color: var(--green);">BYTEMOS</a>
+            <a href="#">Cultura</a>
+            <a href="#">Cine</a>
+        </div>
+        <button style="background: white; border:none; padding: 8px 15px; font-family:'Space Mono'; font-size:10px; font-weight:900; cursor:pointer;">TERMINAL [01]</button>
+    </nav>
 
-    <!-- CABECERA DE LA SECCIÓN (Ejemplo: Música) -->
+    <!-- CABECERA DE LA SECCIÓN -->
     <header class="section-header">
         <a href="index.html" class="back-link">← Volver al Inicio</a>
         <h1 class="section-title">MÚSICA<span style="opacity: 0.3;">.</span></h1>
         <div class="section-meta">
             <span>Explorando el Ruido</span>
             <div class="meta-line"></div>
-            <span>Registro 2024</span>
+            <span>Registro 2018-2026</span>
         </div>
     </header>
 
@@ -204,43 +271,52 @@
         </div>
 
         <div class="article-grid">
-            
-            <!-- NOTA 1 -->
-            <a href="post.html" class="article-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1514525253361-bee8718a74a2?auto=format&fit=crop&q=80&w=800" alt="Post Punk">
-                </div>
+            <a href="#" class="article-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1514525253361-bee8718a74a2?w=800"></div>
                 <span class="card-tag">Escena Nacional</span>
                 <h2 class="card-title">El Under Argentino: Más que una moda</h2>
-                <p class="card-excerpt">Un recorrido por los sótanos de Buenos Aires donde el nuevo post-punk está gestando una revolución contra el algoritmo comercial.</p>
+                <p class="card-excerpt">Un recorrido por los sótanos de Buenos Aires donde el nuevo post-punk está gestando una revolución.</p>
             </a>
-
-            <!-- NOTA 2 -->
-            <a href="post.html" class="article-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=800" alt="Concierto">
-                </div>
+            <a href="#" class="article-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800"></div>
                 <span class="card-tag">Cultura</span>
                 <h2 class="card-title">Sinfonías de Silicio y el Caos</h2>
-                <p class="card-excerpt">La intersección entre la música electrónica experimental y el arte generativo está creando paisajes sonoros nunca antes escuchados.</p>
+                <p class="card-excerpt">La intersección entre la música electrónica experimental y el arte generativo.</p>
             </a>
-
-            <!-- NOTA 3 -->
-            <a href="post.html" class="article-card">
-                <div class="card-image">
-                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800" alt="Vinilo">
-                </div>
+            <a href="#" class="article-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800"></div>
                 <span class="card-tag">Crítica</span>
                 <h2 class="card-title">El Regreso del Formato Físico</h2>
-                <p class="card-excerpt">¿Por qué las nuevas generaciones están obsesionadas con poseer el ruido en vinilo y cassette en un mundo digital?</p>
+                <p class="card-excerpt">¿Por qué las nuevas generaciones están obsesionadas con poseer el ruido en vinilo?</p>
             </a>
-
-            <!-- Repetir tarjetas para más notas -->
-
         </div>
     </main>
 
-    <!-- Puedes añadir aquí tu Footer global -->
+    <!-- FOOTER GLOBAL -->
+    <footer class="fanzine-footer">
+        <div class="f-top">
+            <div class="f-brand">
+                <h2 class="logo">EL ROCK DE TODOS LOS DÍAS<span>.</span></h2>
+                <p>Un diario ruidoso para mentes distorsionadas. Música, Cultura y Cine filtrados a través del lente del under independiente.</p>
+            </div>
+            <div class="f-col">
+                <h5>FANZINE</h5>
+                <a href="#">Quiénes Somos</a>
+                <a href="#">Terminal</a>
+                <a href="#">Contacto / Prensa</a>
+            </div>
+            <div class="f-col">
+                <h5>REDES</h5>
+                <a href="#">Instagram</a>
+                <a href="#">Spotify</a>
+                <a href="#">Twitter / X</a>
+            </div>
+        </div>
+        <div class="f-bottom">
+            <span>© 2026 El Rock de Todos los Días</span>
+            <span>EL SILENCIO ES RUIDO QUE NO SE ATREVE A SER ESCUCHADO</span>
+        </div>
+    </footer>
 
 </body>
 </html>
