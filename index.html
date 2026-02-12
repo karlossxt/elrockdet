@@ -3,524 +3,432 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Rock de todos los Días | Musica con Maciza y Cueros</title>
+    <title>El Rock de todos los Días | Música con Maciza y Cueros</title>
     
-    <!-- Fuentes -->
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <!-- Fuentes e Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 
     <style>
-        /* DISEÑO HERO GRANDE */
-.hero-full-container {
+/* SECCIÓN MANDA TU RUIDO - ESTILO BRUTALISTA BLANCO */
+.ruido-box-white {
+    background-color: #ffffff; /* Fondo blanco puro */
+    padding: 80px 60px;
+    margin: 80px 0;
+    color: #000000;
     position: relative;
-    width: 100%;
-    height: 750px; /* Altura imponente */
+    border: 2px solid #000; /* Opcional, para enmarcarlo en el wrapper */
+}
+
+.radar-tag {
     background: #000;
-    overflow: hidden;
-    border-bottom: 5px solid white;
-}
-
-.slider { width: 100%; height: 100%; }
-
-.slide {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out; /* Transición suave de fundido */
-    display: flex;
-    align-items: center;
-    padding: 0 80px;
-}
-
-.slide.active { opacity: 1; z-index: 10; }
-
-.slide-bg {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(1) brightness(0.4); /* Look fanzine oscuro */
-    z-index: -1;
-}
-
-.hero-content { max-width: 800px; }
-
-.hero-desc {
+    color: #fff;
+    display: inline-block;
+    padding: 5px 12px;
     font-family: 'Space Mono', monospace;
-    font-size: 1.1rem;
-    color: #888;
+    font-size: 11px;
+    font-weight: 900;
     margin-bottom: 30px;
     text-transform: uppercase;
 }
 
-.hero-cta {
-    display: inline-block;
-    background: var(--red);
-    color: white;
-    padding: 15px 35px;
-    text-decoration: none;
-    font-family: 'Space Mono';
-    font-weight: 900;
-    box-shadow: 6px 6px 0px white;
-    transition: 0.2s;
-}
-.hero-cta:hover { transform: translate(-2px, -2px); box-shadow: 10px 10px 0px white; }
-
-/* EFECTO GLITCH MEJORADO */
-.glitch-title {
+.ruido-title-big {
     font-family: 'Syne', sans-serif;
-    font-size: 6rem;
+    font-size: 7rem; /* Tamaño masivo como la imagen */
     font-weight: 900;
     line-height: 0.8;
-    margin-bottom: 20px;
-    position: relative;
-    color: white;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: -4px;
+    margin-bottom: 40px;
 }
 
-.glitch-title:hover {
-    animation: glitch-anim 0.3s infinite;
-    text-shadow: 4px 0 var(--red), -4px 0 #00fffb;
-    cursor: pointer;
+.ruido-title-big span {
+    color: #dc2626; /* Rojo de la imagen */
 }
 
-@keyframes glitch-anim {
-    0% { transform: translate(0); }
-    20% { transform: translate(-3px, 3px); }
-    40% { transform: translate(3px, -3px); }
-    60% { transform: translate(-3px, -2px); }
-    100% { transform: translate(0); }
+.cta-desc-container {
+    border-left: 10px solid #000; /* La barra gruesa de la izquierda */
+    padding-left: 25px;
+    margin-bottom: 40px;
+    max-width: 600px;
 }
 
-/* PUNTOS DE NAVEGACIÓN */
-.slider-dots {
-    position: absolute;
-    bottom: 40px;
-    right: 80px;
+.cta-desc-container p {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.cta-buttons-row {
     display: flex;
-    gap: 15px;
-    z-index: 20;
+    gap: 20px;
 }
-.dot {
-    width: 12px; height: 12px;
-    background: #333;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.dot.active { background: var(--red); width: 40px; border-radius: 10px; transition: 0.3s; }
 
+/* BOTÓN NEGRO SÓLIDO */
+.btn-solid-black {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 20px 40px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 900;
+    font-size: 13px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 6px 6px 0px #ccc; /* Sombra sutil */
+    transition: 0.2s;
+}
+
+/* BOTÓN BLANCO CON BORDE GRUESO */
+.btn-outline-thick {
+    background: transparent;
+    color: #000;
+    border: 4px solid #000; /* Borde grueso como la imagen */
+    padding: 16px 40px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 900;
+    font-size: 13px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 6px 6px 0px #ccc;
+    transition: 0.2s;
+}
+
+.btn-solid-black:hover, .btn-outline-thick:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0px #999;
+}
+
+/* Ajuste móvil */
 @media (max-width: 768px) {
-    .hero-full-container { height: 550px; }
-    .glitch-title { font-size: 3rem; }
-    .slide { padding: 0 20px; }
+    .ruido-title-big { font-size: 3.5rem; letter-spacing: -2px; }
+    .ruido-box-white { padding: 40px 20px; }
+    .cta-buttons-row { flex-direction: column; }
 }
         :root {
             --bg: #0d0d0d;
             --red: #dc2626;
             --white: #eeeeee;
             --green: #00ff00;
+            --purple: #7e22ce;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
 
-function showSlide(index) {
-    slides.forEach(s => s.classList.remove('active'));
-    dots.forEach(d => d.classList.remove('active'));
-    
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
-
-// Cambiar cada 5 segundos
-let autoSlide = setInterval(nextSlide, 5000);
-
-// Click en puntos
-dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-        clearInterval(autoSlide); // Detener el auto-cambio al interactuar
-        currentSlide = i;
-        showSlide(i);
-        autoSlide = setInterval(nextSlide, 5000); // Reiniciar
-    });
-});
-
+        /* LOOK COMPACTO */
         body {
-            background-color: var(--bg);
-            color: var(--white);
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* Textura de fondo */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: #1a1a1a;
             background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
-            opacity: 0.1; pointer-events: none; z-index: 999;
+            display: flex;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            color: var(--white);
         }
 
-        /* HEADER */
+        .main-site-wrapper {
+            width: 100%;
+            max-width: 1300px;
+            background-color: #000;
+            box-shadow: 0 0 100px rgba(0,0,0,0.8);
+            border-left: 1px solid #222;
+            border-right: 1px solid #222;
+            position: relative;
+        }
+
+        /* NAVBAR */
         .main-nav {
             position: sticky; top: 0; z-index: 1000;
-            background: var(--bg);
+            background: rgba(0,0,0,0.98);
             border-bottom: 2px solid white;
             padding: 15px 40px;
             display: flex; justify-content: space-between; align-items: center;
         }
-
-        .logo {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.8rem; font-weight: 800; font-style: italic;
-            letter-spacing: -2px; cursor: pointer;
-        }
+        .logo { font-family: 'Syne'; font-size: 1.8rem; font-weight: 800; font-style: italic; letter-spacing: -2px; text-decoration: none; color: white; }
         .logo span { color: var(--red); }
-
-        .nav-links a {
-            color: #71717a; text-decoration: none;
-            font-family: 'Space Mono'; font-size: 11px;
-            text-transform: uppercase; font-weight: 700; margin: 0 15px;
-        }
+        .nav-links a { color: #71717a; text-decoration: none; font-family: 'Space Mono'; font-size: 11px; text-transform: uppercase; font-weight: 700; margin: 0 15px; }
         .nav-links a:hover { color: white; }
 
-        .terminal-btn {
-            background: white; color: black; border: 2px solid black;
-            padding: 8px 15px; font-family: 'Space Mono'; font-size: 10px;
-            font-weight: 900; text-transform: uppercase; cursor: pointer;
-        }
+        /* HERO SLIDER */
+        .hero-full-container { position: relative; width: 100%; height: 650px; background: #000; overflow: hidden; border-bottom: 5px solid white; }
+        .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease-in-out; display: flex; align-items: center; padding: 0 80px; }
+        .slide.active { opacity: 1; z-index: 10; }
+        .slide-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; filter: grayscale(1) brightness(0.3); z-index: -1; }
+        .hero-content { max-width: 800px; }
+        .glitch-title { font-family: 'Syne'; font-size: 5.5rem; line-height: 0.8; text-transform: uppercase; color: white; margin-bottom: 20px; cursor: pointer; }
+        .glitch-title:hover { animation: glitch-anim 0.3s infinite; text-shadow: 4px 0 var(--red), -4px 0 #00fffb; }
+        @keyframes glitch-anim { 0% { transform: translate(0); } 20% { transform: translate(-3px, 2px); } 40% { transform: translate(3px, -2px); } 100% { transform: translate(0); } }
+        .hero-desc { font-family: 'Space Mono'; font-size: 1rem; color: #888; margin-bottom: 30px; text-transform: uppercase; }
+        .hero-cta { display: inline-block; background: var(--red); color: white; padding: 15px 30px; text-decoration: none; font-family: 'Space Mono'; font-weight: 900; box-shadow: 6px 6px 0px white; }
+        .slider-dots { position: absolute; bottom: 30px; right: 80px; display: flex; gap: 15px; z-index: 20; }
+        .dot { width: 12px; height: 12px; background: #333; border-radius: 50%; cursor: pointer; }
+        .dot.active { background: var(--red); width: 40px; border-radius: 10px; transition: 0.3s; }
 
-        /* SECCIÓN NUEVOS DECIBELIOS (MÁS GRANDE) */
-        .releases-bar {
-            background: #0a0a0a;
-            border-bottom: 2px solid #222;
-            padding: 30px 40px; /* Más padding */
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .section-tag {
-            font-family: 'Space Mono';
-            font-size: 12px; font-weight: 900;
-            background: var(--red);
-            padding: 6px 15px;
-            white-space: nowrap;
-            display: flex; align-items: center; gap: 10px;
-            transform: rotate(-2deg); /* Toque fanzine */
-        }
-
-        .red-dot { width: 10px; height: 10px; background: white; border-radius: 50%; display: inline-block; animation: pulse 1s infinite; }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
-
-        .releases-scroll { display: flex; gap: 40px; overflow-x: auto; scrollbar-width: none; align-items: center; }
-        .releases-scroll::-webkit-scrollbar { display: none; }
-
-        /* Estilo para el link de Spotify sobre la imagen */
-        .release-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .img-container {
-            position: relative; /* Para posicionar el icono dentro */
-            width: 130px; 
-            height: 130px;
-            background: #222;
-            border: 2px solid #333;
-            transition: 0.3s;
-            overflow: hidden;
-        }
-
-        /* El icono de Spotify que aparece al hacer hover */
-        .spotify-icon {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #1DB954; /* Verde Spotify */
-            color: black;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            opacity: 0;
-            transition: 0.3s;
-            transform: translateY(-10px);
-            z-index: 5;
-        }
-
-        .release-item:hover .spotify-icon {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .release-item:hover .img-container {
-            border-color: #1DB954;
-            box-shadow: 0 0 15px rgba(29, 185, 84, 0.3);
-        }
-        }
-        .img-container img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
-        .release-item:hover .img-container { transform: scale(1.05); border-color: var(--red); }
-        .release-item:hover img { filter: grayscale(0); }
+        /* GRID DE TARJETAS */
+        .content-wrapper { padding: 60px 40px; }
+        .section-header-bar { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #222; margin: 40px 0 30px; padding-bottom: 10px; }
+        .section-header-bar h3 { font-family: 'Syne'; font-size: 2.2rem; font-style: italic; text-transform: uppercase; color: var(--white); }
         
-        .release-item h4 { font-family: 'Space Mono'; font-size: 10px; text-transform: uppercase; text-align: center; color: #888; }
-        .release-item:hover h4 { color: white; }
-
-        /* HERO GRID & EFECTO GLITCH */
-        .content-wrapper { max-width: 1300px; margin: 0 auto; padding: 40px 20px; }
-        .hero-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; height: 550px; margin-bottom: 60px; }
-        .hero-main { position: relative; border: 4px solid white; overflow: hidden; background: #000; }
-        .hero-main img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); opacity: 0.6; transition: 0.6s; }
-        .hero-main:hover img { filter: grayscale(0); opacity: 0.8; }
+        .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 80px; }
         
-        .hero-content { position: absolute; bottom: 40px; left: 40px; z-index: 10; pointer-events: none; }
-        
-        /* ANIMACIÓN GLITCH */
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-5px, 3px); }
-            40% { transform: translate(5px, -3px); }
-            60% { transform: translate(-5px, -2px); }
-            80% { transform: translate(5px, 2px); }
-            100% { transform: translate(0); }
-        }
+        .card { text-decoration: none; color: inherit; display: block; background: #0a0a0a; border: 1px solid #222; padding: 15px; transition: 0.3s; }
+        .card:hover { border-color: white; transform: translateY(-5px); }
+        .card-img { width: 100%; height: 200px; background: #111; margin-bottom: 15px; overflow: hidden; }
+        .card-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.4s; }
+        .card:hover .card-img img { filter: grayscale(0); }
+        .card-tag { font-family: 'Space Mono'; font-size: 10px; font-weight: 900; text-transform: uppercase; display: block; margin-bottom: 10px; color: var(--purple); }
+        .card-title { font-family: 'Syne'; font-size: 1.4rem; line-height: 1.1; text-transform: uppercase; color: white; margin-bottom: 10px; }
+        .card-excerpt { font-family: 'Space Mono'; font-size: 11px; color: #666; line-height: 1.4; }
 
-        .glitch-title { 
-            font-family: 'Syne'; font-size: 5.5rem; line-height: 0.8; text-transform: uppercase; 
-            cursor: pointer; pointer-events: auto;
-            transition: 0.2s;
-        }
-        .glitch-title:hover {
-            animation: glitch 0.3s infinite;
-            text-shadow: 4px 0 var(--red), -4px 0 var(--green);
-        }
+        /* RUIDO CTA */
+        .ruido-cta { background-color: white; color: black; padding: 60px 80px; border: 10px solid black; box-shadow: 20px 20px 0px var(--red); margin: 80px 0; }
+        .ruido-cta h2 { font-family: 'Syne'; font-size: 5rem; line-height: 0.8; font-weight: 900; font-style: italic; text-transform: uppercase; margin-bottom: 30px; }
 
-        .stencil-tag { background: var(--red); padding: 3px 10px; font-size: 11px; font-weight: 900; display: inline-block; margin-bottom: 10px; }
-
-        .hero-side { display: flex; flex-direction: column; gap: 20px; }
-        .side-note { flex: 1; background: #111; border: 2px solid #333; padding: 25px; display: flex; flex-direction: column; justify-content: flex-end; transition: 0.3s; cursor: pointer; }
-        .side-note:hover { border-color: var(--red); background: #1a1a1a; }
-        .side-note span { font-family: 'Syne'; color: var(--red); font-size: 1.8rem; }
-        .side-note h4 { font-family: 'Space Mono'; font-size: 13px; text-transform: uppercase; margin-top: 10px; }
-
-        /* NOTICIAS */
-        .news-3-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 80px; }
-        .news-card { cursor: pointer; }
-        .n-img { height: 200px; background: #222; overflow: hidden; margin-bottom: 15px; border: 1px solid #333; }
-        .n-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.4s; }
-        .news-card:hover img { filter: grayscale(0); }
-        .n-cat { font-family: 'Space Mono'; color: var(--red); font-size: 10px; font-weight: 700; text-transform: uppercase; }
-        .news-card h4 { font-family: 'Syne'; font-size: 1.4rem; margin: 10px 0; line-height: 1.1; }
-
-        /* MANDA TU RUIDO */
-        .ruido-cta {
-            background-color: white; color: black;
-            padding: 70px 80px; border: 10px solid black;
-            box-shadow: 25px 25px 0px var(--red);
-            margin: 80px 0; position: relative;
-        }
-        .radar-label { background: black; color: white; padding: 4px 12px; font-family: 'Space Mono'; font-size: 11px; font-weight: 900; text-transform: uppercase; margin-bottom: 30px; display: inline-block; transform: rotate(-1deg); }
-        .ruido-cta h2 { font-family: 'Syne'; font-size: 6.5rem; line-height: 0.8; font-weight: 900; font-style: italic; text-transform: uppercase; margin-bottom: 40px; }
-        .ruido-cta h2 span { color: var(--red); }
-        .cta-description { border-left: 10px solid black; padding-left: 25px; margin-bottom: 40px; max-width: 550px; }
-        .cta-description p { font-family: 'Space Mono'; font-weight: 700; font-size: 1.3rem; line-height: 1.1; text-transform: uppercase; }
-        .cta-buttons { display: flex; gap: 20px; }
-        .btn-black { background: black; color: white; border: none; padding: 20px 40px; font-family: 'Space Mono'; font-weight: 900; font-size: 13px; cursor: pointer; box-shadow: 6px 6px 0px #ccc; text-transform: uppercase; }
-        .btn-outline { background: transparent; color: black; border: 4px solid black; padding: 20px 40px; font-family: 'Space Mono'; font-weight: 900; font-size: 13px; cursor: pointer; box-shadow: 6px 6px 0px #ccc; text-transform: uppercase; }
-
-        /* FOOTER */
+        /* FOOTER REDISEÑADO */
         .fanzine-footer { background: #000; border-top: 8px solid var(--red); padding: 80px 40px 40px; }
-        .f-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; max-width: 1300px; margin: 0 auto 60px; }
-        .f-brand h2 { font-family: 'Syne'; font-size: 3rem; margin-bottom: 10px; font-style: italic; }
-        .f-brand p { font-family: 'Space Mono'; font-size: 12px; color: #555; line-height: 1.5; text-transform: uppercase; font-weight: 700; }
-        .f-col h5 { font-family: 'Space Mono'; color: var(--red); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
-        .f-col a { display: block; color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; margin-bottom: 12px; text-transform: uppercase; font-weight: 700; }
-        .f-col a:hover { color: white; padding-left: 5px; transition: 0.2s; }
-        .f-bottom { max-width: 1300px; margin: 0 auto; border-top: 1px solid #222; padding-top: 30px; display: flex; justify-content: space-between; font-size: 11px; color: #444; font-family: 'Space Mono'; text-transform: uppercase; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 40px; }
+        
+        .footer-col h5 { font-family: 'Space Mono'; color: var(--red); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col p { font-family: 'Space Mono'; font-size: 12px; color: #666; line-height: 1.5; margin-bottom: 15px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; font-weight: 700; text-transform: uppercase; transition: 0.2s; }
+        .footer-links a:hover { color: white; padding-left: 5px; }
 
-        @media (max-width: 900px) {
-            .hero-grid, .news-3-col, .f-top { grid-template-columns: 1fr; }
-            .ruido-cta h2 { font-size: 3.5rem; }
-            .glitch-title { font-size: 3rem; }
-            .hero-grid { height: auto; }
-        }
+        .social-icons-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 10px; }
+        .social-icons-grid a { color: #888; font-size: 1.2rem; transition: 0.3s; }
+        .social-icons-grid a:hover { color: white; transform: scale(1.2); }
+
+        .contact-info { font-family: 'Space Mono'; font-size: 11px; color: #888; }
+        .contact-info b { color: white; display: block; margin-top: 10px; }
+
+        .f-bottom { border-top: 1px solid #222; padding-top: 30px; margin-top: 60px; display: flex; justify-content: space-between; font-size: 10px; font-family: 'Space Mono'; color: #444; text-transform: uppercase; }
+
+        @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) { .news-grid, .footer-grid { grid-template-columns: 1fr; } .hero-full-container { height: 500px; } .glitch-title { font-size: 3rem; } }
     </style>
 </head>
 <body>
 
+<div class="main-site-wrapper">
+
+    <!-- NAVBAR -->
     <nav class="main-nav">
-        <h1 class="logo">ELROCK.<span>.</span></h1>
+        <a href="index.html" class="logo">ELROCK.<span>.</span></a>
         <div class="nav-links">
-            <a href="#">Música</a>
-            <a href="#">Escena</a>
-            <a href="#" style="color: var(--green);">BYTEMOS</a>
-            <a href="#">Cultura</a>
-            <a href="#">Cine</a>
+            <a href="musica.html">Música</a>
+            <a href="escena.html">Escena</a>
+            <a href="bytemos.html" style="color: var(--green);">BYTEMOS</a>
+            <a href="pantallas.html">Pantallas</a>
+            <a href="toy-rockeando.html">Toy Rockeando</a>
         </div>
-        <button class="terminal-btn">Terminal [01]</button>
+        <button style="background:white; border:none; padding:8px 15px; font-family:'Space Mono'; font-size:10px; font-weight:900; cursor:pointer;">TERMINAL [01]</button>
     </nav>
 
-    <!-- SECCIÓN NUEVOS DECIBELIOS (AMPLIADA) -->
-    <section class="releases-bar">
-        <div class="section-tag"><span class="red-dot"></span> NUEVOS DECIBELIOS</div>
-        <div class="releases-scroll">
-            
-            <!-- Disco 1 -->
-            <a href="https://open.spotify.com/album/46909S9Y996dfpRc98o999" target="_blank" class="release-item">
-                <div class="img-container">
-                    <div class="spotify-icon"><i class="fab fa-spotify"></i></div>
-                    <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=300">
+    <!-- HERO SLIDER -->
+    <section class="hero-full-container">
+        <div class="slider">
+            <div class="slide active">
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1528645238318-22ccb79d2033?w=1200');"></div>
+                <div class="hero-content">
+                    <span class="logo" style="font-size:10px; background:var(--red); color:white; padding:3px 8px; font-style:normal;">PORTADA</span>
+                    <h1 class="glitch-title">GREEN DAY:<br>SUPER BOWL LX</h1>
+                    <p class="hero-desc">El punk hackea el evento más grande del mundo con American Idiot.</p>
+                    <a href="post-green-day-superbowl.html" class="hero-cta">LEER NOTA</a>
                 </div>
-                <h4>Eternal Sunshine</h4>
-            </a>
-
-            <!-- Disco 2 -->
-            <a href="https://open.spotify.com/album/0at999..." target="_blank" class="release-item">
-                <div class="img-container">
-                    <div class="spotify-icon"><i class="fab fa-spotify"></i></div>
-                    <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?w=300">
+            </div>
+            <div class="slide">
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=1200');"></div>
+                <div class="hero-content">
+                    <span class="logo" style="font-size:10px; background:white; color:black; padding:3px 8px; font-style:normal;">DESTACADO</span>
+                    <h1 class="glitch-title">MCR: BLACK<br>PARADE CDMX</h1>
+                    <p class="hero-desc">La nostalgia emo regresa al Estadio GNP. Guía de supervivencia.</p>
+                    <a href="post-mcr-black-parade.html" class="hero-cta">HORARIOS</a>
                 </div>
-                <h4>Blue Lips</h4>
-            </a>
-
-            <!-- Disco 3 -->
-            <a href="https://open.spotify.com/album/..." target="_blank" class="release-item">
-                <div class="img-container">
-                    <div class="spotify-icon"><i class="fab fa-spotify"></i></div>
-                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300">
+            </div>
+            <div class="slide">
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1549834125-82d3c48159a3?w=1200');"></div>
+                <div class="hero-content">
+                    <span class="logo" style="font-size:10px; background:black; color:white; border:1px solid white; padding:3px 8px; font-style:normal;">METAL TOUR</span>
+                    <h1 class="glitch-title">ANGEL ROCK<br>FEST 2026</h1>
+                    <p class="hero-desc">Ángeles del Infierno y Saratoga encabezan la ruta del metal.</p>
+                    <a href="post-todos-somos-angeles.html" class="hero-cta">FECHAS</a>
                 </div>
-                <h4>Everything I Thought</h4>
-            </a>
-
-            <!-- Disco 4 -->
-            <a href="https://open.spotify.com/album/..." target="_blank" class="release-item">
-                <div class="img-container">
-                    <div class="spotify-icon"><i class="fab fa-spotify"></i></div>
-                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300">
-                </div>
-                <h4>Las Mujeres Ya No Lloran</h4>
-            </a>
-
+            </div>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
     </section>
 
-   <!-- HERO SLIDER ÚNICO -->
-<section class="hero-full-container">
-    <div class="slider">
-        <!-- NOTA 1: GREEN DAY -->
-        <div class="slide active">
-            <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1528645238318-22ccb79d2033?q=80&w=2070');"></div>
-            <div class="hero-content">
-                <span class="stencil-tag">PORTADA RECIENTE</span>
-                <h1 class="glitch-title" data-text="GREEN DAY: SUPER BOWL LX">GREEN DAY:<br>SUPER BOWL LX</h1>
-                <p class="hero-desc">El punk hackea el evento más grande del mundo con un popurrí de American Idiot.</p>
-                <a href="post-green-day-superbowl.html" class="hero-cta">LEER NOTA COMPLETA</a>
-            </div>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="content-wrapper">
+        
+        <!-- PRIMERA SECCIÓN: ULTIMO RUIDO -->
+        <div class="section-header-bar">
+            <h3>ÚLTIMO RUIDO</h3>
+            <a href="musica.html" style="font-family:'Space Mono'; font-size:10px; color:#555; text-decoration:none;">VER TODO +</a>
         </div>
+        <section class="news-grid">
+            <a href="post-kiss-alive.html" class="card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?w=600"></div>
+                <span class="card-tag">MÚSICA // ANIVERSARIO</span>
+                <h4 class="card-title">KISS Alive!: El disco que salvó a una banda</h4>
+                <p class="card-excerpt">A 50 años del álbum que cambió las reglas de los discos en directo para siempre.</p>
+            </a>
+            <a href="post-ace-frehley.html" class="card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1521433590544-cc3515ca76f6?w=600"></div>
+                <span class="card-tag">MÚSICA // MEMORIAL</span>
+                <h4 class="card-title">Ace Frehley: De la Tierra a Jendell</h4>
+                <p class="card-excerpt">Adiós al Spaceman original. Un viaje estelar a través de sus riffs inmortales.</p>
+            </a>
+            <a href="post-pearl-jam-ten.html" class="card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1459749411177-042180ce6742?w=600"></div>
+                <span class="card-tag">MÚSICA // GRUNGE</span>
+                <h4 class="card-title">Pearl Jam: 30 Años del Diez</h4>
+                <p class="card-excerpt">El álbum que redefinió los 90 y el sonido de Seattle desde la radio de CDMX.</p>
+            </a>
+        </section>
 
-        <!-- NOTA 2: MY CHEMICAL ROMANCE -->
-        <div class="slide">
-            <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=2070');"></div>
-            <div class="hero-content">
-                <span class="stencil-tag">DESTACADO</span>
-                <h1 class="glitch-title" data-text="MCR: BLACK PARADE CDMX">MCR: BLACK<br>PARADE CDMX</h1>
-                <p class="hero-desc">La nostalgia emo regresa al Estadio GNP. Guía de supervivencia para el desfile.</p>
-                <a href="post-mcr-black-parade.html" class="hero-cta">REVISAR HORARIOS</a>
-            </div>
+        <!-- SEGUNDA SECCIÓN: ESCENA NACIONAL -->
+        <div class="section-header-bar">
+            <h3 style="color:var(--red);">ESCENA NACIONAL</h3>
+            <a href="escena.html" style="font-family:'Space Mono'; font-size:10px; color:#555; text-decoration:none;">VER TODO +</a>
         </div>
+        <section class="news-grid">
+            <a href="post-zoe.html" class="card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=600"></div>
+                <span class="card-tag" style="color:var(--red);">ROCK // CDMX</span>
+                <h4 class="card-title">Zoé: 15 Años de Música de Fondo</h4>
+                <p class="card-excerpt">Crónica de una sesión emblemática que marcó un antes y un después en el rock nacional.</p>
+            </a>
+            <a href="post-a-veces-maria.html" class="card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600"></div>
+                <span class="card-tag" style="color:var(--red);">INDIE // GUATEMALA-MÉXICO</span>
+                <h4 class="card-title">A veces María: Resignificar el caos</h4>
+                <p class="card-excerpt">Debut multisensorial que fusiona bolero e indie para valorar la incertidumbre.</p>
+            </a>
+            <a href="post-angeles-del-infierno-cdmx.html" class="card">
+                <div class="card-img"><img src="https://images.unsplash.com/photo-1549834125-82d3c48159a3?w=600"></div>
+                <span class="card-tag" style="color:var(--red);">METAL // ARENA CDMX</span>
+                <h4 class="card-title">Ángeles del Infierno: El pacto en la Arena</h4>
+                <p class="card-excerpt">La leyenda del metal español llega para liderar el festival solidario "Todos Somos Ángeles".</p>
+            </a>
+        </section>
 
-        <!-- NOTA 3: ÁNGELES DEL INFIERNO -->
-        <div class="slide">
-            <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1549834125-82d3c48159a3?q=80&w=2070');"></div>
-            <div class="hero-content">
-                <span class="stencil-tag">HEAVY METAL</span>
-                <h1 class="glitch-title" data-text="ÁNGELES DEL INFIERNO">ÁNGELES DEL<br>INFIERNO</h1>
-                <p class="hero-desc">El pacto se firma en la Arena CDMX. La gira "Todos Somos Ángeles" inicia su vuelo.</p>
-                <a href="post-angeles-del-infierno-cdmx.html" class="hero-cta">BOLETOS AQUÍ</a>
-            </div>
-        </div>
-    </div>
+       <!-- SECCIÓN MANDA TU RUIDO (ESTILO EXACTO A IMAGEN) -->
+<section class="ruido-box-white">
+    <div class="radar-tag">RADAR DE BANDAS INDEPENDIENTES</div>
     
-    <!-- Indicadores de puntos -->
-    <div class="slider-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+    <h2 class="ruido-title-big">
+        MANDA TU <br>
+        <span>RUIDO.</span>
+    </h2>
+
+    <div class="cta-desc-container">
+        <p>¿TU BANDA ESTÁ HACIENDO ALGO DIFERENTE? BUSCAMOS EL PRÓXIMO GRITO DEL UNDER INDEPENDIENTE.</p>
+    </div>
+
+    <div class="cta-buttons-row">
+        <button class="btn-solid-black">MANDAR ESTRENO</button>
+        <button class="btn-outline-thick">SOLICITAR ENTREVISTA</button>
     </div>
 </section>
-
-        <h3 style="font-family: 'Syne'; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 25px; font-size: 1.5rem; font-style: italic;">ÚLTIMO RUIDO</h3>
-        
-        <section class="news-3-col">
-            <article class="news-card">
-                <div class="n-img"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600"></div>
-                <span class="n-cat">Cine</span>
-                <h4>Cine-Sónico: Bandas sonoras de síntesis</h4>
-            </article>
-            <article class="news-card">
-                <div class="n-img"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600"></div>
-                <span class="n-cat">Bytemos</span>
-                <h4>Cyberpunk Local: Modding y resistencia</h4>
-            </article>
-            <article class="news-card">
-                <div class="n-img"><img src="https://images.unsplash.com/photo-1514525253361-bee8d48700df?w=600"></div>
-                <span class="n-cat">Escena</span>
-                <h4>Sótanos de Buenos Aires: El nuevo Under</h4>
-            </article>
-        </section>
-
-        <!-- SECCIÓN MANDA TU RUIDO -->
-        <section class="ruido-cta">
-            <span class="radar-label">Radar de Bandas Independientes</span>
-            <h2>MANDA TU <br><span>RUIDO.</span></h2>
-            <div class="cta-description">
-                <p>¿Tu banda está haciendo algo diferente? Buscamos el próximo grito del under independiente.</p>
-            </div>
-            <div class="cta-buttons">
-                <button class="btn-black">Mandar Estreno</button>
-                <button class="btn-outline">Solicitar Entrevista</button>
-            </div>
-        </section>
-    </main>
-
+    <!-- FOOTER COMPLETO Y CORREGIDO -->
     <footer class="fanzine-footer">
-        <div class="f-top">
-            <div class="f-brand">
-                <h2 class="logo">EL ROCK DE TODOS LOS DÍAS<span>.</span></h2>
-                <p>Un diario ruidoso para mentes distorsionadas. Música, Cultura y Cine filtrados a través del lente del under independiente.</p>
+        <div class="footer-grid">
+            <!-- Columna 1: Info -->
+            <div class="footer-col">
+                <h2 class="logo" style="font-size: 2.5rem; margin-bottom: 20px;">EL ROCK<span>.</span></h2>
+                <p>Música, Cultura y Cine filtrados a través del lente del under independiente. Un diario ruidoso para mentes distorsionadas.</p>
+                <div class="contact-info">
+                    <b>SITIO WEB:</b>
+                    <a href="https://elrockdetodoslosdias.com.mx" style="color:#888;">elrockdetodoslosdias.com.mx</a>
+                </div>
             </div>
-            <div class="f-col">
-                <h5>FANZINE</h5>
-                <a href="#">Quiénes Somos</a>
-                <a href="#">Terminal</a>
-                <a href="#">Contacto / Prensa</a>
+
+            <!-- Columna 2: Navegación -->
+            <div class="footer-col">
+                <h5>SECCIONES</h5>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="musica.html">Música Internacional</a></li>
+                    <li><a href="escena.html">Escena Nacional</a></li>
+                    <li><a href="bytemos.html">Bytemos (Geek)</a></li>
+                    <li><a href="toy-rockeando.html">Toy Rockeando</a></li>
+                </ul>
             </div>
-            <div class="f-col">
-                <h5>REDES</h5>
-                <a href="#">Instagram</a>
-                <a href="#">Spotify</a>
-                <a href="#">Twitter / X</a>
+
+            <!-- Columna 3: Redes Sociales -->
+            <div class="footer-col">
+                <h5>ESTAMOS EN LÍNEA</h5>
+                <div class="social-icons-grid">
+                    <a href="https://www.facebook.com/ElRockdetodoslosDias" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/ElRockde" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/elrockdetodoslosdias/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://discord.gg/Ey7sdqwDaW" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.twitch.tv/elrockdetodoslosdias" title="Twitch"><i class="fab fa-twitch"></i></a>
+                    <a href="https://www.tiktok.com/@elrockdetodoslosdias" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <p style="margin-top:20px; font-size:10px;">Únete a nuestra comunidad en Discord y Twitch para transmisiones en vivo.</p>
+            </div>
+
+            <!-- Columna 4: Contacto -->
+            <div class="footer-col">
+                <h5>CONTACTO & PRENSA</h5>
+                <div class="contact-info">
+                    <b>WHATSAPP / TEL:</b>
+                    55 1920 4557
+                    <b>EMAILS:</b>
+                    elrockdetodoslosdias@gmail.com<br>
+                    prensa@elrockdetodoslosdias.com.mx
+                </div>
             </div>
         </div>
+
         <div class="f-bottom">
             <span>© 2026 El Rock de Todos los Días</span>
             <span>EL SILENCIO ES RUIDO QUE NO SE ATREVE A SER ESCUCHADO</span>
         </div>
     </footer>
 
+</div>
+
+<script>
+    // LÓGICA DEL SLIDER
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    let autoSlide = setInterval(nextSlide, 5000);
+
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            clearInterval(autoSlide);
+            currentSlide = i;
+            showSlide(i);
+            autoSlide = setInterval(nextSlide, 5000);
+        });
+    });
+</script>
+
 </body>
 </html>
-
-
-
