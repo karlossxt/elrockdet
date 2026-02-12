@@ -1,0 +1,199 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Automatic Kafka estrena IMMORTAL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0c0c0c;
+            --kafka-yellow: #eab308; /* Amarillo Industrial */
+            --industrial-gray: #27272a;
+            --white: #f4f4f5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO INDUSTRIAL CRT */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        /* BOTÓN CERRAR */
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--kafka-yellow); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* HEADER */
+        .post-header { margin-bottom: 60px; border-left: 15px solid var(--kafka-yellow); padding-left: 30px; }
+        .tag-origin { font-family: 'Space Mono'; color: var(--kafka-yellow); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            line-height: 0.8; margin: 10px 0; text-transform: uppercase;
+        }
+        .post-title span { -webkit-text-stroke: 1px var(--kafka-yellow); color: transparent; }
+
+        .img-hero { border: 2px solid var(--industrial-gray); margin-bottom: 40px; position: relative; }
+        .img-hero img { width: 100%; display: block; filter: grayscale(1); }
+
+        /* CONTENIDO */
+        .intro-text { font-size: 1.4rem; color: #a1a1aa; margin-bottom: 60px; border-bottom: 1px solid #222; padding-bottom: 40px; }
+        .intro-text strong { color: var(--kafka-yellow); }
+
+        /* DOSSIER DE CANCIONES (Tracklist Biográfico) */
+        .track-dossier { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin: 60px 0; }
+        
+        .track-card {
+            background: var(--industrial-gray); padding: 25px;
+            border-top: 4px solid #333; transition: 0.3s;
+        }
+        .track-card:hover { border-top-color: var(--kafka-yellow); background: #18181b; transform: translateY(-5px); }
+        .track-card h3 { font-family: 'Syne'; font-size: 1.2rem; color: var(--kafka-yellow); margin-bottom: 10px; text-transform: uppercase; }
+        .track-card p { font-family: 'Space Mono'; font-size: 11px; color: #d4d4d8; line-height: 1.4; }
+
+        /* SECCIÓN TÉCNICA */
+        .tech-specs {
+            background: white; color: black; padding: 40px;
+            margin: 80px 0; display: flex; flex-wrap: wrap; gap: 40px;
+            box-shadow: 15px 15px 0px var(--kafka-yellow);
+        }
+        .spec-item h4 { font-family: 'Space Mono'; font-size: 10px; text-transform: uppercase; color: #666; margin-bottom: 5px; }
+        .spec-item p { font-family: 'Syne'; font-size: 1.1rem; font-weight: 800; }
+
+        /* VIDEO CONTAINER */
+        .video-wrapper {
+            margin: 80px 0; position: relative; padding-bottom: 56.25%; height: 0; 
+            border: 10px solid var(--industrial-gray);
+        }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; filter: grayscale(0.5); }
+
+        /* FOOTER */
+        .post-footer {
+            text-align: center; padding: 60px 0; border-top: 1px solid #222;
+        }
+        .btn-stream {
+            display: inline-block; background: var(--kafka-yellow); color: black;
+            padding: 15px 30px; text-decoration: none; font-family: 'Space Mono';
+            font-weight: 900; text-transform: uppercase; margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .tech-specs { flex-direction: column; gap: 20px; }
+            .post-title { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <div class="container">
+        
+        <header class="post-header">
+            <span class="tag-origin">ASTURIAS // SPAIN // INDUSTRIAL ROCK</span>
+            <h1 class="post-title">AUTOMATIC KAFKA:<br><span>IMMORTAL</span></h1>
+        </header>
+
+        <div class="img-hero">
+            <!-- Imagen sugerida: Arte del disco Immortal o foto de la banda -->
+            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=1200" alt="Automatic Kafka Immortal">
+        </div>
+
+        <div class="intro-text">
+            Desde Asturias, <strong>Automatic Kafka</strong> vuelve con más fuerza que nunca. Tras el éxito de <em>Metamorphosis</em>, la banda presenta su segundo álbum: una biografía sonora de ocho piezas que desafían lo predecible.
+        </div>
+
+        <h2 style="font-family:'Syne'; color:var(--kafka-yellow); text-transform:uppercase; letter-spacing:2px; margin-bottom:30px;">[ DOSSIER DE PERSONAJES ]</h2>
+
+        <div class="track-dossier">
+            <div class="track-card">
+                <h3>CRAZY HORSE</h3>
+                <p>La lucha de Tasunka Witko, símbolo de resistencia y traición indígena.</p>
+            </div>
+            <div class="track-card">
+                <h3>IMMORTAL</h3>
+                <p>La venganza de Beatrix Kiddo, tan inmortal como Rambo o John McClane.</p>
+            </div>
+            <div class="track-card">
+                <h3>RESISTANCE</h3>
+                <p>Oda a la rebeldía de Randle McMurphy (Alguien voló sobre el nido del cuco).</p>
+            </div>
+            <div class="track-card">
+                <h3>DOC</h3>
+                <p>Secretos temporales y un guiño al científico de Regreso al Futuro.</p>
+            </div>
+            <div class="track-card">
+                <h3>THE TASTER</h3>
+                <p>Homenaje al mítico Bon Scott, entre metáforas y rock eterno.</p>
+            </div>
+            <div class="track-card">
+                <h3>AUDIO GARDEN</h3>
+                <p>Doble tributo a Chris Cornell y al amigo de la banda, Cornelius.</p>
+            </div>
+            <div class="track-card">
+                <h3>BURN</h3>
+                <p>El fuego de Jimi Hendrix y su guitarra ardiendo en la memoria.</p>
+            </div>
+            <div class="track-card">
+                <h3>THE RED</h3>
+                <p>Anécdotas del legendario atracador Dani el Rojo: acción y metáfora.</p>
+            </div>
+        </div>
+
+        <!-- SECCIÓN TÉCNICA -->
+        <section class="tech-specs">
+            <div class="spec-item">
+                <h4>ESTUDIO</h4>
+                <p>TUNGUSKA MEDIA FACTORY</p>
+            </div>
+            <div class="spec-item">
+                <h4>PRODUCCIÓN</h4>
+                <p>BROONKO LEE / J. REBOR / J. CAMBA</p>
+            </div>
+            <div class="spec-item">
+                <h4>MASTERING</h4>
+                <p>BARRY SAGE (LEGENDARY)</p>
+            </div>
+            <div class="spec-item">
+                <h4>DURACIÓN</h4>
+                <p>32 MINUTES // 8 TRACKS</p>
+            </div>
+        </section>
+
+        <h2 style="font-family:'Syne'; text-align:center; text-transform:uppercase;">EN VIVO: DOC</h2>
+        <div class="video-wrapper">
+            <!-- Reemplaza el ID de YouTube por el real del video de Doc -->
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <footer class="post-footer">
+            <p style="font-family:'Space Mono'; color:#555;">DISPONIBLE EN TODAS LAS PLATAFORMAS</p>
+            <a href="#" class="btn-stream">ESCUCHAR IMMORTAL</a>
+        </footer>
+
+    </div>
+
+</body>
+</html>

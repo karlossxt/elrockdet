@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYTEMOS | X-Men ’97: La culminación del Gen Mutante</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #080808;
+            --x-yellow: #fbbf24; /* Amarillo X-Men */
+            --x-blue: #1e40af;   /* Azul X-Men */
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO CRT SCANLINES 90s */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(251, 191, 36, 0.03) 50%, rgba(0, 0, 0, 0.2) 50%);
+            z-index: 1000; background-size: 100% 3px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        /* BOTÓN CERRAR */
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--x-yellow); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* HEADER */
+        .post-header { margin-bottom: 60px; border-bottom: 5px solid var(--x-blue); padding-bottom: 30px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--x-yellow); font-weight: 900; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+        }
+        .post-title span { color: var(--x-yellow); }
+
+        .img-hero { border: 6px solid var(--x-yellow); margin-bottom: 40px; position: relative; padding: 5px; background: #000; }
+        .img-hero img { width: 100%; display: block; filter: saturate(1.2) contrast(1.1); }
+
+        /* META STRIP */
+        .meta-strip {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 20px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--x-yellow);
+        }
+
+        /* CUERPO DEL TEXTO */
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 35px; line-height: 1.7;
+        }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--x-yellow); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* BLOQUE MULTIVERSO */
+        .crossover-box {
+            background: #111; border: 1px solid var(--x-blue);
+            padding: 40px; margin: 60px 0; border-right: 10px solid var(--x-yellow);
+        }
+        .crossover-box h3 { font-family: 'Syne'; color: var(--x-yellow); margin-bottom: 20px; text-transform: uppercase; }
+        .crossover-list { font-family: 'Space Mono'; font-size: 12px; color: #94a3b8; list-style: none; }
+        .crossover-list li { margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .crossover-list li::before { content: "►"; position: absolute; left: 0; color: var(--x-yellow); }
+
+        /* SIDEBAR INTEL */
+        .sidebar-x {
+            background: #0f172a; border: 1px solid var(--x-yellow);
+            padding: 30px; position: sticky; top: 100px; height: fit-content;
+        }
+        .sidebar-x h4 { font-family: 'Syne'; color: var(--x-yellow); margin-bottom: 20px; text-transform: uppercase; }
+        .intel-card { margin-bottom: 25px; border-bottom: 1px solid #222; padding-bottom: 10px; }
+        .intel-card b { display: block; color: white; font-family: 'Space Mono'; font-size: 11px; text-transform: uppercase; margin-bottom: 5px; }
+        .intel-card p { font-size: 11px; color: #64748b; font-family: 'Space Mono'; }
+
+        /* FOOTER NOTA */
+        .post-footer {
+            margin-top: 80px; padding: 60px 0; border-top: 1px solid #222; text-align: center;
+        }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2.5rem; color: var(--x-yellow); }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">BYTEMOS // MARVEL ANIMATION // DOSSIER MUTANTE</span>
+            <h1 class="post-title">X-MEN ’97:<br><span>GENÉTICA SUPERIOR</span></h1>
+        </header>
+
+        <div class="img-hero">
+            <!-- Imagen sugerida: El equipo clásico de X-Men '97 o el poster de la serie -->
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200" alt="X-Men '97 Marvel Animation">
+        </div>
+
+        <div class="meta-strip">
+            <span>REGISTRO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>SHOW: X-MEN '97 (DISNEY+)</span>
+            <span>ZONA: GENOSHA // ASTEROIDE M</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>X-Men ’97 representa la culminación de lo que Marvel siempre aspiró a crear dentro de su vasto universo. Retomando la historia donde la icónica serie de 1997 nos dejó —con un Charles Xavier al borde de la muerte—, esta secuela llega para redefinir el estándar de excelencia.</p>
+                    
+                    <p>En esta nueva era, la serie ha dado un salto evolutivo en términos de animación y narrativa. Por primera vez, todos los personajes del universo Marvel convergen tal como lo hacen en las páginas de los cómics. La reunificación es un evento largamente anhelado tras décadas de dispersión entre diversas compañías.</p>
+
+                    <div class="crossover-box">
+                        <h3>RED DE CAMEOS & CONEXIONES</h3>
+                        <ul class="crossover-list">
+                            <li>SPIDER-MAN (1998) // POSIBLE CONTINUACIÓN DETECTADA.</li>
+                            <li>CAPITÁN AMÉRICA & IRON MAN // LOS VENGADORES EN ESCENA.</li>
+                            <li>MORPH TRANSFORMATION // LOS CUATRO FANTÁSTICOS CONFIRMADOS.</li>
+                            <li>RECUERDOS DE GENOSHA // LA TRAGEDIA COMO MOTOR.</li>
+                        </ul>
+                    </div>
+
+                    <p>El final de temporada ha dejado a los fanáticos con el corazón en la mano. La destrucción del <strong>Asteroide M</strong> y la dispersión del equipo a través del tiempo y el espacio plantea un escenario intrigante para lo que viene.</p>
+                    
+                    <p>La aparición de figuras como Nathan y En Sabah Nur (Apocalipsis) promete una continuación llena de drama. La escena post-créditos entre las ruinas de Genosha sugiere que los desafíos serán aún mayores, manteniendo la esencia de la narrativa original pero llevándola a nuevos horizontes.</p>
+                </div>
+            </div>
+
+            <!-- SIDEBAR INTEL -->
+            <aside class="sidebar-layout">
+                <div class="sidebar-x">
+                    <h4>EXPEDIENTE ÉPSILON</h4>
+                    
+                    <div class="intel-card">
+                        <b>EL LÍDER</b>
+                        Magneto asume el rol de Xavier. La coexistencia puesta a prueba.
+                    </div>
+
+                    <div class="intel-card">
+                        <b>APOCALIPSIS</b>
+                        Presencia detectada en las ruinas. En Sabah Nur reclama el futuro.
+                    </div>
+
+                    <div class="intel-card">
+                        <b>FRACTURA TEMPORAL</b>
+                        X-Men desplazados: Pasado, Presente y un futuro incierto.
+                    </div>
+
+                    <div class="intel-card">
+                        <b>CALIDAD VISUAL</b>
+                        Evolución del estilo de 1992 con fluidez de 2024.
+                    </div>
+
+                    <button style="width:100%; background:var(--x-yellow); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">ESCUCHAR SOUNDTRACK</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>A MÍ, MIS X-MEN.</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // BYTEMOS © 2025</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANTALLAS | Joker 2: La Decadencia de Arthur Fleck</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --joker-purple: #7e22ce;
+            --joker-green: #84cc16;
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO PSICÓTICO SCANLINES */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(126, 34, 206, 0.05) 50%, rgba(0, 0, 0, 0.3) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        /* BOTÓN CERRAR */
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--joker-purple); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid var(--joker-green); cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* HEADER */
+        .post-header { margin-bottom: 60px; border-bottom: 2px solid var(--joker-purple); padding-bottom: 40px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--joker-green); font-weight: 900; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            line-height: 0.8; margin: 10px 0; text-transform: uppercase;
+        }
+        .post-title span { color: var(--joker-purple); }
+
+        .img-hero { border: 4px solid var(--joker-purple); margin-bottom: 40px; position: relative; padding: 5px; background: #000; }
+        .img-hero img { width: 100%; display: block; filter: contrast(1.2) saturate(0.8); }
+
+        /* META STRIP */
+        .meta-strip {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--joker-purple);
+        }
+
+        /* LAYOUT */
+        .main-layout { display: grid; grid-template-columns: 1fr 350px; gap: 60px; }
+
+        /* TEXTO */
+        .content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 35px; line-height: 1.7;
+        }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--joker-green); font-weight: 900; font-family: 'Syne';
+        }
+        .content b { color: var(--joker-purple); }
+
+        /* BLOQUE DESTACADO: HARVEY DENT */
+        .dent-box {
+            background: #111; border: 1px solid var(--joker-purple);
+            padding: 30px; margin: 50px 0; border-left: 10px solid var(--joker-green);
+        }
+        .dent-box h3 { font-family: 'Syne'; color: var(--joker-green); margin-bottom: 15px; text-transform: uppercase; }
+
+        /* SIDEBAR (REFERENCIAS CÓMIC) */
+        .sidebar-comics {
+            background: #0a0a0a; border: 1px solid #333;
+            padding: 30px; position: sticky; top: 100px; height: fit-content;
+            box-shadow: 10px 10px 0px var(--joker-purple);
+        }
+        .sidebar-comics h4 { font-family: 'Syne'; color: var(--joker-green); margin-bottom: 25px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .comic-ref { margin-bottom: 30px; }
+        .comic-ref b { display: block; color: var(--joker-purple); font-family: 'Space Mono'; font-size: 12px; text-transform: uppercase; margin-bottom: 8px; }
+        .comic-ref p { font-size: 11px; color: #888; line-height: 1.4; font-family: 'Space Mono'; }
+
+        /* FOOTER NOTA */
+        .post-footer {
+            margin-top: 80px; padding: 60px 0; border-top: 1px solid #222; text-align: center;
+        }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2.5rem; color: var(--joker-purple); }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">PANTALLAS // CRÍTICA: FOLIE À DEUX</span>
+            <h1 class="post-title">JOKER 2:<br><span>LA DECADENCIA</span></h1>
+        </header>
+
+        <div class="img-hero">
+            <!-- Imagen sugerida: Arthur Fleck con maquillaje corrido o cartel de la película -->
+            <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=1200" alt="Joker 2 Folie à Deux Analysis">
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>DIRECTOR: TODD PHILLIPS</span>
+            <span>FECHA: OCTUBRE 2025</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>Las expectativas en torno a la segunda parte de <b>Joker</b> eran altísimas. La primera entrega nos había mostrado la evolución de Arthur Fleck hasta convertirse en el Joker, ese archienemigo cuyas motivaciones nacen de una existencia precaria. Sin embargo, en esta secuela, la historia no logra alcanzar el impacto esperado.</p>
+                    
+                    <p>La introducción de <b>Harley Quinn</b> transforma la película en una especie de musical psicológico. Este enfoque resuena con los cómics, donde el caos alcanza niveles absurdos y teatrales. Pero a pesar de la intención de explorar la dualidad entre el Joker y Arthur Fleck, la película no logra capturar la intensidad de su predecesora.</p>
+
+                    <p>Uno de los mayores problemas es que la historia carece de un punto culminante. En lugar de ver la locura desbordante, lo que obtenemos es una serie de escenas cargadas de agotamiento y desesperación por parte de Arthur. Su lucha interna parece agotarlo más que llevarlo al límite, reflejado en un desenlace donde incluso Harley lo abandona: ella no busca a Arthur, sino al Joker.</p>
+
+                    <div class="dent-box">
+                        <h3>EL SURGIMIENTO DE DOS CARAS</h3>
+                        <p style="font-size:1.1rem; color:#ccc;">Un gran acierto es mostrarnos a <b>Harvey Dent</b> como el fiscal que desea imponer justicia. Su transformación después de la explosión nos regala el nacimiento de otro villano emblemático, dándole un peso visual brutal a la película.</p>
+                    </div>
+
+                    <p>A nivel visual, la película es impecable; Ciudad Gótica en total decadencia refleja la descomposición del protagonista. Las escenas musicales funcionan en su mayoría, pero la trama se siente débil y, en varios momentos, tediosa.</p>
+                </div>
+            </div>
+
+            <!-- SIDEBAR DE REFERENCIAS CÓMIC -->
+            <aside class="sidebar-layout">
+                <div class="sidebar-comics">
+                    <h4>COMIC DOSSIER</h4>
+                    
+                    <div class="comic-ref">
+                        <b>MAD LOVE (1994)</b>
+                        <p>Explora el origen de Harley Quinn y su caída hacia la locura por la manipulación del Joker. La película reinterpreta esta toxicidad central.</p>
+                    </div>
+
+                    <div class="comic-ref">
+                        <b>THE KILLING JOKE (1988)</b>
+                        <p>La premisa de que "cualquier persona puede volverse loca tras un mal día". Arthur es el símbolo de esa visión nihilista del mundo.</p>
+                    </div>
+
+                    <div class="comic-ref">
+                        <b>THREE JOKERS (2020)</b>
+                        <p>Relacionado con la idea de que existen varias versiones del personaje, manifestándose la locura de diversas maneras abstractas.</p>
+                    </div>
+
+                    <div class="comic-ref">
+                        <b>THE DARK KNIGHT RETURNS (1986)</b>
+                        <p>El caos como espectáculo performativo. La película refleja este aspecto teatral a través de sus secuencias musicales.</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>CUALQUIER PERSONA PUEDE VOLVERSE LOCA TRAS UN MAL DÍA.</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // PANTALLAS © 2025</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Pearl Jam: 30 Años del Diez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --grunge-red: #8b0000; /* Rojo Ten */
+            --ten-tan: #d2b48c;
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+            z-index: 1000; background-size: 100% 3px; pointer-events: none;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        /* BOTÓN CERRAR */
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--grunge-red); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* HEADER */
+        .post-header { margin-bottom: 60px; border-bottom: 4px solid var(--grunge-red); padding-bottom: 40px; }
+        .tag-grunge { 
+            background: white; color: black; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 900; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6.5rem);
+            line-height: 0.8; text-transform: uppercase;
+        }
+        .post-title span { color: var(--grunge-red); }
+
+        .img-frame { border: 1px solid #333; padding: 10px; background: #111; margin-bottom: 40px; }
+        .img-frame img { width: 100%; display: block; filter: grayscale(0.5) contrast(1.2); }
+
+        /* META STRIP */
+        .meta-strip {
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--ten-tan);
+        }
+
+        /* CUERPO DEL TEXTO */
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--grunge-red); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* BLOQUE MEMORIA RADIO CDMX */
+        .radio-memory {
+            background: var(--grunge-red); color: white;
+            padding: 40px; margin: 50px 0; border: 4px solid white;
+            position: relative;
+        }
+        .radio-memory::before {
+            content: "FRECUENCIA 1993";
+            position: absolute; top: -15px; left: 20px;
+            background: white; color: black; padding: 5px 15px; font-family: 'Space Mono'; font-weight: 900; font-size: 10px;
+        }
+        .radio-memory p { font-style: italic; font-size: 1.1rem; line-height: 1.5; color: white !important; }
+
+        /* SIDEBAR (LINEUP) */
+        .sidebar-ten {
+            background: #111; border: 1px solid #333;
+            padding: 25px; position: sticky; top: 100px; height: fit-content;
+        }
+        .sidebar-ten h4 { font-family: 'Syne'; color: var(--grunge-red); margin-bottom: 20px; text-transform: uppercase; }
+        .track-list { list-style: none; font-family: 'Space Mono'; font-size: 11px; color: #888; }
+        .track-list li { margin-bottom: 12px; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        .track-list b { color: white; }
+
+        /* FOOTER DE LA NOTA */
+        .post-footer {
+            margin-top: 100px; padding: 60px 0; border-top: 1px solid #222; text-align: center;
+        }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2.5rem; margin-bottom: 10px; color: var(--grunge-red); }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 3rem; }
+            .radio-memory { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-grunge">ANIVERSARIO // SEATTLE SOUND</span>
+            <h1 class="post-title">PEARL JAM:<br><span>30 AÑOS DEL DIEZ</span></h1>
+        </header>
+
+        <div class="img-frame">
+            <!-- Imagen sugerida: Los 5 miembros originales o la portada de Ten -->
+            <img src="https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?w=1200" alt="Pearl Jam Ten">
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>FECHA: OCTUBRE 2025</span>
+            <span>ZONA: CIUDAD DE MÉXICO</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>Recuerdo mucho que cuando escuché por primera vez <strong>Even Flow</strong> por ahí de 1993 me llegó hasta los huesos, aun era un adolescente que empezaba a conocer el rock sobre todo con grupos clásicos.</p>
+                    
+                    <p>Exploraba lo que era la radio en la ciudad de México, donde ahí podía encontrar nuevos sonidos ya que el adquirir un disco no era algo costeable para alguien de 13 años. Este nuevo rock que poco había explorado era una mezcla de esas bandas setenteras pero con una idea renovada; un sonido que venía redefiniendo la década de los 90s, después llamado <strong>grunge</strong>, cosa que al final se les quedó a ese ya conocido sonido de Seattle pero que en ese momento no gustaba mucho ese término.</p>
+
+                    <div class="radio-memory">
+                        <p>“En 1991, el panorama para una banda nueva era complicado. Ten compitió con trabajos como ‘Nevermind’ de Nirvana, el álbum negro de Metallica, ‘Badmotorfinger’ de Soundgarden y los ‘Use Your Illusion’ de Guns N’ Roses.”</p>
+                    </div>
+
+                    <p>Al momento de empezar a grabar ni nombre tenía la banda. Con ventas lentas a lo esperado, el gran trabajo que venía detrás del álbum tenía en algún momento que dar el salto esperado; casi un año después fue disco de oro, obteniendo grandes críticas del medio.</p>
+
+                    <h2>¿CUÁL ES LA IMPORTANCIA DE ESTE ÁLBUM?</h2>
+
+                    <p>Primero que nada, el cambio generacional se notaba que se venían haciendo cosas distintas ya que poco a poco quedaban atrás aquellos excesos que se venían haciendo en los ochentas. Había ya diferencias en la manera de hacer rock; las letras abordaban temáticas distintas y con más crudeza, levantando la voz a problemáticas sociales y hasta depresivas.</p>
+                    
+                    <p><strong>Ten</strong> es un álbum sólido, completo, que tiene grandes subidas con «Once», «Even Flow», «Alive», «Why Go» y bajadas tan geniales como «Black» con riffs que ya son legendarios. Marcó el inicio de una generación y ya es un icono dentro de la historia.</p>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-ten">
+                    <h4>EL MECANISMO TEN</h4>
+                    <ul class="track-list">
+                        <li><b>Eddie Vedder</b><br>Voz</li>
+                        <li><b>Stone Gossard</b><br>Guitarra Rítmica</li>
+                        <li><b>Mike McCready</b><br>Guitarra Líder</li>
+                        <li><b>Jeff Ament</b><br>Bajo</li>
+                        <li><b>Dave Krusen</b><br>Batería</li>
+                    </ul>
+                    <h4 style="margin-top: 30px;">HIMNOS</h4>
+                    <ul class="track-list">
+                        <li>01. ALIVE</li>
+                        <li>02. EVEN FLOW</li>
+                        <li>03. BLACK</li>
+                        <li>04. JEREMY</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>SI NO LO HAS ESCUCHADO, DEBES HACERLO.</h3>
+            <p>PEARL JAM // TEN 30TH ANNIVERSARY // EL ROCK DE TODOS LOS DÍAS</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

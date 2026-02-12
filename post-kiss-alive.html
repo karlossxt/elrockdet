@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Especial 50 Años de KISS Alive!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --kiss-gold: #facc15;
+            --white: #eeeeee;
+            --gray: #1a1a1a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ESCANEO DE VINILO */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%);
+            z-index: 1000; background-size: 100% 3px; pointer-events: none;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        /* BOTÓN CERRAR */
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--kiss-gold); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid black; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* HEADER */
+        .post-header { margin-bottom: 80px; text-align: center; }
+        .tag-anniversary { 
+            background: var(--kiss-gold); color: black; padding: 5px 20px; 
+            font-family: 'Space Mono'; font-weight: 900; font-size: 14px; 
+            display: inline-block; margin-bottom: 25px; transform: rotate(-1deg);
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6.5rem);
+            line-height: 0.8; margin-bottom: 30px; text-transform: uppercase;
+            letter-spacing: -3px;
+        }
+        .post-title span { color: var(--kiss-gold); }
+
+        /* IMAGEN PORTADA */
+        .img-cover-frame { 
+            border: 10px solid var(--gray); 
+            margin-bottom: 60px; 
+            position: relative;
+            box-shadow: 0 0 50px rgba(250, 204, 21, 0.1);
+        }
+        .img-cover-frame img { width: 100%; display: block; filter: contrast(1.1); }
+
+        /* META INFO */
+        .meta-strip {
+            border-top: 1px solid #333; border-bottom: 1px solid #333;
+            padding: 20px 0; margin-bottom: 60px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; font-weight: 700; color: var(--kiss-gold);
+        }
+
+        /* CUERPO DEL TEXTO */
+        .post-content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 35px; line-height: 1.7;
+        }
+        .post-content p:first-of-type::first-letter {
+            font-size: 5.5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--kiss-gold); font-weight: 900; font-family: 'Syne';
+        }
+
+        .post-content h2 {
+            font-family: 'Syne'; font-size: 2.5rem; color: var(--kiss-gold);
+            margin: 70px 0 30px; text-transform: uppercase; border-left: 10px solid var(--kiss-gold); padding-left: 20px;
+        }
+
+        /* CAJA DESTACADA: TRIVIA / FOTOGRAFÍA */
+        .trivia-box {
+            background: var(--gray); border: 2px solid var(--kiss-gold);
+            padding: 40px; margin: 60px 0;
+            position: relative;
+        }
+        .trivia-box::before {
+            content: "ARCHIVOS FIN COSTELLO";
+            position: absolute; top: -15px; left: 20px;
+            background: var(--kiss-gold); color: black;
+            padding: 5px 15px; font-family: 'Space Mono'; font-weight: 900; font-size: 10px;
+        }
+        .trivia-box h4 { font-family: 'Syne'; font-size: 1.8rem; margin-bottom: 15px; color: var(--kiss-gold); }
+
+        /* LISTA DE LEGADO */
+        .legacy-list { list-style: none; margin: 40px 0; }
+        .legacy-list li { 
+            padding-left: 30px; position: relative; margin-bottom: 25px; 
+            font-family: 'Inter'; font-size: 1.2rem; color: #eee;
+        }
+        .legacy-list li::before {
+            content: "⚡"; position: absolute; left: 0; color: var(--kiss-gold);
+        }
+        .legacy-list b { color: var(--kiss-gold); font-family: 'Space Mono'; text-transform: uppercase; }
+
+        /* FOOTER */
+        .post-footer {
+            margin-top: 100px; padding: 60px 20px; border-top: 1px solid #333;
+            text-align: center;
+        }
+        .post-footer h3 { font-family: 'Syne'; font-size: 3rem; color: var(--kiss-gold); margin-bottom: 15px; }
+        .post-footer p { font-family: 'Space Mono'; color: #444; font-size: 12px; }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3.2rem; }
+            .meta-strip { flex-direction: column; gap: 10px; }
+            .trivia-box { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-anniversary">1975 - 2025 // 50 YEARS OF LOUD</span>
+            <h1 class="post-title">KISS ALIVE!:<br><span>EL DISCO QUE CAMBIÓ TODO</span></h1>
+        </header>
+
+        <div class="img-cover-frame">
+            <!-- Imagen sugerida: Portada de KISS Alive! -->
+            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=1200" alt="KISS Alive! 50 Aniversario">
+        </div>
+
+        <div class="meta-strip">
+            <span>REGISTRO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>PROD: EDDIE KRAMER</span>
+            <span>SELLO: CASABLANCA RECORDS</span>
+        </div>
+
+        <div class="post-content">
+            <p>En los años sesenta y primeros setenta, los discos en directo eran rarezas. James Brown había dejado una joya con Live at the Apollo (1963), The Who destrozaron el manual con Live at Leeds (1970) y Deep Purple redefinieron la potencia con Made in Japan (1972). El formato existía, sí, pero era más un lujo para fans que un motor de ventas.</p>
+
+            <p>Kiss, en cambio, tenía un problema: su propuesta visual y escénica era imbatible —maquillajes, sangre, fuego— pero sus tres primeros discos no lograban capturar esa energía. La solución fue radical: grabar un doble en vivo que mostrara a la banda tal cual se vivía en los escenarios. Neil Bogart entendió algo clave: lo que no funcionaba en estudio podía triunfar en un disco en vivo.</p>
+
+            <p>Con el apoyo del manager Bill Aucoin, que invirtió 300.000 dólares de su propio bolsillo, organizaron la grabación de varios shows en ciudades como Detroit, Wildwood, Cleveland y Davenport. Para garantizar calidad, convocaron a Eddie Kramer, ingeniero estrella que había trabajado con Hendrix y Led Zeppelin.</p>
+
+            <h2>LA NOCHE DE DETROIT</h2>
+
+            <p>El 16 de mayo de 1975, 12.000 personas llenaron el Cobo Hall de Detroit. Hubo lanzallamas en “100,000 Years”, la batería de Peter Criss se elevó hasta el doble de su altura habitual y la multitud rugió como nunca. La energía estaba, pero las cintas no eran impecables: Kramer y el equipo tuvieron que sobregrabar guitarras y voces en estudio, aunque dejaron intactas las baterías, los gritos del público y las interacciones de Paul Stanley.</p>
+
+            <p>Alive! se lanzó el 10 de septiembre de 1975. Fue un éxito inmediato. La versión en vivo de “Rock and Roll All Nite” se convirtió en el himno definitivo de la banda y el disco vendió más de medio millón de copias en pocos meses. No solo salvó a Kiss: también rescató a Casablanca Records de la quiebra.</p>
+
+            <h2>LO QUE CONVIRTIÓ A ALIVE! EN LEYENDA</h2>
+
+            <ul class="legacy-list">
+                <li><b>El disco que salvó un sello:</b> Gracias a sus ventas millonarias, Casablanca pudo salir de la crisis. Sin Alive!, la compañía no habría sobrevivido.</li>
+                <li><b>La canción definitiva:</b> La versión en vivo de “Rock and Roll All Nite” fue la que realmente convirtió el tema en himno.</li>
+                <li><b>El público como motor:</b> Aquí el griterío y la euforia de la audiencia son parte esencial de la narrativa sonora.</li>
+                <li><b>El modelo a seguir:</b> Tras su éxito, muchas bandas comenzaron a lanzar discos en vivo como estrategia masiva, como Frampton Comes Alive! (1976).</li>
+            </ul>
+
+            <div class="trivia-box">
+                <h4>¿QUIÉN TOMÓ LAS FOTOS?</h4>
+                <p>El icónico retrato de Kiss que aparece en la portada fue obra del fotógrafo <strong>Fin Costello</strong>. Fue captado en el Michigan Palace de Detroit. Costello buscaba recrear una pose inspirada en el estilo “Status Quo” que reflejara perfectamente la energía teatral de la banda.</p>
+                <p style="margin-top:20px;"><strong>LA CONTRAPORTADA:</strong> Muestra a dos adolescentes sosteniendo un cartel hecho por ellos. Fin Costello los captó casi de casualidad. Se sabe que ellos son <strong>Bruce Redoute y Lee Neaves</strong>, quienes en 2002 volvieron a posar con el cartel confirmando su identidad.</p>
+            </div>
+
+            <p>Alive! cambió las reglas del juego. Antes, los discos en directo eran casi un trámite contractual; después, se volvieron un arma de consolidación masiva. Medio siglo más tarde, no solo se escucha como testimonio de la fuerza escénica de Kiss: se recuerda como el acto de supervivencia convertido en revolución.</p>
+        </div>
+
+        <footer class="post-footer">
+            <h3>KISS ES MAGIA.</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS © 1975 - 2025 // 50 ANIVERSARIO</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

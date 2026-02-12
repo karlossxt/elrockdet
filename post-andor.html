@@ -1,0 +1,184 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANTALLAS | Andor: La rebelión como espejo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #020617;
+            --cyan-neon: #00d4ff;
+            --empire-gray: #1e293b;
+            --white: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO INTERFAZ DIGITAL */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(0, 212, 255, 0.05) 50%, rgba(0, 0, 0, 0.2) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        /* BOTÓN CERRAR */
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--cyan-neon); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* HEADER */
+        .post-header { margin-bottom: 60px; border-left: 10px solid var(--cyan-neon); padding-left: 30px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--cyan-neon); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+        }
+
+        .img-hero { border: 1px solid var(--cyan-neon); margin-bottom: 40px; position: relative; padding: 5px; }
+        .img-hero img { width: 100%; display: block; filter: saturate(0.5) contrast(1.2); }
+
+        /* META STRIP */
+        .meta-strip {
+            border-top: 1px solid #1e293b; border-bottom: 1px solid #1e293b;
+            padding: 20px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--cyan-neon);
+        }
+
+        /* CUERPO DEL TEXTO */
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content p {
+            font-size: 1.25rem; font-weight: 400; color: #94a3b8;
+            margin-bottom: 35px; line-height: 1.7;
+        }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--cyan-neon); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* BLOQUE PARALELISMOS HISTÓRICOS */
+        .historical-box {
+            background: rgba(0, 212, 255, 0.1); border: 1px solid var(--cyan-neon);
+            padding: 40px; margin: 60px 0; position: relative;
+        }
+        .historical-box h3 { font-family: 'Syne'; color: var(--cyan-neon); margin-bottom: 20px; text-transform: uppercase; }
+        .historical-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; color: var(--white); }
+        .historical-list li { margin-bottom: 10px; border-left: 3px solid var(--cyan-neon); padding-left: 15px; }
+
+        /* SIDEBAR (THE RESISTANCE) */
+        .sidebar-intel {
+            background: #0f172a; border: 1px solid #1e293b;
+            padding: 30px; position: sticky; top: 100px; height: fit-content;
+        }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--cyan-neon); margin-bottom: 20px; text-transform: uppercase; font-size: 1rem; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #64748b; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        /* FOOTER NOTA */
+        .post-footer {
+            margin-top: 80px; padding: 60px 0; border-top: 1px solid #1e293b; text-align: center;
+        }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2rem; color: var(--cyan-neon); font-style: italic; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 3rem; }
+            .historical-box { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">SECCIÓN: PANTALLAS // INTEL: ANDOR S2</span>
+            <h1 class="post-title">ANDOR:<br>LA REBELIÓN COMO<span> REFLEJO</span></h1>
+        </header>
+
+        <div class="img-hero">
+            <!-- Imagen sugerida: Cassian Andor o el logo de la serie -->
+            <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=1200" alt="Andor Season 2 Analysis">
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>SHOWRUNNER: TONY GILROY</span>
+            <span>STATUS: URGENTE</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>La segunda temporada de <strong>Andor</strong> no solo consolida su lugar como la serie más madura del universo Star Wars, sino que se convierte en un espejo incómodo de las realidades políticas que vivimos fuera de la pantalla.</p>
+                    
+                    <p>Tony Gilroy abandona los místicos sables de luz y los héroes idealizados para sumergirse en los engranajes más oscuros de la resistencia: espionaje, vigilancia, manipulación y sacrificios personales en nombre de la libertad. En lugar de enfrentamientos épicos, Andor nos da conversaciones encriptadas en pasillos fríos del Imperio, traiciones entre camaradas, y actos de violencia moralmente turbios.</p>
+
+                    <div class="historical-box">
+                        <h3>ESPEJOS DE LA HISTORIA</h3>
+                        <p style="font-family:'Space Mono'; font-size:12px; margin-bottom:20px; color:var(--cyan-neon);">ANDOR DESMITIFICA EL CONFLICTO Y LO ACERCA A LUCHAS REALES:</p>
+                        <ul class="historical-list">
+                            <li>MASACRE DE GORHMAN // TLATELOLCO (1968)</li>
+                            <li>VIGILANCIA IMPERIAL // DICTADURAS DEL SIGLO XX</li>
+                            <li>OPRESIÓN TECNOLÓGICA // TIANANMEN (1989)</li>
+                            <li>ESTRATEGIA DE MIEDO // LA NOCHE DE LOS LÁPICES (1976)</li>
+                        </ul>
+                    </div>
+
+                    <p>Andor rompe con la narrativa tradicional de “el elegido” y pone el foco en figuras grises. Cassian no es un héroe por destino, sino un hombre arrastrado por circunstancias humanas. Aquí, la Fuerza no interviene para salvar el día. Son decisiones humanas, con consecuencias humanas.</p>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>PERFILES DE RESISTENCIA</h4>
+                    <div class="intel-item">
+                        <b>CASSIAN ANDOR</b>
+                        Hombre común arrastrado por la necesidad de sobrevivir.
+                    </div>
+                    <div class="intel-item">
+                        <b>LUTHEN RAEL</b>
+                        El estratega frío que entiende que para ganar hay que quemar el alma.
+                    </div>
+                    <div class="intel-item">
+                        <b>MON MOTHMA</b>
+                        Resistencia desde los pasillos del poder. Sacrificio familiar.
+                    </div>
+                    <button style="width:100%; background:var(--cyan-neon); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">VER TRÁILER</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>LA ENTREGA MÁS VALIENTE DE LA SAGA.</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // PANTALLAS © 2025</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

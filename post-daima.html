@@ -1,0 +1,182 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYTEMOS | Dragon Ball Daima: El último viaje de Toriyama</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --db-orange: #f97316; /* Naranja Goku */
+            --db-blue: #1d4ed8;   /* Azul Guerrero Z */
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(249, 115, 22, 0.03) 50%, rgba(0, 0, 0, 0.2) 50%);
+            z-index: 1000; background-size: 100% 3px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        /* BOTÓN CERRAR */
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--db-orange); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* HEADER */
+        .post-header { margin-bottom: 60px; border-bottom: 5px solid var(--db-orange); padding-bottom: 30px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--db-orange); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+        }
+        .post-title span { color: var(--db-orange); }
+
+        .img-hero { border: 4px solid var(--db-blue); margin-bottom: 40px; position: relative; padding: 5px; background: #000; }
+        .img-hero img { width: 100%; display: block; filter: contrast(1.1); }
+
+        /* META STRIP */
+        .meta-strip {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 20px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--db-orange);
+        }
+
+        /* CUERPO DEL TEXTO */
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 35px; line-height: 1.7;
+        }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--db-orange); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* BLOQUE TRIBUTO TORIYAMA */
+        .legacy-box {
+            background: #111; border-left: 10px solid var(--db-orange);
+            padding: 40px; margin: 60px 0; position: relative;
+        }
+        .legacy-box::before {
+            content: "IN MEMORIAM: AKIRA TORIYAMA";
+            position: absolute; top: -15px; right: 20px;
+            background: white; color: black; padding: 5px 15px; font-family: 'Space Mono'; font-weight: 900; font-size: 10px;
+        }
+        .legacy-box p { font-style: italic; font-size: 1.3rem; color: #fff !important; line-height: 1.4; }
+
+        /* SIDEBAR */
+        .sidebar-db {
+            background: #0f172a; border: 1px solid var(--db-blue);
+            padding: 30px; position: sticky; top: 100px; height: fit-content;
+        }
+        .sidebar-db h4 { font-family: 'Syne'; color: var(--db-orange); margin-bottom: 20px; text-transform: uppercase; }
+        .db-intel { font-family: 'Space Mono'; font-size: 11px; color: #94a3b8; margin-bottom: 20px; border-bottom: 1px solid #222; padding-bottom: 10px; }
+        .db-intel b { color: white; display: block; margin-bottom: 5px; }
+
+        /* FOOTER NOTA */
+        .post-footer {
+            margin-top: 80px; padding: 60px 0; border-top: 1px solid #222; text-align: center;
+        }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2.5rem; color: var(--db-orange); }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">SECCIÓN: BYTEMOS // TRIBUTO</span>
+            <h1 class="post-title">DAIMA:<br><span>EL ÚLTIMO KAMEHAMEHA</span></h1>
+        </header>
+
+        <div class="img-hero">
+            <!-- Imagen sugerida: Goku Niño de Daima o Akira Toriyama -->
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200" alt="Dragon Ball Daima Legacy">
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>AUTOR: AKIRA TORIYAMA</span>
+            <span>FECHA: OCTUBRE 2025</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>El legado de Toriyama ha sido de los más importantes y redituables alrededor del mundo. No importa la época, Dragon Ball siempre nos deja satisfechos. Vemos cada nueva entrega como un reencuentro con algo que siempre formó parte de nosotros.</p>
+                    
+                    <p>En 2024 se estrenó <strong>Daima</strong>. Al mirar los primeros tráilers, sabíamos que algo como GT iba a surgir. Toriyama nos brindó su versión de aquella idea, con Goku nuevamente convertido en niño, apelando a las raíces de la aventura, del humor y del espíritu que nos enamoró originalmente.</p>
+
+                    <div class="legacy-box">
+                        <p>“Daima se siente como una despedida, como ese último dibujo que el maestro quiso dejar, cerrando el círculo con una versión moderna de lo que fue el inicio de todo.”</p>
+                    </div>
+
+                    <p>La historia nos lleva al <strong>Reino Demonio</strong> tras la derrota de Buu. Alguien roba las esferas del dragón para convertir a los Guerreros Z en niños indefensos. El viaje al mundo demoníaco recupera la esencia de las primeras aventuras: peleas directas, humor y el descubrimiento de un universo fantástico.</p>
+                    
+                    <p>Saber que esta fue la última historia en la que Akira estuvo involucrado directamente le da un peso único. Es una carta de amor a su propia obra y a nosotros, los fans que crecimos viendo a Goku correr con su báculo.</p>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-db">
+                    <h4>EXPEDIENTE DAIMA</h4>
+                    <div class="db-intel">
+                        <b>LÍNEA TEMPORAL</b>
+                        Post-Majin Buu / Pre-Super.
+                    </div>
+                    <div class="db-intel">
+                        <b>CONCEPTO</b>
+                        Regreso a la aventura y el humor original.
+                    </div>
+                    <div class="db-intel">
+                        <b>EL MAESTRO</b>
+                        Último proyecto con participación directa de Toriyama.
+                    </div>
+                    <button style="width:100%; background:var(--db-orange); color:white; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">VER OPENING</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>EL LEGADO ES ETERNO.</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // BYTEMOS © 2025</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Ace Frehley: De la Tierra a Jendell</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --spaceman-purple: #8b5cf6;
+            --spaceman-silver: #cbd5e1;
+            --red: #dc2626;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                        linear-gradient(90deg, rgba(139, 92, 246, 0.03), rgba(255, 255, 255, 0.02), rgba(220, 38, 38, 0.03));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        /* BOTÓN CERRAR */
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--spaceman-purple); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; text-align: center; }
+        .tag-cat { 
+            background: var(--spaceman-purple); color: white; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--spaceman-purple); font-style: italic; }
+
+        /* IMÁGENES */
+        .img-main { border: 8px solid #111; margin-bottom: 40px; position: relative; }
+        .img-main img { width: 100%; display: block; filter: grayscale(0.3) contrast(1.1); }
+        .img-caption { 
+            font-family: 'Space Mono'; font-size: 10px; color: #666; 
+            text-align: right; margin-top: 10px; text-transform: uppercase;
+        }
+
+        /* BITÁCORA META */
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--spaceman-purple);
+        }
+
+        /* TEXTO DEL POST (IMPORTANTE: TODO EL CONTENIDO) */
+        .post-content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        /* Letra Capital */
+        .post-content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--spaceman-purple); font-weight: 900; font-family: 'Syne';
+        }
+
+        .post-content h2 {
+            font-family: 'Syne'; font-size: 2.5rem; color: var(--spaceman-purple);
+            margin: 60px 0 30px; text-transform: uppercase; border-bottom: 2px solid #222;
+        }
+
+        .highlight-text {
+            background: #111; padding: 40px; border-left: 5px solid var(--spaceman-purple);
+            margin: 50px 0; font-style: italic;
+        }
+
+        /* SEGUNDA IMAGEN */
+        .img-secondary { margin: 60px 0; border: 4px solid #111; }
+        .img-secondary img { width: 100%; filter: grayscale(0.5); }
+
+        /* BLOQUE LEGADO FINAL */
+        .legacy-section {
+            background: white; color: black; padding: 50px;
+            margin-top: 80px; box-shadow: 15px 15px 0px var(--spaceman-purple);
+        }
+        .legacy-section h2 { font-family: 'Syne'; font-size: 3rem; margin-bottom: 20px; color: black; border: none;}
+        .legacy-section p { font-family: 'Space Mono'; font-weight: 700; font-size: 1.1rem; color: #111; }
+
+        /* FOOTER DE LA NOTA */
+        .post-footer {
+            margin-top: 100px; padding-top: 40px; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 40px 15px; }
+            .post-title { font-size: 3.5rem; }
+            .legacy-section { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">BITÁCORA ESTELAR</span>
+            <h1 class="post-title">ACE FREHLEY:<br>DE LA TIERRA A <span>JENDELL</span></h1>
+        </header>
+
+        <div class="img-main">
+            <!-- Imagen sugerida: Ace Frehley clásico con maquillaje -->
+            <img src="https://images.unsplash.com/photo-1521433590544-cc3515ca76f6?w=1200" alt="Ace Frehley Spaceman">
+            <div class="img-caption">Ace Frehley / The Spaceman Legacy</div>
+        </div>
+
+        <div class="meta-info">
+            <span>POR: REDACCIÓN EL ROCK</span>
+            <span>FECHA: 10 DE OCTUBRE, 2025</span>
+            <span>ZONA: MÉXICO</span>
+        </div>
+
+        <div class="post-content">
+            <p>Ace Frehley, el inolvidable guitarrista de KISS, deja un legado que marcó a generaciones con su magia, su guitarra y su espíritu rebelde. La magia de la música es algo que no puedo describir en unas cuantas palabras; más bien, es algo que se siente con cada nota, cada palabra o cada solo de guitarra.</p>
+
+            <p>Desde aquella vez en que mi padre me regaló un <strong>Walkman</strong>, no lo solté ni un momento. A partir de ahí comencé a inclinarme por la música que hasta hoy me acompaña a todos lados.</p>
+
+            <p>Kiss llegó como de rebote a mi vida, en una jugada del destino. Sabía de su existencia, pero no había escuchado mucho de ellos; en ese entonces andaba en mi etapa popera, iniciando la adolescencia. Un amigo de la escuela me prestó una cinta con temas de moda, muy dance, y al llegar a casa la puse en la grabadora. El lado B comenzaba con un tema pegadizo, con una intro que te hacía subirle a todo volumen: <strong>I Was Made for Lovin’ You</strong> me voló la cabeza, seguido de <strong>2000 Man</strong> de Ace y todo el disco <em>Dynasty</em> venía grabado; el lado A quedó en el olvido.</p>
+
+            <p>Desde entonces Kiss se volvió un vicio. Aún no conocía su historia, pero quería más. Recordaba haber visto de niño un par de veces la película <em>Kiss Meets the Phantom of the Park</em>, vaya que sabía de su existencia, pero no más. Así fue que un amigo me prestó un par de vinilos: el álbum solista de Paul Stanley y el <strong>Kiss Alive</strong>. Amé ambos discos, visitaba las tiendas de discos o los puestos en los que vendían cintas grabadas y así hacerme de más de su música, de conocer cada dato de su historia, de su magia.</p>
+
+            <h2>GRACIAS ACE</h2>
+
+            <p>Uno de esos héroes de mi adolescencia, Ace Frehley, acaba de partir. Aún no puedo creer que haya sucedido tan repentinamente. Todavía soñaba con una gran reunión de los miembros originales —o de todos los que pasaron por la banda—, algo que debió ocurrir en la gira final (decisión de Paul y Gene) y que ya no será posible.</p>
+
+            <div class="img-secondary">
+                <!-- Imagen sugerida: Guitarra Gibson humeante -->
+                <img src="https://images.unsplash.com/photo-1514525253361-bee8718a74a2?w=1000" alt="Concierto Rock">
+                <div class="img-caption">Marzo 1997 / Primera vez en suelo azteca</div>
+            </div>
+
+            <p>Ace era ese tipo que ponía alegría en las reuniones de amigos; pese a sus adicciones, tenía esa magia en cada riff, en cada solo, en cada concierto. Era marzo de 1997 cuando la gira de la reunión llegó a México. Fue la primera vez que Ace pisó suelo azteca para hacer vibrar su Gibson, que se encendía con cada acorde con explosiones y esa dureza que le representaba.</p>
+
+            <div class="highlight-text">
+                <p>Recuerdo que, después de Pantera, me subí a una silla para ver mejor a la banda, y cuando empezaron los primeros acordes de Deuce brinqué de emoción y la silla se rompió. Solo reí, me levanté y seguí cantando. Muy a su estilo, Ace nos transportaba a Jendell. Esa noche fue pura magia. El griterío entre la armada de Kiss era atronador: eso era el rock de Kiss, la magia y el poder del Spaceman, quien en el escenario se convertía en superhéroe.</p>
+            </div>
+
+            <p>Uno de mis héroes, que dejó un legado musical que siempre ha estado ahí… y siempre estará. Para muchos que crecimos con su música y su historia, la noticia de que Ace había dejado de respirar nos dejó en shock. Algo se quebró en el corazón de aquellos adolescentes —o niños— que escucharon por primera vez sus solos inconfundibles y aquella voz ardiente en <em>Shock Me</em>.</p>
+
+            <section class="legacy-section">
+                <h2>SU LEGADO</h2>
+                <p>Ace Frehley fue mucho más que el Spaceman de Kiss. Con su guitarra inconfundible, su estilo explosivo y su sentido del humor, ayudó a definir el sonido y la imagen de una de las bandas más icónicas del rock. Autor de clásicos como Cold Gin, Parasite y Shock Me, aportó una mezcla única de rudeza callejera y sensibilidad melódica que inspiró a generaciones de guitarristas.</p>
+                <p style="margin-top:20px;">Ace fue un símbolo de autenticidad, un guitarrista con alma propia y un verdadero héroe del rock que jamás perdió su chispa estelar.</p>
+            </section>
+        </div>
+
+        <footer class="post-footer">
+            <p>EL SILENCIO ES RUIDO QUE NO SE ATREVE A SER ESCUCHADO</p>
+            <p style="font-size: 10px; margin-top: 10px;">EL ROCK DE TODOS LOS DÍAS © 2025</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

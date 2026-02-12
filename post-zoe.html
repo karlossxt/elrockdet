@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCENA NACIONAL | Zoé: Música de Fondo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #080808;
+            --red: #dc2626; /* Color de Escena Nacional */
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Space Mono', monospace;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            z-index: 1000; background-size: 100% 3px, 3px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; position: relative; }
+
+        /* BOTÓN CERRAR */
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: white; color: black;
+            padding: 15px 25px; font-weight: 900;
+            border: none; cursor: pointer;
+            box-shadow: 6px 6px 0px var(--red);
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+        }
+
+        /* IMÁGENES */
+        .post-header { position: relative; margin-bottom: 60px; }
+        .img-frame { border: 6px solid var(--red); padding: 5px; background: var(--bg); }
+        .img-frame img { width: 100%; display: block; filter: grayscale(1) contrast(1.1); }
+        
+        .tag-section {
+            position: absolute; top: -20px; left: -20px;
+            background: var(--red); color: white;
+            padding: 10px 20px; font-weight: 900;
+            transform: rotate(-3deg); font-size: 1.2rem;
+            box-shadow: 4px 4px 0px white; z-index: 10;
+        }
+
+        /* TÍTULO */
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            color: white; line-height: 0.9; margin: 40px 0;
+            text-transform: uppercase;
+        }
+        .post-title span { color: var(--red); }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .meta-bar {
+            border-top: 1px solid #333; border-bottom: 1px solid #333;
+            padding: 15px 0; margin-bottom: 40px;
+            color: var(--red); font-size: 0.8rem;
+            display: flex; gap: 20px; text-transform: uppercase; font-weight: 700;
+        }
+
+        /* TEXTO */
+        .content p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem; line-height: 1.6; color: #ccc;
+            margin-bottom: 30px;
+        }
+        .content p::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--red); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* SEGUNDA IMAGEN */
+        .secondary-img { margin: 40px 0; border: 2px solid #333; }
+        .secondary-img img { width: 100%; filter: grayscale(1); }
+
+        /* BLOQUE MEMORIA (TWITTER) */
+        .memory-box {
+            background: #111; border-left: 10px solid var(--red);
+            padding: 30px; margin: 50px 0;
+        }
+        .memory-box h3 { font-family: 'Syne'; color: var(--red); margin-bottom: 15px; text-transform: uppercase; }
+        .memory-box p { font-size: 1rem; font-style: italic; font-family: 'Space Mono'; color: #888; }
+
+        /* SIDEBAR */
+        .sidebar-playlist {
+            background: #111; border: 4px solid var(--red);
+            padding: 25px; position: sticky; top: 100px; height: fit-content;
+        }
+        .playlist-header h4 { font-family: 'Syne'; line-height: 1; margin-bottom: 20px; }
+        .track-item { display: flex; gap: 10px; margin-bottom: 15px; font-size: 11px; align-items: center; }
+        .track-num { color: var(--red); font-weight: 900; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <div class="container">
+        
+        <header class="post-header">
+            <div class="tag-section">#ESCENANACIONAL</div>
+            <div class="img-frame">
+                <!-- IMAGEN 1: ZOÉ UNPLUGGED ESCENA -->
+                <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=1200" alt="Zoé Música de Fondo">
+            </div>
+        </header>
+
+        <h1 class="post-title">MÚSICA DE FONDO:<br><span>15 AÑOS DE UN LEGADO</span></h1>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="meta-bar">
+                    <span>ARCHIVO: EL ROCK DE TODOS LOS DÍAS</span>
+                    <span>|</span>
+                    <span>10 OCT, 2025</span>
+                </div>
+
+                <article class="content">
+                    <p>Hace 15 años, en los Estudios Churubusco de la Ciudad de México, Zoé grabó lo que se convertiría en uno de los momentos más emblemáticos de su trayectoria: <strong>Unplugged: Música de Fondo</strong>.</p>
+                    
+                    <p>La sesión, transmitida originalmente por MTV Unplugged, fue el resultado de una dinámica organizada por la banda en Twitter, mediante la cual varios seguidores tuvimos la oportunidad de presenciar en vivo la grabación. El ambiente en el estudio vibraba con una energía distinta, una atmósfera que anticipaba algo histórico.</p>
+
+                    <div class="secondary-img">
+                        <!-- IMAGEN 2: AMBIENTE DE ESTUDIO / DETALLE ACÚSTICO -->
+                        <img src="https://images.unsplash.com/photo-1514525253361-bee8718a74a2?w=1200" alt="Estudios Churubusco">
+                    </div>
+
+                    <p>El concierto reunió a destacados invitados, entre ellos <strong>Denise Gutiérrez</strong> (Hello Seahorse!) y el legendario <strong>Enrique Bunbury</strong>. El setlist incluyó reinterpretaciones acústicas de sus éxitos y una versión Deluxe de “Bésame Mucho”, que reimaginaba el clásico con la estética sonora característica de la agrupación.</p>
+                    
+                    <p>Música de Fondo no solo obtuvo múltiples discos de platino, sino que redefinió el lugar de Zoé en la industria. Hoy, 15 años después, permanece como testimonio de un momento en el que el rock mexicano alcanzó una de sus cimas más creativas y emocionales.</p>
+                </article>
+
+                <div class="memory-box">
+                    <h3>MEMORIA DE ARCHIVO</h3>
+                    <p>"Estuvimos ahí. Entre cables, luces bajas y el eco de los Estudios Churubusco, vimos a una banda transformarse en leyenda ante nuestros ojos. El ruido se volvió atmósfera."</p>
+                </div>
+            </div>
+
+            <aside class="sidebar-playlist">
+                <div class="playlist-header">
+                    <h4>SETLIST<br>MEMORABLE</h4>
+                </div>
+                <div class="track-list">
+                    <div class="track-item"><span class="track-num">01</span><span>SOMBRAS (UNPLUGGED)</span></div>
+                    <div class="track-item"><span class="track-num">02</span><span>SOÑÉ (FT. DENISE GUTIÉRREZ)</span></div>
+                    <div class="track-item"><span class="track-num">03</span><span>NADA (FT. BUNBURY)</span></div>
+                    <div class="track-item"><span class="track-num">04</span><span>LABIOS ROTOS</span></div>
+                    <div class="track-item"><span class="track-num">05</span><span>BÉSAME MUCHO</span></div>
+                </div>
+                <button style="width:100%; background:white; border:none; padding:10px; margin-top:20px; font-family:'Space Mono'; font-weight:900; cursor:pointer;" onclick="window.open('https://open.spotify.com/album/32WkU6R8q5U1L8zJzWvN7j')">REVIVIR EN SPOTIFY</button>
+            </aside>
+        </div>
+
+        <!-- MÁS RUIDO (Relacionados) -->
+        <section style="margin-top:100px; border-top: 2px solid #333; padding-top: 40px;">
+            <h2 style="font-family:'Syne'; font-size:2rem; margin-bottom:30px;">MÁS ARCHIVOS >>></h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div style="background:#111; padding:15px; border:1px solid #222;">
+                    <span style="color:var(--red); font-size:10px; font-weight:900;">ESCENA</span>
+                    <h5 style="font-family:'Syne'; margin-top:5px;">SÓTANOS DE BUENOS AIRES</h5>
+                </div>
+                <div style="background:#111; padding:15px; border:1px solid #222;">
+                    <span style="color:var(--red); font-size:10px; font-weight:900;">FESTIVAL</span>
+                    <h5 style="font-family:'Syne'; margin-top:5px;">TOY ROCKEANDO V: GALERÍA</h5>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
