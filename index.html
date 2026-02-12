@@ -281,27 +281,50 @@
         </div>
     </section>
 
-    <main class="content-wrapper">
-        <section class="hero-grid">
-            <div class="hero-main">
-                <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=1200">
-                <div class="hero-content">
-                    <span class="stencil-tag">DESTACADO</span>
-                    <!-- TITULO CON EFECTO GLITCH -->
-                    <h2 class="glitch-title">EL RENACIMIENTO<br>VISUAL</h2>
-                </div>
+   <!-- HERO SLIDER ÚNICO -->
+<section class="hero-full-container">
+    <div class="slider">
+        <!-- NOTA 1: GREEN DAY -->
+        <div class="slide active">
+            <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1528645238318-22ccb79d2033?q=80&w=2070');"></div>
+            <div class="hero-content">
+                <span class="stencil-tag">PORTADA RECIENTE</span>
+                <h1 class="glitch-title" data-text="GREEN DAY: SUPER BOWL LX">GREEN DAY:<br>SUPER BOWL LX</h1>
+                <p class="hero-desc">El punk hackea el evento más grande del mundo con un popurrí de American Idiot.</p>
+                <a href="post-green-day-superbowl.html" class="hero-cta">LEER NOTA COMPLETA</a>
             </div>
-            <div class="hero-side">
-                <div class="side-note">
-                    <span>02</span>
-                    <h4>Terror en 8-bits: Gamers y lo Analógico</h4>
-                </div>
-                <div class="side-note">
-                    <span>03</span>
-                    <h4>El Under Argentino: Revolución Post-Punk</h4>
-                </div>
+        </div>
+
+        <!-- NOTA 2: MY CHEMICAL ROMANCE -->
+        <div class="slide">
+            <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=2070');"></div>
+            <div class="hero-content">
+                <span class="stencil-tag">DESTACADO</span>
+                <h1 class="glitch-title" data-text="MCR: BLACK PARADE CDMX">MCR: BLACK<br>PARADE CDMX</h1>
+                <p class="hero-desc">La nostalgia emo regresa al Estadio GNP. Guía de supervivencia para el desfile.</p>
+                <a href="post-mcr-black-parade.html" class="hero-cta">REVISAR HORARIOS</a>
             </div>
-        </section>
+        </div>
+
+        <!-- NOTA 3: ÁNGELES DEL INFIERNO -->
+        <div class="slide">
+            <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1549834125-82d3c48159a3?q=80&w=2070');"></div>
+            <div class="hero-content">
+                <span class="stencil-tag">HEAVY METAL</span>
+                <h1 class="glitch-title" data-text="ÁNGELES DEL INFIERNO">ÁNGELES DEL<br>INFIERNO</h1>
+                <p class="hero-desc">El pacto se firma en la Arena CDMX. La gira "Todos Somos Ángeles" inicia su vuelo.</p>
+                <a href="post-angeles-del-infierno-cdmx.html" class="hero-cta">BOLETOS AQUÍ</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Indicadores de puntos -->
+    <div class="slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
 
         <h3 style="font-family: 'Syne'; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 25px; font-size: 1.5rem; font-style: italic;">ÚLTIMO RUIDO</h3>
         
@@ -364,3 +387,4 @@
 
 </body>
 </html>
+
