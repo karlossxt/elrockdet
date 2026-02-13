@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -189,7 +189,7 @@
             line-height: 1.4;
         }
 
-        /* FOOTER ESTILO FANZINE (Restaurado) */
+        /* FOOTER ESTILO FANZINE */
         .fanzine-footer {
             background: #000;
             border-top: 8px solid var(--red);
@@ -198,33 +198,50 @@
             position: relative;
             z-index: 10;
         }
+
         .f-top { 
             display: grid; 
-            grid-template-columns: 2fr 1fr 1fr; 
-            gap: 60px; 
+            grid-template-columns: 1.5fr 1fr 1fr 1fr; 
+            gap: 40px; 
             max-width: 1300px; 
             margin: 0 auto 60px; 
         }
-        .f-brand h2 { font-family: 'Syne'; font-size: 3rem; margin-bottom: 10px; font-style: italic; }
+
+        /* ESTILO DEL LOGO EN EL FOOTER */
+        .f-logo-img {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 20px;
+            display: block;
+            filter: grayscale(1) brightness(1.5); /* Estilo sticker B/N */
+            transition: all 0.3s ease;
+        }
+
+        .f-logo-img:hover {
+            filter: grayscale(0) brightness(1);
+            transform: rotate(-3deg) scale(1.05);
+        }
+
+        .f-brand h2 { font-family: 'Syne'; font-size: 2.5rem; margin-bottom: 10px; font-style: italic; }
+        .f-brand h2 span { color: var(--red); }
         .f-brand p { font-family: 'Space Mono'; font-size: 12px; color: #555; line-height: 1.5; text-transform: uppercase; font-weight: 700; }
         
         .f-col h5 { font-family: 'Space Mono'; color: var(--red); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
         .f-col a { display: block; color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; margin-bottom: 12px; text-transform: uppercase; font-weight: 700; }
         .f-col a:hover { color: white; padding-left: 5px; transition: 0.2s; }
+
+        .f-col a i {
+            width: 18px;
+            margin-right: 8px;
+            text-align: center;
+            color: var(--red);
+        }
         
         .f-bottom {
             max-width: 1300px; margin: 0 auto; border-top: 1px solid #222; padding-top: 30px;
             display: flex; justify-content: space-between;
             font-size: 10px; color: #444; font-family: 'Space Mono'; text-transform: uppercase;
         }
-
-        /* ESTILO ESPECIAL BYTEMOS (Neon) */
-        .bytemos-archive .section-header { background-color: var(--green); }
-        .bytemos-archive .section-title { color: black; }
-        .bytemos-archive .back-link, .bytemos-archive .section-meta { color: black; }
-        .bytemos-archive .meta-line { background: black; }
-        .bytemos-archive .fanzine-footer { border-top-color: var(--green); }
-        .bytemos-archive .f-col h5 { color: var(--green); }
 
         /* RESPONSIVE */
         @media (max-width: 1024px) { 
@@ -233,11 +250,12 @@
         }
         @media (max-width: 600px) { 
             .article-grid, .f-top { grid-template-columns: 1fr; }
+            .f-top { grid-template-columns: 1fr; }
             .section-title { font-size: 4rem; }
         }
     </style>
 </head>
-<body class="musica-archive"> <!-- Cambia a "bytemos-archive" para el look neón -->
+<body class="musica-archive">
 
     <!-- NAVBAR -->
     <nav class="main-nav">
@@ -266,76 +284,91 @@
     <!-- CONTENEDOR DE NOTAS -->
     <main class="archive-container">
         <div class="archive-info">
-            <span class="archive-count">Total de entradas: 12</span>
+            <span class="archive-count">Total de entradas:</span>
             <span class="archive-count" style="color: var(--red);">● Actualizado hoy</span>
         </div>
 
         <div class="article-grid">
-            <a href="#" class="article-card">
-                <div class="card-image"><img src="https://images.unsplash.com/photo-1514525253361-bee8718a74a2?w=800"></div>
-                <span class="card-tag">Escena Nacional</span>
-                <h2 class="card-title">El Under Argentino: Más que una moda</h2>
-                <p class="card-excerpt">Un recorrido por los sótanos de Buenos Aires donde el nuevo post-punk está gestando una revolución.</p>
+            <a href="post-automatic-kafka.html" class="article-card">
+                <div class="card-image"><img src="portadaau.jpg"></div>
+                <span class="card-tag">Rock Español</span>
+                <h2 class="card-title">Automatic Kafka estrena INMORTAL</h2>
+                <p class="card-excerpt">Desde Asturias Automatic Kafka vuelven con más fuerza que nunca.</p>
             </a>
-            <a href="#" class="article-card">
-                <div class="card-image"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800"></div>
-                <span class="card-tag">Cultura</span>
-                <h2 class="card-title">Sinfonías de Silicio y el Caos</h2>
-                <p class="card-excerpt">La intersección entre la música electrónica experimental y el arte generativo.</p>
+            <a href="post-kiss-alive.html" class="article-card">
+                <div class="card-image"><img src="ALIVE-ALBUM-COVER-ALTERNATE.JPG"></div>
+                <span class="card-tag">Rock Clasico</span>
+                <h2 class="card-title">KISS ALIVE!</h2>
+                <p class="card-excerpt">A 50 AÑOS DE KISS ALIVE!</p>
             </a>
-            <a href="#" class="article-card">
-                <div class="card-image"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800"></div>
+            <a href="post-pearl-jam-ten.html" class="article-card">
+                <div class="card-image"><img src="pearljam10.jpg"></div>
                 <span class="card-tag">Crítica</span>
-                <h2 class="card-title">El Regreso del Formato Físico</h2>
-                <p class="card-excerpt">¿Por qué las nuevas generaciones están obsesionadas con poseer el ruido en vinilo?</p>
+                <h2 class="card-title">30 años del Diez de Pearl Jam</h2>
+                <p class="card-excerpt">Un disco que no envejece</p>
             </a>
         </div>
     </main>
 
-    
-
-        <div class="f-bottom">
-            <span>© 2026 El Rock de Todos los Días</span>
-            <span>EL SILENCIO ES RUIDO QUE NO SE ATREVE A SER ESCUCHADO</span>
-        </div>
-    </footer>
-
-</div>
-    <!-- ... (aquí terminaría tu grid de artículos) ... -->
-    
+   <!-- FOOTER ACTUALIZADO -->
     <footer class="fanzine-footer">
         <div class="f-top">
+            <!-- COLUMNA 1: LOGO, BRAND Y CONTACTO -->
             <div class="f-brand">
+                <!-- Reemplaza 'tu-logo.png' por la ruta de tu imagen real -->
+                <img src="tu-logo.png" alt="EL ROCK LOGO" class="f-logo-img">
+                
                 <h2>EL<span>ROCK</span></h2>
-                <p>Archivo independiente de cultura, ruido y distorsión.<br>Desde el underground hasta tus oídos.</p>
+                <p>Archivo independiente de cultura, ruido y distorsión.</p>
+                
+                <div style="margin-top: 25px;">
+                    <h5 style="color: var(--red); font-family: 'Space Mono'; font-size: 10px; margin-bottom: 10px; text-transform: uppercase;">Contacto Directo</h5>
+                    <a href="https://wa.me/525519204557" target="_blank" style="color: var(--white); text-decoration: none; font-family: 'Space Mono'; font-size: 13px; font-weight: 700; display: block; margin-bottom: 5px;">
+                        <i class="fab fa-whatsapp"></i> 55 1920 4557
+                    </a>
+                    <a href="mailto:elrockdetodoslosdias@gmail.com" style="color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 11px; display: block;">
+                        elrockdetodoslosdias@gmail.com
+                    </a>
+                    <a href="mailto:prensa@elrockdetodoslosdias.com.mx" style="color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 11px; display: block;">
+                        prensa@elrockdetodoslosdias.com.mx
+                    </a>
+                </div>
             </div>
             
-            <div class="f-col">
-                <h5>Navegación</h5>
-                <a href="#">Inicio</a>
-                <a href="#">Archivo</a>
-                <a href="#">Zines</a>
-                <a href="#">Contacto</a>
-            </div>
-
+            <!-- COLUMNA 2: REDES SOCIALES 1 -->
             <div class="f-col">
                 <h5>Social</h5>
-                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                <a href="#"><i class="fab fa-spotify"></i> Spotify</a>
-                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                <a href="#"><i class="fab fa-youtube"></i> Youtube</a>
+                <a href="https://www.instagram.com/elrockdetodoslosdias/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/ElRockdetodoslosDias" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://twitter.com/ElRockde" target="_blank"><i class="fab fa-twitter"></i> Twitter / X</a>
+                <a href="https://www.tiktok.com/@elrockdetodoslosdias" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+            </div>
+
+            <!-- COLUMNA 3: COMUNIDAD Y LIVE -->
+            <div class="f-col">
+                <h5>Comunidad</h5>
+                <a href="https://discord.gg/Ey7sdqwDaW" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+                <a href="https://www.twitch.tv/elrockdetodoslosdias" target="_blank"><i class="fab fa-twitch"></i> Twitch</a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="#" target="_blank"><i class="fas fa-rss"></i> Newsletter</a>
+            </div>
+
+            <!-- COLUMNA 4: NAVEGACIÓN -->
+            <div class="f-col">
+                <h5>Navegación</h5>
+                <a href="index.html">Inicio</a>
+                <a href="musica.html">Música</a>
+                <a href="#">Escena</a>
+                <a href="#">Cultura</a>
+                <a href="#">Cine</a>
             </div>
         </div>
 
         <div class="f-bottom">
-            <span>&copy; 2024 ELROCK ARCHIVE</span>
-            <span>Hecho en el caos</span>
+            <span>&copy; 2026 EL ROCK DE TODOS LOS DÍAS</span>
+            <span>EL SILENCIO ES RUIDO QUE NO SE ATREVE A SER ESCUCHADO</span>
         </div>
     </footer>
 
 </body>
 </html>
-
-</html>
-
-
