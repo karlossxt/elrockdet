@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     
-    <!-- Favicon (Pestaña) -->
-    <link rel="icon" type="image/png" href="tu-logo.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo-rock.png">
 
     <style>
         :root {
@@ -19,6 +19,7 @@
             --white: #eeeeee;
             --green: #00ff00;
             --purple: #7e22ce;
+            --cyan: #00d4ff;
             --amber: #f59e0b;
         }
 
@@ -31,6 +32,7 @@
             justify-content: center;
             font-family: 'Inter', sans-serif;
             color: var(--white);
+            overflow-x: hidden;
         }
 
         .main-site-wrapper {
@@ -42,7 +44,7 @@
             border-right: 1px solid #222;
         }
 
-        /* NAVBAR & MENÚ MÓVIL */
+        /* NAVBAR */
         .main-nav {
             position: sticky; top: 0; z-index: 1000;
             background: rgba(0,0,0,0.95);
@@ -50,31 +52,44 @@
             padding: 15px 40px;
             display: flex; justify-content: space-between; align-items: center;
         }
-
-        .logo { 
-            display: flex; align-items: center; gap: 12px;
-            font-family: 'Syne'; font-size: 1.8rem; font-weight: 800; font-style: italic; letter-spacing: -2px; text-decoration: none; color: white; 
-        }
+        .logo { display: flex; align-items: center; gap: 12px; font-family: 'Syne'; font-size: 1.8rem; font-weight: 800; font-style: italic; letter-spacing: -2px; text-decoration: none; color: white; }
         .logo span { color: var(--red); }
-        .nav-logo-icon { height: 35px; width: auto; filter: brightness(1.2); }
+        .nav-logo-icon { height: 35px; width: auto; }
 
         .nav-links { display: flex; align-items: center; }
-        .nav-links a { 
-            color: #71717a; text-decoration: none; font-family: 'Space Mono'; 
-            font-size: 11px; text-transform: uppercase; font-weight: 700; margin: 0 15px; 
-        }
+        .nav-links a { color: #71717a; text-decoration: none; font-family: 'Space Mono'; font-size: 11px; text-transform: uppercase; font-weight: 700; margin: 0 15px; }
         .nav-links a:hover { color: white; }
 
         .burger-menu { display: none; font-size: 1.5rem; color: white; cursor: pointer; }
 
-        /* HERO SLIDER (3 SLIDES) */
+        /* HERO SLIDER & GLITCH EFFECT */
         .hero-full-container { position: relative; width: 100%; height: 650px; background: #000; overflow: hidden; border-bottom: 5px solid white; }
         .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease; display: flex; align-items: center; padding: 0 80px; }
         .slide.active { opacity: 1; z-index: 10; }
         .slide-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; filter: grayscale(1) brightness(0.3); z-index: -1; }
         
-        .glitch-title { font-family: 'Syne'; font-size: 5.5rem; line-height: 0.8; text-transform: uppercase; margin-bottom: 20px; }
-        .hero-cta { display: inline-block; background: var(--red); color: white; padding: 15px 30px; text-decoration: none; font-family: 'Space Mono'; font-weight: 900; box-shadow: 6px 6px 0px white; }
+        .glitch-title { 
+            font-family: 'Syne'; font-size: 5.5rem; line-height: 0.8; text-transform: uppercase; margin-bottom: 20px; 
+            position: relative; cursor: pointer; transition: 0.2s;
+        }
+        
+        /* El efecto Glitch al pasar el mouse */
+        .glitch-title:hover {
+            animation: hero-glitch 0.3s infinite;
+            text-shadow: 3px 0 var(--red), -3px 0 var(--cyan);
+        }
+
+        @keyframes hero-glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-3px, 2px); }
+            40% { transform: translate(3px, -2px); }
+            60% { transform: translate(-3px, -2px); }
+            80% { transform: translate(3px, 2px); }
+            100% { transform: translate(0); }
+        }
+
+        .hero-cta { display: inline-block; background: var(--red); color: white; padding: 15px 30px; text-decoration: none; font-family: 'Space Mono'; font-weight: 900; box-shadow: 6px 6px 0px white; transition: 0.2s; }
+        .hero-cta:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0px var(--cyan); }
 
         .slider-dots { position: absolute; bottom: 30px; right: 80px; display: flex; gap: 15px; z-index: 20; }
         .dot { width: 12px; height: 12px; background: #333; border-radius: 50%; cursor: pointer; }
@@ -99,121 +114,45 @@
         .ruido-box-white { background-color: #fff; padding: 80px 60px; margin: 80px 0; color: #000; border: 2px solid #000; }
         .ruido-title-big { font-family: 'Syne'; font-size: 7rem; font-weight: 900; line-height: 0.8; font-style: italic; text-transform: uppercase; letter-spacing: -4px; margin-bottom: 40px; }
         .ruido-title-big span { color: var(--red); }
+        .cta-desc-container { border-left: 10px solid #000; padding-left: 25px; margin-bottom: 40px; }
+        .cta-buttons-row { display: flex; gap: 20px; }
 
-        /* --- FOOTER ESTILO IMAGEN --- */
-.fanzine-footer {
-    background-color: #000;
-    padding: 60px 40px;
-    border-top: 1px solid #111; /* Línea sutil superior */
-    width: 100%;
-}
+        /* FOOTER ESTILO IMAGEN */
+        .fanzine-footer { background-color: #000; padding: 80px 40px; border-top: 1px solid #111; width: 100%; }
+        .footer-container { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
+        
+        .f-title { font-family: 'Syne'; color: var(--cyan); font-size: 14px; font-weight: 900; letter-spacing: 2px; margin-bottom: 30px; text-transform: uppercase; }
+        .f-logo { font-family: 'Syne'; font-size: 2.5rem; font-style: italic; font-weight: 800; color: #fff; letter-spacing: -2px; margin-bottom: 10px; }
+        .f-logo span { color: var(--cyan); }
+        .f-tagline { font-family: 'Space Mono'; font-size: 10px; color: #444; margin-bottom: 40px; text-transform: uppercase; }
 
-.footer-container {
-    max-width: 1300px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr; /* 4 columnas */
-    gap: 40px;
-}
+        .f-links-list, .f-contact-links { display: flex; flex-direction: column; gap: 15px; }
+        .f-links-list a, .f-contact-links a { font-family: 'Space Mono'; font-size: 12px; color: #888; text-decoration: none; display: flex; align-items: center; gap: 15px; transition: 0.3s; text-transform: uppercase; }
+        .f-links-list a i, .f-contact-links a i { color: var(--cyan); width: 20px; text-align: center; }
+        .f-links-list a:hover { color: #fff; padding-left: 5px; }
 
-/* Títulos de sección (SOCIAL, COMUNIDAD, etc) */
-.f-title {
-    font-family: 'Syne', sans-serif;
-    color: var(--cyan); /* El cyan que definimos en :root */
-    font-size: 14px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-}
-
-/* Logo ELROCK */
-.f-logo {
-    font-family: 'Syne', sans-serif;
-    font-size: 2.5rem;
-    font-style: italic;
-    font-weight: 800;
-    color: #fff;
-    letter-spacing: -2px;
-    margin-bottom: 5px;
-}
-.f-logo span { color: var(--cyan); }
-
-.f-tagline {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    color: #444;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-}
-
-/* Listas de Enlaces */
-.f-links-list, .f-contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.f-links-list a, .f-contact-links a {
-    font-family: 'Space Mono', monospace;
-    font-size: 12px;
-    color: #888;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    transition: 0.3s ease;
-}
-
-/* Iconos en Cyan */
-.f-links-list a i, .f-contact-links a i {
-    color: var(--cyan);
-    font-size: 14px;
-    width: 20px;
-    text-align: center;
-}
-
-/* Hover */
-.f-links-list a:hover, .f-contact-links a:hover {
-    color: #fff;
-    transform: translateX(5px);
-}
-
-/* Ajuste específico para Contacto Directo */
-.brand-col .f-title {
-    color: #fff; /* Título blanco como en la imagen */
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-    .footer-container { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 600px) {
-    .footer-container { grid-template-columns: 1fr; }
-    .f-logo { font-size: 2rem; }
-}
+        .f-bottom { border-top: 1px solid #222; padding-top: 30px; margin-top: 60px; display: flex; justify-content: space-between; font-size: 10px; font-family: 'Space Mono'; color: #444; text-transform: uppercase; }
 
         /* RESPONSIVE MÓVIL */
         @media (max-width: 768px) {
             .burger-menu { display: block; }
             .nav-links { 
                 display: none; position: absolute; top: 100%; left: 0; width: 100%; 
-                background: #000; flex-direction: column; padding: 20px; border-bottom: 2px solid white;
+                background: rgba(0,0,0,0.98); flex-direction: column; padding: 20px; border-bottom: 2px solid white;
             }
             .nav-links.active { display: flex; }
-            .nav-links a { margin: 15px 0; }
+            .nav-links a { margin: 15px 0; font-size: 14px; }
             .hero-full-container { height: 500px; }
             .glitch-title { font-size: 3rem; }
-            .news-grid, .footer-grid { grid-template-columns: 1fr; }
+            .news-grid { grid-template-columns: 1fr; }
+            .footer-container { grid-template-columns: 1fr 1fr; }
             .ruido-title-big { font-size: 3.5rem; letter-spacing: -2px; }
-
+            .cta-buttons-row { flex-direction: column; }
+        }
+        @media (max-width: 480px) {
+            .footer-container { grid-template-columns: 1fr; }
         }
     </style>
-
 </head>
 <body>
 
@@ -236,41 +175,40 @@
         </div>
     </nav>
 
-    <!-- HERO SLIDER (RESTAURADO CON 3 NOTAS) -->
+    <!-- HERO SLIDER (3 NOTAS + GLITCH) -->
     <section class="hero-full-container">
         <div class="slider">
             <!-- Slide 1 -->
             <div class="slide active">
                 <div class="slide-bg" style="background-image: url('greendaysb.webp');"></div>
-                <div class="hero-content" style="padding: 0 80px;">
+                <div class="hero-content">
                     <span style="font-size:10px; background:var(--red); color:white; padding:3px 8px; font-family:'Space Mono'; font-weight:900;">PORTADA</span>
                     <h1 class="glitch-title">GREEN DAY:<br>SUPER BOWL LX</h1>
-                    <p style="font-family:'Space Mono'; margin-bottom:30px; color:#ccc;">El punk hackea el evento más grande del mundo.</p>
+                    <p style="font-family:'Space Mono'; margin-bottom:30px; color:#ccc; text-transform:uppercase;">El punk hackea el evento más grande del mundo.</p>
                     <a href="post-green-day-superbowl.html" class="hero-cta">LEER NOTA</a>
                 </div>
             </div>
             <!-- Slide 2 -->
             <div class="slide">
                 <div class="slide-bg" style="background-image: url('mcrmx.jpeg');"></div>
-                <div class="hero-content" style="padding: 0 80px;">
+                <div class="hero-content">
                     <span style="font-size:10px; background:white; color:black; padding:3px 8px; font-family:'Space Mono'; font-weight:900;">DESTACADO</span>
                     <h1 class="glitch-title">MCR: BLACK<br>PARADE CDMX</h1>
-                    <p style="font-family:'Space Mono'; margin-bottom:30px; color:#ccc;">La nostalgia emo regresa al Estadio GNP.</p>
+                    <p style="font-family:'Space Mono'; margin-bottom:30px; color:#ccc; text-transform:uppercase;">La nostalgia emo regresa al Estadio GNP.</p>
                     <a href="post-mcr-black-parade.html" class="hero-cta">HORARIOS</a>
                 </div>
             </div>
             <!-- Slide 3 -->
             <div class="slide">
                 <div class="slide-bg" style="background-image: url('tsangeles.jpeg');"></div>
-                <div class="hero-content" style="padding: 0 80px;">
+                <div class="hero-content">
                     <span style="font-size:10px; background:black; color:white; border:1px solid white; padding:3px 8px; font-family:'Space Mono'; font-weight:900;">METAL TOUR</span>
                     <h1 class="glitch-title">ANGEL ROCK<br>FEST 2026</h1>
-                    <p style="font-family:'Space Mono'; margin-bottom:30px; color:#ccc;">Ángeles del Infierno y Saratoga encabezan la ruta.</p>
+                    <p style="font-family:'Space Mono'; margin-bottom:30px; color:#ccc; text-transform:uppercase;">Ángeles del Infierno y Saratoga en la Arena.</p>
                     <a href="post-todos-somos-angeles.html" class="hero-cta">FECHAS</a>
                 </div>
             </div>
         </div>
-        <!-- Puntos de navegación -->
         <div class="slider-dots">
             <span class="dot active"></span>
             <span class="dot"></span>
@@ -280,8 +218,6 @@
 
     <!-- CONTENIDO -->
     <main class="content-wrapper">
-        
-        <!-- ULTIMO RUIDO -->
         <div class="section-header-bar">
             <h3>ÚLTIMO RUIDO</h3>
             <a href="musica.html" style="font-family:'Space Mono'; font-size:10px; color:#555; text-decoration:none;">VER TODO +</a>
@@ -291,7 +227,7 @@
                 <div class="card-img"><img src="ALIVE-ALBUM-COVER-ALTERNATE.jpg"></div>
                 <span class="card-tag">MÚSICA // ANIVERSARIO</span>
                 <h4 class="card-title">KISS Alive!: El disco que salvó a una banda</h4>
-                <p class="card-excerpt">A 50 años del álbum que cambió las reglas de los discos en directo.</p>
+                <p class="card-excerpt">A 50 años del álbum que cambió las reglas de los directos.</p>
             </a>
             <a href="post-ace-frehley.html" class="card">
                 <div class="card-img"><img src="image-5-1536x1024.png"></div>
@@ -307,7 +243,6 @@
             </a>
         </section>
 
-        <!-- ESCENA NACIONAL -->
         <div class="section-header-bar">
             <h3 style="color:var(--red);">ESCENA NACIONAL</h3>
             <a href="escena.html" style="font-family:'Space Mono'; font-size:10px; color:#555; text-decoration:none;">VER TODO +</a>
@@ -317,7 +252,7 @@
                 <div class="card-img"><img src="zoe-mtv-unplugged.jpg"></div>
                 <span class="card-tag" style="color:var(--red);">ROCK // CDMX</span>
                 <h4 class="card-title">Zoé: 15 Años de Música de Fondo</h4>
-                <p class="card-excerpt">Crónica de una sesión emblemática que marcó el rock nacional.</p>
+                <p class="card-excerpt">Crónica de una sesión emblemática que marcó el rock.</p>
             </a>
             <a href="post-a-veces-maria.html" class="card">
                 <div class="card-img"><img src="avecesmaria.jpg"></div>
@@ -340,66 +275,58 @@
                 <p style="font-family:'Space Mono'; font-weight:700; text-transform:uppercase;">¿Tu banda está haciendo algo diferente? Buscamos el próximo grito del under.</p>
             </div>
             <div class="cta-buttons-row">
-                <button style="background:#000; color:#fff; border:none; padding:15px 30px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">MANDAR ESTRENO</button>
-                <button style="background:transparent; color:#000; border:4px solid #000; padding:12px 30px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">SOLICITAR ENTREVISTA</button>
+                <button style="background:#000; color:#fff; border:none; padding:15px 30px; font-family:'Space Mono'; font-weight:900; cursor:pointer; text-transform:uppercase;">Mandar Estreno</button>
+                <button style="background:transparent; color:#000; border:4px solid #000; padding:12px 30px; font-family:'Space Mono'; font-weight:900; cursor:pointer; text-transform:uppercase;">Solicitar Entrevista</button>
             </div>
         </section>
     </main>
 
+    <!-- FOOTER FINAL -->
     <footer class="fanzine-footer">
-    <div class="footer-container">
-        <!-- COLUMNA 1: BRAND & CONTACTO -->
-        <div class="footer-column brand-col">
-            <h2 class="f-logo">EL<span>ROCK DE TODOS LOS DÍAS</span></h2>
-            <p class="f-tagline">ARCHIVO INDEPENDIENTE DE CULTURA Y RUIDO.</p>
-            
-            <h5 class="f-title">CONTACTO DIRECTO</h5>
-            <div class="f-contact-links">
-                <a href="https://wa.me/525519204557" target="_blank">
-                    <i class="fab fa-whatsapp"></i> 55 1920 4557
-                </a>
-                <a href="mailto:elrockdetodoslosdias@gmail.com">
-                    <i class="far fa-envelope"></i> elrockdetodoslosdias@gmail.com
-                </a>
-                <a href="mailto:prensa@elrockdetodoslosdias.com.mx">
-                    <i class="far fa-envelope"></i> prensa@elrockdetodoslosdias.com.mx
-                </a>
+        <div class="footer-container">
+            <div class="footer-column brand-col">
+                <h2 class="f-logo">EL<span>ROCK DE TODOS LOS DÍAS</span></h2>
+                <p class="f-tagline">ARCHIVO INDEPENDIENTE DE CULTURA Y RUIDO.</p>
+                <h5 class="f-title" style="color: white; font-size: 16px;">CONTACTO DIRECTO</h5>
+                <div class="f-contact-links">
+                    <a href="https://wa.me/525519204557" target="_blank"><i class="fab fa-whatsapp"></i> 55 1920 4557</a>
+                    <a href="mailto:elrockdetodoslosdias@gmail.com"><i class="far fa-envelope"></i> elrockdetodoslosdias@gmail.com</a>
+                    <a href="mailto:prensa@elrockdetodoslosdias.com.mx"><i class="far fa-envelope"></i> prensa@elrockdetodoslosdias.com.mx</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h5 class="f-title">SOCIAL</h5>
+                <div class="f-links-list">
+                    <a href="https://www.instagram.com/elrockdetodoslosdias/" target="_blank"><i class="fab fa-instagram"></i> INSTAGRAM</a>
+                    <a href="https://www.facebook.com/ElRockdetodoslosDias" target="_blank"><i class="fab fa-facebook-f"></i> FACEBOOK</a>
+                    <a href="https://twitter.com/ElRockde" target="_blank"><i class="fab fa-x-twitter"></i> TWITTER / X</a>
+                    <a href="https://www.tiktok.com/@elrockdetodoslosdias" target="_blank"><i class="fab fa-tiktok"></i> TIKTOK</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h5 class="f-title">COMUNIDAD</h5>
+                <div class="f-links-list">
+                    <a href="https://discord.gg/Ey7sdqwDaW" target="_blank"><i class="fab fa-discord"></i> DISCORD</a>
+                    <a href="https://www.twitch.tv/elrockdetodoslosdias" target="_blank"><i class="fab fa-twitch"></i> TWITCH</a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i> YOUTUBE</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h5 class="f-title">NAVEGACIÓN</h5>
+                <div class="f-links-list">
+                    <a href="index.html">INICIO</a>
+                    <a href="musica.html">MÚSICA</a>
+                    <a href="escena.html">ESCENA</a>
+                    <a href="bytemos.html">BYTEMOS</a>
+                    <a href="cultura.html">CULTURA</a>
+                </div>
             </div>
         </div>
-
-        <!-- COLUMNA 2: SOCIAL -->
-        <div class="footer-column">
-            <h5 class="f-title">SOCIAL</h5>
-            <div class="f-links-list">
-                <a href="#"><i class="fab fa-instagram"></i> INSTAGRAM</a>
-                <a href="#"><i class="fab fa-facebook-f"></i> FACEBOOK</a>
-                <a href="#"><i class="fab fa-twitter"></i> TWITTER</a>
-                <a href="#"><i class="fab fa-tiktok"></i> TIKTOK</a>
-            </div>
+        <div class="f-bottom">
+            <span>© 2026 EL ROCK DE TODOS LOS DÍAS</span>
+            <span>EL SILENCIO ES RUIDO QUE NO SE ATREVE A SER ESCUCHADO</span>
         </div>
-
-        <!-- COLUMNA 3: COMUNIDAD -->
-        <div class="footer-column">
-            <h5 class="f-title">COMUNIDAD</h5>
-            <div class="f-links-list">
-                <a href="#"><i class="fab fa-discord"></i> DISCORD</a>
-                <a href="#"><i class="fab fa-twitch"></i> TWITCH</a>
-                <a href="#"><i class="fab fa-youtube"></i> YOUTUBE</a>
-            </div>
-        </div>
-
-        <!-- COLUMNA 4: NAVEGACIÓN -->
-        <div class="footer-column">
-            <h5 class="f-title">NAVEGACIÓN</h5>
-            <div class="f-links-list">
-                <a href="index.html">INICIO</a>
-                <a href="musica.html">MÚSICA</a>
-                <a href="escena.html">ESCENA</a>
-                <a href="bytemos.html">BYTEMOS</a>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
 </div>
 
 <script>
@@ -441,5 +368,3 @@
 
 </body>
 </html>
-
-
