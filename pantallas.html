@@ -56,15 +56,6 @@
         .back-link { font-family: 'Space Mono'; color: black; text-decoration: none; font-size: 12px; font-weight: 900; text-transform: uppercase; z-index: 10; position: relative; }
         .section-title { font-family: 'Syne'; font-size: clamp(4rem, 12vw, 10rem); line-height: 0.8; text-transform: uppercase; font-style: italic; color: black; position: relative; z-index: 10; }
 
-        /* EFECTO GLITCH ESPECÍFICO PARA BYTEMOS */
-        .bytemos-archive .section-title { animation: glitch-text 0.4s infinite; }
-        @keyframes glitch-text {
-            0% { text-shadow: 3px 0 red, -3px 0 cyan; }
-            25% { text-shadow: -3px 0 red, 3px 0 cyan; }
-            50% { text-shadow: 2px -2px red, -2px 2px cyan; }
-            100% { text-shadow: 0; }
-        }
-
         /* GRID */
         .archive-container { max-width: 1300px; margin: 0 auto; padding: 80px 20px; }
         .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px 40px; }
@@ -75,18 +66,32 @@
         .card-tag { font-family: 'Space Mono'; color: var(--current-color); font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; }
         .card-title { font-family: 'Syne'; font-size: 1.5rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 15px; }
 
-        /* FOOTER */
+        /* FOOTER DINÁMICO */
         .fanzine-footer { background: #000; border-top: 8px solid var(--current-color); padding: 80px 40px 40px; margin-top: 100px; }
-        .f-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; max-width: 1300px; margin: 0 auto 60px; }
+        .f-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; max-width: 1300px; margin: 0 auto 60px; }
+        
+        .f-brand h2 { font-family: 'Syne'; font-size: 2.5rem; font-style: italic; font-weight: 800; letter-spacing: -2px; margin-bottom: 5px; color: white; }
+        .f-brand h2 span { color: var(--current-color); }
+        .f-brand p.footer-tagline { font-family: 'Space Mono'; font-size: 11px; color: #555; text-transform: uppercase; font-weight: 700; margin-bottom: 30px; }
+        
         .f-col h5 { font-family: 'Space Mono'; color: var(--current-color); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
-        .f-col a { display: block; color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; margin-bottom: 12px; font-weight: 700; text-transform: uppercase; }
-        .f-bottom { max-width: 1300px; margin: 0 auto; border-top: 1px solid #222; padding-top: 30px; display: flex; justify-content: space-between; font-size: 10px; color: #444; font-family: 'Space Mono'; text-transform: uppercase; }
+        .f-col a { display: block; color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; margin-bottom: 12px; font-weight: 700; text-transform: uppercase; transition: 0.2s; }
+        .f-col a:hover { color: white; padding-left: 5px; }
+        .f-col a i { width: 18px; margin-right: 8px; text-align: center; color: var(--current-color); }
+
+        /* ESTILOS DE CONTACTO CORREGIDOS */
+        .contact-title { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; color: var(--white); }
+        .contact-links { display: flex; flex-direction: column; gap: 12px; }
+        .contact-item { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--white) !important; text-decoration: none; display: flex; align-items: center; gap: 10px; transition: 0.2s ease; }
+        .contact-item:hover { color: var(--current-color) !important; padding-left: 5px; }
+        .contact-item i { color: var(--current-color); width: 16px; text-align: center; }
+
+        .f-bottom { border-top: 1px solid #222; padding-top: 30px; display: flex; justify-content: space-between; font-size: 10px; color: #444; font-family: 'Space Mono'; text-transform: uppercase; }
 
         @media (max-width: 900px) { .article-grid, .f-top { grid-template-columns: 1fr; } }
     </style>
 </head>
 
-<!-- CAMBIA ESTA CLASE SEGÚN LA SECCIÓN -->
 <body class="pantallas-archive">
 
     <nav class="main-nav">
@@ -102,86 +107,91 @@
 
     <header class="section-header">
         <a href="index.html" class="back-link">← Database / Home</a>
-        
-        <!-- El título cambiará según la sección -->
-        <h1 class="section-title">PANTALAS</h1> 
-        
+        <h1 class="section-title">PANTALLAS</h1> 
         <div style="font-family:'Space Mono'; font-size:12px; margin-top:20px; color:black; font-weight:700;">
             [ ESTADO: EN LÍNEA ] // LET'S LOOK AT THE BLACK SCREEN
         </div>
     </header>
 
     <main class="archive-container">
-    <div class="article-grid">
-        <!-- NOTA 1 -->
-        <a href="post-andor.html" class="article-card">
-            <div class="card-image">
-                <img src="andor-2.jpeg" alt="Andor Temporada 2">
-            </div>
-            <span class="card-tag">Star Wars</span>
-            <h2 class="card-title">Andor Temporada 2 – La rebelión como reflejo de la realidad</h2>
-        </a>
+        <div class="article-grid">
+            <a href="post-andor.html" class="article-card">
+                <div class="card-image"><img src="andor-2.jpeg" alt="Andor"></div>
+                <span class="card-tag">Star Wars</span>
+                <h2 class="card-title">Andor Temporada 2 – La rebelión como reflejo de la realidad</h2>
+            </a>
 
-        <!-- NOTA 2 -->
-        <a href="post-daima.html" class="article-card">
-            <div class="card-image">
-                <img src="image-7-1086x1536.png" alt="Dragon Ball Daima">
-            </div>
-            <span class="card-tag">Anime</span>
-            <h2 class="card-title">Dragon Ball Daima, la última pieza de Akira Toriyama</h2>
-        </a>
+            <a href="post-daima.html" class="article-card">
+                <div class="card-image"><img src="image-7-1086x1536.png" alt="Dragon Ball"></div>
+                <span class="card-tag">Anime</span>
+                <h2 class="card-title">Dragon Ball Daima, la última pieza de Akira Toriyama</h2>
+            </a>
 
-        <!-- NOTA 3 -->
-        <a href="post-joker-2.html" class="article-card">
-            <div class="card-image">
-                <img src="jokerh.JPG" alt="Joker 2">
-            </div>
-            <span class="card-tag">DC</span>
-            <h2 class="card-title">Joker 2: La decadencia de Arthur Fleck</h2>
-        </a> 
-        
-        <!-- NOTA 4 (Corregida) -->
-        <a href="post-xmen-97.html" class="article-card">
-            <div class="card-image">
-                <img src="xmen97.jpg" alt="X-Men 97">
-            </div>
-            <span class="card-tag">Marvel</span>
-            <h2 class="card-title">X-Men ’97: La culminación del universo Marvel</h2>
-        </a>
-    </div>
-</main>
-
+            <a href="post-joker-2.html" class="article-card">
+                <div class="card-image"><img src="jokerh.JPG" alt="Joker 2"></div>
+                <span class="card-tag">DC</span>
+                <h2 class="card-title">Joker 2: La decadencia de Arthur Fleck</h2>
+            </a> 
             
-            
+            <a href="post-xmen-97.html" class="article-card">
+                <div class="card-image"><img src="xmen97.jpg" alt="X-Men 97"></div>
+                <span class="card-tag">Marvel</span>
+                <h2 class="card-title">X-Men ’97: La culminación del universo Marvel</h2>
+            </a>
         </div>
     </main>
 
     <footer class="fanzine-footer">
         <div class="f-top">
+            <!-- COLUMNA 1: BRAND Y CONTACTO -->
             <div class="f-brand">
-                <h2 class="logo" style="font-size: 2rem; color: white;">EL ROCK DE TODOS LOS DÍAS</h2>
-                <p style="color: #444; margin-top: 10px; font-family: 'Space Mono'; font-size: 11px;">REGISTRO INDEPENDIENTE DE CULTURA Y RUIDO.</p>
+                <h2>EL<span>ROCK</span></h2>
+                <p class="footer-tagline">ARCHIVO INDEPENDIENTE DE CULTURA Y RUIDO.</p>
+                
+                <div class="footer-contact-section">
+                    <h5 class="contact-title">Contacto Directo</h5>
+                    <div class="contact-links">
+                        <a href="https://wa.me/525519204557" target="_blank" class="contact-item">
+                            <i class="fab fa-whatsapp"></i> 55 1920 4557
+                        </a>
+                        <a href="mailto:elrockdetodoslosdias@gmail.com" class="contact-item">
+                            <i class="far fa-envelope"></i> elrockdetodoslosdias@gmail.com
+                        </a>
+                        <a href="mailto:prensa@elrockdetodoslosdias.com.mx" class="contact-item">
+                            <i class="far fa-envelope"></i> prensa@elrockdetodoslosdias.com.mx
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="f-col">
-                <h5>Navegación</h5>
-                <a href="#">Archivo</a>
-                <a href="#">Demos</a>
-                <a href="#">Prensa</a>
-            </div>
+            
             <div class="f-col">
                 <h5>Social</h5>
-                <a href="#">Instagram</a>
-                <a href="#">Discord</a>
-                <a href="#">X / Twitter</a>
+                <a href="https://www.instagram.com/elrockdetodoslosdias/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/ElRockdetodoslosDias" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://twitter.com/ElRockde" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://www.tiktok.com/@elrockdetodoslosdias" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+            </div>
+
+            <div class="f-col">
+                <h5>Comunidad</h5>
+                <a href="https://discord.gg/Ey7sdqwDaW" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+                <a href="https://www.twitch.tv/elrockdetodoslosdias" target="_blank"><i class="fab fa-twitch"></i> Twitch</a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+
+            <div class="f-col">
+                <h5>Navegación</h5>
+                <a href="index.html">Inicio</a>
+                <a href="musica.html">Música</a>
+                <a href="escena.html">Escena</a>
+                <a href="bytemos.html">Bytemos</a>
             </div>
         </div>
+
         <div class="f-bottom">
-            <span>© 2026 EL ROCK</span>
+            <span>© 2026 EL ROCK DE TODOS LOS DÍAS</span>
             <span>DATA IS THE NEW PUNK</span>
         </div>
     </footer>
-
 </body>
-
 </html>
-
