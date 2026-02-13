@@ -8,118 +8,22 @@
     <!-- Fuentes e Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon (Pestaña) -->
+    <link rel="icon" type="image/png" href="tu-logo.png">
 
     <style>
-/* SECCIÓN MANDA TU RUIDO - ESTILO BRUTALISTA BLANCO */
-.ruido-box-white {
-    background-color: #ffffff; /* Fondo blanco puro */
-    padding: 80px 60px;
-    margin: 80px 0;
-    color: #000000;
-    position: relative;
-    border: 2px solid #000; /* Opcional, para enmarcarlo en el wrapper */
-}
-
-.radar-tag {
-    background: #000;
-    color: #fff;
-    display: inline-block;
-    padding: 5px 12px;
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    font-weight: 900;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-}
-
-.ruido-title-big {
-    font-family: 'Syne', sans-serif;
-    font-size: 7rem; /* Tamaño masivo como la imagen */
-    font-weight: 900;
-    line-height: 0.8;
-    font-style: italic;
-    text-transform: uppercase;
-    letter-spacing: -4px;
-    margin-bottom: 40px;
-}
-
-.ruido-title-big span {
-    color: #dc2626; /* Rojo de la imagen */
-}
-
-.cta-desc-container {
-    border-left: 10px solid #000; /* La barra gruesa de la izquierda */
-    padding-left: 25px;
-    margin-bottom: 40px;
-    max-width: 600px;
-}
-
-.cta-desc-container p {
-    font-family: 'Space Mono', monospace;
-    font-size: 1.4rem;
-    font-weight: 700;
-    line-height: 1.1;
-    color: #000;
-    text-transform: uppercase;
-}
-
-.cta-buttons-row {
-    display: flex;
-    gap: 20px;
-}
-
-/* BOTÓN NEGRO SÓLIDO */
-.btn-solid-black {
-    background: #000;
-    color: #fff;
-    border: none;
-    padding: 20px 40px;
-    font-family: 'Space Mono', monospace;
-    font-weight: 900;
-    font-size: 13px;
-    cursor: pointer;
-    text-transform: uppercase;
-    box-shadow: 6px 6px 0px #ccc; /* Sombra sutil */
-    transition: 0.2s;
-}
-
-/* BOTÓN BLANCO CON BORDE GRUESO */
-.btn-outline-thick {
-    background: transparent;
-    color: #000;
-    border: 4px solid #000; /* Borde grueso como la imagen */
-    padding: 16px 40px;
-    font-family: 'Space Mono', monospace;
-    font-weight: 900;
-    font-size: 13px;
-    cursor: pointer;
-    text-transform: uppercase;
-    box-shadow: 6px 6px 0px #ccc;
-    transition: 0.2s;
-}
-
-.btn-solid-black:hover, .btn-outline-thick:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 8px 8px 0px #999;
-}
-
-/* Ajuste móvil */
-@media (max-width: 768px) {
-    .ruido-title-big { font-size: 3.5rem; letter-spacing: -2px; }
-    .ruido-box-white { padding: 40px 20px; }
-    .cta-buttons-row { flex-direction: column; }
-}
         :root {
             --bg: #0d0d0d;
             --red: #dc2626;
             --white: #eeeeee;
             --green: #00ff00;
             --purple: #7e22ce;
+            --amber: #f59e0b;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* LOOK COMPACTO */
         body {
             background-color: #1a1a1a;
             background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
@@ -133,82 +37,97 @@
             width: 100%;
             max-width: 1300px;
             background-color: #000;
-            box-shadow: 0 0 100px rgba(0,0,0,0.8);
+            position: relative;
             border-left: 1px solid #222;
             border-right: 1px solid #222;
-            position: relative;
         }
 
-        /* NAVBAR */
+        /* NAVBAR & MENÚ MÓVIL */
         .main-nav {
             position: sticky; top: 0; z-index: 1000;
-            background: rgba(0,0,0,0.98);
+            background: rgba(0,0,0,0.95);
             border-bottom: 2px solid white;
             padding: 15px 40px;
             display: flex; justify-content: space-between; align-items: center;
         }
-        .logo { font-family: 'Syne'; font-size: 1.8rem; font-weight: 800; font-style: italic; letter-spacing: -2px; text-decoration: none; color: white; }
+
+        .logo { 
+            display: flex; align-items: center; gap: 12px;
+            font-family: 'Syne'; font-size: 1.8rem; font-weight: 800; font-style: italic; letter-spacing: -2px; text-decoration: none; color: white; 
+        }
         .logo span { color: var(--red); }
-        .nav-links a { color: #71717a; text-decoration: none; font-family: 'Space Mono'; font-size: 11px; text-transform: uppercase; font-weight: 700; margin: 0 15px; }
+        .nav-logo-icon { height: 35px; width: auto; filter: brightness(1.2); }
+
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { 
+            color: #71717a; text-decoration: none; font-family: 'Space Mono'; 
+            font-size: 11px; text-transform: uppercase; font-weight: 700; margin: 0 15px; 
+        }
         .nav-links a:hover { color: white; }
 
-        /* HERO SLIDER */
+        .burger-menu { display: none; font-size: 1.5rem; color: white; cursor: pointer; }
+
+        /* HERO SLIDER (3 SLIDES) */
         .hero-full-container { position: relative; width: 100%; height: 650px; background: #000; overflow: hidden; border-bottom: 5px solid white; }
-        .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease-in-out; display: flex; align-items: center; padding: 0 80px; }
+        .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease; display: flex; align-items: center; padding: 0 80px; }
         .slide.active { opacity: 1; z-index: 10; }
         .slide-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; filter: grayscale(1) brightness(0.3); z-index: -1; }
-        .hero-content { max-width: 800px; }
-        .glitch-title { font-family: 'Syne'; font-size: 5.5rem; line-height: 0.8; text-transform: uppercase; color: white; margin-bottom: 20px; cursor: pointer; }
-        .glitch-title:hover { animation: glitch-anim 0.3s infinite; text-shadow: 4px 0 var(--red), -4px 0 #00fffb; }
-        @keyframes glitch-anim { 0% { transform: translate(0); } 20% { transform: translate(-3px, 2px); } 40% { transform: translate(3px, -2px); } 100% { transform: translate(0); } }
-        .hero-desc { font-family: 'Space Mono'; font-size: 1rem; color: #888; margin-bottom: 30px; text-transform: uppercase; }
+        
+        .glitch-title { font-family: 'Syne'; font-size: 5.5rem; line-height: 0.8; text-transform: uppercase; margin-bottom: 20px; }
         .hero-cta { display: inline-block; background: var(--red); color: white; padding: 15px 30px; text-decoration: none; font-family: 'Space Mono'; font-weight: 900; box-shadow: 6px 6px 0px white; }
+
         .slider-dots { position: absolute; bottom: 30px; right: 80px; display: flex; gap: 15px; z-index: 20; }
         .dot { width: 12px; height: 12px; background: #333; border-radius: 50%; cursor: pointer; }
         .dot.active { background: var(--red); width: 40px; border-radius: 10px; transition: 0.3s; }
 
-        /* GRID DE TARJETAS */
+        /* GRID DE NOTICIAS */
         .content-wrapper { padding: 60px 40px; }
         .section-header-bar { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #222; margin: 40px 0 30px; padding-bottom: 10px; }
-        .section-header-bar h3 { font-family: 'Syne'; font-size: 2.2rem; font-style: italic; text-transform: uppercase; color: var(--white); }
-        
+        .section-header-bar h3 { font-family: 'Syne'; font-size: 2.2rem; font-style: italic; text-transform: uppercase; }
         .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 80px; }
         
-        .card { text-decoration: none; color: inherit; display: block; background: #0a0a0a; border: 1px solid #222; padding: 15px; transition: 0.3s; }
+        .card { text-decoration: none; color: inherit; background: #0a0a0a; border: 1px solid #222; padding: 15px; transition: 0.3s; }
         .card:hover { border-color: white; transform: translateY(-5px); }
-        .card-img { width: 100%; height: 200px; background: #111; margin-bottom: 15px; overflow: hidden; }
+        .card-img { width: 100%; height: 200px; overflow: hidden; margin-bottom: 15px; }
         .card-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.4s; }
         .card:hover .card-img img { filter: grayscale(0); }
-        .card-tag { font-family: 'Space Mono'; font-size: 10px; font-weight: 900; text-transform: uppercase; display: block; margin-bottom: 10px; color: var(--purple); }
-        .card-title { font-family: 'Syne'; font-size: 1.4rem; line-height: 1.1; text-transform: uppercase; color: white; margin-bottom: 10px; }
+        .card-tag { font-family: 'Space Mono'; font-size: 10px; font-weight: 900; text-transform: uppercase; color: var(--purple); margin-bottom: 10px; display: block; }
+        .card-title { font-family: 'Syne'; font-size: 1.4rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 10px; }
         .card-excerpt { font-family: 'Space Mono'; font-size: 11px; color: #666; line-height: 1.4; }
 
-        /* RUIDO CTA */
-        .ruido-cta { background-color: white; color: black; padding: 60px 80px; border: 10px solid black; box-shadow: 20px 20px 0px var(--red); margin: 80px 0; }
-        .ruido-cta h2 { font-family: 'Syne'; font-size: 5rem; line-height: 0.8; font-weight: 900; font-style: italic; text-transform: uppercase; margin-bottom: 30px; }
+        /* SECCIÓN RUIDO */
+        .ruido-box-white { background-color: #fff; padding: 80px 60px; margin: 80px 0; color: #000; border: 2px solid #000; }
+        .ruido-title-big { font-family: 'Syne'; font-size: 7rem; font-weight: 900; line-height: 0.8; font-style: italic; text-transform: uppercase; letter-spacing: -4px; margin-bottom: 40px; }
+        .ruido-title-big span { color: var(--red); }
 
-        /* FOOTER REDISEÑADO */
+        /* FOOTER */
         .fanzine-footer { background: #000; border-top: 8px solid var(--red); padding: 80px 40px 40px; }
         .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 40px; }
+        .f-logo-footer { max-width: 180px; margin-bottom: 20px; filter: grayscale(1) brightness(1.5); transition: 0.3s; }
+        .f-logo-footer:hover { filter: grayscale(0); transform: rotate(-3deg); }
         
-        .footer-col h5 { font-family: 'Space Mono'; color: var(--red); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
-        .footer-col p { font-family: 'Space Mono'; font-size: 12px; color: #666; line-height: 1.5; margin-bottom: 15px; }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 12px; }
-        .footer-links a { color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; font-weight: 700; text-transform: uppercase; transition: 0.2s; }
+        .footer-col h5 { font-family: 'Space Mono'; color: var(--red); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
+        .footer-links a { color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; text-transform: uppercase; display: block; margin-bottom: 12px; }
         .footer-links a:hover { color: white; padding-left: 5px; }
 
-        .social-icons-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 10px; }
-        .social-icons-grid a { color: #888; font-size: 1.2rem; transition: 0.3s; }
-        .social-icons-grid a:hover { color: white; transform: scale(1.2); }
+        .contact-links { display: flex; flex-direction: column; gap: 12px; }
+        .contact-item { font-family: 'Space Mono'; font-size: 12px; color: white !important; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .contact-item i { color: var(--red); }
 
-        .contact-info { font-family: 'Space Mono'; font-size: 11px; color: #888; }
-        .contact-info b { color: white; display: block; margin-top: 10px; }
-
-        .f-bottom { border-top: 1px solid #222; padding-top: 30px; margin-top: 60px; display: flex; justify-content: space-between; font-size: 10px; font-family: 'Space Mono'; color: #444; text-transform: uppercase; }
-
-        @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 768px) { .news-grid, .footer-grid { grid-template-columns: 1fr; } .hero-full-container { height: 500px; } .glitch-title { font-size: 3rem; } }
+        /* RESPONSIVE MÓVIL */
+        @media (max-width: 768px) {
+            .burger-menu { display: block; }
+            .nav-links { 
+                display: none; position: absolute; top: 100%; left: 0; width: 100%; 
+                background: #000; flex-direction: column; padding: 20px; border-bottom: 2px solid white;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { margin: 15px 0; }
+            .hero-full-container { height: 500px; }
+            .glitch-title { font-size: 3rem; }
+            .news-grid, .footer-grid { grid-template-columns: 1fr; }
+            .ruido-title-big { font-size: 3.5rem; letter-spacing: -2px; }
+        }
     </style>
 </head>
 <body>
@@ -217,48 +136,56 @@
 
     <!-- NAVBAR -->
     <nav class="main-nav">
-        <a href="index.html" class="logo">ELROCK.<span>.</span></a>
-        <div class="nav-links">
+        <a href="index.html" class="logo">
+            <img src="tu-logo.png" alt="Logo" class="nav-logo-icon">
+            ELROCK<span>.</span>
+        </a>
+        <div class="burger-menu" id="burger"><i class="fas fa-bars"></i></div>
+        <div class="nav-links" id="menu">
             <a href="musica.html">Música</a>
             <a href="escena.html">Escena</a>
             <a href="bytemos.html" style="color: var(--green);">BYTEMOS</a>
+            <a href="cultura.html" style="color: var(--amber);">Cultura</a>
             <a href="pantallas.html">Pantallas</a>
             <a href="toy-rockeando.html">Toy Rockeando</a>
         </div>
-        <button style="background:white; border:none; padding:8px 15px; font-family:'Space Mono'; font-size:10px; font-weight:900; cursor:pointer;">TERMINAL [01]</button>
     </nav>
 
-    <!-- HERO SLIDER -->
+    <!-- HERO SLIDER (RESTAURADO CON 3 NOTAS) -->
     <section class="hero-full-container">
         <div class="slider">
+            <!-- Slide 1 -->
             <div class="slide active">
                 <div class="slide-bg" style="background-image: url('greendaysb.webp');"></div>
-                <div class="hero-content">
-                    <span class="logo" style="font-size:10px; background:var(--red); color:white; padding:3px 8px; font-style:normal;">PORTADA</span>
+                <div class="hero-content" style="padding: 0 80px;">
+                    <span style="font-size:10px; background:var(--red); color:white; padding:3px 8px; font-family:'Space Mono'; font-weight:900;">PORTADA</span>
                     <h1 class="glitch-title">GREEN DAY:<br>SUPER BOWL LX</h1>
-                    <p class="hero-desc">El punk hackea el evento más grande del mundo con American Idiot.</p>
+                    <p style="font-family:'Space Mono'; margin-bottom:30px; color:#ccc;">El punk hackea el evento más grande del mundo.</p>
                     <a href="post-green-day-superbowl.html" class="hero-cta">LEER NOTA</a>
                 </div>
             </div>
+            <!-- Slide 2 -->
             <div class="slide">
                 <div class="slide-bg" style="background-image: url('mcrmx.jpeg');"></div>
-                <div class="hero-content">
-                    <span class="logo" style="font-size:10px; background:white; color:black; padding:3px 8px; font-style:normal;">DESTACADO</span>
+                <div class="hero-content" style="padding: 0 80px;">
+                    <span style="font-size:10px; background:white; color:black; padding:3px 8px; font-family:'Space Mono'; font-weight:900;">DESTACADO</span>
                     <h1 class="glitch-title">MCR: BLACK<br>PARADE CDMX</h1>
-                    <p class="hero-desc">La nostalgia emo regresa al Estadio GNP. Guía de supervivencia.</p>
+                    <p style="font-family:'Space Mono'; margin-bottom:30px; color:#ccc;">La nostalgia emo regresa al Estadio GNP.</p>
                     <a href="post-mcr-black-parade.html" class="hero-cta">HORARIOS</a>
                 </div>
             </div>
+            <!-- Slide 3 -->
             <div class="slide">
                 <div class="slide-bg" style="background-image: url('tsangeles.jpeg');"></div>
-                <div class="hero-content">
-                    <span class="logo" style="font-size:10px; background:black; color:white; border:1px solid white; padding:3px 8px; font-style:normal;">METAL TOUR</span>
+                <div class="hero-content" style="padding: 0 80px;">
+                    <span style="font-size:10px; background:black; color:white; border:1px solid white; padding:3px 8px; font-family:'Space Mono'; font-weight:900;">METAL TOUR</span>
                     <h1 class="glitch-title">ANGEL ROCK<br>FEST 2026</h1>
-                    <p class="hero-desc">Ángeles del Infierno y Saratoga encabezan la ruta del metal.</p>
+                    <p style="font-family:'Space Mono'; margin-bottom:30px; color:#ccc;">Ángeles del Infierno y Saratoga encabezan la ruta.</p>
                     <a href="post-todos-somos-angeles.html" class="hero-cta">FECHAS</a>
                 </div>
             </div>
         </div>
+        <!-- Puntos de navegación -->
         <div class="slider-dots">
             <span class="dot active"></span>
             <span class="dot"></span>
@@ -266,10 +193,10 @@
         </div>
     </section>
 
-    <!-- CONTENIDO PRINCIPAL -->
+    <!-- CONTENIDO -->
     <main class="content-wrapper">
         
-        <!-- PRIMERA SECCIÓN: ULTIMO RUIDO -->
+        <!-- ULTIMO RUIDO -->
         <div class="section-header-bar">
             <h3>ÚLTIMO RUIDO</h3>
             <a href="musica.html" style="font-family:'Space Mono'; font-size:10px; color:#555; text-decoration:none;">VER TODO +</a>
@@ -279,23 +206,23 @@
                 <div class="card-img"><img src="ALIVE-ALBUM-COVER-ALTERNATE.jpg"></div>
                 <span class="card-tag">MÚSICA // ANIVERSARIO</span>
                 <h4 class="card-title">KISS Alive!: El disco que salvó a una banda</h4>
-                <p class="card-excerpt">A 50 años del álbum que cambió las reglas de los discos en directo para siempre.</p>
+                <p class="card-excerpt">A 50 años del álbum que cambió las reglas de los discos en directo.</p>
             </a>
             <a href="post-ace-frehley.html" class="card">
                 <div class="card-img"><img src="image-5-1536x1024.png"></div>
                 <span class="card-tag">MÚSICA // MEMORIAL</span>
                 <h4 class="card-title">Ace Frehley: De la Tierra a Jendell</h4>
-                <p class="card-excerpt">Adiós al Spaceman original. Un viaje estelar a través de sus riffs inmortales.</p>
+                <p class="card-excerpt">Un viaje estelar a través de sus riffs inmortales.</p>
             </a>
             <a href="post-pearl-jam-ten.html" class="card">
                 <div class="card-img"><img src="pearljam10.jpg"></div>
                 <span class="card-tag">MÚSICA // GRUNGE</span>
                 <h4 class="card-title">Pearl Jam: 30 Años del Diez</h4>
-                <p class="card-excerpt">El álbum que redefinió los 90 y el sonido de Seattle desde la radio de CDMX.</p>
+                <p class="card-excerpt">El sonido de Seattle desde la radio de CDMX.</p>
             </a>
         </section>
 
-        <!-- SEGUNDA SECCIÓN: ESCENA NACIONAL -->
+        <!-- ESCENA NACIONAL -->
         <div class="section-header-bar">
             <h3 style="color:var(--red);">ESCENA NACIONAL</h3>
             <a href="escena.html" style="font-family:'Space Mono'; font-size:10px; color:#555; text-decoration:none;">VER TODO +</a>
@@ -305,101 +232,76 @@
                 <div class="card-img"><img src="zoe-mtv-unplugged.jpg"></div>
                 <span class="card-tag" style="color:var(--red);">ROCK // CDMX</span>
                 <h4 class="card-title">Zoé: 15 Años de Música de Fondo</h4>
-                <p class="card-excerpt">Crónica de una sesión emblemática que marcó un antes y un después en el rock nacional.</p>
+                <p class="card-excerpt">Crónica de una sesión emblemática que marcó el rock nacional.</p>
             </a>
             <a href="post-a-veces-maria.html" class="card">
                 <div class="card-img"><img src="avecesmaria.jpg"></div>
                 <span class="card-tag" style="color:var(--red);">INDIE // GUATEMALA-MÉXICO</span>
                 <h4 class="card-title">A veces María: Resignificar el caos</h4>
-                <p class="card-excerpt">Debut multisensorial que fusiona bolero e indie para valorar la incertidumbre.</p>
+                <p class="card-excerpt">Debut multisensorial que fusiona bolero e indie.</p>
             </a>
             <a href="post-angeles-del-infierno-cdmx.html" class="card">
                 <div class="card-img"><img src="tsangeles.jpeg"></div>
                 <span class="card-tag" style="color:var(--red);">METAL // ARENA CDMX</span>
                 <h4 class="card-title">Ángeles del Infierno: El pacto en la Arena</h4>
-                <p class="card-excerpt">La leyenda del metal español llega para liderar el festival solidario "Todos Somos Ángeles".</p>
+                <p class="card-excerpt">La leyenda del metal español llega a la CDMX.</p>
             </a>
         </section>
 
-       <!-- SECCIÓN MANDA TU RUIDO (ESTILO EXACTO A IMAGEN) -->
-<section class="ruido-box-white">
-    <div class="radar-tag">RADAR DE BANDAS INDEPENDIENTES</div>
-    
-    <h2 class="ruido-title-big">
-        MANDA TU <br>
-        <span>RUIDO.</span>
-    </h2>
+        <!-- SECCIÓN MANDA TU RUIDO -->
+        <section class="ruido-box-white">
+            <h2 class="ruido-title-big">MANDA TU <br><span>RUIDO.</span></h2>
+            <div class="cta-desc-container">
+                <p style="font-family:'Space Mono'; font-weight:700; text-transform:uppercase;">¿Tu banda está haciendo algo diferente? Buscamos el próximo grito del under.</p>
+            </div>
+            <div class="cta-buttons-row">
+                <button style="background:#000; color:#fff; border:none; padding:15px 30px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">MANDAR ESTRENO</button>
+                <button style="background:transparent; color:#000; border:4px solid #000; padding:12px 30px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">SOLICITAR ENTREVISTA</button>
+            </div>
+        </section>
+    </main>
 
-    <div class="cta-desc-container">
-        <p>¿TU BANDA ESTÁ HACIENDO ALGO DIFERENTE? BUSCAMOS EL PRÓXIMO GRITO DEL UNDER INDEPENDIENTE.</p>
-    </div>
-
-    <div class="cta-buttons-row">
-        <button class="btn-solid-black">MANDAR ESTRENO</button>
-        <button class="btn-outline-thick">SOLICITAR ENTREVISTA</button>
-    </div>
-</section>
-    <!-- FOOTER COMPLETO Y CORREGIDO -->
+    <!-- FOOTER -->
     <footer class="fanzine-footer">
         <div class="footer-grid">
-            <!-- Columna 1: Info -->
             <div class="footer-col">
-                <h2 class="logo" style="font-size: 2.5rem; margin-bottom: 20px;">EL ROCK<span>.</span></h2>
-                <p>Música, Cultura y Cine filtrados a través del lente del under independiente. Un diario ruidoso para mentes distorsionadas.</p>
-                <div class="contact-info">                   
-                </div>
+                <img src="tu-logo.png" alt="Logo Footer" class="f-logo-footer">
+                <h2 style="font-family:'Syne'; font-style:italic; font-size:2rem;">EL ROCK<span>.</span></h2>
+                <p style="font-family:'Space Mono'; font-size:11px; color:#555; text-transform:uppercase;">ARCHIVO INDEPENDIENTE DE CULTURA Y RUIDO.</p>
             </div>
-
-            <!-- Columna 2: Navegación -->
             <div class="footer-col">
                 <h5>SECCIONES</h5>
                 <ul class="footer-links">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="musica.html">Música</a></li>
-                    <li><a href="escena.html">Escena Nacional</a></li>
-                    <li><a href="bytemos.html">Bytemos (Geek)</a></li>
-                    <li><a href="toy-rockeando.html">Toy Rockeando</a></li>
+                    <li><a href="escena.html">Escena</a></li>
+                    <li><a href="cultura.html">Cultura</a></li>
+                    <li><a href="bytemos.html">Bytemos</a></li>
+                    <li><a href="pantallas.html">Pantallas</a></li>
                 </ul>
             </div>
-
-            <!-- Columna 3: Redes Sociales -->
             <div class="footer-col">
-                <h5>ESTAMOS EN LÍNEA</h5>
-                <div class="social-icons-grid">
-                    <a href="https://www.facebook.com/ElRockdetodoslosDias" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/ElRockde" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://www.instagram.com/elrockdetodoslosdias/" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://discord.gg/Ey7sdqwDaW" title="Discord"><i class="fab fa-discord"></i></a>
-                    <a href="https://www.twitch.tv/elrockdetodoslosdias" title="Twitch"><i class="fab fa-twitch"></i></a>
-                    <a href="https://www.tiktok.com/@elrockdetodoslosdias" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                </div>
-                <p style="margin-top:20px; font-size:10px;">Únete a nuestra comunidad en Discord y Twitch para transmisiones en vivo.</p>
-            </div>
-
-            <!-- Columna 4: Contacto -->
-            <div class="footer-col">
-                <h5>CONTACTO & PRENSA</h5>
-                <div class="contact-info">
-                    <b>WHATSAPP / TEL:</b>
-                    55 1920 4557
-                    <b>EMAILS:</b>
-                    elrockdetodoslosdias@gmail.com<br>
-                    prensa@elrockdetodoslosdias.com.mx
+                <h5>SOCIAL</h5>
+                <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:15px;">
+                    <a href="https://www.facebook.com/ElRockdetodoslosDias" style="color:#888;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/ElRockde" style="color:#888;"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/elrockdetodoslosdias/" style="color:#888;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://discord.gg/Ey7sdqwDaW" style="color:#888;"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
-        </div>
-
-        <div class="f-bottom">
-            <span>© 2026 El Rock de Todos los Días</span>
-            <span>EL SILENCIO ES RUIDO QUE NO SE ATREVE A SER ESCUCHADO</span>
+            <div class="footer-col">
+                <h5>CONTACTO</h5>
+                <div class="contact-links">
+                    <a href="https://wa.me/525519204557" class="contact-item"><i class="fab fa-whatsapp"></i> 55 1920 4557</a>
+                    <a href="mailto:elrockdetodoslosdias@gmail.com" class="contact-item"><i class="far fa-envelope"></i> elrockdetodoslosdias@gmail.com</a>
+                </div>
+            </div>
         </div>
     </footer>
-
 </div>
 
 <script>
-    // LÓGICA DEL SLIDER
+    // Lógica Slider
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
@@ -416,20 +318,24 @@
         showSlide(currentSlide);
     }
 
-    let autoSlide = setInterval(nextSlide, 5000);
+    let timer = setInterval(nextSlide, 5000);
 
     dots.forEach((dot, i) => {
         dot.addEventListener('click', () => {
-            clearInterval(autoSlide);
+            clearInterval(timer);
             currentSlide = i;
             showSlide(i);
-            autoSlide = setInterval(nextSlide, 5000);
+            timer = setInterval(nextSlide, 5000);
         });
+    });
+
+    // Menú Hamburguesa
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('menu');
+    burger.addEventListener('click', () => {
+        menu.classList.toggle('active');
     });
 </script>
 
 </body>
 </html>
-
-
-
