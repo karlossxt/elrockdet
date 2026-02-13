@@ -100,19 +100,102 @@
         .ruido-title-big { font-family: 'Syne'; font-size: 7rem; font-weight: 900; line-height: 0.8; font-style: italic; text-transform: uppercase; letter-spacing: -4px; margin-bottom: 40px; }
         .ruido-title-big span { color: var(--red); }
 
-        /* FOOTER */
-        .fanzine-footer { background: #000; border-top: 8px solid var(--red); padding: 80px 40px 40px; }
-        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 40px; }
-        .f-logo-footer { max-width: 180px; margin-bottom: 20px; filter: grayscale(1) brightness(1.5); transition: 0.3s; }
-        .f-logo-footer:hover { filter: grayscale(0); transform: rotate(-3deg); }
-        
-        .footer-col h5 { font-family: 'Space Mono'; color: var(--red); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
-        .footer-links a { color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; text-transform: uppercase; display: block; margin-bottom: 12px; }
-        .footer-links a:hover { color: white; padding-left: 5px; }
+        /* --- FOOTER ESTILO IMAGEN --- */
+.fanzine-footer {
+    background-color: #000;
+    padding: 60px 40px;
+    border-top: 1px solid #111; /* Línea sutil superior */
+    width: 100%;
+}
 
-        .contact-links { display: flex; flex-direction: column; gap: 12px; }
-        .contact-item { font-family: 'Space Mono'; font-size: 12px; color: white !important; text-decoration: none; display: flex; align-items: center; gap: 10px; }
-        .contact-item i { color: var(--red); }
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr; /* 4 columnas */
+    gap: 40px;
+}
+
+/* Títulos de sección (SOCIAL, COMUNIDAD, etc) */
+.f-title {
+    font-family: 'Syne', sans-serif;
+    color: var(--cyan); /* El cyan que definimos en :root */
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Logo ELROCK */
+.f-logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -2px;
+    margin-bottom: 5px;
+}
+.f-logo span { color: var(--cyan); }
+
+.f-tagline {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: #444;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Listas de Enlaces */
+.f-links-list, .f-contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.f-links-list a, .f-contact-links a {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: #888;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s ease;
+}
+
+/* Iconos en Cyan */
+.f-links-list a i, .f-contact-links a i {
+    color: var(--cyan);
+    font-size: 14px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Hover */
+.f-links-list a:hover, .f-contact-links a:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+/* Ajuste específico para Contacto Directo */
+.brand-col .f-title {
+    color: #fff; /* Título blanco como en la imagen */
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .footer-container { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+    .footer-container { grid-template-columns: 1fr; }
+    .f-logo { font-size: 2rem; }
+}
 
         /* RESPONSIVE MÓVIL */
         @media (max-width: 768px) {
@@ -127,8 +210,10 @@
             .glitch-title { font-size: 3rem; }
             .news-grid, .footer-grid { grid-template-columns: 1fr; }
             .ruido-title-big { font-size: 3.5rem; letter-spacing: -2px; }
+
         }
     </style>
+
 </head>
 <body>
 
@@ -261,43 +346,60 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="fanzine-footer">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <img src="tu-logo.png" alt="Logo Footer" class="f-logo-footer">
-                <h2 style="font-family:'Syne'; font-style:italic; font-size:2rem;">EL ROCK<span>.</span></h2>
-                <p style="font-family:'Space Mono'; font-size:11px; color:#555; text-transform:uppercase;">ARCHIVO INDEPENDIENTE DE CULTURA Y RUIDO.</p>
-            </div>
-            <div class="footer-col">
-                <h5>SECCIONES</h5>
-                <ul class="footer-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="musica.html">Música</a></li>
-                    <li><a href="escena.html">Escena</a></li>
-                    <li><a href="cultura.html">Cultura</a></li>
-                    <li><a href="bytemos.html">Bytemos</a></li>
-                    <li><a href="pantallas.html">Pantallas</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h5>SOCIAL</h5>
-                <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:15px;">
-                    <a href="https://www.facebook.com/ElRockdetodoslosDias" style="color:#888;"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/ElRockde" style="color:#888;"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://www.instagram.com/elrockdetodoslosdias/" style="color:#888;"><i class="fab fa-instagram"></i></a>
-                    <a href="https://discord.gg/Ey7sdqwDaW" style="color:#888;"><i class="fab fa-discord"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h5>CONTACTO</h5>
-                <div class="contact-links">
-                    <a href="https://wa.me/525519204557" class="contact-item"><i class="fab fa-whatsapp"></i> 55 1920 4557</a>
-                    <a href="mailto:elrockdetodoslosdias@gmail.com" class="contact-item"><i class="far fa-envelope"></i> elrockdetodoslosdias@gmail.com</a>
-                </div>
+    <div class="footer-container">
+        <!-- COLUMNA 1: BRAND & CONTACTO -->
+        <div class="footer-column brand-col">
+            <h2 class="f-logo">EL<span>ROCK</span></h2>
+            <p class="f-tagline">ARCHIVO INDEPENDIENTE DE CULTURA Y RUIDO.</p>
+            
+            <h5 class="f-title">CONTACTO DIRECTO</h5>
+            <div class="f-contact-links">
+                <a href="https://wa.me/525519204557" target="_blank">
+                    <i class="fab fa-whatsapp"></i> 55 1920 4557
+                </a>
+                <a href="mailto:elrockdetodoslosdias@gmail.com">
+                    <i class="far fa-envelope"></i> elrockdetodoslosdias@gmail.com
+                </a>
+                <a href="mailto:prensa@elrockdetodoslosdias.com.mx">
+                    <i class="far fa-envelope"></i> prensa@elrockdetodoslosdias.com.mx
+                </a>
             </div>
         </div>
-    </footer>
+
+        <!-- COLUMNA 2: SOCIAL -->
+        <div class="footer-column">
+            <h5 class="f-title">SOCIAL</h5>
+            <div class="f-links-list">
+                <a href="#"><i class="fab fa-instagram"></i> INSTAGRAM</a>
+                <a href="#"><i class="fab fa-facebook-f"></i> FACEBOOK</a>
+                <a href="#"><i class="fab fa-twitter"></i> TWITTER</a>
+                <a href="#"><i class="fab fa-tiktok"></i> TIKTOK</a>
+            </div>
+        </div>
+
+        <!-- COLUMNA 3: COMUNIDAD -->
+        <div class="footer-column">
+            <h5 class="f-title">COMUNIDAD</h5>
+            <div class="f-links-list">
+                <a href="#"><i class="fab fa-discord"></i> DISCORD</a>
+                <a href="#"><i class="fab fa-twitch"></i> TWITCH</a>
+                <a href="#"><i class="fab fa-youtube"></i> YOUTUBE</a>
+            </div>
+        </div>
+
+        <!-- COLUMNA 4: NAVEGACIÓN -->
+        <div class="footer-column">
+            <h5 class="f-title">NAVEGACIÓN</h5>
+            <div class="f-links-list">
+                <a href="index.html">INICIO</a>
+                <a href="musica.html">MÚSICA</a>
+                <a href="escena.html">ESCENA</a>
+                <a href="bytemos.html">BYTEMOS</a>
+            </div>
+        </div>
+    </div>
+</footer>
 </div>
 
 <script>
