@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -36,10 +36,10 @@
             opacity: 0.1; pointer-events: none; z-index: 999;
         }
 
-        /* NAVBAR GLOBAL */
+        /* NAVBAR GLOBAL OPTIMIZADO */
         .main-nav {
             position: sticky; top: 0; z-index: 1000;
-            background: var(--bg);
+            background: rgba(13, 13, 13, 0.95); backdrop-filter: blur(5px);
             border-bottom: 2px solid white;
             padding: 15px 40px;
             display: flex; justify-content: space-between; align-items: center;
@@ -49,15 +49,20 @@
             font-family: 'Syne', sans-serif;
             font-size: 1.8rem; font-weight: 800; font-style: italic;
             letter-spacing: -2px; cursor: pointer; text-decoration: none; color: white;
+            white-space: nowrap;
         }
         .logo span { color: var(--red); }
 
+        .nav-links { display: flex; align-items: center; }
         .nav-links a {
             color: #71717a; text-decoration: none;
             font-family: 'Space Mono'; font-size: 11px;
             text-transform: uppercase; font-weight: 700; margin: 0 15px;
+            white-space: nowrap; transition: 0.2s;
         }
         .nav-links a:hover { color: white; }
+
+        .nav-cta-btn { background: white; border:none; padding: 8px 15px; font-family:'Space Mono'; font-size:10px; font-weight:900; cursor:pointer; white-space: nowrap; }
 
         /* CABECERA DE SECCIÓN */
         .section-header {
@@ -94,12 +99,13 @@
 
         .section-title {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(4rem, 12vw, 10rem);
+            font-size: clamp(3.5rem, 12vw, 10rem);
             line-height: 0.8;
             text-transform: uppercase;
             font-style: italic;
             position: relative;
             z-index: 10;
+            word-break: break-word;
         }
 
         .section-meta {
@@ -120,7 +126,7 @@
         .archive-container {
             max-width: 1300px;
             margin: 0 auto;
-            padding: 80px 20px;
+            padding: 80px 40px;
         }
 
         .archive-info {
@@ -207,20 +213,15 @@
             margin: 0 auto 60px; 
         }
 
-        /* ESTILO DEL LOGO EN EL FOOTER */
         .f-logo-img {
             max-width: 180px;
             height: auto;
             margin-bottom: 20px;
             display: block;
-            filter: grayscale(1) brightness(1.5); /* Estilo sticker B/N */
+            filter: grayscale(1) brightness(1.5);
             transition: all 0.3s ease;
         }
-
-        .f-logo-img:hover {
-            filter: grayscale(0) brightness(1);
-            transform: rotate(-3deg) scale(1.05);
-        }
+        .f-logo-img:hover { filter: grayscale(0) brightness(1); transform: rotate(-3deg) scale(1.05); }
 
         .f-brand h2 { font-family: 'Syne'; font-size: 2.5rem; margin-bottom: 10px; font-style: italic; }
         .f-brand h2 span { color: var(--red); }
@@ -229,13 +230,7 @@
         .f-col h5 { font-family: 'Space Mono'; color: var(--red); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
         .f-col a { display: block; color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; margin-bottom: 12px; text-transform: uppercase; font-weight: 700; }
         .f-col a:hover { color: white; padding-left: 5px; transition: 0.2s; }
-
-        .f-col a i {
-            width: 18px;
-            margin-right: 8px;
-            text-align: center;
-            color: var(--red);
-        }
+        .f-col a i { width: 18px; margin-right: 8px; text-align: center; color: var(--red); }
         
         .f-bottom {
             max-width: 1300px; margin: 0 auto; border-top: 1px solid #222; padding-top: 30px;
@@ -243,15 +238,42 @@
             font-size: 10px; color: #444; font-family: 'Space Mono'; text-transform: uppercase;
         }
 
-        /* RESPONSIVE */
-        @media (max-width: 1024px) { 
-            .article-grid, .f-top { grid-template-columns: repeat(2, 1fr); } 
-            .f-brand { grid-column: 1 / -1; }
+        /* --- MEDIA QUERIES (OPTIMIZACIÓN MÓVIL) --- */
+        
+        @media (max-width: 900px) { 
+            .article-grid { grid-template-columns: repeat(2, 1fr); }
+            .f-top { grid-template-columns: 1fr 1fr; } 
         }
-        @media (max-width: 600px) { 
-            .article-grid, .f-top { grid-template-columns: 1fr; }
-            .f-top { grid-template-columns: 1fr; }
-            .section-title { font-size: 4rem; }
+
+        @media (max-width: 600px) {
+            /* Navbar Móvil: Estilo App */
+            .main-nav { flex-direction: column; align-items: flex-start; padding: 15px 20px; gap: 15px; }
+            .logo { width: 100%; display: flex; justify-content: space-between; }
+            
+            .nav-links { 
+                width: 100%; overflow-x: auto; padding-bottom: 5px; 
+                -ms-overflow-style: none; scrollbar-width: none; /* Ocultar scrollbar */
+                gap: 5px;
+            }
+            .nav-links::-webkit-scrollbar { display: none; }
+            .nav-links a { margin: 0 10px 0 0; padding: 6px 12px; border: 1px solid #333; border-radius: 4px; }
+            .nav-cta-btn { display: none; } /* Ocultar botón terminal en muy pequeño si molesta */
+
+            /* Header Móvil */
+            .section-header { padding: 80px 20px 40px; }
+            .section-header::after { font-size: 6rem; bottom: -10px; }
+            .section-title { font-size: 3.5rem; }
+            .section-meta { flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 20px; }
+            .meta-line { width: 50px; }
+
+            /* Grid Móvil (1 Columna) */
+            .archive-container { padding: 40px 20px; }
+            .article-grid { grid-template-columns: 1fr; gap: 40px; }
+            
+            /* Footer Móvil */
+            .fanzine-footer { padding: 40px 20px; }
+            .f-top { grid-template-columns: 1fr; gap: 40px; }
+            .f-bottom { flex-direction: column; gap: 10px; text-align: center; }
         }
     </style>
 </head>
@@ -259,15 +281,16 @@
 
     <!-- NAVBAR -->
     <nav class="main-nav">
-        <a href="index.html" class="logo">ELROCK.<span>.</span></a>
+        <a href="index.html" class="logo">ELROCK.<span>DE TODOS LOS DÍAS.</span></a>
         <div class="nav-links">
-            <a href="musica.html" style="color: white;">Música</a>
-            <a href="#">Escena</a>
+            <a href="musica.html" style="color: white; border-color: var(--red);">Música</a>
+            <a href="escena.html">Escena</a>
             <a href="#" style="color: var(--green);">BYTEMOS</a>
             <a href="#">Cultura</a>
             <a href="#">Cine</a>
+            <!-- Botón opcional integrado al scroll -->
+            <button class="nav-cta-btn" style="background:transparent; color:white; border:1px solid white;">TERMINAL</button>
         </div>
-        <button style="background: white; border:none; padding: 8px 15px; font-family:'Space Mono'; font-size:10px; font-weight:900; cursor:pointer;">TERMINAL [01]</button>
     </nav>
 
     <!-- CABECERA DE LA SECCIÓN -->
@@ -307,12 +330,11 @@
                 <h2 class="card-title">30 años del Diez de Pearl Jam</h2>
                 <p class="card-excerpt">Un disco que no envejece</p>
              </a>
-              <a href="post-the-adicts.html" class="article-card">
+             <a href="post-the-adicts.html" class="article-card">
                 <div class="card-image"><img src="theadoctsmx.png"></div>
                 <span class="card-tag">Reseña</span>
                 <h2 class="card-title">The Adicts, El adiós de la Sonrisa del PUNK</h2>
-                <p class="card-excerpt">Un disco que no envejece</p>
-            </a>
+                <p class="card-excerpt">La despedida de los escenarios.</p>
             </a>
         </div>
     </main>
@@ -322,9 +344,7 @@
         <div class="f-top">
             <!-- COLUMNA 1: LOGO, BRAND Y CONTACTO -->
             <div class="f-brand">
-                <!-- Reemplaza 'tu-logo.png' por la ruta de tu imagen real -->
                 <img src="logo-rock.png" alt="EL ROCK LOGO" class="f-logo-img">
-                
                 <h2>EL<span>ROCK</span></h2>
                 <p>Archivo independiente de cultura, ruido y distorsión.</p>
                 
@@ -342,7 +362,7 @@
                 </div>
             </div>
             
-            <!-- COLUMNA 2: REDES SOCIALES 1 -->
+            <!-- COLUMNA 2: REDES SOCIALES -->
             <div class="f-col">
                 <h5>Social</h5>
                 <a href="https://www.instagram.com/elrockdetodoslosdias/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
@@ -351,7 +371,7 @@
                 <a href="https://www.tiktok.com/@elrockdetodoslosdias" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
             </div>
 
-            <!-- COLUMNA 3: COMUNIDAD Y LIVE -->
+            <!-- COLUMNA 3: COMUNIDAD -->
             <div class="f-col">
                 <h5>Comunidad</h5>
                 <a href="https://discord.gg/Ey7sdqwDaW" target="_blank"><i class="fab fa-discord"></i> Discord</a>
@@ -379,5 +399,3 @@
 
 </body>
 </html>
-
-
