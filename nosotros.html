@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Nosotros</title>
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --white: #eeeeee;
+            --red: #dc2626;
+            --current-color: var(--white); /* Usaremos blanco/negro puro para esta sección */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--white); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+        /* TEXTURA */
+        body::before {
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            opacity: 0.1; pointer-events: none; z-index: 999;
+        }
+
+        /* NAVBAR OPTIMIZADO */
+        .main-nav {
+            position: sticky; top: 0; z-index: 1000; 
+            background: rgba(13, 13, 13, 0.95); backdrop-filter: blur(5px);
+            border-bottom: 2px solid white; padding: 15px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-family: 'Syne'; font-size: 1.8rem; font-weight: 800; font-style: italic; letter-spacing: -2px; text-decoration: none; color: white; white-space: nowrap; }
+        .logo span { color: var(--red); }
+        
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { 
+            color: #71717a; text-decoration: none; font-family: 'Space Mono'; 
+            font-size: 11px; text-transform: uppercase; font-weight: 700; margin: 0 15px; 
+            white-space: nowrap; transition: 0.2s;
+        }
+        .nav-links a:hover { color: white; }
+        .nav-cta-btn { background: white; border:none; padding: 8px 15px; font-family:'Space Mono'; font-size:10px; font-weight:900; cursor: pointer; white-space: nowrap; color: black; }
+
+        /* HEADER */
+        .section-header {
+            background-color: var(--white); /* Fondo blanco para contraste editorial */
+            padding: 120px 40px 60px; position: relative; overflow: hidden; border-bottom: 8px solid var(--red);
+        }
+        .section-header::after {
+            content: "ABOUT"; position: absolute; bottom: -40px; right: -20px;
+            font-family: 'Syne'; font-size: 15rem; opacity: 0.05; font-style: italic; pointer-events: none; color: black;
+        }
+        .back-link { font-family: 'Space Mono'; color: #000; text-decoration: none; font-size: 12px; font-weight: 900; text-transform: uppercase; z-index: 10; position: relative; margin-bottom: 20px; display: inline-block; }
+        
+        .section-title { font-family: 'Syne'; font-size: clamp(3.5rem, 12vw, 10rem); line-height: 0.8; text-transform: uppercase; font-style: italic; color: #000; position: relative; z-index: 10; word-break: break-word; }
+
+        /* CONTENIDO MANIFIESTO */
+        .manifesto-container {
+            max-width: 1000px; margin: 0 auto; padding: 100px 40px;
+            display: flex; flex-direction: column; gap: 40px;
+            min-height: 60vh; /* Para que ocupe buen espacio aunque no haya staff */
+        }
+
+        .manifesto-text {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 3rem); /* Letra más grande para impacto */
+            font-weight: 800;
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: #888; /* Gris oscuro para el texto normal */
+        }
+        
+        .manifesto-highlight { color: white; text-shadow: 0 0 10px rgba(255,255,255,0.3); } /* Blanco brillante para destacar */
+        
+        .manifesto-detail {
+            font-family: 'Space Mono'; font-size: 14px; line-height: 1.6; color: var(--red);
+            border-left: 4px solid var(--red); padding-left: 20px; margin-top: 50px;
+            font-weight: 700; text-transform: uppercase;
+        }
+
+        /* FOOTER */
+        .fanzine-footer { background: #000; border-top: 8px solid var(--white); padding: 80px 40px 40px; margin-top: 0; }
+        .f-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; max-width: 1300px; margin: 0 auto 60px; }
+        
+        .f-logo-img { max-width: 180px; height: auto; margin-bottom: 20px; display: block; filter: grayscale(1) brightness(1.5); transition: 0.3s; }
+        .f-logo-img:hover { filter: grayscale(0) brightness(1); transform: rotate(-3deg) scale(1.05); }
+
+        .f-brand h2 { font-family: 'Syne'; font-size: 2.5rem; font-style: italic; font-weight: 800; letter-spacing: -2px; color: white; margin-bottom: 5px; }
+        .f-brand h2 span { color: var(--red); }
+        .f-brand p.footer-tagline { font-family: 'Space Mono'; font-size: 11px; color: #555; text-transform: uppercase; font-weight: 700; margin-bottom: 30px; }
+        
+        .f-col h5 { font-family: 'Space Mono'; color: white; font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
+        .f-col a { display: block; color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; margin-bottom: 12px; font-weight: 700; text-transform: uppercase; transition: 0.2s; }
+        .f-col a:hover { color: white; padding-left: 5px; }
+        .f-col a i { width: 18px; margin-right: 8px; text-align: center; color: white; }
+
+        /* CONTACTO */
+        .contact-links { display: flex; flex-direction: column; gap: 12px; }
+        .contact-item { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--white) !important; text-decoration: none; display: flex; align-items: center; gap: 10px; transition: 0.2s ease; }
+        .contact-item:hover { color: white !important; padding-left: 5px; }
+        .contact-item i { color: white; }
+
+        .f-bottom { border-top: 1px solid #222; padding-top: 30px; display: flex; justify-content: space-between; font-size: 10px; color: #444; font-family: 'Space Mono'; text-transform: uppercase; flex-wrap: wrap; gap: 10px; }
+
+        /* --- MEDIA QUERIES (MÓVIL) --- */
+        @media (max-width: 900px) { 
+            .f-top { grid-template-columns: 1fr 1fr; } 
+        }
+
+        @media (max-width: 600px) {
+            /* Navbar Móvil */
+            .main-nav { flex-direction: column; align-items: flex-start; padding: 15px 20px; gap: 15px; }
+            .logo { width: 100%; display: flex; justify-content: space-between; }
+            
+            .nav-links { 
+                width: 100%; overflow-x: auto; padding-bottom: 5px; 
+                -ms-overflow-style: none; scrollbar-width: none;
+                gap: 10px;
+            }
+            .nav-links::-webkit-scrollbar { display: none; }
+            .nav-links a { margin: 0; padding: 6px 12px; border: 1px solid #333; border-radius: 4px; }
+            .nav-cta-btn { display: none; } 
+
+            /* Header Móvil */
+            .section-header { padding: 80px 20px 40px; }
+            .section-header::after { font-size: 6rem; bottom: -10px; }
+            .section-title { font-size: 3rem; }
+            
+            /* Contenido */
+            .manifesto-container { padding: 40px 20px; min-height: auto; }
+            .manifesto-text { font-size: 1.8rem; }
+
+            /* Footer Móvil */
+            .fanzine-footer { padding: 40px 20px; }
+            .f-top { grid-template-columns: 1fr; gap: 40px; }
+            .f-bottom { flex-direction: column; align-items: center; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="logo-container" style="display:flex; justify-content:space-between; width:100%;">
+            <a href="index.html" class="logo">ELROCK.<span>.</span></a>
+        </div>
+        
+        <div class="nav-links">
+            <a href="musica.html">Música</a>
+            <a href="escena.html">Escena</a>
+            <a href="bytemos.html">Bytemos</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="pantallas.html">Pantallas</a>
+            <button class="nav-cta-btn" style="margin-left: 10px;">HOME</button>
+        </div>
+    </nav>
+
+    <header class="section-header">
+        <a href="index.html" class="back-link">← Volver al Inicio</a>
+        <h1 class="section-title">NOSOTROS</h1> 
+        <div style="font-family:'Space Mono'; font-size:12px; margin-top:20px; color:black; font-weight:700;">
+            [ ID: EL RUIDO ] // DECLARACIÓN DE PRINCIPIOS
+        </div>
+    </header>
+
+    <main class="manifesto-container">
+        
+        <!-- TEXTO PRINCIPAL ESTILIZADO -->
+        <div class="manifesto-block">
+            <p class="manifesto-text">
+                Celebramos con respeto a las mejores bandas de la historia y de la actualidad, 
+                <span class="manifesto-highlight">compartiendo libremente</span> nuestros gustos musicales.
+            </p>
+            <br>
+            <p class="manifesto-text">
+                Nos centramos en el Rock, sus subgéneros e idiomas, sin dejar de lado 
+                lo que enriquece nuestro día.
+            </p>
+            <br>
+            <p class="manifesto-text" style="color: #666; font-size: 1rem; font-family: 'Space Mono'; letter-spacing: 0; text-transform: none; margin-top: 20px;">
+                "El Rock de Todos los Días" emerge como un medio independiente de comunicación, dedicado apasionadamente al género del rock.
+            </p>
+
+            <div class="manifesto-detail">
+                <i class="fas fa-bolt" style="margin-right:10px;"></i>
+                ¡SIN MÚSICA Y ROCK LA VIDA NO TENDRÍA SENTIDO!
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER COMPLETO -->
+    <footer class="fanzine-footer">
+        <div class="f-top">
+            <div class="f-brand">
+                <img src="logo-rock.png" alt="EL ROCK LOGO" class="f-logo-img">
+                
+                <h2>EL<span>ROCK</span></h2>
+                <p class="footer-tagline">ARCHIVO INDEPENDIENTE DE CULTURA Y RUIDO.</p>
+                
+                <div class="footer-contact-section">
+                    <h5 style="font-family: 'Space Mono'; font-size: 12px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; color: white;">Contacto Direc
