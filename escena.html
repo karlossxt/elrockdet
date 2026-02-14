@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELROCK | Escena Underground</title>
+    <title>ELROCK | Escena Nacional Underground</title>
     <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Fuentes -->
@@ -33,16 +33,21 @@
             opacity: 0.1; pointer-events: none; z-index: 999;
         }
 
-        /* NAVBAR */
+        /* --- NAVBAR OPTIMIZADO --- */
         .main-nav {
-            position: sticky; top: 0; z-index: 1000; background: var(--bg);
+            position: sticky; top: 0; z-index: 1000; background: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(5px);
             border-bottom: 2px solid white; padding: 15px 40px;
             display: flex; justify-content: space-between; align-items: center;
         }
-        .logo { font-family: 'Syne'; font-size: 1.8rem; font-weight: 800; font-style: italic; letter-spacing: -2px; text-decoration: none; color: white; }
+        .logo { font-family: 'Syne'; font-size: 1.8rem; font-weight: 800; font-style: italic; letter-spacing: -2px; text-decoration: none; color: white; white-space: nowrap; }
         .logo span { color: var(--current-color); }
-        .nav-links a { color: #71717a; text-decoration: none; font-family: 'Space Mono'; font-size: 11px; text-transform: uppercase; font-weight: 700; margin: 0 15px; }
+        
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { color: #71717a; text-decoration: none; font-family: 'Space Mono'; font-size: 11px; text-transform: uppercase; font-weight: 700; margin: 0 15px; white-space: nowrap; transition: 0.2s;}
         .nav-links a:hover { color: white; }
+
+        .nav-cta-btn { background: white; border:none; padding: 8px 15px; font-family:'Space Mono'; font-size:10px; font-weight:900; cursor: pointer; white-space: nowrap; }
 
         /* HEADER EDITORIAL */
         .section-header {
@@ -53,17 +58,18 @@
             content: "LIVE RUIDO"; position: absolute; bottom: -40px; right: -20px;
             font-family: 'Syne'; font-size: 15rem; opacity: 0.1; font-style: italic; pointer-events: none;
         }
-        .back-link { font-family: 'Space Mono'; color: white; text-decoration: none; font-size: 12px; font-weight: 900; text-transform: uppercase; z-index: 10; position: relative; }
-        .section-title { font-family: 'Syne'; font-size: clamp(4rem, 12vw, 10rem); line-height: 0.8; text-transform: uppercase; font-style: italic; color: white; position: relative; z-index: 10; }
+        .back-link { font-family: 'Space Mono'; color: white; text-decoration: none; font-size: 12px; font-weight: 900; text-transform: uppercase; z-index: 10; position: relative; display: inline-block; margin-bottom: 20px;}
+        .section-title { font-family: 'Syne'; font-size: clamp(3.5rem, 10vw, 10rem); line-height: 0.85; text-transform: uppercase; font-style: italic; color: white; position: relative; z-index: 10; word-break: break-word; hyphens: auto; }
 
         /* GRID */
-        .archive-container { max-width: 1300px; margin: 0 auto; padding: 80px 20px; }
+        .archive-container { max-width: 1300px; margin: 0 auto; padding: 80px 40px; }
         .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px 40px; }
         .article-card { text-decoration: none; color: inherit; display: block; transition: 0.3s; }
-        .card-image { height: 250px; background-color: #18181b; margin-bottom: 20px; overflow: hidden; border: 1px solid #333; }
+        .card-image { height: 250px; background-color: #18181b; margin-bottom: 20px; overflow: hidden; border: 1px solid #333; position: relative; }
         .card-image img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
         .article-card:hover .card-image img { filter: grayscale(0); transform: scale(1.05); }
-        .card-tag { font-family: 'Space Mono'; color: var(--current-color); font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        
+        .card-tag { font-family: 'Space Mono'; color: var(--current-color); font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; letter-spacing: 1px; }
         .card-title { font-family: 'Syne'; font-size: 1.5rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 15px; }
 
         /* FOOTER GENERAL */
@@ -77,7 +83,7 @@
         .f-brand h2 span { color: var(--current-color); }
         .f-brand p.footer-tagline { font-family: 'Space Mono'; font-size: 11px; color: #555; line-height: 1.5; text-transform: uppercase; font-weight: 700; margin-bottom: 30px; }
         
-        .f-col h5 { font-family: 'Space Mono'; color: var(--current-color); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
+        .f-col h5 { font-family: 'Space Mono'; color: var(--current-color); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
         .f-col a { display: block; color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; margin-bottom: 12px; font-weight: 700; text-transform: uppercase; transition: 0.2s; }
         .f-col a:hover { color: white; padding-left: 5px; }
         .f-col a i { width: 18px; margin-right: 8px; text-align: center; color: var(--current-color); }
@@ -90,37 +96,100 @@
         .contact-item i { color: var(--current-color); font-size: 14px; }
         .contact-item:hover { color: var(--current-color) !important; padding-left: 5px; }
 
-        .f-bottom { border-top: 1px solid #222; padding-top: 30px; display: flex; justify-content: space-between; font-size: 10px; color: #444; font-family: 'Space Mono'; text-transform: uppercase; }
+        .f-bottom { border-top: 1px solid #222; padding-top: 30px; display: flex; justify-content: space-between; font-size: 10px; color: #444; font-family: 'Space Mono'; text-transform: uppercase; flex-wrap: wrap; gap: 10px; }
 
-        @media (max-width: 1024px) { .f-top { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 900px) { .article-grid, .f-top { grid-template-columns: 1fr; } }
+        /* --- MEDIA QUERIES (MOVIL) --- */
+        @media (max-width: 900px) {
+            .article-grid { grid-template-columns: 1fr; gap: 40px; }
+            .f-top { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            /* Navbar Móvil: Stack Vertical + Scroll Horizontal */
+            .main-nav { 
+                flex-direction: column; 
+                align-items: flex-start; 
+                padding: 15px 20px; 
+                gap: 15px; 
+            }
+            .main-nav .logo { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+            /* movemos el botón terminal al lado del logo en móvil */
+            .logo::after { content: ''; display: none; } 
+            
+            .nav-links { 
+                width: 100%; 
+                overflow-x: auto; /* Scroll lateral */
+                padding-bottom: 5px; 
+                justify-content: flex-start;
+                /* Ocultar barra de scroll visualmente pero permitir scroll */
+                -ms-overflow-style: none;  
+                scrollbar-width: none;  
+            }
+            .nav-links::-webkit-scrollbar { display: none; }
+            .nav-links a { margin: 0 15px 0 0; font-size: 12px; padding: 5px 10px; border: 1px solid #333; border-radius: 4px; }
+            .nav-links a:hover { background: #222; border-color: white; }
+
+            /* Header Movil */
+            .section-header { padding: 80px 20px 40px; }
+            .section-header::after { font-size: 6rem; bottom: -10px; right: -10px; }
+            .section-title { font-size: 3rem; } /* Aseguramos tamaño legible */
+            
+            /* Contenido */
+            .archive-container { padding: 40px 20px; }
+            .card-image { height: 200px; }
+            
+            /* Footer Movil */
+            .fanzine-footer { padding: 40px 20px; }
+            .f-top { grid-template-columns: 1fr; gap: 40px; }
+            .f-bottom { flex-direction: column; align-items: center; text-align: center; }
+        }
     </style>
 </head>
 
 <body class="escena-archive">
 
     <nav class="main-nav">
-        <a href="index.html" class="logo">ELROCK.<span>.</span></a>
+        <div class="logo-container" style="display:flex; justify-content:space-between; width:100%; max-width:100%;">
+            <a href="index.html" class="logo">ELROCK.<span>DE TODOS LOS DÍAS.</span></a>
+            <!-- Botón visible en desktop, lo ocultaremos con CSS o lo dejamos si cabe -->
+        </div>
+        
         <div class="nav-links">
             <a href="musica.html">Música</a>
-            <a href="escena.html">Escena</a>
+            <a href="escena.html" style="color:white; border-bottom:1px solid var(--red);">Escena Nacional</a>
             <a href="bytemos.html" style="color: var(--green);">BYTEMOS</a>
             <a href="pantallas.html">Pantallas</a>
+            <!-- Botón Terminal integrado en links para movil -->
+            <button class="nav-cta-btn">TERMINAL [01]</button>
         </div>
-        <button style="background: white; border:none; padding: 8px 15px; font-family:'Space Mono'; font-size:10px; font-weight:900;">TERMINAL [01]</button>
     </nav>
 
     <header class="section-header">
         <a href="index.html" class="back-link">← Regresar al Asfalto</a>
-        <h1 class="section-title">ESCENA</h1> 
-        <div style="font-family:'Space Mono'; font-size:12px; margin-top:20px; color:white; font-weight:700;">
-            [ REGISTRO DIRECTO ] // EL RUIDO NUNCA DUERME
+        <h1 class="section-title">ESCENA NACIONAL</h1> 
+        <div style="font-family:'Space Mono'; font-size:12px; margin-top:20px; color:white; font-weight:700; line-height: 1.6;">
+            [ REGISTRO DIRECTO ] <br> // EL RUIDO NUNCA DUERME
         </div>
     </header>
 
     <main class="archive-container">
         <div class="article-grid">
             <a href="#" class="article-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800"></div>
+                <span class="card-tag">Live Report</span>
+                <h2 class="card-title">Slam y Sudor: La vuelta del moshpit</h2>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1459749411177-042180ceea72?w=800"></div>
+                <span class="card-tag">Cultura DIY</span>
+                <h2 class="card-title">Fanzines y Stickers: Resistencia Analógica</h2>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1514525253361-bee8718a74a2?w=800"></div>
+                <span class="card-tag">Venues</span>
+                <h2 class="card-title">Sótanos Sagrados: Los locales que resisten</h2>
+            </a>
+             <a href="#" class="article-card">
                 <div class="card-image"><img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800"></div>
                 <span class="card-tag">Live Report</span>
                 <h2 class="card-title">Slam y Sudor: La vuelta del moshpit</h2>
