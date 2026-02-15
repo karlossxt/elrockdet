@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -61,6 +61,137 @@
         .nav-links a:hover { color: white; }
 
         .burger-menu { display: none; font-size: 1.5rem; color: white; cursor: pointer; }
+/* SECCIÓN NUEVOS DECIBELES */
+        .decibels-strip {
+            width: 100%;
+            background: #000;
+            border-bottom: 1px solid #333; /* Separador sutil */
+            display: flex;
+            height: 90px; /* Altura fija compacta */
+            overflow: hidden;
+            position: relative;
+            z-index: 900;
+        }
+
+        /* Etiqueta lateral izquierda (Estática) */
+        .decibels-label {
+            background: var(--bg);
+            min-width: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 0.8rem;
+            line-height: 1;
+            padding: 0 15px;
+            border-right: 2px solid white;
+            color: var(--green); /* Verde Spotify/Matrix */
+            z-index: 2;
+            box-shadow: 5px 0 15px rgba(0,0,0,0.8);
+        }
+        
+        .decibels-label i {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        /* Contenedor con scroll horizontal */
+        .decibels-track-container {
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 0 20px;
+            gap: 20px;
+            scrollbar-width: none; /* Firefox: oculta barra */
+            -ms-overflow-style: none; /* IE/Edge */
+            background: #0a0a0a;
+        }
+        
+        .decibels-track-container::-webkit-scrollbar {
+            display: none; /* Chrome/Safari: oculta barra */
+        }
+
+        /* Items Individuales */
+        .db-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: 0.3s;
+            border: 1px solid transparent;
+            padding-right: 15px;
+        }
+
+        .db-item:hover {
+            opacity: 1;
+            background: #111;
+            border: 1px solid #333;
+        }
+
+        /* Imagen estilo Punk (Grayscale a Color) */
+        .db-item img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: 0.3s;
+            border: 1px solid #333;
+        }
+
+        .db-item:hover img {
+            filter: grayscale(0%);
+            border-color: var(--green); /* Borde verde al pasar el mouse */
+        }
+
+        /* Textos */
+        .db-meta {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .db-song {
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 11px;
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .db-artist {
+            font-family: 'Space Mono', monospace;
+            font-size: 9px;
+            color: #777;
+            text-transform: uppercase;
+        }
+        
+        .db-item:hover .db-song {
+            color: var(--green);
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+        }
+
+        /* Ajuste Mobile */
+        @media (max-width: 768px) {
+            .decibels-strip { height: auto; padding: 10px 0; flex-direction: column; }
+            .decibels-label { 
+                border-right: none; 
+                border-bottom: 1px solid #333; 
+                width: 100%; 
+                flex-direction: row; 
+                gap: 10px; 
+                padding: 5px;
+                min-height: 40px;
+            }
+            .decibels-label br { display: none; }
+            .decibels-track-container { padding: 15px; }
+        }
 
         /* HERO SLIDER & GLITCH EFFECT */
         .hero-full-container { position: relative; width: 100%; height: 650px; background: #000; overflow: hidden; border-bottom: 5px solid white; }
@@ -201,6 +332,61 @@
             <a href="toyrockeando.html">Toy Rockeando</a>
         </div>
     </nav>
+<!-- TIRA DE ESTRENOS / NUEVOS DECIBELES -->
+    <div class="decibels-strip">
+        <div class="decibels-label">
+            <i class="fab fa-spotify"></i> NUEVOS<br>DECIBELES
+        </div>
+        
+        <div class="decibels-track-container">
+            <!-- Item 1 -->
+            <a href="#" target="_blank" class="db-item">
+                <img src="https://picsum.photos/100/100?random=10" alt="Cover">
+                <div class="db-meta">
+                    <span class="db-song">NOMBRE CANCIÓN</span>
+                    <span class="db-artist">BANDA / ARTISTA</span>
+                </div>
+            </a>
+
+            <!-- Item 2 -->
+            <a href="#" target="_blank" class="db-item">
+                <img src="https://picsum.photos/100/100?random=11" alt="Cover">
+                <div class="db-meta">
+                    <span class="db-song">ROMPER EL TIEMPO</span>
+                    <span class="db-artist">LOS DESTRUCTORES</span>
+                </div>
+            </a>
+
+            <!-- Item 3 -->
+            <a href="#" target="_blank" class="db-item">
+                <img src="https://picsum.photos/100/100?random=12" alt="Cover">
+                <div class="db-meta">
+                    <span class="db-song">FUEGO ETERNO</span>
+                    <span class="db-artist">SARATOGA</span>
+                </div>
+            </a>
+
+            <!-- Item 4 -->
+            <a href="#" target="_blank" class="db-item">
+                <img src="https://picsum.photos/100/100?random=13" alt="Cover">
+                <div class="db-meta">
+                    <span class="db-song">RUIDO BLANCO</span>
+                    <span class="db-artist">INDIE PUNK</span>
+                </div>
+            </a>
+            
+             <!-- Item 5 -->
+             <a href="#" target="_blank" class="db-item">
+                <img src="https://picsum.photos/100/100?random=14" alt="Cover">
+                <div class="db-meta">
+                    <span class="db-song">BARRIO PESADO</span>
+                    <span class="db-artist">RAPCORE MX</span>
+                </div>
+            </a>
+            
+             
+        </div>
+    </div>
 
     <!-- HERO SLIDER (3 NOTAS + GLITCH) -->
     <section class="hero-full-container">
@@ -395,4 +581,5 @@
 
 </body>
 </html>
+
 
