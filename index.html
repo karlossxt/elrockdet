@@ -290,44 +290,160 @@
             font-weight: 700;
             text-transform: uppercase; 
           <style>
-    /* Estilos base para los botones */
-   <style>
+  /* Importar fuentes (si no las tienes ya en tu proyecto) */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syncopate:wght@700&display=swap');
+
+/* Contenedor principal para alinear la caja y su sombra roja */
+.ruido-wrapper {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto; /* Centra la sección en la página */
+    font-family: 'Space Mono', monospace; /* Fuente general para textos */
+}
+
+/* El bloque rojo que va por detrás */
+.ruido-fondo-rojo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 100%;
+    height: 100%;
+    background-color: #df2525;
+    z-index: 0; /* Lo manda al fondo */
+}
+
+/* Tu sección blanca principal */
+.ruido-box-white {
+    position: relative;
+    z-index: 1; /* La mantiene por encima del fondo rojo */
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    padding: 60px 50px;
+    overflow: hidden; /* Evita que la esquina gris sobresalga de la caja */
+}
+
+/* El detalle de la esquina gris */
+.ruido-esquina-gris {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 180px solid #ececec; /* Tamaño y color del triángulo */
+    border-left: 180px solid transparent;
+    z-index: -1; /* Lo pone por debajo del texto pero sobre el fondo blanco */
+}
+
+/* La etiqueta negra inclinada */
+.ruido-etiqueta {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 5px 12px;
+    text-transform: uppercase;
+    transform: rotate(-2deg); /* Da el efecto de inclinación */
+    margin-bottom: 40px;
+}
+
+/* Título Gigante */
+.ruido-title-big {
+    font-family: 'Syncopate', sans-serif;
+    font-style: italic;
+    font-size: 5.5rem; /* Ajusta este valor si es muy grande en tu web */
+    font-weight: 700;
+    line-height: 0.9;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: -2px;
+}
+
+.ruido-title-big span {
+    color: #df2525; /* Pinta la palabra RUIDO de rojo */
+}
+
+/* Contenedor del párrafo con la línea negra a la izquierda */
+.cta-desc-container {
+    border-left: 8px solid #000;
+    padding-left: 15px;
+    margin-bottom: 45px;
+    max-width: 600px; /* Limita el ancho del texto para que coincida con la imagen */
+}
+
+.cta-desc-container p {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0;
+    color: #000;
+}
+
+/* Fila de botones */
+.cta-buttons-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que se acomoden uno debajo del otro en celulares */
+}
+
+/* Estilos compartidos de los botones */
+.btn-ruido {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+/* Estilo Botón 1 (Mandar Estreno) */
+.btn-filled {
+    background-color: #000;
+    color: #fff;
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0px #e0e0e0; /* Sombrita gris de la imagen */
+}
+
+.btn-filled:hover {
+    background-color: #333;
+    transform: translate(2px, 2px); /* Efecto al presionar */
+    box-shadow: 4px 4px 0px #e0e0e0;
+}
+
+/* Estilo Botón 2 (Solicitar Entrevista) */
+.btn-outline {
+    background-color: transparent;
+    color: #000;
+    border: 4px solid #000;
+    box-shadow: 6px 6px 0px #000; /* Sombrita negra de la imagen */
+}
+
+.btn-outline:hover {
+    background-color: #f5f5f5;
+    transform: translate(2px, 2px); /* Efecto al presionar */
+    box-shadow: 4px 4px 0px #000;
+}
+
+/* --- RESPONSIVE DESIGN PARA CELULARES --- */
+@media (max-width: 768px) {
+    .ruido-title-big {
+        font-size: 3.5rem; /* Achica el título en móviles */
+    }
+    .ruido-box-white {
+        padding: 40px 30px;
+    }
+    .cta-buttons-row {
+        flex-direction: column; /* Pone los botones uno sobre otro */
+    }
     .btn-ruido {
-        /* Tipografía y Texto */
-        font-family: 'Space Mono', monospace;
-        font-weight: 900;
-        text-transform: uppercase;
-        text-decoration: none; /* Quita el subrayado azul */
-        display: inline-block;
-        
-        /* Espaciado y cursor */
-        padding: 15px 30px;
-        margin-right: 10px;
-        cursor: pointer;
-        transition: all 0.3s ease;
+        text-align: center;
     }
 
-    /* Botón Negro (Mandar Estreno) */
-    .btn-filled {
-        background: #000;
-        color: #fff !important; /* El !important asegura que no se ponga azul */
-        border: 4px solid #000;
-    }
-    .btn-filled:hover {
-        background: #fff;
-        color: #000 !important;
-    }
-
-    /* Botón Transparente (Solicitar Entrevista) */
-    .btn-outline {
-        background: transparent;
-        color: #000 !important;
-        border: 4px solid #000;
-        padding: 11px 30px; /* Un poco menos por el grosor del borde */
-    }
-    .btn-outline:hover {
-        background: #000;
-        color: #fff !important;
     
         }
 
@@ -520,23 +636,37 @@
                 <p class="card-excerpt">La leyenda del metal español llega a la CDMX.</p>
             </a>
         </section>
+<div class="ruido-wrapper">
+    <!-- Cuadro rojo de fondo (sombra offset) -->
+    <div class="ruido-fondo-rojo"></div>
 
-        <!-- SECCIÓN MANDA TU RUIDO -->
- <section class="ruido-box-white">
-    <h2 class="ruido-title-big">MANDA TU <br><span>RUIDO.</span></h2>
-    <div class="cta-desc-container">
-        <p style="font-family:'Space Mono'; font-weight:700; text-transform:uppercase;">
-            ¿Tu banda está haciendo algo diferente? Buscamos el próximo grito del under.
-        </p>
-    </div>
-   <div class="cta-buttons-row">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhoaPAl3rnbkPYtoEvUBs8gp0GNR0GMY5lxlljw1ZVjuEIow/viewform?pli=1" class="btn-ruido btn-filled">
-        Mandar Estreno
-    </a>
+    <section class="ruido-box-white">
+        <!-- Esquina gris superior derecha -->
+        <div class="ruido-esquina-gris"></div>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7JPodMDp26teohjaVLyUp_VUP4Fc6bRMSdxEtLiBAqlr_Jg/viewform" class="btn-ruido btn-outline">
-        Solicitar Entrevista
-    </a>
+        <!-- Etiqueta inclinada superior -->
+        <div class="ruido-etiqueta">RADAR DE BANDAS INDEPENDIENTES</div>
+
+        <h2 class="ruido-title-big">MANDA TU <br><span>RUIDO.</span></h2>
+        
+        <div class="cta-desc-container">
+            <p>
+                ¿Tu banda está haciendo algo diferente? Buscamos el próximo grito del under.
+            </p>
+        </div>
+        
+        <div class="cta-buttons-row">
+            <!-- BOTÓN 1 -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhoaPAl3rnbkPYtoEvUBs8gp0GNR0GMY5lxlljw1ZVjuEIow/viewform?pli=1" target="_blank" class="btn-ruido btn-filled">
+                Mandar Estreno
+            </a>
+
+            <!-- BOTÓN 2 -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7JPodMDp26teohjaVLyUp_VUP4Fc6bRMSdxEtLiBAqlr_Jg/viewform" target="_blank" class="btn-ruido btn-outline">
+                Solicitar Entrevista
+            </a>
+        </div>
+    </section>
 </div>
 
 </section>
@@ -631,6 +761,7 @@
 
 </body>
 </html>
+
 
 
 
