@@ -339,6 +339,113 @@
             font-weight: 700;
             text-transform: uppercase; 
         }
+/* ========================================= */
+        /* --- BARRA DE ALIADOS / SOCIOS (MARQUEE) --- */
+        /* ========================================= */
+        .aliados-strip {
+            width: 100%;
+            background-color: #050505;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+            padding: 30px 0;
+            margin-top: 60px; /* Separación con la sección de arriba */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .aliados-header {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            color: #444444;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            padding-left: 40px;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .marquee-wrapper {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            display: flex;
+        }
+
+        /* Difuminado en los bordes para que los logos aparezcan/desaparezcan suavemente */
+        .marquee-wrapper::before, 
+        .marquee-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 80px;
+            height: 100%;
+            z-index: 2;
+        }
+        .marquee-wrapper::before {
+            left: 0;
+            background: linear-gradient(to right, #050505 0%, transparent 100%);
+        }
+        .marquee-wrapper::after {
+            right: 0;
+            background: linear-gradient(to left, #050505 0%, transparent 100%);
+        }
+
+        /* La pista que se mueve */
+        .marquee-track {
+            display: flex;
+            align-items: center;
+            /* El tiempo (30s) controla la velocidad */
+            animation: scrollMarquee 30s linear infinite; 
+        }
+
+        /* Pausar al pasar el mouse por encima */
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* Estilo de los "logos" de texto */
+        .partner-logo {
+            display: inline-flex;
+            align-items: center;
+            margin: 0 40px;
+            color: #555555; /* Color gris apagado */
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* El ícono grande al lado del texto */
+        .partner-logo .p-icon {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-right: 12px;
+            color: #444444;
+            transition: color 0.3s ease;
+        }
+
+        /* Efecto Hover: Se iluminan en blanco al pasar el mouse */
+        .partner-logo:hover,
+        .partner-logo:hover .p-icon {
+            color: #ffffff;
+        }
+
+        /* Animación infinita */
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0); }
+            /* Se desplaza exactamente la mitad (porque el contenido está duplicado) */
+            100% { transform: translateX(-50%); } 
+        }
+
+        @media (max-width: 768px) {
+            .aliados-header { padding-left: 20px; }
+            .partner-logo { margin: 0 25px; font-size: 10px; }
+            .partner-logo .p-icon { font-size: 20px; margin-right: 8px; }
+        }
 
         /* RESPONSIVE MÓVIL */
         @media (max-width: 768px) {
@@ -556,6 +663,35 @@
         </div>
         <!-- FIN SECCIÓN RUIDO -->
 
+<!-- ========================================= -->
+        <!-- SECCIÓN ALIADOS / SOCIOS (CARRUSEL INF)   -->
+        <!-- ========================================= -->
+        <section class="aliados-strip">
+            <div class="aliados-header">SOCIOS DEL RUIDO / ALIADOS</div>
+            
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    
+                    <!-- GRUPO 1 -->
+                    <div class="partner-logo"><span class="p-icon">RM</span> RIFF MAG</div>
+                    <div class="partner-logo"><span class="p-icon">IS</span> INDIE SOUL</div>
+                    <div class="partner-logo"><span class="p-icon">RK</span> RADIO KAOS</div>
+                    <div class="partner-logo"><span class="p-icon">FX</span> FANZINE X</div>
+                    <div class="partner-logo"><span class="p-icon">UP</span> UNDERGROUND PRESS</div>
+                    <div class="partner-logo"><span class="p-icon">SL</span> SONIC LABS</div>
+
+                    <!-- GRUPO 2 (Idéntico al Grupo 1, necesario para el loop infinito) -->
+                    <div class="partner-logo"><span class="p-icon">RM</span> RIFF MAG</div>
+                    <div class="partner-logo"><span class="p-icon">IS</span> INDIE SOUL</div>
+                    <div class="partner-logo"><span class="p-icon">RK</span> RADIO KAOS</div>
+                    <div class="partner-logo"><span class="p-icon">FX</span> FANZINE X</div>
+                    <div class="partner-logo"><span class="p-icon">UP</span> UNDERGROUND PRESS</div>
+                    <div class="partner-logo"><span class="p-icon">SL</span> SONIC LABS</div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- FOOTER FINAL -->
@@ -645,4 +781,3 @@
 
 </body>
 </html>
-
