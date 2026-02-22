@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     
     <!-- Fuentes e Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;700;900&family=Syncopate:wght@700&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo-rock.png">
@@ -61,19 +61,19 @@
         .nav-links a:hover { color: white; }
 
         .burger-menu { display: none; font-size: 1.5rem; color: white; cursor: pointer; }
-/* SECCIÓN NUEVOS DECIBELES */
+
+        /* SECCIÓN NUEVOS DECIBELES */
         .decibels-strip {
             width: 100%;
             background: #000;
-            border-bottom: 1px solid #333; /* Separador sutil */
+            border-bottom: 1px solid #333;
             display: flex;
-            height: 90px; /* Altura fija compacta */
+            height: 90px;
             overflow: hidden;
             position: relative;
             z-index: 900;
         }
 
-        /* Etiqueta lateral izquierda (Estática) */
         .decibels-label {
             background: var(--bg);
             min-width: 120px;
@@ -88,18 +88,13 @@
             line-height: 1;
             padding: 0 15px;
             border-right: 2px solid white;
-            color: var(--green); /* Verde Spotify/Matrix */
+            color: var(--green);
             z-index: 2;
             box-shadow: 5px 0 15px rgba(0,0,0,0.8);
         }
         
-        .decibels-label i {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-            color: white;
-        }
+        .decibels-label i { font-size: 1.2rem; margin-bottom: 5px; color: white; }
 
-        /* Contenedor con scroll horizontal */
         .decibels-track-container {
             display: flex;
             align-items: center;
@@ -107,16 +102,13 @@
             white-space: nowrap;
             padding: 0 20px;
             gap: 20px;
-            scrollbar-width: none; /* Firefox: oculta barra */
-            -ms-overflow-style: none; /* IE/Edge */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
             background: #0a0a0a;
         }
         
-        .decibels-track-container::-webkit-scrollbar {
-            display: none; /* Chrome/Safari: oculta barra */
-        }
+        .decibels-track-container::-webkit-scrollbar { display: none; }
 
-        /* Items Individuales */
         .db-item {
             display: flex;
             align-items: center;
@@ -128,70 +120,14 @@
             padding-right: 15px;
         }
 
-        .db-item:hover {
-            opacity: 1;
-            background: #111;
-            border: 1px solid #333;
-        }
+        .db-item:hover { opacity: 1; background: #111; border: 1px solid #333; }
+        .db-item img { width: 60px; height: 60px; object-fit: cover; filter: grayscale(100%); transition: 0.3s; border: 1px solid #333; }
+        .db-item:hover img { filter: grayscale(0%); border-color: var(--green); }
 
-        /* Imagen estilo Punk (Grayscale a Color) */
-        .db-item img {
-            width: 60px;
-            height: 60px;
-            object-fit: cover;
-            filter: grayscale(100%);
-            transition: 0.3s;
-            border: 1px solid #333;
-        }
-
-        .db-item:hover img {
-            filter: grayscale(0%);
-            border-color: var(--green); /* Borde verde al pasar el mouse */
-        }
-
-        /* Textos */
-        .db-meta {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .db-song {
-            font-family: 'Space Mono', monospace;
-            font-weight: 700;
-            font-size: 11px;
-            color: white;
-            text-transform: uppercase;
-            margin-bottom: 2px;
-        }
-
-        .db-artist {
-            font-family: 'Space Mono', monospace;
-            font-size: 9px;
-            color: #777;
-            text-transform: uppercase;
-        }
-        
-        .db-item:hover .db-song {
-            color: var(--green);
-            text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
-        }
-
-        /* Ajuste Mobile */
-        @media (max-width: 768px) {
-            .decibels-strip { height: auto; padding: 10px 0; flex-direction: column; }
-            .decibels-label { 
-                border-right: none; 
-                border-bottom: 1px solid #333; 
-                width: 100%; 
-                flex-direction: row; 
-                gap: 10px; 
-                padding: 5px;
-                min-height: 40px;
-            }
-            .decibels-label br { display: none; }
-            .decibels-track-container { padding: 15px; }
-        }
+        .db-meta { display: flex; flex-direction: column; justify-content: center; }
+        .db-song { font-family: 'Space Mono', monospace; font-weight: 700; font-size: 11px; color: white; text-transform: uppercase; margin-bottom: 2px; }
+        .db-artist { font-family: 'Space Mono', monospace; font-size: 9px; color: #777; text-transform: uppercase; }
+        .db-item:hover .db-song { color: var(--green); text-shadow: 0 0 5px rgba(0, 255, 0, 0.3); }
 
         /* HERO SLIDER & GLITCH EFFECT */
         .hero-full-container { position: relative; width: 100%; height: 650px; background: #000; overflow: hidden; border-bottom: 5px solid white; }
@@ -199,16 +135,8 @@
         .slide.active { opacity: 1; z-index: 10; }
         .slide-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; filter: grayscale(1) brightness(0.3); z-index: -1; }
         
-        .glitch-title { 
-            font-family: 'Syne'; font-size: 5.5rem; line-height: 0.8; text-transform: uppercase; margin-bottom: 20px; 
-            position: relative; cursor: pointer; transition: 0.2s;
-        }
-        
-        /* El efecto Glitch al pasar el mouse */
-        .glitch-title:hover {
-            animation: hero-glitch 0.3s infinite;
-            text-shadow: 3px 0 var(--red), -3px 0 var(--cyan);
-        }
+        .glitch-title { font-family: 'Syne'; font-size: 5.5rem; line-height: 0.8; text-transform: uppercase; margin-bottom: 20px; position: relative; cursor: pointer; transition: 0.2s; }
+        .glitch-title:hover { animation: hero-glitch 0.3s infinite; text-shadow: 3px 0 var(--red), -3px 0 var(--cyan); }
 
         @keyframes hero-glitch {
             0% { transform: translate(0); }
@@ -241,285 +169,175 @@
         .card-title { font-family: 'Syne'; font-size: 1.4rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 10px; }
         .card-excerpt { font-family: 'Space Mono'; font-size: 11px; color: #666; line-height: 1.4; }
 
-        /* SECCIÓN RUIDO */
-        .ruido-box-white { background-color: #fff; padding: 80px 60px; margin: 80px 0; color: #000; border: 2px solid #000; }
-        .ruido-title-big { font-family: 'Syne'; font-size: 7rem; font-weight: 900; line-height: 0.8; font-style: italic; text-transform: uppercase; letter-spacing: -4px; margin-bottom: 40px; }
-        .ruido-title-big span { color: var(--red); }
-        .cta-desc-container { border-left: 10px solid #000; padding-left: 25px; margin-bottom: 40px; }
-        .cta-buttons-row { display: flex; gap: 20px; }
+        /* ========================================= */
+        /* --- ESTILOS SECCIÓN "MANDA TU RUIDO" --- */
+        /* ========================================= */
+        .ruido-wrapper {
+            position: relative;
+            max-width: 900px;
+            margin: 80px auto; 
+            font-family: 'Space Mono', monospace;
+        }
 
-       /* FOOTER ESTILO PUNK (ROJO) */
+        .ruido-fondo-rojo {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            width: 100%;
+            height: 100%;
+            background-color: #df2525;
+            z-index: 0;
+        }
+
+        .ruido-box-white {
+            position: relative;
+            z-index: 1;
+            background-color: #ffffff;
+            border: 5px solid #000000;
+            padding: 60px 50px;
+            overflow: hidden; 
+        }
+
+        .ruido-esquina-gris {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-top: 150px solid #ececec; 
+            border-left: 150px solid transparent;
+            z-index: 0;
+        }
+
+        .ruido-etiqueta {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            background-color: #000;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 6px 14px;
+            text-transform: uppercase;
+            transform: rotate(-2deg); 
+            margin-bottom: 35px;
+            letter-spacing: 1px;
+        }
+
+        .ruido-title-big {
+            position: relative;
+            z-index: 2;
+            font-family: 'Syncopate', sans-serif;
+            font-style: italic;
+            font-size: 6rem; 
+            font-weight: 700;
+            line-height: 0.9;
+            margin: 0 0 30px 0;
+            text-transform: uppercase;
+            color: #000;
+            letter-spacing: -2px;
+        }
+
+        .ruido-title-big span {
+            color: #df2525; 
+        }
+
+        .cta-desc-container {
+            position: relative;
+            z-index: 2;
+            border-left: 8px solid #000;
+            padding-left: 20px;
+            margin-bottom: 45px;
+            max-width: 500px; 
+        }
+
+        .cta-desc-container p {
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin: 0;
+            color: #000;
+        }
+
+        .cta-buttons-row {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap; 
+        }
+
+        .btn-ruido {
+            display: inline-block;
+            text-decoration: none;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            padding: 16px 32px;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-filled {
+            background-color: #000;
+            color: #fff;
+            border: 4px solid #000;
+            box-shadow: 6px 6px 0px #ececec;
+        }
+
+        .btn-filled:hover {
+            background-color: #333;
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px #ececec;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #000;
+            border: 4px solid #000;
+            box-shadow: 6px 6px 0px #000;
+        }
+
+        .btn-outline:hover {
+            background-color: #f5f5f5;
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px #000;
+        }
+
+        /* FOOTER ESTILO PUNK (ROJO) */
         .fanzine-footer { 
-            background-color: var(--red); /* Fondo Rojo */
+            background-color: var(--red); 
             padding: 80px 40px; 
-            border-top: 5px solid white; /* Línea blanca superior para separar del cuerpo negro */
+            border-top: 5px solid white; 
             width: 100%; 
             color: white;
         }
         
         .footer-container { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
-        
-        /* Títulos en Negro para contraste fuerte */
         .f-title { font-family: 'Syne'; color: #000; font-size: 14px; font-weight: 900; letter-spacing: 2px; margin-bottom: 30px; text-transform: uppercase; }
-        
         .f-logo { font-family: 'Syne'; font-size: 2.5rem; font-style: italic; font-weight: 800; color: #fff; letter-spacing: -2px; margin-bottom: 10px; }
-        .f-logo span { color: #000; } /* El punto o acento en negro */
-        
+        .f-logo span { color: #000; }
         .f-tagline { font-family: 'Space Mono'; font-size: 10px; color: #ffeaea; margin-bottom: 40px; text-transform: uppercase; font-weight: 700; }
 
         .f-links-list, .f-contact-links { display: flex; flex-direction: column; gap: 15px; }
-        
-        /* Enlaces en blanco, íconos en negro */
         .f-links-list a, .f-contact-links a { font-family: 'Space Mono'; font-size: 12px; color: white; text-decoration: none; display: flex; align-items: center; gap: 15px; transition: 0.3s; text-transform: uppercase; font-weight: 700; }
-        
         .f-links-list a i, .f-contact-links a i { color: #000; width: 20px; text-align: center; font-size: 14px; }
-        
-        /* Al pasar el mouse, se vuelven negros */
         .f-links-list a:hover, .f-contact-links a:hover { color: #000; padding-left: 5px; text-shadow: none; }
 
-        /* La línea que divide (En negro para que se vea sobre el rojo) */
         .f-bottom { 
-            border-top: 3px solid #000; /* Línea divisoria gruesa y negra */
+            border-top: 3px solid #000; 
             padding-top: 30px; 
             margin-top: 60px; 
             display: flex; 
             justify-content: space-between; 
             font-size: 10px; 
             font-family: 'Space Mono'; 
-            color: #000; /* Texto de copyright en negro */
+            color: #000; 
             font-weight: 700;
             text-transform: uppercase; 
-          <style>
-  /* Importar fuentes (si no las tienes ya en tu proyecto) */
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syncopate:wght@700&display=swap');
-
-/* Contenedor principal para alinear la caja y su sombra roja */
-.ruido-wrapper {
-    position: relative;
-    max-width: 900px;
-    margin: 40px auto; /* Centra la sección en la página */
-    font-family: 'Space Mono', monospace; /* Fuente general para textos */
-}
-
-/* El bloque rojo que va por detrás */
-.ruido-fondo-rojo {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    width: 100%;
-    height: 100%;
-    background-color: #df2525;
-    z-index: 0; /* Lo manda al fondo */
-}
-
-/* Tu sección blanca principal */
-.ruido-box-white {
-    position: relative;
-    z-index: 1; /* La mantiene por encima del fondo rojo */
-    background-color: #ffffff;
-    border: 5px solid #000000;
-    padding: 60px 50px;
-    overflow: hidden; /* Evita que la esquina gris sobresalga de la caja */
-}
-
-/* El detalle de la esquina gris */
-.ruido-esquina-gris {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-top: 180px solid #ececec; /* Tamaño y color del triángulo */
-    border-left: 180px solid transparent;
-    z-index: -1; /* Lo pone por debajo del texto pero sobre el fondo blanco */
-}
-
-/* La etiqueta negra inclinada */
-.ruido-etiqueta {
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    font-weight: 700;
-    font-size: 0.8rem;
-    padding: 5px 12px;
-    text-transform: uppercase;
-    transform: rotate(-2deg); /* Da el efecto de inclinación */
-    margin-bottom: 40px;
-}
-
-/* Título Gigante */
-.ruido-title-big {
-    font-family: 'Syncopate', sans-serif;
-    font-style: italic;
-    font-size: 5.5rem; /* Ajusta este valor si es muy grande en tu web */
-    font-weight: 700;
-    line-height: 0.9;
-    margin: 0 0 30px 0;
-    text-transform: uppercase;
-    color: #000;
-    letter-spacing: -2px;
-}
-
-.ruido-title-big span {
-    color: #df2525; /* Pinta la palabra RUIDO de rojo */
-}
-
-/* Contenedor del párrafo con la línea negra a la izquierda */
-.cta-desc-container {
-    border-left: 8px solid #000;
-    padding-left: 15px;
-    margin-bottom: 45px;
-    max-width: 600px; /* Limita el ancho del texto para que coincida con la imagen */
-}
-
-.cta-desc-container p {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    margin: 0;
-    color: #000;
-}
-
-/* Fila de botones */
-.cta-buttons-row {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* Permite que se acomoden uno debajo del otro en celulares */
-}
-
-/* Estilos compartidos de los botones */
- /* --- ESTILOS DE LA SECCIÓN RUIDO --- */
-  .ruido-wrapper {
-      position: relative;
-      max-width: 900px;
-      margin: 60px auto; 
-      font-family: 'Space Mono', monospace, sans-serif;
-      padding: 0 20px; /* Margen de seguridad para celulares */
-  }
-
-  .ruido-fondo-rojo {
-      position: absolute;
-      top: 25px;
-      left: 45px;
-      right: -5px;
-      bottom: -25px;
-      background-color: #df2525 !important;
-      z-index: 0;
-  }
-
-  .ruido-box-white {
-      position: relative;
-      z-index: 1;
-      background-color: #ffffff !important;
-      border: 5px solid #000000 !important;
-      padding: 60px 50px;
-      overflow: hidden; 
-  }
-
-  .ruido-esquina-gris {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 0;
-      height: 0;
-      border-top: 150px solid #ececec !important; 
-      border-left: 150px solid transparent !important;
-      z-index: -1;
-  }
-
-  .ruido-etiqueta {
-      display: inline-block;
-      background-color: #000000 !important;
-      color: #ffffff !important;
-      font-weight: 700;
-      font-size: 0.8rem;
-      padding: 5px 12px;
-      text-transform: uppercase;
-      transform: rotate(-2deg); 
-      margin-bottom: 40px;
-  }
-
-  .ruido-box-white h2.ruido-title-big {
-      font-family: 'Syncopate', sans-serif !important;
-      font-style: italic !important;
-      font-size: 5.5rem !important; 
-      font-weight: 700 !important;
-      line-height: 0.9 !important;
-      margin: 0 0 30px 0 !important;
-      text-transform: uppercase !important;
-      color: #000000 !important;
-      letter-spacing: -2px !important;
-  }
-
-  .ruido-box-white h2.ruido-title-big span {
-      color: #df2525 !important; 
-  }
-
-  .ruido-box-white .cta-desc-container {
-      border-left: 8px solid #000000 !important;
-      padding-left: 20px !important;
-      margin-bottom: 45px !important;
-      max-width: 500px; 
-  }
-
-  .ruido-box-white .cta-desc-container p {
-      font-family: 'Space Mono', monospace, sans-serif !important;
-      font-weight: 700 !important;
-      text-transform: uppercase !important;
-      font-size: 1.1rem !important;
-      line-height: 1.5 !important;
-      margin: 0 !important;
-      color: #000000 !important;
-  }
-
-  .ruido-box-white .cta-buttons-row {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap; 
-  }
-
-  .ruido-box-white a.btn-ruido {
-      display: inline-block;
-      text-decoration: none !important;
-      font-family: 'Space Mono', monospace, sans-serif !important;
-      font-weight: 700 !important;
-      font-size: 0.9rem !important;
-      text-transform: uppercase !important;
-      padding: 16px 32px !important;
-      letter-spacing: 1px !important;
-      transition: all 0.2s ease;
-  }
-
-  .ruido-box-white a.btn-filled {
-      background-color: #000000 !important;
-      color: #ffffff !important;
-      border: 4px solid #000000 !important;
-  }
-
-  .ruido-box-white a.btn-filled:hover {
-      background-color: #333333 !important;
-  }
-
-  .ruido-box-white a.btn-outline {
-      background-color: transparent !important;
-      color: #000000 !important;
-      border: 4px solid #000000 !important;
-  }
-
-  .ruido-box-white a.btn-outline:hover {
-      background-color: #f5f5f5 !important;
-  }
-
-  /* Responsive para celulares */
-  @media (max-width: 768px) {
-      .ruido-box-white h2.ruido-title-big { font-size: 3rem !important; }
-      .ruido-box-white { padding: 40px 20px; }
-      .ruido-box-white .cta-buttons-row { flex-direction: column; }
-      .ruido-box-white a.btn-ruido { text-align: center; }
-      .ruido-fondo-rojo { top: 15px; left: 30px; }
-  }
-    
         }
 
         /* RESPONSIVE MÓVIL */
@@ -535,8 +353,13 @@
             .glitch-title { font-size: 3rem; }
             .news-grid { grid-template-columns: 1fr; }
             .footer-container { grid-template-columns: 1fr 1fr; }
-            .ruido-title-big { font-size: 3.5rem; letter-spacing: -2px; }
+            
+            /* Responsive Sección Ruido */
+            .ruido-title-big { font-size: 3.5rem; letter-spacing: -1px; }
+            .ruido-box-white { padding: 40px 20px; }
             .cta-buttons-row { flex-direction: column; }
+            .btn-ruido { text-align: center; }
+            .ruido-fondo-rojo { top: 15px; left: 15px; }
         }
         @media (max-width: 480px) {
             .footer-container { grid-template-columns: 1fr; }
@@ -563,14 +386,15 @@
             <a href="toyrockeando.html">Toy Rockeando</a>
         </div>
     </nav>
-<!-- TIRA DE ESTRENOS / NUEVOS DECIBELES -->
+
+    <!-- TIRA DE ESTRENOS / NUEVOS DECIBELES -->
     <div class="decibels-strip">
         <div class="decibels-label">
             <i class="fab fa-spotify"></i> NUEVOS<br>DECIBELES
         </div>
         
         <div class="decibels-track-container">
-            <!-- Item 1 -->
+            <!-- Items de música... -->
             <a href="https://open.spotify.com/intl-es/track/2Z3ubUfvMEAc15k71yKyX4?si=fbc1eefaaa15451c" target="_blank" class="db-item">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT5_402fYv1jaOdHWFlvEumTnkb-9EAg6yVA&s" alt="Cover">
                 <div class="db-meta">
@@ -578,8 +402,6 @@
                     <span class="db-artist">RED SANDS</span>
                 </div>
             </a>
-
-            <!-- Item 2 -->
             <a href="https://open.spotify.com/intl-es/track/6eQkDPZCtGpJ0rIYwIBNxN?si=cb9d0573b04a4cd0" target="_blank" class="db-item">
                 <img src="https://i.scdn.co/image/ab67616d00001e024097d958f805cb3d837b79af" alt="Cover">
                 <div class="db-meta">
@@ -587,8 +409,6 @@
                     <span class="db-artist">ARCH ENEMY</span>
                 </div>
             </a>
-
-            <!-- Item 3 -->
             <a href="https://open.spotify.com/intl-es/track/0XqRUwiwEwuset4qeNCkGZ?si=e588e4c224ef4e30" target="_blank" class="db-item">
                 <img src="https://i.scdn.co/image/ab67616d00001e02893bf5a6897018280d34bf0e" alt="Cover">
                 <div class="db-meta">
@@ -596,8 +416,6 @@
                     <span class="db-artist">AUTOMATIC KAFKA</span>
                 </div>
             </a>
-
-            <!-- Item 4 -->
             <a href="https://open.spotify.com/intl-es/track/0QPQ8ZfzwCuEzO1obLV7K3?si=cba9de3695794c9b" target="_blank" class="db-item">
                 <img src="https://f4.bcbits.com/img/a0583851563_16.jpg" alt="Cover">
                 <div class="db-meta">
@@ -605,8 +423,6 @@
                     <span class="db-artist">COMIC SANS</span>
                 </div>
             </a>
-            
-             <!-- Item 5 -->
              <a href="https://open.spotify.com/intl-es/track/6xJkaZEvVYuXVxQj5Q9t9R?si=b2aa23d6bcf34209" target="_blank" class="db-item">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfm7P-c8jiydz7LZk8DJd_Z5d7nKdk9O1orA&s4" alt="Cover">
                 <div class="db-meta">
@@ -614,15 +430,12 @@
                     <span class="db-artist">LA UNIÓN</span>
                 </div>
             </a>
-            
-             
         </div>
     </div>
 
-    <!-- HERO SLIDER (3 NOTAS + GLITCH) -->
+    <!-- HERO SLIDER -->
     <section class="hero-full-container">
         <div class="slider">
-            <!-- Slide 1 -->
             <div class="slide active">
                 <div class="slide-bg" style="background-image: url('greendaysb.webp');"></div>
                 <div class="hero-content">
@@ -632,7 +445,6 @@
                     <a href="post-green-day-superbowl.html" class="hero-cta">LEER NOTA</a>
                 </div>
             </div>
-            <!-- Slide 2 -->
             <div class="slide">
                 <div class="slide-bg" style="background-image: url('mcrmx.jpeg');"></div>
                 <div class="hero-content">
@@ -642,7 +454,6 @@
                     <a href="post-mcr-black-parade.html" class="hero-cta">HORARIOS</a>
                 </div>
             </div>
-            <!-- Slide 3 -->
             <div class="slide">
                 <div class="slide-bg" style="background-image: url('tsangeles.jpeg');"></div>
                 <div class="hero-content">
@@ -660,7 +471,7 @@
         </div>
     </section>
 
-    <!-- CONTENIDO -->
+    <!-- CONTENIDO PRINCIPAL -->
     <main class="content-wrapper">
         <div class="section-header-bar">
             <h3>ÚLTIMO RUIDO</h3>
@@ -711,38 +522,38 @@
                 <p class="card-excerpt">La leyenda del metal español llega a la CDMX.</p>
             </a>
         </section>
-<div class="ruido-wrapper">
-    <div class="ruido-fondo-rojo"></div>
 
-    <section class="ruido-box-white">
-        <div class="ruido-esquina-gris"></div>
+        <!-- ========================================= -->
+        <!-- SECCIÓN "MANDA TU RUIDO" REPARADA         -->
+        <!-- ========================================= -->
+        <div class="ruido-wrapper">
+            <div class="ruido-fondo-rojo"></div>
 
-        <div class="ruido-etiqueta">RADAR DE BANDAS INDEPENDIENTES</div>
+            <section class="ruido-box-white">
+                <div class="ruido-esquina-gris"></div>
 
-        <h2 class="ruido-title-big">MANDA TU <br><span>RUIDO.</span></h2>
-        
-        <div class="cta-desc-container">
-            <p>
-                ¿Tu banda está haciendo algo diferente? Buscamos el próximo grito del under.
-            </p>
+                <div class="ruido-etiqueta">RADAR DE BANDAS INDEPENDIENTES</div>
+
+                <h2 class="ruido-title-big">MANDA TU <br><span>RUIDO.</span></h2>
+                
+                <div class="cta-desc-container">
+                    <p>
+                        ¿Tu banda está haciendo algo diferente? Buscamos el próximo grito del under.
+                    </p>
+                </div>
+                
+                <div class="cta-buttons-row">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhoaPAl3rnbkPYtoEvUBs8gp0GNR0GMY5lxlljw1ZVjuEIow/viewform?pli=1" target="_blank" class="btn-ruido btn-filled">
+                        Mandar Estreno
+                    </a>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7JPodMDp26teohjaVLyUp_VUP4Fc6bRMSdxEtLiBAqlr_Jg/viewform" target="_blank" class="btn-ruido btn-outline">
+                        Solicitar Entrevista
+                    </a>
+                </div>
+            </section>
         </div>
-        
-        <div class="cta-buttons-row">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhoaPAl3rnbkPYtoEvUBs8gp0GNR0GMY5lxlljw1ZVjuEIow/viewform?pli=1" target="_blank" class="btn-ruido btn-filled">
-                Mandar Estreno
-            </a>
-
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7JPodMDp26teohjaVLyUp_VUP4Fc6bRMSdxEtLiBAqlr_Jg/viewform" target="_blank" class="btn-ruido btn-outline">
-                Solicitar Entrevista
-            </a>
-        </div>
-    </section>
-</div>
-    </section>
-</div>
-
-</section>
-
+        <!-- FIN SECCIÓN RUIDO -->
 
     </main>
 
@@ -833,14 +644,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
