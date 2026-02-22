@@ -291,40 +291,44 @@
             text-transform: uppercase; 
           <style>
     /* Estilos base para los botones */
+   <style>
     .btn-ruido {
-        font-family: 'Space Mono';
+        /* Tipografía y Texto */
+        font-family: 'Space Mono', monospace;
         font-weight: 900;
-        cursor: pointer;
         text-transform: uppercase;
-        padding: 15px 30px;
-        transition: all 0.3s ease; /* Esto hace que el cambio de color sea suave */
-        text-decoration: none;
+        text-decoration: none; /* Quita el subrayado azul */
         display: inline-block;
+        
+        /* Espaciado y cursor */
+        padding: 15px 30px;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
     }
 
-    /* Botón 1: Negro -> Blanco */
+    /* Botón Negro (Mandar Estreno) */
     .btn-filled {
         background: #000;
-        color: #fff;
+        color: #fff !important; /* El !important asegura que no se ponga azul */
         border: 4px solid #000;
     }
     .btn-filled:hover {
         background: #fff;
-        color: #000;
+        color: #000 !important;
     }
 
-    /* Botón 2: Transparente -> Negro */
+    /* Botón Transparente (Solicitar Entrevista) */
     .btn-outline {
         background: transparent;
-        color: #000;
+        color: #000 !important;
         border: 4px solid #000;
-        padding: 12px 30px; /* Ajuste para compensar el borde */
+        padding: 11px 30px; /* Un poco menos por el grosor del borde */
     }
     .btn-outline:hover {
         background: #000;
-        color: #fff;
+        color: #fff !important;
     
-
         }
 
         /* RESPONSIVE MÓVIL */
@@ -525,17 +529,16 @@
             ¿Tu banda está haciendo algo diferente? Buscamos el próximo grito del under.
         </p>
     </div>
-    <div class="cta-buttons-row">
-        <!-- BOTÓN 1 -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhoaPAl3rnbkPYtoEvUBs8gp0GNR0GMY5lxlljw1ZVjuEIow/viewform?pli=1" class="btn-ruido btn-filled">
-            Mandar Estreno
-        </a>
+   <div class="cta-buttons-row">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhoaPAl3rnbkPYtoEvUBs8gp0GNR0GMY5lxlljw1ZVjuEIow/viewform?pli=1" class="btn-ruido btn-filled">
+        Mandar Estreno
+    </a>
 
-        <!-- BOTÓN 2 -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7JPodMDp26teohjaVLyUp_VUP4Fc6bRMSdxEtLiBAqlr_Jg/viewform" class="btn-ruido btn-outline">
-            Solicitar Entrevista
-        </a>
-    </div>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7JPodMDp26teohjaVLyUp_VUP4Fc6bRMSdxEtLiBAqlr_Jg/viewform" class="btn-ruido btn-outline">
+        Solicitar Entrevista
+    </a>
+</div>
+
 </section>
 
 
@@ -628,6 +631,7 @@
 
 </body>
 </html>
+
 
 
 
