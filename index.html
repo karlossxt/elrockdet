@@ -289,6 +289,42 @@
             color: #000; /* Texto de copyright en negro */
             font-weight: 700;
             text-transform: uppercase; 
+          <style>
+    /* Estilos base para los botones */
+    .btn-ruido {
+        font-family: 'Space Mono';
+        font-weight: 900;
+        cursor: pointer;
+        text-transform: uppercase;
+        padding: 15px 30px;
+        transition: all 0.3s ease; /* Esto hace que el cambio de color sea suave */
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    /* Botón 1: Negro -> Blanco */
+    .btn-filled {
+        background: #000;
+        color: #fff;
+        border: 4px solid #000;
+    }
+    .btn-filled:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    /* Botón 2: Transparente -> Negro */
+    .btn-outline {
+        background: transparent;
+        color: #000;
+        border: 4px solid #000;
+        padding: 12px 30px; /* Ajuste para compensar el borde */
+    }
+    .btn-outline:hover {
+        background: #000;
+        color: #fff;
+    
+
         }
 
         /* RESPONSIVE MÓVIL */
@@ -589,6 +625,7 @@
 
 </body>
 </html>
+
 
 
 
