@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Kurt Cobain: 30 Años de Ruido Eterno</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --grunge-yellow: #eab308; /* Amarillo Nirvana */
+            --white: #ffffff;
+            --gray-text: #b8b8b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                        linear-gradient(90deg, rgba(234, 179, 8, 0.02), rgba(255, 255, 255, 0.01), rgba(234, 179, 8, 0.02));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--grunge-yellow); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; text-align: center; }
+        .tag-cat { 
+            background: var(--grunge-yellow); color: black; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--grunge-yellow); font-style: italic; }
+
+        /* IMÁGENES (3 TOTAL) */
+        .img-box { border: 10px solid #111; margin: 50px 0; position: relative; background: #111; }
+        .img-box img { width: 100%; display: block; filter: grayscale(0.2) sepia(0.2) contrast(1.1); }
+        .img-info { 
+            font-family: 'Space Mono'; font-size: 10px; color: var(--grunge-yellow); 
+            text-align: right; padding: 10px; text-transform: uppercase;
+        }
+
+        .meta-info {
+            border-top: 1px solid #333; border-bottom: 1px solid #333;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--grunge-yellow);
+        }
+
+        .post-content p {
+            font-size: 1.25rem; font-weight: 400; color: var(--gray-text);
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        /* Letra Capital */
+        .post-content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--grunge-yellow); font-weight: 900; font-family: 'Syne';
+        }
+
+        .highlight-text {
+            background: #1a1a1a; padding: 40px; border-left: 5px solid var(--grunge-yellow);
+            margin: 60px 0; font-family: 'Syne'; text-transform: uppercase; font-size: 1.6rem;
+            color: #fff; line-height: 1.2;
+        }
+
+        /* SECCIÓN NIRVANA */
+        .aftermath-section {
+            background: var(--grunge-yellow); color: black; padding: 50px; margin-top: 80px;
+            box-shadow: 15px 15px 0px white;
+        }
+        .aftermath-section h2 { font-family: 'Syne'; font-size: 2.5rem; margin-bottom: 20px; line-height: 1; }
+        .aftermath-section p { font-family: 'Space Mono'; font-weight: 700; color: #000; font-size: 1rem; }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; border-top: 1px solid #333;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3.5rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+            .aftermath-section { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">BITÁCORA DE UN ÍCONO</span>
+            <h1 class="post-title">KURT COBAIN:<br>A <span>30 AÑOS</span></h1>
+        </header>
+
+        <div class="img-box">
+            <img src="kurt-cobain-portrait.jpg" alt="Kurt Cobain">
+            <div class="img-info">FOTO 01: LA VOZ DE UNA GENERACIÓN / 1967 - 1994</div>
+        </div>
+
+        <div class="meta-info">
+            <span>ORIGEN: ABERDEEN, WA</span>
+            <span>EFEMÉRIDE: 30 ANIVERSARIO</span>
+            <span>GENERO: GRUNGE / PROTESTA</span>
+        </div>
+
+        <div class="post-content">
+            <p>A tres décadas de la partida de Kurt Cobain, su legado sigue resonando con fuerza en la cultura musical y social. El emblemático líder de Nirvana no solo definió el sonido del grunge, sino que también se convirtió en la voz de una generación marcada por el descontento y la búsqueda de autenticidad.</p>
+
+            <p>Su música, junto a la composición de sus letras y actuaciones llenas de energía, atrapó a toda una generación que se envolvió en una bandera necesitada de levantar la voz, cualquiera que fuera su causa.</p>
+
+            <div class="img-box">
+                <img src="nirvana-band.jpg" alt="Nirvana">
+                <div class="img-info">FOTO 02: NIRVANA - EL TRIO QUE CAMBIÓ EL ROCK</div>
+            </div>
+
+            <p>A pesar de su temprana muerte a los 27 años, Cobain dejó una huella indeleble influenciando a innumerables artistas. Su enfoque sin filtros hacia la vida y la música sigue inspirando a las nuevas generaciones a expresarse con honestidad y sin miedo.</p>
+
+            <div class="highlight-text">
+                "COBAIN LE DEVOLVIÓ AL ROCK ESE ESTATUS DE GÉNERO DE PROTESTA QUE PARECÍA HABERSE QUEDADO GUARDADO EN EL TIEMPO."
+            </div>
+
+            <p>La conmemoración de los 30 años de su partida nos recuerda no solo su talento excepcional, sino también la vulnerabilidad humana que yace en el corazón del arte. Cobain será siempre recordado como un ícono cultural que desafió las convenciones.</p>
+
+            <div class="img-box">
+                <img src="mtv-unplugged-kurt.jpg" alt="MTV Unplugged Nirvana">
+                <div class="img-info">FOTO 03: EL ECO ACÚSTICO DE NUEVA YORK</div>
+            </div>
+
+            <section class="aftermath-section">
+                <h2>¿Y QUÉ HA PASADO CON NIRVANA?</h2>
+                <p>Krist Novoselic se ha mantenido activo en la música y la política, mientras que Dave Grohl alcanzó la fama global con Foo Fighters. Los lanzamientos póstumos, como el “MTV Unplugged in New York”, han consolidado a Nirvana con más de 75 millones de discos vendidos en todo el mundo.</p>
+            </section>
+        </div>
+
+        <footer class="post-footer">
+            <p>EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            <p style="font-size: 10px; margin-top: 10px;">COME AS YOU ARE</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

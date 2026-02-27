@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Yaot: Cerdópolis en Stop Motion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #070707;
+            --yaot-orange: #ff6b00; /* Color plastilina / stoner */
+            --white: #ffffff;
+            --gray: #999;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                        linear-gradient(90deg, rgba(255, 107, 0, 0.03), rgba(255, 255, 255, 0.01), rgba(255, 107, 0, 0.03));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--yaot-orange); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; text-align: center; }
+        .tag-cat { 
+            background: var(--yaot-orange); color: black; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--yaot-orange); font-style: italic; }
+
+        /* VIDEO EMBED */
+        .video-container {
+            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+            margin: 50px 0; border: 4px solid #1a1a1a; box-shadow: 10px 10px 0px var(--yaot-orange);
+        }
+        .video-container iframe {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        }
+
+        /* IMÁGENES */
+        .img-wrap { border: 1px solid #333; margin: 40px 0; background: #111; position: relative; }
+        .img-wrap img { width: 100%; display: block; filter: grayscale(0.2) contrast(1.1); }
+        .img-caption { 
+            font-family: 'Space Mono'; font-size: 10px; color: var(--yaot-orange); 
+            text-align: left; padding: 10px; text-transform: uppercase;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--yaot-orange);
+        }
+
+        .post-content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        /* Bloque Náhuatl */
+        .mexa-box {
+            background: #111; padding: 40px; border-top: 4px solid var(--yaot-orange);
+            margin: 60px 0; position: relative;
+        }
+        .mexa-box h3 { font-family: 'Syne'; color: var(--yaot-orange); margin-bottom: 15px; text-transform: uppercase;}
+        .mexa-box p { font-style: italic; font-size: 1.1rem; margin: 0;}
+
+        /* ELEMENTOS CLAVE (DATA SHEET) */
+        .data-sheet {
+            background: white; color: black; padding: 40px; margin: 60px 0;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;
+        }
+        .data-item { border-left: 2px solid black; padding-left: 15px; }
+        .data-item label { display: block; font-family: 'Space Mono'; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }
+        .data-item span { font-family: 'Syne'; font-weight: 800; font-size: 1.2rem; }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3.2rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">ESTRENO AUDIOVISUAL</span>
+            <h1 class="post-title">YAOT:<br>EL GRUNGE MEXA EN <span>PLASTILINA</span></h1>
+        </header>
+
+        <div class="meta-info">
+            <span>BANDA: YAOT</span>
+            <span>GÉNERO: STONER GRUNGE</span>
+            <span>VIDEO: CERDÓPOLIS</span>
+        </div>
+
+        <div class="post-content">
+            <p>Yaot es una banda que ha sabido fusionar la energía y la crudeza del rock de los 90s con el sonido envolvente del stoner grunge. Con un estilo único, se destacan en la escena actual por su autenticidad radical.</p>
+
+            <div class="img-wrap">
+                <img src="yaot-band-photo.jpg" alt="Banda Yaot">
+                <div class="img-caption">YAOT: IDENTIDAD PROPIA Y SONIDO TERROSO</div>
+            </div>
+
+            <p><strong>“CERDÓPOLIS”</strong> es su más reciente videoclip, una innovadora obra de arte realizada íntegramente en <strong>stop motion</strong> con modelado en plastilina. Este video destaca por una técnica meticulosa que retoma el espíritu rebelde de los 90s.</p>
+
+            <div class="video-container">
+                <!-- Reemplazar 'ID_DEL_VIDEO' con el ID real de YouTube -->
+                <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="mexa-box">
+                <h3>EL TOQUE MEXA</h3>
+                <p>La incorporación de frases en <strong>náhuatl</strong> en sus letras aporta una profundidad cultural distintiva, haciendo que su música resuene con una identidad que va más allá de los clichés del género.</p>
+            </div>
+
+            <div class="data-sheet">
+                <div class="data-item">
+                    <label>TÉCNICA VISUAL</label>
+                    <span>STOP MOTION / CLAY</span>
+                </div>
+                <div class="data-item">
+                    <label>INFLUENCIAS</label>
+                    <span>ROCK 90s / STONER</span>
+                </div>
+                <div class="data-item">
+                    <label>LENGUA</label>
+                    <span>NÁHUATL / ESPAÑOL</span>
+                </div>
+            </div>
+
+            <p>Yaot sigue demostrando que el grunge no ha muerto, solo ha transmutado en algo más pesado, más crudo y mucho más mexicano.</p>
+        </div>
+
+        <footer class="post-footer">
+            <p>EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">RESISTENCIA STONER DESDE EL MÉXICO SUBTERRÁNEO</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

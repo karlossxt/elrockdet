@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Pressive x Helian Evans: Prometo estar siempre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --nu-cyan: #00f2ff;
+            --pop-pink: #ff007f;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                        linear-gradient(90deg, rgba(0, 242, 255, 0.03), rgba(255, 0, 127, 0.03));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--pop-pink); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px var(--nu-cyan);
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; text-align: center; }
+        .tag-cat { 
+            background: var(--nu-cyan); color: black; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--pop-pink); }
+
+        /* IMÁGENES (Ajustadas para 2 imágenes) */
+        .img-main { border: 4px solid #111; margin-bottom: 40px; position: relative; }
+        .img-main img { width: 100%; display: block; filter: contrast(1.1); }
+        .img-caption { 
+            font-family: 'Space Mono'; font-size: 10px; color: var(--nu-cyan); 
+            text-align: right; margin-top: 10px; text-transform: uppercase;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--nu-cyan);
+        }
+
+        /* TEXTO */
+        .post-content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        .post-content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--pop-pink); font-weight: 900; font-family: 'Syne';
+        }
+
+        .highlight-text {
+            background: #111; padding: 40px; border-left: 5px solid var(--pop-pink);
+            margin: 50px 0; font-style: italic; border-right: 5px solid var(--nu-cyan);
+        }
+
+        .video-cta {
+            background: white; color: black; padding: 30px;
+            margin-top: 40px; text-align: center;
+            box-shadow: 10px 10px 0px var(--pop-pink);
+        }
+        .video-cta h3 { font-family: 'Syne'; text-transform: uppercase; margin-bottom: 10px; }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3.5rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">COLISIÓN ESTRATÉGICA</span>
+            <h1 class="post-title">PRESSIVE X<br><span>HELIAN EVANS</span></h1>
+        </header>
+
+        <div class="img-main">
+            <!-- Imagen sugerida: Pressive y Helian Evans juntos -->
+            <img src="pressive-helian-main.jpg" alt="Pressive y Helian Evans">
+            <div class="img-caption">PRESSIVE FT. HELIAN EVANS / PROMETO ESTAR SIEMPRE</div>
+        </div>
+
+        <div class="meta-info">
+            <span>FECHA: 12 DE ABRIL, 2024</span>
+            <span>GÉNERO: NUMETAL / POPPUNK</span>
+            <span>SELLO: BLEGH! LABEL</span>
+        </div>
+
+        <div class="post-content">
+            <p>Pressive, una de las bandas estandarte del sello tapatío Blegh! Label, se une a Helian Evans, promesa de la nueva escena PopPunk de México. Ambos proyectos se fusionan dando como resultado <strong>“Prometo estar siempre”</strong>, un track que muestra una faceta enérgica e introspectiva.</p>
+
+            <p>Con más de 15 años de trayectoria dentro de la escena del Metal Alternativo en México, Pressive lanza una rola fresca con sonidos que pasan desde el Nu-Metal hasta el Pop-Punk, creando una combinación única y potente que muestra una nueva cara del rock en español.</p>
+
+            <div class="highlight-text">
+                <p>“Es una canción de amor y desamor, que habla de promesas como el ‘amor para siempre’ que muchas veces resulta ser frágil y se diluye. Se trata de la intensidad y la fragilidad del amor juvenil: profundo, pasajero y muchas veces no correspondido.”</p>
+            </div>
+
+            <div class="img-main">
+                <!-- Imagen sugerida: Still del video oficial -->
+                <img src="prometo-estar-siempre-video.jpg" alt="Video Oficial Prometo Estar Siempre">
+                <div class="img-info">FOTO: STILL DEL VIDEO OFICIAL / YOUTUBE</div>
+            </div>
+
+            <p>Esta colaboración une propuestas de diferentes géneros, nacionalidades y generaciones, pero con algo en común: el amor por la música y por los sonidos extremos. En el track se pueden sentir toques del rock de México y Ecuador.</p>
+
+            <section class="video-cta">
+                <h3>MIRA EL VIDEO OFICIAL</h3>
+                <p style="font-family: 'Space Mono'; font-weight: 700;">DISPONIBLE EN EL CANAL DE BLEGH! LABEL</p>
+            </section>
+        </div>
+
+        <footer class="post-footer">
+            <p>EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            <p style="font-size: 10px; margin-top: 10px;">MÉXICO X ECUADOR: LA UNIÓN DEL SONIDO EXTREMO</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Tragedia en el Ceremonia: Negligencia Criminal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --warning-red: #ff0000;
+            --caution-yellow: #facc15;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES DE EMERGENCIA */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(255, 255, 255, 0.01), rgba(255, 0, 0, 0.04));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--warning-red); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; }
+        .tag-cat { 
+            background: var(--warning-red); color: white; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--warning-red); display: block; }
+
+        /* ESTILO DE IMÁGENES (4 TOTAL) */
+        .img-block { margin: 50px 0; border: 4px solid #1a1a1a; position: relative; }
+        .img-block img { width: 100%; display: block; filter: contrast(1.1); }
+        .img-label { 
+            background: #1a1a1a; color: var(--caution-yellow); font-family: 'Space Mono'; 
+            font-size: 10px; padding: 10px; text-transform: uppercase;
+        }
+
+        .meta-info {
+            border-top: 1px solid #333; border-bottom: 1px solid #333;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--caution-yellow);
+        }
+
+        .post-content p {
+            font-size: 1.2rem; font-weight: 400; color: #ddd;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        .post-content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--warning-red); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* BLOQUES DE OPINIÓN FUERTE */
+        .critica-box {
+            background: #111; padding: 40px; border-left: 5px solid var(--warning-red);
+            margin: 60px 0; font-style: italic; color: #fff;
+        }
+
+        .alert-box {
+            background: var(--caution-yellow); color: black; padding: 40px;
+            margin: 60px 0; font-family: 'Syne'; font-size: 1.5rem; text-transform: uppercase;
+            font-weight: 900; line-height: 1.1;
+        }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; border-top: 1px solid #333;
+            text-align: center; font-family: 'Space Mono'; color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">ESTADO DE EMERGENCIA</span>
+            <h1 class="post-title">TRAGEDIA EN EL CEREMONIA:<span>NO FUE ACCIDENTE</span></h1>
+        </header>
+
+        <div class="meta-info">
+            <span>CASO: AXE CEREMONIA 2025</span>
+            <span>LUGAR: PARQUE BICENTENARIO, CDMX</span>
+            <span>ESTADO: BAJO INVESTIGACIÓN</span>
+        </div>
+
+        <div class="post-content">
+            <p>El Festival AXE Ceremonia 2025 quedó marcado por una tragedia que expuso las graves fallas estructurales, operativas y humanas de un evento que presume ser uno de los más importantes del país. La caída de una estructura decorativa a causa del viento dejó como saldo la lamentable muerte de dos fotógrafos independientes; una ola de indignación que apunta a la negligencia absoluta.</p>
+
+            <div class="img-block">
+                <img src="accidente-estructura.jpg" alt="Estructura colapsada">
+                <div class="img-label">EVIDENCIA 01: El riesgo ignorado por la producción</div>
+            </div>
+
+            <p>No se trata de inexperiencia, sino de decisiones motivadas por recortes presupuestarios en rubros esenciales como la protección civil. Por ahorrar unos cuantos pesos, se ponen en riesgo vidas humanas. Durante horas tras el accidente, el festival mantuvo un silencio alarmante: la música no se detuvo, la fiesta continuó mientras la mayoría permanecía ajena a la gravedad.</p>
+
+            <div class="critica-box">
+                "Se maman un buen de dinero y ahora que pasa este lamentable accidente nadie quiere asumir la responsabilidad. Se llenan los bolsillos pero no hay un seguro de vida para el periodista, el espectador o la logística."
+            </div>
+
+            <div class="img-block">
+                <img src="protesta-bicentenario.jpg" alt="Protesta fuera del festival">
+                <div class="img-label">EVIDENCIA 02: "¡No fue accidente, fue negligencia!" - Protesta en CDMX</div>
+            </div>
+
+            <h2>PRENSA: EL ESLABÓN MALTRATADO</h2>
+            <p>Este tipo de tragedias sacan a la luz las condiciones precarias: empleados mal pagados, jornadas extenuantes y un trato indigno hacia la prensa. Se les invita por la cobertura, pero se les considera un mal necesario. En situaciones de emergencia, no hay protocolos para salvaguardar su integridad.</p>
+
+            <div class="img-block">
+                <img src="prensa-riesgo.jpg" alt="Prensa cubriendo evento">
+                <div class="img-label">EVIDENCIA 03: Fotógrafos trabajando sin condiciones mínimas de seguridad</div>
+            </div>
+
+            <div class="alert-box">
+                LA SEGURIDAD SIEMPRE DEBE SER UNA PRIORIDAD, NO UN COSTO QUE RECORTAR.
+            </div>
+
+            <p>Las investigaciones ya están en curso, pero la exigencia social va más allá de buscar culpables individuales: es momento de replantear cómo operan estos grandes festivales. ¿Quién supervisa? ¿Cómo se garantizan condiciones laborales dignas? No puede volver a ocurrir.</p>
+
+            <div class="img-block">
+                <img src="justicia-berenice-miguel.jpg" alt="Homenaje a víctimas">
+                <div class="img-label">EVIDENCIA 04: Justicia para Berenice y Miguel</div>
+            </div>
+
+            <section style="background: white; color: black; padding: 40px; margin-top: 40px;">
+                <h2 style="font-family: 'Syne'; text-transform: uppercase; margin-bottom: 20px;">EL FUTURO DE LOS FESTIVALES</h2>
+                <p style="font-family: 'Space Mono'; font-weight: 700;">Lo sucedido no puede quedarse como una anécdota. El alto costo de los boletos e insumos debería cubrir seguros de gastos médicos y de vida para todos los involucrados. El silencio de las marcas y organizadores es cómplice.</p>
+            </section>
+        </div>
+
+        <footer class="post-footer">
+            <p>PROHIBIDO OLVIDAR: JUSTICIA PARA LAS VÍCTIMAS DEL CEREMONIA</p>
+            <p style="font-size: 10px; margin-top: 10px;">EL ROCK DE TODOS LOS DÍAS © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

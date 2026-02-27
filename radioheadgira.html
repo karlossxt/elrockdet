@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Radiohead: El Regreso y la Distancia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #030303;
+            --radio-blue: #00f2ff; /* Azul glitch/eléctrico */
+            --white: #ffffff;
+            --gray: #666;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                        linear-gradient(90deg, rgba(0, 242, 255, 0.03), rgba(255, 255, 255, 0.02), rgba(0, 242, 255, 0.03));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--radio-blue); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        .post-header { margin-bottom: 60px; text-align: center; }
+        .tag-cat { 
+            background: #fff; color: #000; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+        .post-title span { color: var(--radio-blue); font-style: italic; }
+
+        /* IMÁGENES */
+        .img-container { border: 1px solid #333; margin: 40px 0; position: relative; background: #111; }
+        .img-container img { width: 100%; display: block; filter: grayscale(0.5) contrast(1.2); }
+        .img-caption { 
+            font-family: 'Space Mono'; font-size: 10px; color: var(--radio-blue); 
+            text-align: left; padding: 10px; text-transform: uppercase; border-top: 1px solid #333;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--radio-blue);
+        }
+
+        .post-content p {
+            font-size: 1.2rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        .post-content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--radio-blue); font-weight: 900; font-family: 'Syne';
+        }
+
+        .highlight-box {
+            background: #111; padding: 40px; border: 1px solid var(--radio-blue);
+            margin: 50px 0; position: relative;
+        }
+        .highlight-box::before {
+            content: "COMUNICADO OFICIAL";
+            position: absolute; top: -10px; left: 20px;
+            background: var(--radio-blue); color: black;
+            font-family: 'Space Mono'; font-size: 10px; padding: 2px 10px; font-weight: 700;
+        }
+
+        /* TABLA DE PRECIOS */
+        .price-list {
+            margin: 40px 0; padding: 20px; border-left: 2px solid var(--radio-blue);
+            font-family: 'Space Mono';
+        }
+        .price-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px style solid #222; }
+        .price-item span:last-child { color: var(--radio-blue); font-weight: 700; }
+
+        .latam-alert {
+            background: white; color: black; padding: 40px;
+            margin-top: 80px; text-align: center;
+        }
+        .latam-alert h2 { font-family: 'Syne'; font-size: 3rem; line-height: 0.9; margin-bottom: 15px; }
+
+        .post-footer {
+            margin-top: 100px; padding-top: 40px; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 40px 15px; }
+            .post-title { font-size: 3.5rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">NOTICIA DE ALTA FRECUENCIA</span>
+            <h1 class="post-title">RADIOHEAD:<br>EL REGRESO <span>(Y LA DISTANCIA)</span></h1>
+        </header>
+
+        <div class="meta-info">
+            <span>ESTADO: CONFIRMADO</span>
+            <span>FECHA: AGOSTO 2025</span>
+            <span>ZONA: EUROPA</span>
+        </div>
+
+        <div class="post-content">
+            <p>Siete años después de su última gira, Radiohead ha sorprendido al anunciar su regreso a los escenarios con una serie de conciertos en Europa. La noticia ha generado euforia entre sus seguidores en todo el mundo, aunque con una advertencia importante: por ahora no hay planes de presentarse en Latinoamérica.</p>
+
+            <div class="highlight-box">
+                <p style="font-style: italic; color: #fff; margin: 0;">“Esperamos que puedan venir a alguno de los próximos conciertos, por ahora serán solo estos, pero quién sabe adónde nos lleve todo esto”.</p>
+            </div>
+
+            <h2>UN REGRESO INMEDIATO</h2>
+            <p>El tour arranca en Madrid este mismo noviembre en el Movistar Arena, antes de continuar por Bolonia, Londres, Copenhague y Berlín. La decisión de volver fue casi espontánea. Según explicaron, el año pasado se reunieron para ensayar “solo por diversión” y terminaron reencontrándose con su esencia.</p>
+
+            <div class="img-container">
+                <img src="radiohead-live.jpg" alt="Radiohead en vivo">
+                <div class="img-caption">FOTOGRAFÍA: ARCHIVO EL ROCK / EL ÚLTIMO REENCUENTRO</div>
+            </div>
+
+            <h2>CÓMO CONSEGUIR ENTRADAS</h2>
+            <p>Las entradas estarán disponibles exclusivamente a través de la web oficial de Radiohead. Para acceder a la compra será obligatorio registrarse previamente entre el 5 y el 7 de septiembre. Solo quienes se inscriban podrán participar en la venta oficial el 12 de septiembre.</p>
+            
+            <p>Para evitar la reventa y el uso de bots, la única vía legal de transferencia de boletos será el sistema oficial de la propia plataforma, con validación de identidad.</p>
+
+            <div class="price-list">
+                <div class="price-item"><span>ESPAÑA</span> <span>97 €</span></div>
+                <div class="price-item"><span>ITALIA</span> <span>100 €</span></div>
+                <div class="price-item"><span>REINO UNIDO</span> <span>85 £</span></div>
+                <div class="price-item"><span>DINAMARCA</span> <span>775 DKK</span></div>
+                <div class="price-item"><span>ALEMANIA</span> <span>110 €</span></div>
+            </div>
+
+            <div class="img-container">
+                <img src="thom-yorke-glitch.jpg" alt="Thom Yorke">
+                <div class="img-caption">MODO: REGISTRO ABIERTO 5-7 SEPTIEMBRE</div>
+            </div>
+
+            <section class="latam-alert">
+                <h2>¿Y LATINOAMÉRICA?</h2>
+                <p style="font-family: 'Space Mono'; font-weight: 700; color: #000;">LA RESPUESTA ES NO.</p>
+                <p style="color: #666; font-size: 0.9rem; margin-top: 10px;">Radiohead ha sido tajante: los conciertos confirmados se limitan a Europa. Aunque no se descarta una expansión futura, por ahora el océano sigue siendo la barrera.</p>
+            </section>
+        </div>
+
+        <footer class="post-footer">
+            <p>EVERYTHING IN ITS RIGHT PLACE</p>
+            <p style="font-size: 10px; margin-top: 10px;">EL ROCK DE TODOS LOS DÍAS © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

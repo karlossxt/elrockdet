@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Kälad: Ärkamine y el Despertar del Metalcore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #060606;
+            --modern-purple: #a855f7; /* Violeta espiritual/tecnológico */
+            --white: #ffffff;
+            --gray: #888;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                        linear-gradient(90deg, rgba(168, 85, 247, 0.02), rgba(255, 255, 255, 0.01), rgba(168, 85, 247, 0.02));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--modern-purple); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; text-align: center; }
+        .tag-cat { 
+            background: var(--modern-purple); color: white; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--modern-purple); font-style: italic; }
+
+        /* IMÁGENES (2 TOTAL) */
+        .img-modern { border: 1px solid #333; margin: 40px 0; background: #111; position: relative; }
+        .img-modern img { width: 100%; display: block; filter: grayscale(0.1) contrast(1.1); }
+        .img-info { 
+            font-family: 'Space Mono'; font-size: 10px; color: var(--modern-purple); 
+            text-align: right; padding: 10px; text-transform: uppercase;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--modern-purple);
+        }
+
+        .post-content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        /* Bloque Temático */
+        .theme-box {
+            background: #111; padding: 40px; border-left: 4px solid var(--modern-purple);
+            margin: 60px 0;
+        }
+        .theme-box h3 { font-family: 'Syne'; color: var(--modern-purple); margin-bottom: 15px; text-transform: uppercase;}
+
+        /* FICHA TÉCNICA */
+        .tech-specs {
+            background: white; color: black; padding: 40px; margin: 60px 0;
+            font-family: 'Space Mono';
+        }
+        .tech-specs h4 { font-family: 'Syne'; text-transform: uppercase; margin-bottom: 20px; font-size: 1.5rem; }
+        .spec-item { display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 10px 0; font-size: 0.85rem; }
+        .spec-item strong { text-transform: uppercase; }
+
+        /* SPOTIFY BUTTON */
+        .spotify-btn {
+            display: block; background: #1DB954; color: white;
+            text-align: center; padding: 22px; margin: 40px 0;
+            text-decoration: none; font-family: 'Syne'; font-weight: 900;
+            text-transform: uppercase; letter-spacing: 2px;
+            transition: 0.3s; box-shadow: 0px 10px 30px rgba(29, 185, 84, 0.2);
+        }
+        .spotify-btn:hover { background: #1ed760; transform: translateY(-3px); }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3.2rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">NUEVA ERA SONORA</span>
+            <h1 class="post-title">KÄLAD:<br>EL RUIDO DEL <span>ÄRKAMINE</span></h1>
+        </header>
+
+        <div class="img-modern">
+            <img src="kalad-arkamine-cover.jpg" alt="Kälad Ärkamine Album">
+            <div class="img-info">LP / 2024 - EL DESPERTAR DEL METALCORE</div>
+        </div>
+
+        <div class="meta-info">
+            <span>BANDA: KÄLAD</span>
+            <span>GENERO: METALCORE / DJENT</span>
+            <span>LANZAMIENTO: MAYO 2024</span>
+        </div>
+
+        <div class="post-content">
+            <p><strong>Kälad</strong> irrumpe en la escena con su primera producción de larga duración titulada “ÄRKAMINE”, un álbum que no teme experimentar con los límites del Metalcore, Djent y Post Hardcore.</p>
+
+            <p>Con 8 temas originales, el disco narra la incesante experiencia del ser humano cuando es llamado hacia el <strong>despertar espiritual</strong>. La banda fusiona la agresividad del Modern Metal con toques sinfónicos sutiles que elevan la complejidad de la obra.</p>
+
+            <div class="theme-box">
+                <h3>CONCEPTO ESPIRITUAL</h3>
+                <p>Ärkamine es un viaje a través de las vivencias, dolencias, alegrías y tribulaciones que conlleva el proceso de transmutación del alma.</p>
+            </div>
+
+            <div class="img-modern">
+                <img src="kalad-band-promo.jpg" alt="Kälad Banda">
+                <div class="img-info">KÄLAD: FUSIÓN DE SONIDOS MODERNOS</div>
+            </div>
+
+            <div class="tech-specs">
+                <h4>FICHA TÉCNICA</h4>
+                <div class="spec-item"><strong>Estudio</strong> <span>Empire Live Records</span></div>
+                <div class="spec-item"><strong>Composición</strong> <span>Christiane Brambila</span></div>
+                <div class="spec-item"><strong>Producción</strong> <span>Roy Cantú</span></div>
+                <div class="spec-item"><strong>Mix & Master</strong> <span>Gus Calavera (Harmony Box)</span></div>
+                <div class="spec-item"><strong>Tracklist</strong> <span>8 Temas Originales</span></div>
+            </div>
+
+            <p>Grabado con precisión técnica y una visión clara, “ÄRKAMINE” posiciona a Kälad como una propuesta fresca y profunda dentro del metal nacional actual.</p>
+
+            <a href="https://open.spotify.com/album/TU_LINK_DE_SPOTIFY" class="spotify-btn" target="_blank">
+                REPRODUCIR EN SPOTIFY
+            </a>
+        </div>
+
+        <footer class="post-footer">
+            <p>EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">MODERN METAL RESISTANCE</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

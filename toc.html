@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | The Brain Rage: TOC - El Laberinto de la Mente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --brain-green: #bef264; /* Verde ácido / Cerebral */
+            --white: #ffffff;
+            --gray: #666;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                        linear-gradient(90deg, rgba(190, 242, 100, 0.02), rgba(255, 255, 255, 0.01), rgba(190, 242, 100, 0.02));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--brain-green); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; text-align: center; }
+        .tag-cat { 
+            background: var(--brain-green); color: black; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--brain-green); display: block; }
+
+        /* IMÁGENES (2 TOTAL) */
+        .img-brain { border: 2px solid #222; margin: 40px 0; background: #111; position: relative; }
+        .img-brain img { width: 100%; display: block; filter: grayscale(0.5) contrast(1.2); transition: 0.3s; }
+        .img-brain:hover img { filter: grayscale(0) contrast(1.1); }
+        .img-label { 
+            font-family: 'Space Mono'; font-size: 10px; color: var(--brain-green); 
+            text-align: left; padding: 10px; text-transform: uppercase; border-top: 1px solid #222;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--brain-green);
+        }
+
+        .post-content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        /* Bloque Diagnóstico */
+        .diagnosis-box {
+            background: #111; padding: 40px; border-top: 4px solid var(--brain-green);
+            margin: 60px 0; position: relative;
+        }
+        .diagnosis-box::before {
+            content: "ESTUDIO CLÍNICO";
+            position: absolute; top: -12px; left: 20px;
+            background: var(--brain-green); color: black;
+            font-family: 'Space Mono'; font-size: 10px; padding: 2px 10px; font-weight: 700;
+        }
+
+        /* SPOTIFY BUTTON */
+        .spotify-link {
+            display: block; background: #1DB954; color: white;
+            text-align: center; padding: 20px; margin: 40px 0;
+            text-decoration: none; font-family: 'Syne'; font-weight: 900;
+            text-transform: uppercase; letter-spacing: 2px;
+            transition: 0.3s; box-shadow: 0px 5px 20px rgba(29, 185, 84, 0.2);
+        }
+        .spotify-link:hover { background: #1ed760; transform: scale(1.01); }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3.2rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">BITÁCORA DE LA MENTE</span>
+            <h1 class="post-title">THE BRAIN RAGE:<span>TOC</span></h1>
+        </header>
+
+        <div class="img-brain">
+            <img src="brain-rage-cover.jpg" alt="The Brain Rage TOC">
+            <div class="img-label">SINGLE: TOC / UN PODEROSO VIAJE CON CONCIENCIA</div>
+        </div>
+
+        <div class="meta-info">
+            <span>BANDA: THE BRAIN RAGE</span>
+            <span>TEMA: SALUD MENTAL / CRÍTICA SOCIAL</span>
+            <span>SONIDO: RIFFS PODEROSOS</span>
+        </div>
+
+        <div class="post-content">
+            <p>The Brain Rage emana pasión en cada uno de sus temas y su nuevo estreno, <strong>“TOC”</strong>, no es la excepción. Nos deleitan con una poderosa combinación de riffs de guitarra y una base rítmica sólida que incluye un bajo prominente y una batería contundente.</p>
+
+            <div class="diagnosis-box">
+                <p>“TOC” nos introduce a lo complejo de la mente humana y a uno de los trastornos cuyas causas siguen siendo un misterio para muchos. La banda fusiona la intensidad del metal con la capacidad de transmitir un mensaje de crítica social relevante y actual.</p>
+            </div>
+
+            <div class="img-brain">
+                <img src="brain-rage-banda.jpg" alt="The Brain Rage Banda">
+                <div class="img-label">REFLEXIÓN Y PODER: LA ESENCIA DE THE BRAIN RAGE</div>
+            </div>
+
+            <p>En resumen, este tema captura la esencia de una banda que no teme abordar temas difíciles. Es una pieza que es tan reflexiva como poderosa, diseñada para dejar al oyente sumergido en un estado de análisis personal.</p>
+
+            <a href="https://open.spotify.com/album/TU_LINK_SPOTIFY" class="spotify-link" target="_blank">
+                ESCUCHAR "TOC" EN SPOTIFY
+            </a>
+        </div>
+
+        <footer class="post-footer">
+            <p>EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">LA MÚSICA ES EL ÚNICO ORDEN DENTRO DEL CAOS</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

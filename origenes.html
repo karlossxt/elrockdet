@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Orígenes del Metal en México: 1975-1984</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #080808;
+            --metal-red: #ff0000;
+            --metal-silver: #a1a1aa;
+            --white: #ffffff;
+            --accent: #e11d48;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.03));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--metal-red); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        .post-header { margin-bottom: 60px; text-align: center; }
+        .tag-cat { 
+            background: var(--metal-red); color: white; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--metal-red); display: block; }
+
+        .img-main { border: 8px solid #1a1a1a; margin-bottom: 40px; position: relative; }
+        .img-main img { width: 100%; display: block; filter: grayscale(0.2) contrast(1.2); }
+        .img-caption { 
+            font-family: 'Space Mono'; font-size: 10px; color: #888; 
+            text-align: right; margin-top: 10px; text-transform: uppercase;
+        }
+
+        .meta-info {
+            border-top: 1px solid #333; border-bottom: 1px solid #333;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--metal-red);
+        }
+
+        .post-content p {
+            font-size: 1.2rem; font-weight: 400; color: #ddd;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        .post-content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--metal-red); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* ESTILO PARA CADA BANDA */
+        .band-card {
+            background: #111;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 4px solid var(--metal-red);
+        }
+
+        .band-name {
+            font-family: 'Syne';
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .band-meta {
+            font-family: 'Space Mono';
+            font-size: 0.8rem;
+            color: var(--metal-red);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .band-detail {
+            font-size: 1rem !important;
+            margin-bottom: 10px !important;
+            color: #aaa !important;
+        }
+
+        .band-detail strong { color: var(--white); }
+
+        .highlight-text {
+            background: var(--metal-red); color: white; padding: 40px;
+            margin: 50px 0; font-style: italic; font-weight: 900;
+        }
+
+        .legacy-section {
+            background: white; color: black; padding: 50px;
+            margin-top: 80px; box-shadow: 15px 15px 0px var(--metal-red);
+        }
+        .legacy-section h2 { font-family: 'Syne'; font-size: 2.5rem; margin-bottom: 20px; color: black; line-height: 1;}
+        .legacy-section p { font-family: 'Space Mono'; font-weight: 700; font-size: 1.1rem; color: #111; }
+
+        .post-footer {
+            margin-top: 100px; padding-top: 40px; border-top: 1px solid #333;
+            text-align: center; font-family: 'Space Mono'; color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">BITÁCORA DE RESISTENCIA</span>
+            <h1 class="post-title">METAL MEXICANO:<span>LOS AÑOS PROHIBIDOS</span></h1>
+        </header>
+
+        <div class="img-main">
+            <!-- Imagen sugerida: Collage Simpsonized de las bandas -->
+            <img src="metal-mex-simpson.png" alt="Orígenes Metal México">
+            <div class="img-caption">1975 - 1984 / La chispa del metal nacional</div>
+        </div>
+
+        <div class="meta-info">
+            <span>POR: REDACCIÓN EL ROCK</span>
+            <span>TEMA: HISTORIA SUBTERRÁNEA</span>
+            <span>ZONA: MÉXICO</span>
+        </div>
+
+        <div class="post-content">
+            <p>Después del festival de Avándaro en 1971, el gobierno mexicano vetó los conciertos de rock por casi 10 años. La censura, la falta de apoyo institucional y la necesidad de tocar en escenarios improvisados marcaron los primeros años del metal nacional. Sin embargo, entre 1975 y 1984 surgieron bandas pioneras que encendieron la chispa, desafiando al sistema nota tras nota.</p>
+<!-- 1. FONGUS -->
+        <section class="band-card">
+            <h2 class="band-name">Fongus</h2>
+            <span class="band-meta">1975, Guadalajara | Hard Rock / Power Metal</span>
+            <div class="band-img">
+                <img src="img/fongus.jpg" alt="Banda Fongus">
+            </div>
+            <div class="band-info">
+                <p><strong>LEGADO:</strong> Primera banda en grabar profesionalmente en México; influyó en los grupos posteriores de power y heavy metal del país.</p>
+                <p><strong>CURIOSIDAD:</strong> Comenzaron tocando en clubes pequeños y fiestas privadas debido a la censura del rock.</p>
+            </div>
+        </section>
+
+        <!-- 2. LUZBEL -->
+        <section class="band-card">
+            <h2 class="band-name">Luzbel</h2>
+            <span class="band-meta">1982, CDMX | Heavy Metal Clásico</span>
+            <div class="band-img">
+                <img src="img/luzbel.jpg" alt="Luzbel Heavy Metal">
+            </div>
+            <div class="band-info">
+                <p><strong>LEGADO:</strong> Considerada la leyenda viviente del heavy mexicano; su estilo y actitud sentaron un estándar para el metal en México.</p>
+                <p><strong>CURIOSIDAD:</strong> Su EP "Metal Caído del Cielo" es coleccionable y ha influenciado a bandas de toda Latinoamérica.</p>
+            </div>
+        </section>
+
+        <!-- 3. RAMSES -->
+        <section class="band-card">
+            <h2 class="band-name">Ramses</h2>
+            <span class="band-meta">1983, CDMX | Heavy / Speed Metal</span>
+            <div class="band-img">
+                <img src="img/ramses.jpg" alt="Ramses Metal">
+            </div>
+            <div class="band-info">
+                <p><strong>LEGADO:</strong> Transición del heavy al speed metal en México; riffs y líricas místicas que inspiraron a nuevas generaciones.</p>
+                <p><strong>CURIOSIDAD:</strong> Pioneros en incorporar temáticas fantásticas y épicas al metal nacional.</p>
+            </div>
+        </section>
+
+        <div class="highlight-text">
+            EL RUIDO NO SE DESTRUYE, SOLO SE TRANSFORMA EN RESISTENCIA.
+        </div>
+
+        <!-- 4. GEHENNA -->
+        <section class="band-card">
+            <h2 class="band-name">Gehenna</h2>
+            <span class="band-meta">1983, CDMX | Metal Progresivo</span>
+            <div class="band-img">
+                <img src="img/gehenna.jpg" alt="Gehenna">
+            </div>
+            <div class="band-info">
+                <p><strong>LEGADO:</strong> Único disco considerado obra maestra; muestra un nivel técnico y lírico avanzado para la época.</p>
+                <p><strong>CURIOSIDAD:</strong> La banda tuvo corta vida, pero su disco sigue siendo estudiado por músicos y coleccionistas.</p>
+            </div>
+        </section>
+
+        <!-- 5. SIX BEER -->
+        <section class="band-card">
+            <h2 class="band-name">Six Beer</h2>
+            <span class="band-meta">1983, Querétaro | Thrash / Heavy Metal</span>
+            <div class="band-img">
+                <img src="img/sixbeer.jpg" alt="Six Beer Banda">
+            </div>
+            <div class="band-info">
+                <p><strong>LEGADO:</strong> Pioneros en incorporar thrash al metal mexicano; sonido crudo y actitud callejera.</p>
+                <p><strong>CURIOSIDAD:</strong> Su nombre refleja la cultura del bar y la escena underground de Querétaro.</p>
+            </div>
+        </section>
+
+        <!-- 6. CUERO Y METAL -->
+        <section class="band-card">
+            <h2 class="band-name">Cuero y Metal</h2>
+            <span class="band-meta">1984, Oaxaca | Power Metal</span>
+            <div class="band-img">
+                <img src="img/cueroymetal.jpg" alt="Cuero y Metal">
+            </div>
+            <div class="band-info">
+                <p><strong>LEGADO:</strong> Representantes del metal en el sur del país; mantuvieron vivo el género en regiones menos atendidas.</p>
+                <p><strong>CURIOSIDAD:</strong> Se mantuvieron activos varios años antes de grabar formalmente, dando shows locales.</p>
+            </div>
+        </section>
+
+        <!-- 7. DEATH WARRANT -->
+        <section class="band-card">
+            <h2 class="band-name">Death Warrant</h2>
+            <span class="band-meta">1984, Cd. Juárez | Thrash Metal</span>
+            <div class="band-img">
+                <img src="img/deathwarrant.jpg" alt="Death Warrant">
+            </div>
+            <div class="band-info">
+                <p><strong>LEGADO:</strong> Influencia en la escena norteña del metal; referencia del thrash mexicano primitivo.</p>
+                <p><strong>CURIOSIDAD:</strong> Nunca grabaron un álbum completo, pero su impacto se nota en bandas emergentes de la región.</p>
+            </div>
+        </section>
+
+        <!-- 8. TOXODETH -->
+        <section class="band-card">
+            <h2 class="band-name">Toxodeth</h2>
+            <span class="band-meta">1984, Monterrey | Death / Black Metal</span>
+            <div class="band-img">
+                <img src="img/toxodeth.jpg" alt="Toxodeth">
+            </div>
+            <div class="band-info">
+                <p><strong>LEGADO:</strong> Brutalidad y autenticidad; inspiraron el metal extremo en Monterrey y norte del país.</p>
+                <p><strong>CURIOSIDAD:</strong> No usaron clichés visuales ni maquillaje, destacando por su crudeza musical.</p>
+            </div>
+        </section>
+
+        <!-- 9. VIRGIN WITCH -->
+        <section class="band-card">
+            <h2 class="band-name">Virgin Witch</h2>
+            <span class="band-meta">1984, Toluca | Death / Black / Thrash</span>
+            <div class="band-img">
+                <img src="img/virginwitch.jpg" alt="Virgin Witch">
+            </div>
+            <div class="band-info">
+                <p><strong>LEGADO:</strong> Abridores del metal más agresivo en México; influencia en bandas de black y death posteriores.</p>
+                <p><strong>CURIOSIDAD:</strong> Sus presentaciones eran intensas y teatrales, aunque sin grabaciones comerciales importantes.</p>
+            </div>
+        </section>
+                <h2>EL RUIDO NO SE DESTRUYE</h2>
+                <p>Estas nueve bandas no solo hacían música; hacían resistencia. En un México que quería silencio, ellos respondieron con distorsión. El metal mexicano nació en el underground, y es ahí donde mantiene su esencia más pura.</p>
+            </section>
+        </div>
+
+        <footer class="post-footer">
+            <p>EL ROCK DE TODOS LOS DÍAS © 2025</p>
+            <p style="font-size: 10px; margin-top: 10px;">PROHIBIDO OLVIDAR NUESTRAS RAÍCES</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>
