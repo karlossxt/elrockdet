@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | We Missed Ourselves: Crónica del Primer Festival Emo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --emo-pink: #f472b6; /* Rosa Scene */
+            --white: #ffffff;
+            --gray: #666;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                        linear-gradient(90deg, rgba(244, 114, 182, 0.03), rgba(255, 255, 255, 0.01), rgba(244, 114, 182, 0.03));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--emo-pink); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; text-align: center; }
+        .tag-cat { 
+            background: var(--emo-pink); color: black; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--emo-pink); font-style: italic; }
+
+        /* BLOQUES DE IMÁGENES (5 TOTAL) */
+        .img-emo { border: 4px solid #1a1a1a; margin: 40px 0; background: #111; position: relative; }
+        .img-emo img { width: 100%; display: block; filter: contrast(1.1); transition: 0.3s; }
+        .img-info { 
+            font-family: 'Space Mono'; font-size: 10px; color: var(--emo-pink); 
+            text-align: right; padding: 10px; text-transform: uppercase;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--emo-pink);
+        }
+
+        .post-content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        .post-content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--emo-pink); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* Cartel Box */
+        .lineup-box {
+            background: #111; padding: 40px; border-left: 5px solid var(--emo-pink);
+            margin: 60px 0;
+        }
+        .lineup-box h3 { font-family: 'Syne'; color: var(--emo-pink); margin-bottom: 20px; text-transform: uppercase; }
+        .lineup-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; }
+        .lineup-list li { background: #222; padding: 5px 15px; font-family: 'Space Mono'; font-size: 0.9rem; border: 1px solid #333; }
+
+        /* Bloque Éxito */
+        .success-banner {
+            background: white; color: black; padding: 40px; margin: 60px 0;
+            text-align: center; box-shadow: 12px 12px 0px var(--emo-pink);
+        }
+        .success-banner h2 { font-family: 'Syne'; font-size: 2.5rem; text-transform: uppercase; line-height: 0.9; }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3.2rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">BITÁCORA DE FESTIVAL</span>
+            <h1 class="post-title">WE MISSED OURSELVES:<br><span>EL DESPERTAR EMO</span></h1>
+        </header>
+
+        <div class="img-emo">
+            <img src="festival-emo-portada.jpg" alt="We Missed Ourselves Festival">
+            <div class="img-info">FOTO 01: EL VELÓDROMO SE PINTA DE NEGRO Y ROSA</div>
+        </div>
+
+        <div class="meta-info">
+            <span>EVENTO: WE MISSED OURSELVES</span>
+            <span>FECHA: 05 DE OCTUBRE, 2024</span>
+            <span>LUGAR: VELÓDROMO OLÍMPICO, CDMX</span>
+        </div>
+
+        <div class="post-content">
+            <p>El pasado sábado 5 de octubre, el Velódromo Olímpico de la Ciudad de México se convirtió en el epicentro de la nostalgia y la emoción al albergar el primer Festival Emo. Este evento fue una celebración inolvidable de la estética y los sonidos que marcaron a toda una generación.</p>
+
+            <div class="img-emo">
+                <img src="decoracion-festival.jpg" alt="Decoración Emo Festival">
+                <div class="img-info">FOTO 02: ATMÓSFERA Y NOSTALGIA DE PRINCIPIOS DE LOS 2000</div>
+            </div>
+
+            <p>El Velódromo ofreció un ambiente único. Los asistentes fueron recibidos con una decoración cuidadosamente diseñada, que incluía luces tenues y banderas de bandas icónicas que evocaban los mejores momentos de la escena de hace dos décadas.</p>
+
+            <div class="lineup-box">
+                <h3>BANDAS QUE HICIERON HISTORIA</h3>
+                <ul class="lineup-list">
+                    <li>FALLING IN REVERSE</li>
+                    <li>ALESANA</li>
+                    <li>THURSDAY</li>
+                    <li>KILLSWITCH ENGAGE</li>
+                    <li>FIT FOR A KING</li>
+                </ul>
+            </div>
+
+            <div class="img-emo">
+                <img src="bandas-en-vivo.jpg" alt="Alesana Live">
+                <div class="img-info">FOTO 03: ENERGÍA PURA SOBRE EL ESCENARIO</div>
+            </div>
+
+            <p>Cada banda nos hizo mover el cuerpo con su enérgica presentación. La lluvia no fue impedimento para que se brincara al ritmo de las guitarras; al contrario, le dio un toque épico a la jornada de gritos y distorsión.</p>
+
+            <div class="img-emo">
+                <img src="comunidad-emo.jpg" alt="Fans del festival">
+                <div class="img-info">FOTO 04: UN ENCUENTRO DE COMUNIDADES Y AUTOEXPRESIÓN</div>
+            </div>
+
+            <p>Fans de todas las edades se unieron para compartir su amor por la cultura emo. El festival sirvió como un recordatorio poderoso de cómo la música puede crear un espacio seguro para la conexión emocional y la resistencia.</p>
+
+            <div class="success-banner">
+                <h2>UN ÉXITO ROTUNDO QUE PIDE SEGUNDA EDICIÓN</h2>
+            </div>
+
+            <div class="img-emo">
+                <img src="final-festival.jpg" alt="Cierre del festival">
+                <div class="img-info">FOTO 05: NOS VEMOS EN EL SIGUIENTE SLAM</div>
+            </div>
+
+            <p>El primer Festival Emo en el Velódromo Olímpico superó todas las expectativas. La combinación de un espacio emblemático y un cartel impresionante garantizó que este evento quedará en la memoria de todos. Esperamos con ansias la confirmación de una segunda edición.</p>
+        </div>
+
+        <footer class="post-footer">
+            <p>RESEÑA POR: ITZEL EME</p>
+            <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">EL ROCK DE TODOS LOS DÍAS © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>
