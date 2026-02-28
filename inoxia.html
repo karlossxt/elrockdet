@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Inoxia: Estreno de Datura Stramonium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --toxic-green: #84cc16; /* Verde Datura */
+            --chrome: #94a3b8;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES TÓXICAS */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%), 
+                        linear-gradient(90deg, rgba(132, 204, 22, 0.03), rgba(255, 255, 255, 0.01), rgba(132, 204, 22, 0.03));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--toxic-green); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; text-align: left; }
+        .tag-cat { 
+            background: var(--toxic-green); color: black; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 6vw, 5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        .post-title span { color: var(--toxic-green); font-style: italic; display: block; margin-top: 10px; }
+
+        /* IMÁGENES (2 TOTAL) */
+        .img-toxic { border: 1px solid #222; margin: 40px 0; background: #111; position: relative; overflow: hidden; }
+        .img-toxic img { width: 100%; display: block; filter: grayscale(0.5) contrast(1.2); transition: 0.5s; }
+        .img-toxic:hover img { filter: grayscale(0) hue-rotate(-20deg); }
+        .img-info { 
+            font-family: 'Space Mono'; font-size: 10px; color: var(--toxic-green); 
+            text-align: right; padding: 10px; text-transform: uppercase;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--toxic-green);
+        }
+
+        .post-content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        /* BANNER DE ESTRENO */
+        .premiere-banner {
+            background: white; color: black; padding: 40px;
+            margin: 60px 0; text-align: center;
+            box-shadow: 15px 15px 0px var(--toxic-green);
+            border: 2px solid black;
+        }
+        .premiere-banner h2 { font-family: 'Syne'; font-size: 2.2rem; text-transform: uppercase; line-height: 0.9; margin-bottom: 15px; }
+        .premiere-banner p { font-family: 'Space Mono'; font-weight: 700; font-size: 1.2rem; }
+
+        /* YOUTUBE BUTTON */
+        .youtube-btn {
+            display: block; background: #ff0000; color: white;
+            text-align: center; padding: 20px; margin: 40px 0;
+            text-decoration: none; font-family: 'Syne'; font-weight: 900;
+            text-transform: uppercase; letter-spacing: 2px;
+            transition: 0.3s; box-shadow: 0px 5px 20px rgba(255, 0, 0, 0.2);
+        }
+        .youtube-btn:hover { background: #b91c1c; transform: translateY(-3px); }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 2.5rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+            .premiere-banner h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">ESTRENO AUDIOVISUAL / METAL ALTERNATIVO</span>
+            <h1 class="post-title">INOXIA:<span>D A T U R A S T R A M O N I U M</span></h1>
+        </header>
+
+        <div class="meta-info">
+            <span>BANDA: INOXIA</span>
+            <span>PLATAFORMA: YOUTUBE</span>
+            <span>ESTADO: PRÓXIMO ESTRENO</span>
+        </div>
+
+        <div class="post-content">
+            <p>A través de sus canales oficiales, la banda de metal alternativo <strong>Inoxia</strong> ha encendido las alarmas con el anuncio del próximo estreno de su video más reciente: “D A T U R A S T R A M O N I U M”.</p>
+
+            <div class="img-toxic">
+                <!-- Imagen sugerida: Still del video o arte del single -->
+                <img src="inoxia-datura-still.jpg" alt="Inoxia Datura Stramonium">
+                <div class="img-info">BITÁCORA VISUAL: LA TOXICIDAD HECHA RUIDO</div>
+            </div>
+
+            <p>Este nuevo corte promete sumergirnos en la atmósfera densa y visceral que caracteriza al proyecto, explorando sonidos que desafían el metal convencional.</p>
+
+            <div class="premiere-banner">
+                <h2>11.03.24</h2>
+                <p>11:00 HRS MÉXICO</p>
+            </div>
+
+            <div class="img-toxic">
+                <!-- Imagen sugerida: Foto de la banda -->
+                <img src="inoxia-banda-promo.jpg" alt="Inoxia Banda">
+                <div class="img-info">INOXIA: METAL ALTERNATIVO DESDE LAS SOMBRAS</div>
+            </div>
+
+            <p>La cita es este 11 de marzo a través de su canal oficial de YouTube. Prepárense para una experiencia sensorial que no dejará a nadie indiferente.</p>
+
+            <a href="https://www.youtube.com/c/TU_CANAL_DE_INOXIA" class="youtube-btn" target="_blank">
+                VER EN YOUTUBE
+            </a>
+        </div>
+
+        <footer class="post-footer">
+            <p>EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">LA NATURALEZA TAMBIÉN SABE GRITAR</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

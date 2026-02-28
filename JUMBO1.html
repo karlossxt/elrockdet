@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Jumbo: 25 Años en el Planeta Jumbo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #030303;
+            --jumbo-blue: #0ea5e9;
+            --jumbo-cyan: #22d3ee;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                        linear-gradient(90deg, rgba(14, 165, 233, 0.03), rgba(255, 255, 255, 0.01), rgba(34, 211, 238, 0.03));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--jumbo-blue); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px var(--jumbo-cyan);
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; text-align: center; }
+        .tag-cat { 
+            background: var(--jumbo-blue); color: white; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--jumbo-cyan); font-style: italic; }
+
+        /* IMÁGENES (5 TOTAL) */
+        .img-jumbo { border: 1px solid #222; margin: 40px 0; background: #111; position: relative; }
+        .img-jumbo img { width: 100%; display: block; filter: contrast(1.1); transition: 0.4s; }
+        .img-label { 
+            font-family: 'Space Mono'; font-size: 10px; color: var(--jumbo-cyan); 
+            text-align: right; padding: 10px; text-transform: uppercase;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--jumbo-blue);
+        }
+
+        .post-content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        .post-content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--jumbo-blue); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* Bloques de Actos */
+        .act-box {
+            background: #111; padding: 40px; border-left: 4px solid var(--jumbo-blue);
+            margin: 60px 0;
+        }
+        .act-box h3 { font-family: 'Syne'; color: var(--jumbo-cyan); margin-bottom: 15px; text-transform: uppercase;}
+
+        /* Invitados Especiales */
+        .guests-grid {
+            background: white; color: black; padding: 40px; margin: 60px 0;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px;
+            box-shadow: 15px 15px 0px var(--jumbo-blue);
+        }
+        .guest-item { font-family: 'Space Mono'; font-weight: 700; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+
+        .highlight-moment {
+            background: var(--jumbo-blue); color: white; padding: 40px;
+            margin: 60px 0; text-align: center; font-family: 'Syne';
+            font-size: 2rem; text-transform: uppercase; line-height: 1;
+        }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3.5rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+            .guests-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">ANIVERSARIO / SOLD OUT</span>
+            <h1 class="post-title">JUMBO:<br><span>25 AÑOS DE ROCK</span></h1>
+        </header>
+
+        <div class="img-jumbo">
+            <img src="jumbo-pepsi-center-full.jpg" alt="Jumbo Pepsi Center">
+            <div class="img-info">FOTO 01: SOLD OUT EN EL CORAZÓN DE LA CDMX</div>
+        </div>
+
+        <div class="meta-info">
+            <span>FECHA: 27 DE SEPTIEMBRE</span>
+            <span>LUGAR: PEPSI CENTER WTC</span>
+            <span>TOUR: JUMBO 25 ANIVERSARIO</span>
+        </div>
+
+        <div class="post-content">
+            <p>Jumbo cerró en el Pepsi Center una extensa gira por México y EUA celebrando sus 25 años de carrera. Agotando entradas pocas horas antes del inicio, la banda regia demostró que sus fans siguen siendo parte vital del "Planeta Jumbo".</p>
+
+            <div class="act-box">
+                <h3>ACTO I: EL DESPERTAR ACÚSTICO</h3>
+                <p>El show inició en un formato íntimo, recreando la atmósfera de una terraza. Acompañados de un ensamble de cuerdas y metales, sonaron joyas como “En repetición”, “Nos vamos a encontrar” y “Cada vez que me voy”.</p>
+            </div>
+
+            <div class="img-jumbo">
+                <img src="jumbo-acustico-ensamble.jpg" alt="Jumbo Acústico">
+                <div class="img-info">FOTO 02: ENSAMBLE DE CUERDAS Y METALES EN ESCENA</div>
+            </div>
+
+            <div class="act-box" style="border-left-color: var(--jumbo-cyan);">
+                <h3>ACTO II: EL SEGMENTO ELÉCTRICO</h3>
+                <p>Tras despedir al ensamble, los regios regresaron con toda la potencia eléctrica. El escenario se encendió con clásicos y una lista de invitados que marcaron la historia del rock nacional.</p>
+            </div>
+
+            <div class="guests-grid">
+                <div class="guest-item">JAVIER BLAKE</div>
+                <div class="guest-item">XIMENA SARIÑANA</div>
+                <div class="guest-item">JOSÉ MADERO</div>
+                <div class="guest-item">JAY DE LA CUEVA</div>
+                <div class="guest-item">CHA! (FOBIA)</div>
+                <div class="guest-item">LUIS H. NAVEJAS</div>
+            </div>
+
+            <div class="img-jumbo">
+                <img src="jumbo-invitados-electric.jpg" alt="Jumbo e invitados">
+                <div class="img-info">FOTO 03: SINERGIA ELÉCTRICA CON GRANDES DEL ROCK</div>
+            </div>
+
+            <div class="highlight-moment">
+                "FOTOGRAFÍA" ILUMINÓ EL PEPSI CENTER CON LA MAGIA DE MILES DE CELULARES.
+            </div>
+
+            <div class="img-jumbo">
+                <img src="jumbo-fotografia-momento.jpg" alt="Jumbo Fotografia">
+                <div class="img-info">FOTO 04: UN HIMNO QUE SE QUEDÓ EN LA MEMORIA</div>
+            </div>
+
+            <p>El clímax llegó con “Fotografía”, contando con las colaboraciones de Jay de la Cueva y Cha!. La atmósfera mágica dio paso a los himnos finales: “Cámara Lenta”, “Rockstar”, “Siento” y el cierre definitivo con “Aquí”.</p>
+
+            <div class="img-jumbo">
+                <img src="jumbo-final-encore.jpg" alt="Jumbo Encore">
+                <div class="img-info">FOTO 05: HASTA QUE EL SOL SE APAGUE</div>
+            </div>
+
+            <p>Jumbo nos regaló una noche épica que hizo honor a un viaje de nostalgia iniciado en 1999. Larga vida a Jumbo y a sus canciones que seguirán sonando en nuestra memoria.</p>
+        </div>
+
+        <footer class="post-footer">
+            <p>RESEÑA POR: LUCY</p>
+            <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">EL ROCK DE TODOS LOS DÍAS © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

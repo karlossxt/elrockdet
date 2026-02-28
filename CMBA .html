@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Crónica: CMBA Punk Rock Fest Vol.3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --punk-yellow: #fbbf24; /* Amarillo Fanzine */
+            --punk-red: #ef4444;    /* Rojo de Alerta */
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                        linear-gradient(90deg, rgba(251, 191, 36, 0.02), rgba(255, 255, 255, 0.01), rgba(239, 68, 68, 0.02));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--punk-yellow); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; text-align: left; }
+        .tag-cat { 
+            background: var(--punk-yellow); color: black; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--punk-yellow); font-style: italic; }
+
+        /* BLOQUES DE IMÁGENES (7 TOTAL) */
+        .img-punk { border: 2px solid #222; margin: 40px 0; background: #111; position: relative; }
+        .img-punk img { width: 100%; display: block; filter: grayscale(0.2) contrast(1.1); }
+        .img-label { 
+            font-family: 'Space Mono'; font-size: 10px; color: var(--punk-yellow); 
+            text-align: left; padding: 10px; text-transform: uppercase; border-top: 1px solid #222;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--punk-yellow);
+        }
+
+        .post-content p {
+            font-size: 1.2rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        /* Alerta Sum 41 */
+        .alert-box {
+            background: var(--punk-red); color: white; padding: 30px;
+            margin: 40px 0; border: 2px solid white; font-family: 'Space Mono';
+        }
+        .alert-box h4 { text-transform: uppercase; margin-bottom: 10px; font-family: 'Syne'; font-size: 1.5rem; }
+
+        /* Highlight de Bandas */
+        .band-highlight {
+            background: white; color: black; padding: 40px; margin: 60px 0;
+            border-left: 10px solid var(--punk-yellow);
+        }
+        .band-highlight h3 { font-family: 'Syne'; font-size: 2rem; text-transform: uppercase; margin-bottom: 10px; }
+        .band-highlight p { font-family: 'Space Mono'; font-weight: 700; color: #111; font-size: 1rem; margin: 0; }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3.2rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">COBERTURA ESPECIAL</span>
+            <h1 class="post-title">PUNK Y NOSTALGIA:<span> CMBA VOL.3</span></h1>
+        </header>
+
+        <div class="img-punk">
+            <img src="cmba-festival-general.jpg" alt="CMBA Punk Rock Fest">
+            <div class="img-label">FOTO 01: EL VELÓDROMO BAJO EL SOL DEL PUNK</div>
+        </div>
+
+        <div class="meta-info">
+            <span>EVENTO: CMBA PUNK ROCK FEST</span>
+            <span>FECHA: 29 DE MARZO, 2025</span>
+            <span>LUGAR: VELÓDROMO OLÍMPICO, CDMX</span>
+        </div>
+
+        <div class="post-content">
+            <p>Talentos nacionales e internacionales se presentaron el pasado 29 de marzo para regalarnos una jornada de sonidos frescos y clásicos conocidos. Sin embargo, la noticia previa marcó el tono: el equipo de <strong>Sum 41</strong> quedó varado en Asia y la banda no pudo llegar.</p>
+
+            <div class="alert-box">
+                <h4>CAMBIO DE ÚLTIMO MOMENTO</h4>
+                <p>Ante la ausencia de Sum 41, <strong>Antisocial Emo Club</strong> y el poderosísimo <strong>Chingadazo de Kung Fu</strong> se sumaron al cartel. Una adición heroica para salvar el festival.</p>
+            </div>
+
+            <div class="img-punk">
+                <img src="antisocial-emo-club.jpg" alt="Antisocial Emo Club">
+                <div class="img-info">FOTO 02: CALENTANDO MOTORES CON ROLITAS DE GREEN DAY Y PARAMORE</div>
+            </div>
+
+            <p>Llegamos en una tarde MUY calurosa. Antisocial Emo Club ya estaba armando un DJ set que puso a todos a cantar Green Day y Paramore, preparándonos para lo que sería un día lleno de pank.</p>
+
+            <div class="band-highlight">
+                <h3>BUEN VIAJE</h3>
+                <p>Mazatlán en el Velódromo: Abrieron con intro de banda y cerraron con un cover de ‘Desvelado’ de Bobby Pulido que todo el mundo coreó.</p>
+            </div>
+
+            <div class="img-punk">
+                <img src="buen-viaje-live.jpg" alt="Buen Viaje Banda">
+                <div class="img-info">FOTO 03: EL PUNK ROCK SE PONE REGIONAL</div>
+            </div>
+
+            <p>Después llegó <strong>BLNKO</strong>. Este morro tiene 25 años y toditita la actitud. Invitó a Marino (CHDKF) y Andrey (Lack of Remorse) para desatar la locura total, cerrando con un body surfing épico.</p>
+
+            <div class="img-punk">
+                <img src="blnko-surfing.jpg" alt="BLNKO Body Surfing">
+                <div class="img-info">FOTO 04: BLNKO Y LA ENERGÍA DE LA NUEVA ESCENA</div>
+            </div>
+
+            <p>Llegó el turno de el casi heroico <strong>Chingadazo de Kung Fu</strong>, celebrando su décimo aniversario. Con Mike de Barney Gombo como invitado, el set fue un acierto total que dejó a la gente preparadísima para los headliners.</p>
+
+            <div class="img-punk">
+                <img src="chdkf-10aniversario.jpg" alt="Chingadazo de Kung Fu">
+                <div class="img-info">FOTO 05: 10 AÑOS DE CHDKF EN EL ESCENARIO</div>
+            </div>
+
+            <div class="band-highlight">
+                <h3>THE ATARIS</h3>
+                <p>Nostalgia pura con el ‘So Long Astoria’. Cantar ‘The Boys of Summer’ bajo el cielo de la CDMX fue una verdadera fantasía.</p>
+            </div>
+
+            <div class="img-punk">
+                <img src="the-ataris-live.jpg" alt="The Ataris">
+                <div class="img-info">FOTO 06: HUMILDAD Y AGRADECIMIENTO DESDE INDIANA</div>
+            </div>
+
+            <p>Finalmente llegó el turno de <strong>MXPX</strong>. Los headliners compartieron su felicidad de estar en México y el público respondió saltando y coreando cada himno de la icónica banda.</p>
+
+            <div class="img-punk">
+                <img src="mxpx-headliner.jpg" alt="MXPX en México">
+                <div class="img-info">FOTO 07: MXPX CERRANDO UNA EDICIÓN MEMORABLE</div>
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            <p>RESEÑA POR: NADJA FERNANDEZ</p>
+            <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">EL ROCK DE TODOS LOS DÍAS © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

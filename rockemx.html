@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | La Historia del Rock Hecho en México</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --rock-red: #b91c1c;
+            --vintage-chrome: #94a3b8;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%), 
+                        linear-gradient(90deg, rgba(185, 28, 28, 0.02), rgba(255, 255, 255, 0.01), rgba(148, 163, 184, 0.02));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--rock-red); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+        }
+
+        .post-header { margin-bottom: 60px; text-align: center; border-bottom: 1px solid #222; padding-bottom: 40px; }
+        .tag-cat { 
+            background: var(--rock-red); color: white; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            line-height: 0.85; margin-bottom: 20px; text-transform: uppercase;
+        }
+
+        .meta-info {
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--vintage-chrome);
+            margin-bottom: 40px;
+        }
+
+        /* IMÁGENES */
+        .img-block { margin: 40px 0; border: 1px solid #333; }
+        .img-block img { width: 100%; display: block; filter: grayscale(1) contrast(1.2); }
+        .img-caption { font-family: 'Space Mono'; font-size: 10px; color: var(--rock-red); padding: 10px; text-align: right; text-transform: uppercase; }
+
+        .post-content p { font-size: 1.15rem; color: #ccc; margin-bottom: 25px; text-align: justify; }
+
+        /* Estilo para los subtítulos */
+        .section-title {
+            font-family: 'Syne'; font-size: 2rem; color: var(--rock-red);
+            margin: 60px 0 25px; text-transform: uppercase;
+            border-left: 5px solid var(--rock-red); padding-left: 20px;
+        }
+
+        .highlight-box {
+            background: #111; padding: 35px; border: 1px dashed var(--vintage-chrome);
+            margin: 40px 0;
+        }
+        .highlight-box h4 { font-family: 'Syne'; color: #fff; margin-bottom: 15px; text-transform: uppercase; }
+
+        /* Sección de Reflexión Final */
+        .reflection-area {
+            background: white; color: black; padding: 45px;
+            margin-top: 80px; box-shadow: 15px 15px 0px var(--rock-red);
+        }
+        .reflection-area h2 { font-family: 'Syne'; font-size: 2.2rem; margin-bottom: 20px; color: black; }
+        .reflection-area p { color: #111; font-weight: 600; font-size: 1.1rem; border-bottom: 1px solid #ddd; padding-bottom: 15px; }
+
+        .author-sign {
+            margin-top: 60px; text-align: right; font-family: 'Space Mono';
+            color: var(--rock-red); border-top: 1px solid #222; padding-top: 20px;
+        }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; text-align: center;
+            font-family: 'Space Mono'; color: #444; font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3rem; }
+            .reflection-area { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">BITÁCORA HISTÓRICA</span>
+            <h1 class="post-title">ROCK HECHO EN MÉXICO:<br>LUCHA Y CONSTANCIA</h1>
+        </header>
+
+        <div class="meta-info">
+            <span>TEXTO: CRISS CORNELIO REYNA</span>
+            <span>TEMA: 50 AÑOS DE HISTORIA</span>
+        </div>
+
+        <div class="post-content">
+            <p>Tal vez el Vive Latino, los conciertos, las tocadas en bares, fiestas y ahora en estos tiempos de confinamiento en casa las sesiones en vivo en las diferentes plataformas, esto te puede parecer normal dentro de la escena musical en nuestro país, pero hace algunas décadas atrás esto no existía. Pocas eran las bandas y mucho menos había un apoyo para promocionar su música pero siempre hubo quien se las ingenio para abrir las puertas para que el Rock Mexicano saliera adelante. A continuación te mencionare algunas bandas que cargaron este gran peso:</p>
+
+            <div class="img-block">
+                <img src="historia-1.jpg" alt="Iniciadores Rock Mexicano">
+                <div class="img-caption">FOTO 01: LOS CIMIENTOS DE UNA IDENTIDAD PROPIA</div>
+            </div>
+
+            <h2 class="section-title">LOS INICIADORES</h2>
+            <p>Durante la década de los 50’s y 60’s, en el panorama del rock en México predominaban las versiones de temas estadounidenses, muchas de las cuales resultaron ser más exitosas que las canciones originales pero también empezaron a surgir en México varias bandas consideradas como los iniciadores del Rock en nuestro país, como los Los Teen Tops, Los Rebeldes del Rock, Peace & Love, La Fachada de Piedra, Los Locos del Ritmo, Love Army, La Revolución de Emiliano Zapata, El Ritual, Ciruela, Los Yaki, Tinta Blanca; Los Dug Dug’s, Toncho Pilatos, Bandido, Three Souls In My Mind, Chac Mool, Ritmo Peligroso, Size, Enigma, Fongus, Decibel (por mencionarles algunos). La mayoría tenían letras en ingles que poco a poco fueron cambiando al español. Algunas de estas bandotas formaron parte del legendario festival de Rock y Ruedas en Avandaro el cual se transmitió a través de un teléfono de radio. Cabe mencionar que el único sobreviviente es el TRI.</p>
+
+            <h2 class="section-title">LOS CONTINUADORES</h2>
+            <p>Para la década de los 80’s surgieron otros músicos y bandas, como Jaime Lopez, Cecilia Toussaint, Kenny y los Eléctricos, Botellita de Jerez, Rostros Ocultos, Newspaper, que prepararían el camino para que después del fatídico temblor de 1985 dentro de los escombros surgieran los Caifanes, Maldita Vecindad y los Hijos del Quinto Patio y poco mas tarde La Lupita, Santa Sabina, Café Tacuba, La Cuca, La Castañeda, Fobia, Los amantes de Lola, Azul Violeta, Tijuana No!, Coda, Radio Kaos, Kerigma, Víctimas del Doctor Cerebro, El Juguete Rabioso, entre otros, que consolidaron la presencia del Rock hecho en México y abrieron miles de espacios para la escena rockera actual.</p>
+
+            <div class="img-block">
+                <img src="historia-2.jpg" alt="Continuadores 80s 90s">
+                <div class="img-caption">FOTO 02: LA CONSOLIDACIÓN DEL ROCK EN TU IDIOMA</div>
+            </div>
+
+            <h2 class="section-title">LAS DISQUERAS</h2>
+            <p>Uno de los primeros sellos en editar Rock hecho en México fue Comrock, fundado por Juan Navarro y Ricardo Ochoa. Ellos hicieron realidad los discos de Kenny y los Eléctricos y Ritmo Peligroso, ademas de formar los inicios del movimiento "Rock en tu Idioma". El éxito que tuvo el Rock Nacional en los 80’s y 90’s se debió a que una disquera transnacional, La BMG, abrió un subsello llamado Culebra, este le dio chance a casi todas las bandas de la época apoyando y respetando sus conceptos musicales, aunque no con los recursos que los músicos hubieran querido. Discos culebra funciono hasta 1997 y su cierre surgió discos Manicomio, que dio espacio a bandas como Control Machete, Azul Violeta y Molotov.</p>
+
+            <h2 class="section-title">LOS CONCURSOS</h2>
+            <p>En 1987 BMG lanza la primer convocatoria para un concurso de Rock consolidando el movimiento "Rock en tu Idioma". De ahí surgieron Maldita Vecindad y los Hijos del Quinto Patio y Fobia. Mas tarde vendrían otros concursos como el "Metalaria" y la "La Batalla de las Bandas" que se realizaban año con año con una gran participación de bandas del D.F. y del interior de la república.</p>
+
+            <div class="img-block">
+                <img src="historia-3.jpg" alt="Festivales y Concursos">
+                <div class="img-caption">FOTO 03: PLATAFORMAS QUE CAMBIARON EL RUMBO</div>
+            </div>
+
+            <h2 class="section-title">TEATRO, CINE Y ROCK</h2>
+            <p>Con el auge del Rock también tuvieron gran empuje la danza, el teatro, el performance y las artes en general, pues muchos músicos se involucraron en estas disciplinas o colaboraban con artistas de otros géneros. Tal es el caso de Santa Sabina, que se formo después de que sus integrantes se conocieron al ser parte del elenco de la obra de teatro Vox Thanatos, montada en 1988; y de la incursión en cine de Saul Hernandez, Rita Guerrero, y Sax de la Maldita en la película Ciudad de Ciegos de 1990. Por su parte, Café Tacuba contó con la participación de Ofelia Medina en el vídeo de Maria de 1992.</p>
+
+            <div class="img-block">
+                <img src="historia-4.jpg" alt="Avandaro 50 años">
+                <div class="img-caption">FOTO 04: EL LEGADO DE AVÁNDARO SIGUE VIVO</div>
+            </div>
+
+            <h2 class="section-title">EL ROCK MEXICANO DESPUÉS DE AVÁNDARO</h2>
+            <p>Como es sabido este 11 de septiembre se celebra el aniversario 50 de lo que fue el "Festival de rock y ruedas de Avándaro", la importancia de este evento para la escena del rock nacional tuvo dos caras, la primera fue que este evento sirvió para mostrar la fuerza y la calidad de los músicos de la época, así como una identidad propia que se estaba construyendo en un momento en el que el genero a nivel mundial estaba surgiendo como todo un suceso, ya no así como una moda, era el momento cúspide que necesitaba el rock de aquellos días.</p>
+
+            <p>La otra cara fue la que los medios manipulados por un gobierno que se asustaba con algún movimiento que tuviera que ver con la juventud de la época, recordemos que aun estaba fresco el suceso de 1968 en Tlatelolco y 3 meses antes con La Matanza del Jueves de Corpus, al ver que podía salirseles de las manos pues empezó una prohibición del genero detuvo el crecimiento de este, ya que muchos se quedaron sin sus medios de trabajo y los pocos que resistieron estuvieron en la clandestinidad, casi por una década.</p>
+
+            <p>Después de navegar en la clandestinidad e ir saliendo de apoco de las profundidades, llego la década de los 80s, pudiéremos decir que fue la oportunidad del resurgimiento del genero en nuestro país con la apertura de las radios (la pantera y radio capital por nombrar algunas) que aunque le daban mas difusion a las bandas internacionales empezaban de a poco a mirar la escena nacional.</p>
+
+            <div class="img-block">
+                <img src="historia-5.jpg" alt="Escena actual">
+                <div class="img-caption">FOTO 05: LA NUEVA RESISTENCIA INDEPENDIENTE</div>
+            </div>
+
+            <section class="reflection-area">
+                <h2>¿HAN CAMBIADO LAS OPORTUNIDADES?</h2>
+                <p>Si han cambiado, podemos decir que cada vez hay mas foros donde poder tocar y mostrar tu trabajo, pero también hay otras que no, como las malas practicas a lo largo del tiempo.</p>
+                <p>Sabemos de antemano que como todo es un negocio y mas para los promotores y las disqueras, y para la industria de la música nacional el mirar hacia el rock es en un porcentaje bajo si lo comparamos con otros géneros que son mas masivos, a eso le podemos sumar la infinidad de malos tratos de algunos hacia las propuestas que van naciendo.</p>
+                <p>A veces no importa que el talento sea excelente si el camino esta lleno de mierda, desde tocar en lugares que no son los adecuados hasta ser robados por promotores despiadados que se aprovechan de las ganas que tiene el músico por mostrar su trabajo. Esto desmotiva y hace que mucho talento tenga que desistir.</p>
+                <p>A eso le podemos sumar que ha existido cierto rechazo del publico que consume rock solo internacional, y que no le dan la oportunidad de conocer los exponentes que hay en nuestro país, ya que le consideran de menor calidad aunado a que se dejan llevar solo por lo que dictan los medios tradicionales o las modas.</p>
+                <p style="border:none; margin-top:20px;">En estos últimos años podemos ver que el crecimiento de la escena nacional es grande asi como el talento en todos los géneros: Rock, Metal, Stoner, Sinfonico, Death, Indie, Punk, Rap... optar por ser independiente y apoyarse en los medios electrónicos ayuda mucho. 50 años después, nuestro rock sigue vivo.</p>
+            </section>
+
+            <div class="author-sign">
+                POR: CRISS CORNELIO REYNA
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            <p>EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            <p style="margin-top:10px;">PROHIBIDO OLVIDAR NUESTRA HISTORIA</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

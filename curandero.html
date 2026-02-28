@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Curandero x Ximbo: Baila en la Oscuridad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --mystic-gold: #fbbf24;
+            --healing-indigo: #4338ca;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES MÍSTICAS */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%), 
+                        linear-gradient(90deg, rgba(251, 191, 36, 0.02), rgba(255, 255, 255, 0.01), rgba(67, 56, 202, 0.02));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--mystic-gold); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; text-align: center; }
+        .tag-cat { 
+            background: var(--healing-indigo); color: white; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--mystic-gold); font-style: italic; }
+
+        /* IMÁGENES (2 TOTAL) */
+        .img-mystic { border: 1px solid #333; margin: 40px 0; background: #111; position: relative; overflow: hidden; }
+        .img-mystic img { width: 100%; display: block; filter: contrast(1.1) saturate(0.8); transition: 0.5s; }
+        .img-mystic:hover img { filter: saturate(1.1); transform: scale(1.02); }
+        .img-label { 
+            font-family: 'Space Mono'; font-size: 10px; color: var(--mystic-gold); 
+            text-align: right; padding: 10px; text-transform: uppercase;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--mystic-gold);
+        }
+
+        .post-content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        /* Bloque Ritual */
+        .ritual-box {
+            background: #111; padding: 40px; border-left: 2px solid var(--mystic-gold);
+            margin: 60px 0; position: relative;
+        }
+        .ritual-box p { font-style: italic; font-size: 1.4rem; color: #fff; line-height: 1.4; }
+
+        /* PERFILES ARTISTAS */
+        .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 60px; }
+        
+        .profile-card { background: #111; padding: 30px; border-top: 4px solid var(--mystic-gold); }
+        .profile-card.ximbo { border-top-color: var(--healing-indigo); }
+        
+        .profile-card h3 { font-family: 'Syne'; text-transform: uppercase; margin-bottom: 15px; font-size: 1.5rem; }
+        .profile-card p { font-size: 0.95rem; color: #aaa; margin-bottom: 20px; line-height: 1.5; }
+        
+        .insta-btn {
+            display: inline-block; font-family: 'Space Mono'; font-size: 10px;
+            color: var(--white); text-decoration: none; border-bottom: 1px solid var(--mystic-gold);
+            padding-bottom: 2px; text-transform: uppercase;
+        }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3.2rem; }
+            .profile-grid { grid-template-columns: 1fr; }
+            .meta-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">SINERGIA SONORA / RITUAL</span>
+            <h1 class="post-title">CURANDERO X XIMBO:<br><span>BAILA EN LA OSCURIDAD</span></h1>
+        </header>
+
+        <div class="meta-info">
+            <span>PRODUCCIÓN: HELIO MARTÍN DEL CAMPO</span>
+            <span>ESTUDIO: SNX STUDIO</span>
+            <span>ESTADO: PLENITUD</span>
+        </div>
+
+        <div class="post-content">
+            <div class="ritual-box">
+                <p>“Bailar en la Oscuridad es mirar el espejo afuera para poder ir adentro, abrazar nuestra sombra y flotar en la experiencia del todo mientras danzamos como danza el fuego.”</p>
+            </div>
+
+            <p>Hay equilibrio en las voces y flows de <strong>Curandero y Ximbo</strong>, quienes rapean con ligereza y precisión de flecha. El estribillo es hipnótico, coqueteando con un violín místico y una guitarra orgánica que nos conecta directamente con la tierra.</p>
+
+            <div class="img-mystic">
+                <img src="curandero-ximbo-cover.jpg" alt="Baila en la Oscuridad">
+                <div class="img-label">SINGLE: 4 MINUTOS DE DANZA EN PLENITUD</div>
+            </div>
+
+            <p>Este corte es un tremendo viaje bajo la producción de <strong>Helio Martín del Campo</strong> en SNX Studio. Una invitación a soltar energía para abrir espacio a que más luz fluya con nuestro torrente interno. ¡A bailar se ha dicho!</p>
+
+            <div class="img-mystic">
+                <img src="curandero-ximbo-promo.jpg" alt="Curandero y Ximbo">
+                <div class="img-info">SINERGIA: LIGEREZA Y PRECISIÓN DE FLECHA</div>
+            </div>
+
+            <div class="profile-grid">
+                <!-- CURANDERO -->
+                <div class="profile-card">
+                    <h3>CURANDERO</h3>
+                    <p>“Healing latin music”; música para vibrar bonito. Experimenta con ritmos latinos y afroantillanos para conectar con el movimiento interno.</p>
+                    <a href="https://www.instagram.com/yosoycurandero/" target="_blank" class="insta-btn">Seguir en Instagram</a>
+                </div>
+
+                <!-- XIMBO -->
+                <div class="profile-card ximbo">
+                    <h3>XIMBO</h3>
+                    <p>Femcee de CDMX con 3 décadas de trayectoria. Referente del rap consciente, fundadora de Rimas Femeninas y promotora del Hip hop independiente.</p>
+                    <a href="https://www.instagram.com/ximbomb/" target="_blank" class="insta-btn">Seguir en Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            <p>EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">LA MÚSICA SANA, EL RITMO TRANSFORMA</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

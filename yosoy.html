@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Zënn: Yo Soy - El Despertar del Ser</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --zenn-gold: #d97706; /* Dorado Espiritual */
+            --slate: #475569;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%), 
+                        linear-gradient(90deg, rgba(217, 119, 6, 0.02), rgba(255, 255, 255, 0.01), rgba(71, 85, 105, 0.02));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--zenn-gold); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; text-align: left; }
+        .tag-cat { 
+            background: var(--zenn-gold); color: black; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--zenn-gold); font-style: italic; }
+
+        /* IMÁGEN (1 ÚNICA) */
+        .img-zenn { border: 1px solid #222; margin: 40px 0; background: #111; position: relative; overflow: hidden; }
+        .img-zenn img { width: 100%; display: block; filter: grayscale(0.2) contrast(1.1); transition: 0.5s; }
+        .img-zenn:hover img { filter: grayscale(0) contrast(1.2); }
+        .img-label { 
+            font-family: 'Space Mono'; font-size: 10px; color: var(--zenn-gold); 
+            text-align: right; padding: 10px; text-transform: uppercase;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--zenn-gold);
+        }
+
+        .post-content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        /* Bloque Identidad */
+        .identity-box {
+            background: #111; padding: 40px; border-left: 2px solid var(--zenn-gold);
+            margin: 60px 0;
+        }
+        .identity-box h3 { font-family: 'Syne'; color: #fff; margin-bottom: 15px; text-transform: uppercase; }
+
+        /* Bloque Espiritual / Yo Soy */
+        .spiritual-section {
+            background: white; color: black; padding: 45px;
+            margin-top: 80px; box-shadow: 15px 15px 0px var(--zenn-gold);
+        }
+        .spiritual-section h2 { font-family: 'Syne'; font-size: 2.5rem; margin-bottom: 20px; color: black; line-height: 1; }
+        .spiritual-section p { font-family: 'Space Mono'; font-weight: 700; font-size: 1.1rem; color: #111; }
+
+        /* VIDEO CTA */
+        .video-cta {
+            display: block; background: #ff0000; color: white;
+            text-align: center; padding: 20px; margin: 40px 0;
+            text-decoration: none; font-family: 'Syne'; font-weight: 900;
+            text-transform: uppercase; letter-spacing: 2px;
+            box-shadow: 0px 5px 20px rgba(255, 0, 0, 0.2);
+        }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3.5rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+            .spiritual-section h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">METAL ALTERNATIVO / ESTRENO</span>
+            <h1 class="post-title">ZËNN:<br><span>YO SOY</span></h1>
+        </header>
+
+        <div class="meta-info">
+            <span>BANDA: ZËNN</span>
+            <span>VOZ: DAKMA VID</span>
+            <span>CONCEPTO: AFIRMACIÓN DEL SER</span>
+        </div>
+
+        <div class="post-content">
+            <p>Zënn regresa con <strong>“Yo Soy”</strong>, un sencillo que reafirma su identidad dentro del metal alternativo con una ejecución precisa y una producción que muestra una madurez musical absoluta. La intensidad y la emoción son sus principales armas, combinando riffs potentes con contrastes melódicos impactantes.</p>
+
+            <div class="img-zenn">
+                <img src="zenn-yo-soy-promo.jpg" alt="Zenn Yo Soy">
+                <div class="img-label">FOTO: IDENTIDAD MÁS DEFINIDA QUE NUNCA</div>
+            </div>
+
+            <p>Las guitarras crean una atmósfera agresiva pero dinámica, dando paso a un juego vocal donde <strong>Dakma Vid</strong> brilla alternando entre guturales imponentes y líneas melódicas trabajadas. La base rítmica de bajo y batería impulsa el tema con una energía constante que no da tregua.</p>
+
+            <div class="identity-box">
+                <h3>CINEMATOGRAFÍA Y MOVIMIENTO</h3>
+                <p>El videoclip destaca por secuencias de <strong>parkour</strong> que aportan una sensación de libertad, en sintonía con la agresividad de la música. Esta propuesta visual evidencia su crecimiento artístico y su ambición por ofrecer una experiencia completa.</p>
+            </div>
+
+            <section class="spiritual-section">
+                <h2>EL CONCEPTO: YO SOY</h2>
+                <p>“Es una afirmación del ser interior, al reconocimiento de la identidad más allá de las etiquetas y roles externos. Liberarse de las limitaciones del ego, de los miedos adoptados y las ideas impuestas por la cultura o la sociedad.”</p>
+                <p style="margin-top:20px; border:none;">“Reconocer que no somos lo que pensamos o lo que otros creen de nosotros. De niños es más fácil conectar con nuestro ser verdadero; eso es lo que quisimos reflejar en este vídeo”.</p>
+            </section>
+
+            <a href="LINK_YOUTUBE_ZENN" class="video-cta" target="_blank">VER VIDEOCLIP OFICIAL</a>
+        </div>
+
+        <footer class="post-footer">
+            <p>EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">LA IDENTIDAD MÁS ALLÁ DE LAS ETIQUETAS</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

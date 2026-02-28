@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Kartis Qatar: Insomnia y el Rock Tumbado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #030303;
+            --acid-green: #22c55e;
+            --neon-purple: #8b5cf6;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES EXPERIMENTAL */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.4) 50%), 
+                        linear-gradient(90deg, rgba(34, 197, 94, 0.02), rgba(255, 255, 255, 0.01), rgba(139, 92, 246, 0.02));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--acid-green); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px var(--neon-purple);
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; text-align: left; }
+        .tag-cat { 
+            background: var(--neon-purple); color: white; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--acid-green); font-style: italic; }
+
+        /* IMÁGENES (3 TOTAL) */
+        .img-kartis { border: 1px solid #222; margin: 40px 0; background: #111; position: relative; overflow: hidden; }
+        .img-kartis img { width: 100%; display: block; filter: contrast(1.2) saturate(1.2); transition: 0.5s; }
+        .img-kartis:hover img { filter: hue-rotate(45deg); }
+        .img-info { 
+            font-family: 'Space Mono'; font-size: 10px; color: var(--acid-green); 
+            text-align: right; padding: 10px; text-transform: uppercase;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--acid-green);
+        }
+
+        .post-content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        /* MANIFIESTO BOX */
+        .manifesto-box {
+            background: white; color: black; padding: 40px; margin: 60px 0;
+            border-right: 15px solid var(--acid-green);
+            box-shadow: 15px 15px 0px var(--neon-purple);
+        }
+        .manifesto-box h3 { font-family: 'Syne'; font-size: 2rem; text-transform: uppercase; margin-bottom: 15px; line-height: 1; }
+        .manifesto-box p { font-family: 'Space Mono'; font-weight: 700; color: #000; font-size: 1rem; margin-bottom: 0; }
+
+        /* SOCIAL LINKS */
+        .social-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 40px 0;
+        }
+        .social-btn {
+            background: #111; color: var(--acid-green); border: 1px solid var(--acid-green);
+            padding: 15px; text-align: center; text-decoration: none; font-family: 'Space Mono';
+            font-size: 12px; text-transform: uppercase; transition: 0.3s;
+        }
+        .social-btn:hover { background: var(--acid-green); color: black; }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3.5rem; }
+            .social-grid { grid-template-columns: 1fr; }
+            .meta-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">NUEVA ESCENA LATINA / ROCK TUMBADO</span>
+            <h1 class="post-title">KARTIS QATAR:<br><span>INSOMNIA</span></h1>
+        </header>
+
+        <div class="img-kartis">
+            <img src="kartis-qatar-insomnia.jpg" alt="Kartis Qatar Insomnia">
+            <div class="img-info">FOTO 01: EL VIAJE SENSORIAL DE LA METAMORFOSIS</div>
+        </div>
+
+        <div class="meta-info">
+            <span>PRODUCCIÓN: RODRIGO ORTEGA / GERRY ROSADO</span>
+            <span>GÉNERO: ROCK TUMBADO / EXPERIMENTAL</span>
+            <span>ZONA: CDMX</span>
+        </div>
+
+        <div class="post-content">
+            <p>El proyecto capitalino <strong>Kartis Qatar</strong> está listo para cautivar con su más reciente sencillo, “Insomnia”. Este track, parte de su segundo álbum de larga duración, explora la dualidad entre la vigilia, los sueños y los excesos sociales.</p>
+
+            <p>Inspirado por el regional mexicano y fusionado con electrónica, “Insomnia” lidera la experimentación sonora con influencias que van desde los corridos tumbados hasta el reggae y el dembow, desafiando los límites del rock convencional.</p>
+
+            <div class="img-kartis">
+                <img src="kartis-qatar-banda.jpg" alt="Kartis Qatar Banda">
+                <div class="img-info">FOTO 02: REINVENCIÓN CONSTANTE Y EVOLUCIÓN VISUAL</div>
+            </div>
+
+            <div class="manifesto-box">
+                <h3>ROMPER EL ROCK</h3>
+                <p>“Somos un proyecto que rompe con el rock y sus esquemas de chamarritas de piel y botas. No buscamos pretender, buscamos una identidad regional latina que se abra paso por el mundo”.</p>
+            </div>
+
+            <p>Kartis Qatar se proyecta en una continua evolución. Para ellos, crear algo propositivo requiere absorber música de todos los géneros, creyendo firmemente en la identidad regional que solo otorga el territorio mexicano y latino.</p>
+
+            <div class="img-kartis">
+                <img src="kartis-qatar-live.jpg" alt="Kartis Qatar en vivo">
+                <div class="img-info">FOTO 03: PODER EN VIVO Y CONEXIÓN GENERACIONAL</div>
+            </div>
+
+            <p>La banda continuará lanzando sencillos a lo largo del año, detallando un sonido con pinceladas de hip hop y electrónica que promete un nuevo panorama para tus oídos. Sigue su pista en todas sus redes oficiales.</p>
+
+            <div class="social-grid">
+                <a href="https://www.facebook.com/KartisQatar" class="social-btn" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/kartisqatar" class="social-btn" target="_blank">Instagram</a>
+                <a href="tiktok.com/@kartisqatar" class="social-btn" target="_blank">TikTok</a>
+                <a href="https://www.kartisqatar.com" class="social-btn" target="_blank">Web Oficial</a>
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            <p>EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">IDENTIDAD, TERRITORIO Y ROCK SIN ESQUEMAS</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>
