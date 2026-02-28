@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Romance Øn Line: La Cata Alexander</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --romance-pink: #ec4899;
+            --online-cyan: #06b6d4;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* EFECTO SCANLINES CYBER */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                        linear-gradient(90deg, rgba(236, 72, 153, 0.03), rgba(6, 182, 212, 0.03));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--romance-pink); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px var(--online-cyan);
+        }
+
+        /* CABECERA */
+        .post-header { margin-bottom: 60px; text-align: center; }
+        .tag-cat { 
+            background: var(--online-cyan); color: black; padding: 5px 15px; 
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px; margin-bottom: 20px; display: inline-block;
+        }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--romance-pink); font-style: italic; }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--online-cyan);
+        }
+
+        .post-content p {
+            font-size: 1.25rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        .post-content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--romance-pink); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* Perfil de la Artista */
+        .profile-box {
+            background: #111; padding: 40px; border-left: 4px solid var(--romance-pink);
+            margin: 60px 0; border-right: 4px solid var(--online-cyan);
+        }
+        .profile-box h3 { font-family: 'Syne'; color: #fff; margin-bottom: 15px; text-transform: uppercase; }
+
+        /* GALERÍA DE 12 IMÁGENES */
+        .gallery-mosaic {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 60px 0;
+        }
+
+        .gallery-item {
+            background: #111;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            border: 1px solid #222;
+        }
+
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            filter: grayscale(0.5) contrast(1.1);
+            transition: 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            filter: grayscale(0) scale(1.05);
+        }
+
+        /* Status Box */
+        .status-box {
+            background: white; color: black; padding: 30px;
+            text-align: center; margin: 40px 0;
+            box-shadow: 10px 10px 0px var(--online-cyan);
+        }
+        .status-box h2 { font-family: 'Syne'; font-size: 1.8rem; text-transform: uppercase; }
+
+        .post-footer {
+            margin-top: 100px; padding: 40px 0; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .post-title { font-size: 3.5rem; }
+            .gallery-mosaic { grid-template-columns: 1fr 1fr; }
+            .meta-info { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-cat">TEATRO MUSICAL / ESTRENO</span>
+            <h1 class="post-title">ROMANCE<span> ØN LINE</span></h1>
+        </header>
+
+        <div class="meta-info">
+            <span>ARTISTA: LA CATA ALEXANDER</span>
+            <span>RECINTO: HUERTO ROMA, CDMX</span>
+            <span>TEMÁTICA: ERA DIGITAL</span>
+        </div>
+
+        <div class="post-content">
+            <p>Asistimos al estreno de la obra musical <strong>“Romance Øn Line”</strong> en el Huerto Roma, un lugar que resultó ser el escenario perfecto. Rodeados de un ambiente cálido e íntimo, disfrutamos de un espectáculo que no solo entretiene, sino que invita a la reflexión profunda.</p>
+
+            <div class="status-box">
+                <h2>STATUS: CONECTADOS A LA FICCIÓN</h2>
+            </div>
+
+            <p>La velada, llena de encanto, nos invitó a cuestionar aspectos de nuestra vida contemporánea, especialmente el exceso en el uso de la tecnología digital y cómo las interacciones moldean nuestras experiencias humanas hoy en día.</p>
+
+            <!-- GALERÍA DE 12 IMÁGENES -->
+            <div class="gallery-mosaic">
+                <div class="gallery-item"><img src="cata-1.jpg" alt="La Cata Alexander 1"></div>
+                <div class="gallery-item"><img src="cata-2.jpg" alt="La Cata Alexander 2"></div>
+                <div class="gallery-item"><img src="cata-3.jpg" alt="La Cata Alexander 3"></div>
+                <div class="gallery-item"><img src="cata-4.jpg" alt="La Cata Alexander 4"></div>
+                <div class="gallery-item"><img src="cata-5.jpg" alt="La Cata Alexander 5"></div>
+                <div class="gallery-item"><img src="cata-6.jpg" alt="La Cata Alexander 6"></div>
+                <div class="gallery-item"><img src="cata-7.jpg" alt="La Cata Alexander 7"></div>
+                <div class="gallery-item"><img src="cata-8.jpg" alt="La Cata Alexander 8"></div>
+                <div class="gallery-item"><img src="cata-9.jpg" alt="La Cata Alexander 9"></div>
+                <div class="gallery-item"><img src="cata-10.jpg" alt="La Cata Alexander 10"></div>
+                <div class="gallery-item"><img src="cata-11.jpg" alt="La Cata Alexander 11"></div>
+                <div class="gallery-item"><img src="cata-12.jpg" alt="La Cata Alexander 12"></div>
+            </div>
+
+            <div class="profile-box">
+                <h3>LA CATA ALEXANDER: SOCIOLOGÍA Y POP</h3>
+                <p>Catalina Alexander combina la música pop con elementos teatrales y una aguda conciencia social. Su formación en Sociología le permite capturar la esencia de la era digital, fusionando jazz, blues y rock en una propuesta única junto a El Trío Secreto.</p>
+            </div>
+
+            <p>Mientras prepara su próximo EP, La Cata sigue siendo una voz resonante en la conversación sobre la cultura y el arte en la era digital. Una propuesta necesaria para desconectarse de la red y reconectarse con el arte.</p>
+        </div>
+
+        <footer class="post-footer">
+            <p>POR: <strong>CARLOS ABS</strong></p>
+            <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">EL ROCK DE TODOS LOS DÍAS © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>
