@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edición IV (2025) - Toy Rockeando</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --bg: #0a0a0a; --fest-yellow: #facc15; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: #eee; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        
+        body::before {
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            opacity: 0.1; pointer-events: none; z-index: 999;
+        }
+
+        /* NAVEGACIÓN SUPERIOR */
+        .back-nav {
+            padding: 20px 40px; background: #000; border-bottom: 1px solid #333;
+            display: flex; align-items: center; position: sticky; top: 0; z-index: 1000;
+        }
+        .btn-back {
+            color: var(--fest-yellow); text-decoration: none; font-family: 'Space Mono'; 
+            font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 10px;
+            transition: 0.3s;
+        }
+        .btn-back:hover { color: white; transform: translateX(-5px); }
+
+        /* HEADER DE EDICIÓN */
+        .ed-header { text-align: center; padding: 60px 20px 40px; }
+        .ed-header h1 { font-family: 'Syne'; font-size: clamp(4rem, 8vw, 8rem); color: var(--fest-yellow); line-height: 0.8; }
+        .ed-header p { font-family: 'Space Mono'; font-size: 1.2rem; color: #888; margin-top: 20px; text-transform: uppercase; }
+
+        .content-container { max-width: 1400px; margin: 0 auto; padding: 0 20px 60px; }
+
+        /* CARTEL */
+        .poster-container {
+            max-width: 600px; margin: 0 auto 60px;
+            border: 5px solid #222; padding: 15px; background: #000;
+            box-shadow: 15px 15px 0px rgba(250, 204, 21, 0.1);
+        }
+        .poster-container img { width: 100%; height: auto; display: block; filter: grayscale(0.1); transition: 0.4s;}
+        .poster-container:hover img { filter: grayscale(0); }
+
+        /* INFO (BANDAS Y DONACIÓN) */
+        .info-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 40px; 
+            margin-bottom: 80px; padding-bottom: 60px; border-bottom: 2px dashed #333;
+        }
+        .info-box { background: #111; padding: 40px; border-left: 4px solid var(--fest-yellow); }
+        .info-box h3 { font-family: 'Syne'; font-size: 2rem; color: white; margin-bottom: 20px; text-transform: uppercase; }
+        .info-box p { font-family: 'Inter'; font-size: 1.1rem; color: #bbb; line-height: 1.6; }
+        
+        .lineup-list {
+            list-style-type: square; padding-left: 20px; margin-top: 20px; color: var(--fest-yellow);
+            font-family: 'Space Mono', monospace; font-size: 1.2rem; font-weight: 700;
+        }
+        .lineup-list li { margin-bottom: 12px; }
+        .lineup-list li span { color: #fff; text-transform: uppercase; } 
+
+        .section-title { font-family: 'Syne'; font-size: 3rem; color: white; margin-bottom: 40px; border-left: 5px solid var(--fest-yellow); padding-left: 20px; text-transform: uppercase; }
+
+        /* GALERÍA DE 6 FOTOS UNIFORMES */
+        .photo-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            grid-auto-rows: 350px; 
+            gap: 20px; margin-bottom: 100px; 
+        }
+        
+        .photo-item { 
+            position: relative; overflow: hidden; 
+            background: #000; border: 2px solid #222; 
+            transition: all 0.4s ease;
+        }
+        
+        .photo-item:hover {
+            border-color: var(--fest-yellow);
+            box-shadow: 0 10px 30px rgba(250, 204, 21, 0.2);
+            z-index: 10;
+        }
+
+        .photo-item img { 
+            width: 100%; height: 100%; 
+            object-fit: cover; 
+            object-position: center; 
+            filter: grayscale(1); 
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.6s ease; 
+            cursor: pointer; display: block;
+        }
+        
+        .photo-item:hover img { 
+            filter: grayscale(0); 
+            transform: scale(1.2); 
+        }
+
+        /* VIDEOS */
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 2px solid #333; background: black; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+        .ed-footer { background: var(--fest-yellow); padding: 40px; text-align: center; color: black; font-family: 'Space Mono'; font-weight: 700; margin-top: 50px;}
+
+        /* DISEÑO RESPONSIVO */
+        @media (max-width: 900px) {
+            .photo-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .info-grid { grid-template-columns: 1fr; gap: 20px; }
+            .section-title { font-size: 2rem; }
+            .poster-container { padding: 5px; }
+        }
+        @media (max-width: 600px) {
+            .photo-grid { grid-template-columns: 1fr; grid-auto-rows: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BOTÓN DE REGRESO -->
+    <nav class="back-nav">
+        <a href="toy-rockeando.html" class="btn-back">&larr; VOLVER AL MANIFIESTO</a>
+    </nav>
+
+    <!-- HEADER EDICIÓN IV -->
+    <header class="ed-header">
+        <h1>EDICIÓN IV</h1>
+        <p>10 Enero 2025 // Dobermann Centro Histórico, CDMX // 17:20 hrs</p>
+    </header>
+
+    <main class="content-container">
+
+        <!-- CARTEL OFICIAL -->
+        <div class="poster-container">
+            <img src="cartel-iv.jpg" alt="Cartel Oficial Toy Rockeando Edición IV - 2025">
+        </div>
+
+        <!-- LINEUP Y CAUSA -->
+        <div class="info-grid">
+            <div class="info-box">
+                <h3>// EL LINEUP</h3>
+                <p>Música independiente y solidaridad en un solo escenario. El ruido estuvo a cargo de:</p>
+                <ul class="lineup-list">
+                    <li><span style="color: var(--fest-yellow);">DJ Jessy Ruiz</span> <span style="font-size: 0.9rem; color: #888;">(Invitada Especial)</span></li>
+                    <li><span>Inoxia</span></li>
+                    <li><span>Metazoa</span></li>
+                    <li><span>Sala De Espera</span></li>
+                    <li><span>Silmerillion</span></li>
+                </ul>
+            </div>
+            
+            <div class="info-box">
+                <h3>// LA CAUSA</h3>
+                <p>En estos días de fiesta, nuestra misión fue clara: llenar de alegría a los niños. Todo lo recolectado fue entregado con el corazón a:</p>
+                <p style="color: var(--fest-yellow); font-weight: 900; font-size: 1.3rem; margin-top: 15px; font-family: 'Space Mono'; text-transform: uppercase;">
+                    "Ministerio Vive A.C."
+                </p>
+            </div>
+        </div>
+
+        <!-- 6 FOTOS TOTALMENTE UNIFORMES -->
+        <h2 class="section-title">LA ACCIÓN (GALERÍA)</h2>
+        <div class="photo-grid">
+            <div class="photo-item"><img src="tr4.jpg" loading="lazy" alt="Concierto Toy Rockeando 2025"></div>
+            <div class="photo-item"><img src="tr41.jpg" loading="lazy" alt="Banda en vivo Dobermann"></div>
+            <div class="photo-item"><img src="tr42.jpg" loading="lazy" alt="Público donando juguetes"></div>
+            <div class="photo-item"><img src="foto4-ed4.jpg" loading="lazy" alt="Momento del evento"></div>
+            <div class="photo-item"><img src="foto5-ed4.jpg" loading="lazy" alt="Juguetes recolectados"></div>
+            <div class="photo-item"><img src="foto6-ed4.jpg" loading="lazy" alt="Cierre del festival"></div>
+        </div>
+        
+        <!-- VIDEOS -->
+        <h2 class="section-title">EL RUIDO (VIDEOS)</h2>
+        <div class="video-grid">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/TU_ID_AQUI" allowfullscreen></iframe>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="ed-footer">
+        TOY ROCKEANDO © EDICIÓN IV - 2025
+    </footer>
+
+</body>
+</html>
