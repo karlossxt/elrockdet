@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Y REDES SOCIALES (ESTO ES PARA QUE SE VEA BIEN AL COMPARTIR) -->
+    <!-- SEO Y REDES SOCIALES -->
     <title>ESCENA NACIONAL | Arusal: Con las mismas armas</title>
-    <meta name="description" content="Arusal lanza su nuevo single 'Con las mismas armas'. Una radiografía de la ansiedad moderna.">
+    <meta name="description" content="Arusal lanza 'Con las mismas armas'. Una radiografía de la ansiedad moderna desde la CDMX.">
     
-    <!-- Configuración para Facebook, WhatsApp, etc. -->
+    <!-- Configuración para Redes Sociales -->
     <meta property="og:title" content="ARUSAL - Con las mismas armas [EL ROCK DE TODOS LOS DÍAS]">
-    <meta property="og:description" content="Escucha lo nuevo de la escena nacional. Un riff de bajo y guitarras con distorsión.">
-    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/CON LAS MISMAS ARMAS.png"> <!-- CAMBIA ESTO POR EL LINK REAL DE TU IMAGEN -->
+    <meta property="og:description" content="Rock Alternativo desde la CDMX. Influencias Emo de los 2000.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/CON LAS MISMAS ARMAS.png">
     <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/arusal.html">
     <meta property="og:type" content="article">
 
@@ -96,26 +96,36 @@
         .secondary-img { margin: 30px 0; border: 1px solid #333; }
         .secondary-img img { width: 100%; display: block; filter: grayscale(1); }
 
-        /* COMPARTIR */
-        .share-container {
-            margin: 40px 0; padding: 20px;
-            border: 1px dashed var(--red);
+        /* SECCIÓN SOBRE LA BANDA */
+        .bio-section {
+            background: #111; padding: 30px; margin: 50px 0;
+            border: 1px solid #222; position: relative;
         }
-        .share-title { font-family: 'Syne'; font-size: 14px; margin-bottom: 15px; color: var(--red); }
-        .share-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
-        .share-btn {
-            background: #222; color: white; border: none; padding: 10px 15px;
-            font-family: 'Space Mono'; font-size: 11px; cursor: pointer; text-decoration: none;
-            transition: 0.3s; font-weight: 700;
-        }
-        .share-btn:hover { background: var(--red); color: white; }
+        .bio-section h2 { font-family: 'Syne'; color: white; margin-bottom: 20px; font-size: 1.5rem; text-transform: uppercase;}
+        .bio-section p { font-size: 1rem; color: #aaa; line-height: 1.5; font-family: 'Space Mono'; }
+        .bio-tag { background: var(--red); color: white; padding: 5px 10px; font-size: 10px; position: absolute; top: -10px; left: 20px; font-weight: 900; }
 
+        /* MEMORIA DE ARCHIVO */
         .memory-box {
             background: #111; border-left: 10px solid var(--red);
             padding: 25px; margin: 40px 0;
         }
-        .memory-box h3 { font-family: 'Syne'; color: var(--red); margin-bottom: 10px; text-transform: uppercase; }
-        .memory-box p { font-size: 0.9rem; font-style: italic; color: #888; }
+        .memory-box h3 { font-family: 'Syne'; color: var(--red); margin-bottom: 10px; text-transform: uppercase; font-size: 1.2rem; }
+        .memory-box p { font-size: 0.95rem; font-style: italic; color: #888; line-height: 1.4; font-family: 'Space Mono'; }
+
+        /* COMPARTIR */
+        .share-container {
+            margin: 40px 0; padding: 20px;
+            border-top: 1px solid #333;
+        }
+        .share-title { font-family: 'Syne'; font-size: 12px; margin-bottom: 15px; color: var(--red); }
+        .share-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+        .share-btn {
+            background: #1a1a1a; color: white; border: none; padding: 10px 15px;
+            font-family: 'Space Mono'; font-size: 10px; cursor: pointer; text-decoration: none;
+            transition: 0.3s; font-weight: 700; border: 1px solid #333;
+        }
+        .share-btn:hover { background: white; color: black; }
 
         .sidebar-playlist {
             background: #111; border: 4px solid var(--red);
@@ -125,13 +135,10 @@
         .track-item { display: flex; gap: 10px; margin-bottom: 12px; font-size: 11px; align-items: center; border-bottom: 1px solid #222; padding-bottom: 5px; }
         .track-num { color: var(--red); font-weight: 900; }
 
-        /* RESPONSIVE MÓVIL */
         @media (max-width: 900px) {
             .main-layout { grid-template-columns: 1fr; }
             .sidebar-playlist { position: static; margin-top: 40px; }
-            .btn-cerrar { top: 10px; right: 10px; padding: 8px 12px; font-size: 10px; }
             .post-title { font-size: 2.8rem; }
-            .content p { font-size: 1.1rem; }
         }
     </style>
 </head>
@@ -155,7 +162,7 @@
             
             <div class="main-content">
                 <div class="meta-bar">
-                    <span>ARCHIVO: BOLETÍN DE PRENSA</span>
+                    <span>ARCHIVO: LANZAMIENTO</span>
                     <span>|</span>
                     <span>05 MARZO, 2026</span>
                 </div>
@@ -172,19 +179,29 @@
                     <p>Con un riff de bajo punzante y guitarras saturadas de distorsión; una batería contundente y una voz desesperada, Arusal apuesta por un mensaje directo y crudo. La secuencia interminable de pensar, actuar y fallar de la misma manera una y otra vez es el eje central de este lanzamiento.</p>
                 </article>
 
-                <!-- BOTONES DE COMPARTIR -->
-                <div class="share-container">
-                    <div class="share-title">DIFUNDE EL RUIDO / COMPARTIR:</div>
-                    <div class="share-buttons">
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/arusal.html" target="_blank" class="share-btn">FACEBOOK</a>
-                        <a href="https://twitter.com/intent/tweet?text=Escucha lo nuevo de Arusal en El Rock de Todos los Días&url=https://elrockdetodoslosdias.com.mx/arusal.html" target="_blank" class="share-btn">X (TWITTER)</a>
-                        <a href="https://api.whatsapp.com/send?text=Mira esta nota de Arusal en El Rock de Todos los Días: https://elrockdetodoslosdias.com.mx/arusal.html" target="_blank" class="share-btn">WHATSAPP</a>
-                    </div>
+                <!-- BIOGRAFÍA DE LA BANDA -->
+                <div class="bio-section">
+                    <div class="bio-tag">EXPEDIENTE DE BANDA</div>
+                    <h2>EL ADN DE ARUSAL</h2>
+                    <p>Originarios de la CDMX, Arusal es una propuesta de rock alternativo que debutó en plataformas en noviembre de 2022 con "Advertencia Sobre Nada".</p>
+                    <br>
+                    <p>Con influencias marcadas del rock alternativo y el emo de los 2000 —citando a referentes como Paramore y My Chemical Romance—, su identidad sonora se basa en el contraste: pasajes melódicos sutiles que desembocan en una instrumentación explosiva y catártica.</p>
                 </div>
 
+                <!-- MEMORIA DE ARCHIVO -->
                 <div class="memory-box">
                     <h3>MEMORIA DE ARCHIVO</h3>
                     <p>"La música de Arusal se siente como un bucle del que quieres salir. Es ruido, es catarsis y es la necesidad de romper el espejo para dejar de vernos fallar."</p>
+                </div>
+
+                <!-- BOTONES COMPARTIR -->
+                <div class="share-container">
+                    <div class="share-title">COMPARTIR ARCHIVO:</div>
+                    <div class="share-buttons">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/arusal.html" target="_blank" class="share-btn">FB</a>
+                        <a href="https://twitter.com/intent/tweet?text=Arusal: Con las mismas armas&url=https://elrockdetodoslosdias.com.mx/arusal.html" target="_blank" class="share-btn">X</a>
+                        <a href="https://api.whatsapp.com/send?text=Mira esta nota de Arusal: https://elrockdetodoslosdias.com.mx/arusal.html" target="_blank" class="share-btn">WA</a>
+                    </div>
                 </div>
             </div>
 
@@ -193,21 +210,20 @@
                     <h4>FICHA<br>TÉCNICA</h4>
                 </div>
                 <div class="track-list">
-                    <div class="track-item"><span class="track-num">01</span><span>CON LAS MISMAS ARMAS (SINGLE)</span></div>
-                    <div class="track-item"><span class="track-num">02</span><span>GENERO: ROCK ALTERNATIVO</span></div>
-                    <div class="track-item"><span class="track-num">03</span><span>FECHA: 05.03.2026</span></div>
-                    <div class="track-item"><span class="track-num">04</span><span>ESTADO: MÉXICO</span></div>
+                    <div class="track-item"><span class="track-num">SINGLE</span><span>CON LAS MISMAS ARMAS</span></div>
+                    <div class="track-item"><span class="track-num">ORIGEN</span><span>CIUDAD DE MÉXICO</span></div>
+                    <div class="track-item"><span class="track-num">DEBUT</span><span>NOV, 2022</span></div>
+                    <div class="track-item"><span class="track-num">GENERO</span><span>ALT-ROCK / EMO</span></div>
                 </div>
                 
-                <!-- BOTÓN ONERPM ACTUALIZADO -->
-                <button style="width:100%; background:white; border:none; padding:15px; margin-top:20px; font-family:'Space Mono'; font-weight:900; cursor:pointer; color: black; box-shadow: 4px 4px 0px var(--red);" onclick="window.open('https://onerpm.link/119224271248')">ESCUCHAR AQUÍ</button>
+                <!-- BOTÓN ONERPM -->
+                <button style="width:100%; background:white; border:none; padding:15px; margin-top:20px; font-family:'Space Mono'; font-weight:900; cursor:pointer; color: black; box-shadow: 4px 4px 0px var(--red);" onclick="window.open('https://onerpm.link/119224271248')">ESCUCHA AQUÍ</button>
                 
-                <div style="margin-top: 25px; font-size: 10px; color: #666; text-align: center;">CONTACTO: arusalmx@gmail.com</div>
+                <div style="margin-top: 25px; font-size: 9px; color: #666; text-align: center;">CONTACTO: arusalmx@gmail.com</div>
             </aside>
         </div>
 
     </div>
 
 </body>
-
 </html>
