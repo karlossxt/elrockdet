@@ -399,39 +399,27 @@
             animation: scrollMarquee 30s linear infinite; 
         }
 
-        /.marquee-track {
-    display: flex;
-    align-items: center;
-    gap: 40px; /* Espacio entre logos */
-}
+/* BARRA DE ALIADOS */
+.aliados-strip { width: 100%; background-color: #dc2626; padding: 30px 0; margin-top: 60px; overflow: hidden; position: relative; }
+.aliados-header { font-family: 'Space Mono'; font-size: 10px; color: #000; text-transform: uppercase; letter-spacing: 4px; padding-left: 40px; margin-bottom: 25px; font-weight: 700; }
 
-.partner-logo {
-    display: flex;
-    justify-content: center; /* Centrado horizontal */
-    align-items: center;     /* Centrado vertical */
-    width: 150px;            /* Ancho fijo para todos */
-    height: 80px;            /* Altura fija para todos */
-    background: #111;        /* Fondo sutil */
-    border: 1px solid #333;
-    padding: 10px;
-    transition: 0.3s;
-}
+.marquee-wrapper { width: 100%; overflow: hidden; display: flex; }
+.marquee-track { display: flex; align-items: center; gap: 40px; animation: scrollMarquee 30s linear infinite; }
 
-.partner-logo img {
-    max-width: 100%;         /* Nunca se saldrá de su caja */
-    max-height: 100%;        /* Nunca se saldrá de su caja */
-    object-fit: contain;     /* Mantiene la proporción original sin estirarse */
-    filter: grayscale(1) brightness(0.8);
-    transition: 0.3s;
+.partner-logo { 
+    display: flex; justify-content: center; align-items: center; 
+    width: 150px; height: 80px; background: #000; 
+    border: 1px solid #000000; padding: 10px; flex-shrink: 0;
 }
-
-.partner-logo:hover {
-    border-color: var(--red); /* O tu color de acento */
-    background: #1a1a1a;
+.partner-logo img { 
+    max-width: 100%; max-height: 100%; object-fit: contain; 
+    filter: grayscale(1) brightness(0.8); transition: 0.3s; 
 }
+.partner-logo:hover img { filter: grayscale(0) brightness(1.2); }
 
-.partner-logo:hover img {
-    filter: grayscale(0) brightness(1);
+@keyframes scrollMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
 }
 
         /* Efecto Hover: Se iluminan en blanco al pasar el mouse */
@@ -669,41 +657,25 @@
         </div>
         <!-- FIN SECCIÓN RUIDO -->
 
-<!-- ========================================= -->
-        <!-- SECCIÓN ALIADOS / SOCIOS (CARRUSEL INF)   -->
-        <!-- ========================================= -->
+ <!-- SECCIÓN ALIADOS / SOCIOS -->
         <section class="aliados-strip">
-    <div class="aliados-header">SOCIOS DEL RUIDO / ALIADOS</div>
-    
-    <div class="marquee-wrapper">
-        <div class="marquee-track">
-            <!-- Ejemplo de cómo ponerlos uniformes -->
-            <a href="https://www.facebook.com/TwistedProgFest?locale=es_LA" class="partner-logo" target="_blank">
-                <img src="logo-twisted.png" alt="Twisted Prog Fest">
-            </a>
-            <a href="https://www.facebook.com/MadameBleuManager?locale=es_LA" class="partner-logo" target="_blank">
-                <img src="logo-madame.png" alt="Madame Bleu">
-            </a>
-            <a href="https://www.facebook.com/wearethepointmusic?locale=es_LA" class="partner-logo" target="_blank">
-                <img src="logo-We're the.png" alt="We're the point">
-            </a>
-                 </a>
-            <a href="https://www.facebook.com/PremiosdeMetalKalani?locale=es_LA" class="partner-logo" target="_blank">
-                <img src="logo-premios.png" alt="Premios de metal Kalani ">
-            </a>
-           <a href="https://www.facebook.com/fotorock21?locale=es_LA" class="partner-logo" target="_blank">
-                <img src="logo-fotorock.png" alt="FotoRock21">
-            </a>
-         
-         
-            <!-- Si no tienes logo de alguno, puedes dejar el formato de texto que tenías pero asegurando el tamaño -->
-            <div class="partner-logo"><span>TEXTO</span></div>
-        </div>
-    </div>
-</section>
-
+            <div class="aliados-header">SOCIOS DEL RUIDO / ALIADOS</div>
+            
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <!-- LOGOS -->
+                    <a href="https://www.facebook.com/TwistedProgFest" class="partner-logo" target="_blank"><img src="logo-twisted.png" alt="Twisted"></a>
+                    <a href="https://www.facebook.com/MadameBleuManager" class="partner-logo" target="_blank"><img src="logo-madame.png" alt="Madame"></a>
+                    <a href="https://www.facebook.com/wearethepointmusic" class="partner-logo" target="_blank"><img src="logo-We're the.png" alt="Point"></a>
+                    <a href="https://www.facebook.com/PremiosdeMetalKalani" class="partner-logo" target="_blank"><img src="logo-premios.png" alt="Premios"></a>
+                    <a href="https://www.facebook.com/fotorock21" class="partner-logo" target="_blank"><img src="logo-fotorock.png" alt="FotoRock"></a>
                     
-
+                    <!-- DUPLICAMOS LOS LOGOS PARA EL EFECTO INFINITO -->
+                    <a href="https://www.facebook.com/TwistedProgFest" class="partner-logo" target="_blank"><img src="logo-twisted.png" alt="Twisted"></a>
+                    <a href="https://www.facebook.com/MadameBleuManager" class="partner-logo" target="_blank"><img src="logo-madame.png" alt="Madame"></a>
+                    <a href="https://www.facebook.com/wearethepointmusic" class="partner-logo" target="_blank"><img src="logo-We're the.png" alt="Point"></a>
+                    <a href="https://www.facebook.com/PremiosdeMetalKalani" class="partner-logo" target="_blank"><img src="logo-premios.png" alt="Premios"></a>
+                    <a href="https://www.facebook.com/fotorock21" class="partner-logo" target="_blank"><img src="logo-fotorock.png" alt="FotoRock"></a>
                 </div>
             </div>
         </section>
@@ -797,6 +769,7 @@
 
 </body>
 </html>
+
 
 
 
