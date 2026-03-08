@@ -17,6 +17,10 @@
     </head>
     
     <style>
+        html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
         :root { --bg: #0a0a0a; --fest-yellow: #facc15; --white: #eeeeee; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: var(--bg); color: var(--white); font-family: 'Inter', sans-serif; overflow-x: hidden; }
@@ -115,6 +119,35 @@
             .editions-title { font-size: 2.5rem; }
             .btn-facebook { width: 100%; justify-content: center; font-size: 1rem; }
         }
+        @media (max-width: 768px) {
+    /* Reducir el logo del evento para que no ocupe toda la pantalla */
+    .event-logo-container { width: 180px; height: 180px; }
+    
+    /* Mejorar el manifiesto en móvil */
+    .fest-manifesto { padding: 40px 20px; }
+    .solidarity-badge { padding: 20px; text-align: center; }
+    .solidarity-badge h3 { font-size: 1.8rem; }
+    
+    /* Ajustar las cajas de "Misión y Objetivo" */
+    .about-section { margin-bottom: 40px; }
+    .about-box { padding: 30px 20px; }
+    .about-box h3 { font-size: 1.8rem; }
+    
+    /* Títulos de ediciones */
+    .editions-title { font-size: 2.5rem; }
+    
+    /* El footer */
+    .f-fest { padding: 60px 20px; }
+    .f-fest h2 { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes muy finos para pantallas pequeñas */
+    .main-nav { padding: 15px 20px; }
+    .logo { font-size: 1.4rem; }
+    .fest-hero { padding: 40px 20px; }
+    .ed-card-info h2 { font-size: 3rem; }
+}
     </style>
 </head>
 <body>
@@ -219,6 +252,7 @@
 
 </body>
 </html>
+
 
 
 
