@@ -399,34 +399,40 @@
             animation: scrollMarquee 30s linear infinite; 
         }
 
-        /* Pausar al pasar el mouse por encima */
-        .marquee-track:hover {
-            animation-play-state: paused;
-        }
+        /.marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espacio entre logos */
+}
 
-        /* Estilo de los "logos" de texto */
-        .partner-logo {
-            display: inline-flex;
-            align-items: center;
-            margin: 0 40px;
-            color: #555555; /* Color gris apagado */
-            font-family: 'Space Mono', monospace;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
-            cursor: pointer;
-        }
+.partner-logo {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;     /* Centrado vertical */
+    width: 150px;            /* Ancho fijo para todos */
+    height: 80px;            /* Altura fija para todos */
+    background: #111;        /* Fondo sutil */
+    border: 1px solid #333;
+    padding: 10px;
+    transition: 0.3s;
+}
 
-        /* El ícono grande al lado del texto */
-        .partner-logo .p-icon {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            margin-right: 12px;
-            color: #444444;
-            transition: color 0.3s ease;
-        }
+.partner-logo img {
+    max-width: 100%;         /* Nunca se saldrá de su caja */
+    max-height: 100%;        /* Nunca se saldrá de su caja */
+    object-fit: contain;     /* Mantiene la proporción original sin estirarse */
+    filter: grayscale(1) brightness(0.8);
+    transition: 0.3s;
+}
+
+.partner-logo:hover {
+    border-color: var(--red); /* O tu color de acento */
+    background: #1a1a1a;
+}
+
+.partner-logo:hover img {
+    filter: grayscale(0) brightness(1);
+}
 
         /* Efecto Hover: Se iluminan en blanco al pasar el mouse */
         .partner-logo:hover,
@@ -679,14 +685,14 @@
                 <img src="logo-madame.png" alt="Madame Bleu">
             </a>
             <a href="https://www.facebook.com/wearethepointmusic?locale=es_LA" class="partner-logo" target="_blank">
-                <img src="logo-madame.png" alt="We're the point">
+                <img src="logo-We're the.png" alt="We're the point">
             </a>
                  </a>
-            <a href="https://www.facebook.com/LlamadoDeLaBestiaMX?locale=es_LA" class="partner-logo" target="_blank">
-                <img src="logo-madame.png" alt="El Llamado De La Bestia MX ">
+            <a href="https://www.facebook.com/PremiosdeMetalKalani?locale=es_LA" class="partner-logo" target="_blank">
+                <img src="logo-premios.png" alt="Premios de metal Kalani ">
             </a>
            <a href="https://www.facebook.com/fotorock21?locale=es_LA" class="partner-logo" target="_blank">
-                <img src="logo-madame.png" alt="FotoRock21">
+                <img src="logo-fotorock.png" alt="FotoRock21">
             </a>
          
          
@@ -791,6 +797,7 @@
 
 </body>
 </html>
+
 
 
 
