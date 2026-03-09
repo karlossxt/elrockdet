@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Y REDES SOCIALES -->
+    <title>MÚSICA | Arde Internet: El polémico Top 50 de Rock en Español de Billboard</title>
+    <meta name="description" content="Billboard lanza su lista definitiva de las 50 mejores bandas de rock en español. Soda Stereo lidera, pero las ausencias y posiciones desatan furia en la red.">
+    
+    <!-- Configuración para Redes Sociales -->
+    <meta property="og:title" content="EL POLÉMICO TOP 50 DE BILLBOARD: ¿ESTO ES ROCK? [EL ROCK DE TODOS LOS DÍAS]">
+    <meta property="og:description" content="Maná por encima de El Tri, pop ochentero revuelto con Rata Blanca. Entra y haz corajes con la lista oficial.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/billboard-top50-portada.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/post-top50billboard.html">
+    <meta property="og:type" content="article">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #080808;
+            /* CAMBIO DE COLOR: Oro / Amarillo Eléctrico (Tono de Precaución/Billboard) */
+            --accent: #eab308; 
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Space Mono', monospace;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(234, 179, 8, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            z-index: 1000; background-size: 100% 3px, 3px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 20px; right: 20px;
+            background: white; color: black;
+            padding: 10px 15px; font-weight: 900;
+            border: none; cursor: pointer;
+            box-shadow: 4px 4px 0px var(--accent);
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .post-header { position: relative; margin-bottom: 40px; }
+        .img-frame { border: 6px solid var(--accent); padding: 5px; background: var(--bg); }
+        .img-frame img { width: 100%; height: auto; display: block; filter: grayscale(1) contrast(1.1); }
+        
+        .tag-section {
+            position: absolute; top: -15px; left: -10px;
+            background: var(--accent); color: black;
+            padding: 8px 15px; font-weight: 900;
+            transform: rotate(-3deg); font-size: 1rem;
+            box-shadow: 4px 4px 0px white; z-index: 10;
+        }
+
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 8vw, 5rem);
+            color: white; line-height: 0.9; margin: 30px 0;
+            text-transform: uppercase;
+        }
+        .post-title span { color: var(--accent); }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 40px; }
+
+        .meta-bar {
+            border-top: 1px solid #333; border-bottom: 1px solid #333;
+            padding: 15px 0; margin-bottom: 30px;
+            color: var(--accent); font-size: 0.7rem;
+            display: flex; flex-wrap: wrap; gap: 15px; text-transform: uppercase; font-weight: 700;
+        }
+
+        .content p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem; line-height: 1.6; color: #ccc;
+            margin-bottom: 25px;
+        }
+        .content p::first-letter {
+            font-size: 4rem; float: left; margin-right: 12px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .secondary-img { margin: 30px 0; border: 1px solid #333; padding: 5px; background: #111; }
+        .secondary-img img { width: 100%; display: block; filter: grayscale(1) contrast(1.1); }
+
+        .tracklist-box { margin: 30px 0; padding: 20px; border: 1px dashed #444; background: #0a0a0a; }
+        .tracklist-box h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 15px; font-size: 1.2rem; text-transform: uppercase;}
+        .tracklist-box ul { 
+            list-style: none; padding: 0; font-family: 'Space Mono'; 
+            font-size: 0.85rem; color: #bbb; line-height: 1.8; 
+            column-count: 2; column-gap: 30px; 
+        }
+        .tracklist-box ul li { break-inside: avoid; }
+        .tracklist-box ul li::before { content: "► "; color: var(--accent); font-size: 0.8rem; }
+
+        /* SECCIÓN SOBRE LA BANDA / ANÁLISIS */
+        .bio-section {
+            background: #111; padding: 30px; margin: 50px 0;
+            border: 1px solid #222; position: relative;
+        }
+        .bio-section h2 { font-family: 'Syne'; color: white; margin-bottom: 20px; font-size: 1.5rem; text-transform: uppercase;}
+        .bio-section p { font-size: 1rem; color: #aaa; line-height: 1.5; font-family: 'Space Mono'; margin-bottom: 15px;}
+        .bio-tag { background: var(--accent); color: black; padding: 5px 10px; font-size: 10px; position: absolute; top: -10px; left: 20px; font-weight: 900; }
+
+        /* MEMORIA DE ARCHIVO */
+        .memory-box {
+            background: #111; border-left: 10px solid var(--accent);
+            padding: 25px; margin: 40px 0;
+        }
+        .memory-box h3 { font-family: 'Syne'; color: var(--accent); margin-bottom: 10px; text-transform: uppercase; font-size: 1.2rem; }
+        .memory-box p { font-size: 0.95rem; font-style: italic; color: #888; line-height: 1.4; font-family: 'Space Mono'; }
+
+        /* COMPARTIR */
+        .share-container {
+            margin: 40px 0; padding: 20px;
+            border-top: 1px solid #333;
+        }
+        .share-title { font-family: 'Syne'; font-size: 12px; margin-bottom: 15px; color: var(--accent); }
+        .share-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+        .share-btn {
+            background: #1a1a1a; color: white; border: none; padding: 10px 15px;
+            font-family: 'Space Mono'; font-size: 10px; cursor: pointer; text-decoration: none;
+            transition: 0.3s; font-weight: 700; border: 1px solid #333;
+        }
+        .share-btn:hover { background: white; color: black; }
+
+        .sidebar-playlist {
+            background: #111; border: 4px solid var(--accent);
+            padding: 20px; position: sticky; top: 40px; height: fit-content;
+        }
+        .playlist-header h4 { font-family: 'Syne'; line-height: 1; margin-bottom: 20px; font-size: 1.5rem; }
+        .track-item { display: flex; gap: 10px; margin-bottom: 12px; font-size: 11px; align-items: center; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        .track-num { color: var(--accent); font-weight: 900; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .sidebar-playlist { position: static; margin-top: 40px; }
+            .post-title { font-size: 2.8rem; }
+            .tracklist-box ul { column-count: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <div class="container">
+        
+        <header class="post-header">
+            <div class="tag-section">#MÚSICA</div>
+            <div class="img-frame">
+                <!-- IMAGEN 1: COLLAGE DE BANDAS / PORTADA -->
+                <img src="billboard-top50-portada.jpg" alt="Top 50 Rock en Español Billboard Polémica">
+            </div>
+        </header>
+
+        <h1 class="post-title">HAGAN CORAJES:<br><span>EL POLÉMICO TOP 50 DE BILLBOARD ROMPE EL INTERNET</span></h1>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="meta-bar">
+                    <span>ARCHIVO: CRÍTICA / REPORTE ESPECIAL</span>
+                    <span>|</span>
+                    <span>FUENTE: BILLBOARD 2026</span>
+                    <span>|</span>
+                    <span>ESTADO: DEBATE TÓXICO</span>
+                </div>
+
+                <article class="content">
+                    <p>Las redes sociales, los foros underground y las barras de las cantinas en toda Iberoamérica están ardiendo. La revista estadounidense Billboard, siempre lista para meter el dedo en la llaga desde su perspectiva <em>mainstream</em>, acaba de soltar su "definitiva" lista de <strong>Las 50 mejores bandas de rock en español de todos los tiempos</strong>. Y como era de esperarse, el listado es un campo minado de decisiones cuestionables y ausencias que rozan la ofensa.</p>
+                    
+                    <p>El podio, para ser justos, juega a la segura y no busca pleitos físicos: 🇦🇷 <strong>Soda Stereo</strong> se corona con el oro indiscutible, demostrando que el legado de Cerati es intocable. La plata se la lleva la inagotable maquinaria de 🇲🇽 <strong>Café Tacvba</strong>, y el bronce apela a la melancolía fundacional con 🇦🇷 <strong>Sui Generis</strong>. Hasta ahí, los puristas asienten con la cabeza. Pero si rascas un poco más abajo, comienza el verdadero caos curatorial.</p>
+
+                    <div class="secondary-img">
+                        <!-- IMAGEN 2: LISTA DE BILLBOARD GRÁFICA O CONCIERTO -->
+                        <img src="billboard-list-grafico.jpg" alt="Lista Completa Billboard">
+                    </div>
+
+                    <p>Hablemos del elefante en la habitación: ¿Es verdaderamente justo llamar a esto una lista de "Rock"? Billboard metió en la misma licuadora el pop ochentero de Hombres G y Alaska y Dinarama, junto a pioneros mundiales del punk crudo como los peruanos Los Saicos, y lo revolvió todo con la electrónica de Plastilina Mosh y Kinky. ¿De verdad Maná merece estar por encima de los padres del asfalto como El Tri? ¿Zoé es históricamente superior a Rata Blanca o Héroes del Silencio?</p>
+                    
+                    <p>Parece que para armar este conteo, los criterios pesaron más del lado de la fama radial, los números de ventas y el algoritmo de Spotify, que del verdadero impacto cultural en el movimiento contracultural de habla hispana. Aún así, es innegable que esta lista sirve como una radiografía perfecta de lo que la industria gringa entiende por música latina.</p>
+
+                    <!-- LISTADO COMPLETO DIVIDIDO EN 2 COLUMNAS -->
+                    <div class="tracklist-box">
+                        <h4>EXPEDIENTE CLASIFICADO: EL TOP 50 OFICIAL</h4>
+                        <ul>
+                            <li>01. 🇦🇷 Soda Stereo 🥇</li>
+                            <li>02. 🇲🇽 Café Tacvba 🥈</li>
+                            <li>03. 🇦🇷 Sui Generis 🥉</li>
+                            <li>04. 🇦🇷 Los Fabulosos Cadillacs</li>
+                            <li>05. 🇨🇱 Los Prisioneros</li>
+                            <li>06. 🇦🇷 Babasónicos</li>
+                            <li>07. 🇲🇽 Caifanes</li>
+                            <li>08. 🇲🇽 Zoé</li>
+                            <li>09. 🇲🇽 Maná</li>
+                            <li>10. 🇨🇴 Aterciopelados</li>
+                            <li>11. 🇪🇸 Héroes del Silencio</li>
+                            <li>12. 🇲🇽 El Tri</li>
+                            <li>13. 🇲🇽 Molotov</li>
+                            <li>14. 🇲🇽 Maldita Vecindad y los Hijos del 5to Patio</li>
+                            <li>15. 🇦🇷 Enanitos Verdes</li>
+                            <li>16. 🇪🇸 La Unión</li>
+                            <li>17. 🇪🇸 Alaska y Dinarama</li>
+                            <li>18. 🇨🇱 Los Jaivas</li>
+                            <li>19. 🇫🇷 Mano Negra</li>
+                            <li>20. 🇪🇸 Jarabe de Palo</li>
+                            <li>21. 🇲🇽 El Gran Silencio</li>
+                            <li>22. 🇦🇷 Almendra</li>
+                            <li>23. 🇦🇷 Los Rodríguez</li>
+                            <li>24. 🇲🇽 Fobia</li>
+                            <li>25. 🇵🇪 Los Saicos</li>
+                            <li>26. 🇨🇱 La Ley</li>
+                            <li>27. 🇲🇽 Kinky</li>
+                            <li>28. 🇦🇷 Los Auténticos Decadentes</li>
+                            <li>29. 🇲🇽 Tijuana No!</li>
+                            <li>30. 🇺🇾 No Te Va Gustar</li>
+                            <li>31. 🇦🇷 Rata Blanca</li>
+                            <li>32. 🇲🇽 Porter</li>
+                            <li>33. 🇲🇽 Panteón Rococó</li>
+                            <li>34. 🇨🇱 Los Bunkers</li>
+                            <li>35. 🇦🇷 Vilma Palma e Vampiros</li>
+                            <li>36. 🇲🇽 Santa Sabina</li>
+                            <li>37. 🇪🇸 Radio Futura</li>
+                            <li>38. 🇲🇽 Plastilina Mosh</li>
+                            <li>39. 🇦🇷 Los Abuelos de la Nada</li>
+                            <li>40. 🇪🇸 Hombres G</li>
+                            <li>41. 🇺🇾 El Cuarteto de Nos</li>
+                            <li>42. 🇲🇽 Hello Seahorse!</li>
+                            <li>43. 🇦🇷 Bersuit Vergarabat</li>
+                            <li>44. 🇻🇪 La Vida Bohème</li>
+                            <li>45. 🇪🇸 Duncan Dhu</li>
+                            <li>46. 🇲🇽 Zurdok</li>
+                            <li>47. 🇵🇪 Líbido</li>
+                            <li>48. 🇨🇴 Diamante Eléctrico</li>
+                            <li>49. 🇵🇦 Los Rabanes</li>
+                            <li>50. 🇲🇽 Enjambre</li>
+                        </ul>
+                    </div>
+
+                </article>
+
+                <!-- ANÁLISIS EDITORIAL -->
+                <div class="bio-section">
+                    <div class="bio-tag">NOTA DEL EDITOR</div>
+                    <h2>EL DOMINIO DEL NORTE Y EL SUR</h2>
+                    <p>Si analizamos los datos fríos de la lista, queda clara una cosa: la eterna dictadura musical entre Argentina y México aplasta al resto del continente. De las 50 posiciones, la abrumadora mayoría se divide entre el cono sur y el país azteca, dejando espacios marginales para gigantes de España, Chile, Colombia, Uruguay, Venezuela, Perú y Panamá.</p>
+                    <br>
+                    <p>Además, el listado ignora sistemáticamente al metal pesado en español (salvo Rata Blanca), al rock urbano más duro y a bandas de culto que forjaron la verdadera escena underground de los 80s y 90s. ¿Dónde quedó Cuca? ¿La Castañeda? ¿Barón Rojo?</p>
+                </div>
+
+                <!-- MEMORIA DE ARCHIVO -->
+                <div class="memory-box">
+                    <h3>MEMORIA DE ARCHIVO</h3>
+                    <p>"Estas listas no están hechas para darle la razón al fan que suda sangre en el moshpit o al melómano que colecciona vinilos. Están creadas algorítmicamente para la polémica, para que te ofendas, la compartas y pelees a muerte en la sección de comentarios. Y viendo la indignación general... misión cumplida por parte de Billboard."</p>
+                </div>
+
+                <!-- BOTONES COMPARTIR -->
+                <div class="share-container">
+                    <div class="share-title">ÚNETE AL DEBATE (COMPARTE Y PELEA):</div>
+                    <div class="share-buttons">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/post-top50billboard.html" target="_blank" class="share-btn">FACEBOOK</a>
+                        <a href="https://twitter.com/intent/tweet?url=https://elrockdetodoslosdias.com.mx/post-top50billboard.html" target="_blank" class="share-btn">X (TWITTER)</a>
+                        <a href="https://api.whatsapp.com/send?text=¿Ya%20viste%20las%20jaladas%20del%20Top%2050%20de%20Billboard?%20Revisa%20la%20lista:%20https://elrockdetodoslosdias.com.mx/post-top50billboard.html" target="_blank" class="share-btn">WHATSAPP</a>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-playlist">
+                <div class="playlist-header">
+                    <h4>FICHA<br>DEL REPORTE</h4>
+                </div>
+                <div class="track-list">
+                    <div class="track-item"><span class="track-num">PUBLICACIÓN</span><span>BILLBOARD MAG</span></div>
+                    <div class="track-item"><span class="track-num">TEMA</span><span>ROCK EN ESPAÑOL</span></div>
+                    <div class="track-item"><span class="track-num">TOP 1</span><span>SODA STEREO</span></div>
+                    <div class="track-item"><span class="track-num">FALTANTES</span><span>INFINITOS</span></div>
+                </div>
+                
+                <button style="width:100%; background:white; border:none; padding:15px; margin-top:20px; font-family:'Space Mono'; font-weight:900; cursor:pointer; color: black; box-shadow: 4px 4px 0px var(--accent);" onclick="window.location.href='#comentarios'">IR A LOS COMENTARIOS</button>
+                
+                <div style="margin-top: 25px; font-size: 9px; color: #666; text-align: center;">*ESTE RANKING FUE ELABORADO ORIGINALMENTE POR LOS EDITORES DE LA REVISTA BILLBOARD (EE.UU.)</div>
+            </aside>
+        </div>
+
+    </div>
+
+</body>
+</html>
