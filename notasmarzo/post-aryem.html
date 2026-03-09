@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Y REDES SOCIALES -->
+    <title>ESCENA NACIONAL | Aryem: El descenso de Agnes</title>
+    <meta name="description" content="Aryem anuncia 'Agnes', su tercer y más ambicioso álbum conceptual sobre un ser divino que aprende a sentir en la Tierra. Estreno en abril de 2026.">
+    
+    <!-- Configuración para Redes Sociales -->
+    <meta property="og:title" content="ARYEM - Agnes [EL ROCK DE TODOS LOS DÍAS]">
+    <meta property="og:description" content="Mitología propia, dolor terrenal y el disco más ambicioso en la carrera de Aryem.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/aryem-agnes-portada.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/post-aryem.html">
+    <meta property="og:type" content="article">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #080808;
+            /* CAMBIO DE COLOR: Púrpura Celestial / Místico */
+            --accent: #9d4edd; 
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Space Mono', monospace;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(157, 78, 221, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            z-index: 1000; background-size: 100% 3px, 3px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 20px; right: 20px;
+            background: white; color: black;
+            padding: 10px 15px; font-weight: 900;
+            border: none; cursor: pointer;
+            box-shadow: 4px 4px 0px var(--accent);
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .post-header { position: relative; margin-bottom: 40px; }
+        .img-frame { border: 6px solid var(--accent); padding: 5px; background: var(--bg); }
+        .img-frame img { width: 100%; height: auto; display: block; filter: grayscale(1) contrast(1.1); }
+        
+        .tag-section {
+            position: absolute; top: -15px; left: -10px;
+            background: var(--accent); color: white;
+            padding: 8px 15px; font-weight: 900;
+            transform: rotate(-3deg); font-size: 1rem;
+            box-shadow: 4px 4px 0px white; z-index: 10;
+        }
+
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 8vw, 5rem);
+            color: white; line-height: 0.9; margin: 30px 0;
+            text-transform: uppercase;
+        }
+        .post-title span { color: var(--accent); }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 40px; }
+
+        .meta-bar {
+            border-top: 1px solid #333; border-bottom: 1px solid #333;
+            padding: 15px 0; margin-bottom: 30px;
+            color: var(--accent); font-size: 0.7rem;
+            display: flex; flex-wrap: wrap; gap: 15px; text-transform: uppercase; font-weight: 700;
+        }
+
+        .content p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem; line-height: 1.6; color: #ccc;
+            margin-bottom: 25px;
+        }
+        .content p::first-letter {
+            font-size: 4rem; float: left; margin-right: 12px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .secondary-img { margin: 30px 0; border: 1px solid #333; padding: 5px; background: #111; }
+        .secondary-img img { width: 100%; display: block; filter: grayscale(1) contrast(1.1); }
+
+        .tracklist-box { margin: 30px 0; padding: 20px; border: 1px dashed #444; background: #0a0a0a; }
+        .tracklist-box h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 15px; font-size: 1.2rem; text-transform: uppercase;}
+        .tracklist-box ul { list-style: none; padding: 0; font-family: 'Space Mono'; font-size: 0.9rem; color: #bbb; line-height: 1.8; }
+        .tracklist-box ul li::before { content: "► "; color: var(--accent); font-size: 0.8rem; }
+
+        /* SECCIÓN SOBRE LA BANDA */
+        .bio-section {
+            background: #111; padding: 30px; margin: 50px 0;
+            border: 1px solid #222; position: relative;
+        }
+        .bio-section h2 { font-family: 'Syne'; color: white; margin-bottom: 20px; font-size: 1.5rem; text-transform: uppercase;}
+        .bio-section p { font-size: 1rem; color: #aaa; line-height: 1.5; font-family: 'Space Mono'; }
+        .bio-tag { background: var(--accent); color: white; padding: 5px 10px; font-size: 10px; position: absolute; top: -10px; left: 20px; font-weight: 900; }
+
+        /* MEMORIA DE ARCHIVO */
+        .memory-box {
+            background: #111; border-left: 10px solid var(--accent);
+            padding: 25px; margin: 40px 0;
+        }
+        .memory-box h3 { font-family: 'Syne'; color: var(--accent); margin-bottom: 10px; text-transform: uppercase; font-size: 1.2rem; }
+        .memory-box p { font-size: 0.95rem; font-style: italic; color: #888; line-height: 1.4; font-family: 'Space Mono'; }
+
+        /* COMPARTIR */
+        .share-container {
+            margin: 40px 0; padding: 20px;
+            border-top: 1px solid #333;
+        }
+        .share-title { font-family: 'Syne'; font-size: 12px; margin-bottom: 15px; color: var(--accent); }
+        .share-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+        .share-btn {
+            background: #1a1a1a; color: white; border: none; padding: 10px 15px;
+            font-family: 'Space Mono'; font-size: 10px; cursor: pointer; text-decoration: none;
+            transition: 0.3s; font-weight: 700; border: 1px solid #333;
+        }
+        .share-btn:hover { background: white; color: black; }
+
+        .sidebar-playlist {
+            background: #111; border: 4px solid var(--accent);
+            padding: 20px; position: sticky; top: 40px; height: fit-content;
+        }
+        .playlist-header h4 { font-family: 'Syne'; line-height: 1; margin-bottom: 20px; font-size: 1.5rem; }
+        .track-item { display: flex; gap: 10px; margin-bottom: 12px; font-size: 11px; align-items: center; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        .track-num { color: var(--accent); font-weight: 900; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .sidebar-playlist { position: static; margin-top: 40px; }
+            .post-title { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <div class="container">
+        
+        <header class="post-header">
+            <div class="tag-section">#ESCENANACIONAL</div>
+            <div class="img-frame">
+                <!-- IMAGEN 1: PORTADA -->
+                <img src="aryem-agnes-portada.jpg" alt="Aryem Agnes Portada">
+            </div>
+        </header>
+
+        <h1 class="post-title">EL PRECIO DE SENTIR:<br><span>ARYEM REVELA "AGNES"</span></h1>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="meta-bar">
+                    <span>ARCHIVO: ANUNCIO GLOBAL</span>
+                    <span>|</span>
+                    <span>LANZAMIENTO: 10 ABRIL, 2026</span>
+                </div>
+
+                <article class="content">
+                    <p>El metal sinfónico nacional se prepara para recibir una obra de proporciones épicas. Aryem ha desvelado los detalles de su tercer álbum de estudio, titulado <strong>"Agnes"</strong>, una entrega conceptual que promete llevar su sonido a terrenos inexplorados y sumergirnos por completo en una mitología propia.</p>
+                    
+                    <p>La narrativa detrás de este disco nos presenta a Agnes, un ser divino que llega a la Tierra por accidente. Lejos de la figura tradicional del héroe o de una entidad salvadora, ella es simplemente alguien que, poco a poco, aprende lo que significa sentir, soñar y, sobre todo, experimentar dolor. Su viaje es el de un ser que elige la vulnerabilidad terrenal, sabiendo perfectamente que esa decisión podría costarle todo lo que es.</p>
+
+                    <div class="secondary-img">
+                        <!-- IMAGEN 2: BANDA/FOTO PROMOCIONAL -->
+                        <img src="aryem-banda.jpg" alt="Aryem Banda">
+                    </div>
+
+                    <p>Musicalmente, la banda se ha enfrentado a su reto más grande. A través de 14 tracks, el disco navegará entre atmósferas oscuras, agresividad metálica y pasajes orquestales hermosamente tristes. Para dar vida a este complejo universo visual y místico, el impecable <em>artwork</em> de la portada fue comisionado a Maaginen Studios.</p>
+
+                    <!-- TRACKLIST AÑADIDO ELEGANTEMENTE -->
+                    <div class="tracklist-box">
+                        <h4>FASES DE AGNES (TRACKLIST OFICIAL)</h4>
+                        <ul>
+                            <li>01. Agnes</li>
+                            <li>02. Event Horizon</li>
+                            <li>03. Do You Feel Worthless Yet?</li>
+                            <li>04. In Love With You</li>
+                            <li>05. Sellout</li>
+                            <li>06. Holding On</li>
+                            <li>07. Into Gravity</li>
+                            <li>08. Son Del Alma</li>
+                            <li>09. Battleground</li>
+                            <li>10. All That's Left of Me (Nightflowers)</li>
+                            <li>11. You Won't Miss Me</li>
+                            <li>12. Nefilim</li>
+                            <li>13. Not Enough For You</li>
+                            <li>14. Lapsi Kuoleman Maailman</li>
+                        </ul>
+                    </div>
+
+                </article>
+
+                <!-- BIOGRAFÍA DE LA BANDA -->
+                <div class="bio-section">
+                    <div class="bio-tag">EXPEDIENTE DE ARTISTA</div>
+                    <h2>EL ADN DE ARYEM</h2>
+                    <p>Aryem se ha caracterizado por fusionar la fiereza del metal con orquestaciones majestuosas y narrativas profundas. Con su tercer disco de estudio, la agrupación da un salto evolutivo monumental, construyendo un universo donde colisionan lo celestial y lo humano.</p>
+                    <br>
+                    <p>Con melodías melancólicas y una potente instrumentación, Aryem demuestra una madurez compositiva que no teme explorar la fragilidad y la oscuridad de los sentimientos, consolidándose como uno de los proyectos más ambiciosos de la escena actual.</p>
+                </div>
+
+                <!-- MEMORIA DE ARCHIVO -->
+                <div class="memory-box">
+                    <h3>MEMORIA DE ARCHIVO</h3>
+                    <p>"'Agnes' es nuestro álbum más ambicioso tanto musical como temáticamente. Con su propia mitología y una historia completa que te espera... Este álbum lleva todo lo que somos. No podemos esperar para compartirlo contigo."<br>— <strong>Aryem</strong></p>
+                </div>
+
+                <!-- BOTONES COMPARTIR -->
+                <div class="share-container">
+                    <div class="share-title">COMPARTIR ARCHIVO:</div>
+                    <div class="share-buttons">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/post-aryem.html" target="_blank" class="share-btn">FACEBOOK</a>
+                        <a href="https://twitter.com/intent/tweet?url=https://elrockdetodoslosdias.com.mx/post-aryem.html" target="_blank" class="share-btn">X (TWITTER)</a>
+                        <a href="https://api.whatsapp.com/send?text=El%20nuevo%20y%20épico%20álbum%20de%20Aryem:%20https://elrockdetodoslosdias.com.mx/post-aryem.html" target="_blank" class="share-btn">WHATSAPP</a>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-playlist">
+                <div class="playlist-header">
+                    <h4>FICHA<br>TÉCNICA</h4>
+                </div>
+                <div class="track-list">
+                    <div class="track-item"><span class="track-num">LANZAMIENTO</span><span>TERCER ÁLBUM</span></div>
+                    <div class="track-item"><span class="track-num">TÍTULO</span><span>AGNES</span></div>
+                    <div class="track-item"><span class="track-num">FECHA</span><span>10 ABRIL, 2026</span></div>
+                    <div class="track-item"><span class="track-num">ARTE</span><span>MAAGINEN STUDIOS</span></div>
+                </div>
+                
+                <!-- BOTÓN INFO -->
+                <button style="width:100%; background:white; border:none; padding:15px; margin-top:20px; font-family:'Space Mono'; font-weight:900; cursor:pointer; color: black; box-shadow: 4px 4px 0px var(--accent);" onclick="window.open('#')">PRE-GUARDAR PRÓXIMAMENTE</button>
+                
+                <div style="margin-top: 25px; font-size: 9px; color: #666; text-align: center;">CONCEPTO ORIGINAL DE ARYEM</div>
+            </aside>
+        </div>
+
+    </div>
+
+</body>
+</html>

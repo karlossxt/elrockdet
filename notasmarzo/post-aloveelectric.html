@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Y REDES SOCIALES -->
+    <title>ESCENA NACIONAL | A Love Electric: El hombre contra la máquina</title>
+    <meta name="description" content="A Love Electric estrena 'Man and Machine'. Una cruda exploración de la relación entre el humano, la tecnología y el futuro.">
+    
+    <!-- Configuración para Redes Sociales -->
+    <meta property="og:title" content="A LOVE ELECTRIC - Man and Machine [EL ROCK DE TODOS LOS DÍAS]">
+    <meta property="og:description" content="El trío revoluciona su sonido explorando la paranoia tecnológica del presente.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/aloveelectric-portada.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/post-aloveelectric.html">
+    <meta property="og:type" content="article">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #080808;
+            --red: #dc2626; 
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Space Mono', monospace;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            z-index: 1000; background-size: 100% 3px, 3px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 20px; right: 20px;
+            background: white; color: black;
+            padding: 10px 15px; font-weight: 900;
+            border: none; cursor: pointer;
+            box-shadow: 4px 4px 0px var(--red);
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .post-header { position: relative; margin-bottom: 40px; }
+        .img-frame { border: 6px solid var(--red); padding: 5px; background: var(--bg); }
+        .img-frame img { width: 100%; height: auto; display: block; filter: grayscale(1) contrast(1.1); }
+        
+        .tag-section {
+            position: absolute; top: -15px; left: -10px;
+            background: var(--red); color: white;
+            padding: 8px 15px; font-weight: 900;
+            transform: rotate(-3deg); font-size: 1rem;
+            box-shadow: 4px 4px 0px white; z-index: 10;
+        }
+
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 8vw, 5rem);
+            color: white; line-height: 0.9; margin: 30px 0;
+            text-transform: uppercase;
+        }
+        .post-title span { color: var(--red); }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 40px; }
+
+        .meta-bar {
+            border-top: 1px solid #333; border-bottom: 1px solid #333;
+            padding: 15px 0; margin-bottom: 30px;
+            color: var(--red); font-size: 0.7rem;
+            display: flex; flex-wrap: wrap; gap: 15px; text-transform: uppercase; font-weight: 700;
+        }
+
+        .content p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem; line-height: 1.6; color: #ccc;
+            margin-bottom: 25px;
+        }
+        .content p::first-letter {
+            font-size: 4rem; float: left; margin-right: 12px;
+            line-height: 0.8; color: var(--red); font-weight: 900; font-family: 'Syne';
+        }
+
+        .secondary-video { margin: 30px 0; border: 1px solid #333; padding: 5px; background: #111; }
+        .secondary-video video { width: 100%; display: block; filter: grayscale(1) contrast(1.1); }
+
+        /* SECCIÓN SOBRE LA BANDA */
+        .bio-section {
+            background: #111; padding: 30px; margin: 50px 0;
+            border: 1px solid #222; position: relative;
+        }
+        .bio-section h2 { font-family: 'Syne'; color: white; margin-bottom: 20px; font-size: 1.5rem; text-transform: uppercase;}
+        .bio-section p { font-size: 1rem; color: #aaa; line-height: 1.5; font-family: 'Space Mono'; }
+        .bio-tag { background: var(--red); color: white; padding: 5px 10px; font-size: 10px; position: absolute; top: -10px; left: 20px; font-weight: 900; }
+
+        /* MEMORIA DE ARCHIVO */
+        .memory-box {
+            background: #111; border-left: 10px solid var(--red);
+            padding: 25px; margin: 40px 0;
+        }
+        .memory-box h3 { font-family: 'Syne'; color: var(--red); margin-bottom: 10px; text-transform: uppercase; font-size: 1.2rem; }
+        .memory-box p { font-size: 0.95rem; font-style: italic; color: #888; line-height: 1.4; font-family: 'Space Mono'; }
+
+        /* COMPARTIR */
+        .share-container {
+            margin: 40px 0; padding: 20px;
+            border-top: 1px solid #333;
+        }
+        .share-title { font-family: 'Syne'; font-size: 12px; margin-bottom: 15px; color: var(--red); }
+        .share-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+        .share-btn {
+            background: #1a1a1a; color: white; border: none; padding: 10px 15px;
+            font-family: 'Space Mono'; font-size: 10px; cursor: pointer; text-decoration: none;
+            transition: 0.3s; font-weight: 700; border: 1px solid #333;
+        }
+        .share-btn:hover { background: white; color: black; }
+
+        .sidebar-playlist {
+            background: #111; border: 4px solid var(--red);
+            padding: 20px; position: sticky; top: 40px; height: fit-content;
+        }
+        .playlist-header h4 { font-family: 'Syne'; line-height: 1; margin-bottom: 20px; font-size: 1.5rem; }
+        .track-item { display: flex; gap: 10px; margin-bottom: 12px; font-size: 11px; align-items: center; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        .track-num { color: var(--red); font-weight: 900; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .sidebar-playlist { position: static; margin-top: 40px; }
+            .post-title { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <div class="container">
+        
+        <header class="post-header">
+            <div class="tag-section">#ESCENANACIONAL</div>
+            <div class="img-frame">
+                <!-- IMAGEN 1: PORTADA -->
+                <img src="aloveelectric-portada.jpg" alt="A Love Electric Man and Machine">
+            </div>
+        </header>
+
+        <h1 class="post-title">LA INTERFERENCIA DEL FUTURO:<br><span>A LOVE ELECTRIC ESTRENA "MAN AND MACHINE"</span></h1>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="meta-bar">
+                    <span>ARCHIVO: LANZAMIENTO</span>
+                    <span>|</span>
+                    <span>10 MARZO, 2026</span>
+                </div>
+
+                <article class="content">
+                    <p>La dicotomía entre la carne y el código ya no es ciencia ficción. Con <strong>"Man and Machine"</strong>, el power trío A Love Electric lanza el primer zarpazo sonoro de lo que será su sexto álbum de estudio, sumergiéndonos en la paranoia y la fascinación de nuestra inevitable simbiosis con la tecnología.</p>
+                    
+                    <p>Dejando atrás su etapa orientada al rock-surf, la banda revoluciona su propio momento actual, influenciados por el ritmo frenético de la realidad mundial. El track respira a través de una atmósfera cargada de estática e interferencia, creando la inquietante sensación de que las máquinas buscan algo. Es una interconexión ajustada milimétricamente entre los riffs, el bajo y los tambores.</p>
+
+                    <!-- REPRODUCTOR DE VIDEO AÑADIDO AQUÍ -->
+                    <div class="secondary-video">
+                        <video controls poster="aloveelectric-portada.jpg">
+                            <source src="aloveelectric-video.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de este video.
+                        </video>
+                    </div>
+
+                    <p>“Es evidente que estamos viviendo tiempos de cambio profundo, es como la re-imaginación de la imaginación. Es importante para nosotros abordar en nuestra música temas pertinentes, sociales y creativos”, declara la banda. Compuesta por Todd Clouser, la canción muestra las interrogantes de una época donde la rápida evolución digital contrasta brutalmente con la naturaleza humana.</p>
+                    
+                    <p>El caos se complementa visualmente con este videoclip oficial —realizado por el propio Clouser— repleto de <em>close-ups</em> asfixiantes, donde los tres músicos interactúan directamente con el implacable ojo de la cámara, sugiriendo una lucha silenciosa por el control frente a la máquina.</p>
+                </article>
+
+                <!-- BIOGRAFÍA DE LA BANDA -->
+                <div class="bio-section">
+                    <div class="bio-tag">EXPEDIENTE DE BANDA</div>
+                    <h2>EL ADN DE A LOVE ELECTRIC</h2>
+                    <p>A Love Electric es un ente musical inconforme y en constante mutación, sostenido por la triada creativa de Todd Clouser (guitarra y voz), Aarón Cruz (bajo) y Jorge Servín (batería).</p>
+                    <br>
+                    <p>Desafiando las etiquetas de la industria, el trío ha navegado entre el jazz de vanguardia, el rock crudo y la experimentación sónica. Este nuevo material, que verá la luz por completo en 2026, fue concebido en los estudios Terrarium y Testa Estudio en León, Guanajuato, marcando el inicio de su faceta más cerebral e introspectiva.</p>
+                </div>
+
+                <!-- MEMORIA DE ARCHIVO -->
+                <div class="memory-box">
+                    <h3>MEMORIA DE ARCHIVO</h3>
+                    <p>"Habla un poco de la idea de que tenemos que protegernos del cambio, de lo que viene, que la evolución es un peligro, en donde esa sensación es emocional o también literal."<br>— <strong>Todd Clouser</strong></p>
+                </div>
+
+                <!-- BOTONES COMPARTIR -->
+                <div class="share-container">
+                    <div class="share-title">COMPARTIR ARCHIVO:</div>
+                    <div class="share-buttons">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/post-aloveelectric.html" target="_blank" class="share-btn">FACEBOOK</a>
+                        <a href="https://twitter.com/intent/tweet?url=https://elrockdetodoslosdias.com.mx/post-aloveelectric.html" target="_blank" class="share-btn">X (TWITTER)</a>
+                        <a href="https://api.whatsapp.com/send?text=Checa%20la%20paranoia%20tecnológica%20de%20A%20Love%20Electric:%20https://elrockdetodoslosdias.com.mx/post-aloveelectric.html" target="_blank" class="share-btn">WHATSAPP</a>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-playlist">
+                <div class="playlist-header">
+                    <h4>FICHA<br>TÉCNICA</h4>
+                </div>
+                <div class="track-list">
+                    <div class="track-item"><span class="track-num">LANZAMIENTO</span><span>SINGLE + VIDEO</span></div>
+                    <div class="track-item"><span class="track-num">TÍTULO</span><span>MAN AND MACHINE</span></div>
+                    <div class="track-item"><span class="track-num">ESTUDIO</span><span>LEÓN, GUANAJUATO</span></div>
+                    <div class="track-item"><span class="track-num">GÉNERO</span><span>AVANT-ROCK / EXPERIMENTAL</span></div>
+                </div>
+                
+                <!-- BOTÓN LINK -->
+                <button style="width:100%; background:white; border:none; padding:15px; margin-top:20px; font-family:'Space Mono'; font-weight:900; cursor:pointer; color: black; box-shadow: 4px 4px 0px var(--red);" onclick="window.open('https://toddclouser.com/a-love-electric')">ESCUCHAR / INFO</button>
+                
+                <div style="margin-top: 25px; font-size: 9px; color: #666; text-align: center;">FOTO POR: Jesús Cornejo</div>
+            </aside>
+        </div>
+
+    </div>
+
+</body>
+</html>

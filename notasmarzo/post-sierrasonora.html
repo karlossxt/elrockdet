@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Y REDES SOCIALES -->
+    <title>ESCENA NACIONAL | Sierra Sonora: La memoria en la piel</title>
+    <meta name="description" content="Sierra Sonora lanza 'En Mi Piel', un EP conceptual que explora el amor, la pérdida y por qué decidimos tatuarnos a otras personas.">
+    
+    <!-- Configuración para Redes Sociales -->
+    <meta property="og:title" content="SIERRA SONORA - En Mi Piel [EL ROCK DE TODOS LOS DÍAS]">
+    <meta property="og:description" content="Indie, folk y soul rock desde Mérida. Un viaje sobre el peso de llevar a alguien dentro.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/sierrasonora-portada.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/post-sierrasonora.html">
+    <meta property="og:type" content="article">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #080808;
+            /* CAMBIO DE COLOR: Naranja Óxido / Ámbar para el mood Indie/Folk */
+            --accent: #ff7300; 
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Space Mono', monospace;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 115, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            z-index: 1000; background-size: 100% 3px, 3px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 20px; right: 20px;
+            background: white; color: black;
+            padding: 10px 15px; font-weight: 900;
+            border: none; cursor: pointer;
+            box-shadow: 4px 4px 0px var(--accent);
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .post-header { position: relative; margin-bottom: 40px; }
+        .img-frame { border: 6px solid var(--accent); padding: 5px; background: var(--bg); }
+        .img-frame img { width: 100%; height: auto; display: block; filter: grayscale(1) contrast(1.1); }
+        
+        .tag-section {
+            position: absolute; top: -15px; left: -10px;
+            background: var(--accent); color: white;
+            padding: 8px 15px; font-weight: 900;
+            transform: rotate(-3deg); font-size: 1rem;
+            box-shadow: 4px 4px 0px white; z-index: 10;
+        }
+
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 8vw, 5rem);
+            color: white; line-height: 0.9; margin: 30px 0;
+            text-transform: uppercase;
+        }
+        .post-title span { color: var(--accent); }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 40px; }
+
+        .meta-bar {
+            border-top: 1px solid #333; border-bottom: 1px solid #333;
+            padding: 15px 0; margin-bottom: 30px;
+            color: var(--accent); font-size: 0.7rem;
+            display: flex; flex-wrap: wrap; gap: 15px; text-transform: uppercase; font-weight: 700;
+        }
+
+        .content p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem; line-height: 1.6; color: #ccc;
+            margin-bottom: 25px;
+        }
+        .content p::first-letter {
+            font-size: 4rem; float: left; margin-right: 12px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .secondary-img { margin: 30px 0; border: 1px solid #333; padding: 5px; background: #111; }
+        .secondary-img img { width: 100%; display: block; filter: grayscale(1) sepia(0.2); }
+
+        /* SECCIÓN SOBRE LA BANDA */
+        .bio-section {
+            background: #111; padding: 30px; margin: 50px 0;
+            border: 1px solid #222; position: relative;
+        }
+        .bio-section h2 { font-family: 'Syne'; color: white; margin-bottom: 20px; font-size: 1.5rem; text-transform: uppercase;}
+        .bio-section p { font-size: 1rem; color: #aaa; line-height: 1.5; font-family: 'Space Mono'; }
+        .bio-tag { background: var(--accent); color: white; padding: 5px 10px; font-size: 10px; position: absolute; top: -10px; left: 20px; font-weight: 900; }
+
+        /* MEMORIA DE ARCHIVO */
+        .memory-box {
+            background: #111; border-left: 10px solid var(--accent);
+            padding: 25px; margin: 40px 0;
+        }
+        .memory-box h3 { font-family: 'Syne'; color: var(--accent); margin-bottom: 10px; text-transform: uppercase; font-size: 1.2rem; }
+        .memory-box p { font-size: 0.95rem; font-style: italic; color: #888; line-height: 1.4; font-family: 'Space Mono'; }
+
+        /* COMPARTIR */
+        .share-container {
+            margin: 40px 0; padding: 20px;
+            border-top: 1px solid #333;
+        }
+        .share-title { font-family: 'Syne'; font-size: 12px; margin-bottom: 15px; color: var(--accent); }
+        .share-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+        .share-btn {
+            background: #1a1a1a; color: white; border: none; padding: 10px 15px;
+            font-family: 'Space Mono'; font-size: 10px; cursor: pointer; text-decoration: none;
+            transition: 0.3s; font-weight: 700; border: 1px solid #333;
+        }
+        .share-btn:hover { background: white; color: black; }
+
+        .sidebar-playlist {
+            background: #111; border: 4px solid var(--accent);
+            padding: 20px; position: sticky; top: 40px; height: fit-content;
+        }
+        .playlist-header h4 { font-family: 'Syne'; line-height: 1; margin-bottom: 20px; font-size: 1.5rem; }
+        .track-item { display: flex; gap: 10px; margin-bottom: 12px; font-size: 11px; align-items: center; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        .track-num { color: var(--accent); font-weight: 900; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .sidebar-playlist { position: static; margin-top: 40px; }
+            .post-title { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <div class="container">
+        
+        <header class="post-header">
+            <div class="tag-section">#ESCENANACIONAL</div>
+            <div class="img-frame">
+                <!-- IMAGEN 1: PORTADA -->
+                <img src="sierrasonora-portada.jpg" alt="Sierra Sonora En Mi Piel">
+            </div>
+        </header>
+
+        <h1 class="post-title">¿POR QUÉ TE TATÚAS A ALGUIEN?:<br><span>SIERRA SONORA Y SU NUEVO EP</span></h1>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="meta-bar">
+                    <span>ARCHIVO: LANZAMIENTO</span>
+                    <span>|</span>
+                    <span>07 ENERO, 2026</span>
+                </div>
+
+                <article class="content">
+                    <p>Sierra Sonora arranca el año respondiendo a una premisa tan íntima como desgarradora: ¿por qué alguien decide llevar a otra persona grabada en el cuerpo para siempre? A partir de esta inquietud nace <strong>"En Mi Piel"</strong>, un EP conceptual que traza el recorrido emocional sobre el peso de la memoria y la anatomía de las despedidas.</p>
+                    
+                    <p>Dividido en cuatro actos, el material transita por la vida útil de una relación. Arranca con la entrega ciega y el enamoramiento absoluto ("En Mi Piel"), para luego estrellarse contra el desencanto, las dudas y la distancia que retrata "El Viento". El clímax existencial llega en "Qué Más Da (revisitada)", cuestionando qué sucede cuando las promesas se evaporan, para finalmente encontrar la ansiada liberación cerrando el ciclo en "Ahora Ves".</p>
+
+                    <div class="secondary-img">
+                        <!-- IMAGEN 2: BANDA -->
+                        <img src="sierrasonora-banda.jpg" alt="Sierra Sonora Banda">
+                    </div>
+
+                    <p>Mezclado y masterizado por el ingeniero noruego Jørgen Manke, este material apuesta por una sonoridad orgánica, cálida y dolorosamente honesta. Es un manifiesto donde el rock alternativo se tiñe de texturas de soul rock, negándose a mirar a otro lado cuando el ciclo inevitablemente llega a su fin.</p>
+                </article>
+
+                <!-- BIOGRAFÍA DE LA BANDA -->
+                <div class="bio-section">
+                    <div class="bio-tag">EXPEDIENTE DE BANDA</div>
+                    <h2>EL ADN DE SIERRA SONORA</h2>
+                    <p>José Salvador es el cerebro y la voz detrás de este proyecto forjado en Mérida, Yucatán. Fusionando indie, folk y rock alternativo, Sierra Sonora ha construido una sólida base desde su debut en 2021 con el sencillo "Acuérdate", superando hoy las 100,000 reproducciones en plataformas.</p>
+                    <br>
+                    <p>Para la evolución sónica de este nuevo EP, el proyecto se consolida y toma peso como una banda en forma gracias a la colaboración de Mauricio Tinajero (bajo), Daniel Santillán (guitarra) y Rodrigo Tinajero (batería).</p>
+                </div>
+
+                <!-- MEMORIA DE ARCHIVO -->
+                <div class="memory-box">
+                    <h3>MEMORIA DE ARCHIVO</h3>
+                    <p>"Cada canción de este EP es una etapa distinta del proceso emocional: desde la entrega absoluta en favor del otro, hasta el momento exacto en que el dolor queda atrás y da paso a la liberación final."</p>
+                </div>
+
+                <!-- BOTONES COMPARTIR -->
+                <div class="share-container">
+                    <div class="share-title">COMPARTIR ARCHIVO:</div>
+                    <div class="share-buttons">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/post-sierrasonora.html" target="_blank" class="share-btn">FACEBOOK</a>
+                        <a href="https://twitter.com/intent/tweet?url=https://elrockdetodoslosdias.com.mx/post-sierrasonora.html" target="_blank" class="share-btn">X (TWITTER)</a>
+                        <a href="https://api.whatsapp.com/send?text=Checa%20lo%20nuevo%20de%20Sierra%20Sonora:%20https://elrockdetodoslosdias.com.mx/post-sierrasonora.html" target="_blank" class="share-btn">WHATSAPP</a>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-playlist">
+                <div class="playlist-header">
+                    <h4>FICHA<br>TÉCNICA</h4>
+                </div>
+                <div class="track-list">
+                    <div class="track-item"><span class="track-num">LANZAMIENTO</span><span>EP (4 TRACKS)</span></div>
+                    <div class="track-item"><span class="track-num">TÍTULO</span><span>EN MI PIEL</span></div>
+                    <div class="track-item"><span class="track-num">ORIGEN</span><span>MÉRIDA, YUCATÁN</span></div>
+                    <div class="track-item"><span class="track-num">GÉNERO</span><span>INDIE / SOUL ROCK</span></div>
+                </div>
+                
+                <!-- BOTÓN SPOTIFY -->
+                <button style="width:100%; background:white; border:none; padding:15px; margin-top:20px; font-family:'Space Mono'; font-weight:900; cursor:pointer; color: black; box-shadow: 4px 4px 0px var(--accent);" onclick="window.open('https://open.spotify.com/artist/7z92rPq4T1qj1V1c7z92rP')">ESCUCHA AQUÍ</button>
+                
+                <div style="margin-top: 25px; font-size: 9px; color: #666; text-align: center;">PRODUCCIÓN: Jørgen Manke</div>
+            </aside>
+        </div>
+
+    </div>
+
+</body>
+</html>

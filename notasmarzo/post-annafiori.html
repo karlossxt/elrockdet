@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Y REDES SOCIALES -->
+    <title>ESCENA NACIONAL | Anna Fiori: El despertar de la Diosa</title>
+    <meta name="description" content="Anna Fiori anuncia 'Metztli', su tercer disco conceptual de metal sinfónico y prehispánico, acompañado de su primer libro.">
+    
+    <!-- Configuración para Redes Sociales -->
+    <meta property="og:title" content="ANNA FIORI - Metztli [EL ROCK DE TODOS LOS DÍAS]">
+    <meta property="og:description" content="Metal sinfónico, mitología nahua y el proyecto más ambicioso de su carrera.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/annafiori-portada.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/post-annafiori.html">
+    <meta property="og:type" content="article">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #080808;
+            /* CAMBIO DE COLOR: Cian Místico / Luz de Luna */
+            --accent: #06b6d4; 
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Space Mono', monospace;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(6, 182, 212, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            z-index: 1000; background-size: 100% 3px, 3px 100%; pointer-events: none;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 20px; right: 20px;
+            background: white; color: black;
+            padding: 10px 15px; font-weight: 900;
+            border: none; cursor: pointer;
+            box-shadow: 4px 4px 0px var(--accent);
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .post-header { position: relative; margin-bottom: 40px; }
+        .img-frame { border: 6px solid var(--accent); padding: 5px; background: var(--bg); }
+        .img-frame img { width: 100%; height: auto; display: block; filter: grayscale(1) contrast(1.1); }
+        
+        .tag-section {
+            position: absolute; top: -15px; left: -10px;
+            background: var(--accent); color: white;
+            padding: 8px 15px; font-weight: 900;
+            transform: rotate(-3deg); font-size: 1rem;
+            box-shadow: 4px 4px 0px white; z-index: 10;
+        }
+
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 8vw, 5rem);
+            color: white; line-height: 0.9; margin: 30px 0;
+            text-transform: uppercase;
+        }
+        .post-title span { color: var(--accent); }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 40px; }
+
+        .meta-bar {
+            border-top: 1px solid #333; border-bottom: 1px solid #333;
+            padding: 15px 0; margin-bottom: 30px;
+            color: var(--accent); font-size: 0.7rem;
+            display: flex; flex-wrap: wrap; gap: 15px; text-transform: uppercase; font-weight: 700;
+        }
+
+        .content p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem; line-height: 1.6; color: #ccc;
+            margin-bottom: 25px;
+        }
+        .content p::first-letter {
+            font-size: 4rem; float: left; margin-right: 12px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .secondary-img { margin: 30px 0; border: 1px solid #333; padding: 5px; background: #111; }
+        .secondary-img img { width: 100%; display: block; filter: grayscale(1) contrast(1.1); }
+
+        .tracklist-box { margin: 30px 0; padding: 20px; border: 1px dashed #444; background: #0a0a0a; }
+        .tracklist-box h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 15px; font-size: 1.2rem; text-transform: uppercase;}
+        .tracklist-box ul { list-style: none; padding: 0; font-family: 'Space Mono'; font-size: 0.9rem; color: #bbb; line-height: 1.8; }
+        .tracklist-box ul li::before { content: "► "; color: var(--accent); font-size: 0.8rem; }
+
+        /* SECCIÓN SOBRE LA BANDA */
+        .bio-section {
+            background: #111; padding: 30px; margin: 50px 0;
+            border: 1px solid #222; position: relative;
+        }
+        .bio-section h2 { font-family: 'Syne'; color: white; margin-bottom: 20px; font-size: 1.5rem; text-transform: uppercase;}
+        .bio-section p { font-size: 1rem; color: #aaa; line-height: 1.5; font-family: 'Space Mono'; }
+        .bio-tag { background: var(--accent); color: white; padding: 5px 10px; font-size: 10px; position: absolute; top: -10px; left: 20px; font-weight: 900; }
+
+        /* MEMORIA DE ARCHIVO */
+        .memory-box {
+            background: #111; border-left: 10px solid var(--accent);
+            padding: 25px; margin: 40px 0;
+        }
+        .memory-box h3 { font-family: 'Syne'; color: var(--accent); margin-bottom: 10px; text-transform: uppercase; font-size: 1.2rem; }
+        .memory-box p { font-size: 0.95rem; font-style: italic; color: #888; line-height: 1.4; font-family: 'Space Mono'; }
+
+        /* COMPARTIR */
+        .share-container {
+            margin: 40px 0; padding: 20px;
+            border-top: 1px solid #333;
+        }
+        .share-title { font-family: 'Syne'; font-size: 12px; margin-bottom: 15px; color: var(--accent); }
+        .share-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+        .share-btn {
+            background: #1a1a1a; color: white; border: none; padding: 10px 15px;
+            font-family: 'Space Mono'; font-size: 10px; cursor: pointer; text-decoration: none;
+            transition: 0.3s; font-weight: 700; border: 1px solid #333;
+        }
+        .share-btn:hover { background: white; color: black; }
+
+        .sidebar-playlist {
+            background: #111; border: 4px solid var(--accent);
+            padding: 20px; position: sticky; top: 40px; height: fit-content;
+        }
+        .playlist-header h4 { font-family: 'Syne'; line-height: 1; margin-bottom: 20px; font-size: 1.5rem; }
+        .track-item { display: flex; gap: 10px; margin-bottom: 12px; font-size: 11px; align-items: center; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        .track-num { color: var(--accent); font-weight: 900; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .sidebar-playlist { position: static; margin-top: 40px; }
+            .post-title { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <div class="container">
+        
+        <header class="post-header">
+            <div class="tag-section">#ESCENANACIONAL</div>
+            <div class="img-frame">
+                <!-- IMAGEN 1: PORTADA -->
+                <img src="annafiori-portada.jpg" alt="Anna Fiori Metztli">
+            </div>
+        </header>
+
+        <h1 class="post-title">EL VIAJE DE LA DIOSA:<br><span>ANNA FIORI ANUNCIA "METZTLI"</span></h1>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="meta-bar">
+                    <span>ARCHIVO: ANUNCIO GLOBAL</span>
+                    <span>|</span>
+                    <span>LANZAMIENTO: 21 MAYO, 2026</span>
+                </div>
+
+                <article class="content">
+                    <p>La escena del metal nacional está a punto de presenciar un hito masivo. Anna Fiori acaba de soltar la bomba: <strong>"Metztli"</strong> será el nombre de su tercer material discográfico, un álbum conceptual diseñado para guiarnos a través de nuestros propios duelos y pérdidas, todo bajo el misticismo y la cosmovisión nahua de la diosa de la luna.</p>
+                    
+                    <p>Pero la ambición no se detiene en lo sonoro. Este esperado disco llegará acompañado de la publicación de su primer libro, una obra profundamente inspirada en la mitología azteca y mexica. La promesa musical es un viaje épico: metal cinemático y verdaderamente sinfónico, colisionando frente a frente con instrumentación prehispánica autóctona.</p>
+
+                    <div class="secondary-img">
+                        <!-- IMAGEN 2: BANDA/FOTO MODELO -->
+                        <img src="annafiori-banda.jpg" alt="Anna Fiori Metztli Arte">
+                    </div>
+
+                    <p>El apartado visual ya es en sí mismo una declaración de intenciones. La impresionante portada, obra de Iossef Guzmán Zamudio (Evolet), es protagonizada por la modelo tapatía Ruby Vizcarra —referente indiscutible del movimiento "Albino Latino"—, luciendo un majestuoso vestuario y una máscara creados completamente a mano.</p>
+                    
+                    <p>Para un proyecto de este calibre, la artillería pesada en la producción era obligatoria. El álbum cuenta con la dirección y orquestación de Jorge Salmay, producción a cargo de Vikram Shankar (reconocido por su trabajo con Within Temptation y Pain of Salvation) y mezcla de Erik Monsonís Azpíroz. Para garantizar el respeto absoluto a las raíces, cuentan con la guía del maestro Agustín García Reyes en la instrumentación prehispánica, y del maestro David Cayetano Tlatoanitsin en las traducciones al náhuatl.</p>
+
+                    <!-- TRACKLIST AÑADIDO ELEGANTEMENTE -->
+                    <div class="tracklist-box">
+                        <h4>FASES DE METZTLI (TRACKLIST OFICIAL)</h4>
+                        <ul>
+                            <li>I: Luna Creciente (Axnoaxka Noojtli)</li>
+                            <li>II: En El Vacío</li>
+                            <li>III: Luna Llena (Xiki Noeso)</li>
+                            <li>IV: Entre Mil Voces</li>
+                            <li>V: Tetzahuitl, Pt. 1: La Revelación</li>
+                            <li>VI: Luna Menguante (Nimotemak)</li>
+                            <li>VII: Dejar Ir</li>
+                            <li>VIII: Luna Nueva (Ximoyolchikaua)</li>
+                            <li>IX: Tetzahuitl, Pt. 2: El Origen</li>
+                        </ul>
+                    </div>
+
+                </article>
+
+                <!-- BIOGRAFÍA DE LA BANDA -->
+                <div class="bio-section">
+                    <div class="bio-tag">EXPEDIENTE DE ARTISTA</div>
+                    <h2>EL ADN DE ANNA FIORI</h2>
+                    <p>Anna Fiori es una de las voces femeninas más importantes y constantes del metal sinfónico en México y Latinoamérica. Con "Metztli", consolida años de labor ardua junto a su equipo, fusionando folclore prehispánico, literatura y música extrema de orquesta.</p>
+                    <br>
+                    <p>Este tercer capítulo en su discografía representa la evolución total de su propuesta, demostrando que el metal hecho en México puede ser conceptual, histórico, cinemático y de calidad de exportación.</p>
+                </div>
+
+                <!-- MEMORIA DE ARCHIVO -->
+                <div class="memory-box">
+                    <h3>MEMORIA DE ARCHIVO</h3>
+                    <p>"Es el trabajo más ambicioso de toda mi carrera, cuyo proceso lleva años de labor por parte de todo mi equipo. Una historia que, sin duda, tocará tu corazón."<br>— <strong>Anna Fiori</strong></p>
+                </div>
+
+                <!-- BOTONES COMPARTIR -->
+                <div class="share-container">
+                    <div class="share-title">COMPARTIR ARCHIVO:</div>
+                    <div class="share-buttons">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/post-annafiori.html" target="_blank" class="share-btn">FACEBOOK</a>
+                        <a href="https://twitter.com/intent/tweet?url=https://elrockdetodoslosdias.com.mx/post-annafiori.html" target="_blank" class="share-btn">X (TWITTER)</a>
+                        <a href="https://api.whatsapp.com/send?text=El%20proyecto%20más%20ambicioso%20de%20Anna%20Fiori:%20https://elrockdetodoslosdias.com.mx/post-annafiori.html" target="_blank" class="share-btn">WHATSAPP</a>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-playlist">
+                <div class="playlist-header">
+                    <h4>FICHA<br>TÉCNICA</h4>
+                </div>
+                <div class="track-list">
+                    <div class="track-item"><span class="track-num">LANZAMIENTO</span><span>ÁLBUM + LIBRO</span></div>
+                    <div class="track-item"><span class="track-num">TÍTULO</span><span>METZTLI</span></div>
+                    <div class="track-item"><span class="track-num">FECHA</span><span>21 MAYO, 2026</span></div>
+                    <div class="track-item"><span class="track-num">GÉNERO</span><span>SYMPHONIC METAL</span></div>
+                </div>
+                
+                <!-- BOTÓN INFO (Sin link proporcionado, queda el #, luego lo actualizas) -->
+                <button style="width:100%; background:white; border:none; padding:15px; margin-top:20px; font-family:'Space Mono'; font-weight:900; cursor:pointer; color: black; box-shadow: 4px 4px 0px var(--accent);" onclick="window.open('#')">MÁS INFO PRÓXIMAMENTE</button>
+                
+                <div style="margin-top: 25px; font-size: 9px; color: #666; text-align: center;">PRODUCCIÓN: VIKRAM SHANKAR</div>
+            </aside>
+        </div>
+
+    </div>
+
+</body>
+</html>
