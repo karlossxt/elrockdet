@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Y REDES SOCIALES -->
+    <title>EXPEDIENTE | EVERYTHING HERE IS ALIVE: Música multidimensional</title>
+    <meta name="description" content="Everything Here Is Alive presenta su álbum homónimo. Una cocreación con la naturaleza desde San José del Cabo.">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="EVERYTHING HERE IS ALIVE [CONEXIÓN TIERRA]">
+    <meta property="og:description" content="Indie/Psychedelic/Folk/Soft/Fae/Punk/Earth Core fermentado.">
+    <meta property="og:image" content="https://tusitio.com/imagen-ehia-principal.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { 
+            --bg: #070907; 
+            --acid-green: #a3e635; 
+            --purple: #8b5cf6; 
+            --white: #f0fdf4; 
+            --border: #1a2e1a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--white); font-family: 'Space Mono', monospace; -webkit-font-smoothing: antialiased; }
+        
+        .scanlines { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(163, 230, 53, 0.02), rgba(139, 92, 246, 0.02)); z-index: 1000; pointer-events: none; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; position: relative; }
+        .btn-cerrar { position: fixed; top: 20px; right: 20px; background: var(--acid-green); color: black; padding: 10px 15px; font-weight: 900; border: none; cursor: pointer; box-shadow: 4px 4px 0px var(--purple); z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase; font-size: 12px; }
+        
+        .post-header { position: relative; margin-bottom: 40px; }
+        .img-frame { border: 4px solid var(--acid-green); padding: 5px; background: var(--bg); margin-bottom: 20px; }
+        .img-frame img { width: 100%; height: auto; display: block; }
+
+        .tag-section { position: absolute; top: -15px; left: -10px; background: var(--purple); color: white; padding: 8px 15px; font-weight: 900; transform: rotate(-2deg); font-size: 0.9rem; box-shadow: 4px 4px 0px var(--acid-green); z-index: 10; }
+        
+        .post-title { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 7vw, 4.5rem); color: white; line-height: 0.85; margin: 30px 0; text-transform: uppercase; }
+        .post-title span { color: var(--acid-green); display: block; }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 40px; }
+        @media (max-width: 900px) { .main-layout { grid-template-columns: 1fr; } }
+
+        .meta-bar { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 15px 0; margin-bottom: 30px; color: var(--acid-green); font-size: 0.75rem; display: flex; flex-wrap: wrap; gap: 15px; text-transform: uppercase; font-weight: 700; }
+        
+        .content p { font-family: 'Inter', sans-serif; font-size: 1.1rem; line-height: 1.7; color: #ccc; margin-bottom: 25px; }
+        .content p::first-letter { font-size: 4.5rem; float: left; margin-right: 12px; line-height: 0.7; color: var(--acid-green); font-weight: 900; font-family: 'Syne'; }
+
+        .quote-box { background: #111; border-left: 6px solid var(--purple); padding: 30px; margin: 40px 0; position: relative; }
+        .quote-box p { font-style: italic; color: var(--acid-green); font-size: 1.1rem; margin-bottom: 10px; }
+        .quote-box span { color: var(--white); font-weight: 900; font-size: 0.8rem; text-transform: uppercase; }
+
+        .track-analysis { margin: 50px 0; }
+        .track-analysis h2 { font-family: 'Syne'; font-size: 2rem; color: var(--white); margin-bottom: 30px; border-bottom: 2px solid var(--acid-green); display: inline-block; }
+        .track-item-detail { margin-bottom: 35px; padding-left: 20px; border-left: 1px solid #333; }
+        .track-item-detail h3 { font-family: 'Syne'; color: var(--acid-green); text-transform: uppercase; margin-bottom: 10px; font-size: 1.3rem; }
+        .track-item-detail p { font-size: 1rem; color: #aaa; line-height: 1.5; font-family: 'Inter', sans-serif; }
+
+        .sidebar-playlist { background: #0d110d; border: 3px solid var(--purple); padding: 25px; position: sticky; top: 40px; height: fit-content; }
+        .track-list-item { display: flex; gap: 10px; margin-bottom: 12px; font-size: 10px; align-items: center; border-bottom: 1px solid #1a2e1a; padding-bottom: 5px; text-transform: uppercase; }
+        .track-num { color: var(--purple); font-weight: 900; }
+
+        .presentation-box { background: var(--acid-green); color: black; padding: 25px; margin: 40px 0; box-shadow: 8px 8px 0px var(--purple); }
+        .presentation-box h2 { font-family: 'Syne'; text-transform: uppercase; margin-bottom: 15px; }
+        .date-item { border-bottom: 1px solid rgba(0,0,0,0.1); padding: 10px 0; font-family: 'Space Mono'; font-weight: 700; }
+
+        .footer-links { margin-top: 30px; display: grid; gap: 10px; }
+        .btn-link { width: 100%; background: white; border: none; padding: 12px; font-family: 'Space Mono'; font-weight: 900; cursor: pointer; color: black; text-transform: uppercase; text-decoration: none; text-align: center; font-size: 12px; }
+        .btn-link:hover { background: var(--acid-green); }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar">CERRAR ARCHIVO [X]</button>
+
+    <div class="container">
+        
+        <header class="post-header">
+            <div class="tag-section">#EARTH-CORE #FERMENTACIÓN</div>
+            <div class="img-frame">
+                <!-- IMAGEN 1: PORTADA O BANDA -->
+                <img src="tu-imagen-1.png" alt="Everything Here Is Alive">
+            </div>
+        </header>
+
+        <h1 class="post-title">MÚSICA MULTIDIMENSIONAL:<span>EVERYTHING HERE IS ALIVE</span></h1>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="meta-bar">
+                    <span>REGISTRO: INDIE / PSYCHEDELIC / FAE / PUNK</span>
+                    <span>|</span>
+                    <span>ORIGEN: SAN JOSÉ DEL CABO, BCS</span>
+                </div>
+
+                <article class="content">
+                    <p>Everything Here Is Alive (EHIA) es una banda originaria de San José del Cabo, Baja California Sur, México, integrada por Andréanne Levasseur, Stosh Lindsey, Eliot Deutch Buchanan, Sebastian Maschat y Rodrigo Montes. Es un proyecto que se define por canciones que nacen de un canal que va mas allá de su ser, en donde cambian su forma siempre tratando de ser lo más auténticos y verdaderos a estas transmisiones.</p>
+                    
+                    <p>Sus canciones recorren distintos géneros e idiomas, expresándose más allá de las palabras. Si tuvieran que definirse en un género musical, ese sería el ‘Indie/Psychedelic/Folk/Soft/Fae/Punk/Earth Core’ fermentado. Los hongos y la naturaleza son la principal fuente de inspiración.</p>
+
+                    <div class="quote-box">
+                        <p>“Quería crear un proyecto musical y llené una página entera de todas las ideas que tenía en mente. Se me ocurrió abrir un libro al azar y una por una surgieron las palabras; ‘Everything…Here…Is…Alive’. Me reí porque en ese momento el libro me estaba hablando a su manera, expresándose como a veces solo los objetos lo hacen. Ese libro me dio la respuesta y se volvió mi filosofía”.</p>
+                        <span>— Andréanne Levasseur</span>
+                    </div>
+
+                    <div class="img-frame">
+                        <!-- IMAGEN 2 -->
+                        <img src="tu-imagen-2.png" alt="Proceso creativo EHIA">
+                    </div>
+
+                    <p>Everything Here Is Alive presenta su primer álbum homónimo, concebido bajo un proceso largo (de ahí la idea de fermentación). Andréanne, lider del proyecto, había trabajado en varios temas, pero no fue hasta 2022 cuando se le ofreció abrir el concierto de Alice Phoebe Lou en San Jose del Cabo, hecho que la motivó a terminar las canciones.</p>
+
+                    <div class="quote-box" style="border-left-color: var(--acid-green);">
+                        <p>“Pasé por muchas emociones, sentía mucha presión de tener todo listo para presentar mis canciones compartiendo el escenario con una gran artista que admiro tanto como lo es Alice. Fue muy difícil, pero esa oportunidad me empujó a crear y profundizar, disfruté mucho el proceso de creación de mi propio universo”.</p>
+                        <span>— Andréanne Levasseur</span>
+                    </div>
+
+                    <p>El álbum está integrado por nueve temas que son composiciones de Andréanne y Stosh Lindsey, quien también tomó el rol de productor en su propio estudio. Las voces fueron grabadas en el estudio del Hotel El Ganzo (foro cultural ubicado en San Jose del Cabo) donde se finalizó el proceso de grabación con la producción de Rodrigo Montes aka ‘Roch’. La mezcla corrió a cargo de Stosh y Lazlo Haenger, para finalmente ser masterizado por Lazlo en Butterama Studios en Berlin.</p>
+
+                    <div class="img-frame">
+                        <!-- IMAGEN 3 -->
+                        <img src="tu-imagen-3.png" alt="EHIA en vivo">
+                    </div>
+
+                    <section class="track-analysis">
+                        <h2>EL UNIVERSO DE CADA TEMA</h2>
+                        
+                        <div class="track-item-detail">
+                            <h3>1. Walking Planets</h3>
+                            <p>‘Esta canción la escribí con mi amigo lain Scriven en un rancho de chivas ubicado a las afueras de Los Cabos, en épocas de COVID. Es una canción que habla de nuestro amor por la tierra, mientras hablábamos de ese sentimiento de desesperación que tenemos frente a nuestra humanidad. ‘</p>
+                        </div>
+
+                        <div class="track-item-detail">
+                            <h3>2. Baile Anímale Oaxaqueña</h3>
+                            <p>‘Estaba por emprender un viaje a Oaxaca para recolectar hongos, y escribí esta canción en una ceremonia justo una semana antes de irme. Habla de aprender a ser un animal, como ya lo somos, y no tener miedo de nuestro propio grito. Los animales no se disculpan por hacer ruido, por expresarse. ‘</p>
+                        </div>
+
+                        <div class="track-item-detail">
+                            <h3>3. Fox</h3>
+                            <p>‘Intenté no escribir una canción y escribí una canción. Nació de un viaje con mi papá, empecé a ver muchos zorros y leí que Carl Jung asociaba mucho los zorros con los padres. La escribí teniendo presente una memoria muy especial debajo de una palapa en casa de Stosh. ‘</p>
+                        </div>
+
+                        <div class="img-frame">
+                            <!-- IMAGEN 4 -->
+                            <img src="tu-imagen-4.png" alt="Detalle del álbum">
+                        </div>
+
+                        <div class="track-item-detail">
+                            <h3>4. Reason Why</h3>
+                            <p>‘Después de un concierto regresé a casa muy inspirada en crear, cualquier cosa, así que, elegí escribir una canción sobre un amigo que siempre estaba triste a pesar de que el tenía mucho amor en su corazón. ‘</p>
+                        </div>
+
+                        <div class="track-item-detail">
+                            <h3>5. Magnitudes</h3>
+                            <p>‘Viene de un loop improvisado realizado en el mismo rancho de chivas con Stosh. Abrí mis labios y salieron esas letras. No sé muy bien qué significa, pero sí sé que te lleva en un lugar morado en el espacio, en donde flotas a gusto. Un lugar morado entre-mundos.’</p>
+                        </div>
+
+                        <div class="track-item-detail">
+                            <h3>6. Holograms</h3>
+                            <p>‘Inspirada en un poema que realicé trabajando en una fábrica en Montreal para ahorrar y regresar a México. Habla de disociarte en la ciudad y de encontrar tu camino hacia la naturaleza, en donde vives tu esencia más auténtica. ‘</p>
+                        </div>
+
+                        <div class="track-item-detail">
+                            <h3>7. Deva</h3>
+                            <p>‘Esta canción nació del más allá. Sentada en el rancho de chivas, sola, en el piso de cocina, agarré la guitarra y se desató un sentimiento muy chistoso e intenso. Creo que habla de la perspectiva que tienen las hadas. ‘</p>
+                        </div>
+
+                        <div class="track-item-detail">
+                            <h3>8. Sound Brew</h3>
+                            <p>‘Escrita también durante COVID, esta canción habla de tiempos de grandes cambios, los cuáles vivimos a nivel personal y mundial. ‘</p>
+                        </div>
+
+                        <div class="track-item-detail">
+                            <h3>9. The Door of The House We Rented...</h3>
+                            <p>‘Escribí esta canción en Prince Edward Island, Canadá. Las relaciones de familia pueden ser difíciles, pero nos dan la oportunidad de crecer juntos. Es una oportunidad de transformar el sufrimiento en dicha. ‘</p>
+                        </div>
+                    </section>
+
+                    <div class="img-frame">
+                        <!-- IMAGEN 5 -->
+                        <img src="tu-imagen-5.png" alt="Cierre de nota">
+                    </div>
+
+                    <div class="presentation-box">
+                        <h2>PRESENTACIONES / MARZO 2026</h2>
+                        <div class="date-item">21 MARZO: FESTIVAL DE LA GUITARRA (CDMX)</div>
+                        <div class="date-item">26, 27, 29 MARZO: SURF FILM FESTIVAL (GUERRERO)</div>
+                        <p style="margin-top: 15px; font-size: 0.9rem; font-weight: 700;">“Será una versión acústica del álbum, solo yo con mi guitarra. Será un poco como regresar a la raíz de las canciones”. – Andréanne</p>
+                    </div>
+                </article>
+            </div>
+
+            <aside class="sidebar-playlist">
+                <div class="playlist-header">
+                    <h4 style="font-family: 'Syne'; font-size: 1.2rem; margin-bottom: 20px; color: var(--acid-green);">ÁLBUM<br>HOMÓNIMO</h4>
+                </div>
+                <div class="track-list">
+                    <div class="track-list-item"><span class="track-num">01</span><span>Walking Planets</span></div>
+                    <div class="track-list-item"><span class="track-num">02</span><span>Baile Anímale</span></div>
+                    <div class="track-list-item"><span class="track-num">03</span><span>Fox</span></div>
+                    <div class="track-list-item"><span class="track-num">04</span><span>Reason Why</span></div>
+                    <div class="track-list-item"><span class="track-num">05</span><span>Magnitudes</span></div>
+                    <div class="track-list-item"><span class="track-num">06</span><span>Holograms</span></div>
+                    <div class="track-list-item"><span class="track-num">07</span><span>Deva</span></div>
+                    <div class="track-list-item"><span class="track-num">08</span><span>Sound Brew</span></div>
+                    <div class="track-list-item"><span class="track-num">09</span><span>The Door...</span></div>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="https://fanlink.tv/listenehia?" target="_blank" class="btn-link" style="background: var(--acid-green);">ESCUCHAR ÁLBUM</a>
+                    <a href="https://www.instagram.com/everythinghereisalive" target="_blank" class="btn-link">INSTAGRAM</a>
+                    <a href="#" class="btn-link">YOUTUBE</a>
+                </div>
+                
+                <div style="margin-top: 25px; font-size: 9px; color: #666; text-align: center; text-transform: uppercase;">
+                    Mezcla: Stosh & Lazlo <br>
+                    Master: Butterama (Berlín)
+                </div>
+            </aside>
+        </div>
+
+    </div>
+
+</body>
+</html>
