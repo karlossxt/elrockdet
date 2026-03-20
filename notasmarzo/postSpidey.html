@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANTALLAS | Spider-Man: Brand New Day - El regreso oscuro</title>
+
+    <!-- METAS OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="¡Habemus tráiler! Spider-Man: Brand New Day promete un regreso oscuro y callejero">
+    <meta property="og:description" content="Tras meses de teorías, por fin tenemos el primer vistazo a la nueva era del arácnido en el MCU.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/spiderman-hero.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasmarzo/postSpidey.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Spider-Man: Brand New Day - El Regreso del Héroe Callejero">
+    <meta name="twitter:description" content="Punisher, Escorpión y una Nueva York más peligrosa que nunca. Análisis del tráiler.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/spiderman-hero.jpg">
+    <meta name="twitter:site" content="@ElRockde">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #dc2626; /* Rojo Spidey */
+            --white: #ffffff;
+            --gray: #1a1a1a;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(220, 38, 38, 0.05) 50%, rgba(0, 0, 0, 0.2) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--accent); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            text-decoration: none; font-size: 12px;
+        }
+
+        /* HEADER */
+        .post-header { margin-bottom: 60px; border-left: 10px solid var(--accent); padding-left: 30px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.2rem, 7vw, 5.5rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+        }
+
+        /* IMAGEN HERO */
+        .img-hero { border: 1px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
+        .img-hero img { width: 100%; display: block; filter: saturate(1.2) contrast(1.1); }
+
+        /* IMAGENES DENTRO DEL TEXTO */
+        .img-inline { width: 100%; border: 1px solid #333; margin: 30px 0; padding: 5px; }
+        .img-inline img { width: 100%; display: block; }
+
+        .meta-strip {
+            border-top: 1px solid #333; border-bottom: 1px solid #333;
+            padding: 20px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content p {
+            font-size: 1.2rem; font-weight: 400; color: #a1a1aa;
+            margin-bottom: 35px; line-height: 1.7;
+        }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* CAJA DE TEORÍAS */
+        .theory-box {
+            background: rgba(220, 38, 38, 0.05); border: 1px solid var(--accent);
+            padding: 40px; margin: 60px 0; position: relative;
+        }
+        .theory-box h3 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
+        .theory-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
+        .theory-list li { margin-bottom: 20px; border-left: 3px solid var(--accent); padding-left: 15px; color: #ccc; }
+        .theory-list b { color: var(--white); display: block; margin-bottom: 5px; text-transform: uppercase; }
+
+        /* VIDEO YOUTUBE */
+        .video-container {
+            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+            border: 1px solid var(--accent); margin: 60px 0;
+        }
+        .video-container iframe {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        }
+
+        /* SIDEBAR */
+        .sidebar-intel {
+            background: #0a0a0a; border: 1px solid #333;
+            padding: 30px; position: sticky; top: 100px; height: fit-content;
+        }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; font-size: 1rem; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #71717a; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        /* BOTONES COMPARTIR */
+        .share-section {
+            margin: 40px 0; padding: 20px; border: 1px dashed #444;
+            display: flex; align-items: center; gap: 20px;
+        }
+        .share-btns { display: flex; gap: 15px; }
+        .share-btns a { 
+            color: white; font-size: 18px; width: 40px; height: 40px; 
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid #333; text-decoration: none; transition: 0.3s;
+        }
+        .share-btns a:hover { background: var(--accent); color: white; border-color: var(--accent); }
+
+        .post-footer {
+            margin-top: 80px; padding: 60px 0; border-top: 1px solid #333; text-align: center;
+        }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2rem; color: var(--accent); font-style: italic; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <a href="index.html" class="btn-cerrar">CERRAR [X]</a>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">SECCIÓN: PANTALLAS // INTEL: SPIDER-MAN 4</span>
+            <h1 class="post-title">HABEMUS TRÁILER:<br>SPIDER-MAN<span> BRAND NEW DAY</span></h1>
+        </header>
+
+        <!-- IMAGEN 1 (HERO) -->
+        <div class="img-hero">
+            <img src="spiderman-hero.jpg" alt="Spider-Man Brand New Day Trailer">
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>TONO: OSCURO / CALLEJERO</span>
+            <span>STATUS: URGENTE</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>Tras meses de teorías, por fin tenemos el primer vistazo a la nueva era del arácnido en el MCU. Aunque el título <strong>"Brand New Day"</strong> remite inevitablemente al polémico cómic de Dan Slott, el avance deja claro que la película tomará un rumbo distinto, enfocándose en las consecuencias directas de <em>No Way Home</em>.</p>
+                    
+                    <h3>UN SPIDEY MÁS CALLEJERO Y LETAL</h3>
+                    <p>Lo que más destaca del tráiler es el tono. Olvida las batallas espaciales; aquí vemos a un Peter Parker lidiando con el crimen de Nueva York. Las tomas son espectaculares y los easter eggs a portadas clásicas son un regalo para los fans.</p>
+
+                    <!-- IMAGEN 2 -->
+                    <div class="img-inline">
+                        <img src="spiderman-scorpion.jpg" alt="Escorpión y la Mano">
+                    </div>
+
+                    <p>La gran sorpresa es el regreso de <strong>Michael Mando como Escorpión</strong>, quien finalmente luce un diseño imponente. Además, la aparición de <em>The Hand</em> sugiere que veremos secuencias de acción más violentas y oscuras, propias del mundo ninja.</p>
+
+                    <h3>ALIADOS Y AMENAZAS DE PESO</h3>
+                    <p>La conversación en redes se la ha robado <strong>Jon Bernthal</strong>. El regreso de <em>The Punisher</em> no es solo un cameo; su choque ideológico con Spider-Man pondrá a prueba la brújula moral de un Peter que está más solo que nunca.</p>
+
+                    <!-- IMAGEN 3 -->
+                    <div class="img-inline">
+                        <img src="spiderman-punisher.jpg" alt="Spider-Man vs Punisher">
+                    </div>
+
+                    <p>El tráiler confirma que Zendaya (MJ) y Jacob Batalon (Ned) están de vuelta, pero el dolor persiste: siguen sin recordar quién es Peter. A esto se suma el misterioso papel de <strong>Sadie Sink</strong>, quien apunta a ser una antagonista clave que pondrá en jaque al héroe.</p>
+
+                    <h3>EL MISTERIO DE SUS PODERES</h3>
+                    <p>El conflicto central parece ser físico además de emocional. Tras el hechizo del Doctor Strange, los poderes de Peter están fallando. Esta inestabilidad lo llevará a buscar a <strong>Bruce Banner</strong>, intentando descubrir si su condición es algo biológico o un efecto secundario del multiverso.</p>
+
+                    <!-- IMAGEN 4 -->
+                    <div class="img-inline">
+                        <img src="spiderman-sadie.jpg" alt="Sadie Sink en Spider-Man">
+                    </div>
+
+                    <!-- CAJA DE TEORÍAS -->
+                    <div class="theory-box">
+                        <h3>🕵️‍♂️ TEORÍAS Y RUMORES</h3>
+                        <ul class="theory-list">
+                            <li>
+                                <b>¿Quién es Sadie Sink?</b>
+                                La teoría más fuerte es que interpreta a Black Cat (Felicia Hardy) o una versión de Silver Sable. Sería alguien que ama a Spider-Man pero no conoce a Parker.
+                            </li>
+                            <li>
+                                <b>La falla de los poderes</b>
+                                Muchos fans teorizan que el hechizo de Dr. Strange dejó una "fractura" en la esencia de Peter, y el universo está tratando de "borrarlo" por completo.
+                            </li>
+                            <li>
+                                <b>¿Por qué Bruce Banner?</b>
+                                Se especula que Peter no confía en la magia después de lo que pasó. Banner podría descubrir que el ADN de Peter está mutando de nuevo (guiño a la saga de los seis brazos).
+                            </li>
+                            <li>
+                                <b>Punisher como mentor</b>
+                                Frank Castle no sería un villano, sino que aparecería para "entrenar" a un Spider-Man que ha decidido dejar de ser el "amigable vecino" para sobrevivir.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- VIDEO YOUTUBE -->
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/watch?v=Pw1X-57Ms-8" title="Spider-Man Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- COMPARTIR -->
+                    <div class="share-section">
+                        <span style="font-family:'Space Mono'; font-size:12px; color:var(--accent);">DIFUNDIR INTEL:</span>
+                        <div class="share-btns">
+                            <a href="https://wa.me/?text=Spider-Man: Brand New Day - Análisis del Tráiler: https://elrockdetodoslosdias.com.mx/notasmarzo/postSpidey.html" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/notasmarzo/postSpidey.html" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/intent/tweet?text=¡Habemus tráiler! Spider-Man: Brand New Day&url=https://elrockdetodoslosdias.com.mx/notasmarzo/postSpidey.html" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>PERFILES DETECTADOS</h4>
+                    <div class="intel-item">
+                        <b>PETER PARKER</b>
+                        Estado: Identidad borrada. Solo en Nueva York.
+                    </div>
+                    <div class="intel-item">
+                        <b>FRANK CASTLE</b>
+                        Alias: The Punisher. Vigilante extremo.
+                    </div>
+                    <div class="intel-item">
+                        <b>MAC GARGAN</b>
+                        Alias: Escorpión. Armadura de alta tecnología.
+                    </div>
+                    <div class="intel-item">
+                        <b>SADIE SINK</b>
+                        Rol: No clasificado. Posible amenaza nivel Omega.
+                    </div>
+                    <button style="width:100%; background:var(--accent); color:white; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">VER TRÁILER OFICIAL</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>ESTA PUEDE SER LA MEJOR PELICULA DEL ARACNICO EN EL UCM.</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // PANTALLAS © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>
