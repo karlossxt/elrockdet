@@ -1,0 +1,30 @@
+name: Generate sitemap
+
+on:
+  push:
+    branches: [ main ] # Asegúrate de que este sea el nombre de tu rama principal
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    name: Generate a sitemap
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0 
+
+    - name: Generate the sitemap
+      uses: cicirello/generate-sitemap@v1
+      with:
+        base-url-path: https://elrockdet.com # Cambia esto por tu dominio real en Neubox
+
+    - name: Commit and push
+      run: |
+        if [[ `git status --porcelain sitemap.xml` ]]; then
+          git config --global user.name 'github-actions'
+          git config --global user.email 'actions@github.com'
+          git add sitemap.xml
+          git commit -m "Automated sitemap update"
+          git push
+        fi
