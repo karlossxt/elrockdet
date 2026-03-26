@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO AVANZADO -->
+    <title>Phantom en Wacken Open Air 2026: Metal Mexicano en Alemania</title>
+    <meta name="description" content="La banda de Speed Metal, Phantom (Guadalajara), confirma su actuación en el Wacken Open Air 2026. Conoce los detalles de su presentación en el 35 aniversario del festival de metal más grande del mundo.">
+    <meta name="keywords" content="Phantom, Wacken Open Air 2026, Metal Mexicano, WOA 2026, Speed Metal México, Bandas mexicanas en Wacken, Metal de Guadalajara">
+    <link rel="canonical" href="https://elrockdetodoslosdias.com.mx/notasmarzo/phantom-mexico-wacken-open-air-2026.html" />
+
+    <!-- Open Graph (Facebook / WhatsApp) -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PHANTOM confirma su lugar en Wacken Open Air 2026 [EXPEDIENTE]">
+    <meta property="og:description" content="El Speed Metal de Guadalajara llega a la tierra prometida. Phantom se une al cartel del 35 aniversario de Wacken.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/phantom-wacken-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasmarzo/phantom-mexico-wacken-open-air-2026.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+    <meta property="og:locale" content="es_MX">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PHANTOM: De Guadalajara a Wacken Open Air 2026">
+    <meta name="twitter:description" content="La fuerza del Speed Metal mexicano llega al escenario de Wacken en Alemania.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/phantom-wacken-cover.jpg">
+    <meta name="twitter:site" content="@ElRockde">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ADN VISUAL: AMARILLO INDUSTRIAL */
+        :root { --bg: #080808; --accent: #facc15; --white: #eeeeee; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--white); font-family: 'Space Mono', monospace; -webkit-font-smoothing: antialiased; }
+        .scanlines { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 255, 0, 0.03)); z-index: 1000; background-size: 100% 3px, 3px 100%; pointer-events: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; position: relative; }
+        .btn-cerrar { position: fixed; top: 20px; right: 20px; background: white; color: black; padding: 10px 15px; font-weight: 900; border: none; cursor: pointer; box-shadow: 4px 4px 0px var(--accent); z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase; font-size: 12px; }
+        .post-header { position: relative; margin-bottom: 40px; }
+        .img-frame { border: 6px solid var(--accent); padding: 5px; background: var(--bg); }
+        .img-frame img { width: 100%; height: auto; display: block; filter: grayscale(1) contrast(1.2); }
+        .tag-section { position: absolute; top: -15px; left: -10px; background: var(--accent); color: black; padding: 8px 15px; font-weight: 900; transform: rotate(-3deg); font-size: 1rem; box-shadow: 4px 4px 0px white; z-index: 10; }
+        .post-title { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 8vw, 4.2rem); color: white; line-height: 0.9; margin: 30px 0; text-transform: uppercase; }
+        .post-title span { color: var(--accent); }
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 40px; }
+        .meta-bar { border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 15px 0; margin-bottom: 30px; color: var(--accent); font-size: 0.7rem; display: flex; flex-wrap: wrap; gap: 15px; text-transform: uppercase; font-weight: 700; }
+        .content p { font-family: 'Inter', sans-serif; font-size: 1.15rem; line-height: 1.6; color: #ccc; margin-bottom: 25px; }
+        .content p::first-letter { font-size: 4rem; float: left; margin-right: 12px; line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne'; }
+        
+        .related-note { border: 1px dashed var(--accent); padding: 20px; margin-top: 40px; display: flex; align-items: center; gap: 20px; text-decoration: none; color: inherit; transition: background 0.3s; }
+        .related-note:hover { background: #1a1a1a; }
+        .related-note img { width: 80px; height: 80px; object-fit: cover; border: 2px solid var(--accent); }
+        .related-info h4 { font-family: 'Syne'; font-size: 0.9rem; color: var(--accent); text-transform: uppercase; }
+        .related-info p { font-size: 0.8rem; margin: 0; color: #888; }
+
+        .bio-section { background: #111; padding: 30px; margin: 50px 0; border: 1px solid #222; position: relative; }
+        .bio-section h2 { font-family: 'Syne'; color: white; margin-bottom: 20px; font-size: 1.5rem; text-transform: uppercase;}
+        .bio-tag { background: var(--accent); color: black; padding: 5px 10px; font-size: 10px; position: absolute; top: -10px; left: 20px; font-weight: 900; }
+        .memory-box { background: #111; border-left: 10px solid var(--accent); padding: 25px; margin: 40px 0; }
+        .memory-box h3 { font-family: 'Syne'; color: var(--accent); margin-bottom: 10px; text-transform: uppercase; font-size: 1.2rem; }
+        .sidebar-playlist { background: #111; border: 4px solid var(--accent); padding: 20px; position: sticky; top: 40px; height: fit-content; }
+        .track-item { display: flex; gap: 10px; margin-bottom: 12px; font-size: 11px; align-items: center; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        .track-num { color: var(--accent); font-weight: 900; }
+        
+        @media (max-width: 768px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .sidebar-playlist { position: static; margin-top: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" aria-label="Cerrar nota" onclick="window.location.href='../escena.html'">CERRAR [X]</button>
+
+    <main class="container">
+        
+        <header class="post-header">
+            <div class="tag-section">METAL MEXICANO EN EL MUNDO</div>
+            <div class="img-frame">
+                <img src="phantom-wacken-cover.jpg" alt="Banda Phantom de Guadalajara confirmada para Wacken Open Air 2026">
+            </div>
+        </header>
+
+        <h1 class="post-title">SPEED METAL MEXICANO:<br><span>PHANTOM LLEGA A WACKEN 2026</span></h1>
+
+        <div class="main-layout">
+            
+            <section class="main-content">
+                <div class="meta-bar">
+                    <span>ARCHIVO: EXPORTACIÓN METAL</span>
+                    <span>|</span>
+                    <span>26 MARZO, 2026</span>
+                    <span>|</span>
+                    <span>GUADALAJARA, JALISCO</span>
+                </div>
+
+                <article class="content">
+                    <p>[P]hantom, la imparable fuerza del Speed/Thrash Metal originaria de Guadalajara, ha marcado un hito histórico para la escena nacional. La agrupación ha sido anunciada oficialmente como parte del cartel del 35 aniversario del Wacken Open Air (W:O:A) 2026 en Alemania, el festival de heavy metal más importante del planeta.</p>
+                    
+                    <p>La cita está pactada para el miércoles 29 de julio de 2026 en el Wasteland Stage. Bajo el concepto "Wasted Wednesday", Phantom llevará su sonido crudo y post-apocalíptico a una de las zonas más emblemáticas del festival, donde la energía del metal extremo mexicano resonará ante miles de asistentes internacionales.</p>
+
+                    <div class="img-frame" style="margin: 30px 0; border-width: 2px;">
+                        <img src="phantom-banda-promo.jpg" alt="Integrantes de Phantom, banda de Speed Metal de Guadalajara">
+                    </div>
+
+                    <p>A diferencia de la tradicional Metal Battle, Phantom llega a Wacken como invitado especial. Este estatus es un reconocimiento a la calidad de su producción discográfica, destacando su álbum "Not Midnight Yet". En esta edición histórica, compartirán cartel con leyendas como Judas Priest, Def Leppard, Sepultura e In Flames.</p>
+                </article>
+
+                <!-- NOTA RELACIONADA (Internal Linking para SEO) -->
+                <a href="https://elrockdetodoslosdias.com.mx/notasmarzo/postzecta.html" class="related-note">
+                    <img src="zecta-luz-shadows-cover.jpg" alt="Portada del single Shadows de Zecta Luz">
+                    <div class="related-info">
+                        <h4>Archivo Relacionado</h4>
+                        <p>Zecta Luz: El juicio de las sombras en su nuevo single "Shadows"</p>
+                    </div>
+                </a>
+
+                <div class="bio-section">
+                    <div class="bio-tag">EXPEDIENTE DE BANDA</div>
+                    <h2>PHANTOM: EL ORGULLO DE GUADALAJARA</h2>
+                    <p>Con una trayectoria ascendente basada en la velocidad y el rigor técnico, Phantom se consolida como el máximo exponente del Speed Metal mexicano actual. Su paso por Alemania no solo representa un logro individual, sino el crecimiento de toda la escena de Jalisco.</p>
+                </div>
+            </section>
+
+            <aside class="sidebar-playlist">
+                <div class="playlist-header">
+                    <h4 style="font-family: 'Syne'; font-size: 1.2rem; margin-bottom: 20px;">DETALLES DEL<br>EVENTO</h4>
+                </div>
+                <div class="track-list">
+                    <div class="track-item"><span class="track-num">EVENTO</span><span>WACKEN 2026</span></div>
+                    <div class="track-item"><span class="track-num">FECHA</span><span>29 JULIO 2026</span></div>
+                    <div class="track-item"><span class="track-num">ESCENARIO</span><span>WASTELAND</span></div>
+                    <div class="track-item"><span class="track-num">PAÍS</span><span>ALEMANIA</span></div>
+                    <div class="track-item"><span class="track-num">GÉNERO</span><span>SPEED METAL</span></div>
+                </div>
+                
+                <button style="width:100%; background:white; border:none; padding:15px; margin-top:20px; font-family:'Space Mono'; font-weight:900; cursor:pointer; color: black; box-shadow: 4px 4px 0px var(--accent);" onclick="window.open('https://www.wacken.com')">SITIO OFICIAL W:O:A</button>
+                
+                <div style="margin-top: 25px; font-size: 9px; color: #666; text-align: center;">REPORT ID: [PHANTOM-WACKEN-26]</div>
+            </aside>
+        </div>
+
+    </main>
+
+</body>
+</html>
