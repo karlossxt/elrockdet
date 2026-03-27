@@ -67,6 +67,24 @@
         @media (max-width: 768px) {
             .main-layout { grid-template-columns: 1fr; }
             .sidebar-playlist { position: static; margin-top: 40px; }
+            /* SECCIÓN COMPARTIR */
+        .share-container { margin: 40px 0; border-top: 1px solid #333; padding-top: 20px; }
+        .share-title { font-family: 'Syne'; font-size: 0.8rem; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; }
+        .share-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+        .btn-share { 
+            background: transparent; 
+            border: 1px solid var(--accent); 
+            color: var(--accent); 
+            padding: 8px 15px; 
+            font-family: 'Space Mono'; 
+            font-size: 10px; 
+            font-weight: 700; 
+            cursor: pointer; 
+            text-decoration: none; 
+            transition: all 0.2s; 
+            text-transform: uppercase; 
+        }
+        .btn-share:hover { background: var(--accent); color: black; box-shadow: 4px 4px 0px white; transform: translate(-2px, -2px); }
         }
     </style>
 </head>
@@ -117,6 +135,15 @@
                         <p>Zecta Luz: El juicio de las sombras en su nuevo single "Shadows"</p>
                     </div>
                 </a>
+                <!-- COMPARTIR NOTA -->
+                <div class="share-container">
+                    <h3 class="share-title">DIFUNDIR ARCHIVO [BROADCAST]:</h3>
+                    <div class="share-buttons">
+                        <a href="javascript:void(0)" onclick="shareFB()" class="btn-share">[ FACEBOOK ]</a>
+                        <a href="javascript:void(0)" onclick="shareX()" class="btn-share">[ X / TWITTER ]</a>
+                        <a href="javascript:void(0)" onclick="shareWA()" class="btn-share">[ WHATSAPP ]</a>
+                    </div>
+                </div>
 
                 <div class="bio-section">
                     <div class="bio-tag">EXPEDIENTE DE BANDA</div>
