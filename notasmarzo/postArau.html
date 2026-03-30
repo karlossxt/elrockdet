@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENDA | Sergio Arau: Embotellado de Origen [MULTIFORO ALICIA]</title>
+
+    <!-- METAS OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="SERGIO ARAU: Embotellado de Origen en el Multiforo Alicia">
+    <meta property="og:description" content="El Guacarrock regresa a su templo. Sergio Arau presenta un show único con invitados como Tito Fuentes y Pascual Reyes.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/sergio-arau-hero.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasmarzo/postArau.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SERGIO ARAU - Embotellado de Origen 2026">
+    <meta name="twitter:description" content="Rolas de Botellita de Jerez, Heavy Mex y más en el Alicia. Invitados de lujo.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/sergio-arau-hero.jpg">
+    <meta name="twitter:site" content="@ElRockde">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #facc15; /* Amarillo Guacarrock / Alicia */
+            --white: #f3f4f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(250, 204, 21, 0.03) 50%, rgba(0, 0, 0, 0.1) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        /* --- NUEVA INTERFAZ DE ENCABEZADO --- */
+        .article-frame {
+            border: 2px solid var(--accent);
+            position: relative;
+            margin-top: 40px;
+            padding: 0;
+            background: #000;
+        }
+
+        .ui-tag-top {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            background: var(--accent);
+            color: black;
+            padding: 8px 15px;
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            z-index: 10;
+        }
+
+        .ui-close-btn {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            background: white;
+            color: black;
+            padding: 8px 15px;
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            font-weight: 900;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid var(--accent);
+            z-index: 10;
+            transition: 0.3s;
+        }
+
+        .ui-close-btn:hover { background: var(--accent); color: black; }
+
+        .img-hero-frame { width: 100%; display: block; overflow: hidden; }
+        .img-hero-frame img { width: 100%; display: block; filter: saturate(1.1) contrast(1.1); }
+
+        .post-header-v2 { padding: 40px 30px; border-bottom: 1px solid #222; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 7vw, 4.5rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+        }
+        .post-title span { color: var(--accent); }
+
+        /* --- CUERPO --- */
+        .meta-strip {
+            border-bottom: 1px solid #222;
+            padding: 20px 30px; margin-bottom: 50px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content p { font-size: 1.2rem; color: #9ca3af; margin-bottom: 35px; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* ESTILO ARCHIVO RELACIONADO SEO */
+        .related-archive {
+            margin: 40px 0; border: 1px dashed var(--accent); padding: 20px;
+            display: flex; align-items: center; gap: 20px; background: rgba(250, 204, 21, 0.05);
+            text-decoration: none; transition: 0.3s;
+        }
+        .related-archive:hover { background: rgba(250, 204, 21, 0.1); transform: translateY(-2px); }
+        .related-thumb { width: 100px; height: 100px; flex-shrink: 0; border: 1px solid var(--accent); padding: 3px; background: #000; }
+        .related-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .related-info { display: flex; flex-direction: column; }
+        .related-label { font-family: 'Syne'; font-weight: 800; font-size: 12px; color: var(--accent); text-transform: uppercase; margin-bottom: 5px; }
+        .related-title { font-family: 'Space Mono'; font-size: 13px; color: #ccc; line-height: 1.4; }
+
+        /* CAJA DE EVENTO */
+        .event-box {
+            background: rgba(250, 204, 21, 0.05); border: 1px solid var(--accent);
+            padding: 30px; margin: 40px 0;
+        }
+        .event-box h3 { font-family: 'Syne'; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; }
+        .event-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
+        .event-list li { margin-bottom: 10px; border-left: 3px solid var(--accent); padding-left: 15px; }
+
+        .video-container {
+            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+            border: 1px solid var(--accent); margin: 60px 0;
+        }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        /* SIDEBAR */
+        .sidebar-intel {
+            background: #0d0d12; border: 1px solid #222; padding: 30px; position: sticky; top: 100px;
+        }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #6b7280; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        .share-btns { display: flex; gap: 15px; margin-top: 40px; }
+        .share-btns a { 
+            color: white; font-size: 18px; width: 40px; height: 40px; 
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid #222; text-decoration: none; transition: 0.3s;
+        }
+        .share-btns a:hover { background: var(--accent); color: black; border-color: var(--accent); }
+
+        .post-footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid #222; text-align: center; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 2rem; }
+            .related-archive { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+
+    <article class="container">
+        
+        <!-- MARCO SUPERIOR DE INTERFAZ -->
+        <div class="article-frame">
+            <div class="ui-tag-top">#ALICIA_REPORTS</div>
+            <a href="index.html" class="ui-close-btn">CERRAR [X]</a>
+
+            <div class="img-hero-frame">
+                <img src="sergio-arau-hero.jpg" alt="Sergio Arau Embotellado de Origen Multiforo Alicia">
+            </div>
+
+            <header class="post-header-v2">
+                <span class="tag-sec">AGENDA // INTEL: GUACARROCK</span>
+                <h1 class="post-title">SERGIO ARAU:<br><span>EMBOTELLADO</span> DE ORIGEN</h1>
+            </header>
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>VENUES: MULTIFORO ALICIA</span>
+            <span>STATUS: IMPRESCINDIBLE</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>El legendario Sergio Arau regresa a las bases en una noche que promete ser un viaje por la historia viva del rock mexicano. Bajo el concepto <strong>"Embotellado de Origen"</strong>, el Multiforo Alicia recibirá la potencia del Guacarrock.</p>
+                    
+                    <p>No será un concierto común; Arau desenterrará himnos de <strong>Botellita de Jerez</strong>, Los Mismísimos Ángeles y Los Heavy Mex. La alineación de lujo incluye a Emir Bucio, Enrique Sesma y Randy Corona, garantizando una ejecución técnica impecable y el humor ácido que solo Arau sabe inyectar.</p>
+
+                    <!-- BLOQUE ARCHIVO RELACIONADO (SEO) -->
+                    <aside>
+                        <a href="https://elrockdetodoslosdias.com.mx/notasmarzo/postAgora.html" class="related-archive" title="Ágora: XX Aniversario Zona de Silencio">
+                            <div class="related-thumb">
+                                <img src="agora-hero.jpg" alt="Ágora Zona de Silencio">
+                            </div>
+                            <div class="related-info">
+                                <span class="related-label">ARCHIVO RELACIONADO</span>
+                                <div class="related-title">
+                                    Ágora rompe el silencio: El origen inédito de un clásico del metal mexicano
+                                </div>
+                            </div>
+                        </a>
+                    </aside>
+
+                    <h3>INVITADOS DE PESO</h3>
+                    <p>La noche se pondrá aún más intensa con la participación de <strong>Tito Fuentes (Molotov)</strong> y <strong>Pascual Reyes (San Pascualito Rey)</strong>, dos pilares del rock nacional que se unen a la fiesta de Arau. Como artista abridor, LLamas encenderá los motores del Multiforo Alicia.</p>
+
+                    <div class="event-box">
+                        <h3>HOJA DE RUTA: EL ALICIA</h3>
+                        <ul class="event-list">
+                            <li><b>FECHA:</b> Viernes 17 de abril 2026</li>
+                            <li><b>LUGAR:</b> Multiforo Alicia (Eligio Ancona 145)</li>
+                            <li><b>INICIO:</b> 8:30 PM (Llegar 8:00 PM)</li>
+                            <li><b>COSTOS:</b> Preventa $300 / General $350</li>
+                        </ul>
+                    </div>
+
+                    <!-- VIDEO YOUTUBE (EJEMPLO ALERTA) -->
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/6i-iGZ5L5zQ" title="Sergio Arau - Alarma" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="share-btns">
+                        <a href="https://wa.me/?text=Sergio Arau en el Alicia - Embotellado de Origen: https://elrockdetodoslosdias.com.mx/notasmarzo/postArau.html" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/notasmarzo/postArau.html" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/intent/tweet?text=SERGIO ARAU - Embotellado de Origen 2026&url=https://elrockdetodoslosdias.com.mx/notasmarzo/postArau.html" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>FICHA TÉCNICA</h4>
+                    <div class="intel-item"><b>HEADLINER:</b> Sergio Arau</div>
+                    <div class="intel-item"><b>INVITADOS:</b> Tito Fuentes / Pascual Reyes</div>
+                    <div class="intel-item"><b>ABRIDOR:</b> LLamas</div>
+                    <div class="intel-item"><b>BOLETOS:</b> Taquilla o xoc-tickets.com</div>
+                    <button onclick="window.open('https://xoc-tickets.com')" style="width:100%; background:var(--accent); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">COMPRAR BOLETOS</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3 style="font-family:'Syne'; color:var(--accent);">PASEN LA VOZ. EL GUACARROCK NO HA MUERTO.</h3>
+            <p style="font-family:'Space Mono'; font-size:10px; margin-top:10px;">EL ROCK DE TODOS LOS DÍAS // AGENDA © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>
