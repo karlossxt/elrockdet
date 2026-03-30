@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCENA | Ágora: El origen inédito de Zona de Silencio [XX ANIVERSARIO]</title>
+
+    <!-- METAS OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ÁGORA: Breaking the Silence - El demo inédito en inglés">
+    <meta property="og:description" content="Ágora celebra 20 años de 'Zona de Silencio' liberando el demo original que dio vida a su clásico. Un hallazgo histórico para el metal mexicano.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/agora-hero.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasmarzo/postAgora.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ÁGORA - 20 Años de Zona de Silencio: El Origen Inédito">
+    <meta name="twitter:description" content="La Legión celebra: Ágora libera archivos secretos de su álbum insignia.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/agora-hero.jpg">
+    <meta name="twitter:site" content="@ElRockde">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #f97316; /* Naranja Industrial / Alerta */
+            --white: #f3f4f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(249, 115, 22, 0.04) 50%, rgba(0, 0, 0, 0.1) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--accent); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            text-decoration: none; font-size: 12px;
+        }
+
+        .post-header { margin-bottom: 60px; border-left: 10px solid var(--accent); padding-left: 30px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.2rem, 7vw, 5rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+        }
+
+        .img-hero { border: 1px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
+        .img-hero img { width: 100%; display: block; filter: saturate(0.8) contrast(1.1); }
+
+        .img-inline { width: 100%; border: 1px solid #222; margin: 40px 0; padding: 5px; background: #000; }
+        .img-inline img { width: 100%; display: block; filter: grayscale(0.2); transition: 0.5s; }
+
+        .meta-strip {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 20px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content p { font-size: 1.2rem; font-weight: 400; color: #9ca3af; margin-bottom: 35px; line-height: 1.7; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* ESTILO ARCHIVO RELACIONADO SEO */
+        .related-archive {
+            margin: 40px 0; border: 1px dashed var(--accent); padding: 20px;
+            display: flex; align-items: center; gap: 20px; background: rgba(249, 115, 22, 0.05);
+            text-decoration: none; transition: 0.3s;
+        }
+        .related-archive:hover { background: rgba(249, 115, 22, 0.1); transform: translateY(-2px); }
+        .related-thumb { width: 100px; height: 100px; flex-shrink: 0; border: 1px solid var(--accent); padding: 3px; background: #000; }
+        .related-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .related-info { display: flex; flex-direction: column; }
+        .related-label { font-family: 'Syne'; font-weight: 800; font-size: 12px; color: var(--accent); text-transform: uppercase; margin-bottom: 5px; }
+        .related-title { font-family: 'Space Mono'; font-size: 13px; color: #ccc; line-height: 1.4; }
+
+        .theory-box {
+            background: rgba(249, 115, 22, 0.05); border: 1px solid var(--accent);
+            padding: 40px; margin: 60px 0; position: relative;
+        }
+        .theory-box h3 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
+        .theory-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
+        .theory-list li { margin-bottom: 15px; border-left: 3px solid var(--accent); padding-left: 15px; }
+
+        .video-container {
+            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+            border: 1px solid var(--accent); margin: 60px 0;
+        }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        .sidebar-intel {
+            background: #0d0d12; border: 1px solid #222;
+            padding: 30px; position: sticky; top: 100px; height: fit-content;
+        }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; font-size: 1rem; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #6b7280; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        .share-section {
+            margin: 40px 0; padding: 20px; border: 1px dashed #333;
+            display: flex; align-items: center; gap: 20px;
+        }
+        .share-btns { display: flex; gap: 15px; }
+        .share-btns a { 
+            color: white; font-size: 18px; width: 40px; height: 40px; 
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid #222; text-decoration: none; transition: 0.3s;
+        }
+        .share-btns a:hover { background: var(--accent); color: white; border-color: var(--accent); }
+
+        .post-footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid #222; text-align: center; }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2rem; color: var(--accent); font-style: italic; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 2.2rem; }
+            .related-archive { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <a href="index.html" class="btn-cerrar">CERRAR [X]</a>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">ESCENA NACIONAL // INTEL: ÁGORA XX</span>
+            <h1 class="post-title">ÁGORA: EL ORIGEN<br>DE <span>ZONA DE SILENCIO</span></h1>
+        </header>
+
+        <!-- IMAGEN 1 (HERO) -->
+        <div class="img-hero">
+            <img src="agora-hero.jpg" alt="Ágora Zona de Silencio 20 Aniversario">
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>TRACK: BREAKING THE SILENCE (DEMO)</span>
+            <span>STATUS: XX ANIVERSARIO</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>La legendaria banda de metal progresivo inicia las celebraciones por el XX aniversario de su álbum insignia, <strong>Zona de Silencio</strong>, liberando por primera vez el demo original en inglés que dio vida al proyecto.</p>
+                    
+                    <h3>UN VIAJE AL ADN DE LA BANDA</h3>
+                    <p>Zona de Silencio, lanzado originalmente en 2005, marcó un antes y un después en la escena progresiva de Latinoamérica. Ahora, con este lanzamiento titulado originalmente <strong>"Breaking the Silence"</strong>, Ágora permite a sus fans asomarse al proceso de composición primigenio.</p>
+
+                    <!-- IMAGEN 2 -->
+                    <div class="img-inline">
+                        <img src="agora-demo.jpg" alt="Ágora Breaking the Silence Demo">
+                    </div>
+
+                    <p>"Este primer adelanto es un track que nunca nadie escuchó, hasta ahora", compartió la agrupación a través de sus canales oficiales, abriendo las puertas de su archivo histórico.</p>
+
+                    <!-- BLOQUE ARCHIVO RELACIONADO (SEO) -->
+                    <aside>
+                        <a href="https://elrockdetodoslosdias.com.mx/notasmarzo/postAnnaFiori.html" class="related-archive" title="Leer sobre Anna Fiori 15 Aniversario">
+                            <div class="related-thumb">
+                                <img src="anna-fiori-hero.jpg" alt="Anna Fiori Metztli">
+                            </div>
+                            <div class="related-info">
+                                <span class="related-label">ARCHIVO RELACIONADO</span>
+                                <div class="related-title">
+                                    Anna Fiori celebra 15 años de trayectoria con el estreno de "En El Vacío"
+                                </div>
+                            </div>
+                        </a>
+                    </aside>
+
+                    <h3>LO QUE VIENE PARA LA LEGIÓN</h3>
+                    <p>Este estreno no es un evento aislado. La banda confirmó que esta es solo la primera de varias entregas especiales para conmemorar las dos décadas del disco.</p>
+
+                    <!-- IMAGEN 3 -->
+                    <div class="img-inline">
+                        <img src="agora-legion.jpg" alt="La Legión de Ágora">
+                    </div>
+
+                    <div class="theory-box">
+                        <h3>PRÓXIMAS ENTREGAS: XX ANIVERSARIO</h3>
+                        <ul class="theory-list">
+                            <li><b>RAREZAS:</b> Grabaciones de estudio nunca antes publicadas.</li>
+                            <li><b>ALTERNATIVAS:</b> Versiones descartadas de sus más grandes éxitos.</li>
+                            <li><b>REVERSIONES:</b> Actualizaciones sonoras de canciones clásicas.</li>
+                            <li><b>SELLO:</b> Lanzamiento oficial vía Empire Records.</li>
+                        </ul>
+                    </div>
+
+                    <!-- IMAGEN 4 -->
+                    <div class="img-inline">
+                        <img src="agora-studio.jpg" alt="Ágora en el estudio">
+                    </div>
+
+                    <!-- VIDEO YOUTUBE -->
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PONER_AQUI_ID" title="Ágora - Breaking the Silence Demo" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="share-section">
+                        <span style="font-family:'Space Mono'; font-size:12px; color:var(--accent);">DIFUNDIR INTEL:</span>
+                        <div class="share-btns">
+                            <a href="https://wa.me/?text=Ágora libera demo inédito de Zona de Silencio: https://elrockdetodoslosdias.com.mx/notasmarzo/postAgora.html" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/notasmarzo/postAgora.html" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/intent/tweet?text=ÁGORA - Breaking the Silence [XX ANIVERSARIO]&url=https://elrockdetodoslosdias.com.mx/notasmarzo/postAgora.html" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>PERFIL DE BANDA</h4>
+                    <div class="intel-item"><b>BANDA:</b> Ágora</div>
+                    <div class="intel-item"><b>ORIGEN:</b> CDMX, México</div>
+                    <div class="intel-item"><b>GÉNERO:</b> Metal Progresivo</div>
+                    <div class="intel-item"><b>FANBASE:</b> La Legión</div>
+                    <button onclick="window.open('https://open.spotify.com/artist/1pYpY8O2bE6T8N8O6T8N8O')" style="width:100%; background:var(--accent); color:white; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">ESCUCHAR EN SPOTIFY</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>BREAKING THE SILENCE. EL RUIDO NUNCA MUERE.</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // ESCENA NACIONAL © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>
