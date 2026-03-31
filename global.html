@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Expediente Global - Frecuencias Internacionales</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="logo-rock.png">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --white: #eeeeee;
+            /* Colores por sección */
+            --red: #dc2626;      
+            --cyan: #00d4ff;     
+            --green: #00ff00;    
+            --blue-global: #3b82f6; /* Color para Expediente Global */
+            --current-color: var(--blue-global); 
+        }
+
+        /* LÓGICA DE TEMAS */
+        .global-archive { --current-color: var(--blue-global); }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--white); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+        /* TEXTURA */
+        body::before {
+            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            opacity: 0.1; pointer-events: none; z-index: 999;
+        }
+
+        /* --- NAVBAR --- */
+        .main-nav {
+            position: sticky; top: 0; z-index: 1000; background: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(5px);
+            border-bottom: 2px solid white; padding: 15px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-family: 'Syne'; font-size: 1.8rem; font-weight: 800; font-style: italic; letter-spacing: -2px; text-decoration: none; color: white; white-space: nowrap; }
+        .logo span { color: var(--current-color); }
+        
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { color: #71717a; text-decoration: none; font-family: 'Space Mono'; font-size: 11px; text-transform: uppercase; font-weight: 700; margin: 0 15px; white-space: nowrap; transition: 0.2s;}
+        .nav-links a:hover, .nav-links a.active { color: white; }
+
+        .nav-cta-btn { background: white; border:none; padding: 8px 15px; font-family:'Space Mono'; font-size:10px; font-weight:900; cursor: pointer; white-space: nowrap; }
+
+        /* HEADER EDITORIAL */
+        .section-header {
+            background-color: var(--current-color);
+            padding: 120px 40px 60px; position: relative; overflow: hidden; border-bottom: 8px solid black;
+        }
+        .section-header::after {
+            content: "GLOBAL"; position: absolute; bottom: -40px; right: -20px;
+            font-family: 'Syne'; font-size: 15rem; opacity: 0.1; font-style: italic; pointer-events: none;
+        }
+        .back-link { font-family: 'Space Mono'; color: white; text-decoration: none; font-size: 12px; font-weight: 900; text-transform: uppercase; z-index: 10; position: relative; display: inline-block; margin-bottom: 20px;}
+        .section-title { font-family: 'Syne'; font-size: clamp(3.5rem, 10vw, 9rem); line-height: 0.85; text-transform: uppercase; font-style: italic; color: white; position: relative; z-index: 10; word-break: break-word; }
+
+        /* GRID */
+        .archive-container { max-width: 1300px; margin: 0 auto; padding: 80px 40px; }
+        .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px 40px; }
+        .article-card { text-decoration: none; color: inherit; display: block; transition: 0.3s; }
+        .card-image { height: 250px; background-color: #18181b; margin-bottom: 20px; overflow: hidden; border: 1px solid #333; position: relative; }
+        .card-image img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
+        .article-card:hover .card-image img { filter: grayscale(0); transform: scale(1.05); }
+        
+        .card-tag { font-family: 'Space Mono'; color: var(--current-color); font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; letter-spacing: 1px; }
+        .card-title { font-family: 'Syne'; font-size: 1.5rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 15px; }
+
+        /* FOOTER */
+        .fanzine-footer { background: #000; border-top: 8px solid var(--current-color); padding: 80px 40px 40px; margin-top: 100px; }
+        .f-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; max-width: 1300px; margin: 0 auto 60px; }
+        .f-brand h2 { font-family: 'Syne'; font-size: 2.5rem; margin-bottom: 10px; font-style: italic; font-weight: 800; letter-spacing: -2px; }
+        .f-brand h2 span { color: var(--current-color); }
+        .f-col h5 { font-family: 'Space Mono'; color: var(--current-color); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
+        .f-col a:hover { color: white; padding-left: 5px; }
+        .f-col a i { color: var(--current-color); margin-right: 8px; }
+
+        @media (max-width: 900px) {
+            .article-grid { grid-template-columns: 1fr; gap: 40px; }
+            .f-top { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+
+<body class="global-archive">
+
+    <nav class="main-nav">
+        <div class="logo-container">
+            <a href="index.html" class="logo">ELROCK<span>.</span>GLOBAL</a>
+        </div>
+        
+        <div class="nav-links">
+            <a href="musica.html">Música</a>
+            <a href="escena.html" style="color: var(--red);">Escena</a>
+            <a href="global.html" class="active" style="color: var(--blue-global);">GLOBAL</a>
+            <a href="bytemos.html" style="color: var(--green);">BYTEMOS</a>
+            <a href="cultura.html" style="color: var(--amber);">Cultura</a>
+            <button class="nav-cta-btn">TERMINAL [EXT]</button>
+        </div>
+    </nav>
+
+    <header class="section-header">
+        <a href="index.html" class="back-link">← Regresar al Asfalto</a>
+        <h1 class="section-title">EXPEDIENTE GLOBAL</h1> 
+        <div style="font-family:'Space Mono'; font-size:12px; margin-top:20px; color:white; font-weight:700; line-height: 1.6;">
+            [ RASTREO SATELITAL ] <br> // FRECUENCIAS EXTERNAS DETECTADAS
+        </div>
+    </header>
+
+    <main class="archive-container">
+         <div class="article-grid">
+             
+             <!-- NOTA 1 -->
+             <a href="notasmarzo/postDirty.html" class="article-card">
+                <div class="card-image"><img src="notasmarzo/dirty-sound-magnet-album.jpg"></div>
+                <span class="card-tag">EUROPA // SUIZA</span>
+                <h2 class="card-title">DIRTY SOUND MAGNET: El viaje místico de "Me and My Shadow"</h2>
+            </a>
+
+             <!-- NOTA 2 -->
+             <a href="notasmarzo/postコイルガンズ.html" class="article-card">
+                <div class="card-image"><img src="notasmarzo/coilguns-promo.jpg"></div>
+                <span class="card-tag">EUROPA // SUIZA</span>
+                <h2 class="card-title">COILGUNS: Ruido suizo y caos en el radar internacional</h2>
+            </a>
+
+            <!-- NOTA 3 -->
+            <a href="notasmarzo/postsevenred.html" class="article-card">
+                <div class="card-image"><img src="notasmarzo/seven-red-lions-tour.jpg"></div>
+                <span class="card-tag">UK // LONDRES</span>
+                <h2 class="card-title">SEVEN RED LIONS: El rugido de Londres cruza el océano</h2>
+            </a>
+
+            <!-- NOTA 4 -->
+            <a href="#" class="article-card">
+                <div class="card-image"><img src="https://i.scdn.co/image/ab67616d00001e024097d958f805cb3d837b79af"></div>
+                <span class="card-tag">EUROPA // SUECIA</span>
+                <h2 class="card-title">ARCH ENEMY: To the Last Breath - Reporte de Suecia</h2>
+            </a>
+
+            <!-- NOTA 5 -->
+            <a href="#" class="article-card">
+                <div class="card-image"><img src="https://f4.bcbits.com/img/a0583851563_16.jpg"></div>
+                <span class="card-tag">EUROPA // ESPAÑA</span>
+                <h2 class="card-title">COMIC SANS: El nuevo grito del Emo-Rock español</h2>
+            </a>
+             
+         </div>
+    </main>
+
+    <footer class="fanzine-footer">
+        <div class="f-top">
+            <div class="f-brand">
+                <h2>EL<span>ROCK</span>GLOBAL</h2>
+                <p class="footer-tagline">ARCHIVO INDEPENDIENTE DE CULTURA Y RUIDO.</p>
+            </div>
+            
+            <div class="f-col">
+                <h5>Social</h5>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+            </div>
+
+            <div class="f-col">
+                <h5>Comunidad</h5>
+                <a href="#"><i class="fab fa-discord"></i> Discord</a>
+                <a href="#"><i class="fab fa-twitch"></i> Twitch</a>
+            </div>
+
+            <div class="f-col">
+                <h5>Navegación</h5>
+                <a href="index.html">Inicio</a>
+                <a href="escena.html">Escena</a>
+                <a href="global.html">Global</a>
+            </div>
+        </div>
+
+        <div class="f-bottom">
+            <span>&copy; 2026 EL ROCK DE TODOS LOS DÍAS</span>
+            <span>EXTERNAL FREQUENCIES // ALL ACCESS</span>
+        </div>
+    </footer>
+</body>
+</html>
