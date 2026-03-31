@@ -66,7 +66,7 @@
         .back-link { font-family: 'Space Mono'; color: white; text-decoration: none; font-size: 12px; font-weight: 900; text-transform: uppercase; z-index: 10; position: relative; display: inline-block; margin-bottom: 20px;}
         .section-title { font-family: 'Syne'; font-size: clamp(3.5rem, 10vw, 9rem); line-height: 0.85; text-transform: uppercase; font-style: italic; color: white; position: relative; z-index: 10; word-break: break-word; }
 
-        /* GRID */
+        /* GRID CONTENIDO */
         .archive-container { max-width: 1300px; margin: 0 auto; padding: 80px 40px; }
         .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px 40px; }
         .article-card { text-decoration: none; color: inherit; display: block; transition: 0.3s; }
@@ -77,18 +77,37 @@
         .card-tag { font-family: 'Space Mono'; color: var(--current-color); font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; letter-spacing: 1px; }
         .card-title { font-family: 'Syne'; font-size: 1.5rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 15px; }
 
-        /* FOOTER */
+        /* --- FOOTER ESTILO FANZYNE --- */
         .fanzine-footer { background: #000; border-top: 8px solid var(--current-color); padding: 80px 40px 40px; margin-top: 100px; }
         .f-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; max-width: 1300px; margin: 0 auto 60px; }
+        
+        .f-logo-img { max-width: 180px; height: auto; margin-bottom: 20px; display: block; filter: grayscale(1) brightness(1.5); transition: 0.3s; }
+        .f-logo-img:hover { filter: grayscale(0) brightness(1); transform: rotate(-3deg) scale(1.05); }
+
         .f-brand h2 { font-family: 'Syne'; font-size: 2.5rem; margin-bottom: 10px; font-style: italic; font-weight: 800; letter-spacing: -2px; }
         .f-brand h2 span { color: var(--current-color); }
-        .f-col h5 { font-family: 'Space Mono'; color: var(--current-color); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
+        .f-brand p.footer-tagline { font-family: 'Space Mono'; font-size: 11px; color: #555; line-height: 1.5; text-transform: uppercase; font-weight: 700; margin-bottom: 30px; }
+        
+        .f-col h5 { font-family: 'Space Mono'; color: var(--current-color); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
+        .f-col a { display: block; color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; margin-bottom: 12px; font-weight: 700; text-transform: uppercase; transition: 0.2s; }
         .f-col a:hover { color: white; padding-left: 5px; }
-        .f-col a i { color: var(--current-color); margin-right: 8px; }
+        .f-col a i { width: 18px; margin-right: 8px; text-align: center; color: var(--current-color); }
+
+        /* AJUSTES DE CONTACTO EN FOOTER */
+        .contact-title { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; color: var(--white); }
+        .contact-links { display: flex; flex-direction: column; gap: 12px; }
+        .contact-item { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--white) !important; text-decoration: none; display: flex; align-items: center; gap: 10px; transition: 0.2s ease; }
+        .contact-item i { color: var(--current-color); font-size: 14px; }
+        .contact-item:hover { color: var(--current-color) !important; padding-left: 5px; }
+
+        .f-bottom { border-top: 1px solid #222; padding-top: 30px; display: flex; justify-content: space-between; font-size: 10px; color: #444; font-family: 'Space Mono'; text-transform: uppercase; flex-wrap: wrap; gap: 10px; }
 
         @media (max-width: 900px) {
             .article-grid { grid-template-columns: 1fr; gap: 40px; }
             .f-top { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 600px) {
+            .f-top { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -106,6 +125,7 @@
             <a href="global.html" class="active" style="color: var(--blue-global);">GLOBAL</a>
             <a href="bytemos.html" style="color: var(--green);">BYTEMOS</a>
             <a href="cultura.html" style="color: var(--amber);">Cultura</a>
+            <a href="nosotros.html">Nosotros</a>
             <button class="nav-cta-btn">TERMINAL [EXT]</button>
         </div>
     </nav>
@@ -121,74 +141,83 @@
     <main class="archive-container">
          <div class="article-grid">
              
-             <!-- NOTA 1 -->
+             <!-- NOTA 1: DIRTY SOUND MAGNET -->
              <a href="notasmarzo/postDirty.html" class="article-card">
                 <div class="card-image"><img src="notasmarzo/dirty-sound-magnet-album.jpg"></div>
                 <span class="card-tag">EUROPA // SUIZA</span>
                 <h2 class="card-title">DIRTY SOUND MAGNET: El viaje místico de "Me and My Shadow"</h2>
             </a>
 
-             <!-- NOTA 2 -->
-             <a href="notasmarzo/postコイルガンズ.html" class="article-card">
+             <!-- NOTA 2: COILGUNS -->
+             <a href="notasmarzo/postcoilguns.html" class="article-card">
                 <div class="card-image"><img src="notasmarzo/coilguns-promo.jpg"></div>
                 <span class="card-tag">EUROPA // SUIZA</span>
                 <h2 class="card-title">COILGUNS: Ruido suizo y caos en el radar internacional</h2>
             </a>
 
-            <!-- NOTA 3 -->
+            <!-- NOTA 3: SEVEN RED LIONS -->
             <a href="notasmarzo/postsevenred.html" class="article-card">
                 <div class="card-image"><img src="notasmarzo/seven-red-lions-tour.jpg"></div>
                 <span class="card-tag">UK // LONDRES</span>
                 <h2 class="card-title">SEVEN RED LIONS: El rugido de Londres cruza el océano</h2>
             </a>
 
-            <!-- NOTA 4 -->
-            <a href="#" class="article-card">
-                <div class="card-image"><img src="https://i.scdn.co/image/ab67616d00001e024097d958f805cb3d837b79af"></div>
-                <span class="card-tag">EUROPA // SUECIA</span>
-                <h2 class="card-title">ARCH ENEMY: To the Last Breath - Reporte de Suecia</h2>
-            </a>
-
-            <!-- NOTA 5 -->
-            <a href="#" class="article-card">
-                <div class="card-image"><img src="https://f4.bcbits.com/img/a0583851563_16.jpg"></div>
-                <span class="card-tag">EUROPA // ESPAÑA</span>
-                <h2 class="card-title">COMIC SANS: El nuevo grito del Emo-Rock español</h2>
-            </a>
-             
          </div>
     </main>
 
+    <!-- FOOTER EXACTO AL EJEMPLO -->
     <footer class="fanzine-footer">
         <div class="f-top">
             <div class="f-brand">
-                <h2>EL<span>ROCK</span>GLOBAL</h2>
+                <img src="logo-rock.png" alt="EL ROCK LOGO" class="f-logo-img">
+                <h2>EL<span>ROCK</span>DE TODOS LOS DÍAS</h2>
                 <p class="footer-tagline">ARCHIVO INDEPENDIENTE DE CULTURA Y RUIDO.</p>
+                
+                <div class="footer-contact-section">
+                    <h5 class="contact-title">Contacto Directo</h5>
+                    <div class="contact-links">
+                        <a href="https://wa.me/525519204557" target="_blank" class="contact-item">
+                            <i class="fab fa-whatsapp"></i> 55 1920 4557
+                        </a>
+                        <a href="mailto:elrockdetodoslosdias@gmail.com" class="contact-item">
+                            <i class="far fa-envelope"></i> elrockdetodoslosdias@gmail.com
+                        </a>
+                        <a href="mailto:prensa@elrockdetodoslosdias.com.mx" class="contact-item">
+                            <i class="far fa-envelope"></i> prensa@elrockdetodoslosdias.com.mx
+                        </a>
+                    </div>
+                </div>
             </div>
             
             <div class="f-col">
                 <h5>Social</h5>
-                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://www.instagram.com/elrockdetodoslosdias/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/ElRockdetodoslosDias" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://twitter.com/ElRockde" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://www.tiktok.com/@elrockdetodoslosdias" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
             </div>
 
             <div class="f-col">
                 <h5>Comunidad</h5>
-                <a href="#"><i class="fab fa-discord"></i> Discord</a>
-                <a href="#"><i class="fab fa-twitch"></i> Twitch</a>
+                <a href="https://discord.gg/Ey7sdqwDaW" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+                <a href="https://www.twitch.tv/elrockdetodoslosdias" target="_blank"><i class="fab fa-twitch"></i> Twitch</a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
             </div>
 
             <div class="f-col">
                 <h5>Navegación</h5>
                 <a href="index.html">Inicio</a>
+                <a href="musica.html">Música</a>
                 <a href="escena.html">Escena</a>
                 <a href="global.html">Global</a>
+                <a href="pantallas.html">Pantallas</a>
+                <a href="nosotros.html">Nosotros</a>
             </div>
         </div>
 
         <div class="f-bottom">
             <span>&copy; 2026 EL ROCK DE TODOS LOS DÍAS</span>
-            <span>EXTERNAL FREQUENCIES // ALL ACCESS</span>
+            <span>LIVE FAST, PLAY LOUD</span>
         </div>
     </footer>
 </body>
