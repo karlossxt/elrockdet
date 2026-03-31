@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CULTURA | 5 Joyas del Rock Mexicano que el Mainstream Olvidó</title>
+
+    <!-- METAS OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="5 Joyas del Rock Mexicano que el Mainstream Olvidó (y que debes escuchar)">
+    <meta property="og:description" content="Un mapa de tesoros sonoros: desde la psicodelia post-Avándaro hasta el post-rock conceptual. El ADN de nuestra vanguardia.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/joyas-rock-mexicano-hero.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasmarzo/postJoyas.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JOYAS OCULTAS: Rock Mexicano Desclasificado">
+    <meta name="twitter:description" content="Neurona Violeta, La Fresa Ácida, Austin TV y más. Archivo Sonoro desclasificado.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/joyas-rock-mexicano-hero.jpg">
+    <meta name="twitter:site" content="@ElRockde">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #030712;
+            --accent: #10b981; /* Esmeralda / Joya Oculta */
+            --white: #f3f4f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(16, 185, 129, 0.03) 50%, rgba(0, 0, 0, 0.1) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        /* --- INTERFAZ DE ENCABEZADO --- */
+        .article-frame {
+            border: 2px solid var(--accent);
+            position: relative;
+            margin-top: 40px;
+            background: #000;
+        }
+
+        .ui-tag-top {
+            position: absolute; top: -20px; left: 20px;
+            background: var(--accent); color: black;
+            padding: 8px 15px; font-family: 'Space Mono'; font-size: 12px; font-weight: 700;
+            text-transform: uppercase; box-shadow: 4px 4px 0px white; z-index: 10;
+        }
+
+        .ui-close-btn {
+            position: absolute; top: -20px; right: 20px;
+            background: white; color: black;
+            padding: 8px 15px; font-family: 'Space Mono'; font-size: 11px; font-weight: 900;
+            text-decoration: none; text-transform: uppercase; border: 1px solid var(--accent); z-index: 10;
+        }
+
+        .img-hero-frame { width: 100%; display: block; overflow: hidden; }
+        .img-hero-frame img { width: 100%; display: block; filter: saturate(0.6) contrast(1.1); }
+
+        .post-header-v2 { padding: 40px 30px; border-bottom: 1px solid #111; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 7vw, 4rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+        }
+
+        /* --- IMÁGENES INLINE --- */
+        .img-inline {
+            width: 100%; border: 1px solid #222; margin: 30px 0;
+            padding: 5px; background: #000; position: relative;
+        }
+        .img-inline img { width: 100%; display: block; filter: grayscale(1); transition: 0.5s; }
+        .img-inline:hover img { filter: grayscale(0); }
+        .img-caption { font-family: 'Space Mono'; font-size: 9px; color: #555; text-transform: uppercase; margin-top: 5px; text-align: right; }
+
+        /* --- CUERPO --- */
+        .meta-strip {
+            border-bottom: 1px solid #111; padding: 20px 30px; margin-bottom: 50px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content h3 { font-family: 'Syne'; color: var(--accent); margin: 40px 0 15px; text-transform: uppercase; border-bottom: 1px solid #222; width: 100%; padding-bottom: 10px;}
+        .content p { font-size: 1.15rem; color: #9ca3af; margin-bottom: 30px; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .veredicto { font-family: 'Space Mono'; font-size: 11px; background: rgba(16, 185, 129, 0.1); color: var(--accent); padding: 12px; margin-bottom: 25px; border-left: 4px solid var(--accent); text-transform: uppercase; font-weight: 700; }
+
+        /* ARCHIVO RELACIONADO */
+        .related-archive {
+            margin: 40px 0; border: 1px dashed var(--accent); padding: 20px;
+            display: flex; align-items: center; gap: 20px; background: rgba(16, 185, 129, 0.05);
+            text-decoration: none; transition: 0.3s;
+        }
+        .related-archive:hover { background: rgba(16, 185, 129, 0.1); transform: translateY(-2px); }
+        .related-thumb { width: 100px; height: 100px; flex-shrink: 0; border: 1px solid var(--accent); padding: 3px; background: #000; }
+        .related-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .related-info { display: flex; flex-direction: column; }
+        .related-label { font-family: 'Syne'; font-weight: 800; font-size: 12px; color: var(--accent); text-transform: uppercase; margin-bottom: 5px; }
+        .related-title { font-family: 'Space Mono'; font-size: 13px; color: #ccc; line-height: 1.4; }
+
+        /* SIDEBAR */
+        .sidebar-intel { background: #0d0d12; border: 1px solid #111; padding: 30px; position: sticky; top: 100px; }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #6b7280; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        .share-btns { display: flex; gap: 15px; margin-top: 40px; }
+        .share-btns a { color: white; font-size: 18px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border: 1px solid #111; text-decoration: none; transition: 0.3s; }
+        .share-btns a:hover { background: var(--accent); color: black; border-color: var(--accent); }
+
+        .post-footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid #111; text-align: center; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .related-archive { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+
+    <article class="container">
+        
+        <!-- MARCO SUPERIOR DE INTERFAZ -->
+        <div class="article-frame">
+            <div class="ui-tag-top">#SONIC_ARCHIVE_REPORTS</div>
+            <a href="index.html" class="ui-close-btn">CERRAR [X]</a>
+
+            <div class="img-hero-frame">
+                <img src="joyas-rock-mexicano-hero.jpg" alt="5 Joyas del Rock Mexicano Olvidadas">
+            </div>
+
+            <header class="post-header-v2">
+                <span class="tag-sec">CULTURA // INTEL: JOYAS OCULTAS</span>
+                <h1 class="post-title">5 JOYAS DEL ROCK MEXICANO<br><span>QUE EL MAINSTREAM</span> OLVIDÓ</h1>
+            </header>
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>AUTOR: ARCHIVO SONORO</span>
+            <span>STATUS: DESCLASIFICADO</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>En la historia oficial del rock mexicano, los nombres de siempre ocupan los capítulos principales. Pero en las notas al pie de página, en los casetes grabados de contrabando y en los prensajes limitados de sellos independientes, descansa el verdadero ADN de nuestra vanguardia.</p>
+                    
+                    <p>Esta no es una lista de éxitos; es un mapa de tesoros para quienes buscan el sonido crudo, el post-rock místico y la psicodelia que sobrevivió al olvido.</p>
+
+                    <h3>1. NEURONA VIOLETA – JUGUETES NEGROS</h3>
+                    <div class="veredicto">El veredicto: El eslabón perdido entre el post-punk y el alternativo de los 90.</div>
+                    
+                    <div class="img-inline">
+                        <img src="neurona-violeta.jpg" alt="Neurona Violeta - Juguetes Negros">
+                        <div class="img-caption">REGISTRO: ROCK AND ROLL CIRCUS, 1994</div>
+                    </div>
+
+                    <p>Publicado bajo el mítico sello Rock and Roll Circus, este disco es una pieza de arqueología pura. Con una producción rústica que solo acentúa su honestidad, Neurona Violeta entregó en Juguetes Negros una atmósfera cargada de melancolía y distorsión. La voz de Ramiro, su vocalista, navegaba entre el susurro y el grito, creando un puente perfecto para quienes sentían que el rock nacional se estaba volviendo demasiado "amigable". Un disco que suena a la Ciudad de México antes de la gentrificación.</p>
+
+                    <!-- RELACIONADO SEO -->
+                    <aside>
+                        <a href="https://elrockdetodoslosdias.com.mx/notasmarzo/postMiniRock.html" class="related-archive" title="Mini Rock Fest México">
+                            <div class="related-thumb">
+                                <img src="mini-rock-fest-hero.jpg" alt="Mini Rock Fest">
+                            </div>
+                            <div class="related-info">
+                                <span class="related-label">ARCHIVO RELACIONADO</span>
+                                <div class="related-title">
+                                    Mini Rock Fest: El primer festival musical niñocentrista llega a CDMX
+                                </div>
+                            </div>
+                        </a>
+                    </aside>
+
+                    <h3>2. PRIMER NIVEL – ROMPE LA ESFERA</h3>
+                    <div class="veredicto">El veredicto: Sofisticación pop-rock en la era de "Rock en tu Idioma".</div>
+
+                    <div class="img-inline">
+                        <img src="primer-nivel.jpg" alt="Primer Nivel - Rompe La Esfera">
+                        <div class="img-caption">ARCHIVO: EMI MÉXICO, 1988</div>
+                    </div>
+
+                    <p>Mientras la mayoría de las bandas buscaban el sonido de bar, Primer Nivel apostó por una producción de altos vuelos. Rompe La Esfera es un ejercicio de elegancia sonora que hoy se siente extrañamente fresco. Temas como "La fiesta infinita" muestran un dominio de las texturas sintéticas y las guitarras limpias que pocas bandas de la época lograron. Es el disco ideal para entender que el rock mexicano de los 80 también sabía ser pulcro y vanguardista.</p>
+
+                    <h3>3. LA FRESA ÁCIDA – SESIONES DE PSICODELIA</h3>
+                    <div class="veredicto">El veredicto: El viaje ácido que el sistema no pudo detener.</div>
+
+                    <div class="img-inline">
+                        <img src="la-fresa-acida.jpg" alt="La Fresa Ácida Psicodelia">
+                        <div class="img-caption">REGISTRO: CIRCA 1969-1974</div>
+                    </div>
+
+                    <p>Si buscas el "Santo Grial" de la psicodelia nacional, es este. La Fresa Ácida representa ese momento místico post-Avándaro donde el rock se volvió una cuestión de resistencia cultural. Con órganos Hammond hipnóticos y ritmos que invitan al trance, piezas como "La Fiesta Hippie" son documentos históricos de una generación que buscaba expandir la conciencia a través del ruido. Escucharlos hoy es como encontrar una fotografía en sepia que de pronto cobra color.</p>
+
+                    <h3>4. JOE VOLUME & LOS VINCENT BLACK SHADOWS</h3>
+                    <div class="veredicto">El veredicto: Un puñetazo de garage-punk directo a la mandíbula.</div>
+
+                    <div class="img-inline">
+                        <img src="joe-volume.jpg" alt="Joe Volume & Los Vincent Black Shadows">
+                        <div class="img-caption">ÁLBUM: I (HEART) BROKEN (HEART)'S, 2007</div>
+                    </div>
+
+                    <p>A mediados de los 2000, mientras el indie se volvía cada vez más suave, Joe Volume apareció para recordarnos que el rock debe ser peligroso. Este álbum es una explosión de energía garajera, letras viscerales y una urgencia que parece que el disco va a incendiarse mientras gira. Es crudo, es ruidoso y es, posiblemente, uno de los discos más honestos de la escena independiente de la CDMX en este siglo.</p>
+
+                    <h3>5. AUSTIN TV – FONTANA BELLA</h3>
+                    <div class="veredicto">El veredicto: La obra maestra del post-rock conceptual.</div>
+
+                    <div class="img-inline">
+                        <img src="austin-tv.jpg" alt="Austin TV - Fontana Bella">
+                        <div class="img-caption">REGISTRO: CDMX, 2007</div>
+                    </div>
+
+                    <p>Aunque Austin TV logró una popularidad notable, Fontana Bella se mantiene como su joya de la corona por su complejidad. Es un disco instrumental que no necesita palabras para contarte una historia de terror, soledad y esperanza en un bosque místico. Cada pista es una capa de sonido meticulosamente construida. Es esencial para cualquier persona que crea que el rock en México no se atrevía a experimentar con estructuras cinematográficas.</p>
+
+                    <div class="share-btns">
+                        <a href="https://wa.me/?text=5 Joyas del Rock Mexicano que debes escuchar: https://elrockdetodoslosdias.com.mx/notasmarzo/postJoyas.html" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/notasmarzo/postJoyas.html" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/intent/tweet?text=JOYAS OCULTAS: Rock Mexicano Desclasificado&url=https://elrockdetodoslosdias.com.mx/notasmarzo/postJoyas.html" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>INTEL DE CURACIÓN</h4>
+                    <div class="intel-item"><b>RELEVANCIA:</b> Documentos de vanguardia sonora que rompieron la radio comercial.</div>
+                    <div class="intel-item"><b>SELLOS:</b> Rock and Roll Circus, EMI México, Grabaciones Independientes.</div>
+                    <div class="intel-item"><b>CRÍTICA:</b> Álbunes esenciales para entender el ADN del rock alternativo nacional.</div>
+                    <button onclick="window.location.href='index.html'" style="width:100%; background:var(--accent); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">MÁS ARCHIVOS</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3 style="font-family:'Syne'; color:var(--accent);">EL RUIDO ES EL ÚNICO LEGADO QUE NO SE OXIDA.</h3>
+            <p style="font-family:'Space Mono'; font-size:10px; margin-top:10px;">EL ROCK DE TODOS LOS DÍAS // CULTURA © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

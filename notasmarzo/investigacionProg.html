@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVESTIGACIÓN | Génesis del Progreso: Los inicios del Rock Progresivo en México</title>
+
+    <!-- METAS OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="GÉNESIS DEL PROGRESO: Los archivos perdidos del Progresivo Mexicano">
+    <meta property="og:description" content="Una investigación profunda sobre cómo el rock mexicano se volvió complejo, místico y experimental tras la represión de Avándaro.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/prog-mexico-hero.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasmarzo/investigacionProg.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="INVESTIGACIÓN: El ADN del Rock Progresivo en México">
+    <meta name="twitter:description" content="De Chac Mool a Decibel. El ruido que desafió al tiempo y a la censura.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/prog-mexico-hero.jpg">
+    <meta name="twitter:site" content="@ElRockde">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #030712;
+            --accent: #0ea5e9; /* Cian / Digital Histórico */
+            --white: #f3f4f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(14, 165, 233, 0.03) 50%, rgba(0, 0, 0, 0.1) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        /* --- INTERFAZ DE ENCABEZADO --- */
+        .article-frame {
+            border: 2px solid var(--accent);
+            position: relative;
+            margin-top: 40px;
+            background: #000;
+        }
+
+        .ui-tag-top {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            background: var(--accent);
+            color: white;
+            padding: 8px 15px;
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            z-index: 10;
+        }
+
+        .ui-close-btn {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            background: white;
+            color: black;
+            padding: 8px 15px;
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            font-weight: 900;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid var(--accent);
+            z-index: 10;
+        }
+
+        .img-hero-frame { width: 100%; display: block; overflow: hidden; }
+        .img-hero-frame img { width: 100%; display: block; filter: grayscale(1) contrast(1.2); }
+
+        .post-header-v2 { padding: 40px 30px; border-bottom: 1px solid #111; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 7vw, 4.5rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+        }
+
+        /* --- CUERPO --- */
+        .meta-strip {
+            border-bottom: 1px solid #111;
+            padding: 20px 30px; margin-bottom: 50px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content h3 { font-family: 'Syne'; color: var(--accent); margin: 40px 0 20px; text-transform: uppercase; font-size: 1.8rem; }
+        .content p { font-size: 1.2rem; color: #9ca3af; margin-bottom: 35px; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .img-inline { width: 100%; border: 1px solid #222; margin: 40px 0; padding: 5px; background: #000; }
+        .img-inline img { width: 100%; display: block; filter: grayscale(1); transition: 0.5s; }
+        .img-inline:hover img { filter: grayscale(0); }
+
+        /* ARCHIVO RELACIONADO */
+        .related-archive {
+            margin: 40px 0; border: 1px dashed var(--accent); padding: 20px;
+            display: flex; align-items: center; gap: 20px; background: rgba(14, 165, 233, 0.05);
+            text-decoration: none; transition: 0.3s;
+        }
+        .related-archive:hover { background: rgba(14, 165, 233, 0.1); transform: translateY(-2px); }
+        .related-thumb { width: 100px; height: 100px; flex-shrink: 0; border: 1px solid var(--accent); padding: 3px; background: #000; }
+        .related-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .related-info { display: flex; flex-direction: column; }
+        .related-label { font-family: 'Syne'; font-weight: 800; font-size: 12px; color: var(--accent); text-transform: uppercase; margin-bottom: 5px; }
+        .related-title { font-family: 'Space Mono'; font-size: 13px; color: #ccc; line-height: 1.4; }
+
+        /* DATA BOX */
+        .data-box {
+            background: rgba(14, 165, 233, 0.05); border: 1px solid var(--accent);
+            padding: 30px; margin: 40px 0;
+        }
+        .data-box h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; }
+        .data-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
+        .data-list li { margin-bottom: 10px; border-left: 3px solid var(--accent); padding-left: 15px; }
+
+        /* SIDEBAR */
+        .sidebar-intel { background: #0d0d12; border: 1px solid #111; padding: 30px; position: sticky; top: 100px; }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #6b7280; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        .share-btns { display: flex; gap: 15px; margin-top: 40px; }
+        .share-btns a { 
+            color: white; font-size: 18px; width: 40px; height: 40px; 
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid #111; text-decoration: none; transition: 0.3s;
+        }
+        .share-btns a:hover { background: var(--accent); color: white; border-color: var(--accent); }
+
+        .post-footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid #111; text-align: center; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .related-archive { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+
+    <article class="container">
+        
+        <!-- MARCO SUPERIOR DE INTERFAZ -->
+        <div class="article-frame">
+            <div class="ui-tag-top">#ARCHIVE_REPORTS</div>
+            <a href="index.html" class="ui-close-btn">CERRAR [X]</a>
+
+            <div class="img-hero-frame">
+                <img src="prog-mexico-hero.jpg" alt="Investigación Rock Progresivo México">
+            </div>
+
+            <header class="post-header-v2">
+                <span class="tag-sec">INVESTIGACIÓN // INTEL: PROG MÉXICO ORIGINS</span>
+                <h1 class="post-title">GÉNESIS DEL PROGRESO:<br>EL RUIDO QUE<span> DESAFIÓ</span> AL TIEMPO</h1>
+            </header>
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>ERA: 1970 - 1985</span>
+            <span>STATUS: ACCESO RESTRINGIDO</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>Tras la represión del festival de Avándaro en 1971, el rock en México fue empujado a la clandestinidad de los "hoyos funkies". Sin embargo, lejos de morir, una facción de músicos decidió alejarse del blues básico para abrazar la complejidad técnica y la mística prehispánica. Así nació el Rock Progresivo Mexicano.</p>
+                    
+                    <h3>LA CONEXIÓN PREHISPÁNICA</h3>
+                    <p>En los años 70, bandas como <strong>Nuevo México</strong> y <strong>Nahuatl</strong> comenzaron a experimentar con la estructura clásica del rock. Introdujeron flautas, violines y percusiones autóctonas, creando un sonido que los críticos internacionales bautizaron como "Folk-Prog". No solo tocaban música, estaban reclamando una identidad nacional a través del virtuosismo.</p>
+
+                    <div class="img-inline">
+                        <img src="nuevo-mexico-live.jpg" alt="Banda Nuevo México 1970s">
+                    </div>
+
+                    <!-- RELACIONADO SEO -->
+                    <aside>
+                        <a href="https://elrockdetodoslosdias.com.mx/notasmarzo/postArau.html" class="related-archive" title="Sergio Arau en el Alicia">
+                            <div class="related-thumb">
+                                <img src="sergio-arau-hero.jpg" alt="Sergio Arau Alicia">
+                            </div>
+                            <div class="related-info">
+                                <span class="related-label">ARCHIVO RELACIONADO</span>
+                                <div class="related-title">
+                                    Sergio Arau en el Alicia: Embotellado de Origen y la herencia del rock urbano
+                                </div>
+                            </div>
+                        </a>
+                    </aside>
+
+                    <h3>LA VANGUARDIA DEL RUIDO: DECIBEL</h3>
+                    <p>Para finales de los 70, la experimentación llegó a niveles extremos con <strong>Decibel</strong>. Influenciados por el movimiento europeo <em>Rock in Opposition</em>, Decibel rompió todas las reglas. Su música no era para bailar, era una declaración de independencia intelectual. Usaban sintetizadores primigenios y estructuras no lineales que hasta hoy suenan adelantadas a su época.</p>
+
+                    <div class="data-box">
+                        <h4>EXPEDIENTES CLAVE (1970-1985)</h4>
+                        <ul class="data-list">
+                            <li><b>CHAC MOOL:</b> El puente entre el progresivo y el público masivo en los 80.</li>
+                            <li><b>ICONOCLASTA:</b> Maestros del virtuosismo instrumental y la fusión jazzística.</li>
+                            <li><b>DELIRIUM:</b> Una joya perdida del sinfónico oscuro mexicano.</li>
+                            <li><b>BAJA PROG:</b> La semilla que convertiría a Mexicali en capital mundial del género.</li>
+                        </ul>
+                    </div>
+
+                    <h3>EL BOOM DE LOS 80: CHAC MOOL</h3>
+                    <p>Con la llegada de los 80, el rock progresivo mexicano alcanzó su clímax comercial con <strong>Chac Mool</strong>. Jorge Reyes y Carlos Alvarado demostraron que el progresivo podía llenar teatros y sonar en la radio sin sacrificar la calidad técnica. Su álbum <em>Nadie en Especial</em> es, hasta hoy, la piedra angular del género en nuestro idioma.</p>
+
+                    <div class="img-inline">
+                        <img src="chac-mool-band.jpg" alt="Chac Mool Banda Original">
+                    </div>
+
+                    <div class="share-btns">
+                        <a href="https://wa.me/?text=Génesis del Progreso: Los inicios del Rock Progresivo en México: https://elrockdetodoslosdias.com.mx/notasmarzo/investigacionProg.html" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/notasmarzo/investigacionProg.html" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/intent/tweet?text=GÉNESIS DEL PROGRESO: Rock Mexicano Experimental&url=https://elrockdetodoslosdias.com.mx/notasmarzo/investigacionProg.html" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>INTEL: FIGURAS CLAVE</h4>
+                    <div class="intel-item"><b>JORGE REYES:</b> El chamán digital. Unió sintetizadores con ritos prehispánicos.</div>
+                    <div class="intel-item"><b>CARLOS ALVARADO:</b> Mente maestra de Chac Mool y pionero de la música ambiental.</div>
+                    <div class="intel-item"><b>ALFONSO VIDALES:</b> Fundador de Cast y motor del movimiento Baja Prog.</div>
+                    <div class="intel-item"><b>HUMBERTO ÁLVAREZ:</b> El arquitecto del sonido sinfónico-pop de vanguardia.</div>
+                    <button onclick="window.location.href='musica.html'" style="width:100%; background:var(--accent); color:white; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">VER MÁS ARCHIVOS</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3 style="font-family:'Syne'; color:var(--accent);">EL PASADO ES EL CÓDIGO DEL FUTURO.</h3>
+            <p style="font-family:'Space Mono'; font-size:10px; margin-top:10px;">EL ROCK DE TODOS LOS DÍAS // INVESTIGACIÓN © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

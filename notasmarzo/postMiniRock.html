@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENDA | Mini Rock Fest: El primer festival niñocentrista en México</title>
+
+    <!-- METAS OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="MINI ROCK FEST: La primera descarga de libertad niñocentrista en México">
+    <meta property="og:description" content="Alpura presenta el festival que transforma el entretenimiento familiar. Nueva sede: Quarry Studios. Yucatán A go gó, Patita de Perro y más.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/mini-rock-fest-hero.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasmarzo/postMiniRock.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MINI ROCK FEST 2026 - Bienvenidos al pogo más seguro de México">
+    <meta name="twitter:description" content="Rock para niños de verdad. Sin etiquetas, sin 'simplezas'. Nueva sede confirmada.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/mini-rock-fest-hero.jpg">
+    <meta name="twitter:site" content="@ElRockde">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #f43f5e; /* Rosa Neón / Rock Kids */
+            --white: #f3f4f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(244, 63, 94, 0.03) 50%, rgba(0, 0, 0, 0.1) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        /* --- INTERFAZ DE ENCABEZADO --- */
+        .article-frame {
+            border: 2px solid var(--accent);
+            position: relative;
+            margin-top: 40px;
+            background: #000;
+        }
+
+        .ui-tag-top {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            background: var(--accent);
+            color: white;
+            padding: 8px 15px;
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            z-index: 10;
+        }
+
+        .ui-close-btn {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            background: white;
+            color: black;
+            padding: 8px 15px;
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            font-weight: 900;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid var(--accent);
+            z-index: 10;
+            transition: 0.3s;
+        }
+
+        .ui-close-btn:hover { background: var(--accent); color: white; }
+
+        .img-hero-frame { width: 100%; display: block; overflow: hidden; }
+        .img-hero-frame img { width: 100%; display: block; filter: saturate(1.2); }
+
+        .post-header-v2 { padding: 40px 30px; border-bottom: 1px solid #111; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 7vw, 4rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+        }
+
+        /* --- CUERPO --- */
+        .meta-strip {
+            border-bottom: 1px solid #111;
+            padding: 20px 30px; margin-bottom: 50px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content h3 { font-family: 'Syne'; color: var(--accent); margin: 40px 0 20px; text-transform: uppercase; }
+        .content p { font-size: 1.2rem; color: #9ca3af; margin-bottom: 35px; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* ARCHIVO RELACIONADO */
+        .related-archive {
+            margin: 40px 0; border: 1px dashed var(--accent); padding: 20px;
+            display: flex; align-items: center; gap: 20px; background: rgba(244, 63, 94, 0.05);
+            text-decoration: none; transition: 0.3s;
+        }
+        .related-archive:hover { background: rgba(244, 63, 94, 0.1); transform: translateY(-2px); }
+        .related-thumb { width: 100px; height: 100px; flex-shrink: 0; border: 1px solid var(--accent); padding: 3px; background: #000; }
+        .related-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .related-info { display: flex; flex-direction: column; }
+        .related-label { font-family: 'Syne'; font-weight: 800; font-size: 12px; color: var(--accent); text-transform: uppercase; margin-bottom: 5px; }
+        .related-title { font-family: 'Space Mono'; font-size: 13px; color: #ccc; line-height: 1.4; }
+
+        /* DATA BOX */
+        .data-box {
+            background: rgba(244, 63, 94, 0.05); border: 1px solid var(--accent);
+            padding: 30px; margin: 40px 0;
+        }
+        .data-box h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; }
+        .data-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
+        .data-list li { margin-bottom: 10px; border-left: 3px solid var(--accent); padding-left: 15px; }
+
+        /* SIDEBAR */
+        .sidebar-intel { background: #0d0d12; border: 1px solid #111; padding: 30px; position: sticky; top: 100px; }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #6b7280; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        .share-btns { display: flex; gap: 15px; margin-top: 40px; }
+        .share-btns a { 
+            color: white; font-size: 18px; width: 40px; height: 40px; 
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid #111; text-decoration: none; transition: 0.3s;
+        }
+        .share-btns a:hover { background: var(--accent); color: white; border-color: var(--accent); }
+
+        .post-footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid #111; text-align: center; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .related-archive { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+
+    <article class="container">
+        
+        <!-- MARCO SUPERIOR DE INTERFAZ -->
+        <div class="article-frame">
+            <div class="ui-tag-top">#MINI_ROCK_REPORTS</div>
+            <a href="index.html" class="ui-close-btn">CERRAR [X]</a>
+
+            <div class="img-hero-frame">
+                <img src="mini-rock-fest-hero.jpg" alt="Mini Rock Fest Quarry Studios">
+            </div>
+
+            <header class="post-header-v2">
+                <span class="tag-sec">AGENDA // INTEL: NIÑOCENTRISMO</span>
+                <h1 class="post-title">MINI ROCK FEST:<br>LA REBELIÓN DE LOS<span> PEQUEÑOS</span></h1>
+            </header>
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>SEDE: QUARRY STUDIOS</span>
+            <span>STATUS: CAMBIO DE SEDE</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>Alpura Vaquitas presenta <strong>Mini Rock Fest</strong>, el primer festival musical niñocentrista en México. Una propuesta que transforma el entretenimiento familiar a través de una lente única: donde a los niños se les permite ser, estar y gritar libremente.</p>
+                    
+                    <h3>AVISO DE NUEVA SEDE</h3>
+                    <p>¡Atención, tribu! Hay nueva sede para la primera gran descarga de libertad. El evento se traslada a <strong>Quarry Studios</strong> (Blvd. Gransur 100), el espacio perfecto para ofrecer una experiencia digna a los Mini Rockers.</p>
+
+                    <!-- RELACIONADO SEO -->
+                    <aside>
+                        <a href="https://elrockdetodoslosdias.com.mx/notasmarzo/investigacionProg.html" class="related-archive" title="Génesis del Progreso en México">
+                            <div class="related-thumb">
+                                <img src="prog-mexico-hero.jpg" alt="Rock Progresivo México">
+                            </div>
+                            <div class="related-info">
+                                <span class="related-label">ARCHIVO RELACIONADO</span>
+                                <div class="related-title">
+                                    Génesis del Progreso: Una investigación sobre los inicios del rock experimental en México
+                                </div>
+                            </div>
+                        </a>
+                    </aside>
+
+                    <h3>UN LINE-UP SIN "SIMPLEZAS"</h3>
+                    <p>Mini Rock Fest no subestima a su audiencia. El cartel cuenta con bandas icónicas de la escena nacional como <strong>Yucatán A go gó</strong> y <strong>Patita de Perro</strong>, además de la fuerza internacional de Jack Distortion (Chile) y Manu Choque (Argentina).</p>
+
+                    <div class="data-box">
+                        <h4>LINE-UP CONFIRMADO</h4>
+                        <ul class="data-list">
+                            <li><b>Yucatán A go gó & Patita de perro</b> (Leyendas nacionales)</li>
+                            <li><b>Crazysaurios & Los botes cantan</b></li>
+                            <li><b>DJ Purple & Pequeños diablillos</b></li>
+                            <li><b>Jack Distortion & Manu Choque</b> (Descarga internacional)</li>
+                        </ul>
+                    </div>
+
+                    <h3>DISEÑADO A LA ALTURA DE SUS PROTAGONISTAS</h3>
+                    <p>Aquí la niñez es el centro y las personas adultas son las invitadas. El festival es un espacio sin etiquetas donde el slam es un baile de apoyo: si alguien cae, la banda se detiene para levantarle. Una lección de ética rockera desde los primeros años.</p>
+
+                    <div class="data-box">
+                        <h4>ZONAS DE EXPERIENCIA</h4>
+                        <ul class="data-list">
+                            <li><b>ARTE EN SINCRONÍA:</b> Talleres de pintura con música en vivo.</li>
+                            <li><b>ZONA MAKER:</b> Personalización de prendas y estética rockera.</li>
+                            <li><b>HORARIO:</b> 1:30 PM a 8:30 PM (Pensado para la Tribu).</li>
+                        </ul>
+                    </div>
+
+                    <div class="share-btns">
+                        <a href="https://wa.me/?text=Mini Rock Fest: El primer festival de rock para niños en México: https://elrockdetodoslosdias.com.mx/notasmarzo/postMiniRock.html" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/notasmarzo/postMiniRock.html" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/intent/tweet?text=MINI ROCK FEST: El pogo más seguro de México&url=https://elrockdetodoslosdias.com.mx/notasmarzo/postMiniRock.html" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>DETALLES TÁCTICOS</h4>
+                    <div class="intel-item"><b>FECHA:</b> 18 de Abril, 2026</div>
+                    <div class="intel-item"><b>SEDE:</b> Quarry Studios (Pedregal de Carrasco)</div>
+                    <div class="intel-item"><b>EDADES:</b> Recomendado de 4 a 12 años.</div>
+                    <div class="intel-item"><b>BOLETOS:</b> passline.com</div>
+                    <button onclick="window.open('https://www.passline.com/eventos/mini-rock-fest')" style="width:100%; background:var(--accent); color:white; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">COMPRAR EN PASSLINE</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3 style="font-family:'Syne'; color:var(--accent);">¡BIENVENIDOS AL POGO MÁS GRANDE Y SEGURO DE MÉXICO!</h3>
+            <p style="font-family:'Space Mono'; font-size:10px; margin-top:10px;">EL ROCK DE TODOS LOS DÍAS // AGENDA © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>
