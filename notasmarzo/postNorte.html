@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENDA | NORTE: El fenómeno del Emo Indie Pop llega a la CDMX</title>
+
+    <!-- METAS OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="NORTE anuncia show especial en CDMX: La nueva ola alternativa">
+    <meta property="og:description" content="Tras el éxito de 'LO Q 100TO', NORTE confirma fecha en Chico CDMX este 4 de abril. Invitados: Los Yeahs, Mila Mijangos y Latin Tears.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/norte-hero.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasmarzo/postNorte.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NORTE en CDMX 2026 - El show más íntimo de la temporada">
+    <meta name="twitter:description" content="Vulnerabilidad, caos emocional y narrativa indie pop. No te pierdas a NORTE antes de su nuevo EP.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/norte-hero.jpg">
+    <meta name="twitter:site" content="@ElRockde">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #050505;
+            --white: #f3f4f6;
+            /* TEMA INDIE/CYBER: CIAN ELÉCTRICO */
+            --accent: #00f2ff; 
+            --accent-soft: rgba(0, 242, 255, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+
+        .scanlines {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(var(--accent-soft) 50%, rgba(0, 0, 0, 0.1) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .article-frame { border: 2px solid var(--accent); position: relative; margin-top: 40px; background: #000; }
+        .ui-tag-top {
+            position: absolute; top: -20px; left: 20px; background: var(--accent); color: black;
+            padding: 8px 15px; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700;
+            text-transform: uppercase; box-shadow: 4px 4px 0px white; z-index: 10;
+        }
+        .ui-close-btn {
+            position: absolute; top: -20px; right: 20px; background: white; color: black;
+            padding: 8px 15px; font-family: 'Space Mono'; font-size: 11px; font-weight: 900;
+            text-decoration: none; border: 1px solid var(--accent); z-index: 10; transition: 0.3s;
+        }
+        .ui-close-btn:hover { background: var(--accent); color: black; }
+
+        .img-hero-frame img { width: 100%; display: block; filter: saturate(1.2); }
+
+        .post-header-v2 { padding: 40px 30px; border-bottom: 1px solid #111; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        .post-title { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 7vw, 4rem); line-height: 0.85; margin: 10px 0; text-transform: uppercase; }
+
+        .header-share { display: flex; gap: 10px; margin-top: 25px; }
+        .header-share a { 
+            color: var(--accent); border: 1px solid var(--accent); padding: 8px 15px; 
+            font-family: 'Space Mono'; font-size: 11px; text-decoration: none; transition: 0.3s;
+        }
+        .header-share a:hover { background: var(--accent); color: black; }
+
+        .meta-strip {
+            border-bottom: 1px solid #111; padding: 20px 30px; margin-bottom: 50px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content h3 { font-family: 'Syne'; color: var(--accent); margin: 40px 0 20px; text-transform: uppercase; }
+        .content p { font-size: 1.15rem; color: #9ca3af; margin-bottom: 30px; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px; line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* RELACIONADO SEO ACTUALIZADO A BLACK SHINE */
+        .related-archive {
+            margin: 40px 0; border: 1px dashed var(--accent); padding: 20px;
+            display: flex; align-items: center; gap: 20px; background: var(--accent-soft);
+            text-decoration: none; transition: 0.3s;
+        }
+        .related-archive:hover { background: rgba(0, 242, 255, 0.15); transform: translateY(-2px); }
+        .related-thumb { width: 100px; height: 100px; flex-shrink: 0; border: 1px solid var(--accent); padding: 3px; background: #000; }
+        .related-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .related-label { font-family: 'Syne'; font-weight: 800; font-size: 12px; color: var(--accent); text-transform: uppercase; margin-bottom: 5px; }
+        .related-title { font-family: 'Space Mono'; font-size: 13px; color: #ccc; line-height: 1.4; }
+
+        .data-box { background: var(--accent-soft); border: 1px solid var(--accent); padding: 30px; margin: 40px 0; }
+        .data-box h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; }
+        .data-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
+        .data-list li { margin-bottom: 10px; border-left: 2px solid var(--accent); padding-left: 15px; }
+
+        .sidebar-intel { background: #0d0d12; border: 1px solid #111; padding: 30px; position: sticky; top: 100px; }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #6b7280; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        @media (max-width: 900px) { .main-layout { grid-template-columns: 1fr; } .related-archive { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+
+    <article class="container">
+        
+        <div class="article-frame">
+            <div class="ui-tag-top">#INDIE_WAVE_REPORTS</div>
+            <a href="index.html" class="ui-close-btn">CERRAR [X]</a>
+
+            <div class="img-hero-frame">
+                <img src="norte-hero.jpg" alt="NORTE Banda">
+            </div>
+
+            <header class="post-header-v2">
+                <span class="tag-sec">AGENDA // INTEL: EMO INDIE POP</span>
+                <h1 class="post-title">NORTE:<br>LA VULNERABILIDAD<span> EN LA CDMX</span></h1>
+                
+                <div class="header-share">
+                    <a href="https://wa.me/?text=NORTE anuncia show en CDMX: https://elrockdetodoslosdias.com.mx/notasmarzo/postNorte.html" target="_blank"><i class="fab fa-whatsapp"></i> COMPARTIR</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/notasmarzo/postNorte.html" target="_blank"><i class="fab fa-facebook-f"></i> FACEBOOK</a>
+                    <a href="https://twitter.com/intent/tweet?url=https://elrockdetodoslosdias.com.mx/notasmarzo/postNorte.html" target="_blank"><i class="fab fa-x-twitter"></i> X / TWITTER</a>
+                </div>
+            </header>
+        </div>
+
+        <div class="meta-strip">
+            <span>FECHA: 4 DE ABRIL, 2026</span>
+            <span>SEDE: CHICO CDMX</span>
+            <span>STATUS: PREVENTA ACTIVA</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>Tras el estreno de su más reciente sencillo <strong>“LO Q 100TO”</strong>, NORTE continúa consolidando una propuesta sonora que navega entre la emoción cruda, la estética alternativa y una identidad cada vez más definida dentro de la escena mexicana.</p>
+                    
+                    <!-- RELACIONADO SEO: BLACK SHINE -->
+                    <aside>
+                        <a href="https://elrockdetodoslosdias.com.mx/notasmarzo/postBlackShine.html" class="related-archive" title="Black Shine: Night Hunter">
+                            <div class="related-thumb">
+                                <img src="black-shine-hero.jpg" alt="Black Shine Metal">
+                            </div>
+                            <div class="related-info">
+                                <span class="related-label">ARCHIVO RELACIONADO</span>
+                                <div class="related-title">
+                                    Black Shine: El acecho del "Night Hunter" y la nueva era del Metal Mexicano
+                                </div>
+                            </div>
+                        </a>
+                    </aside>
+
+                    <p>Formados en Culiacán y con base en la CDMX, Ángel Behar, Luca Bianchini y Jorge Hernández construyen su universo entre el Indie Pop, el Rock alternativo y la Electrónica, dando forma a un sonido íntimo y melancólico.</p>
+
+                    <div class="data-box">
+                        <h4>DATOS DEL SHOW</h4>
+                        <ul class="data-list">
+                            <li><b>LUGAR:</b> Chico CDMX</li>
+                            <li><b>LINE-UP:</b> NORTE + Los Yeahs</li>
+                            <li><b>AFTER PARTY:</b> Mila Mijangos & Latin Tears</li>
+                            <li><b>PRECIO:</b> $150 (Preventa) / $250 (Taquilla)</li>
+                        </ul>
+                    </div>
+
+                    <h3>GIRA NACIONAL</h3>
+                    <p>Actualmente, NORTE se encuentra recorriendo la república como parte del tour junto a <strong>San Venus</strong>, con paradas en Guadalajara, Aguascalientes y León. Con un nuevo EP preparado para este verano, la banda se perfila como una de las piezas claves de la nueva ola alternativa.</p>
+
+                    <p>Este 4 de abril no es solo un show más: es la oportunidad de conectar con la narrativa de una generación antes del gran despegue de la banda hacia el circuito de festivales.</p>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>DETALLES TÁCTICOS</h4>
+                    <div class="intel-item"><b>BANDA:</b> NORTE</div>
+                    <div class="intel-item"><b>GENERO:</b> Emo Indie Pop</div>
+                    <div class="intel-item"><b>FECHA CDMX:</b> 4 de Abril</div>
+                    <button onclick="window.open('https://open.spotify.com/intl-es/artist/4tkoi4gqtf9LVpLTvWQqZR')" style="width:100%; background:var(--accent); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">SPOTIFY OFICIAL</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer" style="margin-top: 80px; padding: 60px 0; border-top: 1px solid #111; text-align: center;">
+            <h3 style="font-family:'Syne'; color:var(--accent);">NORTE: EL SONIDO DE UNA GENERACIÓN VULNERABLE</h3>
+            <p style="font-family:'Space Mono'; font-size:10px; margin-top:10px;">EL ROCK DE TODOS LOS DÍAS // AGENDA © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

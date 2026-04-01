@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK SHINE | El acecho del "Night Hunter": Metal Mexicano de Exportación</title>
+
+    <!-- METAS OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="BLACK SHINE: La nueva descarga de Hard Rock y Metal con 'Night Hunter'">
+    <meta property="og:description" content="Black Shine presenta su álbum debut. 12 tracks de energía pura, riffs contundentes y una narrativa conceptual que marca un hito en la escena nacional.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/black-shine-hero.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasmarzo/postBlackShine.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BLACK SHINE 2026 - Night Hunter: Hard Rock desde Durango">
+    <meta name="twitter:description" content="Nominados a los Premios Kalani y seleccionados en WOA Metal Battle. El álbum que dejará huella en el metal mexicano.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasmarzo/black-shine-hero.jpg">
+    <meta name="twitter:site" content="@ElRockde">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #050505;
+            --white: #f3f4f6;
+            --accent: #dc2626; 
+            --accent-soft: rgba(220, 38, 38, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+
+        .scanlines {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(var(--accent-soft) 50%, rgba(0, 0, 0, 0.1) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .article-frame { border: 2px solid var(--accent); position: relative; margin-top: 40px; background: #000; }
+        .ui-tag-top {
+            position: absolute; top: -20px; left: 20px; background: var(--accent); color: white;
+            padding: 8px 15px; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700;
+            text-transform: uppercase; box-shadow: 4px 4px 0px white; z-index: 10;
+        }
+        .ui-close-btn {
+            position: absolute; top: -20px; right: 20px; background: white; color: black;
+            padding: 8px 15px; font-family: 'Space Mono'; font-size: 11px; font-weight: 900;
+            text-decoration: none; border: 1px solid var(--accent); z-index: 10; transition: 0.3s;
+        }
+        .ui-close-btn:hover { background: var(--accent); color: white; }
+
+        .img-hero-frame img { width: 100%; display: block; filter: grayscale(0.2) contrast(1.1); }
+
+        .post-header-v2 { padding: 40px 30px; border-bottom: 1px solid #111; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        .post-title { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 7vw, 4rem); line-height: 0.85; margin: 10px 0; text-transform: uppercase; }
+
+        /* COMPARTIR DEBAJO DEL TITULO */
+        .header-share { display: flex; gap: 10px; margin-top: 20px; }
+        .header-share a { 
+            color: var(--accent); border: 1px solid var(--accent); padding: 8px 15px; 
+            font-family: 'Space Mono'; font-size: 12px; text-decoration: none; transition: 0.3s;
+        }
+        .header-share a:hover { background: var(--accent); color: white; }
+
+        .meta-strip {
+            border-bottom: 1px solid #111; padding: 20px 30px; margin-bottom: 50px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content h3 { font-family: 'Syne'; color: var(--accent); margin: 40px 0 20px; text-transform: uppercase; border-left: 4px solid var(--accent); padding-left: 15px; }
+        .content p { font-size: 1.1rem; color: #9ca3af; margin-bottom: 30px; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px; line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        blockquote {
+            border-right: 4px solid var(--accent); padding: 30px; background: var(--accent-soft);
+            font-family: 'Space Mono'; font-style: italic; font-size: 0.95rem; margin: 40px 0; color: #ddd;
+        }
+
+        /* RELACIONADO SEO */
+        .related-archive {
+            margin: 40px 0; border: 1px dashed var(--accent); padding: 20px;
+            display: flex; align-items: center; gap: 20px; background: var(--accent-soft);
+            text-decoration: none; transition: 0.3s;
+        }
+        .related-archive:hover { background: rgba(220, 38, 38, 0.15); transform: translateY(-2px); }
+        .related-thumb { width: 100px; height: 100px; flex-shrink: 0; border: 1px solid var(--accent); padding: 3px; background: #000; }
+        .related-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .related-label { font-family: 'Syne'; font-weight: 800; font-size: 12px; color: var(--accent); text-transform: uppercase; margin-bottom: 5px; }
+        .related-title { font-family: 'Space Mono'; font-size: 13px; color: #ccc; line-height: 1.4; }
+
+        .data-box { background: var(--accent-soft); border: 1px solid var(--accent); padding: 30px; margin: 40px 0; }
+        .data-box h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; }
+        .data-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
+        .data-list li { margin-bottom: 15px; border-left: 2px solid var(--accent); padding-left: 15px; }
+        .data-list li b { color: white; display: block; text-transform: uppercase; font-size: 14px; }
+
+        /* REDES AL FINAL */
+        .social-footer-list { list-style: none; display: flex; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
+        .social-footer-list a { color: white; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; border-bottom: 1px solid var(--accent); }
+
+        .sidebar-intel { background: #0d0d12; border: 1px solid #111; padding: 30px; position: sticky; top: 100px; }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #6b7280; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        @media (max-width: 900px) { .main-layout { grid-template-columns: 1fr; } .related-archive { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+
+    <article class="container">
+        
+        <div class="article-frame">
+            <div class="ui-tag-top">#METAL_RELEASE_INTEL</div>
+            <a href="index.html" class="ui-close-btn">CERRAR [X]</a>
+
+            <div class="img-hero-frame">
+                <img src="black-shine-hero.jpg" alt="Black Shine Night Hunter">
+            </div>
+
+            <header class="post-header-v2">
+                <span class="tag-sec">LANZAMIENTO // INTEL: HARD ROCK & METAL</span>
+                <h1 class="post-title">BLACK SHINE:<br>EL ACECHO DEL<span> NIGHT HUNTER</span></h1>
+                
+                <!-- BOTONES DE COMPARTIR DEBAJO DEL TITULO -->
+                <div class="header-share">
+                    <a href="https://wa.me/?text=Black Shine lanza Night Hunter: https://elrockdetodoslosdias.com.mx/notasmarzo/postBlackShine.html" target="_blank"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://elrockdetodoslosdias.com.mx/notasmarzo/postBlackShine.html" target="_blank"><i class="fab fa-facebook-f"></i> SHARE</a>
+                    <a href="https://twitter.com/intent/tweet?url=https://elrockdetodoslosdias.com.mx/notasmarzo/postBlackShine.html" target="_blank"><i class="fab fa-x-twitter"></i> TWEET</a>
+                </div>
+            </header>
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: 24 DE FEBRERO, 2026</span>
+            <span>STATUS: ÁLBUM DEBUT</span>
+            <span>ORIGEN: DURANGO, MÉXICO</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>La agrupación duranguense de hard rock y metal <strong>Black Shine</strong> presenta oficialmente su nuevo álbum “Night Hunter”, una producción de 12 tracks que consolida la identidad sonora y conceptual de la banda dentro de la escena nacional.</p>
+                    
+                    <!-- RELACIONADO SEO -->
+                    <aside>
+                        <a href="https://elrockdetodoslosdias.com.mx/notasmarzo/investigacionProg.html" class="related-archive">
+                            <div class="related-thumb"><img src="prog-mexico-hero.jpg" alt="Rock Progresivo"></div>
+                            <div class="related-info">
+                                <span class="related-label">ARCHIVO RELACIONADO</span>
+                                <div class="related-title">Génesis del Progreso: Una investigación sobre los inicios del rock experimental en México</div>
+                            </div>
+                        </a>
+                    </aside>
+
+                    <p>Con una combinación de riffs contundentes, guitarras heavy, ritmos agresivos y voces intensas, “Night Hunter” representa una evolución natural en el sonido de la agrupación, apostando por la crudeza, la energía y una narrativa conceptual sólida.</p>
+
+                    <p>La contraportada refuerza el concepto general del disco al organizar los 12 temas bajo una propuesta simbólica que funciona como alegoría del suicidio. Dentro de esta narrativa, el tema <strong>“Pull the Trigger”</strong> ocupa el punto central —marcando las 12:00 a.m.— como un momento crítico dentro del imaginario del álbum.</p>
+
+                    <blockquote>
+                        “El álbum no solo destaca por su potencia musical, sino por su propuesta estética. Fue la fuerza visual del arte desarrollado por Nef Ramírez lo que terminó por definir el nombre definitivo del material.” 
+                        <br>— Black Shine
+                    </blockquote>
+
+                    <h3>VIDEOCLIP Y EVOLUCIÓN</h3>
+                    <p>Como parte del lanzamiento, la banda presenta su primer video oficial: <strong>“Shut Up”</strong>. El videoclip retrata el viaje mental de Servus, personaje interpretado por Nepo Romero, quien encarna a una figura marcada por la violencia física y psicológica a través de una cuidada teoría del color.</p>
+
+                    <div class="data-box">
+                        <h4>ROSTER OFICIAL (INTEGRANTES)</h4>
+                        <ul class="data-list">
+                            <li><b>Fer Ace:</b> Guitarra líder, compositor y productor. Influencias: Pantera, Deep Purple.</li>
+                            <li><b>Carlos Black:</b> Voz principal y compositor. Raíces en Skid Row y Judas Priest.</li>
+                            <li><b>Darian:</b> Baterista (Distrito Rockstar). Inspirado por Tommy Lee y Slipknot.</li>
+                            <li><b>Gandhi:</b> Guitarra rítmica. Estilo Led Zeppelin y System of a Down.</li>
+                            <li><b>Jebuz Mota:</b> Bajista y fotógrafo. Influencias: Tool y Audioslave.</li>
+                        </ul>
+                    </div>
+
+                    <h3>RECONOCIMIENTO EN LA ESCENA</h3>
+                    <p>El lanzamiento llega tras su nominación a los <strong>Premios Kalani 2025</strong> como Mejor Banda de Hard Rock en México y su destacada participación en el <strong>WOA Metal Battle México</strong>, donde se posicionaron entre las mejores 30 bandas de 84 aspirantes.</p>
+
+                    <h4>CONECTA CON BLACK SHINE:</h4>
+                    <ul class="social-footer-list">
+                        <li><a href="https://www.youtube.com/@BlackShineband" target="_blank">YOUTUBE</a></li>
+                        <li><a href="https://www.facebook.com/BlackShineBand/" target="_blank">FACEBOOK</a></li>
+                        <li><a href="https://www.instagram.com/blackshineband/" target="_blank">INSTAGRAM</a></li>
+                        <li><a href="https://linktr.ee/blackshineband" target="_blank">LINKTREE</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>DATA TÁCTICA</h4>
+                    <div class="intel-item"><b>ÁLBUM:</b> Night Hunter</div>
+                    <div class="intel-item"><b>TRACKS:</b> 12 Unidades</div>
+                    <div class="intel-item"><b>NOMINACIÓN:</b> Premios Kalani 2025</div>
+                    <div class="intel-item"><b>STATUS:</b> Disponible en plataformas</div>
+                    <button onclick="window.open('https://linktr.ee/blackshineband')" style="width:100%; background:var(--accent); color:white; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer; text-transform:uppercase;">Escuchar Ahora</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer" style="margin-top: 80px; padding: 60px 0; border-top: 1px solid #111; text-align: center;">
+            <h3 style="font-family:'Syne'; color:var(--accent);">BLACK SHINE: LA NUEVA SANGRE DEL METAL</h3>
+            <p style="font-family:'Space Mono'; font-size:10px; margin-top:10px;">EL ROCK DE TODOS LOS DÍAS // NOTICIAS © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>
