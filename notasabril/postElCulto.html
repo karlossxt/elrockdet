@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRÓNICA | El Culto: Donde el plástico se derrite y el ruido te acoge</title>
+
+    <!-- METAS OPEN GRAPH (ACTUALIZADOS A ABRIL) -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="EL CULTO: Inauguración y Caos en Pantitlán">
+    <meta property="og:description" content="Crónica de una noche de electricidad pura. Calaverx, Cortés MX y The Bottles Room incendian el nuevo templo del ruido.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasabril/el-culto-hero.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasabril/postElCulto.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EL CULTO: Inauguración y Caos en Pantitlán">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasabril/el-culto-hero.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #84cc16; /* Verde Radioactivo */
+            --white: #f3f4f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(132, 204, 22, 0.04) 50%, rgba(0, 0, 0, 0.1) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--accent); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            text-decoration: none; font-size: 12px;
+        }
+
+        .post-header { margin-bottom: 60px; border-left: 10px solid var(--accent); padding-left: 30px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.2rem, 7vw, 5rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+        }
+
+        .img-hero { border: 1px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
+        .img-hero img { width: 100%; display: block; filter: saturate(1.2) contrast(1.2); }
+
+        .meta-strip {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 20px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content p { font-size: 1.2rem; font-weight: 400; color: #9ca3af; margin-bottom: 35px; line-height: 1.7; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .theory-box {
+            background: rgba(132, 204, 22, 0.05); border: 1px solid var(--accent);
+            padding: 40px; margin: 60px 0; position: relative;
+        }
+        .theory-box h3 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
+        .theory-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
+        .theory-list li { margin-bottom: 15px; border-left: 3px solid var(--accent); padding-left: 15px; }
+
+        /* ESTILO GALERÍA CON EFECTO ZOOM */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px; margin: 60px 0;
+        }
+
+        .gallery-item { 
+            border: 1px solid #333; 
+            background: #000; 
+            padding: 5px; 
+            transition: 0.3s; 
+            overflow: hidden; /* ESTO ES CLAVE: Mantiene el zoom dentro del recuadro */
+            position: relative;
+        }
+
+        .gallery-item:hover { 
+            border-color: var(--accent); 
+            box-shadow: 0 0 15px rgba(132, 204, 22, 0.2);
+        }
+
+        .gallery-item img { 
+            width: 100%; 
+            height: 180px; 
+            object-fit: cover; 
+            display: block; 
+            filter: grayscale(0.8); /* Empieza un poco gris */
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease; /* Transición suave */
+        }
+
+        /* EFECTO HOVER: Zoom + Quitar Grayscale */
+        .gallery-item:hover img { 
+            transform: scale(1.15); /* Zoom del 15% */
+            filter: grayscale(0); 
+        }
+        .credits-box {
+            margin-top: 40px; padding: 20px; border: 1px solid #222;
+            font-family: 'Space Mono'; font-size: 10px; color: #666;
+            text-transform: uppercase;
+        }
+        /* CRÉDITOS ULTRA GRANDES */
+        .credits-box {
+            margin-top: 80px;
+            padding: 40px;
+            border: 5px solid var(--accent); /* Borde mucho más grueso */
+            background: rgba(132, 204, 22, 0.05);
+            position: relative;
+        }
+        .credits-label {
+            font-family: 'Space Mono';
+            font-size: 14px;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        .credits-main {
+            font-family: 'Syne';
+            font-size: clamp(2rem, 5vw, 4rem); /* Tamaño masivo responsivo */
+            line-height: 0.9;
+            color: var(--white);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .credits-details {
+            font-family: 'Space Mono';
+            font-size: 16px;
+            color: #9ca3af;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            display: block;
+            word-break: break-all;
+        }
+        }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; font-size: 1rem; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #6b7280; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        .post-footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid #222; text-align: center; }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2rem; color: var(--accent); font-style: italic; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='../escena.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">OPENING NIGHT // INTEL: EL CULTO</span>
+            <h1 class="post-title">EL CULTO: DONDE<br>EL PLÁSTICO <span>SE DERRITE</span></h1>
+        </header>
+
+        <div class="img-hero">
+            <img src="el-culto-inauguracion.jpg" alt="Inauguración El Culto">
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: NUEVOS ESPACIOS (ABRIL)</span>
+            <span>Ubicación: CALLE 7 Y PANTITLÁN</span>
+            <span>STATUS: HABEMUS IGLESIA</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>Este sábado 11 de abril, mientras el mundo se ahogaba en su propia basura comercial y producciones de plástico para gente sin alma, un nuevo agujero abrió sus puertas: <strong>El Culto</strong>. Ubicado en Calle 7 y Pantitlán, está a dos kilómetros del metro; una distancia que se siente como un desierto si vas sobrio, pero que no importa un carajo cuando buscas donde esconderte del sistema.</p>
+                    
+                    <p>El capitalismo y sus malditas responsabilidades nos retrasaron, pero llegamos a tiempo. La noche empezó con electricidad pura. Los DJs <strong>Ihumas Pervers, Nebel Hexe y J Lukis</strong> soltaron descargas eléctricas que poseían a la gente, obligando a los cuerpos a moverse como si la vida dependiera de ello.</p>
+
+                    <h3>LAS BANDAS: RUIDO HONESTO</h3>
+                    <p><strong>The Bottles Room:</strong> Te golpean con un rock que suena a sombras y a botellas vacías. Es crudo, sin pulir y huele a verdad.</p>
+                    <p><strong>Cortes MX:</strong> Tienen esa energía sucia de quien hace ruido para no volverse loco. Mientras no sigan el camino plástico que arranca el corazón, nos tendrán ahí.</p>
+
+                    <!-- GALERÍA DE 10 FOTOS -->
+                    <h3 style="color:var(--accent); font-family:'Syne'; margin-top:50px;">GALERÍA: EL CULTO POR LOS LETREADORES</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="foto1.jpg" alt="Gallery"></div>
+                        <div class="gallery-item"><img src="foto2.jpg" alt="Gallery"></div>
+                        <div class="gallery-item"><img src="foto3.jpg" alt="Gallery"></div>
+                        <div class="gallery-item"><img src="foto4.jpg" alt="Gallery"></div>
+                        <div class="gallery-item"><img src="foto5.jpg" alt="Gallery"></div>
+                        <div class="gallery-item"><img src="foto6.jpg" alt="Gallery"></div>
+                        <div class="gallery-item"><img src="foto7.jpg" alt="Gallery"></div>
+                        <div class="gallery-item"><img src="foto8.jpg" alt="Gallery"></div>
+                        <div class="gallery-item"><img src="foto9.jpg" alt="Gallery"></div>
+                        <div class="gallery-item"><img src="foto10.jpg" alt="Gallery"></div>
+                    </div>
+
+                    <h3>EL PLATO FUERTE: CALAVERX</h3>
+                    <p>El sitio estaba a reventar. <strong>Calaverx</strong> se portó como la bestia nacional que es. Manolo, el vocalista, se mezcló entre la multitud sin pedestales. Cuando himnos como <em>¡Viva México!</em> retumbaron, el techo casi se viene abajo. Los fallos técnicos al final solo sirvieron para un <strong>unplugged sangriento y real</strong>.</p>
+
+                    <div class="theory-box">
+                        <h3>CARTELERA PRÓXIMOS SÁBADOS</h3>
+                        <ul class="theory-list">
+                            <li><b>18 ABRIL:</b> ZEZAREE</li>
+                            <li><b>25 ABRIL:</b> DIVINA BLASFEMIA</li>
+                            <li><b>02 MAYO:</b> STRANGER & LOVERS</li>
+                            <li><b>09 MAYO:</b> JESSY BULBO</li>
+                        </ul>
+                    </div>
+
+                     <!-- CAJA DE CRÉDITOS MASIVA -->
+                    <div class="credits-box">
+                        <span class="credits-label">CRÉDITOS DE NOTA, FOTOS Y LETRAS:</span>
+                        <span class="credits-main">LOS LETREADORES</span>
+                        <span class="credits-details">// JxTr Jazak, @poetaulisescastanares_10, Ulises Siddartha Castañares</span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>PERFIL DEL FORO</h4>
+                    <div class="intel-item"><b>NOMBRE:</b> El Culto</div>
+                    <div class="intel-item"><b>UBICACIÓN:</b> Pantitlán (CDMX)</div>
+                    <div class="intel-item"><b>BANDA:</b> Calaverx</div>
+                    <button onclick="window.open('https://www.instagram.com/calaverxx/')" style="width:100%; background:var(--accent); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">INSTAGRAM</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>HABEMUS IGLESIA. EL RUIDO NOS PROTEGE.</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // ESCENA SUBTERRÁNEA © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>
