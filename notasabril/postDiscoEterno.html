@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCENA | Disco Eterno consolida su propuesta con "Sueño Perpetuo"</title>
+
+    <!-- METAS OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="DISCO ETERNO: El despertar del 'Sueño Perpetuo'">
+    <meta property="og:description" content="La banda de punk rock libera su EP homónimo. Crítica social, distorsión clásica y sonidos introspectivos.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasabril/disco-eterno-hero.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasabril/postDiscoEterno.html">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #a855f7; /* Púrpura Eléctrico / Punk Introspectivo */
+            --white: #f3f4f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(168, 85, 247, 0.04) 50%, rgba(0, 0, 0, 0.1) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--accent); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            text-decoration: none; font-size: 12px;
+        }
+
+        .post-header { margin-bottom: 60px; border-left: 10px solid var(--accent); padding-left: 30px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.2rem, 7vw, 5rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+        }
+
+        .img-hero { border: 1px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
+        .img-hero img { width: 100%; display: block; filter: saturate(0.8) contrast(1.1); }
+
+        .meta-strip {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 20px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content p { font-size: 1.2rem; font-weight: 400; color: #9ca3af; margin-bottom: 35px; line-height: 1.7; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        /* RELACIONADO (SPINNE) */
+        .related-archive {
+            margin: 40px 0; border: 1px dashed var(--accent); padding: 20px;
+            display: flex; align-items: center; gap: 20px; background: rgba(168, 85, 247, 0.05);
+            text-decoration: none; transition: 0.3s;
+        }
+        .related-archive:hover { background: rgba(168, 85, 247, 0.1); transform: translateY(-2px); }
+        .related-thumb { width: 100px; height: 100px; flex-shrink: 0; border: 1px solid var(--accent); padding: 3px; background: #000; }
+        .related-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .related-info { display: flex; flex-direction: column; }
+        .related-label { font-family: 'Syne'; font-weight: 800; font-size: 12px; color: var(--accent); text-transform: uppercase; margin-bottom: 5px; }
+        .related-title { font-family: 'Space Mono'; font-size: 13px; color: #ccc; line-height: 1.4; }
+
+        .theory-box {
+            background: rgba(168, 85, 247, 0.05); border: 1px solid var(--accent);
+            padding: 40px; margin: 60px 0; position: relative;
+        }
+        .theory-box h3 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
+        .theory-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
+        .theory-list li { margin-bottom: 15px; border-left: 3px solid var(--accent); padding-left: 15px; }
+
+        /* GALERÍA ZOOM */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px; margin: 60px 0;
+        }
+        .gallery-item { border: 1px solid #333; background: #000; padding: 5px; overflow: hidden; }
+        .gallery-item img { 
+            width: 100%; height: 180px; object-fit: cover; display: block; 
+            filter: grayscale(0.7); 
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.15); filter: grayscale(0); }
+        .gallery-item:hover { border-color: var(--accent); }
+
+        /* CRÉDITOS MASIVOS */
+        .credits-box {
+            margin-top: 80px; padding: 40px; border: 5px solid var(--accent);
+            background: rgba(168, 85, 247, 0.05);
+        }
+        .credits-label { font-family: 'Space Mono'; font-size: 14px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 10px; }
+        .credits-main { font-family: 'Syne'; font-size: clamp(2rem, 5vw, 4rem); line-height: 0.9; color: var(--white); text-transform: uppercase; margin-bottom: 20px; display: block; }
+        .credits-details { font-family: 'Space Mono'; font-size: 16px; color: #9ca3af; border-top: 1px solid #333; padding-top: 20px; display: block; }
+
+        .sidebar-intel {
+            background: #0d0d12; border: 1px solid #222;
+            padding: 30px; position: sticky; top: 100px; height: fit-content;
+        }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; font-size: 1rem; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #6b7280; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        .post-footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid #222; text-align: center; }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2rem; color: var(--accent); font-style: italic; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='../escena.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">ESCENA INDEPENDIENTE // INTEL: DISCO ETERNO</span>
+            <h1 class="post-title">DISCO ETERNO:<br>PUNK Y <span>SUEÑO PERPETUO</span></h1>
+        </header>
+
+        <div class="img-hero">
+            <img src="disco-eterno-hero.jpg" alt="Disco Eterno Sueño Perpetuo EP">
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: PUNK ROCK CDMX</span>
+            <span>FORMATO: EP (SUEÑO PERPETUO)</span>
+            <span>STATUS: INDEPENDIENTE</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>La agrupación de punk rock, <strong>Disco Eterno</strong>, ha marcado un hito en su trayectoria este mes de abril de 2026 con el estreno oficial de su EP titulado <strong>Sueño Perpetuo</strong>. Tras meses de expectativa generada por el sencillo homónimo, la banda finalmente libera su material completo.</p>
+                    
+                    <p>Bajo la autoría y composición de <strong>José Adrián Ramírez Soberanes</strong>, el proyecto se presenta como una exploración de sonidos crudos y líricas que transitan entre la introspección y la crítica social. Logran desmarcarse mediante una identidad sonora que apuesta por la distorsión clásica del punk y una producción contemporánea.</p>
+
+                    <!-- RELACIONADO -->
+                    <aside>
+                        <a href="postSpinne.html" class="related-archive" title="Leer sobre Spinne No Regret Held">
+                            <div class="related-thumb">
+                                <img src="spinne-no-regret-hero.jpg" alt="Spinne Metal">
+                            </div>
+                            <div class="related-info">
+                                <span class="related-label">ARCHIVO RELACIONADO</span>
+                                <div class="related-title">
+                                    Los mexicanos SPINNE estrenan "No Regret Held": Thrash de la vieja escuela
+                                </div>
+                            </div>
+                        </a>
+                    </aside>
+
+                    <h3>IDENTIDAD Y DISTORSIÓN</h3>
+                    <p>El lanzamiento de este material no solo consolida el catálogo de la banda en el ecosistema del streaming, sino que los posiciona como una de las propuestas emergentes a seguir dentro de la escena mexicana. Con una base rítmica sólida y guitarras agresivas, Disco Eterno reafirma que el punk rock mantiene su vigencia como vehículo de expresión emocional y artística.</p>
+
+                    <div class="theory-box">
+                        <h3>INTEL DEL LANZAMIENTO</h3>
+                        <ul class="theory-list">
+                            <li><b>AUTORÍA:</b> José Adrián Ramírez Soberanes.</li>
+                            <li><b>SONIDO:</b> Punk Rock / Crítica Social / Introspección.</li>
+                            <li><b>PLATAFORMAS:</b> Spotify, Anghami y YouTube Music.</li>
+                            <li><b>ESTADO:</b> Próxima gira promocional 2026.</li>
+                        </ul>
+                    </div>
+
+                    <!-- GALERÍA DE 10 FOTOS -->
+                    <h3 style="color:var(--accent); font-family:'Syne'; margin-top:50px;">VISUALES: EL SUEÑO PERPETUO</h3>
+                    <div class="gallery-grid">
+                        <div class="gallery-item"><img src="disco1.jpg" alt="Disco Eterno"></div>
+                        <div class="gallery-item"><img src="disco2.jpg" alt="Disco Eterno"></div>
+                        <div class="gallery-item"><img src="disco3.jpg" alt="Disco Eterno"></div>
+                        <div class="gallery-item"><img src="disco4.jpg" alt="Disco Eterno"></div>
+                        <div class="gallery-item"><img src="disco5.jpg" alt="Disco Eterno"></div>
+                        <div class="gallery-item"><img src="disco6.jpg" alt="Disco Eterno"></div>
+                        <div class="gallery-item"><img src="disco7.jpg" alt="Disco Eterno"></div>
+                        <div class="gallery-item"><img src="disco8.jpg" alt="Disco Eterno"></div>
+                        <div class="gallery-item"><img src="disco9.jpg" alt="Disco Eterno"></div>
+                        <div class="gallery-item"><img src="disco10.jpg" alt="Disco Eterno"></div>
+                    </div>
+
+                    <!-- CAJA DE CRÉDITOS MASIVA -->
+                    <div class="credits-box">
+                        <span class="credits-label">AUTORÍA Y COMPOSICIÓN:</span>
+                        <span class="credits-main">JOSÉ ADRIÁN RAMÍREZ SOBERANES</span>
+                        <span class="credits-details">// DISCO ETERNO // PUNK ROCK INDEPENDIENTE CDMX</span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>PERFIL BANDA</h4>
+                    <div class="intel-item"><b>BANDA:</b> Disco Eterno</div>
+                    <div class="intel-item"><b>ORIGEN:</b> Ciudad de México</div>
+                    <div class="intel-item"><b>GÉNERO:</b> Punk Rock</div>
+                    <div class="intel-item"><b>LANZAMIENTO:</b> Sueño Perpetuo (EP)</div>
+                    <button onclick="window.open('https://www.instagram.com/discoeterno_band/')" style="width:100%; background:var(--accent); color:white; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">VER INSTAGRAM</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>EL PUNK NO ESTÁ MUERTO, SOLO ESTÁ EN UN SUEÑO PERPETUO.</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // ESCENA NACIONAL © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>
