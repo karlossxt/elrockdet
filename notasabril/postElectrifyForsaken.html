@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCENA | Electrify estrena 'Forsaken': El rugido de la autenticidad</title>
+
+    <!-- METAS OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ELECTRIFY: El costo mental de la identidad">
+    <meta property="og:description" content="La banda mexicana estrena 'Forsaken', un quinto sencillo cargado de introspección y rock crudo.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasabril/electrify-forsaken.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasabril/postElectrifyForsaken.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ELECTRIFY - Forsaken: Un viaje hacia la vulnerabilidad">
+    <meta name="twitter:description" content="¿Cuánto cuesta encajar? Electrify responde con distorsión en su nuevo sencillo.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasabril/electrify-forsaken.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #db2777; /* Rosa Magenta Punk */
+            --white: #f3f4f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(219, 39, 119, 0.04) 50%, rgba(0, 0, 0, 0.1) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--accent); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            text-decoration: none; font-size: 12px;
+        }
+
+        .post-header { margin-bottom: 60px; border-left: 10px solid var(--accent); padding-left: 30px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.2rem, 7vw, 5rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+        }
+
+        .img-hero { border: 1px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
+        .img-hero img { width: 100%; display: block; filter: saturate(0.8) contrast(1.1); }
+
+        .img-inline { width: 100%; border: 1px solid #222; margin: 40px 0; padding: 5px; background: #000; }
+        .img-inline img { width: 100%; display: block; transition: 0.5s; }
+
+        .meta-strip {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 20px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content p { font-size: 1.2rem; font-weight: 400; color: #9ca3af; margin-bottom: 35px; line-height: 1.7; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .related-archive {
+            margin: 40px 0; border: 1px dashed var(--accent); padding: 20px;
+            display: flex; align-items: center; gap: 20px; background: rgba(219, 39, 119, 0.05);
+            text-decoration: none; transition: 0.3s;
+        }
+        .related-archive:hover { background: rgba(219, 39, 119, 0.1); transform: translateY(-2px); }
+        .related-thumb { width: 100px; height: 100px; flex-shrink: 0; border: 1px solid var(--accent); padding: 3px; background: #000; }
+        .related-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .related-info { display: flex; flex-direction: column; }
+        .related-label { font-family: 'Syne'; font-weight: 800; font-size: 12px; color: var(--accent); text-transform: uppercase; margin-bottom: 5px; }
+        .related-title { font-family: 'Space Mono'; font-size: 13px; color: #ccc; line-height: 1.4; }
+
+        .theory-box {
+            background: rgba(219, 39, 119, 0.05); border: 1px solid var(--accent);
+            padding: 40px; margin: 60px 0; position: relative;
+        }
+        .theory-box h3 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
+        .theory-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
+        .theory-list li { margin-bottom: 15px; border-left: 3px solid var(--accent); padding-left: 15px; }
+
+        .sidebar-intel {
+            background: #0d0d12; border: 1px solid #222;
+            padding: 30px; position: sticky; top: 100px; height: fit-content;
+        }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; font-size: 1rem; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #6b7280; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        .share-section {
+            margin: 40px 0; padding: 20px; border: 1px dashed #333;
+            display: flex; align-items: center; gap: 20px;
+        }
+        .share-btns { display: flex; gap: 15px; }
+        .share-btns a { 
+            color: white; font-size: 18px; width: 40px; height: 40px; 
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid #222; text-decoration: none; transition: 0.3s;
+        }
+        .share-btns a:hover { background: var(--accent); color: white; border-color: var(--accent); }
+
+        .post-footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid #222; text-align: center; }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2rem; color: var(--accent); font-style: italic; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 2.2rem; }
+            .related-archive { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='../escena.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">ESCENA NACIONAL // INTEL: LANZAMIENTO</span>
+            <h1 class="post-title">ELECTRIFY:<br>EL PRECIO DE LA <span>AUTENTICIDAD</span></h1>
+        </header>
+
+        <!-- IMAGEN 1 (HERO) -->
+        <div class="img-hero">
+            <img src="electrify-hero.jpg" alt="Electrify Banda Rock Mexicano Forsaken">
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: NUEVA MÚSICA</span>
+            <span>LOCATION: CDMX / MÉXICO</span>
+            <span>STATUS: DISPONIBLE EN PLATAFORMAS</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>La escena del nuevo rock mexicano suma un nuevo e importante capítulo. <strong>Electrify</strong> continúa consolidando su paso firme en la industria nacional con el lanzamiento de <strong>"Forsaken"</strong>, un sencillo directo que se desprende de las convencionalidades para abordar una de las batallas humanas más complejas: mantenerse fiel a la esencia propia.</p>
+                    
+                    <h3>NARRATIVA DESDE LA VULNERABILIDAD</h3>
+                    <p>Tras el éxito cosechado con temas como ‘Drive’, ‘Fake’, ‘Timeless’ y ‘Mercy’, la banda da un salto evolutivo en su identidad sonora. En esta ocasión, el grupo deja de lado las barreras y se adentra en una lírica profundamente introspectiva que nace desde la vulnerabilidad absoluta.</p>
+
+                    <!-- BLOQUE ARCHIVO RELACIONADO (SEO) -->
+                    <aside>
+                        <a href="https://elrockdetodoslosdias.com.mx/notasabril/postJessyBulbo.html" class="related-archive" title="Leer sobre Jessy Bulbo">
+                            <div class="related-thumb">
+                                <img src="jessy-bulbo-thumb.jpg" alt="Jessy Bulbo Rock con Causa">
+                            </div>
+                            <div class="related-info">
+                                <span class="related-label">ARCHIVO RELACIONADO</span>
+                                <div class="related-title">
+                                    Jessy Bulbo encabeza festival por el bienestar animal en Iztapalapa
+                                </div>
+                            </div>
+                        </a>
+                    </aside>
+
+                    <h3>EL ORIGEN: DISOCIACIÓN Y RESCATE</h3>
+                    <p>Lejos de la ficción, la composición de "Forsaken" encuentra sus raíces en una vivencia personal real y densa de los integrantes. La canción explora sin filtros esa dolorosa sensación de perder el rumbo y desdibujar la identidad propia para cumplir con expectativas ajenas.</p>
+
+                    <div class="theory-box">
+                        <h3>INTEL DE PRODUCCIÓN: FORSAKEN</h3>
+                        <ul class="theory-list">
+                            <li><b>SINGLE:</b> #5 en la cronología oficial</li>
+                            <li><b>TEMÁTICA:</b> Salud mental y disociación</li>
+                            <li><b>ANTERIORES:</b> Drive, Fake, Timeless, Mercy</li>
+                            <li><b>MENSAJE:</b> Elegirse a uno mismo antes de que sea tarde</li>
+                        </ul>
+                    </div>
+
+                    <!-- IMAGEN INLINE -->
+                    <div class="img-inline">
+                        <img src="electrify-estudio.jpg" alt="Electrify en el proceso de creación de Forsaken">
+                    </div>
+
+                    <h3>UNA ALARMA SOCIAL</h3>
+                    <p>Con esta declaración, el grupo deja en claro que el sencillo no solo busca conectar con su audiencia a través de la empatía emocional, sino que también funciona como una potente alarma social sobre el alto costo mental y emocional que conlleva traicionarse a uno mismo para encajar en el entorno.</p>
+
+                    <div class="share-section">
+                        <span style="font-family:'Space Mono'; font-size:12px; color:var(--accent);">DIFUNDIR FRECUENCIA:</span>
+                        <div class="share-btns">
+                            <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>PERFIL PROYECTO</h4>
+                    <div class="intel-item"><b>BANDA:</b> Electrify</div>
+                    <div class="intel-item"><b>GÉNERO:</b> Rock / Alternativo</div>
+                    <div class="intel-item"><b>ORIGEN:</b> México</div>
+                    <div class="intel-item"><b>LANZAMIENTO:</b> Forsaken (2024)</div>
+                    <button onclick="window.open('https://open.spotify.com/intl-es/album/1uumR4NHDEnfOn1L399xxC?si=iroJLtGyStSlax8_UDuNSg')" style="width:100%; background:var(--accent); color:white; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">STREAMEAR 'FORSAKEN'</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>ELECTRIFY: ELEGIRSE A UNO MISMO.</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // ESCENA NACIONAL © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>
