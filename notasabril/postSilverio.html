@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,14 @@
     <meta property="og:description" content="Segundo adelanto de su nuevo álbum. Una explosión de ritmo machaca y humor absurdo ya disponible.">
     <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasabril/silverio-exito-hero.jpg">
     <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasabril/postSilverio.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SILVERIO: Su Majestad Imperial presenta 'ÉXITO'">
+    <meta name="twitter:description" content="Puro éxito y suspenso tropical. El nuevo sencillo de Silverio ya está aquí.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasabril/silverio-exito-hero.jpg">
+    <meta name="twitter:site" content="@ElRockde">
 
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -63,6 +71,10 @@
         .img-hero { border: 1px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
         .img-hero img { width: 100%; display: block; filter: saturate(1.2) contrast(1.1); }
 
+        .img-inline { width: 100%; border: 1px solid #222; margin: 40px 0; padding: 5px; background: #000; }
+        .img-inline img { width: 100%; display: block; filter: grayscale(0.5); transition: 0.5s; }
+        .img-inline:hover img { filter: grayscale(0); }
+
         .meta-strip {
             border-top: 1px solid #222; border-bottom: 1px solid #222;
             padding: 20px 0; margin-bottom: 50px;
@@ -78,7 +90,6 @@
             line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
         }
 
-        /* NOTA RELACIONADA */
         .related-archive {
             margin: 40px 0; border: 1px dashed var(--accent); padding: 20px;
             display: flex; align-items: center; gap: 20px; background: rgba(239, 68, 68, 0.05);
@@ -99,29 +110,12 @@
         .theory-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
         .theory-list li { margin-bottom: 15px; border-left: 3px solid var(--accent); padding-left: 15px; }
 
-        /* GALERÍA CON ZOOM */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px; margin: 60px 0;
-        }
-        .gallery-item { border: 1px solid #333; background: #000; padding: 5px; overflow: hidden; }
-        .gallery-item img { 
-            width: 100%; height: 180px; object-fit: cover; display: block; 
-            filter: grayscale(0.8) contrast(1.2); 
-            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
-        }
-        .gallery-item:hover img { transform: scale(1.15); filter: grayscale(0); }
-        .gallery-item:hover { border-color: var(--accent); }
-
-        /* CRÉDITOS MASIVOS */
         .credits-box {
-            margin-top: 80px; padding: 40px; border: 5px solid var(--accent);
+            margin-top: 40px; padding: 30px; border: 2px solid var(--accent);
             background: rgba(239, 68, 68, 0.05);
         }
-        .credits-label { font-family: 'Space Mono'; font-size: 14px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 10px; }
-        .credits-main { font-family: 'Syne'; font-size: clamp(1.8rem, 5vw, 3.5rem); line-height: 0.9; color: var(--white); text-transform: uppercase; margin-bottom: 20px; display: block; }
-        .credits-details { font-family: 'Space Mono'; font-size: 15px; color: #9ca3af; border-top: 1px solid #333; padding-top: 20px; display: block; }
+        .credits-label { font-family: 'Space Mono'; font-size: 12px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 5px; }
+        .credits-main { font-family: 'Syne'; font-size: 1.8rem; color: var(--white); text-transform: uppercase; }
 
         .sidebar-intel {
             background: #0d0d12; border: 1px solid #222;
@@ -152,6 +146,7 @@
             <h1 class="post-title">SILVERIO: ÉXITO<br>Y <span>SILVERIOLANDIA</span></h1>
         </header>
 
+        <!-- IMAGEN 1 (HERO) -->
         <div class="img-hero">
             <img src="silverio-exito-hero.jpg" alt="Silverio Éxito Nuevo Sencillo">
         </div>
@@ -168,9 +163,13 @@
                 <div class="content">
                     <p>Su Majestad Imperial, el Artista de las Cavernas Nasales, <strong>Silverio</strong>, presenta “Éxito”, el segundo sencillo de su próximo álbum de estudio. Una pieza donde la belleza no se lleva por dentro, pero luce y suena como una cascada de piedras en el desierto.</p>
                     
-                    <p>Puro éxito y suspenso al estilo Miss Universo tropical: así describe Silverio esta nueva entrega. Con su característico humor absurdo, provocador y profundamente surrealista, “Éxito” se despliega como una explosión de ritmo machaca y distopía tropical, construyendo un paisaje sonoro donde el futuro ya llegó y viene bailando.</p>
+                    <p>Puro éxito y suspenso al estilo Miss Universo tropical: así describe Silverio esta nueva entrega. Con su característico humor absurdo, provocador y profundamente surrealista, “Éxito” se despliega como una explosión de ritmo machaca y distopía tropical.</p>
 
-                    <!-- NOTA RELACIONADA -->
+                    <!-- IMAGEN 2 (INLINE) -->
+                    <div class="img-inline">
+                        <img src="silverio1.jpg" alt="Su Majestad Imperial Silverio">
+                    </div>
+
                     <aside>
                         <a href="postSaurom.html" class="related-archive" title="Leer sobre Saurom Acústico">
                             <div class="related-thumb">
@@ -188,38 +187,24 @@
                     <h3>EL SONIDO DE SILVERIOLANDIA</h3>
                     <p>Como segundo adelanto de su próximo álbum homónimo —concebido, producido y manufacturado enteramente en <strong>Silveriolandia</strong>— “Éxito” reafirma esta nueva etapa creativa: un material más violento, más bailable y más recargado de su inconfundible humor bisco.</p>
 
+                    <!-- IMAGEN 3 (INLINE) -->
+                    <div class="img-inline">
+                        <img src="silverio2.jpg" alt="Silveriolandia Visuals">
+                    </div>
+
                     <div class="theory-box">
                         <h3>ANÁLISIS TÉCNICO: ÉXITO</h3>
                         <ul class="theory-list">
                             <li><b>GÉNERO:</b> Electrónica de Caverna / Ritmo Machaca.</li>
-                            <li><b>ESTÉTICA:</b> Miss Universo Tropical / Vida y Estilo torcido.</li>
+                            <li><b>ESTÉTICA:</b> Miss Universo Tropical / Vida y Estilo.</li>
                             <li><b>PRODUCCIÓN:</b> 100% Manufacturado en Silveriolandia.</li>
                             <li><b>ESTADO:</b> Más agresivo, sofisticado y absurdo que nunca.</li>
                         </ul>
                     </div>
 
-                    <!-- GALERÍA DE 10 FOTOS -->
-                    <h3 style="color:var(--accent); font-family:'Syne'; margin-top:50px;">VISUALES: SU MAJESTAD IMPERIAL</h3>
-                    <div class="gallery-grid">
-                        <div class="gallery-item"><img src="silverio1.jpg" alt="Silverio"></div>
-                        <div class="gallery-item"><img src="silverio2.jpg" alt="Silverio"></div>
-                        <div class="gallery-item"><img src="silverio3.jpg" alt="Silverio"></div>
-                        <div class="gallery-item"><img src="silverio4.jpg" alt="Silverio"></div>
-                        <div class="gallery-item"><img src="silverio5.jpg" alt="Silverio"></div>
-                        <div class="gallery-item"><img src="silverio6.jpg" alt="Silverio"></div>
-                        <div class="gallery-item"><img src="silverio7.jpg" alt="Silverio"></div>
-                        <div class="gallery-item"><img src="silverio8.jpg" alt="Silverio"></div>
-                        <div class="gallery-item"><img src="silverio9.jpg" alt="Silverio"></div>
-                        <div class="gallery-item"><img src="silverio10.jpg" alt="Silverio"></div>
-                    </div>
-
-                    <p>Con una trayectoria consolidada como una de las propuestas más radicales y de culto de la música alternativa mexicana, Silverio continúa empujando su estética hacia terrenos cada vez más incómodos, festivos y extremos. “Éxito” ya está disponible en todas las plataformas digitales.</p>
-
-                    <!-- CAJA DE CRÉDITOS MASIVA -->
                     <div class="credits-box">
                         <span class="credits-label">FOTOGRAFÍA Y REGISTRO VISUAL:</span>
                         <span class="credits-main">MONTERO TRANQUILO // AXEL</span>
-                        <span class="credits-details">// @montero_tranquilo & @axel_____axell</span>
                     </div>
                 </div>
             </div>
