@@ -11,6 +11,14 @@
     <meta property="og:description" content="Sofía Élan presenta 'Cítrico', un EP grabado enteramente en vivo desde la intimidad de su hogar.">
     <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasabril/sofia-elan-hero.jpg">
     <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasabril/postSofiaElan.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SOFÍA ÉLAN: El arte de sentir sin filtros">
+    <meta name="twitter:description" content="Sofía Élan presenta 'Cítrico', una catarsis grabada en vivo desde la intimidad de su hogar.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasabril/sofia-elan-hero.jpg">
+    <meta name="twitter:site" content="@ElRockde">
 
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -63,6 +71,10 @@
         .img-hero { border: 1px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
         .img-hero img { width: 100%; display: block; filter: saturate(0.9) contrast(1.1); }
 
+        .img-inline { width: 100%; border: 1px solid #222; margin: 40px 0; padding: 5px; background: #000; }
+        .img-inline img { width: 100%; display: block; filter: grayscale(0.5); transition: 0.5s; }
+        .img-inline:hover img { filter: grayscale(0); }
+
         .meta-strip {
             border-top: 1px solid #222; border-bottom: 1px solid #222;
             padding: 20px 0; margin-bottom: 50px;
@@ -78,7 +90,6 @@
             line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
         }
 
-        /* RELACIONADO (SILVERIO) */
         .related-archive {
             margin: 40px 0; border: 1px dashed var(--accent); padding: 20px;
             display: flex; align-items: center; gap: 20px; background: rgba(190, 242, 100, 0.05);
@@ -99,29 +110,12 @@
         .theory-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
         .theory-list li { margin-bottom: 15px; border-left: 3px solid var(--accent); padding-left: 15px; }
 
-        /* GALERÍA ZOOM */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px; margin: 60px 0;
-        }
-        .gallery-item { border: 1px solid #333; background: #000; padding: 5px; overflow: hidden; }
-        .gallery-item img { 
-            width: 100%; height: 180px; object-fit: cover; display: block; 
-            filter: grayscale(0.6); 
-            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
-        }
-        .gallery-item:hover img { transform: scale(1.1); filter: grayscale(0); }
-        .gallery-item:hover { border-color: var(--accent); }
-
-        /* CRÉDITOS MASIVOS */
         .credits-box {
-            margin-top: 80px; padding: 40px; border: 5px solid var(--accent);
+            margin-top: 40px; padding: 30px; border: 2px solid var(--accent);
             background: rgba(190, 242, 100, 0.05);
         }
-        .credits-label { font-family: 'Space Mono'; font-size: 14px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 10px; }
-        .credits-main { font-family: 'Syne'; font-size: clamp(2rem, 5vw, 4rem); line-height: 0.9; color: var(--white); text-transform: uppercase; margin-bottom: 20px; display: block; }
-        .credits-details { font-family: 'Space Mono'; font-size: 16px; color: #9ca3af; border-top: 1px solid #333; padding-top: 20px; display: block; }
+        .credits-label { font-family: 'Space Mono'; font-size: 12px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 5px; }
+        .credits-main { font-family: 'Syne'; font-size: 1.8rem; color: var(--white); text-transform: uppercase; }
 
         .sidebar-intel {
             background: #0d0d12; border: 1px solid #222;
@@ -152,8 +146,9 @@
             <h1 class="post-title">SOFÍA ÉLAN:<br>ARTE SIN <span>FILTROS</span></h1>
         </header>
 
+        <!-- IMAGEN 1 (HERO) -->
         <div class="img-hero">
-            <img src="sofia-elan-citrico.jpg" alt="Sofía Élan Cítrico EP">
+            <img src="sofia-elan-hero.jpg" alt="Sofía Élan Cítrico EP">
         </div>
 
         <div class="meta-strip">
@@ -166,11 +161,15 @@
             
             <div class="main-content">
                 <div class="content">
-                    <p>Sofía Élan presenta “Cítrico”, un EP que nace desde una necesidad emocional, profunda y honesta. En este trabajo, Sofía transforma el enojo y otras emociones en una fuerza creativa, reconociendo la validez de las emociones intensas que, en ocasiones, se sienten como una jungla contenida en la yugular —o en la yugular— a punto de estallar.</p>
+                    <p>Sofía Élan presenta “Cítrico”, un EP que nace desde una necesidad emocional, profunda y honesta. En este trabajo, Sofía transforma el enojo y otras emociones en una fuerza creativa, reconociendo la validez de las emociones intensas que, en ocasiones, se sienten como una jungla contenida en la yugular.</p>
                     
-                    <p>A lo largo del proceso, Sofía Élan se permitió crear desde su naturaleza más auténtica. “Cítrico” fue grabado completamente en vivo junto a su círculo cercano, utilizando su propio hogar como estudio: la sala, el baño y distintas habitaciones se convierten en escenarios sonoros donde la prioridad es la captura de una energía orgánica y genuina.</p>
+                    <p>A lo largo del proceso, Sofía Élan se permitió crear desde su naturaleza más auténtica. “Cítrico” fue grabado completamente en vivo junto a su círculo cercano, utilizando su propio hogar como estudio: la sala y el baño se convierten en escenarios sonoros orgánicos.</p>
 
-                    <!-- NOTA RELACIONADA -->
+                    <!-- IMAGEN 2 (INLINE) -->
+                    <div class="img-inline">
+                        <img src="sofia1.jpg" alt="Sofía Élan grabando en vivo">
+                    </div>
+
                     <aside>
                         <a href="postSilverio.html" class="related-archive" title="Leer sobre Silverio Éxito">
                             <div class="related-thumb">
@@ -186,7 +185,12 @@
                     </aside>
 
                     <h3>DISONANCIAS Y COLOR</h3>
-                    <p>Este lanzamiento marca un punto de definición en su identidad creativa: una forma de componer que se aleja de fórmulas preestablecidas. Sofía Élan apuesta por la intuición, el movimiento y la vitalidad, explorando su sonido “a todo color” e influenciada por la sensibilidad de figuras como Florence and the Machine, Fiona Apple y Natalia Lafourcade.</p>
+                    <p>Este lanzamiento marca un punto de definición en su identidad creativa: una forma de componer que se aleja de fórmulas preestablecidas. Sofía Élan apuesta por la intuición y la vitalidad, influenciada por la sensibilidad de figuras como Florence and the Machine.</p>
+
+                    <!-- IMAGEN 3 (INLINE) -->
+                    <div class="img-inline">
+                        <img src="sofia2.jpg" alt="Sofía Élan Jungla en la Yugular">
+                    </div>
 
                     <div class="theory-box">
                         <h3>TRACK LIST: CÍTRICO</h3>
@@ -201,26 +205,9 @@
                         </ul>
                     </div>
 
-                    <!-- GALERÍA DE 10 FOTOS -->
-                    <h3 style="color:var(--accent); font-family:'Syne'; margin-top:50px;">VISUALES: EL UNIVERSO DE SOFÍA</h3>
-                    <div class="gallery-grid">
-                        <div class="gallery-item"><img src="sofia1.jpg" alt="Sofía Élan"></div>
-                        <div class="gallery-item"><img src="sofia2.jpg" alt="Sofía Élan"></div>
-                        <div class="gallery-item"><img src="sofia3.jpg" alt="Sofía Élan"></div>
-                        <div class="gallery-item"><img src="sofia4.jpg" alt="Sofía Élan"></div>
-                        <div class="gallery-item"><img src="sofia5.jpg" alt="Sofía Élan"></div>
-                        <div class="gallery-item"><img src="sofia6.jpg" alt="Sofía Élan"></div>
-                        <div class="gallery-item"><img src="sofia7.jpg" alt="Sofía Élan"></div>
-                        <div class="gallery-item"><img src="sofia8.jpg" alt="Sofía Élan"></div>
-                        <div class="gallery-item"><img src="sofia9.jpg" alt="Sofía Élan"></div>
-                        <div class="gallery-item"><img src="sofia10.jpg" alt="Sofía Élan"></div>
-                    </div>
-
-                    <!-- CAJA DE CRÉDITOS MASIVA -->
                     <div class="credits-box">
                         <span class="credits-label">COMPOSICIÓN Y PRODUCCIÓN:</span>
                         <span class="credits-main">SOFÍA ÉLAN // PETRE BOG</span>
-                        <span class="credits-details">// Jorge Cajías, Artesano, Cristian Ávila.</span>
                     </div>
                 </div>
             </div>
@@ -232,7 +219,7 @@
                     <div class="intel-item"><b>ORIGEN:</b> México</div>
                     <div class="intel-item"><b>GÉNERO:</b> Alternativo / Collage Emocional</div>
                     <div class="intel-item"><b>DISCOGRAFÍA:</b> 3 EPs (Debut 2021)</div>
-                    <button onclick="window.open('https://open.spotify.com/artist/7z3A2J1N7Yv4u9K8wL0M6u')" style="width:100%; background:var(--accent); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">ESCUCHAR CÍTRICO</button>
+                    <button onclick="window.open('https://open.spotify.com/intl-es/artist/6pSo2XeVzujfKewzhzXK1P?si=sbS_FniXT4uJ1jk83lFfbA')" style="width:100%; background:var(--accent); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">ESCUCHAR CÍTRICO</button>
                 </div>
             </aside>
         </div>
