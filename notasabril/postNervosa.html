@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,14 @@
     <meta property="og:description" content="La banda brasileña desata su sexto álbum 'Slave Machine' a través de Napalm Records. Thrash metal sin concesiones.">
     <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasabril/nervosa-slave-machine-hero.jpg">
     <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasabril/postNervosa.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NERVOSA: Maquinaria de esclavitud y furia global">
+    <meta name="twitter:description" content="Thrash metal sin concesiones. Prika Amaral lidera la nueva era de Nervosa.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasabril/nervosa-slave-machine-hero.jpg">
+    <meta name="twitter:site" content="@ElRockde">
 
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -63,6 +71,10 @@
         .img-hero { border: 1px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
         .img-hero img { width: 100%; display: block; filter: saturate(1.1) contrast(1.1); }
 
+        .img-inline { width: 100%; border: 1px solid #222; margin: 40px 0; padding: 5px; background: #000; }
+        .img-inline img { width: 100%; display: block; filter: grayscale(0.5); transition: 0.5s; }
+        .img-inline:hover img { filter: grayscale(0); }
+
         .meta-strip {
             border-top: 1px solid #222; border-bottom: 1px solid #222;
             padding: 20px 0; margin-bottom: 50px;
@@ -78,7 +90,6 @@
             line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
         }
 
-        /* RELACIONADO (SOFÍA ÉLAN) */
         .related-archive {
             margin: 40px 0; border: 1px dashed var(--accent); padding: 20px;
             display: flex; align-items: center; gap: 20px; background: rgba(6, 182, 212, 0.05);
@@ -99,29 +110,12 @@
         .theory-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
         .theory-list li { margin-bottom: 15px; border-left: 3px solid var(--accent); padding-left: 15px; }
 
-        /* GALERÍA ZOOM */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px; margin: 60px 0;
-        }
-        .gallery-item { border: 1px solid #333; background: #000; padding: 5px; overflow: hidden; }
-        .gallery-item img { 
-            width: 100%; height: 180px; object-fit: cover; display: block; 
-            filter: grayscale(0.7); 
-            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
-        }
-        .gallery-item:hover img { transform: scale(1.15); filter: grayscale(0); }
-        .gallery-item:hover { border-color: var(--accent); }
-
-        /* CRÉDITOS MASIVOS */
         .credits-box {
-            margin-top: 80px; padding: 40px; border: 5px solid var(--accent);
+            margin-top: 40px; padding: 30px; border: 2px solid var(--accent);
             background: rgba(6, 182, 212, 0.05);
         }
-        .credits-label { font-family: 'Space Mono'; font-size: 14px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 10px; }
-        .credits-main { font-family: 'Syne'; font-size: clamp(2rem, 5vw, 4rem); line-height: 0.9; color: var(--white); text-transform: uppercase; margin-bottom: 20px; display: block; }
-        .credits-details { font-family: 'Space Mono'; font-size: 16px; color: #9ca3af; border-top: 1px solid #333; padding-top: 20px; display: block; }
+        .credits-label { font-family: 'Space Mono'; font-size: 12px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 5px; }
+        .credits-main { font-family: 'Syne'; font-size: 1.8rem; color: var(--white); text-transform: uppercase; }
 
         .sidebar-intel {
             background: #0d0d12; border: 1px solid #222;
@@ -152,6 +146,7 @@
             <h1 class="post-title">NERVOSA: MAQUINARIA<br>DE <span>ESCLAVITUD</span></h1>
         </header>
 
+        <!-- IMAGEN 1 (HERO) -->
         <div class="img-hero">
             <img src="nervosa-slave-machine-hero.jpg" alt="Nervosa Slave Machine Album">
         </div>
@@ -166,27 +161,36 @@
             
             <div class="main-content">
                 <div class="content">
-                    <p>Nervosa desata otra ronda de furia en su nuevo álbum, <strong>Slave Machine</strong>, disponible desde este 3 de abril de 2026. Su sexto disco muestra a la banda brasileña liberando a sus bestias internas a una velocidad asombrosa y con una intensidad demoledora, consolidando su lugar como referentes del género.</p>
+                    <p>Nervosa desata otra ronda de furia en su nuevo álbum, <strong>Slave Machine</strong>, disponible desde este 3 de abril de 2026. Su sexto disco muestra a la banda brasileña liberando a sus bestias internas a una velocidad asombrosa y con una intensidad demoledora.</p>
                     
-                    <p>Con la guitarrista fundadora <strong>Prika Amaral</strong> ya afianzada como nueva cantante, la banda arrasa la escena con la fuerza de un mazazo. "Slave Machine es el álbum más brutal y melódico de Nervosa, y estamos orgullosas de llevar esto un paso más allá, manteniendo nuestras raíces", compartió la agrupación sobre este volcán de metal.</p>
+                    <p>Con la guitarrista fundadora <strong>Prika Amaral</strong> ya afianzada como nueva cantante, la banda arrasa la escena con la fuerza de un mazazo. Slave Machine es, posiblemente, el trabajo más técnico y agresivo de su discografía.</p>
 
-                    <!-- RELACIONADO -->
+                    <!-- IMAGEN 2 (INLINE) -->
+                    <div class="img-inline">
+                        <img src="nervosa1.jpg" alt="Nervosa Prika Amaral Live">
+                    </div>
+
                     <aside>
                         <a href="postSofiaElan.html" class="related-archive" title="Leer sobre Sofía Élan">
                             <div class="related-thumb">
-                                <img src="sofia-elan-citrico.jpg" alt="Sofía Élan Cítrico">
+                                <img src="sofia-elan-hero.jpg" alt="Sofía Élan Cítrico">
                             </div>
                             <div class="related-info">
                                 <span class="related-label">ARCHIVO RELACIONADO</span>
                                 <div class="related-title">
-                                    Sofía Élan y el arte de sentir sin filtros en “Cítrico”
+                                    Sofía Élan y el arte de sentir sin filtros en “CÍTRICO”
                                 </div>
                             </div>
                         </a>
                     </aside>
 
                     <h3>ANÁLISIS DE LA MAQUINARIA</h3>
-                    <p>Doce nuevas canciones muestran a la banda explorando su estilo demoledora. Desde la apertura con <em>Impending Doom</em>, que construye una atmósfera amenazante, hasta el tema homónimo <em>Slave Machine</em>, que acelera el pulso con riffs atronadores.</p>
+                    <p>Doce nuevas canciones muestran a la banda explorando su estilo demoledora. Desde la apertura con <em>Impending Doom</em>, que construye una atmósfera amenazante, hasta el tema homónimo <em>Slave Machine</em>.</p>
+
+                    <!-- IMAGEN 3 (INLINE) -->
+                    <div class="img-inline">
+                        <img src="nervosa2.jpg" alt="Nervosa Band Lineup 2026">
+                    </div>
 
                     <div class="theory-box">
                         <h3>TRACKLIST: SLAVE MACHINE</h3>
@@ -197,28 +201,7 @@
                             <li><b>04.</b> Beast Of Burden</li>
                             <li><b>05.</b> You Are Not A Hero</li>
                             <li><b>06.</b> Hate</li>
-                            <li><b>07.</b> The New Empire</li>
-                            <li><b>08.</b> 30 Seconds</li>
-                            <li><b>09.</b> Crawling For Your Pride</li>
-                            <li><b>10.</b> Learn Or Repeat</li>
-                            <li><b>11.</b> The Call</li>
-                            <li><b>12.</b> Speak In Fire</li>
                         </ul>
-                    </div>
-
-                    <!-- GALERÍA DE 10 FOTOS -->
-                    <h3 style="color:var(--accent); font-family:'Syne'; margin-top:50px;">ARCHIVO VISUAL: THRASH METAL DOMINATION</h3>
-                    <div class="gallery-grid">
-                        <div class="gallery-item"><img src="nervosa1.jpg" alt="Nervosa"></div>
-                        <div class="gallery-item"><img src="nervosa2.jpg" alt="Nervosa"></div>
-                        <div class="gallery-item"><img src="nervosa3.jpg" alt="Nervosa"></div>
-                        <div class="gallery-item"><img src="nervosa4.jpg" alt="Nervosa"></div>
-                        <div class="gallery-item"><img src="nervosa5.jpg" alt="Nervosa"></div>
-                        <div class="gallery-item"><img src="nervosa6.jpg" alt="Nervosa"></div>
-                        <div class="gallery-item"><img src="nervosa7.jpg" alt="Nervosa"></div>
-                        <div class="gallery-item"><img src="nervosa8.jpg" alt="Nervosa"></div>
-                        <div class="gallery-item"><img src="nervosa9.jpg" alt="Nervosa"></div>
-                        <div class="gallery-item"><img src="nervosa10.jpg" alt="Nervosa"></div>
                     </div>
 
                     <div class="theory-box">
@@ -226,18 +209,14 @@
                         <ul class="theory-list">
                             <li><b>PRIKA AMARAL:</b> Guitarra y Voz</li>
                             <li><b>HELENA KOTINA:</b> Guitarra</li>
-                            <li><b>HEL PYRE / EMMELIE HERWEGH:</b> Bajo</li>
+                            <li><b>HEL PYRE:</b> Bajo</li>
                             <li><b>MICHAELA NAYDENOVA:</b> Batería</li>
                         </ul>
                     </div>
 
-                    <p>A lo largo de <em>Learn Or Repeat</em> y <em>The Call</em>, la banda vuelve a salpicar su sonido con elementos de groove moderno y vibras old school, antes de que el álbum se alce una última vez en la siniestra <em>Speak In Fire</em>.</p>
-
-                    <!-- CAJA DE CRÉDITOS MASIVA -->
                     <div class="credits-box">
                         <span class="credits-label">LABEL Y DISTRIBUCIÓN:</span>
                         <span class="credits-main">NAPALM RECORDS</span>
-                        <span class="credits-details">// THRASH METAL GLOBAL // BRASIL - EUROPA</span>
                     </div>
                 </div>
             </div>
@@ -249,7 +228,7 @@
                     <div class="intel-item"><b>ORIGEN:</b> São Paulo, Brasil</div>
                     <div class="intel-item"><b>GÉNERO:</b> Thrash / Death Metal</div>
                     <div class="intel-item"><b>ÁLBUM:</b> Slave Machine</div>
-                    <button onclick="window.open('https://open.spotify.com/artist/2S9ZInzY8Ddf6I4Z27EonX')" style="width:100%; background:var(--accent); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">ESCUCHAR SLAVE MACHINE</button>
+                    <button onclick="window.open('https://open.spotify.com/intl-es/track/5cyRVCVkVl4hU3HHF2yCVU?si=5a9a704dbf8c4806')" style="width:100%; background:var(--accent); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">ESCUCHAR SLAVE MACHINE</button>
                 </div>
             </aside>
         </div>
