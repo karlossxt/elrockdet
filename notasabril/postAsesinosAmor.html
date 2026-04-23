@@ -11,6 +11,14 @@
     <meta property="og:description" content="La banda estrena 'Grita', un trallazo de punk rock visceral bajo el sello Flor y Nata Records.">
     <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasabril/asesinos-amor-hero.jpg">
     <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasabril/postAsesinosAmor.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ASESINOS DEL AMOR: Catarsis Punk Rock">
+    <meta name="twitter:description" content="Jaén se llena de distorsión con 'Grita', el nuevo sencillo de Asesinos del Amor.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasabril/asesinos-amor-hero.jpg">
+    <meta name="twitter:site" content="@ElRockde">
 
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -18,7 +26,7 @@
     <style>
         :root {
             --bg: #0a0a0a;
-            --accent: #facc15; /* Amarillo Vibrante / Alerta Punk */
+            --accent: #facc15; /* Amarillo Punk */
             --white: #f3f4f6;
         }
 
@@ -63,6 +71,10 @@
         .img-hero { border: 1px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
         .img-hero img { width: 100%; display: block; filter: saturate(1.2) contrast(1.1); }
 
+        .img-inline { width: 100%; border: 1px solid #222; margin: 40px 0; padding: 5px; background: #000; }
+        .img-inline img { width: 100%; display: block; filter: grayscale(0.4); transition: 0.5s; }
+        .img-inline:hover img { filter: grayscale(0); }
+
         .meta-strip {
             border-top: 1px solid #222; border-bottom: 1px solid #222;
             padding: 20px 0; margin-bottom: 50px;
@@ -78,7 +90,6 @@
             line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
         }
 
-        /* RELACIONADO (DISCO ETERNO) */
         .related-archive {
             margin: 40px 0; border: 1px dashed var(--accent); padding: 20px;
             display: flex; align-items: center; gap: 20px; background: rgba(250, 204, 21, 0.05);
@@ -99,29 +110,12 @@
         .theory-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
         .theory-list li { margin-bottom: 15px; border-left: 3px solid var(--accent); padding-left: 15px; }
 
-        /* GALERÍA ZOOM */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px; margin: 60px 0;
-        }
-        .gallery-item { border: 1px solid #333; background: #000; padding: 5px; overflow: hidden; }
-        .gallery-item img { 
-            width: 100%; height: 180px; object-fit: cover; display: block; 
-            filter: grayscale(0.5); 
-            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
-        }
-        .gallery-item:hover img { transform: scale(1.15); filter: grayscale(0); }
-        .gallery-item:hover { border-color: var(--accent); }
-
-        /* CRÉDITOS MASIVOS */
         .credits-box {
-            margin-top: 80px; padding: 40px; border: 5px solid var(--accent);
+            margin-top: 40px; padding: 30px; border: 2px solid var(--accent);
             background: rgba(250, 204, 21, 0.05);
         }
-        .credits-label { font-family: 'Space Mono'; font-size: 14px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 10px; }
-        .credits-main { font-family: 'Syne'; font-size: clamp(2rem, 5vw, 4rem); line-height: 0.9; color: var(--white); text-transform: uppercase; margin-bottom: 20px; display: block; }
-        .credits-details { font-family: 'Space Mono'; font-size: 16px; color: #9ca3af; border-top: 1px solid #333; padding-top: 20px; display: block; }
+        .credits-label { font-family: 'Space Mono'; font-size: 12px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 5px; }
+        .credits-main { font-family: 'Syne'; font-size: 1.8rem; color: var(--white); text-transform: uppercase; }
 
         .sidebar-intel {
             background: #0d0d12; border: 1px solid #222;
@@ -152,8 +146,9 @@
             <h1 class="post-title">ASESINOS DEL AMOR:<br>CATARSIS <span>GRITA</span></h1>
         </header>
 
+        <!-- IMAGEN 1 (HERO) -->
         <div class="img-hero">
-            <img src="asesinos-amor-grita.jpg" alt="Asesinos del Amor Grita Single">
+            <img src="asesinos-amor-hero.jpg" alt="Asesinos del Amor Grita Single">
         </div>
 
         <div class="meta-strip">
@@ -168,9 +163,13 @@
                 <div class="content">
                     <p>La banda de rock <strong>Asesinos del Amor</strong> continúa marcando su territorio en la escena musical con el lanzamiento de su tercer sencillo titulado <strong>"Grita"</strong>. Bajo el amparo del sello discográfico Flor y Nata Records, el grupo vuelve a dejar claro que su respuesta ante la vida es el puro rock and roll.</p>
                     
-                    <p>"Grita" se presenta como una descarga directa de punk rock cargada de energía, guitarras afiladas y una actitud rebelde que invita a la catarsis colectiva. El tema busca conectar con el lado más visceral de los oyentes y consolidar el sonido crudo que caracteriza a esta formación jiennense.</p>
+                    <p>"Grita" se presenta como una descarga directa de punk rock cargada de energía, guitarras afiladas y una actitud rebelde que invita a la catarsis colectiva.</p>
 
-                    <!-- RELACIONADO -->
+                    <!-- IMAGEN 2 (INLINE) -->
+                    <div class="img-inline">
+                        <img src="asesinos1.jpg" alt="Asesinos del Amor en estudio">
+                    </div>
+
                     <aside>
                         <a href="postDiscoEterno.html" class="related-archive" title="Leer sobre Disco Eterno">
                             <div class="related-thumb">
@@ -188,36 +187,24 @@
                     <h3>URGENCIA VISUAL</h3>
                     <p>El lanzamiento viene acompañado de un videoclip oficial dirigido por <strong>Juan De Laureano</strong>. El material audiovisual complementa a la perfección la velocidad y la urgencia que transmite la canción, rescatando la esencia del rock más directo.</p>
 
+                    <!-- IMAGEN 3 (INLINE) -->
+                    <div class="img-inline">
+                        <img src="asesinos2.jpg" alt="Asesinos del Amor Live">
+                    </div>
+
                     <div class="theory-box">
                         <h3>INTEL: ASESINOS DEL AMOR</h3>
                         <ul class="theory-list">
                             <li><b>ORIGEN:</b> Jaén, España.</li>
                             <li><b>SINGLE:</b> Grita (Tercer lanzamiento oficial).</li>
-                            <li><b>ESTÉTICA:</b> Rock puro, letras crudas y melodías enérgicas.</li>
+                            <li><b>ESTÉTICA:</b> Rock puro y actitud rebelde.</li>
                             <li><b>FILOSOFÍA:</b> Defensa del directo y la distorsión.</li>
                         </ul>
                     </div>
 
-                    <!-- GALERÍA DE 10 FOTOS -->
-                    <h3 style="color:var(--accent); font-family:'Syne'; margin-top:50px;">VISUALES: ASESINOS EN DIRECTO</h3>
-                    <div class="gallery-grid">
-                        <div class="gallery-item"><img src="asesinos1.jpg" alt="Asesinos del Amor"></div>
-                        <div class="gallery-item"><img src="asesinos2.jpg" alt="Asesinos del Amor"></div>
-                        <div class="gallery-item"><img src="asesinos3.jpg" alt="Asesinos del Amor"></div>
-                        <div class="gallery-item"><img src="asesinos4.jpg" alt="Asesinos del Amor"></div>
-                        <div class="gallery-item"><img src="asesinos5.jpg" alt="Asesinos del Amor"></div>
-                        <div class="gallery-item"><img src="asesinos6.jpg" alt="Asesinos del Amor"></div>
-                        <div class="gallery-item"><img src="asesinos7.jpg" alt="Asesinos del Amor"></div>
-                        <div class="gallery-item"><img src="asesinos8.jpg" alt="Asesinos del Amor"></div>
-                        <div class="gallery-item"><img src="asesinos9.jpg" alt="Asesinos del Amor"></div>
-                        <div class="gallery-item"><img src="asesinos10.jpg" alt="Asesinos del Amor"></div>
-                    </div>
-
-                    <!-- CAJA DE CRÉDITOS MASIVA -->
                     <div class="credits-box">
                         <span class="credits-label">DIRECCIÓN VISUAL Y LABEL:</span>
                         <span class="credits-main">JUAN DE LAUREANO // FLOR Y NATA</span>
-                        <span class="credits-details">// JAÉN, ESPAÑA // INDEPENDIENTE</span>
                     </div>
                 </div>
             </div>
@@ -229,7 +216,7 @@
                     <div class="intel-item"><b>ORIGEN:</b> Jaén, España</div>
                     <div class="intel-item"><b>GÉNERO:</b> Punk Rock / Directo</div>
                     <div class="intel-item"><b>LABEL:</b> Flor y Nata Records</div>
-                    <button onclick="window.open('https://open.spotify.com/artist/5X8X8v6z8m7m8m8m8m8m8')" style="width:100%; background:var(--accent); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">ESCUCHAR GRITA</button>
+                    <button onclick="window.open('https://open.spotify.com/intl-es/album/3AJq8RvmRniMxWthxZPiZi?si=f7rOi3J5Rj2d5C2N-DMFiQ')" style="width:100%; background:var(--accent); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">ESCUCHAR GRITA</button>
                 </div>
             </aside>
         </div>
