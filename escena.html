@@ -4,148 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELROCK | Escena Nacional Underground</title>
-    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="logo-rock.png">
-    
-    <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
-</head>
+    
     <style>
         :root {
             --bg: #0d0d0d;
             --white: #eeeeee;
-            /* Colores por sección */
-            --red: #dc2626;      /* Escena Nacional */
-            --cyan: #00d4ff;     /* Pantallas */
-            --green: #00ff00;    /* Bytemos */
+            --red: #dc2626;
             --current-color: var(--red); 
         }
-
-        /* LÓGICA DE TEMAS */
-        .escena-archive { --current-color: var(--red); }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: var(--bg); color: var(--white); font-family: 'Inter', sans-serif; overflow-x: hidden; }
 
-        /* TEXTURA */
         body::before {
             content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
             opacity: 0.1; pointer-events: none; z-index: 999;
         }
 
-        /* --- NAVBAR OPTIMIZADO --- */
+        /* NAVBAR */
         .main-nav {
             position: sticky; top: 0; z-index: 1000; background: rgba(13, 13, 13, 0.95);
-            backdrop-filter: blur(5px);
-            border-bottom: 2px solid white; padding: 15px 40px;
+            backdrop-filter: blur(5px); border-bottom: 2px solid white; padding: 15px 40px;
             display: flex; justify-content: space-between; align-items: center;
         }
-        .logo { font-family: 'Syne'; font-size: 1.8rem; font-weight: 800; font-style: italic; letter-spacing: -2px; text-decoration: none; color: white; white-space: nowrap; }
+        .logo { font-family: 'Syne'; font-size: 1.8rem; font-weight: 800; font-style: italic; letter-spacing: -2px; text-decoration: none; color: white; }
         .logo span { color: var(--current-color); }
-        
         .nav-links { display: flex; align-items: center; }
-        .nav-links a { color: #71717a; text-decoration: none; font-family: 'Space Mono'; font-size: 11px; text-transform: uppercase; font-weight: 700; margin: 0 15px; white-space: nowrap; transition: 0.2s;}
+        .nav-links a { color: #71717a; text-decoration: none; font-family: 'Space Mono'; font-size: 11px; text-transform: uppercase; font-weight: 700; margin: 0 15px; transition: 0.2s;}
         .nav-links a:hover { color: white; }
+        .nav-cta-btn { background: white; border:none; padding: 8px 15px; font-family:'Space Mono'; font-size:10px; font-weight:900; cursor: pointer; }
 
-        .nav-cta-btn { background: white; border:none; padding: 8px 15px; font-family:'Space Mono'; font-size:10px; font-weight:900; cursor: pointer; white-space: nowrap; }
-
-        /* HEADER EDITORIAL */
+        /* HEADER */
         .section-header {
-            background-color: var(--current-color);
-            padding: 120px 40px 60px; position: relative; overflow: hidden; border-bottom: 8px solid black;
+            background-color: var(--current-color); padding: 120px 40px 60px; position: relative; overflow: hidden; border-bottom: 8px solid black;
         }
         .section-header::after {
             content: "LIVE RUIDO"; position: absolute; bottom: -40px; right: -20px;
             font-family: 'Syne'; font-size: 15rem; opacity: 0.1; font-style: italic; pointer-events: none;
         }
         .back-link { font-family: 'Space Mono'; color: white; text-decoration: none; font-size: 12px; font-weight: 900; text-transform: uppercase; z-index: 10; position: relative; display: inline-block; margin-bottom: 20px;}
-        .section-title { font-family: 'Syne'; font-size: clamp(3.5rem, 10vw, 10rem); line-height: 0.85; text-transform: uppercase; font-style: italic; color: white; position: relative; z-index: 10; word-break: break-word; hyphens: auto; }
+        .section-title { font-family: 'Syne'; font-size: clamp(3.5rem, 10vw, 10rem); line-height: 0.85; text-transform: uppercase; font-style: italic; color: white; position: relative; z-index: 10; }
+
+        /* FILTROS */
+        .filter-container { max-width: 1300px; margin: 40px auto -40px; padding: 0 40px; display: flex; gap: 10px; flex-wrap: wrap; }
+        .filter-btn { 
+            background: transparent; border: 1px solid #333; color: #888; padding: 8px 15px; 
+            font-family: 'Space Mono'; font-size: 10px; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: 0.3s;
+        }
+        .filter-btn:hover, .filter-btn.active { border-color: white; color: white; background: rgba(255,255,255,0.1); }
 
         /* GRID */
         .archive-container { max-width: 1300px; margin: 0 auto; padding: 80px 40px; }
         .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px 40px; }
+        
+        .month-group { display: contents; }
+        .month-separator { 
+            grid-column: 1 / -1; font-family: 'Syne'; font-size: 3rem; color: var(--white); 
+            border-bottom: 4px solid var(--current-color); margin: 40px 0 20px; font-style: italic;
+            display: flex; justify-content: space-between; align-items: baseline;
+        }
+        .month-separator span { font-family: 'Space Mono'; font-size: 1rem; color: #555; }
+
         .article-card { text-decoration: none; color: inherit; display: block; transition: 0.3s; }
-        .card-image { height: 250px; background-color: #18181b; margin-bottom: 20px; overflow: hidden; border: 1px solid #333; position: relative; }
+        .card-image { height: 250px; background-color: #18181b; margin-bottom: 20px; overflow: hidden; border: 1px solid #333; }
         .card-image img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
         .article-card:hover .card-image img { filter: grayscale(0); transform: scale(1.05); }
-        
-        .card-tag { font-family: 'Space Mono'; color: var(--current-color); font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; letter-spacing: 1px; }
-        .card-title { font-family: 'Syne'; font-size: 1.5rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 15px; }
+        .card-tag { font-family: 'Space Mono'; color: var(--current-color); font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        .card-title { font-family: 'Syne'; font-size: 1.5rem; line-height: 1.1; text-transform: uppercase; }
 
-        /* FOOTER GENERAL */
+        .hidden { display: none !important; }
+
+        /* FOOTER */
         .fanzine-footer { background: #000; border-top: 8px solid var(--current-color); padding: 80px 40px 40px; margin-top: 100px; }
         .f-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; max-width: 1300px; margin: 0 auto 60px; }
-        
-        .f-logo-img { max-width: 180px; height: auto; margin-bottom: 20px; display: block; filter: grayscale(1) brightness(1.5); transition: 0.3s; }
-        .f-logo-img:hover { filter: grayscale(0) brightness(1); transform: rotate(-3deg) scale(1.05); }
-
-        .f-brand h2 { font-family: 'Syne'; font-size: 2.5rem; margin-bottom: 10px; font-style: italic; font-weight: 800; letter-spacing: -2px; }
+        .f-logo-img { max-width: 180px; margin-bottom: 20px; filter: grayscale(1) brightness(1.5); }
+        .f-brand h2 { font-family: 'Syne'; font-size: 2.5rem; font-style: italic; letter-spacing: -2px; }
         .f-brand h2 span { color: var(--current-color); }
-        .f-brand p.footer-tagline { font-family: 'Space Mono'; font-size: 11px; color: #555; line-height: 1.5; text-transform: uppercase; font-weight: 700; margin-bottom: 30px; }
-        
-        .f-col h5 { font-family: 'Space Mono'; color: var(--current-color); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
-        .f-col a { display: block; color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; margin-bottom: 12px; font-weight: 700; text-transform: uppercase; transition: 0.2s; }
-        .f-col a:hover { color: white; padding-left: 5px; }
-        .f-col a i { width: 18px; margin-right: 8px; text-align: center; color: var(--current-color); }
+        .f-col h5 { font-family: 'Space Mono'; color: var(--current-color); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
+        .f-col a { display: block; color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; margin-bottom: 12px; text-transform: uppercase; }
+        .f-col a:hover { color: white; }
+        .f-bottom { border-top: 1px solid #222; padding-top: 30px; display: flex; justify-content: space-between; font-size: 10px; color: #444; font-family: 'Space Mono'; }
 
-        /* AJUSTES DE CONTACTO */
-        .contact-title { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; color: var(--white); }
-        .contact-links { display: flex; flex-direction: column; gap: 12px; }
-        .contact-item { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--white) !important; text-decoration: none; display: flex; align-items: center; gap: 10px; transition: 0.2s ease; }
-        .contact-item[href*="wa.me"] { font-size: 14px; font-weight: 700; }
-        .contact-item i { color: var(--current-color); font-size: 14px; }
-        .contact-item:hover { color: var(--current-color) !important; padding-left: 5px; }
-
-        .f-bottom { border-top: 1px solid #222; padding-top: 30px; display: flex; justify-content: space-between; font-size: 10px; color: #444; font-family: 'Space Mono'; text-transform: uppercase; flex-wrap: wrap; gap: 10px; }
-
-        /* --- MEDIA QUERIES (MOVIL) --- */
         @media (max-width: 900px) {
-            .article-grid { grid-template-columns: 1fr; gap: 40px; }
+            .article-grid { grid-template-columns: 1fr; }
             .f-top { grid-template-columns: 1fr 1fr; }
-        }
-
-        @media (max-width: 600px) {
-            /* Navbar Móvil: Stack Vertical + Scroll Horizontal */
-            .main-nav { 
-                flex-direction: column; 
-                align-items: flex-start; 
-                padding: 15px 20px; 
-                gap: 15px; 
-            }
-            .main-nav .logo { width: 100%; display: flex; justify-content: space-between; align-items: center; }
-            /* movemos el botón terminal al lado del logo en móvil */
-            .logo::after { content: ''; display: none; } 
-            
-            .nav-links { 
-                width: 100%; 
-                overflow-x: auto; /* Scroll lateral */
-                padding-bottom: 5px; 
-                justify-content: flex-start;
-                /* Ocultar barra de scroll visualmente pero permitir scroll */
-                -ms-overflow-style: none;  
-                scrollbar-width: none;  
-            }
-            .nav-links::-webkit-scrollbar { display: none; }
-            .nav-links a { margin: 0 15px 0 0; font-size: 12px; padding: 5px 10px; border: 1px solid #333; border-radius: 4px; }
-            .nav-links a:hover { background: #222; border-color: white; }
-
-            /* Header Movil */
-            .section-header { padding: 80px 20px 40px; }
-            .section-header::after { font-size: 6rem; bottom: -10px; right: -10px; }
-            .section-title { font-size: 3rem; } /* Aseguramos tamaño legible */
-            
-            /* Contenido */
-            .archive-container { padding: 40px 20px; }
-            .card-image { height: 200px; }
-            
-            /* Footer Movil */
-            .fanzine-footer { padding: 40px 20px; }
-            .f-top { grid-template-columns: 1fr; gap: 40px; }
-            .f-bottom { flex-direction: column; align-items: center; text-align: center; }
         }
     </style>
 </head>
@@ -153,19 +99,11 @@
 <body class="escena-archive">
 
     <nav class="main-nav">
-        <div class="logo-container" style="display:flex; justify-content:space-between; width:100%; max-width:100%;">
-            <a href="index.html" class="logo">RDT.<span>.</span></a>
-            <!-- Botón visible en desktop, lo ocultaremos con CSS o lo dejamos si cabe -->
-        </div>
-        
+        <a href="index.html" class="logo">RDT.<span>.</span></a>
         <div class="nav-links">
-            <a href="musica.html" style="color: white; border-color: var(--red);">Música</a>
-            <a href="escena.html">Escena</a>
+            <a href="musica.html">Música</a>
+            <a href="escena.html" style="color: white;">Escena</a>
             <a href="bytemos.html" style="color: var(--green);">BYTEMOS</a>
-            <a href="cultura.html">Cultura</a>
-            <a href="pantallas.html">Pantallas</a>
-            <a href="nosotros.html">Nosotros</a>
-            <!-- Botón Terminal integrado en links para movil -->
             <button class="nav-cta-btn">TERMINAL [01]</button>
         </div>
     </nav>
@@ -173,25 +111,78 @@
     <header class="section-header">
         <a href="index.html" class="back-link">← Regresar al Asfalto</a>
         <h1 class="section-title">ESCENA NACIONAL</h1> 
-        <div style="font-family:'Space Mono'; font-size:12px; margin-top:20px; color:white; font-weight:700; line-height: 1.6;">
-            [ REGISTRO DIRECTO ] <br> // EL RUIDO NUNCA DUERME
-        </div>
     </header>
 
+    <div class="filter-container">
+        <button class="filter-btn active" onclick="filterMonth('all')">Todos</button>
+        <button class="filter-btn" onclick="filterMonth('abril')">Abril 2026</button>
+        <button class="filter-btn" onclick="filterMonth('marzo')">Marzo 2026</button>
+        <button class="filter-btn" onclick="filterMonth('archivo')">Archivo Histórico</button>
+    </div>
+
     <main class="archive-container">
-         <div class="article-grid">
-                
-             <a href="notasabril/postElCulto.html" class="article-card">
-                <div class="card-image"><img src="notasabril/el-culto-inauguracion.jpg"></div>
-                <span class="card-tag">RESEÑA</span>
-                <h2 class="card-title">"EL CULTO: Inauguración y Caos en Pantitlán"<</h2>
-            </a>
+        <div class="article-grid">
+            
+            <!-- SECCIÓN ABRIL 2026 -->
+            <div id="abril" class="month-group">
+                <div class="month-separator">ABRIL <span>2026</span></div>
+                 <a href="notasabril/postDiscoEterno.html" class="article-card">
+        <div class="card-image"><img src="notasabril/disco-eterno-hero.jpg" alt="Disco Eterno"></div>
+        <span class="card-tag">AGENDA</span>
+        <h2 class="card-title">"DISCO ETERNO: Tributo al legado del Rock"</h2>
+    </a>
+
+    <a href="notasabril/postAsesinosAmor.html" class="article-card">
+        <div class="card-image"><img src="notasabril/asesinos-amor-hero.jpg" alt="Asesinos del Amor"></div>
+        <span class="card-tag">ESTRENO</span>
+        <h2 class="card-title">"ASESINOS DEL AMOR: Post-Punk crudo y directo"</h2>
+    </a>
+
+    <a href="notasabril/postSpinne.html" class="article-card">
+        <div class="card-image"><img src="notasabril/spinne-hero.jpg" alt="Spinne"></div>
+        <span class="card-tag">ESTRENO</span>
+        <h2 class="card-title">"SPINNE: El nuevo tejido del rock alternativo"</h2>
+    </a>
+
+    <a href="notasabril/postSilverio.html" class="article-card">
+        <div class="card-image"><img src="notasabril/silverio-exito-hero.jpg" alt="Silverio"></div>
+        <span class="card-tag">RESEÑA</span>
+        <h2 class="card-title">"SILVERIO: Éxito rotundo de su Majestad Imperial"</h2>
+    </a>
+
+    <a href="notasabril/postSofiaElan.html" class="article-card">
+        <div class="card-image"><img src="notasabril/sofia-elan-hero.jpg" alt="Sofia Elan"></div>
+        <span class="card-tag">ESTRENO</span>
+        <h2 class="card-title">"SOFÍA ELAN: Melodías que rompen el silencio"</h2>
+    </a>
+
+    <a href="notasabril/postNervosa.html" class="article-card">
+        <div class="card-image"><img src="notasabril/nervosa-slave-machine-hero.jpg" alt="Nervosa"></div>
+        <span class="card-tag">ESTRENO</span>
+        <h2 class="card-title">"NERVOSA: Slave Machine y el poder del Thrash"</h2>
+    </a>
+                <a href="notasabril/postElCulto.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/el-culto-inauguracion.jpg"></div>
+                    <span class="card-tag">RESEÑA</span>
+                    <h2 class="card-title">"EL CULTO: Inauguración y Caos en Pantitlán"</h2>
+                </a>
                 <a href="notasabril/postJessyBulbo.html" class="article-card">
-                <div class="card-image"><img src="notasabril/jessy-bulbo-utopia.jpg"></div>
-                <span class="card-tag">AGENDA</span>
-                <h2 class="card-title">"JESSY BULBO - Rock con Causa: El evento que une al punk y los lomitos"<</h2>
-            </a>
-             
+                    <div class="card-image"><img src="notasabril/jessy-bulbo-utopia.jpg"></div>
+                    <span class="card-tag">AGENDA</span>
+                    <h2 class="card-title">"JESSY BULBO - Rock con Causa"</h2>
+                </a>
+                <a href="notasabril/postElectrifyForsaken.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/electrify-forsaken.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">"ELECTRIFY: El precio de la autenticidad en Forsaken"</h2>
+                </a>
+            </div>
+
+            <!-- SECCIÓN MARZO 2026 -->
+            <div id="marzo" class="month-group">
+                <div class="month-separator">MARZO <span>2026</span></div>
+                
+                   
              <a href="notasmarzo/postArau.html" class="article-card">
                 <div class="card-image"><img src="notasmarzo/sergio-arau-hero.jpg"></div>
                 <span class="card-tag">AGENDA</span>
@@ -308,7 +299,13 @@
                 <div class="card-image"><img src="notasmarzo/she-no-more-portada.jpg"></div>
                 <span class="card-tag">ESTRENO</span>
                 <h2 class="card-title">SHE NO MORE: El grito de las madres</h2>
-            
+            </div>
+
+            <!-- SECCIÓN ARCHIVO HISTÓRICO -->
+            <div id="archivo" class="month-group">
+                <div class="month-separator">ARCHIVO <span>HISTÓRICO</span></div>
+                
+                  
             <a href="post-a-veces-maria.html" class="article-card">
                 <div class="card-image"><img src="avecesmaria.jpg"></div>
                 <span class="card-tag">ESTRENO</span>
@@ -400,85 +397,60 @@
                 <span class="card-tag">PROXMAMENTE</span>
                 <h2 class="card-title">PROX</h2>
 
-                
+                </a>
+            </div>
+
         </div>
     </main>
 
     <footer class="fanzine-footer">
         <div class="f-top">
-            <!-- COLUMNA 1: LOGO, BRAND Y CONTACTO -->
             <div class="f-brand">
-                <!-- AQUI ESTÁ EL LOGO AGREGADO -->
-                <img src="logo-rock.png" alt="EL ROCK LOGO" class="f-logo-img">
-                
-                <h2>EL<span>ROCK</span>DE TODOS LOS DÍAS</h2>
-                <p class="footer-tagline">ARCHIVO INDEPENDIENTE DE CULTURA Y RUIDO.</p>
-                
-                <div class="footer-contact-section">
-                    <h5 class="contact-title">Contacto Directo</h5>
-                    <div class="contact-links">
-                        <a href="https://wa.me/525519204557" target="_blank" class="contact-item">
-                            <i class="fab fa-whatsapp"></i> 55 1920 4557
-                        </a>
-                        <a href="mailto:elrockdetodoslosdias@gmail.com" class="contact-item">
-                            <i class="far fa-envelope"></i> elrockdetodoslosdias@gmail.com
-                        </a>
-                        <a href="mailto:prensa@elrockdetodoslosdias.com.mx" class="contact-item">
-                            <i class="far fa-envelope"></i> prensa@elrockdetodoslosdias.com.mx
-                        </a>
-                    </div>
-                </div>
+                <img src="logo-rock.png" class="f-logo-img">
+                <h2>EL<span>ROCK</span> DE TODOS LOS DÍAS</h2>
+                <p style="font-family:'Space Mono'; font-size:11px; color:#555;">ARCHIVO INDEPENDIENTE DE RUIDO.</p>
             </div>
-            
             <div class="f-col">
                 <h5>Social</h5>
-                <a href="https://www.instagram.com/elrockdetodoslosdias/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-                <a href="https://www.facebook.com/ElRockdetodoslosDias" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
-                <a href="https://twitter.com/ElRockde" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-                <a href="https://www.tiktok.com/@elrockdetodoslosdias" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+                <a href="https://instagram.com/elrockdetodoslosdias"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://facebook.com/ElRockdetodoslosDias"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://twitter.com/ElRockde"><i class="fab fa-twitter"></i> Twitter</a>
             </div>
-
             <div class="f-col">
                 <h5>Comunidad</h5>
-                <a href="https://discord.gg/Ey7sdqwDaW" target="_blank"><i class="fab fa-discord"></i> Discord</a>
-                <a href="https://www.twitch.tv/elrockdetodoslosdias" target="_blank"><i class="fab fa-twitch"></i> Twitch</a>
-                <a href="#" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                <a href="#"><i class="fab fa-discord"></i> Discord</a>
+                <a href="#"><i class="fab fa-twitch"></i> Twitch</a>
             </div>
-
             <div class="f-col">
                 <h5>Navegación</h5>
                 <a href="index.html">Inicio</a>
                 <a href="musica.html">Música</a>
                 <a href="escena.html">Escena</a>
-                <a href="bytemos.html">Bytemos</a>
-                <a href="pantallas.html">Pantallas</a>
-                <a href="nosotros.html">Nosotros</a>
             </div>
         </div>
-
         <div class="f-bottom">
             <span>&copy; 2026 EL ROCK DE TODOS LOS DÍAS</span>
             <span>LIVE FAST, PLAY LOUD</span>
         </div>
     </footer>
+
+    <script>
+        function filterMonth(monthId) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            const groups = document.querySelectorAll('.month-group');
+            groups.forEach(group => {
+                if (monthId === 'all') {
+                    group.classList.remove('hidden');
+                } else if (group.id === monthId) {
+                    group.classList.remove('hidden');
+                } else {
+                    group.classList.add('hidden');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
