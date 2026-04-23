@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,14 @@
     <meta property="og:description" content="Spinne estrena 'No Regret Held', un tributo sonoro y visual a la película REC. Thrash/Groove de la vieja escuela.">
     <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasabril/spinne-hero.jpg">
     <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasabril/postSpinne.html">
+    <meta property="og:site_name" content="EL Rock de Todos los Dias">
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SPINNE: Metal mexicano con vibra 'Found Footage'">
+    <meta name="twitter:description" content="Spinne estrena 'No Regret Held', un tributo sonoro y visual a la película REC.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasabril/spinne-hero.jpg">
+    <meta name="twitter:site" content="@ElRockde">
 
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -63,6 +71,10 @@
         .img-hero { border: 1px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
         .img-hero img { width: 100%; display: block; filter: saturate(0.8) contrast(1.2); }
 
+        .img-inline { width: 100%; border: 1px solid #222; margin: 40px 0; padding: 5px; background: #000; }
+        .img-inline img { width: 100%; display: block; filter: grayscale(0.5); transition: 0.5s; }
+        .img-inline:hover img { filter: grayscale(0); }
+
         .meta-strip {
             border-top: 1px solid #222; border-bottom: 1px solid #222;
             padding: 20px 0; margin-bottom: 50px;
@@ -78,7 +90,6 @@
             line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
         }
 
-        /* RELACIONADO (NERVOSA) */
         .related-archive {
             margin: 40px 0; border: 1px dashed var(--accent); padding: 20px;
             display: flex; align-items: center; gap: 20px; background: rgba(244, 63, 94, 0.05);
@@ -99,36 +110,18 @@
         .theory-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
         .theory-list li { margin-bottom: 15px; border-left: 3px solid var(--accent); padding-left: 15px; }
 
-        /* GALERÍA ZOOM */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px; margin: 60px 0;
-        }
-        .gallery-item { border: 1px solid #333; background: #000; padding: 5px; overflow: hidden; }
-        .gallery-item img { 
-            width: 100%; height: 180px; object-fit: cover; display: block; 
-            filter: grayscale(0.8) contrast(1.2); 
-            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
-        }
-        .gallery-item:hover img { transform: scale(1.15); filter: grayscale(0); }
-        .gallery-item:hover { border-color: var(--accent); }
-
-        /* VIDEO */
         .video-container {
             position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
             border: 1px solid var(--accent); margin: 60px 0;
         }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-        /* CRÉDITOS MASIVOS */
         .credits-box {
-            margin-top: 80px; padding: 40px; border: 5px solid var(--accent);
+            margin-top: 40px; padding: 30px; border: 2px solid var(--accent);
             background: rgba(244, 63, 94, 0.05);
         }
-        .credits-label { font-family: 'Space Mono'; font-size: 14px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 10px; }
-        .credits-main { font-family: 'Syne'; font-size: clamp(2rem, 5vw, 4rem); line-height: 0.9; color: var(--white); text-transform: uppercase; margin-bottom: 20px; display: block; }
-        .credits-details { font-family: 'Space Mono'; font-size: 16px; color: #9ca3af; border-top: 1px solid #333; padding-top: 20px; display: block; }
+        .credits-label { font-family: 'Space Mono'; font-size: 12px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 5px; }
+        .credits-main { font-family: 'Syne'; font-size: 1.8rem; color: var(--white); text-transform: uppercase; }
 
         .sidebar-intel {
             background: #0d0d12; border: 1px solid #222;
@@ -159,8 +152,9 @@
             <h1 class="post-title">SPINNE: EL SONIDO<br>REC DE LA <span>VIEJA ESCUELA</span></h1>
         </header>
 
+        <!-- IMAGEN 1 (HERO) -->
         <div class="img-hero">
-            <img src="spinne-no-regret-hero.jpg" alt="Spinne No Regret Held Single">
+            <img src="spinne-hero.jpg" alt="Spinne No Regret Held Single">
         </div>
 
         <div class="meta-strip">
@@ -173,11 +167,15 @@
             
             <div class="main-content">
                 <div class="content">
-                    <p>SPINNE, la agrupación mexicana de Metal, sorprende con el lanzamiento de su nuevo single <strong>“No Regret Held”</strong>. Esta pieza es el primer adelanto de su próximo material discográfico larga duración, previsto para ser editado hacia finales de 2026, y llega con una propuesta visual perturbadora.</p>
+                    <p>SPINNE, la agrupación mexicana de Metal, sorprende con el lanzamiento de su nuevo single <strong>“No Regret Held”</strong>. Esta pieza es el primer adelanto de su próximo material discográfico larga duración, previsto para ser editado hacia finales de 2026.</p>
                     
-                    <p>El single es un homenaje directo a la película <strong>REC (2007)</strong>. Tanto la letra como el videoclip están llenos de referencias en fotografía, color y vibra al formato “Found Footage”. Producido de manera independiente, el video abraza la crudeza de lo visual para inyectar realismo a su propuesta sonora.</p>
+                    <p>El single es un homenaje directo a la película <strong>REC (2007)</strong>. Tanto la letra como el videoclip están llenos de referencias en fotografía, color y vibra al formato “Found Footage”. Producido de manera independiente, el video abraza la crudeza de lo visual.</p>
 
-                    <!-- RELACIONADO -->
+                    <!-- IMAGEN 2 (INLINE) -->
+                    <div class="img-inline">
+                        <img src="spinne1.jpg" alt="Spinne Metal Mexicano">
+                    </div>
+
                     <aside>
                         <a href="postNervosa.html" class="related-archive" title="Leer sobre Nervosa Slave Machine">
                             <div class="related-thumb">
@@ -193,45 +191,33 @@
                     </aside>
 
                     <h3>CRUDEZA DE LOS 80'S Y 90'S</h3>
-                    <p>Spinne tiene un objetivo claro: generar nostalgia. En un 2026 donde muchos sonidos tienden a la homogeneidad, la banda se atreve a traer de regreso la crudeza del Thrash y Groove de la vieja escuela, influenciados por gigantes como Xentrix, Metallica, Megadeth y Pantera.</p>
+                    <p>Spinne tiene un objetivo claro: generar nostalgia. En un 2026 donde muchos sonidos tienden a la homogeneidad, la banda se atreve a traer de regreso la crudeza del Thrash y Groove de la vieja escuela, influenciados por gigantes como Xentrix y Metallica.</p>
 
                     <div class="theory-box">
                         <h3>HITOS DE LA ARAÑA (SPINNE)</h3>
                         <ul class="theory-list">
                             <li><b>EXODUS:</b> Acto soporte en el Circo Volador (2022).</li>
-                            <li><b>INTEL:</b> Mencionados en la revista europea Metal Hammer.</li>
-                            <li><b>RADIO:</b> Emitidos en 89FM Brasil por Andreas Kisser (Sepultura).</li>
-                            <li><b>PRÓXIMAMENTE:</b> Gira por Colombia (Mayo 2026) con Kings of Thrash.</li>
+                            <li><b>INTEL:</b> Mencionados en la revista Metal Hammer.</li>
+                            <li><b>RADIO:</b> Emitidos en 89FM Brasil por Andreas Kisser.</li>
+                            <li><b>PRÓXIMAMENTE:</b> Gira por Colombia (Mayo 2026).</li>
                         </ul>
                     </div>
 
                     <!-- VIDEO -->
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/SPINNE_VIDEO_ID" title="Spinne - No Regret Held" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/TU_ID_AQUI" title="Spinne - No Regret Held" frameborder="0" allowfullscreen></iframe>
                     </div>
 
-                    <!-- GALERÍA DE 10 FOTOS -->
-                    <h3 style="color:var(--accent); font-family:'Syne'; margin-top:50px;">VISUALES: ROTTEN SOCIETY & BEYOND</h3>
-                    <div class="gallery-grid">
-                        <div class="gallery-item"><img src="spinne1.jpg" alt="Spinne"></div>
-                        <div class="gallery-item"><img src="spinne2.jpg" alt="Spinne"></div>
-                        <div class="gallery-item"><img src="spinne3.jpg" alt="Spinne"></div>
-                        <div class="gallery-item"><img src="spinne4.jpg" alt="Spinne"></div>
-                        <div class="gallery-item"><img src="spinne5.jpg" alt="Spinne"></div>
-                        <div class="gallery-item"><img src="spinne6.jpg" alt="Spinne"></div>
-                        <div class="gallery-item"><img src="spinne7.jpg" alt="Spinne"></div>
-                        <div class="gallery-item"><img src="spinne8.jpg" alt="Spinne"></div>
-                        <div class="gallery-item"><img src="spinne9.jpg" alt="Spinne"></div>
-                        <div class="gallery-item"><img src="spinne10.jpg" alt="Spinne"></div>
+                    <p>Fundada en 2019 por Emiliano Saucedo y Ross Valencia, la banda consolidó su formación con Aldo López y Daniel Zamora. Su nombre, que significa "Araña" en alemán, refleja la dualidad agresiva y técnica de su sonido.</p>
+
+                    <!-- IMAGEN 3 (INLINE) -->
+                    <div class="img-inline">
+                        <img src="spinne2.jpg" alt="Spinne Live">
                     </div>
 
-                    <p>Fundada en 2019 por Emiliano Saucedo y Ross Valencia, la banda consolidó su formación con Aldo López y Daniel Zamora. Su nombre, que significa "Araña" en alemán, refleja el respeto y la fobia hacia estos arácnidos, una dualidad que se traslada perfectamente a su música agresiva y técnica.</p>
-
-                    <!-- CAJA DE CRÉDITOS MASIVA -->
                     <div class="credits-box">
                         <span class="credits-label">PRODUCCIÓN INDEPENDIENTE:</span>
                         <span class="credits-main">SPINNE // NO REGRET HELD</span>
-                        <span class="credits-details">// CDMX - COLOMBIA - GLOBAL METAL SCENE</span>
                     </div>
                 </div>
             </div>
@@ -243,7 +229,7 @@
                     <div class="intel-item"><b>ORIGEN:</b> Ciudad de México</div>
                     <div class="intel-item"><b>GÉNERO:</b> Thrash / Groove Metal</div>
                     <div class="intel-item"><b>LINEUP:</b> Saucedo, Zamora, López, Valencia</div>
-                    <button onclick="window.open('https://open.spotify.com/artist/06i7mN7K5Zf2v3z0E5I1O3')" style="width:100%; background:var(--accent); color:white; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">ESCUCHAR SPINNE</button>
+                    <button onclick="window.open('https://open.spotify.com/intl-es/album/6IcfCx1kMg8vIzO29lgjzF?si=Z8AA-MqASHa1EPjg4-P33Q')" style="width:100%; background:var(--accent); color:white; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">ESCUCHAR SPINNE</button>
                 </div>
             </aside>
         </div>
