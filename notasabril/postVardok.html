@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCENA | Vardök celebra su primer año con “Perdición”</title>
+
+    <!-- METAS OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="VARDÖK: Perdición y la elegancia del Hard Rock">
+    <meta property="og:description" content="La banda de la CDMX consolida su presencia en la escena independiente con un nuevo trallazo energético.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasabril/vardok-hero.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasabril/postVardok.html">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #0b0214;
+            --accent: #a855f7; /* Púrpura Eléctrico */
+            --white: #f5f3ff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(168, 85, 247, 0.03) 50%, rgba(0, 0, 0, 0.1) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--accent); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            text-decoration: none; font-size: 12px;
+        }
+
+        .post-header { margin-bottom: 60px; border-left: 10px solid var(--accent); padding-left: 30px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.2rem, 7vw, 5rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+        }
+
+        .img-hero { border: 1px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
+        .img-hero img { width: 100%; display: block; filter: saturate(1.1) contrast(1.1); }
+
+        .inline-photo {
+            border: 1px solid #333;
+            background: #000;
+            padding: 5px;
+            margin: 40px 0;
+            position: relative;
+        }
+        .inline-photo img {
+            width: 100%;
+            display: block;
+            filter: grayscale(0.3) contrast(1.2);
+            transition: 0.3s;
+        }
+        .inline-photo:hover img { filter: grayscale(0); }
+        .inline-photo::after {
+            content: "HARD_ROCK_VDK_03";
+            position: absolute; bottom: 10px; right: 10px;
+            font-family: 'Space Mono'; font-size: 10px; color: var(--accent);
+            background: rgba(0,0,0,0.8); padding: 2px 5px;
+        }
+
+        .meta-strip {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 20px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content p { font-size: 1.2rem; font-weight: 400; color: #a5b4fc; margin-bottom: 35px; line-height: 1.7; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .theory-box {
+            background: rgba(168, 85, 247, 0.05); border: 1px solid var(--accent);
+            padding: 40px; margin: 60px 0; position: relative;
+        }
+        .theory-box h3 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
+        .theory-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
+        .theory-list li { margin-bottom: 15px; border-left: 3px solid var(--accent); padding-left: 15px; }
+
+        .credits-box {
+            margin-top: 80px; padding: 40px; border: 5px solid var(--accent);
+            background: rgba(168, 85, 247, 0.05);
+        }
+        .credits-label { font-family: 'Space Mono'; font-size: 14px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 10px; }
+        .credits-main { font-family: 'Syne'; font-size: clamp(2rem, 5vw, 4rem); line-height: 0.9; color: var(--white); text-transform: uppercase; margin-bottom: 20px; display: block; }
+
+        .sidebar-intel {
+            background: #0d0d12; border: 1px solid #222;
+            padding: 30px; position: sticky; top: 100px; height: fit-content;
+        }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; font-size: 1rem; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #6b7280; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        .post-footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid #222; text-align: center; }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2rem; color: var(--accent); font-style: italic; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='../escena.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">ESCENA NACIONAL // HARD ROCK INDIE: VARDÖK</span>
+            <h1 class="post-title">VARDÖK: EL PODER MELÓDICO DE <span>PERDICIÓN</span></h1>
+        </header>
+
+        <div class="img-hero">
+            <img src="vardok-hero.jpg" alt="Vardök Perdición Single">
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: HARD ROCK / METAL ALT</span>
+            <span>ESTRENO: PERDICIÓN</span>
+            <span>MOTIVO: PRIMER ANIVERSARIO</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>La agrupación capitalina <strong>Vardök</strong> celebra su primer año de vida en los escenarios con el lanzamiento de su tercer sencillo: “Perdición”. Este tema llega para consolidar su presencia en la escena independiente de la Ciudad de México, ofreciendo un sonido que equilibra la potencia con la elegancia.</p>
+                    
+                    <p>En "Perdición", Vardök logra un balance fascinante entre la fuerza del metal y la sofisticación del hard rock melódico. La pieza se percibe como una obra de madurez temprana, donde los ganchos pegajosos y los riffs sólidos construyen una pista diseñada específicamente para la intensidad del directo.</p>
+
+                    <!-- PRIMERA FOTO INTEGRADA -->
+                    <div class="inline-photo">
+                        <img src="vardok-live-1.jpg" alt="Vardök en concierto">
+                    </div>
+
+                    <h3>PROMESA INDEPENDIENTE</h3>
+                    <p>Con una energía que invita al movimiento constante, el sencillo reafirma por qué Vardök es considerada una de las promesas más interesantes del rock independiente actual. La producción profesional y el videoclip oficial que acompaña al track refuerzan una propuesta visual y sonora de alto calibre.</p>
+
+                    <!-- SEGUNDA FOTO INTEGRADA -->
+                    <div class="inline-photo">
+                        <img src="vardok-band.jpg" alt="Vardök Integrantes">
+                    </div>
+
+                    <div class="theory-box">
+                        <h3>ANÁLISIS: PERDICIÓN</h3>
+                        <ul class="theory-list">
+                            <li><b>ESTILO:</b> Hard Rock melódico con base Metal Alt.</li>
+                            <li><b>HITO:</b> Celebración del primer aniversario de la banda.</li>
+                            <li><b>OBJETIVO:</b> Consolidación en la escena independiente.</li>
+                            <li><b>DIRECTO:</b> Diseñado para generar movimiento en el escenario.</li>
+                        </ul>
+                    </div>
+
+                    <div class="credits-box">
+                        <span class="credits-label">COMPOSICIÓN E INTERPRETACIÓN:</span>
+                        <span class="credits-main">VARDÖK</span>
+                        <span class="credits-details">// CDMX 2026. CELEBRANDO UN AÑO DE ROCK.</span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>PERFIL PROYECTO</h4>
+                    <div class="intel-item"><b>BANDA:</b> Vardök</div>
+                    <div class="intel-item"><b>ORIGEN:</b> CDMX, México</div>
+                    <div class="intel-item"><b>GÉNERO:</b> Hard Rock / Metal Alt</div>
+                    <div class="intel-item"><b>ESTATUS:</b> Perdición (Single)</div>
+                    <button onclick="window.open('https://open.spotify.com/intl-es/track/1MQr19ZWO8Deuti49DnGyD?si=12a0e2b1279642c8')" style="width:100%; background:var(--accent); color:white; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">ESCUCHAR EN SPOTIFY</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>EL ROCK ES UNA PROMESA QUE SE CUMPLE EN EL ESCENARIO.</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // ESCENA NACIONAL © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

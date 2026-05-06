@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCENA | Thrust redefine su sonido con “No Más Oscuridad”</title>
+
+    <!-- METAS OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="THRUST: Metalcore técnico y la fuerza de la precisión">
+    <meta property="og:description" content="La banda explora terrenos más pesados y oscuros en su nuevo sencillo No Más Oscuridad.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasabril/thrust-hero.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasabril/postThrust.html">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #e5e7eb; /* Gris Platino / Acero */
+            --white: #ffffff;
+            --dim-gray: #4b5563;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(255, 255, 255, 0.02) 50%, rgba(0, 0, 0, 0.1) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--white); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px var(--dim-gray);
+            text-decoration: none; font-size: 12px;
+        }
+
+        .post-header { margin-bottom: 60px; border-left: 10px solid var(--white); padding-left: 30px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--dim-gray); font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 2px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.2rem, 7vw, 5rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        .img-hero { border: 1px solid #333; margin-bottom: 40px; padding: 5px; background: #000; }
+        .img-hero img { width: 100%; display: block; filter: contrast(1.3) grayscale(1); }
+
+        .inline-photo {
+            border: 1px solid #222;
+            background: #000;
+            padding: 5px;
+            margin: 40px 0;
+            position: relative;
+        }
+        .inline-photo img {
+            width: 100%;
+            display: block;
+            filter: grayscale(1);
+            transition: 0.4s;
+        }
+        .inline-photo:hover img { filter: grayscale(0.5); }
+        .inline-photo::after {
+            content: "TECH_METAL_LOG_09";
+            position: absolute; bottom: 10px; right: 10px;
+            font-family: 'Space Mono'; font-size: 10px; color: var(--white);
+            background: rgba(0,0,0,0.8); padding: 2px 5px;
+        }
+
+        .meta-strip {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 20px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--dim-gray);
+        }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content p { font-size: 1.2rem; font-weight: 400; color: #a1a1aa; margin-bottom: 35px; line-height: 1.7; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--white); font-weight: 900; font-family: 'Syne';
+        }
+
+        .theory-box {
+            background: #0a0a0a; border: 1px solid #333;
+            padding: 40px; margin: 60px 0; position: relative;
+        }
+        .theory-box h3 { font-family: 'Syne'; color: var(--white); margin-bottom: 20px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .theory-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
+        .theory-list li { margin-bottom: 15px; border-left: 3px solid var(--dim-gray); padding-left: 15px; color: #d1d5db; }
+        .theory-list b { color: var(--white); }
+
+        .credits-box {
+            margin-top: 80px; padding: 40px; border: 1px solid var(--white);
+            background: transparent;
+        }
+        .credits-label { font-family: 'Space Mono'; font-size: 14px; color: var(--dim-gray); font-weight: 700; display: block; margin-bottom: 10px; }
+        .credits-main { font-family: 'Syne'; font-size: clamp(2rem, 5vw, 4rem); line-height: 0.9; color: var(--white); text-transform: uppercase; margin-bottom: 20px; display: block; }
+
+        .sidebar-intel {
+            background: #0d0d12; border: 1px solid #222;
+            padding: 30px; position: sticky; top: 100px; height: fit-content;
+        }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--white); margin-bottom: 20px; text-transform: uppercase; font-size: 1rem; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #6b7280; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        .post-footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid #222; text-align: center; }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2rem; color: var(--white); text-transform: uppercase; letter-spacing: 4px; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='../escena.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">ESCENA NACIONAL // TECH-METAL CORE</span>
+            <h1 class="post-title">THRUST: LA FUERZA TÉCNICA DE <span>NO MÁS OSCURIDAD</span></h1>
+        </header>
+
+        <div class="img-hero">
+            <img src="thrust-hero.jpg" alt="Thrust No Más Oscuridad Single">
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: METALCORE TÉCNICO</span>
+            <span>TRACK: NO MÁS OSCURIDAD</span>
+            <span>STATUS: MÁXIMA POTENCIA</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>La banda mexicana <strong>Thrust</strong> se adentra en terrenos pesados con una exhibición de metalcore de alto calibre en su más reciente sencillo: “No Más Oscuridad”. Este lanzamiento marca un giro definitivo hacia un sonido más agresivo, oscuro y meticulosamente trabajado.</p>
+                    
+                    <p>La canción destaca por su precisión quirúrgica, donde cada elemento parece estar calculado para maximizar el impacto. Con riffs entrelazados que desafían la métrica convencional y breakdowns que golpean con la fuerza de un mazo, Thrust demuestra por qué son un referente en la evolución del metal técnico contemporáneo.</p>
+
+                    <!-- PRIMERA FOTO INTEGRADA -->
+                    <div class="inline-photo">
+                        <img src="thrust-video-1.jpg" alt="Thrust Sesión de Video">
+                    </div>
+
+                    <h3>EVOLUCIÓN Y CAOS CONTROLADO</h3>
+                    <p>“No Más Oscuridad” es una evolución necesaria para la banda. En este track, Thrust abraza una atmósfera más densa sin sacrificar la claridad técnica que los caracteriza. Es una pieza que se posiciona firmemente en la vanguardia, combinando la potencia sonora del metalcore moderno con una estructura progresiva fascinante.</p>
+
+                    <!-- SEGUNDA FOTO INTEGRADA -->
+                    <div class="inline-photo">
+                        <img src="thrust-band.jpg" alt="Integrantes de Thrust">
+                    </div>
+
+                    <div class="theory-box">
+                        <h3>ANÁLISIS DE AUDIO: NO MÁS OSCURIDAD</h3>
+                        <ul class="theory-list">
+                            <li><b>PRECISIÓN:</b> Riffs quirúrgicos y técnica avanzada.</li>
+                            <li><b>DINÁMICA:</b> Breakdowns de alta potencia sonora.</li>
+                            <li><b>ESTÉTICA:</b> Sonido oscuro y contemporáneo.</li>
+                            <li><b>GÉNERO:</b> Metalcore Técnico.</li>
+                        </ul>
+                    </div>
+
+                    <div class="theory-box">
+                        <h3>CRÉDITOS DE PRODUCCIÓN</h3>
+                        <ul class="theory-list">
+                            <li><b>PRODUCCIÓN:</b> Josué "Musicman" García.</li>
+                            <li><b>MIX & MASTER:</b> Iván Rodríguez.</li>
+                            <li><b>ILUMINACIÓN:</b> Daniel Zamora.</li>
+                            <li><b>VIDEO:</b> Nordexs.</li>
+                        </ul>
+                    </div>
+
+                    <div class="credits-box">
+                        <span class="credits-label">EJECUCIÓN TÉCNICA:</span>
+                        <span class="credits-main">THRUST</span>
+                        <span class="credits-details">// MÉXICO 2026. EVOLUCIÓN PESADA.</span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>PERFIL ARTÍSTICO</h4>
+                    <div class="intel-item"><b>BANDA:</b> Thrust</div>
+                    <div class="intel-item"><b>ORIGEN:</b> CDMX, México</div>
+                    <div class="intel-item"><b>GÉNERO:</b> Metalcore Técnico</div>
+                    <div class="intel-item"><b>ESTRENO:</b> No Más Oscuridad</div>
+                    <button onclick="window.open('https://youtube.com/tu-video-link')" style="width:100%; background:var(--white); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">VER VIDEO OFICIAL</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>PRECISIÓN. POTENCIA. OSCURIDAD.</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // ESCENA NACIONAL © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

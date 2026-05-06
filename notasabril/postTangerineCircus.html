@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCENA | Tangerine Circus: La odisea instrumental de “Vermilion Bird”</title>
+
+    <!-- METAS OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="TANGERINE CIRCUS: Narrativa sonora en Vermilion Bird">
+    <meta property="og:description" content="La banda de la CDMX nos guía por un viaje instrumental lleno de texturas en su nuevo sencillo.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasabril/tangerine-circus-hero.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasabril/postTangerineCircus.html">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #080808;
+            --accent: #f59e0b; /* Naranja Ámbar / Tangerine */
+            --white: #f3f4f6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(245, 158, 11, 0.02) 50%, rgba(0, 0, 0, 0.1) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--accent); color: black;
+            padding: 12px 20px; font-weight: 900;
+            border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            text-decoration: none; font-size: 12px;
+        }
+
+        .post-header { margin-bottom: 60px; border-left: 10px solid var(--accent); padding-left: 30px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.2rem, 7vw, 5rem);
+            line-height: 0.85; margin: 10px 0; text-transform: uppercase;
+        }
+
+        .img-hero { border: 1px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
+        .img-hero img { width: 100%; display: block; filter: saturate(0.8) contrast(1.1); }
+
+        .inline-photo {
+            border: 1px solid #333;
+            background: #000;
+            padding: 5px;
+            margin: 40px 0;
+            position: relative;
+        }
+        .inline-photo img {
+            width: 100%;
+            display: block;
+            filter: grayscale(0.4);
+            transition: 0.3s;
+        }
+        .inline-photo:hover img { filter: grayscale(0); }
+        .inline-photo::after {
+            content: "AUDIO_VISUAL_LOG_04";
+            position: absolute; bottom: 10px; right: 10px;
+            font-family: 'Space Mono'; font-size: 10px; color: var(--accent);
+            background: rgba(0,0,0,0.8); padding: 2px 5px;
+        }
+
+        .meta-strip {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 20px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content p { font-size: 1.2rem; font-weight: 400; color: #9ca3af; margin-bottom: 35px; line-height: 1.7; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .theory-box {
+            background: rgba(245, 158, 11, 0.05); border: 1px solid var(--accent);
+            padding: 40px; margin: 60px 0; position: relative;
+        }
+        .theory-box h3 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; }
+        .theory-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
+        .theory-list li { margin-bottom: 15px; border-left: 3px solid var(--accent); padding-left: 15px; }
+
+        .credits-box {
+            margin-top: 80px; padding: 40px; border: 5px solid var(--accent);
+            background: rgba(245, 158, 11, 0.05);
+        }
+        .credits-label { font-family: 'Space Mono'; font-size: 14px; color: var(--accent); font-weight: 700; display: block; margin-bottom: 10px; }
+        .credits-main { font-family: 'Syne'; font-size: clamp(2rem, 5vw, 4rem); line-height: 0.9; color: var(--white); text-transform: uppercase; margin-bottom: 20px; display: block; }
+
+        .sidebar-intel {
+            background: #0d0d12; border: 1px solid #222;
+            padding: 30px; position: sticky; top: 100px; height: fit-content;
+        }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 20px; text-transform: uppercase; font-size: 1rem; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; color: #6b7280; margin-bottom: 20px; }
+        .intel-item b { color: white; display: block; margin-bottom: 5px; }
+
+        .post-footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid #222; text-align: center; }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2rem; color: var(--accent); font-style: italic; }
+
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .post-title { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='../escena.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">ESCENA NACIONAL // PROG NARRATIVA: TANGERINE CIRCUS</span>
+            <h1 class="post-title">TANGERINE CIRCUS: EL VIAJE ONÍRICO DE <span>VERMILION BIRD</span></h1>
+        </header>
+
+        <div class="img-hero">
+            <img src="tangerine-circus-hero.jpg" alt="Tangerine Circus Vermilion Bird">
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: PROG METAL INSTRUMENTAL</span>
+            <span>ALBUM: THE FORTUNE TELLER</span>
+            <span>ESTATUS: NARRATIVA VÍVIDA</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>La banda originaria de la Ciudad de México, <strong>Tangerine Circus</strong>, reafirma su posición en la vanguardia del progresivo con su más reciente sencillo: “Vermilion Bird”. Esta pieza se erige como un pilar fundamental de su cuarto álbum de estudio, <em>"The Fortune Teller"</em>.</p>
+                    
+                    <p>Pocas agrupaciones en la escena nacional manejan la narrativa instrumental con tal destreza. En esta entrega, la banda nos guía por un viaje lleno de matices, donde no hacen falta palabras para evocar imágenes vívidas y cinematográficas en la mente del oyente.</p>
+
+                    <!-- PRIMERA FOTO INTEGRADA -->
+                    <div class="inline-photo">
+                        <img src="tangerine-live-1.jpg" alt="Tangerine Circus en acción">
+                    </div>
+
+                    <h3>TEXTURAS Y DINÁMICA</h3>
+                    <p>“Vermilion Bird” es una pieza que respira. Su estructura evoluciona constantemente, cambiando de texturas y densidades con una fluidez asombrosa. Desde pasajes delicados hasta explosiones de metal técnico, Tangerine Circus demuestra que la ejecución técnica está al servicio de la emoción.</p>
+
+                    <div class="theory-box">
+                        <h3>ANÁLISIS CONCEPTUAL: VERMILION BIRD</h3>
+                        <ul class="theory-list">
+                            <li><b>ESTILO:</b> Rock/Metal Progresivo Instrumental.</li>
+                            <li><b>EVOLUCIÓN:</b> Parte del 4to álbum conceptual.</li>
+                            <li><b>DINÁMICA:</b> Cambios constantes de textura sonora.</li>
+                            <li><b>IMPACTO:</b> Experiencia auditiva cinematográfica.</li>
+                        </ul>
+                    </div>
+
+                    <!-- SEGUNDA FOTO INTEGRADA -->
+                    <div class="inline-photo">
+                        <img src="tangerine-band.jpg" alt="Tangerine Circus Integrantes">
+                    </div>
+
+                    <div class="theory-box">
+                        <h3>FICHA DEL ÁLBUM: THE FORTUNE TELLER</h3>
+                        <ul class="theory-list">
+                            <li><b>COMPOSICIÓN:</b> Estructuras complejas y conceptuales.</li>
+                            <li><b>ORIGEN:</b> CDMX, México.</li>
+                            <li><b>LEGADO:</b> Consolidación de una narrativa instrumental única.</li>
+                        </ul>
+                    </div>
+
+                    <div class="credits-box">
+                        <span class="credits-label">COMPOSICIÓN Y EJECUCIÓN:</span>
+                        <span class="credits-main">TANGERINE CIRCUS</span>
+                        <span class="credits-details">// MÉXICO 2026. THE FORTUNE TELLER ERA.</span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>PERFIL PROYECTO</h4>
+                    <div class="intel-item"><b>BANDA:</b> Tangerine Circus</div>
+                    <div class="intel-item"><b>ORIGEN:</b> CDMX, México</div>
+                    <div class="intel-item"><b>GÉNERO:</b> Prog Metal Instrumental</div>
+                    <div class="intel-item"><b>PROYECTO:</b> Vermilion Bird</div>
+                    <button onclick="window.open('https://youtube.com/tangerine-link')" style="width:100%; background:var(--accent); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">ESCUCHAR AHORA</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>LA MÚSICA NO NECESITA PALABRAS PARA HABLAR.</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // ESCENA NACIONAL © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>

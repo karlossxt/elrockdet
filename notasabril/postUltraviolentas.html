@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCENA | Ultraviolentas reclama su lugar con “Morir Así”</title>
+
+    <!-- METAS OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ULTRAVIOLENTAS: Punk rock feroz en Morir Así">
+    <meta property="og:description" content="El trío femenino presenta un himno de puro punk rock bajo el sello de Discos y Cintas Denver.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasabril/ultraviolentas-hero.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #ff007f; /* Rosa Neón / Punk */
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(255, 0, 127, 0.03) 50%, rgba(0, 0, 0, 0.1) 50%);
+            z-index: 1000; background-size: 100% 4px; pointer-events: none;
+        }
+
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 80px 20px; 
+            position: relative; 
+        }
+
+        .btn-cerrar {
+            position: fixed; top: 20px; right: 20px;
+            background: var(--accent); color: white;
+            padding: 10px 15px; font-weight: 900;
+            border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 3px 3px 0px white;
+            text-decoration: none; font-size: 11px;
+        }
+
+        .post-header { margin-bottom: 40px; border-left: 8px solid var(--accent); padding-left: 20px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 12px; display: block; margin-bottom: 10px; }
+        
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 8vw, 4.5rem);
+            line-height: 0.9; margin: 10px 0; text-transform: uppercase;
+            word-wrap: break-word;
+        }
+
+        .img-hero { border: 1px solid var(--accent); margin-bottom: 40px; padding: 4px; background: #000; width: 100%; }
+        .img-hero img { width: 100%; height: auto; display: block; filter: contrast(1.1) saturate(1.2); }
+
+        .inline-photo {
+            border: 1px solid #333;
+            background: #000;
+            padding: 5px;
+            margin: 30px 0;
+            position: relative;
+            width: 100%;
+        }
+        .inline-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: grayscale(0.2) contrast(1.3);
+        }
+
+        .meta-strip {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 40px;
+            display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+            font-family: 'Space Mono'; font-size: 10px; color: var(--accent);
+        }
+
+        /* Layout Principal Responsivo */
+        .main-layout { 
+            display: grid; 
+            grid-template-columns: 1fr 320px; 
+            gap: 40px; 
+        }
+
+        .content p { font-size: clamp(1rem, 4vw, 1.15rem); color: #d1d5db; margin-bottom: 25px; }
+        
+        .content p:first-of-type::first-letter {
+            font-size: clamp(3.5rem, 15vw, 5rem); 
+            float: left; margin-right: 12px;
+            line-height: 0.85; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .theory-box {
+            background: rgba(255, 0, 127, 0.05); border: 1px solid var(--accent);
+            padding: clamp(20px, 5vw, 30px); margin: 40px 0;
+        }
+        .theory-box h3 { font-family: 'Syne'; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; font-size: 1.2rem; }
+        .theory-list { list-style: none; font-family: 'Space Mono'; font-size: 12px; }
+        .theory-list li { margin-bottom: 10px; border-left: 3px solid var(--accent); padding-left: 12px; }
+
+        .credits-box {
+            margin-top: 50px; padding: 30px; border: 4px solid var(--accent);
+            background: rgba(255, 0, 127, 0.05);
+        }
+        .credits-label { font-family: 'Space Mono'; font-size: 12px; color: var(--accent); display: block; margin-bottom: 8px; }
+        .credits-main { font-family: 'Syne'; font-size: clamp(1.5rem, 6vw, 3rem); line-height: 1; text-transform: uppercase; }
+
+        .sidebar-intel {
+            background: #0d0d12; border: 1px solid #222;
+            padding: 25px; height: fit-content;
+        }
+        .sidebar-intel h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; }
+        .intel-item { font-family: 'Space Mono'; font-size: 11px; margin-bottom: 15px; }
+        .intel-item b { color: white; display: block; margin-bottom: 3px; }
+
+        .btn-spotify {
+            width: 100%; background: var(--accent); color: white; border: none; 
+            padding: 14px; margin-top: 10px; font-family: 'Space Mono'; 
+            font-weight: 900; cursor: pointer; text-transform: uppercase;
+        }
+
+        .post-footer { margin-top: 60px; padding: 40px 0; border-top: 1px solid #222; text-align: center; }
+        .post-footer h3 { font-family: 'Syne'; font-size: clamp(1.2rem, 5vw, 1.8rem); color: var(--accent); margin-bottom: 10px; }
+
+        /* AJUSTES PARA PANTALLAS PEQUEÑAS (TABLETS Y MÓVILES) */
+        @media (max-width: 950px) {
+            .main-layout { grid-template-columns: 1fr; }
+            .sidebar-intel { position: static; order: 2; }
+            .main-content { order: 1; }
+            .container { padding-top: 100px; }
+        }
+
+        @media (max-width: 600px) {
+            .meta-strip { flex-direction: column; align-items: flex-start; }
+            .post-header { border-left-width: 5px; padding-left: 15px; }
+            .credits-box { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='../escena.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">ESCENA NACIONAL // PUNK ROCK</span>
+            <h1 class="post-title">ULTRAVIOLENTAS: LA DESCARGA FEROZ DE <span>MORIR ASÍ</span></h1>
+        </header>
+
+        <div class="img-hero">
+            <img src="ultraviolentas-hero.jpg" alt="Ultraviolentas Morir Así">
+        </div>
+
+        <div class="meta-strip">
+            <span>ARCHIVO: PUNK ROCK / FEMME FORCE</span>
+            <span>TRACK: MORIR ASÍ</span>
+            <span>SELLO: DISCOS Y CINTAS DENVER</span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>El trío femenino <strong>Ultraviolentas</strong> reclama con autoridad su lugar en la escena nacional con un nuevo himno de puro punk rock: “Morir Así”. Esta descarga de adrenalina llega sin pedir permiso, reafirmando que el punk incendiario sigue más vigente que nunca.</p>
+                    
+                    <p>Con guitarras crudas y una base rítmica implacable, la banda logra capturar la urgencia del punk clásico bajo una producción moderna y feroz. Grabado en colaboración con el legendario sello <em>Discos y Cintas Denver</em>, el sencillo es una declaración de principios: actitud, ruido y la fuerza de tres voces que se niegan a ser silenciadas.</p>
+
+                    <div class="inline-photo">
+                        <img src="ultraviolentas-1.jpg" alt="Ultraviolentas en vivo">
+                    </div>
+
+                    <h3>ACTITUD E IRREVERENCIA</h3>
+                    <p>“Morir Así” no es solo una canción, es una exhibición de espíritu indomable. La estética poderosa de la banda acompaña un sonido que golpea con precisión, demostrando que la autenticidad y la furia femenina son motores imparables dentro del rock independiente de la Ciudad de México.</p>
+
+                    <div class="inline-photo">
+                        <img src="ultraviolentas-2.jpg" alt="Integrantes Ultraviolentas">
+                    </div>
+
+                    <div class="theory-box">
+                        <h3>INTEGRANTES: ULTRAVIOLENTAS</h3>
+                        <ul class="theory-list">
+                            <li><b>ANA SKELLINGTON:</b> Guitarra y Voz.</li>
+                            <li><b>LAURIE RAMONE:</b> Bajo y Voz.</li>
+                            <li><b>MISHEL CRETINA:</b> Batería y Voz.</li>
+                            <li><b>COLABORACIÓN:</b> Discos y Cintas Denver.</li>
+                        </ul>
+                    </div>
+
+                    <div class="credits-box">
+                        <span class="credits-label">RUIDO Y ACTITUD:</span>
+                        <span class="credits-main">ULTRAVIOLENTAS</span>
+                        <span class="credits-details">// CDMX 2026. PUNK ROCK SIN CONCESIONES.</span>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-intel">
+                    <h4>PERFIL PROYECTO</h4>
+                    <div class="intel-item"><b>BANDA:</b> Ultraviolentas</div>
+                    <div class="intel-item"><b>ORIGEN:</b> CDMX, México</div>
+                    <div class="intel-item"><b>GÉNERO:</b> Punk Rock</div>
+                    <div class="intel-item"><b>CONCEPTO:</b> Morir Así</div>
+                    <button class="btn-spotify" onclick="window.open('https://open.spotify.com/intl-es/track/6jwObuazfEVKQBY5zr2SMO?si=6d7c23389c3e448e')">ESCUCHAR EN SPOTIFY</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>TRES VOCES QUE SE NIEGAN A SER SILENCIADAS.</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // ESCENA NACIONAL © 2026</p>
+        </footer>
+
+    </article>
+
+</body>
+</html>
