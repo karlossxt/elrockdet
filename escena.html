@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -50,7 +50,7 @@
         .section-title { font-family: 'Syne'; font-size: clamp(3.5rem, 10vw, 10rem); line-height: 0.85; text-transform: uppercase; font-style: italic; color: white; position: relative; z-index: 10; }
 
         /* FILTROS */
-        .filter-container { max-width: 1300px; margin: 40px auto -40px; padding: 0 40px; display: flex; gap: 10px; flex-wrap: wrap; }
+        .filter-container { max-width: 1300px; margin: 40px auto 0; padding: 0 40px; display: flex; gap: 10px; flex-wrap: wrap; position: relative; z-index: 20; }
         .filter-btn { 
             background: transparent; border: 1px solid #333; color: #888; padding: 8px 15px; 
             font-family: 'Space Mono'; font-size: 10px; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: 0.3s;
@@ -58,7 +58,7 @@
         .filter-btn:hover, .filter-btn.active { border-color: white; color: white; background: rgba(255,255,255,0.1); }
 
         /* GRID */
-        .archive-container { max-width: 1300px; margin: 0 auto; padding: 80px 40px; }
+        .archive-container { max-width: 1300px; margin: 0 auto; padding: 60px 40px 80px; }
         .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px 40px; }
         
         .month-group { display: contents; }
@@ -69,12 +69,43 @@
         }
         .month-separator span { font-family: 'Space Mono'; font-size: 1rem; color: #555; }
 
-        .article-card { text-decoration: none; color: inherit; display: block; transition: 0.3s; }
-        .card-image { height: 250px; background-color: #18181b; margin-bottom: 20px; overflow: hidden; border: 1px solid #333; }
-        .card-image img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
+        /* CARD UNIFORMITY */
+        .article-card { 
+            text-decoration: none; 
+            color: inherit; 
+            display: flex; 
+            flex-direction: column; 
+            height: 100%; 
+            transition: 0.3s; 
+        }
+        
+        .card-image { 
+            aspect-ratio: 16 / 9; 
+            width: 100%;
+            background-color: #18181b; 
+            margin-bottom: 20px; 
+            overflow: hidden; 
+            border: 1px solid #333; 
+        }
+        
+        .card-image img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            filter: grayscale(1); 
+            transition: 0.5s; 
+        }
+        
         .article-card:hover .card-image img { filter: grayscale(0); transform: scale(1.05); }
         .card-tag { font-family: 'Space Mono'; color: var(--current-color); font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; }
-        .card-title { font-family: 'Syne'; font-size: 1.5rem; line-height: 1.1; text-transform: uppercase; }
+        
+        .card-title { 
+            font-family: 'Syne'; 
+            font-size: 1.4rem; 
+            line-height: 1.1; 
+            text-transform: uppercase; 
+            flex-grow: 1; 
+        }
 
         .hidden { display: none !important; }
 
@@ -89,8 +120,9 @@
         .f-col a:hover { color: white; }
         .f-bottom { border-top: 1px solid #222; padding-top: 30px; display: flex; justify-content: space-between; font-size: 10px; color: #444; font-family: 'Space Mono'; }
 
-        @media (max-width: 900px) {
-            .article-grid { grid-template-columns: 1fr; }
+        @media (max-width: 1000px) { .article-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 700px) {
+            .article-grid { grid-template-columns: 1fr; gap: 40px; }
             .f-top { grid-template-columns: 1fr 1fr; }
         }
     </style>
@@ -103,7 +135,7 @@
         <div class="nav-links">
             <a href="musica.html">Música</a>
             <a href="escena.html" style="color: white;">Escena</a>
-            <a href="bytemos.html" style="color: var(--green);">BYTEMOS</a>
+            <a href="bytemos.html">BYTEMOS</a>
             <button class="nav-cta-btn">TERMINAL [01]</button>
         </div>
     </nav>
@@ -113,343 +145,302 @@
         <h1 class="section-title">ESCENA NACIONAL</h1> 
     </header>
 
+    <!-- FILTROS (Ubicados antes del contenido) -->
     <div class="filter-container">
         <button class="filter-btn active" onclick="filterMonth('all')">Todos</button>
+        <button class="filter-btn" onclick="filterMonth('mayo')">Mayo 2026</button>
         <button class="filter-btn" onclick="filterMonth('abril')">Abril 2026</button>
         <button class="filter-btn" onclick="filterMonth('marzo')">Marzo 2026</button>
         <button class="filter-btn" onclick="filterMonth('archivo')">Archivo Histórico</button>
     </div>
-
-    <main class="archive-container">
+<main class="archive-container">
         <div class="article-grid">
             
+            <!-- SECCIÓN MAYO 2026 -->
+            <div id="mayo" class="month-group">
+                <div class="month-separator">MAYO <span>2026</span></div>
+                <a href="notasmayo/postEjemplo.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/analog-i-identidad-hero.jpg" alt="Nota de Mayo"></div>
+                    <span class="card-tag">PRÓXIMAMENTE</span>
+                    <h2 class="card-title">Nuevos sonidos emergen en el horizonte de Mayo</h2>
+                </a>
+            </div>
+
             <!-- SECCIÓN ABRIL 2026 -->
             <div id="abril" class="month-group">
                 <div class="month-separator">ABRIL <span>2026</span></div>
-
-                <!-- Analog I -->
-<a href="notasabril/postAnalogI.html" class="article-card">
-    <div class="card-image"><img src="notasabril/analog-i-identidad-hero.jpg" alt="Analog I regresa para mostrarnos su Identidad"></div>
-    <span class="card-tag">ESTRENO</span>
-    <h2 class="card-title">Analog I estrena Identidad</h2>
-</a>
-
-<!-- Desfase Temporal -->
-<a href="notasabril/postDesfaseTemporal.html" class="article-card">
-    <div class="card-image"><img src="notasabril/desfase-temporal.jpg" alt="DESFASE TEMPORAL: El caos orgánico de Espasmo"></div>
-    <span class="card-tag">ESTRENO</span>
-    <h2 class="card-title">La honestidad del directo hecha sencillo</h2>
-</a>
-
-<!-- Lost Nebula (Corregido comillas extras) -->
-<a href="notasabril/postLostNebula.html" class="article-card">
-    <div class="card-image"><img src="notasabril/lost-nebula-hero.jpg" alt="Lost Nebula: Que Arda El Mundo"></div>
-    <span class="card-tag">ESTRENO</span>
-    <h2 class="card-title">Desde Hermosillo, Sonora, estrenan el tercer sencillo</h2>
-</a>
-
-<!-- Tangerine Circus (Corregido espacio en alt) -->
-<a href="notasabril/postTangerineCircus.html" class="article-card">
-    <div class="card-image"><img src="notasabril/tangerine-circus-hero.jpg" alt="Tangerine Circus: La odisea instrumental de Vermilion Bird"></div>
-    <span class="card-tag">ESTRENO</span>
-    <h2 class="card-title">La odisea instrumental de Vermilion Bird</h2>
-</a>
-
-<!-- Thrust (Corregido espacio en alt) -->
-<a href="notasabril/postThrust.html" class="article-card">
-    <div class="card-image"><img src="notasabril/thrust-video-1.jpg" alt="THRUST: Metalcore técnico y la fuerza de la precisión"></div>
-    <span class="card-tag">ESTRENO</span>
-    <h2 class="card-title">Thrust redefine su sonido con “No Más Oscuridad”</h2>
-</a>
-
-<!-- Ultraviolentas -->
-<a href="notasabril/postUltraviolentas.html" class="article-card">
-    <div class="card-image"><img src="notasabril/ultraviolentas-hero.jpg" alt="Ultraviolentas estrena Morir Así"></div>
-    <span class="card-tag">ESTRENO</span>
-    <h2 class="card-title">El trío femenino presenta un himno de puro punk rock</h2>
-</a>
-
-<!-- Vardök -->
-<a href="notasabril/postVardok.html" class="article-card">
-    <div class="card-image"><img src="notasabril/vardok-hero.jpg" alt="VARDÖK: Perdición y la elegancia del Hard Rock"></div>
-    <span class="card-tag">ESTRENO</span>
-    <h2 class="card-title">VARDÖK: Perdición y la elegancia del Hard Rock</h2>
-</a>
-
-                 <a href="notasabril/postDiscoEterno.html" class="article-card">
-        <div class="card-image"><img src="notasabril/disco-eterno-hero.jpg" alt="Disco Eterno"></div>
-        <span class="card-tag">AGENDA</span>
-        <h2 class="card-title">"DISCO ETERNO: Tributo al legado del Rock"</h2>
-    </a>
-
-    <a href="notasabril/postAsesinosAmor.html" class="article-card">
-        <div class="card-image"><img src="notasabril/asesinos-amor-hero.jpg" alt="Asesinos del Amor"></div>
-        <span class="card-tag">ESTRENO</span>
-        <h2 class="card-title">"ASESINOS DEL AMOR: Post-Punk crudo y directo"</h2>
-    </a>
-
-    <a href="notasabril/postSpinne.html" class="article-card">
-        <div class="card-image"><img src="notasabril/spinne-hero.jpg" alt="Spinne"></div>
-        <span class="card-tag">ESTRENO</span>
-        <h2 class="card-title">"SPINNE: El nuevo tejido del rock alternativo"</h2>
-    </a>
-
-    <a href="notasabril/postSilverio.html" class="article-card">
-        <div class="card-image"><img src="notasabril/silverio-exito-hero.jpg" alt="Silverio"></div>
-        <span class="card-tag">RESEÑA</span>
-        <h2 class="card-title">"SILVERIO: Éxito rotundo de su Majestad Imperial"</h2>
-    </a>
-
-    <a href="notasabril/postSofiaElan.html" class="article-card">
-        <div class="card-image"><img src="notasabril/sofia-elan-hero.jpg" alt="Sofia Elan"></div>
-        <span class="card-tag">ESTRENO</span>
-        <h2 class="card-title">"SOFÍA ELAN: Melodías que rompen el silencio"</h2>
-    </a>
-
-    <a href="notasabril/postNervosa.html" class="article-card">
-        <div class="card-image"><img src="notasabril/nervosa-slave-machine-hero.jpg" alt="Nervosa"></div>
-        <span class="card-tag">ESTRENO</span>
-        <h2 class="card-title">"NERVOSA: Slave Machine y el poder del Thrash"</h2>
-    </a>
+                <a href="notasabril/postAnalogI.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/analog-i-identidad-hero.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">Analog I estrena Identidad</h2>
+                </a>
+                <a href="notasabril/postDesfaseTemporal.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/desfase-temporal.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">La honestidad del directo hecha sencillo</h2>
+                </a>
+                <a href="notasabril/postLostNebula.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/lost-nebula-hero.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">Desde Hermosillo, Sonora, estrenan el tercer sencillo</h2>
+                </a>
+                <a href="notasabril/postTangerineCircus.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/tangerine-circus-hero.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">La odisea instrumental de Vermilion Bird</h2>
+                </a>
+                <a href="notasabril/postThrust.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/thrust-video-1.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">Thrust redefine su sonido con “No Más Oscuridad”</h2>
+                </a>
+                <a href="notasabril/postUltraviolentas.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/ultraviolentas-hero.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">El trío femenino presenta un himno de puro punk rock</h2>
+                </a>
+                <a href="notasabril/postVardok.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/vardok-hero.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">VARDÖK: Perdición y la elegancia del Hard Rock</h2>
+                </a>
+                <a href="notasabril/postDiscoEterno.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/disco-eterno-hero.jpg"></div>
+                    <span class="card-tag">AGENDA</span>
+                    <h2 class="card-title">DISCO ETERNO: Tributo al legado del Rock</h2>
+                </a>
+                <a href="notasabril/postAsesinosAmor.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/asesinos-amor-hero.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">ASESINOS DEL AMOR: Post-Punk crudo y directo</h2>
+                </a>
+                <a href="notasabril/postSpinne.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/spinne-hero.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">SPINNE: El nuevo tejido del rock alternativo</h2>
+                </a>
+                <a href="notasabril/postSilverio.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/silverio-exito-hero.jpg"></div>
+                    <span class="card-tag">RESEÑA</span>
+                    <h2 class="card-title">SILVERIO: Éxito rotundo de su Majestad Imperial</h2>
+                </a>
+                <a href="notasabril/postSofiaElan.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/sofia-elan-hero.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">SOFÍA ELAN: Melodías que rompen el silencio</h2>
+                </a>
+                <a href="notasabril/postNervosa.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/nervosa-slave-machine-hero.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">NERVOSA: Slave Machine y el poder del Thrash</h2>
+                </a>
                 <a href="notasabril/postElCulto.html" class="article-card">
                     <div class="card-image"><img src="notasabril/el-culto-inauguracion.jpg"></div>
                     <span class="card-tag">RESEÑA</span>
-                    <h2 class="card-title">"EL CULTO: Inauguración y Caos en Pantitlán"</h2>
+                    <h2 class="card-title">EL CULTO: Inauguración y Caos en Pantitlán</h2>
                 </a>
                 <a href="notasabril/postJessyBulbo.html" class="article-card">
                     <div class="card-image"><img src="notasabril/jessy-bulbo-utopia.jpg"></div>
                     <span class="card-tag">AGENDA</span>
-                    <h2 class="card-title">"JESSY BULBO - Rock con Causa"</h2>
+                    <h2 class="card-title">JESSY BULBO - Rock con Causa</h2>
                 </a>
                 <a href="notasabril/postElectrifyForsaken.html" class="article-card">
                     <div class="card-image"><img src="notasabril/electrify-hero.jpg"></div>
                     <span class="card-tag">ESTRENO</span>
-                    <h2 class="card-title">"ELECTRIFY: El precio de la autenticidad en Forsaken"</h2>
+                    <h2 class="card-title">ELECTRIFY: El precio de la autenticidad en Forsaken</h2>
                 </a>
             </div>
 
             <!-- SECCIÓN MARZO 2026 -->
             <div id="marzo" class="month-group">
                 <div class="month-separator">MARZO <span>2026</span></div>
-                
-                   
-             <a href="notasmarzo/postArau.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/sergio-arau-hero.jpg"></div>
-                <span class="card-tag">AGENDA</span>
-                <h2 class="card-title">"SERGIO ARAU: Embotellado de Origen en el Multiforo Alicia"<</h2>
-            </a>
+                <a href="notasmarzo/postArau.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/sergio-arau-hero.jpg"></div>
+                    <span class="card-tag">AGENDA</span>
+                    <h2 class="card-title">SERGIO ARAU: Embotellado de Origen en el Multiforo Alicia</h2>
+                </a>
                 <a href="notasmarzo/postJoyas.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/joyas-rock-mexicano-hero.jpg"></div>
-                <span class="card-tag">INVESTIGACIÓ</span>
-                <h2 class="card-title">"5 Joyas del Rock Mexicano que el Mainstream Olvidó"<</h2>
-            </a>
-<a href="notasmarzo/postMiniRock.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/mini-rock-fest-hero.jpg"></div>
-                <span class="card-tag">AGENDA</span>
-                <h2 class="card-title">"MINI ROCK FEST: La primera descarga de libertad niñocentrista en México"<</h2>
-            </a>
-<a href="notasmarzo/postNorte.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/norte-hero.jpg"></div>
-                <span class="card-tag">AGENDA</span>
-                <h2 class="card-title">"NORTE anuncia show especial en CDMX: La nueva ola alternativa"<</h2>
-            </a>
-<a href="notasmarzo/postBlackShine.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/black-shine-hero.jpg"></div>
-                <span class="card-tag">AGENDA</span>
-                <h2 class="card-title">"Black Shine presenta su álbum debut."<</h2>
-            </a>
-             <a href="notasmarzo/postAgora.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/agora-hero.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">"ÁGORA: Breaking the Silence - El demo inédito en inglés"<</h2>
-            </a>
+                    <div class="card-image"><img src="notasmarzo/joyas-rock-mexicano-hero.jpg"></div>
+                    <span class="card-tag">INVESTIGACIÓN</span>
+                    <h2 class="card-title">5 Joyas del Rock Mexicano que el Mainstream Olvidó</h2>
+                </a>
+                <a href="notasmarzo/postMiniRock.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/mini-rock-fest-hero.jpg"></div>
+                    <span class="card-tag">AGENDA</span>
+                    <h2 class="card-title">MINI ROCK FEST: La primera descarga de libertad</h2>
+                </a>
+                <a href="notasmarzo/postNorte.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/norte-hero.jpg"></div>
+                    <span class="card-tag">AGENDA</span>
+                    <h2 class="card-title">NORTE anuncia show especial en CDMX</h2>
+                </a>
+                <a href="notasmarzo/postBlackShine.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/black-shine-hero.jpg"></div>
+                    <span class="card-tag">AGENDA</span>
+                    <h2 class="card-title">Black Shine presenta su álbum debut</h2>
+                </a>
+                <a href="notasmarzo/postAgora.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/agora-hero.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">ÁGORA: Breaking the Silence - Demo inédito</h2>
+                </a>
                 <a href="notasmarzo/postAnnaFiori.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/anna-fiori-cover.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">"ANNA FIORI: 15 AÑOS DE LUZ Y EL ESTRENO DE "EN EL VACÍO"<</h2>
-            </a>
-         
+                    <div class="card-image"><img src="notasmarzo/anna-fiori-cover.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">ANNA FIORI: 15 AÑOS DE LUZ</h2>
+                </a>
                 <a href="notasmarzo/post-gran-noveno-circulo-aniversario-vikings-rock-bar-2026.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/vikings-aniversario-cover.jpg"></div>
-                <span class="card-tag">AGENDA</span>
-                <h2 class="card-title">"Vikings Rock Bar celebra 9 años con un festival masivo en Iztapalapa este 28 de marzo<</h2>
-            </a>
-            
-              <a href="notasmarzo/post-jinjer-anima-tempo-mexico-2026.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/jinjer-mexico-cover.jpg"></div>
-                <span class="card-tag">AGENDA</span>
-                <h2 class="card-title">JINJER + ANIMA TEMPO: Duelo Progresivo en CDMX [EXPEDIENTE]<</h2>
-            </a>
-              <a href="notasmarzo/phantom-mexico-wacken-open-air-2026.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/phantom-wacken-cover.jpg"></div>
-                <span class="card-tag">Wacken 2026</span>
-                <h2 class="card-title">PHANTOM: El Speed Metal mexicano conquista Wacken 2026<</h2>
-            </a>
-            <a href="notasmarzo/postenso.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/enso-in-cyberlove-cover.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">ENSO: La seducción del abismo digital en "In Cyberlove<</h2>
-            </a>
-            <a href="notasmarzo/postgibbons.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/gibbons-sin-salida-cover.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">GIBBONS: El asalto tapatío no tiene "Sin Salida<</h2>
-            </a>
-            <a href="notasmarzo/postehia.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/tu-imagen-1.png"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">EVERYTHING HERE IS ALIVE: Música multidimensional<</h2>
-            </a>
-             <a href="notasmarzo/post-aurea.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/aurea-portada.png"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">Áurea: La antítesis de San Valentín</h2>
-            </a>
-            <a href="notasmarzo/postvenus.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/san-venus-masvale-cover.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">SAN VENUS: El fin de la inercia en "MASVALE</h2>
-            </a>
-            <a href="notasmarzo/postzecta.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/zecta-luz-shadows-cover.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">ZECTA LUZ: El juicio de las sombras en su nuevo single</h2>
-            
-           <a href="notasmarzo/post-aloveelectric.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/aloveelectric-portada.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">Love Electric: El hombre contra la máquina<</h2>
-            </a>
-            <a href="notasmarzo/post-annafiori.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/annafiori-portada.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">Anna Fiori: El despertar de la Diosa<</h2>
-            </a>
-            <a href="notasmarzo/post-aryem.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/aryem-agnes-portada.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">Aryem: El descenso de Agnes<</h2>
-            </a>
-             <a href="notasmarzo/post-aurea.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/aurea-portada.png"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">Áurea: La antítesis de San Valentín</h2>
-            </a>
-            <a href="notasmarzo/post-madamerecamier.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/madamerecamier-portada.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">Madame Récamier: Tributo a Santa Sabina</h2>
-            </a>
-            <a href="notasmarzo/post-sierrasonora.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/sierrasonora-portada.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">Sierra Sonora: La memoria en la piel</h2>
-            </a>
-             <a href="notasmarzo/post-shenomore.html" class="article-card">
-                <div class="card-image"><img src="notasmarzo/she-no-more-portada.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">SHE NO MORE: El grito de las madres</h2>
+                    <div class="card-image"><img src="notasmarzo/vikings-aniversario-cover.jpg"></div>
+                    <span class="card-tag">AGENDA</span>
+                    <h2 class="card-title">Vikings Rock Bar celebra 9 años con festival</h2>
+                </a>
+                <a href="notasmarzo/post-jinjer-anima-tempo-mexico-2026.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/jinjer-mexico-cover.jpg"></div>
+                    <span class="card-tag">AGENDA</span>
+                    <h2 class="card-title">JINJER + ANIMA TEMPO: Duelo Progresivo</h2>
+                </a>
+                <a href="notasmarzo/phantom-mexico-wacken-open-air-2026.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/phantom-wacken-cover.jpg"></div>
+                    <span class="card-tag">Wacken 2026</span>
+                    <h2 class="card-title">PHANTOM: El Speed Metal mexicano en Wacken</h2>
+                </a>
+                <a href="notasmarzo/postenso.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/enso-in-cyberlove-cover.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">ENSO: La seducción del abismo digital</h2>
+                </a>
+                <a href="notasmarzo/postgibbons.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/gibbons-sin-salida-cover.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">GIBBONS: El asalto tapatío no tiene "Sin Salida"</h2>
+                </a>
+                <a href="notasmarzo/postehia.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/tu-imagen-1.png"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">EVERYTHING HERE IS ALIVE: Música multidimensional</h2>
+                </a>
+                <a href="notasmarzo/post-aurea.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/aurea-portada.png"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">Áurea: La antítesis de San Valentín</h2>
+                </a>
+                <a href="notasmarzo/postvenus.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/san-venus-masvale-cover.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">SAN VENUS: El fin de la inercia en "MASVALE"</h2>
+                </a>
+                <a href="notasmarzo/postzecta.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/zecta-luz-shadows-cover.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">ZECTA LUZ: El juicio de las sombras</h2>
+                </a>
+                <a href="notasmarzo/post-aloveelectric.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/aloveelectric-portada.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">Love Electric: El hombre contra la máquina</h2>
+                </a>
+                <a href="notasmarzo/post-madamerecamier.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/madamerecamier-portada.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">Madame Récamier: Tributo a Santa Sabina</h2>
+                </a>
+                <a href="notasmarzo/post-shenomore.html" class="article-card">
+                    <div class="card-image"><img src="notasmarzo/she-no-more-portada.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">SHE NO MORE: El grito de las madres</h2>
+                </a>
             </div>
 
-            <!-- SECCIÓN ARCHIVO HISTÓRICO -->
+            <!-- SECCIÓN ARCHIVO HISTÓRICO (RECOMPLETA) -->
             <div id="archivo" class="month-group">
                 <div class="month-separator">ARCHIVO <span>HISTÓRICO</span></div>
                 
-                  
-            <a href="post-a-veces-maria.html" class="article-card">
-                <div class="card-image"><img src="avecesmaria.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">A VECES MARÍA</h2>
-            </a>
-            <a href="post-zoe.html" class="article-card">
-                <div class="card-image"><img src="zoe-mtv-unplugged.jpg"></div>
-                <span class="card-tag">RESEÑA</span>
-                <h2 class="card-title">MÚSICA DE FONDO:15 AÑOS DE UN LEGADO</h2>
-            </a>
-            <a href="axeceremonia.html" class="article-card">
-                <div class="card-image"><img src="axeceremonia.jpg"></div>
-                <span class="card-tag">NOTICIAS</span>
-                <h2 class="card-title">Tragedia en el Festival AXE Ceremonia</h2>
-            </a>
-             <a href="curandero.html" class="article-card">
-                <div class="card-image"><img src="curandero.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">CURANDERO Y XIMBO PRESENTAN BAILA EN LA OSCURIDAD</h2>
-            </a>
-            <a href="nota-aztech metal night.html" class="article-card">
-                <div class="card-image"><img src="aztech1.jpg"></div>
-                <span class="card-tag">FESTIVAL</span>
-                <h2 class="card-title">IMAGENES DEL AZTECH METAL NIGHT</h2>
-            </a>
-            <a href="JUMBO1.html" class="article-card">
-                <div class="card-image"><img src="jumbo1.jpg"></div>
-                <span class="card-tag">RESEÑA</span>
-                <h2 class="card-title">JUMBO CELEBRA 25 AÑOS DE ROCK EN EL PEPSI CENTER</h2>
-            </a>
-        
-             <a href="toc.html" class="article-card">
-                <div class="card-image"><img src="brain-rage-cover.jpg.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">TOC / UN PODEROSO VIAJE CON CONCIENCIA</h2>
-            </a>
-            <a href="yaot.html" class="article-card">
-                <div class="card-image"><img src="yaot-band-photo.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">EL GRUNGE MEXA</h2>
-            </a>
-            <a href="kalad.html" class="article-card">
-                <div class="card-image"><img src="kalad-arkamine-cover.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">EL DESPERTAR DEL METALCORE</h2>
-            </a>
-             <a href="toc.html" class="article-card">
-                <div class="card-image"><img src="brain-rage-cover.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">TOC / UN PODEROSO VIAJE CON CONCIENCIA</h2>
-            </a>
-            <a href="kartis.html" class="article-card">
-                <div class="card-image"><img src="kartis-qatar-insomnia.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">INSOMNIA</h2>
-            </a>
-            <a href="yosoy.html" class="article-card">
-                <div class="card-image"><img src="zenn-yo-soy-promo.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">Zënn: Yo Soy - El Despertar del Ser</h2>
+                <a href="post-a-veces-maria.html" class="article-card">
+                    <div class="card-image"><img src="avecesmaria.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">A VECES MARÍA</h2>
                 </a>
-             <a href="inoxia.html" class="article-card">
-                <div class="card-image"><img src="inoxia-datura-still.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">Datura Stramonium</h2>
-            </a>
-            <a href="rockemx.html" class="article-card">
-                <div class="card-image"><img src="historia-1.jpg"></div>
-                <span class="card-tag">RESEÑA</span>
-                <h2 class="card-title">La Historia del Rock Hecho en México</h2>
-            </a>
-            <a href="pressive.html" class="article-card">
-                <div class="card-image"><img src="zenn-yo-soy-promo.jpg"></div>
-                <span class="card-tag">ESTRENO</span>
-                <h2 class="card-title">Pressive x Helian Evans: Prometo estar siempre</h2>
-                  </a>
-             <a href="ximbo.html" class="article-card">
-                <div class="card-image"><img src="nina-dioz-raices.jpg"></div>
-                <span class="card-tag">AGENDA</span>
-                <h2 class="card-title">Niña Dioz: Raíces en Casa del Lago</h2>
-            </a>
-            <a href="nota-jumbo2.html" class="article-card">
-                <div class="card-image"><img src="jumbo-conferencia-1.jpg"></div>
-                <span class="card-tag">AGENDA</span>
-                <h2 class="card-title">Conferencia Jumbo: 25 Años y un Nuevo Ciclo</h2>
-            </a>
-            <a href="pressiv.html" class="article-card">
-                <div class="card-image"><img src="zenn-yo-soy-prom.jpg"></div>
-                <span class="card-tag">PROXMAMENTE</span>
-                <h2 class="card-title">PROX</h2>
-
+                <a href="post-zoe.html" class="article-card">
+                    <div class="card-image"><img src="zoe-mtv-unplugged.jpg"></div>
+                    <span class="card-tag">RESEÑA</span>
+                    <h2 class="card-title">MÚSICA DE FONDO: 15 AÑOS DE UN LEGADO</h2>
+                </a>
+                <a href="axeceremonia.html" class="article-card">
+                    <div class="card-image"><img src="axeceremonia.jpg"></div>
+                    <span class="card-tag">NOTICIAS</span>
+                    <h2 class="card-title">Tragedia en el Festival AXE Ceremonia</h2>
+                </a>
+                <a href="curandero.html" class="article-card">
+                    <div class="card-image"><img src="curandero.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">CURANDERO Y XIMBO PRESENTAN BAILA EN LA OSCURIDAD</h2>
+                </a>
+                <a href="nota-aztech metal night.html" class="article-card">
+                    <div class="card-image"><img src="aztech1.jpg"></div>
+                    <span class="card-tag">FESTIVAL</span>
+                    <h2 class="card-title">IMAGENES DEL AZTECH METAL NIGHT</h2>
+                </a>
+                <a href="JUMBO1.html" class="article-card">
+                    <div class="card-image"><img src="jumbo1.jpg"></div>
+                    <span class="card-tag">RESEÑA</span>
+                    <h2 class="card-title">JUMBO CELEBRA 25 AÑOS EN EL PEPSI CENTER</h2>
+                </a>
+                <a href="toc.html" class="article-card">
+                    <div class="card-image"><img src="brain-rage-cover.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">TOC / UN PODEROSO VIAJE CON CONCIENCIA</h2>
+                </a>
+                <a href="yaot.html" class="article-card">
+                    <div class="card-image"><img src="yaot-band-photo.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">EL GRUNGE MEXA</h2>
+                </a>
+                <a href="kalad.html" class="article-card">
+                    <div class="card-image"><img src="kalad-arkamine-cover.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">EL DESPERTAR DEL METALCORE</h2>
+                </a>
+                <a href="kartis.html" class="article-card">
+                    <div class="card-image"><img src="kartis-qatar-insomnia.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">INSOMNIA: El sonido de Qatar</h2>
+                </a>
+                <a href="yosoy.html" class="article-card">
+                    <div class="card-image"><img src="zenn-yo-soy-promo.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">Zënn: Yo Soy - El Despertar del Ser</h2>
+                </a>
+                <a href="inoxia.html" class="article-card">
+                    <div class="card-image"><img src="inoxia-datura-still.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">Datura Stramonium: Inoxia</h2>
+                </a>
+                <a href="rockemx.html" class="article-card">
+                    <div class="card-image"><img src="historia-1.jpg"></div>
+                    <span class="card-tag">RESEÑA</span>
+                    <h2 class="card-title">La Historia del Rock Hecho en México</h2>
+                </a>
+                <a href="pressive.html" class="article-card">
+                    <div class="card-image"><img src="zenn-yo-soy-promo.jpg"></div>
+                    <span class="card-tag">ESTRENO</span>
+                    <h2 class="card-title">Pressive x Helian Evans: Prometo estar siempre</h2>
+                </a>
+                <a href="ximbo.html" class="article-card">
+                    <div class="card-image"><img src="nina-dioz-raices.jpg"></div>
+                    <span class="card-tag">AGENDA</span>
+                    <h2 class="card-title">Niña Dioz: Raíces en Casa del Lago</h2>
+                </a>
+                <a href="nota-jumbo2.html" class="article-card">
+                    <div class="card-image"><img src="jumbo-conferencia-1.jpg"></div>
+                    <span class="card-tag">AGENDA</span>
+                    <h2 class="card-title">Conferencia Jumbo: 25 Años y un Nuevo Ciclo</h2>
+                </a>
+                <a href="pressiv.html" class="article-card">
+                    <div class="card-image"><img src="zenn-yo-soy-prom.jpg"></div>
+                    <span class="card-tag">PROXIMAMENTE</span>
+                    <h2 class="card-title">PRÓXIMAMENTE: Nuevos lanzamientos</h2>
                 </a>
             </div>
-
         </div>
     </main>
 
@@ -464,17 +455,14 @@
                 <h5>Social</h5>
                 <a href="https://instagram.com/elrockdetodoslosdias"><i class="fab fa-instagram"></i> Instagram</a>
                 <a href="https://facebook.com/ElRockdetodoslosDias"><i class="fab fa-facebook-f"></i> Facebook</a>
-                <a href="https://twitter.com/ElRockde"><i class="fab fa-twitter"></i> Twitter</a>
             </div>
             <div class="f-col">
                 <h5>Comunidad</h5>
                 <a href="#"><i class="fab fa-discord"></i> Discord</a>
-                <a href="#"><i class="fab fa-twitch"></i> Twitch</a>
             </div>
             <div class="f-col">
                 <h5>Navegación</h5>
                 <a href="index.html">Inicio</a>
-                <a href="musica.html">Música</a>
                 <a href="escena.html">Escena</a>
             </div>
         </div>
@@ -488,7 +476,10 @@
         function filterMonth(monthId) {
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
-            event.currentTarget.classList.add('active');
+            
+            // Activar botón actual
+            const currentBtn = Array.from(buttons).find(btn => btn.getAttribute('onclick').includes(monthId));
+            if(currentBtn) currentBtn.classList.add('active');
 
             const groups = document.querySelectorAll('.month-group');
             groups.forEach(group => {
