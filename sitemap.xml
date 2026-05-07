@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://sitemaps.org">
-  <!-- Página Principal -->
   <url>
     <loc>https://elrockdetodoslosdias.com.mx</loc>
     <lastmod>2024-05-22</lastmod>
     <priority>1.0</priority>
   </url>
-  <!-- Tus otras secciones (Añade una por cada .html que quieras que aparezca) -->
   <url>
     <loc>https://elrockdetodoslosdias.com.mxaxeceremonia.html</loc>
     <lastmod>2024-05-22</lastmod>
