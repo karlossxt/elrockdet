@@ -1,55 +1,30 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
- <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3H9PZRVX86"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-3H9PZRVX86');
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELROCK | Escena Nacional Underground</title>
+    <meta name="description" content="Cobertura de la escena rock y metal nacional mexicana. Bandas, conciertos y festivales.">
+    <meta property="og:title" content="ELROCK | Escena Nacional Underground">
+    <meta property="og:description" content="Cobertura de la escena rock y metal nacional mexicana.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/escena.html">
+    <meta property="og:image" content="logo-rock.png">
     <link rel="icon" type="image/png" href="logo-rock.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="styles.css">
     <style>
-        :root {
-            --bg: #0d0d0d;
-            --white: #eeeeee;
-            --red: #dc2626;
-            --current-color: var(--red); 
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--bg); color: var(--white); font-family: 'Inter', sans-serif; overflow-x: hidden; }
-
-        body::before {
-            content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
-            opacity: 0.1; pointer-events: none; z-index: 999;
-        }
-
-        /* NAVBAR */
-        .main-nav {
-            position: sticky; top: 0; z-index: 1000; background: rgba(13, 13, 13, 0.95);
-            backdrop-filter: blur(5px); border-bottom: 2px solid white; padding: 15px 40px;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .logo { font-family: 'Syne'; font-size: 1.8rem; font-weight: 800; font-style: italic; letter-spacing: -2px; text-decoration: none; color: white; }
-        .logo span { color: var(--current-color); }
-        .nav-links { display: flex; align-items: center; }
-        .nav-links a { color: #71717a; text-decoration: none; font-family: 'Space Mono'; font-size: 11px; text-transform: uppercase; font-weight: 700; margin: 0 15px; transition: 0.2s;}
-        .nav-links a:hover { color: white; }
-        .nav-cta-btn { background: white; border:none; padding: 8px 15px; font-family:'Space Mono'; font-size:10px; font-weight:900; cursor: pointer; }
-
-        /* HEADER */
+        :root { --current-color: var(--red); }
         .section-header {
-            background-color: var(--current-color); padding: 120px 40px 60px; position: relative; overflow: hidden; border-bottom: 8px solid black;
+            background-color: var(--red); padding: 120px 40px 60px; position: relative; overflow: hidden; border-bottom: 8px solid black;
         }
         .section-header::after {
             content: "LIVE RUIDO"; position: absolute; bottom: -40px; right: -20px;
@@ -57,104 +32,51 @@
         }
         .back-link { font-family: 'Space Mono'; color: white; text-decoration: none; font-size: 12px; font-weight: 900; text-transform: uppercase; z-index: 10; position: relative; display: inline-block; margin-bottom: 20px;}
         .section-title { font-family: 'Syne'; font-size: clamp(3.5rem, 10vw, 10rem); line-height: 0.85; text-transform: uppercase; font-style: italic; color: white; position: relative; z-index: 10; }
-
-        /* FILTROS */
         .filter-container { max-width: 1300px; margin: 40px auto 0; padding: 0 40px; display: flex; gap: 10px; flex-wrap: wrap; position: relative; z-index: 20; }
-        .filter-btn { 
-            background: transparent; border: 1px solid #333; color: #888; padding: 8px 15px; 
-            font-family: 'Space Mono'; font-size: 10px; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: 0.3s;
-        }
+        .filter-btn { background: transparent; border: 1px solid #333; color: #888; padding: 8px 15px; font-family: 'Space Mono'; font-size: 10px; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: 0.3s; }
         .filter-btn:hover, .filter-btn.active { border-color: white; color: white; background: rgba(255,255,255,0.1); }
-
-        /* GRID */
         .archive-container { max-width: 1300px; margin: 0 auto; padding: 60px 40px 80px; }
         .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px 40px; }
-        
         .month-group { display: contents; }
-        .month-separator { 
-            grid-column: 1 / -1; font-family: 'Syne'; font-size: 3rem; color: var(--white); 
-            border-bottom: 4px solid var(--current-color); margin: 40px 0 20px; font-style: italic;
-            display: flex; justify-content: space-between; align-items: baseline;
-        }
+        .month-separator { grid-column: 1 / -1; font-family: 'Syne'; font-size: 3rem; color: var(--white); border-bottom: 4px solid var(--red); margin: 40px 0 20px; font-style: italic; display: flex; justify-content: space-between; align-items: baseline; }
         .month-separator span { font-family: 'Space Mono'; font-size: 1rem; color: #555; }
-
-        /* CARD UNIFORMITY */
-        .article-card { 
-            text-decoration: none; 
-            color: inherit; 
-            display: flex; 
-            flex-direction: column; 
-            height: 100%; 
-            transition: 0.3s; 
-        }
-        
-        .card-image { 
-            aspect-ratio: 16 / 9; 
-            width: 100%;
-            background-color: #18181b; 
-            margin-bottom: 20px; 
-            overflow: hidden; 
-            border: 1px solid #333; 
-        }
-        
-        .card-image img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            filter: grayscale(1); 
-            transition: 0.5s; 
-        }
-        
+        .article-card { text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%; transition: 0.3s; }
+        .card-image { aspect-ratio: 16 / 9; width: 100%; background-color: #18181b; margin-bottom: 20px; overflow: hidden; border: 1px solid #333; }
+        .card-image img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
         .article-card:hover .card-image img { filter: grayscale(0); transform: scale(1.05); }
-        .card-tag { font-family: 'Space Mono'; color: var(--current-color); font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; }
-        
-        .card-title { 
-            font-family: 'Syne'; 
-            font-size: 1.4rem; 
-            line-height: 1.1; 
-            text-transform: uppercase; 
-            flex-grow: 1; 
-        }
-
+        .card-tag { font-family: 'Space Mono'; color: var(--red); font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        .card-title { font-family: 'Syne'; font-size: 1.4rem; line-height: 1.1; text-transform: uppercase; flex-grow: 1; }
         .hidden { display: none !important; }
-
-        /* FOOTER */
-        .fanzine-footer { background: #000; border-top: 8px solid var(--current-color); padding: 80px 40px 40px; margin-top: 100px; }
-        .f-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; max-width: 1300px; margin: 0 auto 60px; }
-        .f-logo-img { max-width: 180px; margin-bottom: 20px; filter: grayscale(1) brightness(1.5); }
-        .f-brand h2 { font-family: 'Syne'; font-size: 2.5rem; font-style: italic; letter-spacing: -2px; }
-        .f-brand h2 span { color: var(--current-color); }
-        .f-col h5 { font-family: 'Space Mono'; color: var(--current-color); font-size: 12px; margin-bottom: 25px; text-transform: uppercase; }
-        .f-col a { display: block; color: #888; text-decoration: none; font-family: 'Space Mono'; font-size: 12px; margin-bottom: 12px; text-transform: uppercase; }
-        .f-col a:hover { color: white; }
-        .f-bottom { border-top: 1px solid #222; padding-top: 30px; display: flex; justify-content: space-between; font-size: 10px; color: #444; font-family: 'Space Mono'; }
-
         @media (max-width: 1000px) { .article-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 700px) {
-            .article-grid { grid-template-columns: 1fr; gap: 40px; }
-            .f-top { grid-template-columns: 1fr 1fr; }
+        @media (max-width: 700px) { .article-grid { grid-template-columns: 1fr; gap: 40px; } }
+        @media (max-width: 600px) {
+            .main-nav { flex-direction: column; align-items: flex-start; padding: 15px 20px; gap: 15px; }
+            .nav-links { width: 100%; overflow-x: auto; padding-bottom: 5px; -ms-overflow-style: none; scrollbar-width: none; gap: 10px; }
+            .nav-links::-webkit-scrollbar { display: none; }
+            .nav-links a { margin: 0; padding: 6px 12px; border: 1px solid #333; border-radius: 4px; white-space: nowrap; }
+            .nav-cta-btn { display: none; }
         }
     </style>
 </head>
-
-<body class="escena-archive">
-
+<body>
     <nav class="main-nav">
         <a href="index.html" class="logo">RDT.<span>.</span></a>
         <div class="nav-links">
             <a href="musica.html">Música</a>
             <a href="escena.html" style="color: white;">Escena</a>
-            <a href="bytemos.html">BYTEMOS</a>
+            <a href="bytemos.html" style="color: var(--green);">BYTEMOS</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="pantallas.html">Pantallas</a>
+            <a href="nosotros.html">Nosotros</a>
             <button class="nav-cta-btn">TERMINAL [01]</button>
         </div>
     </nav>
 
     <header class="section-header">
         <a href="index.html" class="back-link">← Regresar al Asfalto</a>
-        <h1 class="section-title">ESCENA NACIONAL</h1> 
+        <h1 class="section-title">ESCENA NACIONAL</h1>
     </header>
 
-    <!-- FILTROS (Ubicados antes del contenido) -->
     <div class="filter-container">
         <button class="filter-btn active" onclick="filterMonth('all')">Todos</button>
         <button class="filter-btn" onclick="filterMonth('mayo')">Mayo 2026</button>
@@ -162,316 +84,306 @@
         <button class="filter-btn" onclick="filterMonth('marzo')">Marzo 2026</button>
         <button class="filter-btn" onclick="filterMonth('archivo')">Archivo Histórico</button>
     </div>
-<main class="archive-container">
+
+    <main class="archive-container">
         <div class="article-grid">
-            
-            <!-- SECCIÓN MAYO 2026 -->
+
             <div id="mayo" class="month-group">
                 <div class="month-separator">MAYO <span>2026</span></div>
-                         </a>
                 <a href="notasmayo/postAnnaFiori.html" class="article-card">
-                    <div class="card-image"><img src="notasmayo/anna-fiori-metztli-hero.jpg"></div>
+                    <div class="card-image"><img src="notasmayo/anna-fiori-metztli-hero.jpg" alt="Anna Fiori" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
-                    <h2 class="card-title">Metztli de Anna Fiori: Un devastador viaje de metal prehispánico'</h2>
-                   </a>
-                 
-            </a>
+                    <h2 class="card-title">Metztli de Anna Fiori: Un devastador viaje de metal prehispánico</h2>
+                </a>
                 <a href="notasmayo/postAryem2.html" class="article-card">
-                    <div class="card-image"><img src="notasmayo/aryem-agnes-hero.jpg"></div>
+                    <div class="card-image"><img src="notasmayo/aryem-agnes-hero.jpg" alt="Aryem" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">ARYEM: El bellísimo peligro de volverse humano en 'Agnes'</h2>
-                   </a>
-              
-            </a>
+                </a>
                 <a href="notasmayo/postOTortuga.html" class="article-card">
-                    <div class="card-image"><img src="notasmayo/o-tortuga-hero.jpg"></div>
+                    <div class="card-image"><img src="notasmayo/o-tortuga-hero.jpg" alt="O Tortuga" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">O TORTUGA: Guerreros del Sur y 10 años de rock</h2>
-                   </a>
+                </a>
             </div>
 
-            <!-- SECCIÓN ABRIL 2026 -->
             <div id="abril" class="month-group">
                 <div class="month-separator">ABRIL <span>2026</span></div>
-             <a href="notasabril/postCelesteSalloum.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/celeste-salloum-hero.jpg"></div>
+                <a href="notasabril/postCelesteSalloum.html" class="article-card">
+                    <div class="card-image"><img src="notasabril/celeste-salloum-hero.jpg" alt="Celeste Salloum" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">CELESTE SALLOUM: Nostalgia, identidad y refugio sonoro</h2>
-                 
                 </a>
                 <a href="notasabril/postFlorDeJade.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/flor-de-jade-hero.jpg"></div>
+                    <div class="card-image"><img src="notasabril/flor-de-jade-hero.jpg" alt="Flor de Jade" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
-                    <h2 class="card-title">FLOR DE JADE: Estrena 'Mi Voluntad</h2>
+                    <h2 class="card-title">FLOR DE JADE: Estrena 'Mi Voluntad'</h2>
                 </a>
                 <a href="notasabril/postAnalogI.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/analog-i-identidad-hero.jpg"></div>
+                    <div class="card-image"><img src="notasabril/analog-i-identidad-hero.jpg" alt="Analog I" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">Analog I estrena Identidad</h2>
                 </a>
                 <a href="notasabril/postDesfaseTemporal.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/desfase-temporal.jpg"></div>
+                    <div class="card-image"><img src="notasabril/desfase-temporal.jpg" alt="Desfase Temporal" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">La honestidad del directo hecha sencillo</h2>
                 </a>
                 <a href="notasabril/postLostNebula.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/lost-nebula-hero.jpg"></div>
+                    <div class="card-image"><img src="notasabril/lost-nebula-hero.jpg" alt="Lost Nebula" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">Desde Hermosillo, Sonora, estrenan el tercer sencillo</h2>
                 </a>
                 <a href="notasabril/postTangerineCircus.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/tangerine-circus-hero.jpg"></div>
+                    <div class="card-image"><img src="notasabril/tangerine-circus-hero.jpg" alt="Tangerine Circus" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">La odisea instrumental de Vermilion Bird</h2>
                 </a>
                 <a href="notasabril/postThrust.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/thrust-video-1.jpg"></div>
+                    <div class="card-image"><img src="notasabril/thrust-video-1.jpg" alt="Thrust" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
-                    <h2 class="card-title">Thrust redefine su sonido con “No Más Oscuridad”</h2>
+                    <h2 class="card-title">Thrust redefine su sonido con "No Más Oscuridad"</h2>
                 </a>
                 <a href="notasabril/postUltraviolentas.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/ultraviolentas-hero.jpg"></div>
+                    <div class="card-image"><img src="notasabril/ultraviolentas-hero.jpg" alt="Ultraviolentas" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">El trío femenino presenta un himno de puro punk rock</h2>
                 </a>
                 <a href="notasabril/postVardok.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/vardok-hero.jpg"></div>
+                    <div class="card-image"><img src="notasabril/vardok-hero.jpg" alt="Vardok" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">VARDÖK: Perdición y la elegancia del Hard Rock</h2>
                 </a>
                 <a href="notasabril/postDiscoEterno.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/disco-eterno-hero.jpg"></div>
+                    <div class="card-image"><img src="notasabril/disco-eterno-hero.jpg" alt="Disco Eterno" loading="lazy"></div>
                     <span class="card-tag">AGENDA</span>
                     <h2 class="card-title">DISCO ETERNO: Tributo al legado del Rock</h2>
                 </a>
                 <a href="notasabril/postAsesinosAmor.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/asesinos-amor-hero.jpg"></div>
+                    <div class="card-image"><img src="notasabril/asesinos-amor-hero.jpg" alt="Asesinos del Amor" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">ASESINOS DEL AMOR: Post-Punk crudo y directo</h2>
                 </a>
                 <a href="notasabril/postSpinne.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/spinne-hero.jpg"></div>
+                    <div class="card-image"><img src="notasabril/spinne-hero.jpg" alt="Spinne" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">SPINNE: El nuevo tejido del rock alternativo</h2>
                 </a>
                 <a href="notasabril/postSilverio.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/silverio-exito-hero.jpg"></div>
+                    <div class="card-image"><img src="notasabril/silverio-exito-hero.jpg" alt="Silverio" loading="lazy"></div>
                     <span class="card-tag">RESEÑA</span>
                     <h2 class="card-title">SILVERIO: Éxito rotundo de su Majestad Imperial</h2>
                 </a>
                 <a href="notasabril/postSofiaElan.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/sofia-elan-hero.jpg"></div>
+                    <div class="card-image"><img src="notasabril/sofia-elan-hero.jpg" alt="Sofía Elan" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">SOFÍA ELAN: Melodías que rompen el silencio</h2>
                 </a>
                 <a href="notasabril/postNervosa.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/nervosa-slave-machine-hero.jpg"></div>
+                    <div class="card-image"><img src="notasabril/nervosa-slave-machine-hero.jpg" alt="Nervosa" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">NERVOSA: Slave Machine y el poder del Thrash</h2>
                 </a>
                 <a href="notasabril/postElCulto.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/el-culto-inauguracion.jpg"></div>
+                    <div class="card-image"><img src="notasabril/el-culto-inauguracion.jpg" alt="El Culto" loading="lazy"></div>
                     <span class="card-tag">RESEÑA</span>
                     <h2 class="card-title">EL CULTO: Inauguración y Caos en Pantitlán</h2>
                 </a>
                 <a href="notasabril/postJessyBulbo.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/jessy-bulbo-utopia.jpg"></div>
+                    <div class="card-image"><img src="notasabril/jessy-bulbo-utopia.jpg" alt="Jessy Bulbo" loading="lazy"></div>
                     <span class="card-tag">AGENDA</span>
                     <h2 class="card-title">JESSY BULBO - Rock con Causa</h2>
                 </a>
                 <a href="notasabril/postElectrifyForsaken.html" class="article-card">
-                    <div class="card-image"><img src="notasabril/electrify-hero.jpg"></div>
+                    <div class="card-image"><img src="notasabril/electrify-hero.jpg" alt="Electrify" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">ELECTRIFY: El precio de la autenticidad en Forsaken</h2>
                 </a>
             </div>
 
-            <!-- SECCIÓN MARZO 2026 -->
             <div id="marzo" class="month-group">
                 <div class="month-separator">MARZO <span>2026</span></div>
                 <a href="notasmarzo/postArau.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/sergio-arau-hero.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/sergio-arau-hero.jpg" alt="Sergio Arau" loading="lazy"></div>
                     <span class="card-tag">AGENDA</span>
                     <h2 class="card-title">SERGIO ARAU: Embotellado de Origen en el Multiforo Alicia</h2>
                 </a>
                 <a href="notasmarzo/postJoyas.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/joyas-rock-mexicano-hero.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/joyas-rock-mexicano-hero.jpg" alt="Joyas del Rock Mexicano" loading="lazy"></div>
                     <span class="card-tag">INVESTIGACIÓN</span>
                     <h2 class="card-title">5 Joyas del Rock Mexicano que el Mainstream Olvidó</h2>
                 </a>
                 <a href="notasmarzo/postMiniRock.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/mini-rock-fest-hero.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/mini-rock-fest-hero.jpg" alt="Mini Rock Fest" loading="lazy"></div>
                     <span class="card-tag">AGENDA</span>
                     <h2 class="card-title">MINI ROCK FEST: La primera descarga de libertad</h2>
                 </a>
                 <a href="notasmarzo/postNorte.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/norte-hero.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/norte-hero.jpg" alt="Norte" loading="lazy"></div>
                     <span class="card-tag">AGENDA</span>
                     <h2 class="card-title">NORTE anuncia show especial en CDMX</h2>
                 </a>
                 <a href="notasmarzo/postBlackShine.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/black-shine-hero.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/black-shine-hero.jpg" alt="Black Shine" loading="lazy"></div>
                     <span class="card-tag">AGENDA</span>
                     <h2 class="card-title">Black Shine presenta su álbum debut</h2>
                 </a>
                 <a href="notasmarzo/postAgora.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/agora-hero.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/agora-hero.jpg" alt="Ágora" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">ÁGORA: Breaking the Silence - Demo inédito</h2>
                 </a>
                 <a href="notasmarzo/postAnnaFiori.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/anna-fiori-cover.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/anna-fiori-cover.jpg" alt="Anna Fiori" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">ANNA FIORI: 15 AÑOS DE LUZ</h2>
                 </a>
                 <a href="notasmarzo/post-gran-noveno-circulo-aniversario-vikings-rock-bar-2026.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/vikings-aniversario-cover.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/vikings-aniversario-cover.jpg" alt="Vikings Rock Bar" loading="lazy"></div>
                     <span class="card-tag">AGENDA</span>
                     <h2 class="card-title">Vikings Rock Bar celebra 9 años con festival</h2>
                 </a>
                 <a href="notasmarzo/post-jinjer-anima-tempo-mexico-2026.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/jinjer-mexico-cover.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/jinjer-mexico-cover.jpg" alt="Jinjer" loading="lazy"></div>
                     <span class="card-tag">AGENDA</span>
                     <h2 class="card-title">JINJER + ANIMA TEMPO: Duelo Progresivo</h2>
                 </a>
                 <a href="notasmarzo/phantom-mexico-wacken-open-air-2026.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/phantom-wacken-cover.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/phantom-wacken-cover.jpg" alt="Phantom" loading="lazy"></div>
                     <span class="card-tag">Wacken 2026</span>
                     <h2 class="card-title">PHANTOM: El Speed Metal mexicano en Wacken</h2>
                 </a>
                 <a href="notasmarzo/postenso.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/enso-in-cyberlove-cover.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/enso-in-cyberlove-cover.jpg" alt="Enso" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">ENSO: La seducción del abismo digital</h2>
                 </a>
                 <a href="notasmarzo/postgibbons.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/gibbons-sin-salida-cover.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/gibbons-sin-salida-cover.jpg" alt="Gibbons" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">GIBBONS: El asalto tapatío no tiene "Sin Salida"</h2>
                 </a>
                 <a href="notasmarzo/postehia.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/tu-imagen-1.png"></div>
+                    <div class="card-image"><img src="notasmarzo/tu-imagen-1.png" alt="Everything Here Is Alive" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">EVERYTHING HERE IS ALIVE: Música multidimensional</h2>
                 </a>
                 <a href="notasmarzo/post-aurea.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/aurea-portada.png"></div>
+                    <div class="card-image"><img src="notasmarzo/aurea-portada.png" alt="Áurea" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">Áurea: La antítesis de San Valentín</h2>
                 </a>
                 <a href="notasmarzo/postvenus.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/san-venus-masvale-cover.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/san-venus-masvale-cover.jpg" alt="San Venus" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">SAN VENUS: El fin de la inercia en "MASVALE"</h2>
                 </a>
                 <a href="notasmarzo/postzecta.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/zecta-luz-shadows-cover.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/zecta-luz-shadows-cover.jpg" alt="Zecta Luz" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">ZECTA LUZ: El juicio de las sombras</h2>
                 </a>
                 <a href="notasmarzo/post-aloveelectric.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/aloveelectric-portada.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/aloveelectric-portada.jpg" alt="Love Electric" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">Love Electric: El hombre contra la máquina</h2>
                 </a>
                 <a href="notasmarzo/post-madamerecamier.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/madamerecamier-portada.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/madamerecamier-portada.jpg" alt="Madame Récamier" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">Madame Récamier: Tributo a Santa Sabina</h2>
                 </a>
                 <a href="notasmarzo/post-shenomore.html" class="article-card">
-                    <div class="card-image"><img src="notasmarzo/she-no-more-portada.jpg"></div>
+                    <div class="card-image"><img src="notasmarzo/she-no-more-portada.jpg" alt="She No More" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">SHE NO MORE: El grito de las madres</h2>
                 </a>
             </div>
 
-            <!-- SECCIÓN ARCHIVO HISTÓRICO (RECOMPLETA) -->
             <div id="archivo" class="month-group">
                 <div class="month-separator">ARCHIVO <span>HISTÓRICO</span></div>
-                
                 <a href="post-a-veces-maria.html" class="article-card">
-                    <div class="card-image"><img src="avecesmaria.jpg"></div>
+                    <div class="card-image"><img src="avecesmaria.jpg" alt="A Veces María" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">A VECES MARÍA</h2>
                 </a>
                 <a href="post-zoe.html" class="article-card">
-                    <div class="card-image"><img src="zoe-mtv-unplugged.jpg"></div>
+                    <div class="card-image"><img src="zoe-mtv-unplugged.jpg" alt="Zoe MTV Unplugged" loading="lazy"></div>
                     <span class="card-tag">RESEÑA</span>
                     <h2 class="card-title">MÚSICA DE FONDO: 15 AÑOS DE UN LEGADO</h2>
                 </a>
                 <a href="axeceremonia.html" class="article-card">
-                    <div class="card-image"><img src="axeceremonia.jpg"></div>
+                    <div class="card-image"><img src="axeceremonia.jpg" alt="AXE Ceremonia" loading="lazy"></div>
                     <span class="card-tag">NOTICIAS</span>
                     <h2 class="card-title">Tragedia en el Festival AXE Ceremonia</h2>
                 </a>
                 <a href="curandero.html" class="article-card">
-                    <div class="card-image"><img src="curandero.jpg"></div>
+                    <div class="card-image"><img src="curandero.jpg" alt="Curandero" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">CURANDERO Y XIMBO PRESENTAN BAILA EN LA OSCURIDAD</h2>
                 </a>
                 <a href="nota-aztech metal night.html" class="article-card">
-                    <div class="card-image"><img src="aztech1.jpg"></div>
+                    <div class="card-image"><img src="aztech1.jpg" alt="Aztech Metal Night" loading="lazy"></div>
                     <span class="card-tag">FESTIVAL</span>
                     <h2 class="card-title">IMAGENES DEL AZTECH METAL NIGHT</h2>
                 </a>
                 <a href="JUMBO1.html" class="article-card">
-                    <div class="card-image"><img src="jumbo1.jpg"></div>
+                    <div class="card-image"><img src="jumbo1.jpg" alt="Jumbo" loading="lazy"></div>
                     <span class="card-tag">RESEÑA</span>
                     <h2 class="card-title">JUMBO CELEBRA 25 AÑOS EN EL PEPSI CENTER</h2>
                 </a>
                 <a href="toc.html" class="article-card">
-                    <div class="card-image"><img src="brain-rage-cover.jpg"></div>
+                    <div class="card-image"><img src="brain-rage-cover.jpg" alt="Brain Rage" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">TOC / UN PODEROSO VIAJE CON CONCIENCIA</h2>
                 </a>
                 <a href="yaot.html" class="article-card">
-                    <div class="card-image"><img src="yaot-band-photo.jpg"></div>
+                    <div class="card-image"><img src="yaot-band-photo.jpg" alt="Yaot" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">EL GRUNGE MEXA</h2>
                 </a>
                 <a href="kalad.html" class="article-card">
-                    <div class="card-image"><img src="kalad-arkamine-cover.jpg"></div>
+                    <div class="card-image"><img src="kalad-arkamine-cover.jpg" alt="Kalad" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">EL DESPERTAR DEL METALCORE</h2>
                 </a>
                 <a href="kartis.html" class="article-card">
-                    <div class="card-image"><img src="kartis-qatar-insomnia.jpg"></div>
+                    <div class="card-image"><img src="kartis-qatar-insomnia.jpg" alt="Kartis" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">INSOMNIA: El sonido de Qatar</h2>
                 </a>
                 <a href="yosoy.html" class="article-card">
-                    <div class="card-image"><img src="zenn-yo-soy-promo.jpg"></div>
+                    <div class="card-image"><img src="zenn-yo-soy-promo.jpg" alt="Zënn" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">Zënn: Yo Soy - El Despertar del Ser</h2>
                 </a>
                 <a href="inoxia.html" class="article-card">
-                    <div class="card-image"><img src="inoxia-datura-still.jpg"></div>
+                    <div class="card-image"><img src="inoxia-datura-still.jpg" alt="Inoxia" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">Datura Stramonium: Inoxia</h2>
                 </a>
                 <a href="rockemx.html" class="article-card">
-                    <div class="card-image"><img src="historia-1.jpg"></div>
+                    <div class="card-image"><img src="historia-1.jpg" alt="Historia del Rock MX" loading="lazy"></div>
                     <span class="card-tag">RESEÑA</span>
                     <h2 class="card-title">La Historia del Rock Hecho en México</h2>
                 </a>
                 <a href="pressive.html" class="article-card">
-                    <div class="card-image"><img src="zenn-yo-soy-promo.jpg"></div>
+                    <div class="card-image"><img src="zenn-yo-soy-promo.jpg" alt="Pressive" loading="lazy"></div>
                     <span class="card-tag">ESTRENO</span>
                     <h2 class="card-title">Pressive x Helian Evans: Prometo estar siempre</h2>
                 </a>
                 <a href="ximbo.html" class="article-card">
-                    <div class="card-image"><img src="nina-dioz-raices.jpg"></div>
+                    <div class="card-image"><img src="nina-dioz-raices.jpg" alt="Niña Dioz" loading="lazy"></div>
                     <span class="card-tag">AGENDA</span>
                     <h2 class="card-title">Niña Dioz: Raíces en Casa del Lago</h2>
                 </a>
                 <a href="nota-jumbo2.html" class="article-card">
-                    <div class="card-image"><img src="jumbo-conferencia-1.jpg"></div>
+                    <div class="card-image"><img src="jumbo-conferencia-1.jpg" alt="Jumbo Conferencia" loading="lazy"></div>
                     <span class="card-tag">AGENDA</span>
                     <h2 class="card-title">Conferencia Jumbo: 25 Años y un Nuevo Ciclo</h2>
                 </a>
                 <a href="pressiv.html" class="article-card">
-                    <div class="card-image"><img src="zenn-yo-soy-prom.jpg"></div>
+                    <div class="card-image"><img src="zenn-yo-soy-prom.jpg" alt="Pressiv" loading="lazy"></div>
                     <span class="card-tag">PROXIMAMENTE</span>
                     <h2 class="card-title">PRÓXIMAMENTE: Nuevos lanzamientos</h2>
                 </a>
@@ -480,25 +392,44 @@
     </main>
 
     <footer class="fanzine-footer">
-        <div class="f-top">
-            <div class="f-brand">
-                <img src="logo-rock.png" class="f-logo-img">
-                <h2>EL<span>ROCK</span> DE TODOS LOS DÍAS</h2>
-                <p style="font-family:'Space Mono'; font-size:11px; color:#555;">ARCHIVO INDEPENDIENTE DE RUIDO.</p>
+        <div class="footer-container">
+            <div class="footer-column brand-col">
+                <h2 class="f-logo-text">EL<span>ROCK</span> DE TODOS LOS DÍAS</h2>
+                <p class="f-tagline">ARCHIVO INDEPENDIENTE DE RUIDO.</p>
+                <h5 class="f-title" style="color: white; font-size: 16px;">CONTACTO DIRECTO</h5>
+                <div class="f-contact-links">
+                    <a href="https://wa.me/525519204557" target="_blank"><i class="fab fa-whatsapp"></i> 55 1920 4557</a>
+                    <a href="mailto:elrockdetodoslosdias@gmail.com"><i class="far fa-envelope"></i> elrockdetodoslosdias@gmail.com</a>
+                    <a href="mailto:prensa@elrockdetodoslosdias.com.mx"><i class="far fa-envelope"></i> prensa@elrockdetodoslosdias.com.mx</a>
+                </div>
             </div>
-            <div class="f-col">
-                <h5>Social</h5>
-                <a href="https://instagram.com/elrockdetodoslosdias"><i class="fab fa-instagram"></i> Instagram</a>
-                <a href="https://facebook.com/ElRockdetodoslosDias"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <div class="footer-column">
+                <h5 class="f-title">SOCIAL</h5>
+                <div class="f-links-list">
+                    <a href="https://www.instagram.com/elrockdetodoslosdias/" target="_blank"><i class="fab fa-instagram"></i> INSTAGRAM</a>
+                    <a href="https://www.facebook.com/ElRockdetodoslosDias" target="_blank"><i class="fab fa-facebook-f"></i> FACEBOOK</a>
+                    <a href="https://twitter.com/ElRockde" target="_blank"><i class="fab fa-twitter"></i> TWITTER / X</a>
+                    <a href="https://www.tiktok.com/@elrockdetodoslosdias" target="_blank"><i class="fab fa-tiktok"></i> TIKTOK</a>
+                </div>
             </div>
-            <div class="f-col">
-                <h5>Comunidad</h5>
-                <a href="#"><i class="fab fa-discord"></i> Discord</a>
+            <div class="footer-column">
+                <h5 class="f-title">COMUNIDAD</h5>
+                <div class="f-links-list">
+                    <a href="https://discord.gg/Ey7sdqwDaW" target="_blank"><i class="fab fa-discord"></i> DISCORD</a>
+                    <a href="https://www.twitch.tv/elrockdetodoslosdias" target="_blank"><i class="fab fa-twitch"></i> TWITCH</a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i> YOUTUBE</a>
+                </div>
             </div>
-            <div class="f-col">
-                <h5>Navegación</h5>
-                <a href="index.html">Inicio</a>
-                <a href="escena.html">Escena</a>
+            <div class="footer-column">
+                <h5 class="f-title">NAVEGACIÓN</h5>
+                <div class="f-links-list">
+                    <a href="index.html">INICIO</a>
+                    <a href="musica.html">MÚSICA</a>
+                    <a href="escena.html">ESCENA</a>
+                    <a href="cultura.html">CULTURA</a>
+                    <a href="pantallas.html">PANTALLAS</a>
+                    <a href="nosotros.html">NOSOTROS</a>
+                </div>
             </div>
         </div>
         <div class="f-bottom">
@@ -511,11 +442,8 @@
         function filterMonth(monthId) {
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
-            
-            // Activar botón actual
             const currentBtn = Array.from(buttons).find(btn => btn.getAttribute('onclick').includes(monthId));
             if(currentBtn) currentBtn.classList.add('active');
-
             const groups = document.querySelectorAll('.month-group');
             groups.forEach(group => {
                 if (monthId === 'all') {
