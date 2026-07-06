@@ -1,0 +1,185 @@
+:root {
+    --bg: #0d0d0d;
+    --red: #dc2626;
+    --white: #eeeeee;
+    --green: #00ff00;
+    --purple: #7e22ce;
+    --cyan: #00d4ff;
+    --amber: #f59e0b;
+    --zinc-900: #18181b;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #0d0d0d;
+    font-family: 'Inter', sans-serif;
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.95);
+    border-bottom: 2px solid white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: -2px;
+    text-decoration: none;
+    color: white;
+}
+
+.logo span { color: var(--red); }
+
+.nav-logo-icon { height: 35px; width: auto; }
+
+.nav-links { display: flex; align-items: center; }
+
+.nav-links a {
+    color: #71717a;
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 15px;
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+.nav-links a:hover { color: white; }
+
+.nav-cta-btn {
+    background: white;
+    border: none;
+    padding: 8px 15px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 900;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.fanzine-footer {
+    background-color: var(--red);
+    padding: 80px 40px;
+    border-top: 5px solid white;
+    width: 100%;
+    color: white;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.f-title {
+    font-family: 'Syne', sans-serif;
+    color: #000;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.f-logo-text {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+}
+
+.f-logo-text span { color: #000; }
+
+.f-tagline {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: #ffeaea;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.f-links-list, .f-contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.f-links-list a, .f-contact-links a {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.f-links-list a i, .f-contact-links a i {
+    color: #000;
+    width: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.f-links-list a:hover, .f-contact-links a:hover {
+    color: #000;
+    padding-left: 5px;
+}
+
+.f-bottom {
+    border-top: 3px solid #000;
+    padding-top: 30px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-family: 'Space Mono', monospace;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .footer-container { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+    .footer-container { grid-template-columns: 1fr; }
+}
