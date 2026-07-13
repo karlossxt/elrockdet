@@ -24,7 +24,7 @@ body::before {
     top: 0; left: 0;
     width: 100%; height: 100%;
     background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
-    opacity: 0.1;
+    opacity: 0.045;
     pointer-events: none;
     z-index: 999;
 }
@@ -60,21 +60,27 @@ body::before {
 
 .nav-logo-icon { height: 35px; width: auto; }
 
-.nav-links { display: flex; align-items: center; }
+.nav-links { display: flex; align-items: center; gap: clamp(8px, 1.2vw, 22px); }
 
 .nav-links a {
-    color: #71717a;
+    color: #b4b4ba;
     text-decoration: none;
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
+    font-size: clamp(9px, 0.75vw, 11px);
     text-transform: uppercase;
     font-weight: 700;
-    margin: 0 15px;
+    margin: 0;
     white-space: nowrap;
     transition: 0.2s;
 }
 
-.nav-links a:hover { color: white; }
+.nav-links a:hover { color: #fff; }
+
+.nav-links a.active {
+    color: #fff;
+    border-bottom: 2px solid var(--red);
+    padding-bottom: 6px;
+}
 
 .nav-cta-btn {
     background: white;
@@ -101,7 +107,7 @@ body::before {
     display: grid;
     grid-template-columns: 1fr 1.2fr 1fr;
     gap: 40px;
-    align-items: start;
+    align-items: center;
 }
 
 .footer-logo-col {
@@ -110,15 +116,15 @@ body::before {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 30px 20px;
+    padding: 0 20px;
     background: transparent;
 }
 
 .footer-logo-img {
-    max-width: 180px;
+    max-width: 210px;
     width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     transition: 0.3s;
 }
 
@@ -202,12 +208,16 @@ body::before {
     text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
-    .footer-container { grid-template-columns: 1fr 1fr; }
+@media (max-width: 1100px) {
+    .main-nav { padding-inline: 20px; }
+    .nav-links a { font-size: 9px; }
+    .logo { font-size: 1.45rem; }
 }
 
-@media (max-width: 480px) {
-    .footer-container { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+    .footer-container { grid-template-columns: 1fr; text-align: center; gap: 45px; }
+    .f-links-list a, .f-contact-links a { justify-content: center; }
+    .f-bottom { flex-direction: column; align-items: center; gap: 12px; text-align: center; }
 }
 
 /* ============================================
@@ -264,7 +274,8 @@ body::before {
 .decibels-card-song {
     font-family: 'Space Mono', monospace;
     font-weight: 700;
-    font-size: 11px;
+    font-size: 12px;
+    line-height: 1.35;
     color: white;
     text-transform: uppercase;
     margin-bottom: 2px;
@@ -272,7 +283,8 @@ body::before {
 
 .decibels-card-artist {
     font-family: 'Space Mono', monospace;
-    font-size: 9px;
+    font-size: 10px;
+    line-height: 1.4;
     color: #777;
     text-transform: uppercase;
 }
@@ -288,6 +300,12 @@ body::before {
 
 @media (max-width: 640px) {
     .decibels-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 420px) {
+    .decibels-grid { grid-template-columns: 1fr; }
+    .decibels-card { display: grid; grid-template-columns: 90px 1fr; gap: 14px; align-items: center; }
+    .decibels-card img { margin-bottom: 0; }
 }
 
 /* ============================================
