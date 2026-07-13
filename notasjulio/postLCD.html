@@ -97,9 +97,14 @@
             margin-bottom: 30px; line-height: 1.7;
         }
 
-        .post-content p:first-of-type::first-letter {
+        .post-content > p:first-of-type::first-letter {
             font-size: 5rem; float: left; margin-right: 15px;
-            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne', sans-serif;
+        }
+
+        .highlight-box p::first-letter {
+            font-size: inherit; float: none; margin-right: 0;
+            line-height: inherit; color: inherit; font-weight: inherit; font-family: inherit;
         }
 
         .post-content strong { color: white; }
@@ -126,8 +131,6 @@
             line-height:1.9;
             padding-left:8px;
         }
-
-        .highlight-box p::first-letter{color:#fff;font-size:inherit;float:none;margin:0;font-weight:inherit;font-family:inherit;}
 
         .band-highlight {
             background: white; color: black; padding: 40px; margin: 60px 0;
