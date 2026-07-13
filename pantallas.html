@@ -56,14 +56,19 @@
 </head>
 <body>
     <nav class="main-nav">
-        <a href="index.html" class="logo">RDT.<span>.</span></a>
-        <div class="nav-links">
+        <a href="index.html" class="logo">
+            <img src="logo-rock.png" alt="RDT." class="nav-logo-icon">
+        </a>
+        <div class="burger-menu" id="burger"><i class="fas fa-bars"></i></div>
+        <div class="nav-links" id="menu">
             <a href="musica.html">Música</a>
             <a href="escena.html">Escena</a>
             <a href="bytemos.html" style="color: var(--green);">BYTEMOS</a>
-            <a href="pantallas.html" style="color:white; border: 1px solid var(--cyan);">Pantallas</a>
+            <a href="cultura.html" style="color: var(--amber);">Cultura</a>
+            <a href="pantallas.html">Pantallas</a>
+            <a href="toyrockeando.html">Toy Rockeando</a>
+            <a href="voces-del-ruido.html" style="color: var(--cyan);">Voces del Ruido</a>
             <a href="nosotros.html">Nosotros</a>
-            <button class="nav-cta-btn">TERMINAL [01]</button>
         </div>
     </nav>
 
@@ -167,6 +172,13 @@
         </div>
     </div>
 
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('menu');
+    if (burger && menu) {
+        burger.addEventListener('click', function () {
+            menu.classList.toggle('active');
+        });
+    }
     <script src="main.js"></script>
 </body>
 </html>

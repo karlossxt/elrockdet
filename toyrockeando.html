@@ -154,8 +154,20 @@
 <body>
 
     <nav class="main-nav">
-        <a href="index.html" class="logo">ELROCK.<span>.</span></a>
-        <div style="font-family:'Space Mono'; font-size: 11px; font-weight: 900; text-align: right;">ACCION COLECTIVA</div>
+        <a href="index.html" class="logo">
+            <img src="logo-rock.png" alt="RDT." class="nav-logo-icon">
+        </a>
+        <div class="burger-menu" id="burger"><i class="fas fa-bars"></i></div>
+        <div class="nav-links" id="menu">
+            <a href="musica.html">Música</a>
+            <a href="escena.html">Escena</a>
+            <a href="bytemos.html" style="color: var(--green);">BYTEMOS</a>
+            <a href="cultura.html" style="color: var(--amber);">Cultura</a>
+            <a href="pantallas.html">Pantallas</a>
+            <a href="toyrockeando.html">Toy Rockeando</a>
+            <a href="voces-del-ruido.html" style="color: var(--cyan);">Voces del Ruido</a>
+            <a href="nosotros.html">Nosotros</a>
+        </div>
     </nav>
 
     <header class="fest-hero">
@@ -304,6 +316,13 @@
         </div>
     </div>
 
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('menu');
+    if (burger && menu) {
+        burger.addEventListener('click', function () {
+            menu.classList.toggle('active');
+        });
+    }
     <script src="main.js"></script>
 </body>
 </html>
