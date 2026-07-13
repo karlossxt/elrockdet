@@ -110,11 +110,14 @@ body::before {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 20px;
+    padding: 30px 20px;
+    background: rgba(0,0,0,0.3);
+    border: 2px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
 }
 
 .footer-logo-img {
-    max-width: 200px;
+    max-width: 180px;
     width: 100%;
     height: auto;
     margin-bottom: 20px;
@@ -123,7 +126,7 @@ body::before {
 
 .footer-logo-img:hover {
     transform: scale(1.05);
-    filter: drop-shadow(0 0 15px rgba(255,255,255,0.3));
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.4));
 }
 
 .f-title {
