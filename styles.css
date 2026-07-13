@@ -117,13 +117,13 @@ body::before {
     max-width: 200px;
     width: 100%;
     height: auto;
-    filter: brightness(0) invert(1);
     margin-bottom: 20px;
     transition: 0.3s;
 }
 
 .footer-logo-img:hover {
-    filter: brightness(0) invert(1) drop-shadow(0 0 15px rgba(255,255,255,0.3));
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.3));
 }
 
 .f-title {
