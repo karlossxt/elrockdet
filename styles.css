@@ -60,6 +60,13 @@ body::before {
 
 .nav-logo-icon { height: 35px; width: auto; }
 
+.burger-menu {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
 .nav-links { display: flex; align-items: center; gap: clamp(8px, 1.2vw, 22px); }
 
 .nav-links a {
@@ -212,6 +219,24 @@ body::before {
     .main-nav { padding-inline: 20px; }
     .nav-links a { font-size: 9px; }
     .logo { font-size: 1.45rem; }
+}
+
+@media (max-width: 768px) {
+    .burger-menu { display: block; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.98);
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 2px solid white;
+        z-index: 999;
+    }
+    .nav-links.active { display: flex; }
+    .nav-links a { margin: 15px 0; font-size: 14px; }
 }
 
 @media (max-width: 768px) {
