@@ -329,6 +329,36 @@ body::before {
     color: #333;
 }
 
+.editorial-text-full {
+    display: block !important;
+    grid-template-columns: unset !important;
+}
+
+.editorial-text-full p {
+    margin-bottom: 18px;
+}
+
+.editorial-text-full p:first-child {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.editorial-sign {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-top: 30px;
+    margin-bottom: 0 !important;
+}
+
 .editorial-cta {
     position: relative;
     z-index: 2;
