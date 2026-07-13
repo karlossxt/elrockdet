@@ -112,8 +112,6 @@ body::before {
     text-align: center;
     padding: 30px 20px;
     background: rgba(0,0,0,0.3);
-    border: 2px solid rgba(255,255,255,0.15);
-    border-radius: 4px;
 }
 
 .footer-logo-img {
