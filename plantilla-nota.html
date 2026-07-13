@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | TÍTULO DE LA NOTA</title>
+    <meta name="description" content="Descripción de la nota para SEO.">
+    <meta property="og:title" content="ELROCK | TÍTULO DE LA NOTA">
+    <meta property="og:description" content="Descripción de la nota.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="IMAGEN_DESTACADA.jpg">
+    <link rel="icon" type="image/png" href="../logo-rock.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #dc2626;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-bottom: 70px;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%),
+                        linear-gradient(90deg, rgba(220, 38, 38, 0.02), rgba(255, 255, 255, 0.01), rgba(220, 38, 38, 0.02));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .post-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--accent); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            transition: 0.3s;
+        }
+
+        .btn-cerrar:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--accent);
+        }
+
+        /* POST HEADER */
+        .post-header { margin-bottom: 50px; text-align: left; }
+        .tag-cat {
+            background: var(--accent); color: white; padding: 5px 15px;
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px;
+            margin-bottom: 20px; display: inline-block;
+        }
+
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--accent); font-style: italic; }
+
+        /* IMÁGENES */
+        .img-post { border: 1px solid #222; margin: 40px 0; background: #111; position: relative; }
+        .img-post img { width: 100%; display: block; filter: contrast(1.1); transition: 0.4s; }
+        .img-post:hover img { filter: contrast(1) saturate(1.1); }
+        .img-label {
+            font-family: 'Space Mono'; font-size: 10px; color: var(--accent);
+            text-align: right; padding: 10px; text-transform: uppercase; border-top: 1px solid #222;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .post-content p {
+            font-size: 1.2rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        .post-content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .post-content strong { color: white; }
+
+        /* BLOQUES DESTACADOS */
+        .highlight-box {
+            background: var(--accent); color: white; padding: 30px;
+            margin: 40px 0; border: 2px solid white; font-family: 'Space Mono';
+        }
+        .highlight-box h4 { text-transform: uppercase; margin-bottom: 10px; font-family: 'Syne'; font-size: 1.5rem; }
+
+        .band-highlight {
+            background: white; color: black; padding: 40px; margin: 60px 0;
+            border-left: 10px solid var(--accent);
+        }
+        .band-highlight h3 { font-family: 'Syne'; font-size: 2rem; text-transform: uppercase; margin-bottom: 10px; }
+        .band-highlight p { font-family: 'Space Mono'; font-weight: 700; color: #111; font-size: 1rem; margin: 0; }
+
+        /* SIDEBAR */
+        .post-sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar-section {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            padding: 20px;
+        }
+
+        .sidebar-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #222;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-title i { font-size: 1rem; }
+
+        .playlist-embed {
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        /* OTROS RUIDOS SIDEBAR */
+        .otros-ruidos-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .otros-mini-card {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            gap: 12px;
+            padding: 10px;
+            background: #111;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+
+        .otros-mini-card:hover {
+            border-color: var(--accent);
+            transform: translateX(3px);
+        }
+
+        .otros-mini-img {
+            width: 70px;
+            height: 70px;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .otros-mini-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(1);
+            transition: 0.4s;
+        }
+
+        .otros-mini-card:hover .otros-mini-img img {
+            filter: grayscale(0);
+        }
+
+        .otros-mini-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .otros-mini-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 8px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--accent);
+            letter-spacing: 1px;
+        }
+
+        .otros-mini-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.75rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        /* OTROS RUIDOS FINAL */
+        .otros-ruidos {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 2px solid #222;
+        }
+
+        .otros-ruidos-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .otros-ruidos-header h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--accent);
+            white-space: nowrap;
+        }
+
+        .otros-ruidos-line {
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+        }
+
+        .otros-ruidos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .otros-card {
+            text-decoration: none;
+            color: inherit;
+            background: #0a0a0a;
+            border: 1px solid #222;
+            padding: 12px;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: block;
+        }
+
+        .otros-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.15);
+        }
+
+        .otros-card-img {
+            width: 100%;
+            height: 160px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .otros-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(1);
+            transition: 0.5s;
+        }
+
+        .otros-card:hover .otros-card-img img {
+            filter: grayscale(0);
+            transform: scale(1.05);
+        }
+
+        .otros-card-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 9px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .otros-card-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .otros-card-excerpt {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        /* POST FOOTER */
+        .post-footer {
+            margin-top: 80px; padding: 40px 0; border-top: 1px solid #222;
+            text-align: center; font-family: 'Space Mono'; color: #444;
+        }
+
+        @media (max-width: 900px) {
+            .post-layout {
+                grid-template-columns: 1fr;
+            }
+            .post-sidebar {
+                position: static;
+                order: 2;
+            }
+            .post-title { font-size: 3rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+            .otros-ruidos-grid { grid-template-columns: 1fr; }
+            .btn-cerrar { top: 15px; right: 15px; padding: 8px 14px; font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <div class="post-layout">
+        <!-- CONTENIDO PRINCIPAL -->
+        <article>
+            <header class="post-header">
+                <span class="tag-cat">CATEGORÍA</span>
+                <h1 class="post-title">TÍTULO DE LA<br><span>NOTA AQUÍ</span></h1>
+            </header>
+
+            <div class="img-post">
+                <img src="IMAGEN_DESTACADA.jpg" alt="Descripción">
+                <div class="img-label">FOTO 01: LEYENDA DE LA FOTO</div>
+            </div>
+
+            <div class="meta-info">
+                <span>AUTOR: NOMBRE</span>
+                <span>FECHA: 01 DE ENERO, 2026</span>
+                <span>CATEGORÍA: MÚSICA</span>
+            </div>
+
+            <div class="post-content">
+                <p>Primer párrafo de la nota. La primera letra se agranda automáticamente con estilo drop-cap.</p>
+
+                <div class="highlight-box">
+                    <h4>DESTACADO</h4>
+                    <p>Información importante o cita relevante.</p>
+                </div>
+
+                <div class="img-post">
+                    <img src="OTRA_IMAGEN.jpg" alt="Descripción">
+                    <div class="img-label">FOTO 02: OTRA LEYENDA</div>
+                </div>
+
+                <p>Más contenido de la nota. Puedes usar <strong>texto en negritas</strong> para énfasis.</p>
+
+                <div class="band-highlight">
+                    <h3>NOMBRE DE LA BANDA</h3>
+                    <p>Descripción breve de la banda o momento destacado.</p>
+                </div>
+
+                <p>Continúa el contenido de la nota con más párrafos e imágenes.</p>
+
+                <div class="img-post">
+                    <img src="TERCERA_IMAGEN.jpg" alt="Descripción">
+                    <div class="img-label">FOTO 03: ÚLTIMA LEYENDA</div>
+                </div>
+            </div>
+
+            <!-- OTROS RUIDOS — RECOMENDACIONES -->
+            <section class="otros-ruidos">
+                <div class="otros-ruidos-header">
+                    <h3>OTROS RUIDOS</h3>
+                    <span class="otros-ruidos-line"></span>
+                </div>
+                <div class="otros-ruidos-grid">
+                    <!-- REEMPLAZA CON NOTAS REALES DE LA MISMA CATEGORÍA -->
+                    <a href="otra-nota-1.html" class="otros-card">
+                        <div class="otros-card-img"><img src="imagen-1.jpg" alt="Nota 1"></div>
+                        <span class="otros-card-tag">CATEGORÍA</span>
+                        <h4 class="otros-card-title">Título de la Nota Recomendada 1</h4>
+                        <p class="otros-card-excerpt">Breve excerpt de la nota...</p>
+                    </a>
+                    <a href="otra-nota-2.html" class="otros-card">
+                        <div class="otros-card-img"><img src="imagen-2.jpg" alt="Nota 2"></div>
+                        <span class="otros-card-tag">CATEGORÍA</span>
+                        <h4 class="otros-card-title">Título de la Nota Recomendada 2</h4>
+                        <p class="otros-card-excerpt">Breve excerpt de la nota...</p>
+                    </a>
+                    <a href="otra-nota-3.html" class="otros-card">
+                        <div class="otros-card-img"><img src="imagen-3.jpg" alt="Nota 3"></div>
+                        <span class="otros-card-tag">CATEGORÍA</span>
+                        <h4 class="otros-card-title">Título de la Nota Recomendada 3</h4>
+                        <p class="otros-card-excerpt">Breve excerpt de la nota...</p>
+                    </a>
+                </div>
+            </section>
+
+            <footer class="post-footer">
+                <p>RESEÑA POR: NOMBRE DEL AUTOR</p>
+                <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            </footer>
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside class="post-sidebar">
+            <!-- PLAYLIST DE LA SEMANA -->
+            <div class="sidebar-section">
+                <h4 class="sidebar-title"><i class="fab fa-spotify"></i> PLAYLIST DE LA SEMANA</h4>
+                <iframe class="playlist-embed"
+                    src="https://open.spotify.com/embed/playlist/153Gvei76OaDP0kMY75GQz?utm_source=generator&theme=0"
+                    height="380" frameBorder="0"
+                    allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <!-- OTROS RUIDOS SIDEBAR -->
+            <div class="sidebar-section">
+                <h4 class="sidebar-title"><i class="fas fa-headphones"></i> OTROS RUIDOS</h4>
+                <div class="otros-ruidos-sidebar">
+                    <!-- REEMPLAZA CON NOTAS REALES -->
+                    <a href="otra-nota-1.html" class="otros-mini-card">
+                        <div class="otros-mini-img"><img src="imagen-1.jpg" alt="Nota 1"></div>
+                        <div class="otros-mini-info">
+                            <span class="otros-mini-tag">CATEGORÍA</span>
+                            <span class="otros-mini-title">Título de la Nota 1</span>
+                        </div>
+                    </a>
+                    <a href="otra-nota-2.html" class="otros-mini-card">
+                        <div class="otros-mini-img"><img src="imagen-2.jpg" alt="Nota 2"></div>
+                        <div class="otros-mini-info">
+                            <span class="otros-mini-tag">CATEGORÍA</span>
+                            <span class="otros-mini-title">Título de la Nota 2</span>
+                        </div>
+                    </a>
+                    <a href="otra-nota-3.html" class="otros-mini-card">
+                        <div class="otros-mini-img"><img src="imagen-3.jpg" alt="Nota 3"></div>
+                        <div class="otros-mini-info">
+                            <span class="otros-mini-tag">CATEGORÍA</span>
+                            <span class="otros-mini-title">Título de la Nota 3</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- ZENO RADIO PLAYER -->
+    <div class="radio-player" id="radioPlayer">
+        <button class="radio-toggle" id="radioToggle"><i class="fas fa-radio"></i></button>
+        <div class="radio-info">
+            <span class="radio-live-dot"></span>
+            <span>EN VIVO — EL ROCK DE TODOS LOS DÍAS</span>
+        </div>
+        <div class="radio-controls">
+            <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+        </div>
+        <button class="radio-close" id="radioClose"><i class="fas fa-times"></i></button>
+        <audio id="zenoAudio" src="https://stream.zeno.fm/suqqst6xaq8uv" preload="none"></audio>
+    </div>
+
+    <script src="../main.js"></script>
+</body>
+</html>

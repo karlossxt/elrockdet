@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Voces del Ruido — Entrevistas</title>
+    <meta name="description" content="Entrevistas a bandas, músicos y protagonistas de la escena independiente mexicana.">
+    <meta property="og:title" content="ELROCK | Voces del Ruido">
+    <meta property="og:description" content="Entrevistas a bandas y músicos de la escena underground.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/voces-del-ruido.html">
+    <meta property="og:image" content="logo-rock.png">
+    <link rel="icon" type="image/png" href="logo-rock.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;900&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root { --current-color: var(--cyan); }
+
+        body {
+            background-color: #0d0d0d;
+            font-family: 'Inter', sans-serif;
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* NAV */
+        .main-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(0,0,0,0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 2px solid white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Syne', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            font-style: italic;
+            letter-spacing: -2px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo span { color: var(--red); }
+
+        .nav-logo-icon { height: 35px; width: auto; }
+
+        .nav-links { display: flex; align-items: center; }
+
+        .nav-links a {
+            color: #71717a;
+            text-decoration: none;
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 0 15px;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: white; }
+
+        .burger-menu { display: none; font-size: 1.5rem; color: white; cursor: pointer; }
+
+        /* HERO — MANIFIESTO DE VOCES */
+        .voces-hero {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 40px 0;
+        }
+
+        .voces-manifiesto {
+            position: relative;
+            background: #ffffff;
+            border: 5px solid #000;
+            padding: 60px 50px;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .voces-manifiesto::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-top: 100px solid #ececec;
+            border-left: 100px solid transparent;
+            z-index: 0;
+        }
+
+        .voces-fondo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100%;
+            height: 100%;
+            background: var(--cyan);
+            z-index: 0;
+            filter: blur(2px);
+            animation: vocesGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes vocesGlow {
+            from { filter: blur(2px); opacity: 0.8; }
+            to { filter: blur(4px); opacity: 1; }
+        }
+
+        .voces-etiqueta {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.7rem;
+            padding: 6px 14px;
+            text-transform: uppercase;
+            transform: rotate(-1deg);
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .voces-title {
+            position: relative;
+            z-index: 2;
+            font-family: 'Syncopate', sans-serif;
+            font-style: italic;
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 700;
+            line-height: 0.9;
+            margin: 0 0 30px 0;
+            text-transform: uppercase;
+            color: #000;
+            letter-spacing: -2px;
+        }
+
+        .voces-title span { color: var(--cyan); }
+
+        .voces-desc {
+            position: relative;
+            z-index: 2;
+            border-left: 8px solid #000;
+            padding-left: 20px;
+            margin-bottom: 40px;
+            max-width: 550px;
+        }
+
+        .voces-desc p {
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.05rem;
+            line-height: 1.5;
+            margin: 0;
+            color: #000;
+        }
+
+        .voces-btns {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-voces {
+            display: inline-block;
+            text-decoration: none;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            padding: 18px 36px;
+            letter-spacing: 1px;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .btn-voces-filled {
+            background-color: #000;
+            color: #fff;
+            border: 4px solid #000;
+            box-shadow: 8px 8px 0px var(--cyan);
+        }
+
+        .btn-voces-filled:hover {
+            background-color: #333;
+            transform: translate(2px, 2px) scale(1.03);
+            box-shadow: 5px 5px 0px var(--cyan);
+        }
+
+        .btn-voces-outline {
+            background-color: transparent;
+            color: #000;
+            border: 4px solid #000;
+            box-shadow: 6px 6px 0px #000;
+        }
+
+        .btn-voces-outline:hover {
+            background-color: #f5f5f5;
+            transform: translate(2px, 2px) scale(1.03);
+            box-shadow: 4px 4px 0px #000;
+        }
+
+        /* CONTENIDO */
+        .archive-container { max-width: 1200px; margin: 0 auto; padding: 60px 40px; }
+
+        .section-header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 2px solid #222;
+            margin: 0 0 30px;
+            padding-bottom: 10px;
+        }
+
+        .section-header-bar h3 {
+            font-family: 'Syne';
+            font-size: 2.2rem;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .article-card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .article-card:hover { transform: translateY(-4px); }
+
+        .card-image {
+            height: 250px;
+            background-color: #18181b;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(1);
+            transition: 0.5s;
+        }
+
+        .article-card:hover .card-image img {
+            filter: grayscale(0);
+            transform: scale(1.05);
+        }
+
+        .card-tag {
+            font-family: 'Space Mono';
+            color: var(--cyan);
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        .card-title {
+            font-family: 'Syne';
+            font-size: 1.4rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .card-excerpt {
+            font-size: 11px;
+            color: #71717a;
+            font-family: 'Space Mono';
+            line-height: 1.4;
+        }
+
+        /* FOOTER */
+        .fanzine-footer {
+            background-color: var(--red);
+            padding: 80px 40px;
+            border-top: 5px solid white;
+            width: 100%;
+            color: white;
+        }
+
+        .footer-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .f-title {
+            font-family: 'Syne', sans-serif;
+            color: #000;
+            font-size: 14px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .f-logo-text {
+            font-family: 'Syne', sans-serif;
+            font-size: 2.5rem;
+            font-style: italic;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -2px;
+            margin-bottom: 10px;
+        }
+
+        .f-logo-text span { color: #000; }
+
+        .f-tagline {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            color: #ffeaea;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .f-links-list, .f-contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .f-links-list a, .f-contact-links a {
+            font-family: 'Space Mono', monospace;
+            font-size: 12px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .f-links-list a i, .f-contact-links a i {
+            color: #000;
+            width: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .f-links-list a:hover, .f-contact-links a:hover {
+            color: #000;
+            padding-left: 5px;
+        }
+
+        .f-bottom {
+            border-top: 3px solid #000;
+            padding-top: 30px;
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+            font-family: 'Space Mono', monospace;
+            color: #000;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 900px) {
+            .article-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .burger-menu { display: block; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(0,0,0,0.98);
+                flex-direction: column;
+                padding: 20px;
+                border-bottom: 2px solid white;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { margin: 15px 0; font-size: 14px; }
+
+            .voces-hero { padding: 30px 15px 0; }
+            .voces-manifiesto { padding: 35px 20px; }
+            .voces-btns { flex-direction: column; }
+            .btn-voces { text-align: center; }
+
+            .archive-container { padding: 40px 15px; }
+            .article-grid { grid-template-columns: 1fr; gap: 30px; }
+
+            .footer-container { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .footer-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="main-nav">
+        <a href="index.html" class="logo">
+            <img src="logo-rock.png" alt="RDT." class="nav-logo-icon">
+            RDT<span>.</span>
+        </a>
+        <div class="burger-menu" id="burger"><i class="fas fa-bars"></i></div>
+        <div class="nav-links" id="menu">
+            <a href="musica.html">Música</a>
+            <a href="escena.html">Escena</a>
+            <a href="bytemos.html" style="color: var(--green);">BYTEMOS</a>
+            <a href="cultura.html" style="color: var(--amber);">Cultura</a>
+            <a href="pantallas.html">Pantallas</a>
+            <a href="toyrockeando.html">Toy Rockeando</a>
+            <a href="voces-del-ruido.html" style="color: var(--cyan);">Voces del Ruido</a>
+            <a href="nosotros.html">Nosotros</a>
+        </div>
+    </nav>
+
+    <!-- HERO — MANIFIESTO DE VOCES -->
+    <section class="voces-hero">
+        <div class="voces-fondo"></div>
+        <div class="voces-manifiesto">
+            <div class="voces-etiqueta">ENTREVISTAS / RADAR INDEPENDIENTE</div>
+            <h1 class="voces-title">VOCES DEL<br><span>RUIDO.</span></h1>
+            <div class="voces-desc">
+                <p>Detrás de cada riff hay una historia. Aquí le damos micrófono a las bandas que están moviendo la escena. Sin filtros, sin guiones, sin permiso.</p>
+            </div>
+            <div class="voces-btns">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7JPodMDp26teohjaVLyUp_VUP4Fc6bRMSdxEtLiBAqlr_Jg/viewform" target="_blank" class="btn-voces btn-voces-filled">Solicitar Entrevista</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhoaPAl3rnbkPYtoEvUBs8gp0GNR0GMY5lxlljw1ZVjuEIow/viewform?pli=1" target="_blank" class="btn-voces btn-voces-outline">Mandar Estreno</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENTREVISTAS -->
+    <main class="archive-container">
+        <div class="section-header-bar">
+            <h3>ENTREVISTAS</h3>
+            <a href="#" style="font-family:'Space Mono'; font-size:10px; color:#555; text-decoration:none;">VER TODO +</a>
+        </div>
+
+        <div class="article-grid">
+            <!-- REEMPLAZA CON ENTREVISTAS REALES -->
+            <a href="#" class="article-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800" alt="Entrevista" loading="lazy"></div>
+                <span class="card-tag">ENTREVISTA //</span>
+                <h2 class="card-title">NOMBRE DE LA BANDA: "Título de la entrevista"</h2>
+                <p class="card-excerpt">Breve extracto de la conversación con la banda sobre su nuevo disco, su proceso creativo o lo que sea.</p>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800" alt="Entrevista" loading="lazy"></div>
+                <span class="card-tag">ENTREVISTA //</span>
+                <h2 class="card-title">OTRO ARTISTA: "Conversaciones desde el under"</h2>
+                <p class="card-excerpt">El músico habla sobre sus influencias, la escena local y lo que viene en su carrera.</p>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=800" alt="Entrevista" loading="lazy"></div>
+                <span class="card-tag">ENTREVISTA //</span>
+                <h2 class="card-title">LA BANDA NUEVA: "Ruidos que vienen del sur"</h2>
+                <p class="card-excerpt">Tres amigos, un sótano y un demo que cambió todo. La historia detrás del primer disco.</p>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=800" alt="Entrevista" loading="lazy"></div>
+                <span class="card-tag">ENTREVISTA //</span>
+                <h2 class="card-title">PRODUCER XYZ: "El sonido que nadie espera"</h2>
+                <p class="card-excerpt">El productor detrás de los discos que están definiendo el rock mexicano actual.</p>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800" alt="Entrevista" loading="lazy"></div>
+                <span class="card-tag">ENTREVISTA //</span>
+                <h2 class="card-title">FESTIVAL LOCAL: "Más que música, comunidad"</h2>
+                <p class="card-excerpt">Los organizadores del festival más undercut de la CDMX cuentan cómo lo armaron desde cero.</p>
+            </a>
+            <a href="#" class="article-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800" alt="Entrevista" loading="lazy"></div>
+                <span class="card-tag">ENTREVISTA //</span>
+                <h2 class="card-title">LA VOZ NUEVA: "Canciones que duelen bonito"</h2>
+                <p class="card-excerpt">La cantautora que está rompiendo esquemas con su propuesta de rock alternativo introspectivo.</p>
+            </a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="fanzine-footer">
+        <div class="footer-container">
+            <div class="footer-column brand-col">
+                <h2 class="f-logo-text">EL<span>ROCK DE TODOS LOS DÍAS</span></h2>
+                <p class="f-tagline">ARCHIVO INDEPENDIENTE DE CULTURA Y RUIDO.</p>
+                <h5 class="f-title" style="color: white; font-size: 16px;">CONTACTO DIRECTO</h5>
+                <div class="f-contact-links">
+                    <a href="https://wa.me/525519204557" target="_blank"><i class="fab fa-whatsapp"></i> 55 1920 4557</a>
+                    <a href="mailto:elrockdetodoslosdias@gmail.com"><i class="far fa-envelope"></i> elrockdetodoslosdias@gmail.com</a>
+                    <a href="mailto:prensa@elrockdetodoslosdias.com.mx"><i class="far fa-envelope"></i> prensa@elrockdetodoslosdias.com.mx</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h5 class="f-title">SOCIAL</h5>
+                <div class="f-links-list">
+                    <a href="https://www.instagram.com/elrockdetodoslosdias/" target="_blank"><i class="fab fa-instagram"></i> INSTAGRAM</a>
+                    <a href="https://www.facebook.com/ElRockdetodoslosDias" target="_blank"><i class="fab fa-facebook-f"></i> FACEBOOK</a>
+                    <a href="https://twitter.com/ElRockde" target="_blank"><i class="fab fa-x-twitter"></i> TWITTER / X</a>
+                    <a href="https://www.tiktok.com/@elrockdetodoslosdias" target="_blank"><i class="fab fa-tiktok"></i> TIKTOK</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h5 class="f-title">COMUNIDAD</h5>
+                <div class="f-links-list">
+                    <a href="https://discord.gg/Ey7sdqwDaW" target="_blank"><i class="fab fa-discord"></i> DISCORD</a>
+                    <a href="https://www.twitch.tv/elrockdetodoslosdias" target="_blank"><i class="fab fa-twitch"></i> TWITCH</a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i> YOUTUBE</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h5 class="f-title">NAVEGACIÓN</h5>
+                <div class="f-links-list">
+                    <a href="index.html">INICIO</a>
+                    <a href="musica.html">MÚSICA</a>
+                    <a href="escena.html">ESCENA</a>
+                    <a href="bytemos.html">BYTEMOS</a>
+                    <a href="cultura.html">CULTURA</a>
+                </div>
+            </div>
+        </div>
+        <div class="f-bottom">
+            <span>&copy; 2026 EL ROCK DE TODOS LOS DÍAS</span>
+            <span>LA CULTURA ES LA ÚNICA ARMA QUE NO DISPARA BALAS</span>
+        </div>
+    </footer>
+
+    <!-- ZENO RADIO PLAYER -->
+    <div class="radio-player" id="radioPlayer">
+        <button class="radio-toggle" id="radioToggle"><i class="fas fa-radio"></i></button>
+        <div class="radio-info">
+            <span class="radio-live-dot"></span>
+            <span>EN VIVO — EL ROCK DE TODOS LOS DÍAS</span>
+        </div>
+        <div class="radio-controls">
+            <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+        </div>
+        <button class="radio-close" id="radioClose"><i class="fas fa-times"></i></button>
+        <audio id="zenoAudio" src="https://stream.zeno.fm/suqqst6xaq8uv" preload="none"></audio>
+    </div>
+
+    <script src="main.js"></script>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const menu = document.getElementById('menu');
+        burger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

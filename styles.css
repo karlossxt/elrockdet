@@ -33,7 +33,9 @@ body::before {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(0,0,0,0.95);
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 2px solid white;
     padding: 15px 40px;
     display: flex;
@@ -182,4 +184,175 @@ body::before {
 
 @media (max-width: 480px) {
     .footer-container { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   RADIO PLAYER
+   ============================================ */
+
+.radio-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 2px solid var(--red);
+    z-index: 2000;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.radio-player.player-hidden {
+    transform: translateY(100%);
+}
+
+.radio-player.hidden {
+    display: none;
+}
+
+.radio-toggle {
+    display: flex;
+    justify-content: center;
+    padding: 4px 0 0;
+    cursor: pointer;
+    color: #555;
+    font-size: 10px;
+    transition: 0.2s;
+}
+
+.radio-toggle:hover { color: white; }
+
+.radio-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 30px 14px;
+}
+
+.radio-live-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--red);
+    border-radius: 50%;
+    animation: pulse-dot 1.5s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.6); }
+    50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(220, 38, 38, 0); }
+}
+
+.radio-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.radio-play-btn {
+    background: var(--red);
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+
+.radio-play-btn:hover {
+    background: #b91c1c;
+    transform: scale(1.1);
+}
+
+.radio-volume {
+    width: 80px;
+    height: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #333;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+.radio-volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.radio-volume::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.radio-close {
+    background: none;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+    padding: 5px;
+}
+
+.radio-close:hover { color: white; }
+
+@media (max-width: 768px) {
+    .radio-content { padding: 10px 15px; gap: 10px; }
+    .radio-label { font-size: 8px; }
+    .radio-volume { width: 50px; }
+}
+
+/* ============================================
+   SCROLL REVEAL
+   ============================================ */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   SECTION DIVIDERS
+   ============================================ */
+
+.section-divider {
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #333;
+    text-transform: uppercase;
+    padding: 30px 0;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    margin: 0 0 40px;
 }

@@ -1,9 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- PÁGINAS PRINCIPALES -->
   <url>
-    <loc>https://elrockdetodoslosdias.com.mx</loc>
-    <lastmod>2024-05-22</lastmod>
+    <loc>https://elrockdetodoslosdias.com.mx/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-</urlset>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/musica.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/escena.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/bytemos.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/cultura.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/pantallas.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/toyrockeando.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/voces-del-ruido.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/nosotros.html</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 
+  <!-- NOTAS — ABRIL -->
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasabril/postSaurom.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasabril/postElCulto.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- NOTAS — MARZO -->
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasmarzo/postJoyas.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasmarzo/postknofest.html</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasmarzo/postNorte.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasmarzo/postAgora.html</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasmarzo/postBlackShine.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- NOTAS — MAYO -->
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasmayo/postAnnaFiori.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasmayo/postOTortuga.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasmayo/postAryem2.html</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- NOTAS SUELTAS -->
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/CMBA.html</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/JUMBO1.html</loc>
+    <lastmod>2025-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/curandero.html</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/axeceremonia.html</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/lacata.html</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
