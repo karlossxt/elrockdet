@@ -187,6 +187,253 @@ body::before {
 }
 
 /* ============================================
+   NUEVOS DECIBELES — DEDICATED SECTION
+   ============================================ */
+
+.decibels-dedicated {
+    padding: 40px;
+    background: #0a0a0a;
+    border-bottom: 2px solid #222;
+}
+
+.decibels-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.decibels-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: #111;
+    border: 1px solid #222;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.decibels-card:hover {
+    border-color: var(--green);
+    transform: translateY(-3px);
+}
+
+.decibels-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    filter: grayscale(1);
+    transition: 0.4s;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+}
+
+.decibels-card:hover img {
+    filter: grayscale(0%);
+    border-color: var(--green);
+}
+
+.decibels-card-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.decibels-card-song {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 11px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.decibels-card-artist {
+    font-family: 'Space Mono', monospace;
+    font-size: 9px;
+    color: #777;
+    text-transform: uppercase;
+}
+
+.decibels-card:hover .decibels-card-song {
+    color: var(--green);
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+}
+
+@media (max-width: 1024px) {
+    .decibels-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+    .decibels-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============================================
+   EDITORIAL / MANIFIESTO
+   ============================================ */
+
+.editorial-section {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 0 40px;
+}
+
+.editorial-box {
+    position: relative;
+    background: #fff;
+    border: 4px solid #000;
+    padding: 50px 55px;
+    overflow: hidden;
+    transform: rotate(-0.5deg);
+}
+
+.editorial-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 120px solid #ececec;
+    border-left: 120px solid transparent;
+    z-index: 0;
+}
+
+.editorial-title {
+    position: relative;
+    z-index: 2;
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+.editorial-title span {
+    color: var(--red);
+    font-style: italic;
+}
+
+.editorial-text {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.editorial-text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.editorial-cta {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 14px 30px;
+    text-decoration: none;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0px var(--red);
+    transition: 0.2s;
+}
+
+.editorial-cta:hover {
+    background: var(--red);
+    border-color: var(--red);
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0px #000;
+}
+
+@media (max-width: 768px) {
+    .editorial-text { grid-template-columns: 1fr; }
+    .editorial-box { padding: 35px 25px; }
+    .editorial-section { padding: 0 20px; }
+}
+
+/* ============================================
+   MANDA TU RUIDO — ENHANCED
+   ============================================ */
+
+.glow-red {
+    animation: glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+    0%, 100% { text-shadow: none; }
+    50% { text-shadow: 0 0 20px rgba(220, 38, 38, 0.4), 0 0 40px rgba(220, 38, 38, 0.2); }
+}
+
+.btn-pulse {
+    animation: btn-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes btn-glow {
+    0%, 100% { box-shadow: 6px 6px 0px #ececec; }
+    50% { box-shadow: 6px 6px 0px #ececec, 0 0 15px rgba(220, 38, 38, 0.5); }
+}
+
+/* ============================================
+   ALIADOS — IMPROVED
+   ============================================ */
+
+.aliados-strip {
+    background: linear-gradient(180deg, #0a0a0a 0%, #0d0d0d 100%);
+}
+
+.partner-logo img {
+    filter: grayscale(1) brightness(0.85);
+    transition: filter 0.4s, transform 0.3s;
+}
+
+.partner-logo:hover img {
+    filter: grayscale(0) brightness(1);
+    transform: scale(1.05);
+}
+
+.marquee-track {
+    animation: scrollMarquee 45s linear infinite;
+}
+
+/* ============================================
+   OTROS RUIDOS — SIDEBAR SECTION
+   ============================================ */
+
+.otros-ruidos-section {
+    padding: 60px 40px;
+    background: #0a0a0a;
+    border-top: 2px solid #222;
+}
+
+.otros-ruidos-section h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: var(--white);
+}
+
+.otros-ruidos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .otros-ruidos-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================
    RADIO PLAYER
    ============================================ */
 
