@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | L.C.D. — Las Cuerdas Delirantes estrenan "De Mi"</title>
+    <meta name="description" content="LCD — Las Cuerdas Delirantes presentan su más reciente material "De Mi", distribuido por Discos Denver. Rock crudo de la vieja escuela desde el Estado de México.">
+    <meta property="og:title" content="ELROCK | L.C.D. — Las Cuerdas Delirantes estrenan "De Mi"">
+    <meta property="og:description" content="Rock crudo de la vieja escuela. El nuevo disco de LCD bajo el sello Discos Denver.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="notasjulio/lcd-hero.jpg">
+    <link rel="icon" type="image/png" href="logo-rock.png">
+    <link rel="stylesheet" href="fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #dc2626;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-bottom: 70px;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%),
+                        linear-gradient(90deg, rgba(220, 38, 38, 0.02), rgba(255, 255, 255, 0.01), rgba(220, 38, 38, 0.02));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .post-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--accent); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            transition: 0.3s;
+        }
+
+        .btn-cerrar:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--accent);
+        }
+
+        .post-header { margin-bottom: 50px; text-align: left; }
+        .tag-cat {
+            background: var(--accent); color: white; padding: 5px 15px;
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px;
+            margin-bottom: 20px; display: inline-block;
+        }
+
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--accent); font-style: italic; }
+
+        .img-post { border: 1px solid #222; margin: 40px 0; background: #111; position: relative; }
+        .img-post img { width: 100%; display: block; filter: contrast(1.1); transition: 0.4s; }
+        .img-post:hover img { filter: contrast(1) saturate(1.1); }
+        .img-label {
+            font-family: 'Space Mono'; font-size: 10px; color: var(--accent);
+            text-align: right; padding: 10px; text-transform: uppercase; border-top: 1px solid #222;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .post-content p {
+            font-size: 1.2rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        .post-content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .post-content strong { color: white; }
+
+        .highlight-box {
+            background: var(--accent); color: white; padding: 30px;
+            margin: 40px 0; border: 2px solid white; font-family: 'Space Mono';
+        }
+        .highlight-box h4 { text-transform: uppercase; margin-bottom: 10px; font-family: 'Syne'; font-size: 1.5rem; }
+
+        .band-highlight {
+            background: white; color: black; padding: 40px; margin: 60px 0;
+            border-left: 10px solid var(--accent);
+        }
+        .band-highlight h3 { font-family: 'Syne'; font-size: 2rem; text-transform: uppercase; margin-bottom: 10px; }
+        .band-highlight p { font-family: 'Space Mono'; font-weight: 700; color: #111; font-size: 1rem; margin: 0; }
+
+        .social-links {
+            display: flex; flex-wrap: wrap; gap: 12px; margin: 30px 0;
+        }
+        .social-links a {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #111; border: 1px solid #333; padding: 10px 18px;
+            font-family: 'Space Mono'; font-size: 11px; font-weight: 700;
+            color: white; text-decoration: none; text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .social-links a:hover { border-color: var(--accent); background: #1a1a1a; }
+        .social-links a i { color: var(--accent); }
+
+        .post-sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar-section {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            padding: 20px;
+        }
+
+        .sidebar-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #222;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-title i { font-size: 1rem; }
+
+        .playlist-embed { border-radius: 8px; width: 100%; }
+
+        .otros-ruidos-sidebar { display: flex; flex-direction: column; gap: 15px; }
+
+        .otros-mini-card {
+            text-decoration: none; color: inherit;
+            display: flex; gap: 12px; padding: 10px;
+            background: #111; border: 1px solid #222; transition: 0.3s;
+        }
+        .otros-mini-card:hover { border-color: var(--accent); transform: translateX(3px); }
+
+        .otros-mini-img { width: 70px; height: 70px; flex-shrink: 0; overflow: hidden; }
+        .otros-mini-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.4s; }
+        .otros-mini-card:hover .otros-mini-img img { filter: grayscale(0); }
+
+        .otros-mini-info { display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+        .otros-mini-tag { font-family: 'Space Mono'; font-size: 8px; font-weight: 900; text-transform: uppercase; color: var(--accent); letter-spacing: 1px; }
+        .otros-mini-title { font-family: 'Syne', sans-serif; font-size: 0.75rem; line-height: 1.1; text-transform: uppercase; color: white; }
+
+        .otros-ruidos { margin-top: 80px; padding-top: 40px; border-top: 2px solid #222; }
+        .otros-ruidos-header { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; }
+        .otros-ruidos-header h3 { font-family: 'Syne'; font-size: 2rem; font-weight: 800; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+        .otros-ruidos-line { flex: 1; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); }
+
+        .otros-ruidos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+
+        .otros-card { text-decoration: none; color: inherit; background: #0a0a0a; border: 1px solid #222; padding: 12px; transition: all 0.4s; display: block; }
+        .otros-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 8px 25px rgba(220, 38, 38, 0.15); }
+        .otros-card-img { width: 100%; height: 160px; overflow: hidden; margin-bottom: 12px; }
+        .otros-card-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
+        .otros-card:hover .otros-card-img img { filter: grayscale(0); transform: scale(1.05); }
+        .otros-card-tag { font-family: 'Space Mono'; font-size: 9px; font-weight: 900; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 8px; letter-spacing: 1px; }
+        .otros-card-title { font-family: 'Syne'; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 8px; color: white; }
+        .otros-card-excerpt { font-family: 'Space Mono'; font-size: 10px; color: #555; line-height: 1.4; }
+
+        .post-footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #222; text-align: center; font-family: 'Space Mono'; color: #444; }
+
+        @media (max-width: 900px) {
+            .post-layout { grid-template-columns: 1fr; }
+            .post-sidebar { position: static; order: 2; }
+            .post-title { font-size: 3rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+            .otros-ruidos-grid { grid-template-columns: 1fr; }
+            .btn-cerrar { top: 15px; right: 15px; padding: 8px 14px; font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <div class="post-layout">
+        <article>
+            <header class="post-header">
+                <span class="tag-cat">ESCENA NACIONAL</span>
+                <h1 class="post-title">L.C.D.<br><span>"De Mi"</span></h1>
+            </header>
+
+            <div class="img-post">
+                <img src="notasjulio/lcd-hero.jpg" alt="L.C.D. Las Cuerdas Delirantes — De Mi" loading="lazy">
+                <div class="img-label">FOTO 01: L.C.D. — "De Mi" / Discos Denver</div>
+            </div>
+
+            <div class="meta-info">
+                <span>EL ROCK DE TODOS LOS DÍAS</span>
+                <span>12 DE JULIO, 2026</span>
+                <span>ESCENA NACIONAL</span>
+            </div>
+
+            <div class="post-content">
+                <p><strong>L.C.D. — Las Cuerdas Delirantes</strong> presentan su más reciente material titulado <strong>"De Mi"</strong>, distribuido por Discos Denver. Una banda de Rock originaria de Santa Cruz Ayotuxco, Huixquilucan, Estado de México, que se niega a dejar que el rock muera.</p>
+
+                <p>Fundada por <strong>Wuicho Mira</strong> a finales de 2013, el nombre L.C.D. nació como tributo a un trío de boleros del Estado de Guanajuato llamado <strong>Las Cuerdas Delirantes</strong>, que el representante Javier Mira conoció en la Feria de León. Desde entonces, la banda se ha enfocado en creaciones originales con un estilo crudo de la vieja escuela.</p>
+
+                <div class="img-post">
+                    <img src="notasjulio/lcd-banda.jpg" alt="L.C.D. banda" loading="lazy">
+                    <div class="img-label">FOTO 02: L.C.D. en vivo</div>
+                </div>
+
+                <p>Su propuesta está influenciada por el <strong>Heavy Rock</strong>, el <strong>Blues Rock</strong> y el <strong>Boogie</strong> — un sonido que ha hecho diferencia dentro del Rock Mexicano. La agrupación cuenta con un Demo de 10 canciones producido por <strong>Miguel Calígula</strong> en Ganesh Music House, y ahora llega <strong>"De Mi"</strong>, un disco de 10 temas producido por <strong>Discos y Cintas Denver</strong>.</p>
+
+                <div class="highlight-box">
+                    <h4>ALINEACIÓN</h4>
+                    <p>Raúl Emanuel López — Batería<br>
+                    Tania Alva — Bajo<br>
+                    Luis Fernando Mira — Voz y Requintos<br>
+                    Amado Medina — Teclado y Sax<br>
+                    Brayan Gutiérrez — Guitarra</p>
+                </div>
+
+                <p>Con esta alineación, LCD se ha presentado en distintos foros de la escena del rock, trabajando en composiciones propias de las cuales han lanzado sencillos como <strong>"Conexión"</strong>, <strong>"Me voy a Cotorrear"</strong>, <strong>"Así Soy Yo"</strong>, <strong>"Si supieras"</strong>, <strong>"Sombras"</strong>, <strong>"Seca Tus Lágrimas"</strong> y <strong>"México"</strong>.</p>
+
+                <div class="img-post">
+                    <img src="notasjulio/lcd-promo1.jpg" alt="L.C.D. promocional" loading="lazy">
+                    <div class="img-label">FOTO 03: L.C.D. — Promocional "De Mi"</div>
+                </div>
+
+                <p>L.C.D. actualmente se encuentra presentando su más reciente producción <strong>"De Mi"</strong>, bajo el sello de Discos y Cintas Denver. Esto es L.C.D. Las Cuerdas Delirantes — <strong>¡¡¡De la Banda Para la Banda!!!</strong></p>
+
+                <div class="img-post">
+                    <img src="notasjulio/lcd-promo2.jpg" alt="L.C.D. disco De Mi" loading="lazy">
+                    <div class="img-label">FOTO 04: "De Mi" — Disponible en todas las plataformas</div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/people/LCD-Las-Cuerdas-Delirantes-Oficial/100095538247146/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="https://www.instagram.com/las_cuerdas_delirantes?igsh=Z3g2ZW5kOWhnbjJ4" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.tiktok.com/@las_cuerdas_delirantes?_r=1&_t=ZS-94mFntAr68o" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+                    <a href="https://www.youtube.com/@LCD.Oficial" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                </div>
+
+                <p><strong>Escucha "De Mi":</strong></p>
+
+                <div class="social-links">
+                    <a href="https://open.spotify.com/album/2I2pYajWjmtMy97ptebyyd?si=KoYK_GAZQeq-ut3kIm8KjA" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="https://www.youtube.com/watch?v=Svi98Gz4hOM&list=RDSvi98Gz4hOM&start_radio=1" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                </div>
+            </div>
+
+            <section class="otros-ruidos">
+                <div class="otros-ruidos-header">
+                    <h3>OTROS RUIDOS</h3>
+                    <span class="otros-ruidos-line"></span>
+                </div>
+                <div class="otros-ruidos-grid">
+                    <a href="notasmarzo/postBlackShine.html" class="otros-card">
+                        <div class="otros-card-img"><img src="notasmarzo/black-shine-hero.jpg" alt="Black Shine"></div>
+                        <span class="otros-card-tag">HARD ROCK</span>
+                        <h4 class="otros-card-title">BLACK SHINE: Night Hunter</h4>
+                        <p class="otros-card-excerpt">La nueva descarga de Hard Rock y Metal.</p>
+                    </a>
+                    <a href="notasmarzo/postAgora.html" class="otros-card">
+                        <div class="otros-card-img"><img src="notasmarzo/agora-hero.jpg" alt="Ágora"></div>
+                        <span class="otros-card-tag">METAL</span>
+                        <h4 class="otros-card-title">ÁGORA: Breaking the Silence</h4>
+                        <p class="otros-card-excerpt">El demo inédito en inglés.</p>
+                    </a>
+                    <a href="notasmarzo/postNorte.html" class="otros-card">
+                        <div class="otros-card-img"><img src="notasmarzo/norte-hero.jpg" alt="Norte"></div>
+                        <span class="otros-card-tag">ROCK</span>
+                        <h4 class="otros-card-title">NORTE: Show especial en CDMX</h4>
+                        <p class="otros-card-excerpt">Agenda.</p>
+                    </a>
+                </div>
+            </section>
+
+            <footer class="post-footer">
+                <p>RESEÑA POR: EL ROCK DE TODOS LOS DÍAS</p>
+                <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            </footer>
+        </article>
+
+        <aside class="post-sidebar">
+            <div class="sidebar-section">
+                <h4 class="sidebar-title"><i class="fab fa-spotify"></i> PLAYLIST DE LA SEMANA</h4>
+                <iframe class="playlist-embed playlist-embed"
+                    src="https://open.spotify.com/embed/playlist/153Gvei76OaDP0kMY75GQz?utm_source=generator&theme=0"
+                    height="380" frameBorder="0"
+                    allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="sidebar-section">
+                <h4 class="sidebar-title"><i class="fas fa-headphones"></i> OTROS RUIDOS</h4>
+                <div class="otros-ruidos-sidebar">
+                    <a href="notasmayo/postAnnaFiori.html" class="otros-mini-card">
+                        <div class="otros-mini-img"><img src="notasmayo/anna-fiori-metztli-hero.jpg" alt="Anna Fiori"></div>
+                        <div class="otros-mini-info">
+                            <span class="otros-mini-tag">ESTRENO</span>
+                            <span class="otros-mini-title">ANNA FIORI — Metztli</span>
+                        </div>
+                    </a>
+                    <a href="notasabril/postSaurom.html" class="otros-mini-card">
+                        <div class="otros-mini-img"><img src="notasabril/saurom-esperanza-iris.jpg" alt="Saurom"></div>
+                        <div class="otros-mini-info">
+                            <span class="otros-mini-tag">CRÓNICA</span>
+                            <span class="otros-mini-title">SAUROM — Ritual acústico</span>
+                        </div>
+                    </a>
+                    <a href="notasmayo/postOTortuga.html" class="otros-mini-card">
+                        <div class="otros-mini-img"><img src="notasmayo/o-tortuga-hero.jpg" alt="O Tortuga"></div>
+                        <div class="otros-mini-info">
+                            <span class="otros-mini-tag">ESTRENO</span>
+                            <span class="otros-mini-title">O TORTUGA — Guerreros del Sur</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- RADIO PLAYER -->
+    <div class="radio-player" id="radioPlayer">
+        <div class="radio-toggle" id="radioToggle"><i class="fas fa-chevron-up"></i></div>
+        <div class="radio-content">
+            <div class="radio-live-dot"></div>
+            <span class="radio-label">EN VIVO — EL ROCK DE TODOS LOS DÍAS</span>
+            <audio id="zenoAudio" preload="none">
+                <source src="https://stream.zeno.fm/suqqst6xaq8uv" type="audio/mpeg">
+            </audio>
+            <button class="radio-play-btn" id="playPauseBtn"><i class="fas fa-play"></i></button>
+            <input type="range" class="radio-volume" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+            <button class="radio-close" id="radioClose"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
