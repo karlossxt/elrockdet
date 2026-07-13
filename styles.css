@@ -111,7 +111,7 @@ body::before {
     justify-content: center;
     text-align: center;
     padding: 30px 20px;
-    background: rgba(0,0,0,0.3);
+    background: transparent;
 }
 
 .footer-logo-img {
