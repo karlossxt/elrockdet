@@ -99,8 +99,31 @@ body::before {
     max-width: 1300px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1.2fr 1fr;
     gap: 40px;
+    align-items: start;
+}
+
+.footer-logo-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer-logo-img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1);
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.footer-logo-img:hover {
+    filter: brightness(0) invert(1) drop-shadow(0 0 15px rgba(255,255,255,0.3));
 }
 
 .f-title {
