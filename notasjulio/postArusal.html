@@ -28,7 +28,7 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
-            padding-bottom: 70px;
+            padding-bottom: 90px; /* Espacio para que el reproductor de radio no tape el footer */
         }
 
         .scanlines {
@@ -46,6 +46,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
+            position: relative;
         }
 
         .btn-cerrar {
@@ -63,7 +64,7 @@
             box-shadow: 6px 6px 0px var(--accent);
         }
 
-        .post-header { margin-bottom: 50px; text-align: left; }
+        .post-header { margin-bottom: 40px; text-align: left; }
         .tag-cat {
             background: var(--accent); color: white; padding: 5px 15px;
             font-family: 'Space Mono'; font-weight: 700; font-size: 12px;
@@ -72,13 +73,13 @@
 
         .post-title {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(2.5rem, 7vw, 5rem);
-            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+            font-size: clamp(2.2rem, 6vw, 4.5rem);
+            line-height: 1.0; margin-bottom: 30px; text-transform: uppercase;
         }
         .post-title span { color: var(--accent); font-style: italic; }
 
         .img-post { border: 1px solid #222; margin: 40px 0; background: #111; position: relative; }
-        .img-post img { width: 100%; display: block; filter: contrast(1.1); transition: 0.4s; }
+        .img-post img { width: 100%; height: auto; display: block; filter: contrast(1.1); transition: 0.4s; }
         .img-post:hover img { filter: contrast(1) saturate(1.1); }
         .img-label {
             font-family: 'Space Mono'; font-size: 10px; color: var(--accent);
@@ -87,19 +88,20 @@
 
         .meta-info {
             border-top: 1px solid #222; border-bottom: 1px solid #222;
-            padding: 15px 0; margin-bottom: 50px;
+            padding: 15px 0; margin-bottom: 40px;
             display: flex; justify-content: space-between;
             font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
         }
 
         .post-content p {
-            font-size: 1.2rem; font-weight: 400; color: #ccc;
+            font-size: 1.15rem; font-weight: 400; color: #ccc;
             margin-bottom: 30px; line-height: 1.7;
         }
 
+        /* Letra capital corregida para evitar fallos de alineación con etiquetas fuertes */
         .post-content > p:first-of-type::first-letter {
-            font-size: 5rem; float: left; margin-right: 15px;
-            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne', sans-serif;
+            font-size: 4.5rem; float: left; margin-right: 12px;
+            line-height: 0.85; color: var(--accent); font-weight: 900; font-family: 'Syne', sans-serif;
         }
 
         .highlight-box p::first-letter {
@@ -109,28 +111,28 @@
 
         .post-content strong { color: white; }
 
-        .highlight-box{
-            background:var(--accent);
-            color:#fff;
-            padding:35px 40px;
-            margin:40px 0;
-            border:2px solid white;
+        .highlight-box {
+            background: var(--accent);
+            color: #fff;
+            padding: 35px 40px;
+            margin: 40px 0;
+            border: 2px solid white;
         }
 
-        .highlight-box h4{
-            text-transform:uppercase;
-            margin-bottom:22px;
-            font-family:'Syne';
-            font-size:1.5rem;
-            letter-spacing:2px;
+        .highlight-box h4 {
+            text-transform: uppercase;
+            margin-bottom: 22px;
+            font-family: 'Syne';
+            font-size: 1.4rem;
+            letter-spacing: 2px;
         }
 
-        .highlight-box p{
-            font-family:'Space Mono', monospace;
-            font-size:1rem;
-            line-height:1.9;
-            padding-left:8px;
-            color:#fff;
+        .highlight-box p {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            padding-left: 0;
+            color: #fff;
         }
 
         .social-links {
@@ -148,7 +150,7 @@
 
         .post-sidebar {
             position: sticky;
-            top: 100px;
+            top: 40px;
             align-self: start;
             display: flex;
             flex-direction: column;
@@ -177,15 +179,19 @@
         }
 
         .sidebar-title i { font-size: 1rem; }
+        .playlist-embed { border-radius: 8px; width: 100%; display: block; }
 
-        .playlist-embed { border-radius: 8px; width: 100%; }
-
-        .otros-ruidos { margin-top: 80px; padding-top: 40px; border-top: 2px solid #222; }
+        .otros-ruidos { margin-top: 60px; padding-top: 40px; border-top: 2px solid #222; }
         .otros-ruidos-header { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; }
-        .otros-ruidos-header h3 { font-family: 'Syne'; font-size: 2rem; font-weight: 800; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+        .otros-ruidos-header h3 { font-family: 'Syne'; font-size: 1.8rem; font-weight: 800; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
         .otros-ruidos-line { flex: 1; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); }
 
-        .otros-ruidos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        /* Grilla inteligente auto-ajustable */
+        .otros-ruidos-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+            gap: 25px; 
+        }
 
         .otros-card { text-decoration: none; color: inherit; background: #0a0a0a; border: 1px solid #222; padding: 12px; transition: all 0.4s; display: block; }
         .otros-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 8px 25px rgba(219, 39, 119, 0.15); }
@@ -193,22 +199,84 @@
         .otros-card-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
         .otros-card:hover .otros-card-img img { filter: grayscale(0); transform: scale(1.05); }
         .otros-card-tag { font-family: 'Space Mono'; font-size: 9px; font-weight: 900; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 8px; letter-spacing: 1px; }
-        .otros-card-title { font-family: 'Syne'; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 8px; color: white; }
-        .otros-card-excerpt { font-family: 'Space Mono'; font-size: 10px; color: #555; line-height: 1.4; }
+        .otros-card-title { font-family: 'Syne'; font-size: 1.1rem; line-height: 1.2; text-transform: uppercase; margin-bottom: 8px; color: white; }
+        .otros-card-excerpt { font-family: 'Space Mono'; font-size: 10px; color: #888; line-height: 1.4; }
 
-        .post-footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #222; text-align: center; font-family: 'Space Mono'; color: #444; }
+        .post-footer { margin-top: 60px; padding: 40px 0; border-top: 1px solid #222; text-align: center; font-family: 'Space Mono'; color: #555; }
 
+        /* ESTILOS DEL REPRODUCTOR DE RADIO (No existían en tu CSS original) */
+        .radio-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #0a0a0a;
+            border-top: 2px solid var(--accent);
+            z-index: 999;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.8);
+        }
+        .radio-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            gap: 15px;
+        }
+        .radio-live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #ef4444;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #ef4444;
+        }
+        .radio-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            flex-grow: 1;
+        }
+        .radio-play-btn, .radio-close, .radio-toggle {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        .radio-play-btn:hover, .radio-close:hover, .radio-toggle:hover {
+            color: var(--accent);
+        }
+        .radio-volume {
+            width: 80px;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
+
+        /* RESPONSIVO PARA TABLETS / PANTALLAS MEDIANAS */
         @media (max-width: 900px) {
             .post-layout { grid-template-columns: 1fr; gap: 30px; padding: 20px 15px; }
-            .post-sidebar { position: static; order: 2; }
-            .post-title { font-size: 2.5rem; line-height: 0.9; margin-bottom: 25px; }
+            .post-sidebar { position: static; order: 2; max-width: 100%; }
+            .post-title { font-size: 2.5rem; line-height: 1.0; margin-bottom: 25px; }
             .post-header { margin-bottom: 30px; }
             .meta-info { flex-direction: column; gap: 8px; font-size: 10px; }
-            .btn-cerrar { top: 15px; right: 15px; padding: 8px 14px; font-size: 11px; }
+            
+            /* El botón cerrar pasa a posición absoluta arriba a la derecha para no molestar el scroll móvil */
+            .btn-cerrar { 
+                position: absolute; 
+                top: 20px; 
+                right: 15px; 
+                padding: 8px 14px; 
+                font-size: 11px; 
+            }
+            
             .post-content > p:first-of-type::first-letter { font-size: 3.5rem; margin-right: 10px; }
-            .post-content p { font-size: 1rem; margin-bottom: 20px; }
+            .post-content p { font-size: 1.05rem; margin-bottom: 20px; }
             .highlight-box { padding: 25px 20px; margin: 30px 0; }
-            .highlight-box h4 { font-size: 1.1rem; margin-bottom: 15px; }
+            .highlight-box h4 { font-size: 1.15rem; margin-bottom: 15px; }
             .highlight-box p { font-size: 0.9rem; line-height: 1.7; }
             .social-links { gap: 8px; }
             .social-links a { padding: 8px 14px; font-size: 10px; }
@@ -216,10 +284,10 @@
             .img-label { font-size: 9px; padding: 8px; }
             .otros-ruidos { margin-top: 50px; padding-top: 25px; }
             .otros-ruidos-header h3 { font-size: 1.3rem; }
-            .otros-ruidos-grid { grid-template-columns: 1fr; gap: 15px; }
             .post-footer { margin-top: 50px; padding: 25px 0; }
         }
 
+        /* RESPONSIVO PARA MÓVILES PEQUEÑOS */
         @media (max-width: 480px) {
             .post-title { font-size: 2rem; }
             .post-content > p:first-of-type::first-letter { font-size: 3rem; }
@@ -228,8 +296,10 @@
             .highlight-box h4 { font-size: 1rem; }
             .highlight-box p { font-size: 0.85rem; }
             .social-links a { padding: 8px 12px; font-size: 9px; gap: 6px; }
-            .btn-cerrar { padding: 6px 12px; font-size: 10px; }
+            .btn-cerrar { top: 15px; right: 10px; padding: 6px 12px; font-size: 10px; }
             .meta-info { font-size: 9px; }
+            .radio-volume { display: none; } /* Ocultar volumen en pantallas muy pequeñas */
+            .radio-label { font-size: 9px; }
         }
     </style>
 </head>
@@ -322,6 +392,7 @@
         </aside>
     </div>
 
+    <!-- El reproductor de radio ahora cuenta con una hoja de estilos integrada arriba -->
     <div class="radio-player" id="radioPlayer">
         <div class="radio-toggle" id="radioToggle"><i class="fas fa-chevron-up"></i></div>
         <div class="radio-content">
