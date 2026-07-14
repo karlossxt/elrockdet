@@ -14,21 +14,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <style>
+        /* PUNTO 8: CSS General y Box-sizing */
+        html,
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
         :root {
             --bg: #050505;
             --accent: #db2777;
             --white: #ffffff;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; }
 
         body {
             background-color: var(--bg);
             color: var(--white);
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            overflow-x: hidden;
-            padding-bottom: 70px;
+            padding-bottom: 90px; /* Margen para evitar que el reproductor tape el pie de página */
         }
 
         .scanlines {
@@ -39,23 +51,42 @@
             z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
         }
 
+        /* PUNTO 2: Sidebar de Spotify y Layout */
         .post-layout {
             display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 50px;
+            grid-template-columns: minmax(0, 1fr) 300px;
+            gap: 40px;
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
+        /* PUNTO 9: Limitación de ancho del Contenido Principal */
+        article {
+            width: 100%;
+            max-width: 760px;
+            margin: auto;
+        }
+
+        /* PUNTO 1: Botón CERRAR rediseñado */
         .btn-cerrar {
-            position: fixed; top: 30px; right: 30px;
-            background: var(--accent); color: white;
-            padding: 12px 20px; font-weight: 900;
-            border: 2px solid white; cursor: pointer;
-            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 2000;
+            background: var(--accent);
+            color: white;
+            padding: 10px 16px;
+            font-weight: 900;
+            border: 2px solid white;
+            cursor: pointer;
+            font-family: 'Space Mono';
+            text-transform: uppercase;
             box-shadow: 4px 4px 0px white;
             transition: 0.3s;
+            font-size: .8rem;
+            max-width: calc(100vw - 30px);
+            white-space: nowrap;
         }
 
         .btn-cerrar:hover {
@@ -70,15 +101,34 @@
             margin-bottom: 20px; display: inline-block;
         }
 
+        /* PUNTO 7: Títulos */
         .post-title {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(2.5rem, 7vw, 5rem);
-            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+            font-size: clamp(1.7rem, 8vw, 4.5rem);
+            word-break: break-word;
+            line-height: 1.0; 
+            margin-bottom: 40px; 
+            text-transform: uppercase;
         }
         .post-title span { color: var(--accent); font-style: italic; }
 
-        .img-post { border: 1px solid #222; margin: 40px 0; background: #111; position: relative; }
-        .img-post img { width: 100%; display: block; filter: contrast(1.1); transition: 0.4s; }
+        /* PUNTO 3: Imágenes Responsivas */
+        .img-post { 
+            border: 1px solid #222; 
+            margin: 40px 0; 
+            background: #111; 
+            position: relative; 
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .img-post img { 
+            display: block;
+            width: 100%; 
+            height: auto;
+            object-fit: cover;
+            filter: contrast(1.1); 
+            transition: 0.4s; 
+        }
         .img-post:hover img { filter: contrast(1) saturate(1.1); }
         .img-label {
             font-family: 'Space Mono'; font-size: 10px; color: var(--accent);
@@ -109,34 +159,41 @@
 
         .post-content strong { color: white; }
 
-        .highlight-box{
-            background:var(--accent);
-            color:#fff;
-            padding:35px 40px;
-            margin:40px 0;
-            border:2px solid white;
+        /* PUNTO 4: Highlight Box Padding Adaptable */
+        .highlight-box {
+            background: var(--accent);
+            color: #fff;
+            padding: clamp(18px, 4vw, 35px);
+            margin: 40px 0;
+            border: 2px solid white;
         }
 
-        .highlight-box h4{
-            text-transform:uppercase;
-            margin-bottom:22px;
-            font-family:'Syne';
-            font-size:1.5rem;
-            letter-spacing:2px;
+        .highlight-box h4 {
+            text-transform: uppercase;
+            margin-bottom: 22px;
+            font-family: 'Syne';
+            font-size: 1.5rem;
+            letter-spacing: 2px;
         }
 
-        .highlight-box p{
-            font-family:'Space Mono', monospace;
-            font-size:1rem;
-            line-height:1.9;
-            padding-left:8px;
-            color:#fff;
+        .highlight-box p {
+            font-family: 'Space Mono', monospace;
+            font-size: 1rem;
+            line-height: 1.9;
+            padding-left: 8px;
+            color: #fff;
         }
 
+        /* PUNTO 5: Redes Sociales */
         .social-links {
-            display: flex; flex-wrap: wrap; gap: 12px; margin: 30px 0;
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 10px; 
+            margin: 30px 0;
         }
         .social-links a {
+            flex: 1 1 180px;
+            justify-content: center;
             display: inline-flex; align-items: center; gap: 8px;
             background: #111; border: 1px solid #333; padding: 10px 18px;
             font-family: 'Space Mono'; font-size: 11px; font-weight: 700;
@@ -177,7 +234,6 @@
         }
 
         .sidebar-title i { font-size: 1rem; }
-
         .playlist-embed { border-radius: 8px; width: 100%; }
 
         .otros-ruidos { margin-top: 80px; padding-top: 40px; border-top: 2px solid #222; }
@@ -185,7 +241,8 @@
         .otros-ruidos-header h3 { font-family: 'Syne'; font-size: 2rem; font-weight: 800; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
         .otros-ruidos-line { flex: 1; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); }
 
-        .otros-ruidos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        /* Grilla de sugerencias adaptada para un flujo flexible */
+        .otros-ruidos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
 
         .otros-card { text-decoration: none; color: inherit; background: #0a0a0a; border: 1px solid #222; padding: 12px; transition: all 0.4s; display: block; }
         .otros-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 8px 25px rgba(220, 38, 38, 0.15); }
@@ -198,37 +255,104 @@
 
         .post-footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #222; text-align: center; font-family: 'Space Mono'; color: #444; }
 
-        @media (max-width: 900px) {
-            .post-layout { grid-template-columns: 1fr; gap: 30px; padding: 20px 15px; }
-            .post-sidebar { position: static; order: 2; }
-            .post-title { font-size: 2.5rem; line-height: 0.9; margin-bottom: 25px; }
-            .post-header { margin-bottom: 30px; }
+        /* Estilo base para el reproductor de radio */
+        .radio-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #0d0d0d;
+            border-top: 2px solid var(--accent);
+            z-index: 999;
+        }
+        .radio-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            gap: 15px;
+        }
+        .radio-live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #ff0000;
+            border-radius: 50%;
+        }
+        .radio-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: #fff;
+            text-transform: uppercase;
+            flex-grow: 1;
+        }
+        .radio-play-btn, .radio-close, .radio-toggle {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .radio-volume {
+            width: 80px;
+            accent-color: var(--accent);
+        }
+
+        /* MEDIA QUERIES COMBINADOS Y OPTIMIZADOS */
+        
+        /* PUNTO 2: Tablet */
+        @media (max-width: 1000px) {
+            .post-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 20px 15px;
+            }
+            .post-sidebar {
+                position: relative;
+                top: 0;
+                order: 2; /* Envía el sidebar debajo del artículo */
+            }
             .meta-info { flex-direction: column; gap: 8px; font-size: 10px; }
-            .btn-cerrar { top: 15px; right: 15px; padding: 8px 14px; font-size: 11px; }
             .post-content > p:first-of-type::first-letter { font-size: 3.5rem; margin-right: 10px; }
             .post-content p { font-size: 1rem; margin-bottom: 20px; }
-            .highlight-box { padding: 25px 20px; margin: 30px 0; }
-            .highlight-box h4 { font-size: 1.1rem; margin-bottom: 15px; }
-            .highlight-box p { font-size: 0.9rem; line-height: 1.7; }
-            .social-links { gap: 8px; }
-            .social-links a { padding: 8px 14px; font-size: 10px; }
             .img-post { margin: 25px 0; }
             .img-label { font-size: 9px; padding: 8px; }
             .otros-ruidos { margin-top: 50px; padding-top: 25px; }
             .otros-ruidos-header h3 { font-size: 1.3rem; }
-            .otros-ruidos-grid { grid-template-columns: 1fr; gap: 15px; }
             .post-footer { margin-top: 50px; padding: 25px 0; }
         }
 
+        /* PUNTO 6: Reproductor de radio móvil */
+        @media (max-width: 700px) {
+            .radio-content {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                padding: 12px;
+            }
+            .radio-label {
+                width: 100%;
+                text-align: center;
+            }
+            .radio-volume {
+                width: 100%;
+            }
+        }
+
+        /* PUNTO 1: Ajuste móvil del botón Cerrar */
+        @media (max-width: 600px) {
+            .btn-cerrar {
+                top: 10px;
+                right: 10px;
+                padding: 8px 12px;
+                font-size: .7rem;
+            }
+        }
+
         @media (max-width: 480px) {
-            .post-title { font-size: 2rem; }
             .post-content > p:first-of-type::first-letter { font-size: 3rem; }
             .post-content p { font-size: 0.95rem; }
-            .highlight-box { padding: 20px 15px; }
-            .highlight-box h4 { font-size: 1rem; }
-            .highlight-box p { font-size: 0.85rem; }
-            .social-links a { padding: 8px 12px; font-size: 9px; gap: 6px; }
-            .btn-cerrar { padding: 6px 12px; font-size: 10px; }
             .meta-info { font-size: 9px; }
         }
     </style>
@@ -246,7 +370,7 @@
             </header>
 
             <div class="img-post">
-                <img src="LINA-STONER_-1200X1200-PX.png" alt="Lina Stoner — Indestructible" loading="lazy">
+                <img src="LINA-STONER_-1200X1200-PX.png" alt="Lina Stoner — "Indestructible"" loading="lazy">
                 <div class="img-label">FOTO 01: Lina Stoner — "Indestructible"</div>
             </div>
 
@@ -330,7 +454,7 @@
                 <source src="https://stream.zeno.fm/suqqst6xaq8uv" type="audio/mpeg">
             </audio>
             <button class="radio-play-btn" id="playPauseBtn"><i class="fas fa-play"></i></button>
-            <input type="range" class="radio-volume" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+            <input class="radio-volume" type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
             <button class="radio-close" id="radioClose"><i class="fas fa-times"></i></button>
         </div>
     </div>
