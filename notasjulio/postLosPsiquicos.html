@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | Los Psíquicos — "No Miro Atrás"</title>
+    <meta name="description" content="Los Psíquicos lanzan 'No Miro Atrás', su tercer sencillo que consolida su propuesta de rock pop experimental con historieta.">
+    <meta property="og:title" content="ELROCK | Los Psíquicos — No Miro Atrás">
+    <meta property="og:description" content="Rock pop experimental, historieta y videoclips. Los Psíquicos expanden su universo narrativo.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasjulio/los-psiquicos-portada.png">
+    <link rel="icon" type="image/png" href="../logo-rock.png">
+    <link rel="stylesheet" href="../fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #0891b2;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-bottom: 70px;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%),
+                        linear-gradient(90deg, rgba(8, 145, 178, 0.02), rgba(255, 255, 255, 0.01), rgba(8, 145, 178, 0.02));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .post-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--accent); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            transition: 0.3s;
+        }
+
+        .btn-cerrar:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--accent);
+        }
+
+        .post-header { margin-bottom: 50px; text-align: left; }
+        .tag-cat {
+            background: var(--accent); color: white; padding: 5px 15px;
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px;
+            margin-bottom: 20px; display: inline-block;
+        }
+
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--accent); font-style: italic; }
+
+        .img-post { border: 1px solid #222; margin: 40px 0; background: #111; position: relative; }
+        .img-post img { width: 100%; display: block; filter: contrast(1.1); transition: 0.4s; }
+        .img-post:hover img { filter: contrast(1) saturate(1.1); }
+        .img-label {
+            font-family: 'Space Mono'; font-size: 10px; color: var(--accent);
+            text-align: right; padding: 10px; text-transform: uppercase; border-top: 1px solid #222;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .post-content p {
+            font-size: 1.2rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        .post-content > p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne', sans-serif;
+        }
+
+        .highlight-box p::first-letter {
+            font-size: inherit; float: none; margin-right: 0;
+            line-height: inherit; color: inherit; font-weight: inherit; font-family: inherit;
+        }
+
+        .post-content strong { color: white; }
+
+        .highlight-box{
+            background:var(--accent);
+            color:#fff;
+            padding:35px 40px;
+            margin:40px 0;
+            border:2px solid white;
+        }
+
+        .highlight-box h4{
+            text-transform:uppercase;
+            margin-bottom:22px;
+            font-family:'Syne';
+            font-size:1.5rem;
+            letter-spacing:2px;
+        }
+
+        .highlight-box p{
+            font-family:'Space Mono', monospace;
+            font-size:1rem;
+            line-height:1.9;
+            padding-left:8px;
+            color:#fff;
+        }
+
+        .social-links {
+            display: flex; flex-wrap: wrap; gap: 12px; margin: 30px 0;
+        }
+        .social-links a {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #111; border: 1px solid #333; padding: 10px 18px;
+            font-family: 'Space Mono'; font-size: 11px; font-weight: 700;
+            color: white; text-decoration: none; text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .social-links a:hover { border-color: var(--accent); background: #1a1a1a; }
+        .social-links a i { color: var(--accent); }
+
+        .post-sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar-section {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            padding: 20px;
+        }
+
+        .sidebar-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #222;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-title i { font-size: 1rem; }
+
+        .playlist-embed { border-radius: 8px; width: 100%; }
+
+        .otros-ruidos { margin-top: 80px; padding-top: 40px; border-top: 2px solid #222; }
+        .otros-ruidos-header { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; }
+        .otros-ruidos-header h3 { font-family: 'Syne'; font-size: 2rem; font-weight: 800; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+        .otros-ruidos-line { flex: 1; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); }
+
+        .otros-ruidos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+
+        .otros-card { text-decoration: none; color: inherit; background: #0a0a0a; border: 1px solid #222; padding: 12px; transition: all 0.4s; display: block; }
+        .otros-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 8px 25px rgba(8, 145, 178, 0.15); }
+        .otros-card-img { width: 100%; height: 160px; overflow: hidden; margin-bottom: 12px; }
+        .otros-card-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
+        .otros-card:hover .otros-card-img img { filter: grayscale(0); transform: scale(1.05); }
+        .otros-card-tag { font-family: 'Space Mono'; font-size: 9px; font-weight: 900; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 8px; letter-spacing: 1px; }
+        .otros-card-title { font-family: 'Syne'; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 8px; color: white; }
+        .otros-card-excerpt { font-family: 'Space Mono'; font-size: 10px; color: #555; line-height: 1.4; }
+
+        .post-footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #222; text-align: center; font-family: 'Space Mono'; color: #444; }
+
+        @media (max-width: 900px) {
+            .post-layout { grid-template-columns: 1fr; gap: 30px; padding: 20px 15px; }
+            .post-sidebar { position: static; order: 2; }
+            .post-title { font-size: 2.5rem; line-height: 0.9; margin-bottom: 25px; }
+            .post-header { margin-bottom: 30px; }
+            .meta-info { flex-direction: column; gap: 8px; font-size: 10px; }
+            .btn-cerrar { top: 15px; right: 15px; padding: 8px 14px; font-size: 11px; }
+            .post-content > p:first-of-type::first-letter { font-size: 3.5rem; margin-right: 10px; }
+            .post-content p { font-size: 1rem; margin-bottom: 20px; }
+            .highlight-box { padding: 25px 20px; margin: 30px 0; }
+            .highlight-box h4 { font-size: 1.1rem; margin-bottom: 15px; }
+            .highlight-box p { font-size: 0.9rem; line-height: 1.7; }
+            .social-links { gap: 8px; }
+            .social-links a { padding: 8px 14px; font-size: 10px; }
+            .img-post { margin: 25px 0; }
+            .img-label { font-size: 9px; padding: 8px; }
+            .otros-ruidos { margin-top: 50px; padding-top: 25px; }
+            .otros-ruidos-header h3 { font-size: 1.3rem; }
+            .otros-ruidos-grid { grid-template-columns: 1fr; gap: 15px; }
+            .post-footer { margin-top: 50px; padding: 25px 0; }
+        }
+
+        @media (max-width: 480px) {
+            .post-title { font-size: 2rem; }
+            .post-content > p:first-of-type::first-letter { font-size: 3rem; }
+            .post-content p { font-size: 0.95rem; }
+            .highlight-box { padding: 20px 15px; }
+            .highlight-box h4 { font-size: 1rem; }
+            .highlight-box p { font-size: 0.85rem; }
+            .social-links a { padding: 8px 12px; font-size: 9px; gap: 6px; }
+            .btn-cerrar { padding: 6px 12px; font-size: 10px; }
+            .meta-info { font-size: 9px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <div class="post-layout">
+        <article>
+            <header class="post-header">
+                <span class="tag-cat">ESCENA NACIONAL</span>
+                <h1 class="post-title">LOS PSÍQUICOS<br><span>"No Miro Atrás"</span></h1>
+            </header>
+
+            <div class="img-post">
+                <img src="lospsiquicos.png" alt="Los Psíquicos — No Miro Atrás" loading="lazy">
+                <div class="img-label">FOTO 01: Los Psíquicos — "No Miro Atrás"</div>
+            </div>
+
+            <div class="meta-info">
+                <span>EL ROCK DE TODOS LOS DÍAS</span>
+                <span>JUNIO, 2026</span>
+                <span>ESCENA NACIONAL</span>
+            </div>
+
+            <div class="post-content">
+                <p><strong>"No Miro Atrás"</strong> es el tercer lanzamiento de <strong>Los Psíquicos</strong>, marcando un nuevo avance en la consolidación artística del proyecto. El sencillo da continuidad al crecimiento que la banda comenzó a capitalizar con <strong>"La Crisis"</strong>, tema que logró presencia en <strong>Reactor 105.7 FM</strong> y recepción favorable en medios especializados de México y España.</p>
+
+                <div class="img-post">
+                    <img src="lospsiquicosbanda.png" alt="Los Psíquicos banda" loading="lazy">
+                    <div class="img-label">FOTO 02: Los Psíquicos</div>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>LA HISTORIETA MUSICAL</h4>
+                    <p>La historieta musical de Los Psíquicos narra la historia de un niño que viaja entre el pasado y el presente. En su camino encuentra recuerdos, tecnología y seres fantásticos. Esta historia se cuenta a través de canciones, videoclips y una tira cómica. Para cambiar su mundo, el personaje primero debe salvarse a sí mismo.</p>
+                </div>
+
+                <p>El videoclip de <strong>"La Crisis"</strong>, desarrollado en formato videocómic, superó las <strong>240 mil visualizaciones</strong> en YouTube desde el mes de marzo, lo que confirma una conexión orgánica con la audiencia y fortalece una propuesta audiovisual con identidad propia.</p>
+
+                <p>Ese crecimiento también se refleja en el desempeño sostenido del proyecto en redes sociales y plataformas digitales, con un aumento orgánico de escuchas mensuales en países como España, Chile, Colombia, Argentina y Estados Unidos.</p>
+
+                <p>Con este su tercer sencillo, la agrupación refuerza una línea creativa definida dentro del <strong>rock pop experimental</strong>, con una narrativa que articula lo psicológico y lo digital como sello del proyecto. Este lanzamiento forma parte de los pasos previos a la edición de un disco de 10 temas en 2026.</p>
+
+                <p><strong>"No Miro Atrás"</strong> ya está disponible en plataformas digitales y estará acompañado por un videoclip dirigido por la casa productora <strong>Pirotecnia Films</strong>, con trayectoria en trabajos para artistas como Maldita Vecindad, Peso Pluma, Santa Fe Klan, Fakir, Lupillo Rivera, B-Real y Snoop Dogg.</p>
+
+                <p><strong>Escucha y mira "No Miro Atrás":</strong></p>
+
+                <div class="social-links">
+                    <a href="https://www.youtube.com/watch?v=iaX2_bhx9Lw" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+                </div>
+            </div>
+
+            <section class="otros-ruidos">
+                <div class="otros-ruidos-header">
+                    <h3>OTROS RUIDOS</h3>
+                    <span class="otros-ruidos-line"></span>
+                </div>
+                <div class="otros-ruidos-grid">
+                    <a href="postAsedio.html" class="otros-card">
+                        <div class="otros-card-img"><img src="sedasedioportada.jpg" alt="Asedio"></div>
+                        <span class="otros-card-tag">THRASH METAL</span>
+                        <h4 class="otros-card-title">ASEDIO: Sed de Aniquilación</h4>
+                        <p class="otros-card-excerpt">Pura catarsis desde Ecatepec.</p>
+                    </a>
+                    <a href="postArusal.html" class="otros-card">
+                        <div class="otros-card-img"><img src="REVERBERACIÓN.png" alt="Arusal"></div>
+                        <span class="otros-card-tag">ROCK</span>
+                        <h4 class="otros-card-title">ARUSAL: Reverberación</h4>
+                        <p class="otros-card-excerpt">Arpegios y solos caóticos.</p>
+                    </a>
+                    <a href="postRebecaPal.html" class="otros-card">
+                        <div class="otros-card-img"><img src="rebecaportada.jpg" alt="Rebeca Pal"></div>
+                        <span class="otros-card-tag">CULTURA</span>
+                        <h4 class="otros-card-title">REBECA PAL: Vorágine</h4>
+                        <p class="otros-card-excerpt">La nueva novela de la escritora mexicana.</p>
+                    </a>
+                </div>
+            </section>
+
+            <footer class="post-footer">
+                <p>RESEÑA POR: EL ROCK DE TODOS LOS DÍAS</p>
+                <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            </footer>
+        </article>
+
+        <aside class="post-sidebar">
+            <div class="sidebar-section">
+                <h4 class="sidebar-title"><i class="fab fa-spotify"></i> PLAYLIST DE LA SEMANA</h4>
+                <iframe class="playlist-embed"
+                    src="https://open.spotify.com/embed/playlist/153Gvei76OaDP0kMY75GQz?utm_source=generator&theme=0"
+                    height="380" frameBorder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+                </iframe>
+            </div>
+        </aside>
+    </div>
+
+    <div class="radio-player" id="radioPlayer">
+        <div class="radio-toggle" id="radioToggle"><i class="fas fa-chevron-up"></i></div>
+        <div class="radio-content">
+            <div class="radio-live-dot"></div>
+            <span class="radio-label">EN VIVO — EL ROCK DE TODOS LOS DÍAS</span>
+            <audio id="zenoAudio" preload="none">
+                <source src="https://stream.zeno.fm/suqqst6xaq8uv" type="audio/mpeg">
+            </audio>
+            <button class="radio-play-btn" id="playPauseBtn"><i class="fas fa-play"></i></button>
+            <input type="range" class="radio-volume" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+            <button class="radio-close" id="radioClose"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <script src="../main.js"></script>
+</body>
+</html>
