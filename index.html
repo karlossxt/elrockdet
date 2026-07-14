@@ -58,6 +58,15 @@
     }
     </script>
     <style>
+        /* Definición de variables globales por seguridad */
+        :root {
+            --red: #df2525;
+            --green: #00ff00;
+            --cyan: #00ffff;
+            --purple: #8a2be2;
+            --amber: #ffbf00;
+        }
+
         body {
             background-color: #1a1a1a;
             display: flex;
@@ -73,63 +82,64 @@
             border-right: 1px solid #222;
         }
 
-        /* DECIBELES GRID */
-.decibels-grid {
-    display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    padding: 20px 40px;
-    background: #0a0a0a;
-    border-bottom: 1px solid #333;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-.decibels-grid::-webkit-scrollbar { display: none; }
+        /* DECIBELES GRID (Si vas a usar .decibels-grid en lugar de .decibels-strip) */
+        .decibels-grid {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 20px 40px;
+            background: #0a0a0a;
+            border-bottom: 1px solid #333;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .decibels-grid::-webkit-scrollbar { display: none; }
 
-.decibels-card {
-    flex: 0 0 200px;
-    text-decoration: none;
-    color: inherit;
-    background: #111;
-    border: 1px solid #222;
-    overflow: hidden;
-    transition: 0.3s;
-}
-.decibels-card:hover { border-color: var(--green); transform: translateY(-3px); }
-.decibels-card img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    filter: grayscale(1);
-    transition: 0.4s;
-}
-.decibels-card:hover img { filter: grayscale(0); }
-.decibels-card-meta { padding: 10px 12px; }
-.decibels-card-song {
-    font-family: 'Space Mono';
-    font-weight: 700;
-    font-size: 11px;
-    color: white;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 3px;
-}
-.decibels-card-artist {
-    font-family: 'Space Mono';
-    font-size: 9px;
-    color: #777;
-    text-transform: uppercase;
-}
-.decibels-card:hover .decibels-card-song { color: var(--green); }
+        .decibels-card {
+            flex: 0 0 200px;
+            text-decoration: none;
+            color: inherit;
+            background: #111;
+            border: 1px solid #222;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .decibels-card:hover { border-color: var(--green); transform: translateY(-3px); }
+        .decibels-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            filter: grayscale(1);
+            transition: 0.4s;
+        }
+        .decibels-card:hover img { filter: grayscale(0); }
+        .decibels-card-meta { padding: 10px 12px; }
+        .decibels-card-song {
+            font-family: 'Space Mono';
+            font-weight: 700;
+            font-size: 11px;
+            color: white;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 3px;
+        }
+        .decibels-card-artist {
+            font-family: 'Space Mono';
+            font-size: 9px;
+            color: #777;
+            text-transform: uppercase;
+        }
+        .decibels-card:hover .decibels-card-song { color: var(--green); }
 
-/* MOBILE DECIBELES */
-@media (max-width: 768px) {
-    .decibels-grid { padding: 15px 15px; gap: 10px; }
-    .decibels-card { flex: 0 0 150px; }
-    .decibels-card img { height: 110px; }
-    .decibels-card-song { font-size: 10px; }
-}
+        /* MOBILE DECIBELES */
+        @media (max-width: 768px) {
+            .decibels-grid { padding: 15px 15px; gap: 10px; }
+            .decibels-card { flex: 0 0 150px; }
+            .decibels-card img { height: 110px; }
+            .decibels-card-song { font-size: 10px; }
+        }
 
+        .db-item { display: flex; gap: 10px; text-decoration: none; color: inherit; padding: 5px; border: 1px solid transparent; transition: 0.3s; }
         .db-item:hover { opacity: 1; background: #111; border: 1px solid #333; }
         .db-item img { width: 60px; height: 60px; object-fit: cover; filter: grayscale(100%); transition: 0.3s; border: 1px solid #333; }
         .db-item:hover img { filter: grayscale(0%); border-color: var(--green); }
@@ -451,51 +461,50 @@
         </div>
     </section>
 
-    <!-- NUEVOS DECIBELES — SECCIÓN DEDICADA -->
-  <!-- NUEVOS DECIBELES -->
-<div class="decibels-strip">
-    <div class="decibels-label">
-        <i class="fas fa-headphones"></i>
-        NUEVOS<br>DECIBELES
+    <!-- NUEVOS DECIBELES -->
+    <div class="decibels-strip">
+        <div class="decibels-label">
+            <i class="fas fa-headphones"></i>
+            NUEVOS<br>DECIBELES
+        </div>
+        <div class="decibels-track-container">
+            <a href="https://open.spotify.com/intl-es/album/03SpyzWg7P2CS68ENL0kdT" target="_blank" class="db-item">
+                <img src="https://raw.githubusercontent.com/karlossxt/elrockdet/main/notasjulio/REVERBERACI%C3%93N.png" alt="Arusal - Reverberación" loading="lazy">
+                <div class="db-meta">
+                    <span class="db-song">REVERBERACIÓN</span>
+                    <span class="db-artist">ARUSAL</span>
+                </div>
+            </a>
+            <a href="https://www.youtube.com/watch?v=wjCProX4Yvk" target="_blank" class="db-item">
+                <img src="https://raw.githubusercontent.com/karlossxt/elrockdet/main/notasjulio/sedasedioportada.jpg" alt="Asedio - Sed de Aniquilación" loading="lazy">
+                <div class="db-meta">
+                    <span class="db-song">SED DE ANIQUILACIÓN</span>
+                    <span class="db-artist">ASEDIO</span>
+                </div>
+            </a>
+            <a href="https://open.spotify.com/intl-es/album/1mkFlX43ECDAzPDAW4Asy5" target="_blank" class="db-item">
+                <img src="https://raw.githubusercontent.com/karlossxt/elrockdet/main/notasjulio/dakuriportada.jpg" alt="Dakuri - Voices" loading="lazy">
+                <div class="db-meta">
+                    <span class="db-song">VOICES</span>
+                    <span class="db-artist">DAKURI</span>
+                </div>
+            </a>
+            <a href="https://open.spotify.com/intl-es/album/5zH8JdkB5pT4veHTTZ1bMH" target="_blank" class="db-item">
+                <img src="https://raw.githubusercontent.com/karlossxt/elrockdet/main/notasjulio/deerportada.jpg" alt="Deer MX - ITZCUINTLAN" loading="lazy">
+                <div class="db-meta">
+                    <span class="db-song">ITZCUINTLAN</span>
+                    <span class="db-artist">DEER MX</span>
+                </div>
+            </a>
+            <a href="https://open.spotify.com/intl-es/album/2wWoEBVms0N1uBvdKuIyhp" target="_blank" class="db-item">
+                <img src="https://raw.githubusercontent.com/karlossxt/elrockdet/main/notasjulio/LINA-STONER_-1200X1200-PX.png" alt="Lina Stoner - Indestructible" loading="lazy">
+                <div class="db-meta">
+                    <span class="db-song">INDESTRUCTIBLE</span>
+                    <span class="db-artist">LINA STONER</span>
+                </div>
+            </a>
+        </div>
     </div>
-    <div class="decibels-track-container">
-        <a href="https://open.spotify.com/intl-es/album/03SpyzWg7P2CS68ENL0kdT" target="_blank" class="db-item">
-            <img src="https://raw.githubusercontent.com/karlossxt/elrockdet/main/notasjulio/REVERBERACI%C3%93N.png" alt="Arusal - Reverberación" loading="lazy">
-            <div class="db-meta">
-                <span class="db-song">REVERBERACIÓN</span>
-                <span class="db-artist">ARUSAL</span>
-            </div>
-        </a>
-        <a href="https://www.youtube.com/watch?v=wjCProX4Yvk" target="_blank" class="db-item">
-            <img src="https://raw.githubusercontent.com/karlossxt/elrockdet/main/notasjulio/sedasedioportada.jpg" alt="Asedio - Sed de Aniquilación" loading="lazy">
-            <div class="db-meta">
-                <span class="db-song">SED DE ANIQUILACIÓN</span>
-                <span class="db-artist">ASEDIO</span>
-            </div>
-        </a>
-        <a href="https://open.spotify.com/intl-es/album/1mkFlX43ECDAzPDAW4Asy5" target="_blank" class="db-item">
-            <img src="https://raw.githubusercontent.com/karlossxt/elrockdet/main/notasjulio/dakuriportada.jpg" alt="Dakuri - Voices" loading="lazy">
-            <div class="db-meta">
-                <span class="db-song">VOICES</span>
-                <span class="db-artist">DAKURI</span>
-            </div>
-        </a>
-        <a href="https://open.spotify.com/intl-es/album/5zH8JdkB5pT4veHTTZ1bMH" target="_blank" class="db-item">
-            <img src="https://raw.githubusercontent.com/karlossxt/elrockdet/main/notasjulio/deerportada.jpg" alt="Deer MX - ITZCUINTLAN" loading="lazy">
-            <div class="db-meta">
-                <span class="db-song">ITZCUINTLAN</span>
-                <span class="db-artist">DEER MX</span>
-            </div>
-        </a>
-        <a href="https://open.spotify.com/intl-es/album/2wWoEBVms0N1uBvdKuIyhp" target="_blank" class="db-item">
-            <img src="https://raw.githubusercontent.com/karlossxt/elrockdet/main/notasjulio/LINA-STONER_-1200X1200-PX.png" alt="Lina Stoner - Indestructible" loading="lazy">
-            <div class="db-meta">
-                <span class="db-song">INDESTRUCTIBLE</span>
-                <span class="db-artist">LINA STONER</span>
-            </div>
-        </a>
-    </div>
-</div>
     <div class="section-divider">/// EDITORIAL ///</div>
 
     <!-- EDITORIAL / MANIFIESTO -->
@@ -559,21 +568,21 @@
                 <h4 class="card-title">L.C.D. — Las Cuerdas Delirantes estrenan "De Mi"</h4>
                 <p class="card-excerpt">Rock crudo de la vieja escuela bajo el sello Discos Denver.</p>
             </a>
-       <a href="notasjulio/postDeerMX.html" class="card">
-    <div class="card-img"><img src="notasjulio/deerportada.jpg" alt="Deer MX" loading="lazy"></div>
-    <span class="card-tag" style="color:var(--red);">ELECTRÓNICA // CDMX</span>
-    <h4 class="card-title">DEER MX: ITZCUINTLAN - Primer EP completamente en español</h4>
-    <p class="card-excerpt">Estreno.</p>
-</a>
-<a href="notasjulio/postLosPsiquicos.html" class="card">
-    <div class="card-img"><img src="notasjulio/lospsiquicos.png" alt="Los Psíquicos" loading="lazy"></div>
-    <span class="card-tag" style="color:var(--red);">ROCK POP // MÉXICO</span>
-    <h4 class="card-title">LOS PSÍQUICOS: No Miro Atrás</h4>
-    <p class="card-excerpt">Rock pop experimental con historieta.</p>
-</a>
+            <a href="notasjulio/postDeerMX.html" class="card">
+                <div class="card-img"><img src="notasjulio/deerportada.jpg" alt="Deer MX" loading="lazy"></div>
+                <span class="card-tag" style="color:var(--red);">ELECTRÓNICA // CDMX</span>
+                <h4 class="card-title">DEER MX: ITZCUINTLAN - Primer EP completamente en español</h4>
+                <p class="card-excerpt">Estreno.</p>
+            </a>
+            <a href="notasjulio/postLosPsiquicos.html" class="card">
+                <div class="card-img"><img src="notasjulio/lospsiquicos.png" alt="Los Psíquicos" loading="lazy"></div>
+                <span class="card-tag" style="color:var(--red);">ROCK POP // MÉXICO</span>
+                <h4 class="card-title">LOS PSÍQUICOS: No Miro Atrás</h4>
+                <p class="card-excerpt">Rock pop experimental con historieta.</p>
+            </a>
         </section>
 
-        <div class="ruido-wrapper">
+        <!-- Se eliminó la etiqueta de apertura ruido-wrapper duplicada para prevenir errores en la maquetación -->
         <div class="ruido-wrapper">
             <div class="ruido-fondo-rojo"></div>
             <section class="ruido-box-white">
