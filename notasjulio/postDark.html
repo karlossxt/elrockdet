@@ -52,6 +52,25 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* Contenedor responsivo para el video de YouTube */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+    margin: 40px 0;
+    border: 1px solid #222;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
         body {
             background-color: var(--bg);
@@ -317,6 +336,18 @@
                     <a href="https://www.instagram.com/darkshadowband" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
                 </div>
             </div>
+
+            <!-- Video Oficial de YouTube -->
+<div class="video-container">
+    <iframe 
+        src="https://youtube.com" 
+        title="Dark Shadow - Through Blood or Glory [Official Visualizer]" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+</div>
 
             <section class="otros-ruidos">
                 <div class="otros-ruidos-header">
