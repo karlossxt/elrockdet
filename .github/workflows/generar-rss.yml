@@ -1,0 +1,19 @@
+name: Generar Feed RSS
+on:
+  push:
+    branches:
+      - main # Se ejecuta cuando subes cambios a la rama principal
+
+jobs:
+  rss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Crear RSS desde archivos HTML
+        uses: codesandtags/rss-generator-action@main
+        with:
+          # Escanea todas tus carpetas de notas en HTML
+          search-path: './' 
+          output-name: 'feed.xml'
