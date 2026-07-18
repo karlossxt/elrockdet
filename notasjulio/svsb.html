@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYTEMOS | El Censo del Crimen: Batman vs Spider-Man</title>
+
+    <!-- SEO Básico -->
+    <meta name="description" content="¿Batman o Spider-Man? Descubrimos cuál de los dos héroes tiene más enemigos analizando décadas de cómics y bases de datos de DC y Marvel.">
+    <link rel="canonical" href="https://elrockdetodoslosdias.com.mx/notasjulio/censo-del-crimen.html">
+    <meta property="article:published_time" content="2026-07-17">
+    <link rel="alternate" type="application/rss+xml" title="Feed RSS de El Rock de todos los Días" href="/feed.xml" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="fb:app_id" content="1028340583488019">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ELROCK | El Censo del Crimen: Batman vs Spider-Man">
+    <meta property="og:description" content="Analizamos los números detrás de las galerías de villanos más icónicas del cómic.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasjulio/batman-vs-spiderman-hero.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasjulio/censo-del-crimen.html">
+    <meta property="og:site_name" content="ELROCK">
+    <meta property="og:locale" content="es_MX">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ELROCK | Batman vs Spider-Man: Guerra de Villanos">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasjulio/batman-vs-spiderman-hero.jpg">
+
+    <!-- Iconos y Estilos -->
+    <link rel="icon" type="image/png" href="../logo-rock.png">
+    <link rel="stylesheet" href="../fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        :root {
+            --bg: #080808;
+            --accent: #f59e0b;
+            --spidey: #ef4444;
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; }
+
+        .scanlines {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(245, 158, 11, 0.03) 50%, rgba(0, 0, 0, 0.2) 50%);
+            z-index: 1000; background-size: 100% 3px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--accent); color: black;
+            padding: 12px 20px; font-weight: 900; border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        .post-header { margin-bottom: 60px; border-bottom: 5px solid var(--spidey); padding-bottom: 30px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 7vw, 5rem); line-height: 0.9; margin: 10px 0; text-transform: uppercase; }
+        .post-title span { color: var(--accent); }
+
+        .img-hero { border: 6px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
+        .img-hero img { width: 100%; display: block; filter: saturate(1.2); }
+
+        .meta-strip {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 20px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .view-counter {
+            display: inline-flex; align-items: center; gap: 5px;
+            color: #888;
+        }
+        .view-counter i { font-size: 13px; }
+        #view-counter { color: var(--accent); font-weight: 700; }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content h3 { font-family: 'Syne'; color: var(--accent); text-transform: uppercase; margin: 40px 0 20px 0; font-size: 1.8rem; }
+        .content p { font-size: 1.2rem; color: #ccc; margin-bottom: 30px; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .data-box {
+            background: #111; border: 1px solid #333; padding: 30px; margin: 40px 0;
+            border-left: 10px solid var(--accent);
+        }
+        .comp-table { width: 100%; font-family: 'Space Mono'; border-collapse: collapse; font-size: 13px; }
+        .comp-table th { color: var(--accent); text-align: left; padding-bottom: 10px; border-bottom: 1px solid #444; }
+        .comp-table td { padding: 12px 0; border-bottom: 1px solid #222; }
+        .comp-table tr td:last-child { color: var(--spidey); text-align: right; }
+
+        .face-to-face {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #333;
+            margin: 20px 0; border: 1px solid #333;
+        }
+        .face-cell { background: #080808; padding: 12px; font-family: 'Space Mono'; font-size: 12px; }
+        .face-header { background: #111; font-weight: 900; color: var(--accent); text-align: center; text-transform: uppercase; }
+
+        .sidebar-x {
+            background: #0a0a0a; border: 1px solid var(--accent);
+            padding: 25px; position: sticky; top: 100px;
+        }
+        .sidebar-x h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; }
+        .intel-card { margin-bottom: 20px; border-bottom: 1px solid #222; padding-bottom: 10px; font-size: 12px; font-family: 'Space Mono'; }
+        .intel-card b { display: block; color: var(--white); margin-bottom: 5px; text-transform: uppercase; }
+
+        .post-footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid #222; text-align: center; }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2.5rem; color: var(--accent); }
+
+        @media (max-width: 900px) { .main-layout { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.location.href='index.html'">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">BYTEMOS // DOSSIER ESPECIAL // EL CENSO DEL CRIMEN</span>
+            <h1 class="post-title">BATMAN vs SPIDER-MAN:<br><span>¿QUIÉN TIENE MÁS ENEMIGOS?</span></h1>
+        </header>
+
+        <div class="img-hero">
+            <img src="batman-vs-spiderman-hero.jpg" alt="Batman vs Spider-Man Censo del Crimen">
+        </div>
+
+        <div class="meta-strip">
+            <span>REGISTRO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>DATA: MARVEL / DC WIKIS</span>
+            <span class="view-counter"><i class="fas fa-eye"></i> <span id="view-counter">...</span></span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>¿Quién atrae más problemas? Salvar el mundo parece tener un precio. Cuanto más famoso es un superhéroe, más enemigos aparecen dispuestos a derrotarlo. Durante décadas, Batman y Spider-Man han construido dos de las galerías de villanos más emblemáticas de la historia del cómic. Ambos cuentan con adversarios inolvidables, historias legendarias y enfrentamientos que definieron generaciones enteras de lectores.</p>
+                    
+                    <p>Pero dejando de lado la popularidad por un momento, surge una pregunta interesante: ¿Cuál de los dos ha acumulado más enemigos a lo largo de su carrera? Para responderla revisamos información de comunidades especializadas como Marvel Database, DC Wiki y Comic Vine, además de registros históricos publicados por ambas editoriales.</p>
+
+                    <div class="data-box">
+                        <h3 style="margin-top:0;">📊 LOS NÚMEROS</h3>
+                        <table class="comp-table">
+                            <thead>
+                                <tr><th>CATEGORÍA</th><th>BATMAN</th><th>SPIDER-MAN</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>DEBUT</td><td>1939</td><td>1962</td></tr>
+                                <tr><td>AÑOS DE HISTORIA</td><td>87</td><td>64</td></tr>
+                                <tr><td>VILLANOS CLÁSICOS</td><td>~18</td><td>~16</td></tr>
+                                <tr><td>ENEMIGOS RECURRENTES</td><td>170–210</td><td>250–300</td></tr>
+                                <tr><td>ANTAGONISTAS REGISTRADOS</td><td>Más de 800</td><td>Más de 1,200</td></tr>
+                            </tbody>
+                        </table>
+                        <p style="font-size: 14px; margin-top: 15px; color: var(--accent); font-weight: 700;">🏆 Ganador por cantidad: Spider-Man</p>
+                    </div>
+
+                    <p>A pesar de haber aparecido 23 años después que Batman, Peter Parker ha terminado enfrentándose a un número considerablemente mayor de enemigos.</p>
+
+                    <h3>🧬 ¿Por qué Spider-Man tiene tantos villanos?</h3>
+                    <p>La explicación está en la forma en que Marvel desarrolló al personaje. Durante las décadas de los setenta, ochenta y noventa, Spider-Man protagonizó varias series simultáneas como Amazing Spider-Man, Spectacular Spider-Man, Web of Spider-Man, Friendly Neighborhood Spider-Man y Peter Parker: Spider-Man.</p>
+                    
+                    <div class="img-hero" style="border-width: 2px; margin: 30px 0;">
+                        <img src="spiderman.jpg" alt="Villanos de NY">
+                    </div>
+
+                    <p>Cada nueva colección necesitaba presentar amenazas inéditas, lo que provocó una enorme expansión de su galería de villanos. Además, muchos de ellos nacen a partir de experimentos científicos, mutaciones, accidentes tecnológicos o simbiontes extraterrestres, recursos narrativos que prácticamente no tienen límite.</p>
+
+                    <h3>🦇 Gotham: donde los villanos nunca desaparecen</h3>
+                    <p>Batman siguió un camino muy distinto. La mayoría de sus enemigos permanecen ligados a Gotham City, regresando una y otra vez desde lugares como el Asilo Arkham o Blackgate. En lugar de crear decenas de nuevos criminales cada año, DC optó por profundizar en personajes ya existentes.</p>
+                    
+                    <div class="img-hero" style="border-width: 2px; margin: 30px 0;">
+                        <img src="batman.jpg" alt="Villanos de Gotham">
+                    </div>
+
+                    <p>El Joker, Two-Face, Scarecrow o Mr. Freeze no solo representan amenazas físicas: cada uno simboliza una obsesión, un trauma o un aspecto de la propia personalidad de Batman. Por eso muchos especialistas consideran que la galería del Caballero Oscuro es una de las mejor construidas de toda la ficción.</p>
+
+                    <h3>⚔️ Cara a cara</h3>
+                    <p>Aunque pertenecen a universos completamente distintos, ambos héroes cuentan con rivales que cumplen funciones similares dentro de sus historias:</p>
+
+                    <div class="face-to-face">
+                        <div class="face-cell face-header">BATMAN</div><div class="face-cell face-header">SPIDER-MAN</div>
+                        <div class="face-cell">Joker</div><div class="face-cell">Green Goblin</div>
+                        <div class="face-cell">Two-Face</div><div class="face-cell">Venom</div>
+                        <div class="face-cell">Bane</div><div class="face-cell">Carnage</div>
+                        <div class="face-cell">Riddler</div><div class="face-cell">Mysterio</div>
+                        <div class="face-cell">Scarecrow</div><div class="face-cell">Doctor Octopus</div>
+                        <div class="face-cell">Carmine Falcone</div><div class="face-cell">Kingpin</div>
+                        <div class="face-cell">Catwoman</div><div class="face-cell">Black Cat</div>
+                    </div>
+
+                    <h3>🏆 ¿Quién tiene los villanos más famosos?</h3>
+                    <p>Aquí la respuesta cambia. Spider-Man puede presumir una enorme cantidad de enemigos, pero Batman posee posiblemente la colección de villanos más influyente de la cultura popular. Nombres como Joker, Harley Quinn, Bane, Two-Face, Penguin o Poison Ivy han trascendido los cómics para protagonizar películas y videojuegos de éxito mundial.</p>
+
+                    <h3>🤓 Dato curioso</h3>
+                    <p>Batman conserva varios villanos creados durante los años cuarenta que prácticamente desaparecieron del canon moderno. Personajes como The Penny Plunderer, The Eraser o Doctor Death forman parte de la enorme historia del Caballero Oscuro, aunque hoy rara vez aparecen. Spider-Man, en cambio, continúa incorporando antagonistas de manera constante, por lo que su lista sigue creciendo año tras año.</p>
+
+                    <h3>🎭 El veredicto</h3>
+                    <p>Si hablamos únicamente de números, Spider-Man gana. Su universo ha generado una cantidad impresionante de enemigos durante más de seis décadas. Sin embargo, si el criterio es la calidad, la influencia cultural o el impacto narrativo, Batman sigue siendo un referente difícil de superar.</p>
+                    
+                    <p style="text-align: center; font-weight: 900; color: var(--accent); border: 1px solid #333; padding: 30px; margin-top: 50px;">
+                        ¿Con cuál te quedas?<br><br>
+                        🦇 Batman y los criminales de Gotham<br>o<br>🕷️ Spider-Man y las amenazas de Marvel
+                    </p>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-x">
+                    <h4>DETALLES TÉCNICOS</h4>
+                    
+                    <div class="intel-card">
+                        <b>RÉCORD TOTAL</b>
+                        Spider-Man supera los 1,200 antagonistas registrados en bases de datos.
+                    </div>
+
+                    <div class="intel-card">
+                        <b>LONGEVIDAD</b>
+                        Batman lleva 87 años patrullando, 23 años más que Peter Parker.
+                    </div>
+
+                    <div class="intel-card">
+                        <b>ICONS</b>
+                        Muchos villanos de Batman han ganado premios internacionales y películas en solitario.
+                    </div>
+
+                    <div class="intel-card">
+                        <b>MULTIVERSO</b>
+                        Las variantes temporales y los simbiontes son la mayor fuente de nuevos enemigos para Spidey.
+                    </div>
+
+                    <button style="width:100%; background:var(--accent); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">LEER MÁS CÓMICS</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>BYTEMOS // 2026</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // CULTURA GEEK</p>
+        </footer>
+
+    </article>
+
+    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>
