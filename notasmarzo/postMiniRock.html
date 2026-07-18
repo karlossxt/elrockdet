@@ -163,7 +163,14 @@
             .main-layout { grid-template-columns: 1fr; }
             .related-archive { flex-direction: column; text-align: center; }
         }
-    </style>
+    
+        .view-counter {
+            display: inline-flex; align-items: center; gap: 5px;
+            color: #888;
+        }
+        .view-counter i { font-size: 13px; }
+        #view-counter { color: var(--accent); font-weight: 700; }
+        </style>
 </head>
 <body>
 
@@ -190,7 +197,9 @@
             <span>ARCHIVO: EL ROCK DE TODOS LOS DÍAS</span>
             <span>SEDE: QUARRY STUDIOS</span>
             <span>STATUS: CAMBIO DE SEDE</span>
-        </div>
+        
+                <span class="view-counter"><i class="fas fa-eye"></i> <span id="view-counter">...</span></span>
+            </div>
 
         <div class="main-layout">
             

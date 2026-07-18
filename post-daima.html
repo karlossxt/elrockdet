@@ -109,7 +109,14 @@
             .main-layout { grid-template-columns: 1fr; }
             .post-title { font-size: 3rem; }
         }
-    </style>
+    
+        .view-counter {
+            display: inline-flex; align-items: center; gap: 5px;
+            color: #888;
+        }
+        .view-counter i { font-size: 13px; }
+        #view-counter { color: var(--accent); font-weight: 700; }
+        </style>
 </head>
 <body>
 
@@ -132,7 +139,9 @@
             <span>ARCHIVO: EL ROCK DE TODOS LOS DÍAS</span>
             <span>AUTOR: AKIRA TORIYAMA</span>
             <span>FECHA: OCTUBRE 2025</span>
-        </div>
+        
+                <span class="view-counter"><i class="fas fa-eye"></i> <span id="view-counter">...</span></span>
+            </div>
 
         <div class="main-layout">
             

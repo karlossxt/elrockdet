@@ -161,7 +161,14 @@
             .post-header { border-left-width: 5px; padding-left: 15px; }
             .credits-box { padding: 20px; }
         }
-    </style>
+    
+        .view-counter {
+            display: inline-flex; align-items: center; gap: 5px;
+            color: #888;
+        }
+        .view-counter i { font-size: 13px; }
+        #view-counter { color: var(--accent); font-weight: 700; }
+        </style>
 </head>
 <body>
 
@@ -183,7 +190,9 @@
             <span>ARCHIVO: PUNK ROCK / FEMME FORCE</span>
             <span>TRACK: MORIR ASÍ</span>
             <span>SELLO: DISCOS Y CINTAS DENVER</span>
-        </div>
+        
+                <span class="view-counter"><i class="fas fa-eye"></i> <span id="view-counter">...</span></span>
+            </div>
 
         <div class="main-layout">
             

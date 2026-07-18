@@ -137,7 +137,14 @@
             .post-title { font-size: 2.2rem; }
             .related-archive { flex-direction: column; text-align: center; }
         }
-    </style>
+    
+        .view-counter {
+            display: inline-flex; align-items: center; gap: 5px;
+            color: #888;
+        }
+        .view-counter i { font-size: 13px; }
+        #view-counter { color: var(--accent); font-weight: 700; }
+        </style>
 </head>
 <body>
 
@@ -160,7 +167,9 @@
             <span>ARCHIVO: NUEVA MÚSICA</span>
             <span>LOCATION: CDMX / MÉXICO</span>
             <span>STATUS: DISPONIBLE EN PLATAFORMAS</span>
-        </div>
+        
+                <span class="view-counter"><i class="fas fa-eye"></i> <span id="view-counter">...</span></span>
+            </div>
 
         <div class="main-layout">
             

@@ -130,7 +130,14 @@
             .meta-strip { flex-direction: column; gap: 10px; }
             .trivia-box { padding: 25px; }
         }
-    </style>
+    
+        .view-counter {
+            display: inline-flex; align-items: center; gap: 5px;
+            color: #888;
+        }
+        .view-counter i { font-size: 13px; }
+        #view-counter { color: var(--accent); font-weight: 700; }
+        </style>
 </head>
 <body>
 
@@ -153,7 +160,9 @@
             <span>REGISTRO: EL ROCK DE TODOS LOS DÍAS</span>
             <span>PROD: EDDIE KRAMER</span>
             <span>SELLO: CASABLANCA RECORDS</span>
-        </div>
+        
+                <span class="view-counter"><i class="fas fa-eye"></i> <span id="view-counter">...</span></span>
+            </div>
 
         <div class="post-content">
             <p>En los años sesenta y primeros setenta, los discos en directo eran rarezas. James Brown había dejado una joya con Live at the Apollo (1963), The Who destrozaron el manual con Live at Leeds (1970) y Deep Purple redefinieron la potencia con Made in Japan (1972). El formato existía, sí, pero era más un lujo para fans que un motor de ventas.</p>
