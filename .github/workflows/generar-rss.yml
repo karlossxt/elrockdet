@@ -1,4 +1,4 @@
-name: Generar Feed RSS
+﻿name: Generar Feed RSS
 on:
   push:
     branches:

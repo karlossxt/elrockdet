@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    EL ROCK DE TODOS LOS DÍAS — main.js
    Radio Player + Scroll Reveal + Playlist Rotation
    ============================================ */
@@ -140,5 +140,22 @@
             }
         });
     });
+
+    /* -----------------------------------------------
+       6. VISITOR COUNTER (CounterAPI)
+    ----------------------------------------------- */
+    var viewCounterEl = document.getElementById('view-counter');
+    if (viewCounterEl && typeof Counter !== 'undefined') {
+        var counter = new Counter({ workspace: 'elrockdetodoslosdias' });
+        var pageName = window.location.pathname.replace(/\.html$/, '').replace(/\//g, '-') || 'home';
+
+        counter.up(pageName)
+            .then(function (result) {
+                viewCounterEl.textContent = result.value;
+            })
+            .catch(function () {
+                viewCounterEl.textContent = '--';
+            });
+    }
 
 })();

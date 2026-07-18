@@ -1,4 +1,4 @@
-# EL ROCK DE TODOS LOS DÍAS — robots.txt
+﻿# EL ROCK DE TODOS LOS DÍAS — robots.txt
 # https://elrockdetodoslosdias.com.mx
 
 User-agent: *
@@ -6,6 +6,9 @@ Allow: /
 
 # Sitemap
 Sitemap: https://elrockdetodoslosdias.com.mx/sitemap.xml
+
+# Feed RSS
+# https://elrockdetodoslosdias.com.mx/feed.xml
 
 # Bloquear archivos de sistema
 Disallow: /CNAME

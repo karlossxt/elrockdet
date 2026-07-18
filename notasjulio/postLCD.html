@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELROCK | L.C.D. — Las Cuerdas Delirantes estrenan "De Mi"</title>
+    <meta property="article:published_time" content="2026-07-01">
     <meta name="description" content="LCD — Las Cuerdas Delirantes presentan su más reciente material "De Mi", distribuido por Discos Denver. Rock crudo de la vieja escuela desde el Estado de México.">
     <meta property="og:title" content="ELROCK | L.C.D. — Las Cuerdas Delirantes estrenan "De Mi"">
     <meta property="og:description" content="Rock crudo de la vieja escuela. El nuevo disco de LCD bajo el sello Discos Denver.">
@@ -91,6 +92,12 @@
             display: flex; justify-content: space-between;
             font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
         }
+        .view-counter {
+            display: inline-flex; align-items: center; gap: 5px;
+            color: #888;
+        }
+        .view-counter i { font-size: 13px; }
+        #view-counter { color: var(--accent); font-weight: 700; }
 
         .post-content p {
             font-size: 1.2rem; font-weight: 400; color: #ccc;
@@ -392,6 +399,8 @@
         </div>
     </div>
 
+    
+    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
     <script src="../main.js"></script>
 </body>
 </html>

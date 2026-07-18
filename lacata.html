@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELROCK | Romance Øn Line: La Cata Alexander</title>
+    <meta property="article:published_time" content="2026-01-01">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -63,6 +64,12 @@
             display: flex; justify-content: space-between;
             font-family: 'Space Mono'; font-size: 11px; color: var(--online-cyan);
         }
+        .view-counter {
+            display: inline-flex; align-items: center; gap: 5px;
+            color: #888;
+        }
+        .view-counter i { font-size: 13px; }
+        #view-counter { color: var(--accent); font-weight: 700; }
 
         .post-content p {
             font-size: 1.25rem; font-weight: 400; color: #ccc;
@@ -184,5 +191,7 @@
 
     </article>
 
+    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
