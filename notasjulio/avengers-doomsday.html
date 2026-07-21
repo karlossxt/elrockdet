@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYTEMOS | Doctor Doom llega al MCU - Avengers: Doomsday</title>
+
+    <meta name="description" content="Marvel libera el primer tráiler de Avengers: Doomsday y rompe Internet. Robert Downey Jr. regresa como Doctor Doom en el inicio del desenlace de la Saga del Multiverso.">
+    <link rel="canonical" href="https://elrockdetodoslosdias.com.mx/notasjulio/avengers-doomsday.html">
+    <meta property="article:published_time" content="2026-07-20">
+    <link rel="alternate" type="application/rss+xml" title="Feed RSS de El Rock de todos los Días" href="/feed.xml" />
+
+    <meta property="fb:app_id" content="1028340583488019">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ELROCK | Doctor Doom llega al MCU - Avengers: Doomsday">
+    <meta property="og:description" content="Marvel libera el primer tráiler de Avengers: Doomsday y rompe Internet. Robert Downey Jr. regresa como Doctor Doom.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasjulio/avengers-doomsday.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasjulio/avengers-doomsday.html">
+    <meta property="og:site_name" content="ELROCK">
+    <meta property="og:locale" content="es_MX">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ELROCK | Avengers: Doomsday - Doctor Doom llega al MCU">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasjulio/avengers-doomsday.jpg">
+
+    <link rel="icon" type="image/png" href="../logo-rock.png">
+    <link rel="stylesheet" href="../fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        :root {
+            --bg: #080808;
+            --accent: #f59e0b;
+            --marvel-green: #22c55e;
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; }
+
+        .scanlines {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(245, 158, 11, 0.03) 50%, rgba(0, 0, 0, 0.2) 50%);
+            z-index: 1000; background-size: 100% 3px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--accent); color: black;
+            padding: 12px 20px; font-weight: 900; border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+        }
+
+        .post-header { margin-bottom: 60px; border-bottom: 5px solid var(--marvel-green); padding-bottom: 30px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 12px; }
+        
+        .post-title { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 7vw, 5rem); line-height: 0.9; margin: 10px 0; text-transform: uppercase; }
+        .post-title span { color: var(--accent); }
+
+        .img-hero { border: 6px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
+        .img-hero img { width: 100%; display: block; filter: saturate(1.2); }
+
+        .meta-strip {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 20px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .view-counter {
+            display: inline-flex; align-items: center; gap: 5px;
+            color: #888;
+        }
+        .view-counter i { font-size: 13px; }
+        #view-counter { color: var(--accent); font-weight: 700; }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content h3 { font-family: 'Syne'; color: var(--accent); text-transform: uppercase; margin: 40px 0 20px 0; font-size: 1.8rem; }
+        .content p { font-size: 1.2rem; color: #ccc; margin-bottom: 30px; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .data-box {
+            background: #111; border: 1px solid #333; padding: 30px; margin: 40px 0;
+            border-left: 10px solid var(--accent);
+        }
+        .comp-table { width: 100%; font-family: 'Space Mono'; border-collapse: collapse; font-size: 13px; }
+        .comp-table th { color: var(--accent); text-align: left; padding-bottom: 10px; border-bottom: 1px solid #444; }
+        .comp-table td { padding: 12px 0; border-bottom: 1px solid #222; }
+        .comp-table tr td:last-child { color: var(--marvel-green); text-align: right; }
+
+        .face-to-face {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #333;
+            margin: 20px 0; border: 1px solid #333;
+        }
+        .face-cell { background: #080808; padding: 12px; font-family: 'Space Mono'; font-size: 12px; }
+        .face-header { background: #111; font-weight: 900; color: var(--accent); text-align: center; text-transform: uppercase; }
+
+        .sidebar-x {
+            background: #0a0a0a; border: 1px solid var(--accent);
+            padding: 25px; position: sticky; top: 100px;
+        }
+        .sidebar-x h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; }
+        .intel-card { margin-bottom: 20px; border-bottom: 1px solid #222; padding-bottom: 10px; font-size: 12px; font-family: 'Space Mono'; }
+        .intel-card b { display: block; color: var(--white); margin-bottom: 5px; text-transform: uppercase; }
+
+        .post-footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid #222; text-align: center; }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2.5rem; color: var(--accent); }
+
+        @media (max-width: 900px) { .main-layout { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <article class="container">
+        
+        <header class="post-header">
+            <span class="tag-sec">BYTEMOS // DOSSIER ESPECIAL // AVENGERS: DOOMSDAY</span>
+            <h1 class="post-title">DOCTOR DOOM LLEGA AL MCU:<br><span>MARVEL ROMPE INTERNET CON EL PRIMER TRÁILER</span></h1>
+        </header>
+
+        <div class="img-hero">
+            <img src="avengers-doomsday.jpg" alt="Avengers Doomsday Doctor Doom tráiler">
+        </div>
+
+        <div class="meta-strip">
+            <span>REGISTRO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>DATA: MARVEL STUDIOS</span>
+            <span class="view-counter"><i class="fas fa-eye"></i> <span id="view-counter">...</span></span>
+        </div>
+
+        <div class="main-layout">
+            
+            <div class="main-content">
+                <div class="content">
+                    <p>Marvel Studios finalmente mostró las primeras cartas de Avengers: Doomsday, liberando el esperado primer tráiler oficial de la película que marcará el principio del desenlace de la Saga del Multiverso. El avance no tardó en convertirse en tendencia mundial gracias al impactante regreso de Robert Downey Jr., quien deja atrás a Tony Stark para convertirse en el icónico Doctor Doom, el nuevo gran antagonista del Universo Cinematográfico de Marvel.</p>
+                    
+                    <h3>Un choque multiversal sin precedentes</h3>
+                    <p>El tráiler adelanta una historia donde héroes provenientes de distintos universos deberán enfrentarse en una guerra que amenaza con destruir toda la realidad. Entre los momentos más impactantes destacan:</p>
+
+                    <div class="data-box">
+                        <h3 style="margin-top:0;">🎬 MOMENTOS CLAVE DEL TRÁILER</h3>
+                        <table class="comp-table">
+                            <thead>
+                                <tr><th>MOMENTO</th><th>DESCRIPCIÓN</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>DOCTOR DOOM</td><td>Aparece por primera vez con su clásica máscara metálica</td></tr>
+                                <tr><td>THOR & STEVE ROGERS</td><td>El reencuentro más emotivo del avance</td></tr>
+                                <tr><td>SHANG-CHI & GAMBITO</td><td>Combate espectacular favorito de los fans</td></tr>
+                                <tr><td>YELENA vs MYSTIQUE</td><td>Intensa batalla cuerpo a cuerpo</td></tr>
+                                <tr><td>LOKI</td><td>Regresa con el uniforme clásico de la TVA</td></tr>
+                                <tr><td>CONVERGENCIA</td><td>Cuatro Fantásticos, X-Men, Wakanda y Nuevos Vengadores en una misma historia</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>Los secretos que dejó el tráiler</h3>
+                    <p>Como ya es tradición en Marvel, el avance está repleto de detalles ocultos que han disparado las teorías entre los seguidores.</p>
+
+                    <div class="face-to-face">
+                        <div class="face-cell face-header">SECRETO</div><div class="face-cell face-header">TEORÍA DE FANS</div>
+                        <div class="face-cell">Doom detiene el Stormbreaker de Thor con solo dos dedos</div><div class="face-cell">Poder que supera cualquier amenaza vista en el MCU</div>
+                        <div class="face-cell">Credencial de la TVA con foto de Loki</div><div class="face-cell">Posible captura o misión secreta sobre el multiverso</div>
+                        <div class="face-cell">Steve Rogers rejuvenecido levanta el Mjolnir</div><div class="face-cell">Confirma que sigue siendo digno del martillo</div>
+                        <div class="face-cell">Doom dice que quiere "salvar" el multiverso</div><div class="face-cell">Motivaciones complejas, amenaza aún mayor</div>
+                    </div>
+
+                    <div class="img-hero" style="border-width: 2px; margin: 30px 0;">
+                        <img src="doctor-doom-mask.jpg" alt="Doctor Doom máscara metálica primer plano">
+                    </div>
+
+                    <h3>Los hermanos Russo vuelven al mando</h3>
+                    <p>Después del éxito histórico de Avengers: Infinity War y Avengers: Endgame, los hermanos Anthony y Joe Russo regresan como directores para intentar repetir la fórmula que convirtió al Universo Cinematográfico de Marvel en un fenómeno mundial. La película reunirá a personajes de prácticamente todas las franquicias actuales de Marvel, incluyendo a los Cuatro Fantásticos, los X-Men, Wakanda y los Nuevos Vengadores, en una batalla que promete redefinir el futuro del estudio y abrir una nueva etapa para la franquicia.</p>
+
+                    <div class="data-box">
+                        <h3 style="margin-top:0;">📅 ESTRENO</h3>
+                        <table class="comp-table">
+                            <thead>
+                                <tr><th>DETALLE</th><th>INFO</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>PELÍCULA</td><td>Avengers: Doomsday</td></tr>
+                                <tr><td>FECHA DE ESTRENO</td><td>18 de diciembre de 2026</td></tr>
+                                <tr><td>DIRECTORES</td><td>Anthony y Joe Russo</td></tr>
+                                <tr><td>VILLANO PRINCIPAL</td><td>Doctor Doom (Robert Downey Jr.)</td></tr>
+                                <tr><td>SAGA</td><td>Desenlace de la Saga del Multiverso</td></tr>
+                            </tbody>
+                        </table>
+                        <p style="font-size: 14px; margin-top: 15px; color: var(--accent); font-weight: 700;">🎬 Uno de los estrenos más esperados del año</p>
+                    </div>
+
+                    <p>Avengers: Doomsday llegará exclusivamente a los cines el 18 de diciembre de 2026, convirtiéndose en uno de los estrenos cinematográficos más esperados del año y en el evento que dará inicio al desenlace de la Saga del Multiverso.</p>
+
+                    <div class="img-hero" style="border-width: 2px; margin: 30px 0;">
+                        <img src="avengers-doomsday-reparto.jpg" alt="Reparto completo Avengers Doomsday héroes y villanos">
+                    </div>
+
+                    <h3>¿Y tú qué opinas?</h3>
+                    
+                    <p style="text-align: center; font-weight: 900; color: var(--accent); border: 1px solid #333; padding: 30px; margin-top: 50px;">
+                        ¿Crees que Doctor Doom será el gran villano del MCU o en realidad intentará salvar el multiverso de una amenaza aún más peligrosa?<br><br>
+                        ¿Qué momento del tráiler fue el que más te sorprendió?<br><br>
+                        ¡Déjanos tu opinión en los comentarios!
+                    </p>
+
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 40px 0; border: 4px solid var(--accent);">
+                        <iframe src="https://www.youtube.com/embed/eJUdJoySLII" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-x">
+                    <h4>DETALLES TÉCNICOS</h4>
+                    
+                    <div class="intel-card">
+                        <b>DOCTOR DOOM</b>
+                        Robert Downey Jr. deja de ser Iron Man para interpretar al mayor villano de Marvel.
+                    </div>
+
+                    <div class="intel-card">
+                        <b>HERMANOS RUSSO</b>
+                        Regresan después del éxito de Infinity War y Endgame.
+                    </div>
+
+                    <div class="intel-card">
+                        <b>SAGA DEL MULTIVERSO</b>
+                        Esta película marca el inicio del desenlace de la era cinematográfica actual de Marvel.
+                    </div>
+
+                    <div class="intel-card">
+                        <b>UNIVERSOS</b>
+                        Cuatro Fantásticos, X-Men, Wakanda y Nuevos Vengadores convergen en una sola historia.
+                    </div>
+
+                    <button style="width:100%; background:var(--accent); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">LEER MÁS NOTAS MARVEL</button>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="post-footer">
+            <h3>BYTEMOS // 2026</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // CULTURA GEEK</p>
+        </footer>
+
+    </article>
+
+    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>
