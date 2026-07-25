@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | El Rock Mexicano Después de Avándaro — 50 Años Después</title>
+    <meta name="description" content="El Rock Mexicano después de Avándaro. 50 años después nuestro rock sigue vivo. Un repaso a la historia del rock nacional desde 1971.">
+    <link rel="canonical" href="https://elrockdetodoslosdias.com.mx/olds/post-rock-mexicano-avandaro.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ELROCK | El Rock Mexicano Después de Avándaro — 50 Años Después">
+    <meta property="og:description" content="50 años después nuestro rock sigue vivo. Un repaso a la historia del rock nacional desde Avándaro.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/olds/rock-mexicano-portada.jpg">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/olds/post-rock-mexicano-avandaro.html">
+    <meta property="og:site_name" content="ELROCK">
+    <meta property="og:locale" content="es_MX">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ELROCK | El Rock Mexicano Después de Avándaro">
+    <meta name="twitter:description" content="50 años después nuestro rock sigue vivo. Un repaso a la historia del rock nacional.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/olds/rock-mexicano-portada.jpg">
+
+    <link rel="icon" type="image/png" href="../logo-rock.png">
+    <link rel="stylesheet" href="../fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #16a34a;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-bottom: 70px;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%),
+                        linear-gradient(90deg, rgba(22, 163, 74, 0.02), rgba(255, 255, 255, 0.01), rgba(22, 163, 74, 0.02));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        .post-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--accent); color: white;
+            padding: 12px 20px; font-weight: 900;
+            border: 2px solid white; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            transition: 0.3s;
+        }
+
+        .btn-cerrar:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--accent);
+        }
+
+        .post-header { margin-bottom: 50px; text-align: left; }
+        .tag-cat {
+            background: var(--accent); color: white; padding: 5px 15px;
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px;
+            margin-bottom: 20px; display: inline-block;
+        }
+
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+        }
+        .post-title span { color: var(--accent); font-style: italic; }
+
+        .img-post { border: 1px solid #222; margin: 40px 0; background: #111; position: relative; }
+        .img-post img { width: 100%; display: block; filter: contrast(1.1); transition: 0.4s; }
+        .img-post:hover img { filter: contrast(1) saturate(1.1); }
+        .img-label {
+            font-family: 'Space Mono'; font-size: 10px; color: var(--accent);
+            text-align: right; padding: 10px; text-transform: uppercase; border-top: 1px solid #222;
+        }
+
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+
+        .post-content p {
+            font-size: 1.2rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        .post-content > p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+
+        .post-content strong { color: white; }
+
+        .highlight-box {
+            background: var(--accent); color: white; padding: 30px;
+            margin: 40px 0; border: 2px solid white; font-family: 'Space Mono';
+        }
+        .highlight-box h4 { text-transform: uppercase; margin-bottom: 10px; font-family: 'Syne'; font-size: 1.5rem; }
+
+        .post-sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar-section {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            padding: 20px;
+        }
+
+        .sidebar-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #222;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-title i { font-size: 1rem; }
+        .playlist-embed { border-radius: 8px; width: 100%; }
+
+        .otros-ruidos { margin-top: 80px; padding-top: 40px; border-top: 2px solid #222; }
+        .otros-ruidos-header { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; }
+        .otros-ruidos-header h3 { font-family: 'Syne'; font-size: 2rem; font-weight: 800; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+        .otros-ruidos-line { flex: 1; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); }
+
+        .otros-ruidos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+
+        .otros-card { text-decoration: none; color: inherit; background: #0a0a0a; border: 1px solid #222; padding: 12px; transition: all 0.4s; display: block; }
+        .otros-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 8px 25px rgba(22, 163, 74, 0.15); }
+        .otros-card-img { width: 100%; height: 160px; overflow: hidden; margin-bottom: 12px; }
+        .otros-card-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
+        .otros-card:hover .otros-card-img img { filter: grayscale(0); transform: scale(1.05); }
+        .otros-card-tag { font-family: 'Space Mono'; font-size: 9px; font-weight: 900; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 8px; letter-spacing: 1px; }
+        .otros-card-title { font-family: 'Syne'; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 8px; color: white; }
+        .otros-card-excerpt { font-family: 'Space Mono'; font-size: 10px; color: #555; line-height: 1.4; }
+
+        .post-footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #222; text-align: center; font-family: 'Space Mono'; color: #444; }
+
+        @media (max-width: 900px) {
+            .post-layout { grid-template-columns: 1fr; }
+            .post-sidebar { position: static; order: 2; }
+            .post-title { font-size: 3rem; }
+            .meta-info { flex-direction: column; gap: 10px; }
+            .otros-ruidos-grid { grid-template-columns: 1fr; }
+            .btn-cerrar { top: 15px; right: 15px; padding: 8px 14px; font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
+
+    <div class="post-layout">
+        <article>
+            <header class="post-header">
+                <span class="tag-cat">HISTORIA / ESCENA NACIONAL</span>
+                <h1 class="post-title">EL ROCK MEXICANO<br><span>DESPUÉS DE AVÁNDARO</span></h1>
+            </header>
+
+            <div class="img-post">
+                <img src="rock-mexicano-portada.jpg" alt="Rock Mexicano después de Avándaro" loading="lazy">
+                <div class="img-label">FOTO 01: Festival de Rock y Ruedas de Avándaro (1971)</div>
+            </div>
+
+            <div class="meta-info">
+                <span>POR: KARLOS SPACE</span>
+                <span>2021</span>
+                <span>HISTORIA / ESCENA NACIONAL</span>
+            </div>
+
+            <div class="post-content">
+                <p>50 AÑOS DESPUÉS NUESTRO ROCK SIGUE VIVO. Como es sabido este 11 de septiembre se celebra el aniversario 50 de lo que fue el «Festival de rock y ruedas de Avándaro», la importancia de este evento para la escena del rock nacional tuvo dos caras, la primera fue que este evento sirvió para mostrar la fuerza y la calidad de los músicos de la época, así como una identidad propia que se estaba construyendo en un momento en el que el género a nivel mundial estaba surgiendo como todo un suceso, ya no así como una moda, era el momento cúspide que necesitaba el rock de aquellos días.</p>
+
+                <p>La otra cara fue la que los medios manipulados por un gobierno que se asustaba con algún movimiento que tuviera que ver con la juventud de la época, recordemos que aun estaba fresco el suceso de 1968 en Tlatelolco y 3 meses antes con La Matanza del Jueves de Corpus, al ver que podía salirseles de las manos pues empezó una prohibición del género detuvo el crecimiento de este, ya que muchos se quedaron sin sus medios de trabajo y los pocos que resistieron estuvieron en la clandestinidad, casi por una década.</p>
+
+                <div class="img-post">
+                    <img src="rock-mexicano-80s.jpg" alt="Rock Mexicano años 80" loading="lazy">
+                    <div class="img-label">FOTO 02: El resurgimiento del rock en los 80s</div>
+                </div>
+
+                <p>Después de navegar en la clandestinidad e ir saliendo de apoco de las profundidades, llegó la década de los 80s, pudiéramos decir que fue la oportunidad del resurgimiento del género en nuestro país con la apertura de las radios (la pantera y radio capital por nombrar algunas) que aunque le daban más difusión a las bandas internacionales empezaban de a poco a mirar la escena nacional, entre ellos: <strong>Jaime López</strong>, <strong>Cecilia Toussaint</strong>, <strong>Kenny y los Eléctricos</strong>, <strong>Botellita de Jerez</strong>, <strong>Rostros Ocultos</strong>, <strong>Newspaper</strong>.</p>
+
+                <div class="highlight-box">
+                    <h4>ROCK EN TU IDIOMA</h4>
+                    <p>Uno de los eventos que impulsaron con mucha fuerza fue el de 1987 por BMG que lanzaría la primer convocatoria para un concurso de Rock "Rock en tu Idioma". De ahí surgieron Maldita Vecindad y los Hijos del Quinto Patio y Fobia. Mas tarde vendrían otros concursos como el "Metalaria" y la "La Batalla de las Bandas" que se realizaban año con año con una gran participación de bandas del D.F. y del interior de la república.</p>
+                </div>
+
+                <p>Uno de los primeros sellos en editar Rock hecho en México fue <strong>Comrock</strong>, fundado por Juan Navarro y Ricardo Ochoa. Ellos hicieron realidad los discos de Kenny y los Eléctricos y Ritmo Peligroso, además de formar los inicios del movimiento "Rock en tu Idioma". El éxito que tuvo el Rock Nacional en los 80's y 90's se debió a que una disquera transnacional, La BMG, abrió un subsello llamado <strong>Culebra</strong>, este le dio chance a casi todas las bandas de la época apoyando y respetando sus conceptos musicales.</p>
+
+                <div class="img-post">
+                    <img src="rock-mexicano-hoy.jpg" alt="Escena de rock mexicana actual" loading="lazy">
+                    <div class="img-label">FOTO 03: La escena del rock mexicano actual</div>
+                </div>
+
+                <p>Podemos continuar desmenuzando «el crecimiento» del rock nacional en los 90s, 2000s y las décadas siguientes que vaya que tenemos grandes exponentes y músicos que se han presentado en varias partes del mundo y en los festivales más prestigiosos, pero la pregunta más importante después de 50 años es:</p>
+
+                <p><strong>¿Han cambiado las oportunidades en nuestro país para el género?</strong></p>
+
+                <p>Si han cambiado, podemos decir que cada vez hay más foros donde poder tocar y mostrar tu trabajo, pero también hay otras que no, como las malas prácticas a lo largo del tiempo, sabemos de antemano que como todo es un negocio y más para los promotores y las disqueras, y para la industria de la música nacional el mirar hacia el rock es en un porcentaje bajo si lo comparamos con otros géneros que son más masivos.</p>
+
+                <p>A eso le podemos sumar la infinidad de malos tratos de algunos hacia las propuestas que van naciendo, a veces no importa que el talento o tu idea musical sea excelente si las oportunidades son pocas y el camino está lleno de mierda, desde tocar en lugares que no son los adecuados con equipo bastante limitado o condicionado a vender las entradas y hasta ser robados por promotores despiadados que se aprovechan de las ganas que tiene el músico por mostrar su trabajo.</p>
+
+                <p>En estos últimos años podemos ver que el crecimiento de la escena nacional es grande así como el talento y en todos los géneros que se desprenden del Rock, Metal, Stoner, Sinfónico, Death, Indie, Punk, Rap por nombrar algunos, cabe mencionar que optar por ser independiente y apoyarse en los medios electrónicos y las redes sociales ayudan mucho a dar a conocer así como últimamente los festivales online.</p>
+            </div>
+
+            <section class="otros-ruidos">
+                <div class="otros-ruidos-header">
+                    <h3>OTROS RUIDOS</h3>
+                    <span class="otros-ruidos-line"></span>
+                </div>
+                <div class="otros-ruidos-grid">
+                    <a href="post-vulgar-display.html" class="otros-card">
+                        <div class="otros-card-img"><img src="vulgar-display-portada.jpg" alt="Pantera"></div>
+                        <span class="otros-card-tag">GROOVE METAL</span>
+                        <h4 class="otros-card-title">PANTERA: Vulgar Display of Power</h4>
+                        <p class="otros-card-excerpt">Pantera redefinió el metal.</p>
+                    </a>
+                    <a href="post-pearl-jam-ten.html" class="otros-card">
+                        <div class="otros-card-img"><img src="pearl-jam-ten-portada.jpg" alt="Pearl Jam"></div>
+                        <span class="otros-card-tag">GRUNGE</span>
+                        <h4 class="otros-card-title">PEARL JAM: 30 años del Ten</h4>
+                        <p class="otros-card-excerpt">El álbum que definió una generación.</p>
+                    </a>
+                    <a href="../notasjulio/postLCD.html" class="otros-card">
+                        <div class="otros-card-img"><img src="../notasjulio/lcd-hero.jpg" alt="LCD"></div>
+                        <span class="otros-card-tag">ROCK NACIONAL</span>
+                        <h4 class="otros-card-title">L.C.D.: De Mi</h4>
+                        <p class="otros-card-excerpt">Rock crudo de la vieja escuela.</p>
+                    </a>
+                </div>
+            </section>
+
+            <footer class="post-footer">
+                <p>RESEÑA POR: KARLOS SPACE</p>
+                <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            </footer>
+        </article>
+
+        <aside class="post-sidebar">
+            <div class="sidebar-section">
+                <h4 class="sidebar-title"><i class="fab fa-spotify"></i> PLAYLIST DE LA SEMANA</h4>
+                <iframe class="playlist-embed"
+                    src="https://open.spotify.com/embed/playlist/153Gvei76OaDP0kMY75GQz?utm_source=generator&theme=0"
+                    height="380" frameBorder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+                </iframe>
+            </div>
+        </aside>
+    </div>
+
+    <div class="radio-player" id="radioPlayer">
+        <div class="radio-toggle" id="radioToggle"><i class="fas fa-chevron-up"></i></div>
+        <div class="radio-content">
+            <div class="radio-live-dot"></div>
+            <span class="radio-label">EN VIVO — EL ROCK DE TODOS LOS DÍAS</span>
+            <audio id="zenoAudio" preload="none">
+                <source src="https://stream.zeno.fm/suqqst6xaq8uv" type="audio/mpeg">
+            </audio>
+            <button class="radio-play-btn" id="playPauseBtn"><i class="fas fa-play"></i></button>
+            <input type="range" class="radio-volume" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+            <button class="radio-close" id="radioClose"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>
