@@ -2,7 +2,7 @@
 on:
   push:
     branches:
-      - main # Se ejecuta cuando subes cambios a la rama principal
+      - main
 
 jobs:
   rss:
@@ -11,9 +11,13 @@ jobs:
       - name: Clonar repositorio
         uses: actions/checkout@v4
 
-      - name: Crear RSS desde archivos HTML
-        uses: codesandtags/rss-generator-action@main
-        with:
-          # Escanea todas tus carpetas de notas en HTML
-          search-path: './' 
-          output-name: 'feed.xml'
+      - name: Generar feed.xml
+        run: python3 generate-rss.py
+
+      - name: Commit si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add feed.xml
+          git diff --cached --quiet || git commit -m "Actualizar feed.xml"
+          git push
