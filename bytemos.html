@@ -33,31 +33,360 @@
             100% { transform: translate(0); text-shadow: -3px -3px 0px #ff00ff, 3px 3px 0px #00ffff; }
         }
         .back-link { font-family: 'Space Mono'; color: black; text-decoration: none; font-size: 12px; font-weight: 900; text-transform: uppercase; z-index: 10; position: relative; margin-bottom: 20px; display: inline-block; }
-        .archive-container { max-width: 1300px; margin: 0 auto; padding: 80px 40px; }
-        .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px 40px; }
-        .article-card { text-decoration: none; color: inherit; display: block; transition: 0.3s; }
-        .card-image { height: 250px; background-color: #18181b; margin-bottom: 20px; overflow: hidden; border: 1px solid #333; position: relative; }
-        .card-image::after {
-            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-            background-size: 100% 2px, 3px 100%; pointer-events: none;
+
+        :root {
+            --archive-bg: #08080b;
+            --archive-card: #111116;
+            --archive-card-hover: #16161d;
+            --archive-border: rgba(255, 255, 255, 0.09);
+            --archive-text: #f7f7f8;
+            --archive-muted: #a3a3ad;
+            --archive-accent: #ff3b5c;
+            --archive-radius: 14px;
         }
-        .card-image img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
-        .article-card:hover .card-image img { filter: grayscale(0); transform: scale(1.05); }
-        .card-tag { font-family: 'Space Mono'; color: var(--green); font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; letter-spacing: 1px; }
-        .card-title { font-family: 'Syne'; font-size: 1.5rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 15px; }
-        @media (max-width: 900px) { .article-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        .archive-container {
+            width: min(1280px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: 72px 0 96px;
+        }
+
+        .archive-header {
+            max-width: 760px;
+            margin-bottom: 42px;
+        }
+
+        .archive-kicker {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: var(--green);
+            font-family: 'Space Mono';
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .archive-header h1 {
+            margin: 0;
+            color: var(--archive-text);
+            font-size: clamp(2.1rem, 5vw, 4.5rem);
+            line-height: 0.98;
+            letter-spacing: -0.045em;
+        }
+
+        .archive-header p {
+            max-width: 650px;
+            margin: 20px 0 0;
+            color: var(--archive-muted);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 40px;
+        }
+
+        .article-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            overflow: hidden;
+            color: var(--archive-text);
+            text-decoration: none;
+            background: var(--archive-card);
+            border: 1px solid var(--archive-border);
+            border-radius: var(--archive-radius);
+            transition:
+                transform 0.35s ease,
+                border-color 0.35s ease,
+                background-color 0.35s ease,
+                box-shadow 0.35s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-6px);
+            background: var(--archive-card-hover);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-image {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #18181b;
+        }
+
+        .card-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background:
+                linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+                linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.04));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            filter: grayscale(1) contrast(0.95);
+            transition:
+                transform 0.6s cubic-bezier(.2, .7, .2, 1),
+                filter 0.45s ease;
+        }
+
+        .article-card:hover .card-image img {
+            filter: grayscale(0) contrast(1.05);
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding: 22px 24px 24px;
+        }
+
+        .card-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .card-tag {
+            font-family: 'Space Mono';
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--green);
+        }
+
+        .card-tag::before {
+            content: "[";
+        }
+
+        .card-tag::after {
+            content: "]";
+        }
+
+        .card-date {
+            flex-shrink: 0;
+            font-family: 'Space Mono';
+            font-size: 0.65rem;
+            color: var(--archive-muted);
+        }
+
+        .card-title {
+            margin: 0;
+            font-family: 'Syne';
+            font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            color: var(--archive-text);
+        }
+
+        .card-description {
+            margin: 12px 0 0;
+            color: var(--archive-muted);
+            font-size: 0.88rem;
+            line-height: 1.6;
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 16px;
+            font-family: 'Space Mono';
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--green);
+            letter-spacing: 0.05em;
+            transition: gap 0.25s ease;
+        }
+
+        .card-link span {
+            font-size: 1rem;
+            transition: transform 0.25s ease;
+        }
+
+        .article-card:hover .card-link {
+            gap: 10px;
+        }
+
+        .article-card:hover .card-link span {
+            transform: translateX(4px);
+        }
+
+        .article-card--featured {
+            grid-column: 1 / -1;
+            min-height: 520px;
+            display: block;
+            isolation: isolate;
+        }
+
+        .article-card--featured .card-image {
+            position: absolute;
+            inset: 0;
+            aspect-ratio: auto;
+            z-index: -3;
+        }
+
+        .article-card--featured .card-image::after {
+            display: none;
+        }
+
+        .article-card--featured .card-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(4, 4, 7, 0.96) 0%,
+                    rgba(4, 4, 7, 0.78) 42%,
+                    rgba(4, 4, 7, 0.15) 78%
+                ),
+                linear-gradient(
+                    0deg,
+                    rgba(4, 4, 7, 0.92) 0%,
+                    transparent 60%
+                );
+        }
+
+        .article-card--featured .card-image img {
+            filter: grayscale(0.6) contrast(1);
+        }
+
+        .article-card--featured:hover .card-image img {
+            filter: grayscale(0) contrast(1.1);
+        }
+
+        .article-card--featured .card-content {
+            justify-content: flex-end;
+            width: min(680px, 70%);
+            min-height: 520px;
+            padding: clamp(30px, 5vw, 64px);
+        }
+
+        .article-card--featured .card-title {
+            font-family: 'Syne';
+            font-size: clamp(2rem, 4vw, 3.8rem);
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        .article-card--featured .card-description {
+            max-width: 600px;
+            font-size: 0.95rem;
+            -webkit-line-clamp: 3;
+        }
+
+        .article-card:focus-visible {
+            outline: 2px solid var(--green);
+            outline-offset: 4px;
+        }
+
+        @media (max-width: 1024px) {
+            .article-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .archive-container {
+                width: min(100% - 30px, 600px);
+                padding-top: 52px;
+            }
+            .article-card--featured {
+                min-height: 470px;
+            }
+            .article-card--featured .card-content {
+                width: 82%;
+                min-height: 470px;
+            }
+            .article-card--featured .card-overlay {
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(4, 4, 7, 0.96) 0%,
+                        rgba(4, 4, 7, 0.66) 70%,
+                        rgba(4, 4, 7, 0.2) 100%
+                    ),
+                    linear-gradient(
+                        0deg,
+                        rgba(4, 4, 7, 0.94) 0%,
+                        transparent 70%
+                    );
+            }
+        }
+
         @media (max-width: 600px) {
-            .section-header { padding: 80px 20px 40px; }
-            .section-title { font-size: 3rem; }
-            .archive-container { padding: 40px 20px; }
-            .article-grid { grid-template-columns: 1fr; gap: 40px; }
-            .main-nav { flex-direction: column; align-items: flex-start; padding: 15px 20px; gap: 15px; }
-            .nav-links { width: 100%; overflow-x: auto; padding-bottom: 5px; -ms-overflow-style: none; scrollbar-width: none; gap: 10px; }
-            .nav-links::-webkit-scrollbar { display: none; }
-            .nav-links a { margin: 0; padding: 6px 12px; border: 1px solid #333; border-radius: 4px; white-space: nowrap; }
-            .nav-cta-btn { display: none; }
-            .card-image { height: 220px; }
+            .archive-container {
+                width: min(100% - 24px, 520px);
+                padding: 40px 0 70px;
+            }
+            .archive-header {
+                margin-bottom: 28px;
+            }
+            .archive-header p {
+                font-size: 0.96rem;
+            }
+            .article-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .article-card--featured {
+                min-height: 480px;
+            }
+            .article-card--featured .card-image {
+                position: absolute;
+            }
+            .article-card--featured .card-image img {
+                object-position: center;
+            }
+            .article-card--featured .card-overlay {
+                background:
+                    linear-gradient(
+                        0deg,
+                        rgba(4, 4, 7, 0.98) 0%,
+                        rgba(4, 4, 7, 0.8) 46%,
+                        rgba(4, 4, 7, 0.18) 100%
+                    );
+            }
+            .article-card--featured .card-content {
+                width: 100%;
+                min-height: 480px;
+                padding: 26px;
+            }
+            .article-card--featured .card-title {
+                font-size: clamp(1.8rem, 9vw, 2.5rem);
+            }
+            .card-content {
+                padding: 18px 20px 20px;
+            }
+            .card-title {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -88,37 +417,186 @@
     </header>
 
     <main class="archive-container">
- <a href="notasjulio/avengers-doomsday.html" class="article-card">
-    <div class="card-image">
-        <img src="notasjulio/avengers-doomsday-reparto.jpg" alt="Batman vs Spider-Man Censo del Crimen" loading="lazy">
-    </div>
-    <span class="card-tag">Marvel</span>
-    <h2 class="card-title">Marvel libera el primer tráiler de Avengers: Doomsday y rompe Internet</h2>
-</a>        
-        <a href="notasjulio/postsvsb.html" class="article-card">
-    <div class="card-image">
-        <img src="notasjulio/batman-vs-spiderman.jpg" alt="Batman vs Spider-Man Censo del Crimen" loading="lazy">
-    </div>
-    <span class="card-tag">Dossier</span>
-    <h2 class="card-title">EL CENSO DEL CRIMEN: ¿Quién tiene más enemigos, Batman o Spider-Man?</h2>
-</a>
-        <div class="article-grid">
-            <a href="#" class="article-card">
-                <div class="card-image"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800" alt="Retro-Gaming" loading="lazy"></div>
-                <span class="card-tag">Retro-Gaming</span>
-                <h2 class="card-title">La estética del error: CRT y nostalgia</h2>
+
+        <header class="archive-header">
+            <span class="archive-kicker">Archivo editorial</span>
+            <h1>Historias, cultura y entretenimiento</h1>
+            <p>
+                Noticias, análisis y contenidos especiales sobre música,
+                cine, cómics, tecnología y cultura alternativa.
+            </p>
+        </header>
+
+        <section class="article-grid">
+
+            <!-- Tarjeta destacada -->
+            <a href="notasjulio/avengers-doomsday.html"
+               class="article-card article-card--featured">
+
+                <div class="card-image">
+                    <img
+                        src="notasjulio/avengers-doomsday-reparto.jpg"
+                        alt="Reparto de Avengers: Doomsday"
+                        loading="eager">
+                </div>
+
+                <div class="card-overlay"></div>
+
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-tag card-tag--marvel">Marvel</span>
+                        <span class="card-date">28 julio 2026</span>
+                    </div>
+
+                    <h2 class="card-title">
+                        Marvel libera el primer tráiler de Avengers: Doomsday
+                        y rompe Internet
+                    </h2>
+
+                    <p class="card-description">
+                        El esperado avance presenta el regreso de personajes
+                        emblemáticos y abre una nueva etapa para el universo
+                        cinematográfico de Marvel.
+                    </p>
+
+                    <span class="card-link">
+                        Leer historia
+                        <span aria-hidden="true">→</span>
+                    </span>
+                </div>
             </a>
-            <a href="#" class="article-card">
-                <div class="card-image"><img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=800" alt="Hardware" loading="lazy"></div>
-                <span class="card-tag">Hardware</span>
-                <h2 class="card-title">Modding en los sótanos: PC de guerra</h2>
+
+            <!-- Tarjeta Batman vs Spider-Man -->
+            <a href="notasjulio/postsvsb.html" class="article-card">
+
+                <div class="card-image">
+                    <img
+                        src="notasjulio/batman-vs-spiderman.jpg"
+                        alt="Batman contra Spider-Man"
+                        loading="lazy">
+                </div>
+
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-tag card-tag--dossier">Dossier</span>
+                        <span class="card-date">Especial</span>
+                    </div>
+
+                    <h2 class="card-title">
+                        El censo del crimen: ¿quién tiene más enemigos,
+                        Batman o Spider-Man?
+                    </h2>
+
+                    <p class="card-description">
+                        Comparamos las galerías de villanos de dos de los héroes
+                        más importantes de DC y Marvel.
+                    </p>
+
+                    <span class="card-link">
+                        Leer análisis
+                        <span aria-hidden="true">→</span>
+                    </span>
+                </div>
             </a>
+
+            <!-- Tarjeta Retro Gaming -->
             <a href="#" class="article-card">
-                <div class="card-image"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800" alt="Cyberpunk" loading="lazy"></div>
-                <span class="card-tag">Cyberpunk</span>
-                <h2 class="card-title">Mundos Virtuales: Resistencia Digital</h2>
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1000"
+                        alt="Consola retro y televisión CRT"
+                        loading="lazy">
+                </div>
+
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-tag card-tag--gaming">Retro-Gaming</span>
+                        <span class="card-date">7 min</span>
+                    </div>
+
+                    <h2 class="card-title">
+                        La estética del error: CRT, píxeles y nostalgia
+                    </h2>
+
+                    <p class="card-description">
+                        Por qué las pantallas antiguas y las imperfecciones
+                        digitales regresaron al diseño contemporáneo.
+                    </p>
+
+                    <span class="card-link">
+                        Leer artículo
+                        <span aria-hidden="true">→</span>
+                    </span>
+                </div>
             </a>
-        </div>
+
+            <!-- Tarjeta Hardware -->
+            <a href="#" class="article-card">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=1000"
+                        alt="Computadora personalizada con iluminación"
+                        loading="lazy">
+                </div>
+
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-tag card-tag--hardware">Hardware</span>
+                        <span class="card-date">5 min</span>
+                    </div>
+
+                    <h2 class="card-title">
+                        Modding en los sótanos: computadoras hechas para resistir
+                    </h2>
+
+                    <p class="card-description">
+                        Una mirada a la cultura independiente de construir,
+                        modificar y personalizar computadoras.
+                    </p>
+
+                    <span class="card-link">
+                        Leer artículo
+                        <span aria-hidden="true">→</span>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Tarjeta Cyberpunk -->
+            <a href="#" class="article-card">
+
+                <div class="card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1000"
+                        alt="Persona jugando en una competencia de videojuegos"
+                        loading="lazy">
+                </div>
+
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="card-tag card-tag--cyberpunk">Cyberpunk</span>
+                        <span class="card-date">8 min</span>
+                    </div>
+
+                    <h2 class="card-title">
+                        Mundos virtuales: resistencia y control digital
+                    </h2>
+
+                    <p class="card-description">
+                        Videojuegos, comunidades virtuales y nuevas formas
+                        de identidad en una sociedad permanentemente conectada.
+                    </p>
+
+                    <span class="card-link">
+                        Leer artículo
+                        <span aria-hidden="true">→</span>
+                    </span>
+                </div>
+            </a>
+
+        </section>
+
     </main>
 
     <footer class="fanzine-footer">

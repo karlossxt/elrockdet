@@ -41,8 +41,9 @@
         .month-group { display: contents; }
         .month-separator { grid-column: 1 / -1; font-family: 'Syne'; font-size: 3rem; color: var(--white); border-bottom: 4px solid var(--red); margin: 40px 0 20px; font-style: italic; display: flex; justify-content: space-between; align-items: baseline; }
         .month-separator span { font-family: 'Space Mono'; font-size: 1rem; color: #555; }
-        .article-card { text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%; transition: 0.3s; }
-        .card-image { aspect-ratio: 16 / 9; width: 100%; background-color: #18181b; margin-bottom: 20px; overflow: hidden; border: 1px solid #333; }
+        .article-card { text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%; background: #0f0f0f; border: 1px solid #222; padding: 15px; transition: 0.3s; }
+        .article-card:hover { transform: translateY(-4px); border-color: var(--red); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        .card-image { aspect-ratio: 16 / 9; width: 100%; background-color: #18181b; margin-bottom: 15px; overflow: hidden; border: 1px solid #333; border-radius: 2px; }
         .card-image img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
         .article-card:hover .card-image img { filter: grayscale(0); transform: scale(1.05); }
         .card-tag { font-family: 'Space Mono'; color: var(--red); font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; }

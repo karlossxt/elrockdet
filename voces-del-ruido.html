@@ -246,18 +246,23 @@
         .article-card {
             text-decoration: none;
             color: inherit;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            background: #0f0f0f;
+            border: 1px solid #222;
+            padding: 15px;
             transition: 0.3s;
         }
 
-        .article-card:hover { transform: translateY(-4px); }
+        .article-card:hover { transform: translateY(-4px); border-color: var(--cyan); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
 
         .card-image {
-            height: 250px;
+            height: 220px;
             background-color: #18181b;
             margin-bottom: 15px;
             overflow: hidden;
             border: 1px solid #333;
+            border-radius: 2px;
         }
 
         .card-image img {
