@@ -318,8 +318,19 @@
     const burger = document.getElementById('burger');
     const menu = document.getElementById('menu');
     if (burger && menu) {
-        burger.addEventListener('click', function () {
-            menu.classList.toggle('active');
+        const icon = burger.querySelector('i');
+        function toggleMenu(open) {
+            const isOpen = open !== undefined ? open : !menu.classList.contains('active');
+            menu.classList.toggle('active', isOpen);
+            if (icon) icon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+        }
+        burger.addEventListener('click', (e) => { e.stopPropagation(); toggleMenu(); });
+        menu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
+        document.addEventListener('click', (e) => {
+            if (menu.classList.contains('active') && !menu.contains(e.target) && e.target !== burger) toggleMenu(false);
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menu.classList.contains('active')) toggleMenu(false);
         });
     }
     </script>

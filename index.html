@@ -328,6 +328,13 @@
         }
 
         .card { background: #0f0f0f; border: 1px solid #222; padding: 15px; }
+
+        .nav-links { transition: opacity 0.25s ease, transform 0.25s ease; }
+        @media (max-width: 768px) {
+            .nav-links { opacity: 0; transform: translateY(-8px); pointer-events: none; display: flex; }
+            .nav-links.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
+            .burger-menu { z-index: 1001; position: relative; }
+        }
         .card:hover { border-color: var(--red); transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
 
         @media (max-width: 768px) {
@@ -733,8 +740,33 @@
 
     const burger = document.getElementById('burger');
     const menu = document.getElementById('menu');
-    burger.addEventListener('click', () => {
-        menu.classList.toggle('active');
+    const burgerIcon = burger.querySelector('i');
+
+    function toggleMenu(force) {
+        const isOpen = force !== undefined ? force : !menu.classList.contains('active');
+        menu.classList.toggle('active', isOpen);
+        burgerIcon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+    }
+
+    burger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => toggleMenu(false));
+    });
+
+    document.addEventListener('click', (e) => {
+        if (menu.classList.contains('active') && !menu.contains(e.target) && e.target !== burger) {
+            toggleMenu(false);
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu.classList.contains('active')) {
+            toggleMenu(false);
+        }
     });
 </script>
 
