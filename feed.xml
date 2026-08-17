@@ -5,16 +5,151 @@
     <link>https://elrockdetodoslosdias.com.mx</link>
     <description>Archivo independiente de cultura y ruido. Rock, metal y música underground mexicana.</description>
     <language>es-mx</language>
-    <lastBuildDate>Fri, 31 Jul 2026 02:40:15 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 03:22:02 +0000</lastBuildDate>
     <generator>generate-rss.py</generator>
     <item>
-      <title>Spider-Man: Brand New Day — La Reivindicación del Arácnido</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasjulio/Postspider-man-brand-new-day.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasjulio/Postspider-man-brand-new-day.html</guid>
-      <description>Marvel reivindica a Spider-Man con 'Brand New Day': cuarta entrega del arácnido en el MCU. Análisis de fotografía, actuaciones, villanos y el futuro de Peter Parker.</description>
-      <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/spider-man-brand-new-day.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/spider-man-brand-new-day.jpg" medium="image" />
+      <title>Eddy Sexxx — "Balada Bastarda"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postEddySexxx.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postEddySexxx.html</guid>
+      <description>Eddy Sexxx presenta su EP 'Balada Bastarda' bajo Discos Denver. Cuatro cortes de pura realidad urbana, blues y canción de autor.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/EDDY-SEXXX-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/EDDY-SEXXX-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>Nightpath — "The Night's Path"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postNightpath.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postNightpath.html</guid>
+      <description>Nightpath emerge de Mexicali con su debut homónimo de 6 canciones. Melodic Black Metal gélido bajo el sello Concreto Records.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/NIGHTPATH-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/NIGHTPATH-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>Nostalgia Urbana — "Un Sábado Loco de buen Rock and Roll"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postNostalgiaUrbana.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postNostalgiaUrbana.html</guid>
+      <description>Nostalgia Urbana enciende las calles con 'Un Sábado Loco de buen Rock and Roll'. Un EP que rescata la esencia callejera del rock urbano.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/NOSTALGIA-URBANA-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/NOSTALGIA-URBANA-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>Magma Soul — "Roto"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postMagmaSoul.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postMagmaSoul.html</guid>
+      <description>Magma Soul estrena el videoclip oficial de 'Roto', corte homónimo de su nuevo LP. Triunfo y compañerismo en medio de la tragedia.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/MAGMA-SOUL-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/MAGMA-SOUL-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>Rita Payés &amp; Lucía Fumero — "Rueda eterna"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postRitaPayes.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postRitaPayes.html</guid>
+      <description>Rita Payés y Lucía Fumero se reúnen en 'Rueda eterna', un sencillo entre el jazz, la canción de autor y las raíces mediterráneas y latinoamericanas.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/RITA-PAYES-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/RITA-PAYES-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>Jessi Esle — "El Blues Del Rogón"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postJessiEsle.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postJessiEsle.html</guid>
+      <description>Jessi Esle promociona su más reciente material 'El Blues Del Rogón'. Un EP que consolida una carrera forjada a pulso desde 2020.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/JESSI-ESLE-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/JESSI-ESLE-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>DIIV — "ZIRP!"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postDIIV.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postDIIV.html</guid>
+      <description>DIIV anuncia su nuevo álbum ZIRP! con el primer sencillo 'The Fountain'. Shoegaze y grunge con sensibilidad pop para una nueva era.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/DIIV-ZIRP-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/DIIV-ZIRP-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>Emilia Borlone — "La Joya"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postEmiliaBorlone.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postEmiliaBorlone.html</guid>
+      <description>Emilia Borlone estrena 'La Joya', su primer álbum de larga duración. Un viaje íntimo entre el pop, el rock y los sonidos latinos.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/EMILIA-BORLONE-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/EMILIA-BORLONE-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>Austin TV — "La ilusión del tacto"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postAustinTV.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postAustinTV.html</guid>
+      <description>Austin TV presenta 'La ilusión del tacto' ft. Yael Lima de Un Perro Andaluz, sencillo de su próximo álbum MA. Gira por Europa, EE.UU. y México.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/AUSTIN-TV-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/AUSTIN-TV-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>The Warning — "Everything's Falling"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postTheWarning.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postTheWarning.html</guid>
+      <description>The Warning presenta su quinto álbum de estudio 'Everything's Falling'. Rock alternativo y hard rock con un trasfondo estético más oscuro.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/THE-WARNING-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/THE-WARNING-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>Ximbo — "Volar Ligero" (con Akil Ammar)</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postXimbo.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postXimbo.html</guid>
+      <description>Ximbo presenta 'Volar Ligero' junto a Akil Ammar, segundo track de Bilora Bella. Boom bap clásico y un reencuentro de décadas en el Hip Hop.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/XIMBO-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/XIMBO-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>S7N — "VII"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postS7N.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postS7N.html</guid>
+      <description>S7N presenta VII, un demoledor viaje de groove metal en 7 canciones. Poder puro, velocidad y rabia canalizada directo al moshpit.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/S7N-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/S7N-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>Oso Lerma — "Desde la C.P. la Ciudad del Rock"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postOsoLerma.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postOsoLerma.html</guid>
+      <description>Óscar 'Oso' Lerma debuta con su EP 'Desde la C.P. la Ciudad del Rock' bajo Discos Denver. Historias de banqueta y asfalto.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/OSO-LERMA-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/OSO-LERMA-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>Black &amp; Velvet — "Expandir"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postBlackVelvet.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postBlackVelvet.html</guid>
+      <description>Black &amp; Velvet estrena 'Expandir', un track hipnótico entre el rock alternativo y pasajes psicodélicos. La metamorfosis más elegante del underground.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/BLACK-VELVET-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/BLACK-VELVET-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>Deer MX — "ITZCUINTLAN"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postDeerMX.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postDeerMX.html</guid>
+      <description>ITZCUINTLAN, la reinvención de Deer MX en su primer EP completamente en español. Un viaje down tempo entre la cosmovisión mesoamericana y la vivencia personal.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/DEER-MX-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/DEER-MX-PORTADA.png" medium="image" />
+    </item>
+    <item>
+      <title>Spinne — "Out of Frame / No Regret Held"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postSpinne.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postSpinne.html</guid>
+      <description>Spinne estrena 'Out of Frame' y 'No Regret Held', avances de su próximo LP. Thrash de la vieja escuela con riffs acelerados y baterías implacables.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/SPINNE-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/SPINNE-PORTADA.png" medium="image" />
     </item>
     <item>
       <title>Los Latidos de México: 15 Bateristas que Marcaron el Ritmo</title>
@@ -24,6 +159,15 @@
       <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
       <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/bateristas-mexico.png" />
       <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/bateristas-mexico.png" medium="image" />
+    </item>
+    <item>
+      <title>Spider-Man: Brand New Day — La Reivindicación del Arácnido</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasjulio/Postspider-man-brand-new-day.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasjulio/Postspider-man-brand-new-day.html</guid>
+      <description>Marvel reivindica a Spider-Man con 'Brand New Day': cuarta entrega del arácnido en el MCU. Análisis de fotografía, actuaciones, villanos y el futuro de Peter Parker.</description>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/spider-man-brand-new-day.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/spider-man-brand-new-day.jpg" medium="image" />
     </item>
     <item>
       <title>Eric Carr debuta con KISS — El inicio de la era del "Zorro"</title>
@@ -53,6 +197,15 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/batman-vs-spiderman.jpg" medium="image" />
     </item>
     <item>
+      <title>Los Psíquicos — "No Miro Atrás"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasjulio/postLosPsiquicos.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postLosPsiquicos.html</guid>
+      <description>Los Psíquicos lanzan 'No Miro Atrás', su tercer sencillo que consolida su propuesta de rock pop experimental con historieta.</description>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/los-psiquicos-portada.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/los-psiquicos-portada.png" medium="image" />
+    </item>
+    <item>
       <title>Dark Shadow presenta "Through Blood or Glory"</title>
       <link>https://elrockdetodoslosdias.com.mx/notasjulio/postDark.html</link>
       <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postDark.html</guid>
@@ -60,42 +213,6 @@
       <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
       <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/darkshadow-hero.jpg" />
       <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/darkshadow-hero.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Dakuri — "Voices"</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasjulio/postDakuri.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postDakuri.html</guid>
-      <description>Dakuri presenta 'Voices', un intenso sencillo de metal sinfónico que explora la crisis de salud mental y la deshumanización.</description>
-      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/dakuriportada.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/dakuriportada.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Lina Stoner — "Indestructible"</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasjulio/postLinaStoner.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postLinaStoner.html</guid>
-      <description>Lina Stoner presenta 'Indestructible', cuarto single de su EP Perla Negra. Un decreto de resiliencia y amor propio.</description>
-      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/LINA-STONER_-1200X1200-PX.png" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/LINA-STONER_-1200X1200-PX.png" medium="image" />
-    </item>
-    <item>
-      <title>Deer MX — "ITZCUINTLAN"</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasjulio/postDeerMX.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postDeerMX.html</guid>
-      <description>Deer MX da un giro audaz con ITZCUINTLAN, su nuevo EP en español. Electrónica oscura, down tempo y cosmovisión mesoamericana.</description>
-      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/deer-mx-portada.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/deer-mx-portada.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Asedio — "Sed de Aniquilación"</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasjulio/postAsedio.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postAsedio.html</guid>
-      <description>Asedio presenta 'Sed de Aniquilación', thrash metal desde las entrañas de Ecatepec. Pura catarsis y resistencia.</description>
-      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/asedio-portada.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/asedio-portada.jpg" medium="image" />
     </item>
     <item>
       <title>Hilo Negro — "Espiral"</title>
@@ -107,6 +224,33 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/hilo-negro-portada.jpg" medium="image" />
     </item>
     <item>
+      <title>Rebeca Pal — "Vorágine"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasjulio/postRebecaPal.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postRebecaPal.html</guid>
+      <description>Rebeca Pal presenta 'Vorágine', su segunda novela que explora los conflictos emocionales en la intimidad de una relación de pareja.</description>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/rebeca-pal-portada.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/rebeca-pal-portada.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Lina Stoner — "Indestructible"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasjulio/postLinaStoner.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postLinaStoner.html</guid>
+      <description>Lina Stoner presenta 'Indestructible', cuarto single de su EP Perla Negra. Un decreto de resiliencia y amor propio.</description>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/LINA-STONER_-1200X1200-PX.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/LINA-STONER_-1200X1200-PX.png" medium="image" />
+    </item>
+    <item>
+      <title>Dakuri — "Voices"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasjulio/postDakuri.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postDakuri.html</guid>
+      <description>Dakuri presenta 'Voices', un intenso sencillo de metal sinfónico que explora la crisis de salud mental y la deshumanización.</description>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/dakuriportada.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/dakuriportada.jpg" medium="image" />
+    </item>
+    <item>
       <title>L.C.D. — Las Cuerdas Delirantes estrenan "De Mi"</title>
       <link>https://elrockdetodoslosdias.com.mx/notasjulio/postLCD.html</link>
       <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postLCD.html</guid>
@@ -116,13 +260,13 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/lcd-hero.jpg" medium="image" />
     </item>
     <item>
-      <title>Los Psíquicos — "No Miro Atrás"</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasjulio/postLosPsiquicos.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postLosPsiquicos.html</guid>
-      <description>Los Psíquicos lanzan 'No Miro Atrás', su tercer sencillo que consolida su propuesta de rock pop experimental con historieta.</description>
+      <title>Asedio — "Sed de Aniquilación"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasjulio/postAsedio.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postAsedio.html</guid>
+      <description>Asedio presenta 'Sed de Aniquilación', thrash metal desde las entrañas de Ecatepec. Pura catarsis y resistencia.</description>
       <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/los-psiquicos-portada.png" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/los-psiquicos-portada.png" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/asedio-portada.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/asedio-portada.jpg" medium="image" />
     </item>
     <item>
       <title>Arusal — "Reverberación"</title>
@@ -134,13 +278,13 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/arusal-reverberacion.png" medium="image" />
     </item>
     <item>
-      <title>Rebeca Pal — "Vorágine"</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasjulio/postRebecaPal.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postRebecaPal.html</guid>
-      <description>Rebeca Pal presenta 'Vorágine', su segunda novela que explora los conflictos emocionales en la intimidad de una relación de pareja.</description>
+      <title>Deer MX — "ITZCUINTLAN"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasjulio/postDeerMX.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postDeerMX.html</guid>
+      <description>Deer MX da un giro audaz con ITZCUINTLAN, su nuevo EP en español. Electrónica oscura, down tempo y cosmovisión mesoamericana.</description>
       <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/rebeca-pal-portada.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/rebeca-pal-portada.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/deer-mx-portada.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/deer-mx-portada.jpg" medium="image" />
     </item>
     <item>
       <title>ESCENA | O Tortuga: Guerreros del Sur Tour [X Aniversario]</title>
@@ -152,15 +296,6 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasmayo/o-tortuga-hero.jpg" medium="image" />
     </item>
     <item>
-      <title>ESCENA | Metztli de Anna Fiori: Un devastador viaje de metal prehispánico</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmayo/postAnnaFiori.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmayo/postAnnaFiori.html</guid>
-      <description>ESCENA | Metztli de Anna Fiori: Un devastador viaje de metal prehispánico</description>
-      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmayo/anna-fiori-metztli-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmayo/anna-fiori-metztli-hero.jpg" medium="image" />
-    </item>
-    <item>
       <title>ESCENA | Aryem – Agnes: El bellísimo peligro de volverse humano</title>
       <link>https://elrockdetodoslosdias.com.mx/notasmayo/postAryem2.html</link>
       <guid>https://elrockdetodoslosdias.com.mx/notasmayo/postAryem2.html</guid>
@@ -170,40 +305,31 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasmayo/aryem-agnes-hero.jpg" medium="image" />
     </item>
     <item>
-      <title>ESCENA | Sofía Élan y el arte de sentir sin filtros en “CÍTRICO”</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasabril/postSofiaElan.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postSofiaElan.html</guid>
-      <description>ESCENA | Sofía Élan y el arte de sentir sin filtros en “CÍTRICO”</description>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/sofia-elan-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/sofia-elan-hero.jpg" medium="image" />
+      <title>ESCENA | Metztli de Anna Fiori: Un devastador viaje de metal prehispánico</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmayo/postAnnaFiori.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmayo/postAnnaFiori.html</guid>
+      <description>ESCENA | Metztli de Anna Fiori: Un devastador viaje de metal prehispánico</description>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmayo/anna-fiori-metztli-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmayo/anna-fiori-metztli-hero.jpg" medium="image" />
     </item>
     <item>
-      <title>ESCENA | Electrify estrena 'Forsaken': El rugido de la autenticidad</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasabril/postElectrifyForsaken.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postElectrifyForsaken.html</guid>
-      <description>ESCENA | Electrify estrena 'Forsaken': El rugido de la autenticidad</description>
+      <title>ESCENA | Ultraviolentas estrena “Morir Así”</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasabril/postUltraviolentas.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postUltraviolentas.html</guid>
+      <description>ESCENA | Ultraviolentas estrena “Morir Así”</description>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/electrify-forsaken.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/electrify-forsaken.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/ultraviolentas-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/ultraviolentas-hero.jpg" medium="image" />
     </item>
     <item>
-      <title>ESCENA | Thrust redefine su sonido con “No Más Oscuridad”</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasabril/postThrust.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postThrust.html</guid>
-      <description>ESCENA | Thrust redefine su sonido con “No Más Oscuridad”</description>
+      <title>INVESTIGACIÓN | Génesis del Progreso: Los inicios del Rock Progresivo en México</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/investigacionProg.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/investigacionProg.html</guid>
+      <description>INVESTIGACIÓN | Génesis del Progreso: Los inicios del Rock Progresivo en México</description>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/thrust-video-1.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/thrust-video-1.jpg" medium="image" />
-    </item>
-    <item>
-      <title>ESCENA | Silverio presenta "Éxito": Distopía tropical desde Silveriolandia</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasabril/postSilverio.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postSilverio.html</guid>
-      <description>ESCENA | Silverio presenta "Éxito": Distopía tropical desde Silveriolandia</description>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/silverio-exito-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/silverio-exito-hero.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/prog-mexico-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/prog-mexico-hero.jpg" medium="image" />
     </item>
     <item>
       <title>ESCENA | Flor de Jade reafirma su identidad con "Mi Voluntad"</title>
@@ -213,6 +339,33 @@
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
       <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/flor-de-jade-hero.jpg" />
       <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/flor-de-jade-hero.jpg" medium="image" />
+    </item>
+    <item>
+      <title>ESCENA | Lost Nebula: “Que Arda El Mundo”</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasabril/postLostNebula.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postLostNebula.html</guid>
+      <description>ESCENA | Lost Nebula: “Que Arda El Mundo”</description>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/lost-nebula-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/lost-nebula-hero.jpg" medium="image" />
+    </item>
+    <item>
+      <title>ESCENA | Tangerine Circus: La odisea instrumental de “Vermilion Bird”</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasabril/postTangerineCircus.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postTangerineCircus.html</guid>
+      <description>ESCENA | Tangerine Circus: La odisea instrumental de “Vermilion Bird”</description>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/tangerine-circus-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/tangerine-circus-hero.jpg" medium="image" />
+    </item>
+    <item>
+      <title>ESCENA | Analog I regresa para mostrarnos su “Identidad”</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasabril/postAnalogI.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postAnalogI.html</guid>
+      <description>ESCENA | Analog I regresa para mostrarnos su “Identidad”</description>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/analog-i-identidad-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/analog-i-identidad-hero.jpg" medium="image" />
     </item>
     <item>
       <title>ESCENA | Desfase Temporal captura la energía real en “Espasmo”</title>
@@ -233,94 +386,22 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/bateristas-mexicanos-hero.jpg" medium="image" />
     </item>
     <item>
-      <title>ESCENA | Tangerine Circus: La odisea instrumental de “Vermilion Bird”</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasabril/postTangerineCircus.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postTangerineCircus.html</guid>
-      <description>ESCENA | Tangerine Circus: La odisea instrumental de “Vermilion Bird”</description>
+      <title>ESCENA | Electrify estrena 'Forsaken': El rugido de la autenticidad</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasabril/postElectrifyForsaken.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postElectrifyForsaken.html</guid>
+      <description>ESCENA | Electrify estrena 'Forsaken': El rugido de la autenticidad</description>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/tangerine-circus-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/tangerine-circus-hero.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/electrify-forsaken.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/electrify-forsaken.jpg" medium="image" />
     </item>
     <item>
-      <title>ESCENA | Disco Eterno consolida su propuesta con "Sueño Perpetuo"</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasabril/postDiscoEterno.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postDiscoEterno.html</guid>
-      <description>ESCENA | Disco Eterno consolida su propuesta con "Sueño Perpetuo"</description>
+      <title>ESCENA | Silverio presenta "Éxito": Distopía tropical desde Silveriolandia</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasabril/postSilverio.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postSilverio.html</guid>
+      <description>ESCENA | Silverio presenta "Éxito": Distopía tropical desde Silveriolandia</description>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/disco-eterno-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/disco-eterno-hero.jpg" medium="image" />
-    </item>
-    <item>
-      <title>CRÓNICA | El Culto: Donde el plástico se derrite y el ruido te acoge</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasabril/postElCulto.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postElCulto.html</guid>
-      <description>CRÓNICA | El Culto: Donde el plástico se derrite y el ruido te acoge</description>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/el-culto-inauguracion.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/el-culto-inauguracion.jpg" medium="image" />
-    </item>
-    <item>
-      <title>ESCENA | Jessy Bulbo encabeza "Rock con Causa" en el Barco Utopía</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasabril/postJessyBulbo.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postJessyBulbo.html</guid>
-      <description>ESCENA | Jessy Bulbo encabeza "Rock con Causa" en el Barco Utopía</description>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/jessy-bulbo-utopia.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/jessy-bulbo-utopia.jpg" medium="image" />
-    </item>
-    <item>
-      <title>ESCENA | Lost Nebula: “Que Arda El Mundo”</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasabril/postLostNebula.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postLostNebula.html</guid>
-      <description>ESCENA | Lost Nebula: “Que Arda El Mundo”</description>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/lost-nebula-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/lost-nebula-hero.jpg" medium="image" />
-    </item>
-    <item>
-      <title>ESCENA | Ultraviolentas estrena “Morir Así”</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasabril/postUltraviolentas.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postUltraviolentas.html</guid>
-      <description>ESCENA | Ultraviolentas estrena “Morir Así”</description>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/ultraviolentas-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/ultraviolentas-hero.jpg" medium="image" />
-    </item>
-    <item>
-      <title>ESCENA | Asesinos del Amor estrena "Grita": Catarsis Punk Rock</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasabril/postAsesinosAmor.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postAsesinosAmor.html</guid>
-      <description>ESCENA | Asesinos del Amor estrena "Grita": Catarsis Punk Rock</description>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/asesinos-amor-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/asesinos-amor-hero.jpg" medium="image" />
-    </item>
-    <item>
-      <title>ESCENA | SPINNE: El sonido REC de la vieja escuela en "No Regret Held"</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasabril/postSpinne.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postSpinne.html</guid>
-      <description>ESCENA | SPINNE: El sonido REC de la vieja escuela en "No Regret Held"</description>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/spinne-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/spinne-hero.jpg" medium="image" />
-    </item>
-    <item>
-      <title>ESCENA | Analog I regresa para mostrarnos su “Identidad”</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasabril/postAnalogI.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postAnalogI.html</guid>
-      <description>ESCENA | Analog I regresa para mostrarnos su “Identidad”</description>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/analog-i-identidad-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/analog-i-identidad-hero.jpg" medium="image" />
-    </item>
-    <item>
-      <title>INVESTIGACIÓN | Génesis del Progreso: Los inicios del Rock Progresivo en México</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/investigacionProg.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/investigacionProg.html</guid>
-      <description>INVESTIGACIÓN | Génesis del Progreso: Los inicios del Rock Progresivo en México</description>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/prog-mexico-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/prog-mexico-hero.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/silverio-exito-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/silverio-exito-hero.jpg" medium="image" />
     </item>
     <item>
       <title>ESCENA | Vardök celebra su primer año con “Perdición”</title>
@@ -332,6 +413,33 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/vardok-hero.jpg" medium="image" />
     </item>
     <item>
+      <title>ESCENA | Celeste Salloum: Estrena Ah Kim Pech</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasabril/postCelesteSalloum.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postCelesteSalloum.html</guid>
+      <description>ESCENA | Celeste Salloum: Estrena Ah Kim Pech</description>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/celeste-salloum-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/celeste-salloum-hero.jpg" medium="image" />
+    </item>
+    <item>
+      <title>ESCENA | Jessy Bulbo encabeza "Rock con Causa" en el Barco Utopía</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasabril/postJessyBulbo.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postJessyBulbo.html</guid>
+      <description>ESCENA | Jessy Bulbo encabeza "Rock con Causa" en el Barco Utopía</description>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/jessy-bulbo-utopia.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/jessy-bulbo-utopia.jpg" medium="image" />
+    </item>
+    <item>
+      <title>CRÓNICA | El Culto: Donde el plástico se derrite y el ruido te acoge</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasabril/postElCulto.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postElCulto.html</guid>
+      <description>CRÓNICA | El Culto: Donde el plástico se derrite y el ruido te acoge</description>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/el-culto-inauguracion.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/el-culto-inauguracion.jpg" medium="image" />
+    </item>
+    <item>
       <title>ESCENA | Saurom: Entre juglares y cicatrices [Acústico CDMX]</title>
       <link>https://elrockdetodoslosdias.com.mx/notasabril/postSaurom.html</link>
       <guid>https://elrockdetodoslosdias.com.mx/notasabril/postSaurom.html</guid>
@@ -339,6 +447,42 @@
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
       <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/saurom-esperanza-iris.jpg" />
       <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/saurom-esperanza-iris.jpg" medium="image" />
+    </item>
+    <item>
+      <title>ESCENA | Sofía Élan y el arte de sentir sin filtros en “CÍTRICO”</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasabril/postSofiaElan.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postSofiaElan.html</guid>
+      <description>ESCENA | Sofía Élan y el arte de sentir sin filtros en “CÍTRICO”</description>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/sofia-elan-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/sofia-elan-hero.jpg" medium="image" />
+    </item>
+    <item>
+      <title>ESCENA | Disco Eterno consolida su propuesta con "Sueño Perpetuo"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasabril/postDiscoEterno.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postDiscoEterno.html</guid>
+      <description>ESCENA | Disco Eterno consolida su propuesta con "Sueño Perpetuo"</description>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/disco-eterno-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/disco-eterno-hero.jpg" medium="image" />
+    </item>
+    <item>
+      <title>ESCENA | Asesinos del Amor estrena "Grita": Catarsis Punk Rock</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasabril/postAsesinosAmor.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postAsesinosAmor.html</guid>
+      <description>ESCENA | Asesinos del Amor estrena "Grita": Catarsis Punk Rock</description>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/asesinos-amor-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/asesinos-amor-hero.jpg" medium="image" />
+    </item>
+    <item>
+      <title>ESCENA | Thrust redefine su sonido con “No Más Oscuridad”</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasabril/postThrust.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postThrust.html</guid>
+      <description>ESCENA | Thrust redefine su sonido con “No Más Oscuridad”</description>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/thrust-video-1.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/thrust-video-1.jpg" medium="image" />
     </item>
     <item>
       <title>ESCENA | NERVOSA estrena su brutal nuevo álbum "Slave Machine"</title>
@@ -350,40 +494,31 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/nervosa-slave-machine-hero.jpg" medium="image" />
     </item>
     <item>
-      <title>ESCENA | Celeste Salloum: Estrena Ah Kim Pech</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasabril/postCelesteSalloum.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postCelesteSalloum.html</guid>
-      <description>ESCENA | Celeste Salloum: Estrena Ah Kim Pech</description>
+      <title>ESCENA | SPINNE: El sonido REC de la vieja escuela en "No Regret Held"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasabril/postSpinne.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasabril/postSpinne.html</guid>
+      <description>ESCENA | SPINNE: El sonido REC de la vieja escuela en "No Regret Held"</description>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/celeste-salloum-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/celeste-salloum-hero.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasabril/spinne-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasabril/spinne-hero.jpg" medium="image" />
     </item>
     <item>
-      <title>EXPEDIENTE | EVERYTHING HERE IS ALIVE: Música multidimensional</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postehia.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postehia.html</guid>
-      <description>Everything Here Is Alive presenta su álbum homónimo. Una cocreación con la naturaleza desde San José del Cabo.</description>
+      <title>ESCENA NACIONAL | SHE NO MORE: El grito de las madres</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/post-shenomore.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/post-shenomore.html</guid>
+      <description>SHE NO MORE lanza 'BUSCARÉ', un desgarrador himno de metal sinfónico en homenaje a los colectivos de madres buscadoras en México.</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/tu-imagen-1.png" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/tu-imagen-1.png" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/she-no-more-portada.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/she-no-more-portada.jpg" medium="image" />
     </item>
     <item>
-      <title>AGENDA | Mini Rock Fest: El primer festival niñocentrista en México</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postMiniRock.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postMiniRock.html</guid>
-      <description>AGENDA | Mini Rock Fest: El primer festival niñocentrista en México</description>
+      <title>CULTURA | 5 Joyas del Rock Mexicano que el Mainstream Olvidó</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postJoyas.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postJoyas.html</guid>
+      <description>CULTURA | 5 Joyas del Rock Mexicano que el Mainstream Olvidó</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/mini-rock-fest-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/mini-rock-fest-hero.jpg" medium="image" />
-    </item>
-    <item>
-      <title>BLACK SHINE | El acecho del "Night Hunter": Metal Mexicano de Exportación</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postBlackShine.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postBlackShine.html</guid>
-      <description>BLACK SHINE | El acecho del "Night Hunter": Metal Mexicano de Exportación</description>
-      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/black-shine-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/black-shine-hero.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/joyas-rock-mexicano-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/joyas-rock-mexicano-hero.jpg" medium="image" />
     </item>
     <item>
       <title>ESCENA | SAN VENUS: El fin de la inercia en "MASVALE"</title>
@@ -395,49 +530,40 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/san-venus-masvale-cover.jpg" medium="image" />
     </item>
     <item>
-      <title>ESCENA NACIONAL | ANNA FIORI ANUNCIA "METZTLI"</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/post-annafiori.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/post-annafiori.html</guid>
-      <description>Anna Fiori anuncia 'Metztli', su tercer disco conceptual de metal sinfónico y prehispánico, acompañado de su primer libro.</description>
+      <title>EXPEDIENTE | EVERYTHING HERE IS ALIVE: Música multidimensional</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postehia.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postehia.html</guid>
+      <description>Everything Here Is Alive presenta su álbum homónimo. Una cocreación con la naturaleza desde San José del Cabo.</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/annafiori-portada.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/annafiori-portada.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/tu-imagen-1.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/tu-imagen-1.png" medium="image" />
     </item>
     <item>
-      <title>ESCENA | Ágora: El origen inédito de Zona de Silencio [XX ANIVERSARIO]</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postAgora.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postAgora.html</guid>
-      <description>ESCENA | Ágora: El origen inédito de Zona de Silencio [XX ANIVERSARIO]</description>
+      <title>BLACK SHINE | El acecho del "Night Hunter": Metal Mexicano de Exportación</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postBlackShine.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postBlackShine.html</guid>
+      <description>BLACK SHINE | El acecho del "Night Hunter": Metal Mexicano de Exportación</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/agora-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/agora-hero.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/black-shine-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/black-shine-hero.jpg" medium="image" />
     </item>
     <item>
-      <title>AGENDA | NORTE: El fenómeno del Emo Indie Pop llega a la CDMX</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postNorte.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postNorte.html</guid>
-      <description>AGENDA | NORTE: El fenómeno del Emo Indie Pop llega a la CDMX</description>
+      <title>INTERNACIONAL | DIRTY SOUND MAGNET: Resurrección y Psicodelia</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postDirty.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postDirty.html</guid>
+      <description>Dirty Sound Magnet lanza 'Me and My Shadow', un álbum nacido de la carretera y un encuentro cercano con la muerte.</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/norte-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/norte-hero.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/dirty-sound-magnet-album.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/dirty-sound-magnet-album.jpg" medium="image" />
     </item>
     <item>
-      <title>9no Aniversario Vikings Rock Bar 2026: Gran Noveno Círculo en Iztapalapa</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/post-gran-noveno-circulo-aniversario-vikings-rock-bar-2026.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/post-gran-noveno-circulo-aniversario-vikings-rock-bar-2026.html</guid>
-      <description>Vikings Rock Bar celebra 9 años con un festival masivo en Iztapalapa. Conoce el cartel: Inoxia, Deskiziados Ska, Radio Obrera Antifa y más. ¡No te pierdas el portal de sonido este 28 de marzo!</description>
+      <title>INVESTIGACIÓN | Génesis del Progreso: Los inicios del Rock Progresivo en México</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/investigacionProg.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/investigacionProg.html</guid>
+      <description>INVESTIGACIÓN | Génesis del Progreso: Los inicios del Rock Progresivo en México</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/vikings-aniversario-cover.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/vikings-aniversario-cover.jpg" medium="image" />
-    </item>
-    <item>
-      <title>ESCENA NACIONAL | SHE NO MORE: El grito de las madres</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/post-shenomore.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/post-shenomore.html</guid>
-      <description>SHE NO MORE lanza 'BUSCARÉ', un desgarrador himno de metal sinfónico en homenaje a los colectivos de madres buscadoras en México.</description>
-      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/she-no-more-portada.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/she-no-more-portada.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/prog-mexico-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/prog-mexico-hero.jpg" medium="image" />
     </item>
     <item>
       <title>ESCENA NACIONAL | Sierra Sonora: La memoria en la piel</title>
@@ -458,49 +584,13 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/red-sands-system-cover.jpg" medium="image" />
     </item>
     <item>
-      <title>KNOTFEST MÉXICO 2026 | HOJA DE RUTA DEL CAOS</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postknofest.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postknofest.html</guid>
-      <description>Consulta los horarios oficiales del Knotfest México 2026. Bad Omens, Lamb of God y Poppy encabezan el asalto en el Estadio Fray Nano.</description>
+      <title>ESCENA | ZECTA LUZ: El juicio de las sombras en su nuevo single</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/zecta-luz-shadows-cover.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/zecta-luz-shadows-cover.html</guid>
+      <description>Zecta Luz presenta 'Shadows', un manifiesto de metal crudo sobre los dilemas morales y las decisiones humanas. Lanzamiento: 13 de marzo.</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/knotfest-cartel.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/knotfest-cartel.jpg" medium="image" />
-    </item>
-    <item>
-      <title>ESCENA | SEVEN RED LIONS: El rugido de Londres llega a México</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postsevenred.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postsevenred.html</guid>
-      <description>Seven Red Lions anuncia su 'Tequila Rock Tour' con 10 fechas en México. Rock alternativo emocional desde Londres para el circuito independiente.</description>
-      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/seven-red-lions-tour.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/seven-red-lions-tour.jpg" medium="image" />
-    </item>
-    <item>
-      <title>ESCENA | GIBBONS: El asalto tapatío no tiene "Sin Salida"</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postgibbons.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postgibbons.html</guid>
-      <description>Gibbons estrena su segundo EP 'Sin Salida'. Rock, blues y psicodelia desde Guadalajara. Consulta las fechas de su gira por México.</description>
-      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/gibbons-sin-salida-cover.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/gibbons-sin-salida-cover.jpg" medium="image" />
-    </item>
-    <item>
-      <title>INTERNACIONAL | DIRTY SOUND MAGNET: Resurrección y Psicodelia</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postDirty.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postDirty.html</guid>
-      <description>Dirty Sound Magnet lanza 'Me and My Shadow', un álbum nacido de la carretera y un encuentro cercano con la muerte.</description>
-      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/dirty-sound-magnet-album.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/dirty-sound-magnet-album.jpg" medium="image" />
-    </item>
-    <item>
-      <title>ESCENA NACIONAL | A Love Electric: El hombre contra la máquina</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/post-aloveelectric.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/post-aloveelectric.html</guid>
-      <description>A Love Electric estrena 'Man and Machine'. Una cruda exploración de la relación entre el humano, la tecnología y el futuro.</description>
-      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/aloveelectric-portada.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/aloveelectric-portada.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/san-venus-masvale-cover.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/san-venus-masvale-cover.jpg" medium="image" />
     </item>
     <item>
       <title>PANTALLAS | Spider-Man: Brand New Day - El regreso oscuro</title>
@@ -512,13 +602,22 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/tom-holland-brand-new-day.jpg" medium="image" />
     </item>
     <item>
-      <title>Anna Fiori celebra 15 años con "En El Vacío" - Metztli 2026</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postAnnaFiori.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postAnnaFiori.html</guid>
-      <description>Anna Fiori, la máxima exponente del metal sinfónico en México, lanza 'En El Vacío'. Primer sencillo de su álbum 'Metztli' y celebración de 15 años de carrera.</description>
+      <title>ESCENA | COILGUNS REGRESA A MÉXICO: Ruido, Caos y Humus Records</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postcoilguns.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postcoilguns.html</guid>
+      <description>La maquinaria suiza del noise-rock, Coilguns, confirma tres fechas en México para mayo de 2026 junto a Joliette y Tresseises.</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/anna-fiori-cover.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/anna-fiori-cover.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/coilguns-promo.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/coilguns-promo.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Phantom en Wacken Open Air 2026: Metal Mexicano en Alemania</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/phantom-mexico-wacken-open-air-2026.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/phantom-mexico-wacken-open-air-2026.html</guid>
+      <description>La banda de Speed Metal, Phantom (Guadalajara), confirma su actuación en el Wacken Open Air 2026. Conoce los detalles de su presentación en el 35 aniversario del festival de metal más grande del mundo.</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/phantom-wacken-cover.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/phantom-wacken-cover.jpg" medium="image" />
     </item>
     <item>
       <title>MÚSICA | Arde Internet: El polémico Top 50 de Rock en Español de Billboard</title>
@@ -539,40 +638,40 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/enso-in-cyberlove-cover.jpg" medium="image" />
     </item>
     <item>
-      <title>AGENDA | Sergio Arau: Embotellado de Origen [MULTIFORO ALICIA]</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postArau.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postArau.html</guid>
-      <description>AGENDA | Sergio Arau: Embotellado de Origen [MULTIFORO ALICIA]</description>
+      <title>ESCENA NACIONAL | A Love Electric: El hombre contra la máquina</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/post-aloveelectric.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/post-aloveelectric.html</guid>
+      <description>A Love Electric estrena 'Man and Machine'. Una cruda exploración de la relación entre el humano, la tecnología y el futuro.</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/sergio-arau-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/sergio-arau-hero.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/aloveelectric-portada.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/aloveelectric-portada.jpg" medium="image" />
     </item>
     <item>
-      <title>Jinjer y Anima Tempo en México 2026: Fecha en el Circo Volador</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/post-jinjer-anima-tempo-mexico-2026.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/post-jinjer-anima-tempo-mexico-2026.html</guid>
-      <description>Jinjer regresa a CDMX el 19 de abril de 2026. Conoce todos los detalles del concierto en el Circo Volador con Anima Tempo como banda invitada de honor.</description>
+      <title>KNOTFEST MÉXICO 2026 | HOJA DE RUTA DEL CAOS</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postknofest.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postknofest.html</guid>
+      <description>Consulta los horarios oficiales del Knotfest México 2026. Bad Omens, Lamb of God y Poppy encabezan el asalto en el Estadio Fray Nano.</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/jinjer-mexico-cover.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/jinjer-mexico-cover.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/knotfest-cartel.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/knotfest-cartel.jpg" medium="image" />
     </item>
     <item>
-      <title>INVESTIGACIÓN | Génesis del Progreso: Los inicios del Rock Progresivo en México</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/investigacionProg.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/investigacionProg.html</guid>
-      <description>INVESTIGACIÓN | Génesis del Progreso: Los inicios del Rock Progresivo en México</description>
+      <title>ESCENA | SEVEN RED LIONS: El rugido de Londres llega a México</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postsevenred.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postsevenred.html</guid>
+      <description>Seven Red Lions anuncia su 'Tequila Rock Tour' con 10 fechas en México. Rock alternativo emocional desde Londres para el circuito independiente.</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/prog-mexico-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/prog-mexico-hero.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/seven-red-lions-tour.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/seven-red-lions-tour.jpg" medium="image" />
     </item>
     <item>
-      <title>ESCENA NACIONAL | Aryem: El descenso de Agnes</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/post-aryem.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/post-aryem.html</guid>
-      <description>Aryem anuncia 'Agnes', su tercer y más ambicioso álbum conceptual sobre un ser divino que aprende a sentir en la Tierra. Estreno en abril de 2026.</description>
+      <title>Anna Fiori celebra 15 años con "En El Vacío" - Metztli 2026</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postAnnaFiori.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postAnnaFiori.html</guid>
+      <description>Anna Fiori, la máxima exponente del metal sinfónico en México, lanza 'En El Vacío'. Primer sencillo de su álbum 'Metztli' y celebración de 15 años de carrera.</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/aryem-agnes-portada.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/aryem-agnes-portada.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/anna-fiori-cover.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/anna-fiori-cover.jpg" medium="image" />
     </item>
     <item>
       <title>ESCENA NACIONAL | Áurea: La antítesis de San Valentín</title>
@@ -584,22 +683,67 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/aurea-portada.jpg" medium="image" />
     </item>
     <item>
-      <title>ESCENA | ZECTA LUZ: El juicio de las sombras en su nuevo single</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/zecta-luz-shadows-cover.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/zecta-luz-shadows-cover.html</guid>
-      <description>Zecta Luz presenta 'Shadows', un manifiesto de metal crudo sobre los dilemas morales y las decisiones humanas. Lanzamiento: 13 de marzo.</description>
+      <title>AGENDA | Mini Rock Fest: El primer festival niñocentrista en México</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postMiniRock.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postMiniRock.html</guid>
+      <description>AGENDA | Mini Rock Fest: El primer festival niñocentrista en México</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/san-venus-masvale-cover.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/san-venus-masvale-cover.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/mini-rock-fest-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/mini-rock-fest-hero.jpg" medium="image" />
     </item>
     <item>
-      <title>ESCENA | COILGUNS REGRESA A MÉXICO: Ruido, Caos y Humus Records</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postcoilguns.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postcoilguns.html</guid>
-      <description>La maquinaria suiza del noise-rock, Coilguns, confirma tres fechas en México para mayo de 2026 junto a Joliette y Tresseises.</description>
+      <title>AGENDA | NORTE: El fenómeno del Emo Indie Pop llega a la CDMX</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postNorte.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postNorte.html</guid>
+      <description>AGENDA | NORTE: El fenómeno del Emo Indie Pop llega a la CDMX</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/coilguns-promo.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/coilguns-promo.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/norte-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/norte-hero.jpg" medium="image" />
+    </item>
+    <item>
+      <title>ESCENA NACIONAL | ANNA FIORI ANUNCIA "METZTLI"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/post-annafiori.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/post-annafiori.html</guid>
+      <description>Anna Fiori anuncia 'Metztli', su tercer disco conceptual de metal sinfónico y prehispánico, acompañado de su primer libro.</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/annafiori-portada.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/annafiori-portada.jpg" medium="image" />
+    </item>
+    <item>
+      <title>ESCENA NACIONAL | Aryem: El descenso de Agnes</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/post-aryem.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/post-aryem.html</guid>
+      <description>Aryem anuncia 'Agnes', su tercer y más ambicioso álbum conceptual sobre un ser divino que aprende a sentir en la Tierra. Estreno en abril de 2026.</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/aryem-agnes-portada.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/aryem-agnes-portada.jpg" medium="image" />
+    </item>
+    <item>
+      <title>9no Aniversario Vikings Rock Bar 2026: Gran Noveno Círculo en Iztapalapa</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/post-gran-noveno-circulo-aniversario-vikings-rock-bar-2026.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/post-gran-noveno-circulo-aniversario-vikings-rock-bar-2026.html</guid>
+      <description>Vikings Rock Bar celebra 9 años con un festival masivo en Iztapalapa. Conoce el cartel: Inoxia, Deskiziados Ska, Radio Obrera Antifa y más. ¡No te pierdas el portal de sonido este 28 de marzo!</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/vikings-aniversario-cover.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/vikings-aniversario-cover.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Jinjer y Anima Tempo en México 2026: Fecha en el Circo Volador</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/post-jinjer-anima-tempo-mexico-2026.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/post-jinjer-anima-tempo-mexico-2026.html</guid>
+      <description>Jinjer regresa a CDMX el 19 de abril de 2026. Conoce todos los detalles del concierto en el Circo Volador con Anima Tempo como banda invitada de honor.</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/jinjer-mexico-cover.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/jinjer-mexico-cover.jpg" medium="image" />
+    </item>
+    <item>
+      <title>ESCENA | GIBBONS: El asalto tapatío no tiene "Sin Salida"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postgibbons.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postgibbons.html</guid>
+      <description>Gibbons estrena su segundo EP 'Sin Salida'. Rock, blues y psicodelia desde Guadalajara. Consulta las fechas de su gira por México.</description>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/gibbons-sin-salida-cover.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/gibbons-sin-salida-cover.jpg" medium="image" />
     </item>
     <item>
       <title>ESCENA NACIONAL | Madame Récamier: Tributo a Santa Sabina</title>
@@ -611,22 +755,22 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/madamerecamier-portada.jpg" medium="image" />
     </item>
     <item>
-      <title>CULTURA | 5 Joyas del Rock Mexicano que el Mainstream Olvidó</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postJoyas.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postJoyas.html</guid>
-      <description>CULTURA | 5 Joyas del Rock Mexicano que el Mainstream Olvidó</description>
+      <title>AGENDA | Sergio Arau: Embotellado de Origen [MULTIFORO ALICIA]</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postArau.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postArau.html</guid>
+      <description>AGENDA | Sergio Arau: Embotellado de Origen [MULTIFORO ALICIA]</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/joyas-rock-mexicano-hero.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/joyas-rock-mexicano-hero.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/sergio-arau-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/sergio-arau-hero.jpg" medium="image" />
     </item>
     <item>
-      <title>Phantom en Wacken Open Air 2026: Metal Mexicano en Alemania</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/phantom-mexico-wacken-open-air-2026.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/phantom-mexico-wacken-open-air-2026.html</guid>
-      <description>La banda de Speed Metal, Phantom (Guadalajara), confirma su actuación en el Wacken Open Air 2026. Conoce los detalles de su presentación en el 35 aniversario del festival de metal más grande del mundo.</description>
+      <title>ESCENA | Ágora: El origen inédito de Zona de Silencio [XX ANIVERSARIO]</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasmarzo/postAgora.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasmarzo/postAgora.html</guid>
+      <description>ESCENA | Ágora: El origen inédito de Zona de Silencio [XX ANIVERSARIO]</description>
       <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/phantom-wacken-cover.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/phantom-wacken-cover.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasmarzo/agora-hero.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasmarzo/agora-hero.jpg" medium="image" />
     </item>
     <item>
       <title>ESCENA | Ángeles del Infierno en la Arena CDMX</title>
@@ -650,10 +794,66 @@
       <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Conferencia Jumbo: 25 Años y un Nuevo Ciclo</title>
-      <link>https://elrockdetodoslosdias.com.mx/nota-jumbo2.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/nota-jumbo2.html</guid>
-      <description>Conferencia Jumbo: 25 Años y un Nuevo Ciclo</description>
+      <title>A veces María: Bolero, Indie y Resignificación</title>
+      <link>https://elrockdetodoslosdias.com.mx/post-a-veces-maria.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/post-a-veces-maria.html</guid>
+      <description>A veces María: Bolero, Indie y Resignificación</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Kälad: Ärkamine y el Despertar del Metalcore</title>
+      <link>https://elrockdetodoslosdias.com.mx/kalad.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/kalad.html</guid>
+      <description>Kälad: Ärkamine y el Despertar del Metalcore</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Especial 50 Años de KISS Alive!</title>
+      <link>https://elrockdetodoslosdias.com.mx/post-kiss-alive.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/post-kiss-alive.html</guid>
+      <description>Especial 50 Años de KISS Alive!</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Brain Rage: TOC - El Laberinto de la Mente</title>
+      <link>https://elrockdetodoslosdias.com.mx/toc.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/toc.html</guid>
+      <description>The Brain Rage: TOC - El Laberinto de la Mente</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Dragon Ball Daima: El último viaje de Toriyama</title>
+      <link>https://elrockdetodoslosdias.com.mx/post-daima.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/post-daima.html</guid>
+      <description>Dragon Ball Daima: El último viaje de Toriyama</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>La Historia del Rock Hecho en México</title>
+      <link>https://elrockdetodoslosdias.com.mx/rockemx.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/rockemx.html</guid>
+      <description>La Historia del Rock Hecho en México</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Yaot: Cerdópolis en Stop Motion</title>
+      <link>https://elrockdetodoslosdias.com.mx/yaot.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/yaot.html</guid>
+      <description>Yaot: Cerdópolis en Stop Motion</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Zënn: Yo Soy - El Despertar del Ser</title>
+      <link>https://elrockdetodoslosdias.com.mx/yosoy.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/yosoy.html</guid>
+      <description>Zënn: Yo Soy - El Despertar del Ser</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>PANTALLAS | Andor: La rebelión como espejo</title>
+      <link>https://elrockdetodoslosdias.com.mx/post-andor.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/post-andor.html</guid>
+      <description>PANTALLAS | Andor: La rebelión como espejo</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -671,180 +871,10 @@
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Seguro de Vida para Periodistas: Iniciativa tras Tragedia</title>
-      <link>https://elrockdetodoslosdias.com.mx/pan.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/pan.html</guid>
-      <description>Seguro de Vida para Periodistas: Iniciativa tras Tragedia</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Curandero x Ximbo: Baila en la Oscuridad</title>
-      <link>https://elrockdetodoslosdias.com.mx/curandero.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/curandero.html</guid>
-      <description>Curandero x Ximbo: Baila en la Oscuridad</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>X-Men ’97: La culminación del Gen Mutante</title>
-      <link>https://elrockdetodoslosdias.com.mx/post-xmen-97.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/post-xmen-97.html</guid>
-      <description>X-Men ’97: La culminación del Gen Mutante</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>The Brain Rage: TOC - El Laberinto de la Mente</title>
-      <link>https://elrockdetodoslosdias.com.mx/toc.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/toc.html</guid>
-      <description>The Brain Rage: TOC - El Laberinto de la Mente</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Orígenes del Metal en México: 1975-1984</title>
-      <link>https://elrockdetodoslosdias.com.mx/nota-origenes.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/nota-origenes.html</guid>
-      <description>Orígenes del Metal en México: 1975-1984</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Yaot: Cerdópolis en Stop Motion</title>
-      <link>https://elrockdetodoslosdias.com.mx/yaot.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/yaot.html</guid>
-      <description>Yaot: Cerdópolis en Stop Motion</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>La Historia del Rock Hecho en México</title>
-      <link>https://elrockdetodoslosdias.com.mx/rockemx.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/rockemx.html</guid>
-      <description>La Historia del Rock Hecho en México</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Automatic Kafka estrena IMMORTAL</title>
-      <link>https://elrockdetodoslosdias.com.mx/post-automatic-kafka.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/post-automatic-kafka.html</guid>
-      <description>Automatic Kafka estrena IMMORTAL</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Radiohead: El Regreso y la Distancia</title>
-      <link>https://elrockdetodoslosdias.com.mx/radioheadgira.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/radioheadgira.html</guid>
-      <description>Radiohead: El Regreso y la Distancia</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Dragon Ball Daima: El último viaje de Toriyama</title>
-      <link>https://elrockdetodoslosdias.com.mx/post-daima.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/post-daima.html</guid>
-      <description>Dragon Ball Daima: El último viaje de Toriyama</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Expediente Global - Frecuencias Internacionales</title>
-      <link>https://elrockdetodoslosdias.com.mx/global.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/global.html</guid>
-      <description>Expediente Global - Frecuencias Internacionales</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>ESCENA NACIONAL | Zoé: Música de Fondo</title>
-      <link>https://elrockdetodoslosdias.com.mx/post-zoe.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/post-zoe.html</guid>
-      <description>ESCENA NACIONAL | Zoé: Música de Fondo</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>PANTALLAS | Andor: La rebelión como espejo</title>
-      <link>https://elrockdetodoslosdias.com.mx/post-andor.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/post-andor.html</guid>
-      <description>PANTALLAS | Andor: La rebelión como espejo</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Tragedia en el Ceremonia: Negligencia Criminal</title>
       <link>https://elrockdetodoslosdias.com.mx/axeceremonia.html</link>
       <guid>https://elrockdetodoslosdias.com.mx/axeceremonia.html</guid>
       <description>Tragedia en el Ceremonia: Negligencia Criminal</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Galería: Aztech Metal Night</title>
-      <link>https://elrockdetodoslosdias.com.mx/nota-aztech metal night.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/nota-aztech metal night.html</guid>
-      <description>Galería: Aztech Metal Night</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Tercer Mundo</title>
-      <link>https://elrockdetodoslosdias.com.mx/nota.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/nota.html</guid>
-      <description>Tercer Mundo</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Delinquent Habits: El Regreso de los Delincuentes</title>
-      <link>https://elrockdetodoslosdias.com.mx/delinquents.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/delinquents.html</guid>
-      <description>Delinquent Habits: El Regreso de los Delincuentes</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Zënn: Yo Soy - El Despertar del Ser</title>
-      <link>https://elrockdetodoslosdias.com.mx/yosoy.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/yosoy.html</guid>
-      <description>Zënn: Yo Soy - El Despertar del Ser</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ace Frehley: De la Tierra a Jendell</title>
-      <link>https://elrockdetodoslosdias.com.mx/post-ace-frehley.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/post-ace-frehley.html</guid>
-      <description>Ace Frehley: De la Tierra a Jendell</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>We Missed Ourselves: Crónica del Primer Festival Emo</title>
-      <link>https://elrockdetodoslosdias.com.mx/We Missed Ourselve.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/We Missed Ourselve.html</guid>
-      <description>We Missed Ourselves: Crónica del Primer Festival Emo</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>ESCENA NACIONAL | Arusal: Con las mismas armas</title>
-      <link>https://elrockdetodoslosdias.com.mx/post-arusal.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/post-arusal.html</guid>
-      <description>Arusal lanza 'Con las mismas armas'. Una radiografía de la ansiedad moderna desde la CDMX.</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/arusal-portada.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/arusal-portada.jpg" medium="image" />
-    </item>
-    <item>
-      <title>Romance Øn Line: La Cata Alexander</title>
-      <link>https://elrockdetodoslosdias.com.mx/lacata.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/lacata.html</guid>
-      <description>Romance Øn Line: La Cata Alexander</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Kälad: Ärkamine y el Despertar del Metalcore</title>
-      <link>https://elrockdetodoslosdias.com.mx/kalad.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/kalad.html</guid>
-      <description>Kälad: Ärkamine y el Despertar del Metalcore</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Inoxia: Estreno de Datura Stramonium</title>
-      <link>https://elrockdetodoslosdias.com.mx/inoxia.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/inoxia.html</guid>
-      <description>Inoxia: Estreno de Datura Stramonium</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Pearl Jam: 30 Años del Diez</title>
-      <link>https://elrockdetodoslosdias.com.mx/post-pearl-jam-ten.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/post-pearl-jam-ten.html</guid>
-      <description>Pearl Jam: 30 Años del Diez</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -857,10 +887,61 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/rebeca-pal-portada.jpg" medium="image" />
     </item>
     <item>
-      <title>A veces María: Bolero, Indie y Resignificación</title>
-      <link>https://elrockdetodoslosdias.com.mx/post-a-veces-maria.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/post-a-veces-maria.html</guid>
-      <description>A veces María: Bolero, Indie y Resignificación</description>
+      <title>Niña Dioz: Raíces en Casa del Lago</title>
+      <link>https://elrockdetodoslosdias.com.mx/ximbo.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/ximbo.html</guid>
+      <description>Niña Dioz: Raíces en Casa del Lago</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Conferencia Jumbo: 25 Años y un Nuevo Ciclo</title>
+      <link>https://elrockdetodoslosdias.com.mx/nota-jumbo2.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/nota-jumbo2.html</guid>
+      <description>Conferencia Jumbo: 25 Años y un Nuevo Ciclo</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>ESCENA NACIONAL | Arusal: Con las mismas armas</title>
+      <link>https://elrockdetodoslosdias.com.mx/post-arusal.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/post-arusal.html</guid>
+      <description>Arusal lanza 'Con las mismas armas'. Una radiografía de la ansiedad moderna desde la CDMX.</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/arusal-portada.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/arusal-portada.jpg" medium="image" />
+    </item>
+    <item>
+      <title>Pearl Jam: 30 Años del Diez</title>
+      <link>https://elrockdetodoslosdias.com.mx/post-pearl-jam-ten.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/post-pearl-jam-ten.html</guid>
+      <description>Pearl Jam: 30 Años del Diez</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Seguro de Vida para Periodistas: Iniciativa tras Tragedia</title>
+      <link>https://elrockdetodoslosdias.com.mx/pan.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/pan.html</guid>
+      <description>Seguro de Vida para Periodistas: Iniciativa tras Tragedia</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Pressive x Helian Evans: Prometo estar siempre</title>
+      <link>https://elrockdetodoslosdias.com.mx/pressive.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/pressive.html</guid>
+      <description>Pressive x Helian Evans: Prometo estar siempre</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Tercer Mundo</title>
+      <link>https://elrockdetodoslosdias.com.mx/nota.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/nota.html</guid>
+      <description>Tercer Mundo</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ace Frehley: De la Tierra a Jendell</title>
+      <link>https://elrockdetodoslosdias.com.mx/post-ace-frehley.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/post-ace-frehley.html</guid>
+      <description>Ace Frehley: De la Tierra a Jendell</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -871,20 +952,6 @@
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Niña Dioz: Raíces en Casa del Lago</title>
-      <link>https://elrockdetodoslosdias.com.mx/ximbo.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/ximbo.html</guid>
-      <description>Niña Dioz: Raíces en Casa del Lago</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Especial 50 Años de KISS Alive!</title>
-      <link>https://elrockdetodoslosdias.com.mx/post-kiss-alive.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/post-kiss-alive.html</guid>
-      <description>Especial 50 Años de KISS Alive!</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
       <title>Kartis Qatar: Insomnia y el Rock Tumbado</title>
       <link>https://elrockdetodoslosdias.com.mx/kartis.html</link>
       <guid>https://elrockdetodoslosdias.com.mx/kartis.html</guid>
@@ -892,10 +959,87 @@
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Pressive x Helian Evans: Prometo estar siempre</title>
-      <link>https://elrockdetodoslosdias.com.mx/pressive.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/pressive.html</guid>
-      <description>Pressive x Helian Evans: Prometo estar siempre</description>
+      <title>Radiohead: El Regreso y la Distancia</title>
+      <link>https://elrockdetodoslosdias.com.mx/radioheadgira.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/radioheadgira.html</guid>
+      <description>Radiohead: El Regreso y la Distancia</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Delinquent Habits: El Regreso de los Delincuentes</title>
+      <link>https://elrockdetodoslosdias.com.mx/delinquents.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/delinquents.html</guid>
+      <description>Delinquent Habits: El Regreso de los Delincuentes</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Automatic Kafka estrena IMMORTAL</title>
+      <link>https://elrockdetodoslosdias.com.mx/post-automatic-kafka.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/post-automatic-kafka.html</guid>
+      <description>Automatic Kafka estrena IMMORTAL</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Orígenes del Metal en México: 1975-1984</title>
+      <link>https://elrockdetodoslosdias.com.mx/nota-origenes.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/nota-origenes.html</guid>
+      <description>Orígenes del Metal en México: 1975-1984</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Expediente Global - Frecuencias Internacionales</title>
+      <link>https://elrockdetodoslosdias.com.mx/global.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/global.html</guid>
+      <description>Expediente Global - Frecuencias Internacionales</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Romance Øn Line: La Cata Alexander</title>
+      <link>https://elrockdetodoslosdias.com.mx/lacata.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/lacata.html</guid>
+      <description>Romance Øn Line: La Cata Alexander</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Galería: Aztech Metal Night</title>
+      <link>https://elrockdetodoslosdias.com.mx/nota-aztech metal night.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/nota-aztech metal night.html</guid>
+      <description>Galería: Aztech Metal Night</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>X-Men ’97: La culminación del Gen Mutante</title>
+      <link>https://elrockdetodoslosdias.com.mx/post-xmen-97.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/post-xmen-97.html</guid>
+      <description>X-Men ’97: La culminación del Gen Mutante</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Inoxia: Estreno de Datura Stramonium</title>
+      <link>https://elrockdetodoslosdias.com.mx/inoxia.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/inoxia.html</guid>
+      <description>Inoxia: Estreno de Datura Stramonium</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>We Missed Ourselves: Crónica del Primer Festival Emo</title>
+      <link>https://elrockdetodoslosdias.com.mx/We Missed Ourselve.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/We Missed Ourselve.html</guid>
+      <description>We Missed Ourselves: Crónica del Primer Festival Emo</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Curandero x Ximbo: Baila en la Oscuridad</title>
+      <link>https://elrockdetodoslosdias.com.mx/curandero.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/curandero.html</guid>
+      <description>Curandero x Ximbo: Baila en la Oscuridad</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>ESCENA NACIONAL | Zoé: Música de Fondo</title>
+      <link>https://elrockdetodoslosdias.com.mx/post-zoe.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/post-zoe.html</guid>
+      <description>ESCENA NACIONAL | Zoé: Música de Fondo</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
