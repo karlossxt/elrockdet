@@ -60,7 +60,17 @@
         .sidebar-playlist { background: #111; border: 4px solid var(--red); padding: 20px; position: sticky; top: 40px; height: fit-content; }
         .track-item { display: flex; gap: 10px; margin-bottom: 12px; font-size: 11px; align-items: center; border-bottom: 1px solid #222; padding-bottom: 5px; }
         .track-num { color: var(--red); font-weight: 900; }
-    </style>
+    
+        @media (max-width: 900px) {
+            .main-layout { grid-template-columns: 1fr; gap: 25px; }
+            .sidebar-playlist { position: static; }
+            .post-title { font-size: clamp(1.8rem, 8vw, 3rem); }
+            .post-content p { font-size: 1rem; line-height: 1.7; }
+            .meta-info { flex-direction: column; gap: 8px; }
+            .highlight-box { padding: 25px 18px; }
+            .container { padding: 30px 15px; }
+        }
+</style>
 </head>
 <body>
 

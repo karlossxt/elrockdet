@@ -667,6 +667,15 @@ body::before {
     .radio-volume { width: 50px; }
 }
 
+@media (max-width: 480px) {
+    .radio-label { display: none; }
+    .radio-volume { width: 40px; }
+}
+
+@media (max-width: 600px) {
+    .fanzine-footer { padding: 50px 20px; }
+}
+
 /* ============================================
    DECIBELS MODAL
    ============================================ */

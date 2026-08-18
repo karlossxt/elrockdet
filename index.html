@@ -342,16 +342,41 @@
         .card:hover { border-color: var(--red); transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
 
         @media (max-width: 768px) {
-            .hero-full-container { height: 500px; }
-            .glitch-title { font-size: 3rem; }
-            .news-grid { grid-template-columns: 1fr; }
-            .ruido-title-big { font-size: 3.5rem; letter-spacing: -1px; }
+            .hero-full-container { height: 520px; }
+            .glitch-title { font-size: 2.6rem; }
+            .slide { padding: 0 25px; }
+            .slider-dots { right: 25px; bottom: 20px; }
+            .slide p { font-size: 13px; }
+            .news-grid { grid-template-columns: 1fr; gap: 22px; margin-bottom: 50px; }
+            .content-wrapper { padding: 40px 20px; }
+            .section-header-bar { flex-wrap: wrap; gap: 10px; }
+            .section-header-bar h3 { font-size: 1.6rem; }
+            .decibels-dedicated { padding: 25px 20px; }
+            .ruido-title-big { font-size: 3.2rem; letter-spacing: -1px; }
             .ruido-box-white { padding: 40px 20px; }
             .cta-buttons-row { flex-direction: column; }
             .btn-ruido { text-align: center; }
             .ruido-fondo-rojo { top: 15px; left: 15px; }
             .aliados-header { padding-left: 20px; }
             .partner-logo { width: 140px; height: 80px; padding: 10px; }
+            .fanzine-footer { padding: 50px 20px; }
+            .section-divider { margin: 0 0 25px; }
+            .editorial-box { transform: none; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-full-container { height: 460px; }
+            .glitch-title { font-size: 1.8rem; line-height: 1; }
+            .hero-cta { font-size: 12px; padding: 12px 20px; box-shadow: 4px 4px 0px white; }
+            .slide p { font-size: 11px; margin-bottom: 20px; }
+            .content-wrapper { padding: 30px 15px; }
+            .section-header-bar h3 { font-size: 1.4rem; }
+            .card-title { font-size: 1.2rem; }
+            .ruido-title-big { font-size: 2.6rem; }
+            .ruido-box-white { padding: 30px 15px; }
+            .cta-desc-container { padding-left: 12px; border-left-width: 5px; }
+            .decibels-dedicated { padding: 20px 15px; }
+            .fanzine-footer { padding: 45px 18px; }
         }
     </style>
 </head>
