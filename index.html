@@ -267,22 +267,71 @@
             background-color: #000000;
             border-top: 1px solid #1a1a1a;
             border-bottom: 1px solid #1a1a1a;
-            padding: 30px 0;
+            padding: 50px 0 45px;
             margin-top: 60px;
             overflow: hidden;
             position: relative;
         }
 
         .aliados-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 40px;
+        }
+
+        .aliados-header-line {
+            flex: 0 0 auto;
+            width: 60px;
+            height: 2px;
+            background: var(--red);
+        }
+
+        .aliados-header-label {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+            font-weight: 800;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        .aliados-header-label span { color: var(--red); }
+
+        .aliados-subtitle {
             font-family: 'Space Mono', monospace;
             font-size: 10px;
-            color: #EB0909;
+            color: #71717a;
             text-transform: uppercase;
-            letter-spacing: 4px;
-            padding-left: 40px;
-            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-align: center;
+            margin-top: 14px;
+            margin-bottom: 30px;
             font-weight: 700;
         }
+
+        .aliados-marquee {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 10px 0;
+        }
+
+        .aliados-marquee::before,
+        .aliados-marquee::after {
+            content: "";
+            position: absolute;
+            top: 0; bottom: 0;
+            width: 120px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .aliados-marquee::before { left: 0; background: linear-gradient(90deg, #000, transparent); }
+        .aliados-marquee::after { right: 0; background: linear-gradient(-90deg, #000, transparent); }
 
         .marquee-wrapper {
             width: 100%;
@@ -293,38 +342,58 @@
         .marquee-track {
             display: flex;
             align-items: center;
-            gap: 40px;
-            animation: scrollMarquee 30s linear infinite;
+            gap: 30px;
+            animation: scrollMarquee 32s linear infinite;
         }
+
+        .marquee-track:hover { animation-play-state: paused; }
 
         .partner-logo {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 170px;
-            height: 100px;
+            width: 190px;
+            height: 130px;
             background: #0d0d0d;
             border: 1px solid #222;
-            border-radius: 6px;
-            padding: 14px;
+            border-radius: 8px;
+            padding: 18px 16px 12px;
             flex-shrink: 0;
-            transition: border-color 0.3s, background 0.3s;
+            gap: 12px;
+            text-decoration: none;
+            transition: border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s;
         }
 
         .partner-logo:hover {
-            border-color: #555;
+            border-color: var(--red);
             background: #141414;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.15);
         }
 
         .partner-logo img {
             max-width: 100%;
-            max-height: 100%;
+            max-height: 60px;
             object-fit: contain;
             filter: grayscale(1) brightness(0.7);
             transition: filter 0.4s, transform 0.3s;
         }
 
-        .partner-logo:hover img { filter: grayscale(0) brightness(1); transform: scale(1.05); }
+        .partner-logo:hover img { filter: grayscale(0) brightness(1); transform: scale(1.06); }
+
+        .partner-name {
+            font-family: 'Space Mono', monospace;
+            font-size: 9px;
+            font-weight: 700;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            transition: color 0.3s;
+        }
+
+        .partner-logo:hover .partner-name { color: var(--red); }
 
         @keyframes scrollMarquee {
             0% { transform: translateX(0); }
@@ -357,8 +426,10 @@
             .cta-buttons-row { flex-direction: column; }
             .btn-ruido { text-align: center; }
             .ruido-fondo-rojo { top: 15px; left: 15px; }
-            .aliados-header { padding-left: 20px; }
-            .partner-logo { width: 140px; height: 80px; padding: 10px; }
+            .aliados-header { padding: 0 20px; gap: 12px; }
+            .aliados-header-line { width: 30px; }
+            .partner-logo { width: 140px; height: 105px; padding: 12px; }
+            .aliados-marquee::before, .aliados-marquee::after { width: 50px; }
             .fanzine-footer { padding: 50px 20px; }
             .section-divider { margin: 0 0 25px; }
             .editorial-box { transform: none; }
@@ -376,6 +447,10 @@
             .ruido-box-white { padding: 30px 15px; }
             .cta-desc-container { padding-left: 12px; border-left-width: 5px; }
             .decibels-dedicated { padding: 20px 15px; }
+            .aliados-header-label { font-size: 1.1rem; }
+            .aliados-subtitle { letter-spacing: 2px; font-size: 9px; }
+            .partner-logo { width: 120px; height: 95px; }
+            .partner-name { font-size: 8px; }
             .fanzine-footer { padding: 45px 18px; }
         }
     </style>
@@ -613,19 +688,26 @@
     </div>
 
     <section class="aliados-strip">
-        <div class="aliados-header">SOCIOS DEL RUIDO / ALIADOS</div>
-        <div class="marquee-wrapper">
-            <div class="marquee-track">
-                <a href="https://www.facebook.com/TwistedProgFest" class="partner-logo" target="_blank"><img src="logo-twistedd.png" alt="Twisted Prog Fest" loading="lazy"></a>
-                <a href="https://www.facebook.com/MadameBleuManager" class="partner-logo" target="_blank"><img src="logo-madame.png" alt="Madame Bleu" loading="lazy"></a>
-                <a href="https://www.facebook.com/wearethepointmusic" class="partner-logo" target="_blank"><img src="logo-We're the.png" alt="We Are The Point" loading="lazy"></a>
-                <a href="https://www.facebook.com/PremiosdeMetalKalani" class="partner-logo" target="_blank"><img src="logo-premios.png" alt="Premios de Metal Kalani" loading="lazy"></a>
-                <a href="https://www.facebook.com/fotorock21" class="partner-logo" target="_blank"><img src="logo-fotorock.png" alt="FotoRock 21" loading="lazy"></a>
-                <a href="https://www.facebook.com/TwistedProgFest" class="partner-logo" target="_blank"><img src="logo-twistedd.png" alt="Twisted Prog Fest" loading="lazy"></a>
-                <a href="https://www.facebook.com/MadameBleuManager" class="partner-logo" target="_blank"><img src="logo-madame.png" alt="Madame Bleu" loading="lazy"></a>
-                <a href="https://www.facebook.com/wearethepointmusic" class="partner-logo" target="_blank"><img src="logo-We're the.png" alt="We Are The Point" loading="lazy"></a>
-                <a href="https://www.facebook.com/PremiosdeMetalKalani" class="partner-logo" target="_blank"><img src="logo-premios.png" alt="Premios de Metal Kalani" loading="lazy"></a>
-                <a href="https://www.facebook.com/fotorock21" class="partner-logo" target="_blank"><img src="logo-fotorock.png" alt="FotoRock 21" loading="lazy"></a>
+        <div class="aliados-header">
+            <span class="aliados-header-line"></span>
+            <h2 class="aliados-header-label">SOCIOS DEL RUIDO <span>/</span> ALIADOS</h2>
+            <span class="aliados-header-line"></span>
+        </div>
+        <p class="aliados-subtitle">LAS MARCAS QUE RUIDEAN CON NOSOTROS</p>
+        <div class="aliados-marquee">
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <a href="https://www.facebook.com/TwistedProgFest" class="partner-logo" target="_blank"><img src="logo-twistedd.png" alt="Twisted Prog Fest" loading="lazy"><span class="partner-name">Twisted Prog Fest</span></a>
+                    <a href="https://www.facebook.com/MadameBleuManager" class="partner-logo" target="_blank"><img src="logo-madame.png" alt="Madame Bleu" loading="lazy"><span class="partner-name">Madame Bleu</span></a>
+                    <a href="https://www.facebook.com/wearethepointmusic" class="partner-logo" target="_blank"><img src="logo-We're the.png" alt="We Are The Point" loading="lazy"><span class="partner-name">We Are The Point</span></a>
+                    <a href="https://www.facebook.com/PremiosdeMetalKalani" class="partner-logo" target="_blank"><img src="logo-premios.png" alt="Premios de Metal Kalani" loading="lazy"><span class="partner-name">Premios Kalani</span></a>
+                    <a href="https://www.facebook.com/fotorock21" class="partner-logo" target="_blank"><img src="logo-fotorock.png" alt="FotoRock 21" loading="lazy"><span class="partner-name">FotoRock 21</span></a>
+                    <a href="https://www.facebook.com/TwistedProgFest" class="partner-logo" target="_blank"><img src="logo-twistedd.png" alt="Twisted Prog Fest" loading="lazy"><span class="partner-name">Twisted Prog Fest</span></a>
+                    <a href="https://www.facebook.com/MadameBleuManager" class="partner-logo" target="_blank"><img src="logo-madame.png" alt="Madame Bleu" loading="lazy"><span class="partner-name">Madame Bleu</span></a>
+                    <a href="https://www.facebook.com/wearethepointmusic" class="partner-logo" target="_blank"><img src="logo-We're the.png" alt="We Are The Point" loading="lazy"><span class="partner-name">We Are The Point</span></a>
+                    <a href="https://www.facebook.com/PremiosdeMetalKalani" class="partner-logo" target="_blank"><img src="logo-premios.png" alt="Premios de Metal Kalani" loading="lazy"><span class="partner-name">Premios Kalani</span></a>
+                    <a href="https://www.facebook.com/fotorock21" class="partner-logo" target="_blank"><img src="logo-fotorock.png" alt="FotoRock 21" loading="lazy"><span class="partner-name">FotoRock 21</span></a>
+                </div>
             </div>
         </div>
     </section>

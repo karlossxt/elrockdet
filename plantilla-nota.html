@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
     <link rel="apple-touch-icon" href="favicon-180.png">
-    <link rel="stylesheet" href="fontawesome-all.min.css">
+    <link rel="stylesheet" href="../fontawesome-all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <style>
@@ -477,23 +477,21 @@
         </aside>
     </div>
 
-    <!-- ZENO RADIO PLAYER -->
+    <!-- RADIO PLAYER -->
     <div class="radio-player" id="radioPlayer">
-        <button class="radio-toggle" id="radioToggle"><i class="fas fa-radio"></i></button>
-        <div class="radio-info">
-            <span class="radio-live-dot"></span>
-            <span>EN VIVO — EL ROCK DE TODOS LOS DÍAS</span>
+        <div class="radio-toggle" id="radioToggle"><i class="fas fa-chevron-up"></i></div>
+        <div class="radio-content">
+            <div class="radio-live-dot"></div>
+            <span class="radio-label">EN VIVO — EL ROCK DE TODOS LOS DÍAS</span>
+            <audio id="zenoAudio" preload="none">
+                <source src="https://stream.zeno.fm/suqqst6xaq8uv" type="audio/mpeg">
+            </audio>
+            <button class="radio-play-btn" id="playPauseBtn"><i class="fas fa-play"></i></button>
+            <input type="range" class="radio-volume" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+            <button class="radio-close" id="radioClose"><i class="fas fa-times"></i></button>
         </div>
-        <div class="radio-controls">
-            <button id="playPauseBtn"><i class="fas fa-play"></i></button>
-            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
-        </div>
-        <button class="radio-close" id="radioClose"><i class="fas fa-times"></i></button>
-        <audio id="zenoAudio" src="https://stream.zeno.fm/suqqst6xaq8uv" preload="none"></audio>
     </div>
 
-    <script src="../main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
     <script src="../main.js"></script>
 </body>
 </html>
