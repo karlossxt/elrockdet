@@ -5,7 +5,7 @@
     <link>https://elrockdetodoslosdias.com.mx</link>
     <description>Archivo independiente de cultura y ruido. Rock, metal y música underground mexicana.</description>
     <language>es-mx</language>
-    <lastBuildDate>Tue, 18 Aug 2026 03:19:26 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 03:33:43 +0000</lastBuildDate>
     <generator>generate-rss.py</generator>
     <item>
       <title>Nadie nos va a extrañar: El Soundtrack de los 90</title>
@@ -22,8 +22,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postEddySexxx.html</guid>
       <description>Eddy Sexxx presenta su EP 'Balada Bastarda' bajo Discos Denver. Cuatro cortes de pura realidad urbana, blues y canción de autor.</description>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/EDDY-SEXXX-PORTADA.png" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/EDDY-SEXXX-PORTADA.png" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/EDDY-SEXXX-PORTADA-og.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/EDDY-SEXXX-PORTADA-og.jpg" medium="image" />
     </item>
     <item>
       <title>Nightpath — "The Night's Path"</title>
@@ -40,8 +40,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postNostalgiaUrbana.html</guid>
       <description>Nostalgia Urbana enciende las calles con 'Un Sábado Loco de buen Rock and Roll'. Un EP que rescata la esencia callejera del rock urbano.</description>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/NOSTALGIA-URBANA-PORTADA.png" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/NOSTALGIA-URBANA-PORTADA.png" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/NOSTALGIA-URBANA-PORTADA-og.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/NOSTALGIA-URBANA-PORTADA-og.jpg" medium="image" />
     </item>
     <item>
       <title>Magma Soul — "Roto"</title>
@@ -67,8 +67,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postJessiEsle.html</guid>
       <description>Jessi Esle promociona su más reciente material 'El Blues Del Rogón'. Un EP que consolida una carrera forjada a pulso desde 2020.</description>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/JESSI-ESLE-PORTADA.png" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/JESSI-ESLE-PORTADA.png" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/JESSI-ESLE-PORTADA-og.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/JESSI-ESLE-PORTADA-og.jpg" medium="image" />
     </item>
     <item>
       <title>DIIV — "ZIRP!"</title>
@@ -148,8 +148,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postOsoLerma.html</guid>
       <description>Óscar 'Oso' Lerma debuta con su EP 'Desde la C.P. la Ciudad del Rock' bajo Discos Denver. Historias de banqueta y asfalto.</description>
       <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/OSO-LERMA-PORTADA.png" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/OSO-LERMA-PORTADA.png" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/OSO-LERMA-PORTADA-og.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/OSO-LERMA-PORTADA-og.jpg" medium="image" />
     </item>
     <item>
       <title>Black &amp; Velvet — "Expandir"</title>
@@ -179,28 +179,28 @@
       <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/SPINNE-PORTADA.png" medium="image" />
     </item>
     <item>
-      <title>Los Latidos de México: 15 Bateristas que Marcaron el Ritmo</title>
+      <title>Los Latidos de MÃ©xico: 15 Bateristas que Marcaron el Ritmo</title>
       <link>https://elrockdetodoslosdias.com.mx/notasjulio/Postbateristas-mexico.html</link>
       <guid>https://elrockdetodoslosdias.com.mx/notasjulio/Postbateristas-mexico.html</guid>
-      <description>Del jazz al rock, del metal al pop: un recorrido por 15 bateristas mexicanos que han marcado el ritmo de nuestra música, con videos de cada uno.</description>
+      <description>Del jazz al rock, del metal al pop: un recorrido por 15 bateristas mexicanos que han marcado el ritmo de nuestra mÃºsica, con videos de cada uno.</description>
       <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
       <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/bateristas-mexico.png" />
       <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/bateristas-mexico.png" medium="image" />
     </item>
     <item>
-      <title>Spider-Man: Brand New Day — La Reivindicación del Arácnido</title>
+      <title>Spider-Man: Brand New Day â€” La ReivindicaciÃ³n del ArÃ¡cnido</title>
       <link>https://elrockdetodoslosdias.com.mx/notasjulio/Postspider-man-brand-new-day.html</link>
       <guid>https://elrockdetodoslosdias.com.mx/notasjulio/Postspider-man-brand-new-day.html</guid>
-      <description>Marvel reivindica a Spider-Man con 'Brand New Day': cuarta entrega del arácnido en el MCU. Análisis de fotografía, actuaciones, villanos y el futuro de Peter Parker.</description>
+      <description>Marvel reivindica a Spider-Man con 'Brand New Day': cuarta entrega del arÃ¡cnido en el MCU. AnÃ¡lisis de fotografÃ­a, actuaciones, villanos y el futuro de Peter Parker.</description>
       <pubDate>Thu, 30 Jul 2026 00:00:00 +0000</pubDate>
       <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/spider-man-brand-new-day.jpg" />
       <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/spider-man-brand-new-day.jpg" medium="image" />
     </item>
     <item>
-      <title>Eric Carr debuta con KISS — El inicio de la era del "Zorro"</title>
+      <title>Eric Carr debuta con KISS â€” El inicio de la era del "Zorro"</title>
       <link>https://elrockdetodoslosdias.com.mx/notasjulio/post-eric-carr-kiss.html</link>
       <guid>https://elrockdetodoslosdias.com.mx/notasjulio/post-eric-carr-kiss.html</guid>
-      <description>Eric Carr debuta con KISS en el Palladium de Nueva York. El 25 de julio de 1980 comenzó una de las eras más potentes del rock clásico.</description>
+      <description>Eric Carr debuta con KISS en el Palladium de Nueva York. El 25 de julio de 1980 comenzÃ³ una de las eras mÃ¡s potentes del rock clÃ¡sico.</description>
       <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
       <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/eric-carr-portada.jpg" />
       <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/eric-carr-portada.jpg" medium="image" />
@@ -209,7 +209,7 @@
       <title>Doctor Doom llega al MCU - Avengers: Doomsday</title>
       <link>https://elrockdetodoslosdias.com.mx/notasjulio/avengers-doomsday.html</link>
       <guid>https://elrockdetodoslosdias.com.mx/notasjulio/avengers-doomsday.html</guid>
-      <description>Marvel libera el primer tráiler de Avengers: Doomsday y rompe Internet. Robert Downey Jr. regresa como Doctor Doom en el inicio del desenlace de la Saga del Multiverso.</description>
+      <description>Marvel libera el primer trÃ¡iler de Avengers: Doomsday y rompe Internet. Robert Downey Jr. regresa como Doctor Doom en el inicio del desenlace de la Saga del Multiverso.</description>
       <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
       <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/avengers-doomsday.jpg" />
       <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/avengers-doomsday.jpg" medium="image" />
@@ -218,7 +218,7 @@
       <title>El Censo del Crimen: Batman vs Spider-Man</title>
       <link>https://elrockdetodoslosdias.com.mx/notasjulio/postsvsb.html</link>
       <guid>https://elrockdetodoslosdias.com.mx/notasjulio/postsvsb.html</guid>
-      <description>¿Batman o Spider-Man? Descubrimos cuál de los dos héroes tiene más enemigos analizando décadas de cómics y bases de datos de DC y Marvel.</description>
+      <description>Â¿Batman o Spider-Man? Descubrimos cuÃ¡l de los dos hÃ©roes tiene mÃ¡s enemigos analizando dÃ©cadas de cÃ³mics y bases de datos de DC y Marvel.</description>
       <pubDate>Fri, 17 Jul 2026 00:00:00 +0000</pubDate>
       <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasjulio/batman-vs-spiderman.jpg" />
       <media:content url="https://elrockdetodoslosdias.com.mx/notasjulio/batman-vs-spiderman.jpg" medium="image" />
