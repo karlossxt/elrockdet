@@ -27,56 +27,6 @@
             overflow-x: hidden;
         }
 
-        /* NAV */
-        .main-nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(0,0,0,0.92);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 2px solid white;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-family: 'Syne', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 800;
-            font-style: italic;
-            letter-spacing: -2px;
-            text-decoration: none;
-            color: white;
-        }
-
-        .logo span { color: var(--red); }
-
-        .nav-logo-icon { height: 35px; width: auto; }
-
-        .nav-links { display: flex; align-items: center; }
-
-        .nav-links a {
-            color: #71717a;
-            text-decoration: none;
-            font-family: 'Space Mono', monospace;
-            font-size: 11px;
-            text-transform: uppercase;
-            font-weight: 700;
-            margin: 0 15px;
-            white-space: nowrap;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover { color: white; }
-
-        .burger-menu { display: none; font-size: 1.5rem; color: white; cursor: pointer; }
-
         /* HERO — MANIFIESTO DE VOCES */
         .voces-hero {
             position: relative;
@@ -306,118 +256,13 @@
             line-height: 1.4;
         }
 
-        /* FOOTER */
-        .fanzine-footer {
-            background-color: var(--red);
-            padding: 80px 40px;
-            border-top: 5px solid white;
-            width: 100%;
-            color: white;
-        }
-
-        .footer-container {
-            max-width: 1300px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
-            gap: 40px;
-        }
-
-        .f-title {
-            font-family: 'Syne', sans-serif;
-            color: #000;
-            font-size: 14px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-        }
-
-        .f-logo-text {
-            font-family: 'Syne', sans-serif;
-            font-size: 2.5rem;
-            font-style: italic;
-            font-weight: 800;
-            color: #fff;
-            letter-spacing: -2px;
-            margin-bottom: 10px;
-        }
-
-        .f-logo-text span { color: #000; }
-
-        .f-tagline {
-            font-family: 'Space Mono', monospace;
-            font-size: 10px;
-            color: #ffeaea;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .f-links-list, .f-contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .f-links-list a, .f-contact-links a {
-            font-family: 'Space Mono', monospace;
-            font-size: 12px;
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            transition: 0.3s;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .f-links-list a i, .f-contact-links a i {
-            color: #000;
-            width: 20px;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        .f-links-list a:hover, .f-contact-links a:hover {
-            color: #000;
-            padding-left: 5px;
-        }
-
-        .f-bottom {
-            border-top: 3px solid #000;
-            padding-top: 30px;
-            margin-top: 60px;
-            display: flex;
-            justify-content: space-between;
-            font-size: 10px;
-            font-family: 'Space Mono', monospace;
-            color: #000;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
+        /* FOOTER — usa styles.css compartido */
 
         @media (max-width: 900px) {
             .article-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 768px) {
-            .burger-menu { display: block; }
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: rgba(0,0,0,0.98);
-                flex-direction: column;
-                padding: 20px;
-                border-bottom: 2px solid white;
-            }
-            .nav-links.active { display: flex; }
-            .nav-links a { margin: 15px 0; font-size: 14px; }
-
             .voces-hero { padding: 30px 15px 0; }
             .voces-manifiesto { padding: 35px 20px; }
             .voces-btns { flex-direction: column; }
@@ -425,12 +270,6 @@
 
             .archive-container { padding: 40px 15px; }
             .article-grid { grid-template-columns: 1fr; gap: 30px; }
-
-            .footer-container { grid-template-columns: 1fr 1fr; }
-        }
-
-        @media (max-width: 480px) {
-            .footer-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -564,19 +403,19 @@
         </div>
     </footer>
 
-    <!-- ZENO RADIO PLAYER -->
+    <!-- RADIO PLAYER -->
     <div class="radio-player" id="radioPlayer">
-        <button class="radio-toggle" id="radioToggle"><i class="fas fa-radio"></i></button>
-        <div class="radio-info">
-            <span class="radio-live-dot"></span>
-            <span>EN VIVO — EL ROCK DE TODOS LOS DÍAS</span>
+        <div class="radio-toggle" id="radioToggle"><i class="fas fa-chevron-up"></i></div>
+        <div class="radio-content">
+            <div class="radio-live-dot"></div>
+            <span class="radio-label">EN VIVO — EL ROCK DE TODOS LOS DÍAS</span>
+            <audio id="zenoAudio" preload="none">
+                <source src="https://stream.zeno.fm/suqqst6xaq8uv" type="audio/mpeg">
+            </audio>
+            <button class="radio-play-btn" id="playPauseBtn"><i class="fas fa-play"></i></button>
+            <input type="range" class="radio-volume" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+            <button class="radio-close" id="radioClose"><i class="fas fa-times"></i></button>
         </div>
-        <div class="radio-controls">
-            <button id="playPauseBtn"><i class="fas fa-play"></i></button>
-            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
-        </div>
-        <button class="radio-close" id="radioClose"><i class="fas fa-times"></i></button>
-        <audio id="zenoAudio" src="https://stream.zeno.fm/suqqst6xaq8uv" preload="none"></audio>
     </div>
 
     <script src="main.js"></script>
