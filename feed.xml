@@ -5,7 +5,7 @@
     <link>https://elrockdetodoslosdias.com.mx</link>
     <description>Archivo independiente de cultura y ruido. Rock, metal y música underground mexicana.</description>
     <language>es-mx</language>
-    <lastBuildDate>Sun, 23 Aug 2026 00:37:49 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 01:39:05 +0000</lastBuildDate>
     <generator>generate-rss.py</generator>
     <item>
       <title>BUL — "Despertar"</title>
@@ -814,6 +814,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/post-angeles-del-infierno-cdmx.html</guid>
       <description>ESCENA | Ángeles del Infierno en la Arena CDMX</description>
       <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/tsangeles.jpeg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/tsangeles.jpeg" medium="image" />
     </item>
     <item>
       <title>MÚSICA | My Chemical Romance: The Black Parade en CDMX</title>
@@ -821,6 +823,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/post-mcr-black-parade.html</guid>
       <description>MÚSICA | My Chemical Romance: The Black Parade en CDMX</description>
       <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/mcrmx.jpeg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/mcrmx.jpeg" medium="image" />
     </item>
     <item>
       <title>MÚSICA | Green Day hackea el Super Bowl LX</title>
@@ -828,6 +832,17 @@
       <guid>https://elrockdetodoslosdias.com.mx/post-green-day-superbowl.html</guid>
       <description>MÚSICA | Green Day hackea el Super Bowl LX</description>
       <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/greendaysb.webp" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/greendaysb.webp" medium="image" />
+    </item>
+    <item>
+      <title>Galería: Aztech Metal Night</title>
+      <link>https://elrockdetodoslosdias.com.mx/nota-aztech-metal-night.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/nota-aztech-metal-night.html</guid>
+      <description>Galería: Aztech Metal Night</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/aztech-1.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/aztech-1.jpg" medium="image" />
     </item>
     <item>
       <title>A veces María: Bolero, Indie y Resignificación</title>
@@ -835,6 +850,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/post-a-veces-maria.html</guid>
       <description>A veces María: Bolero, Indie y Resignificación</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/avecesmaria.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/avecesmaria.jpg" medium="image" />
     </item>
     <item>
       <title>Kälad: Ärkamine y el Despertar del Metalcore</title>
@@ -842,6 +859,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/kalad.html</guid>
       <description>Kälad: Ärkamine y el Despertar del Metalcore</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/kalad-arkamine-cover.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/kalad-arkamine-cover.jpg" medium="image" />
     </item>
     <item>
       <title>Especial 50 Años de KISS Alive!</title>
@@ -849,6 +868,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/post-kiss-alive.html</guid>
       <description>Especial 50 Años de KISS Alive!</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/ALIVE-ALBUM-COVER-ALTERNATE.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/ALIVE-ALBUM-COVER-ALTERNATE.jpg" medium="image" />
     </item>
     <item>
       <title>The Brain Rage: TOC - El Laberinto de la Mente</title>
@@ -856,6 +877,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/toc.html</guid>
       <description>The Brain Rage: TOC - El Laberinto de la Mente</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/brain-rage-cover.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/brain-rage-cover.jpg" medium="image" />
     </item>
     <item>
       <title>Dragon Ball Daima: El último viaje de Toriyama</title>
@@ -863,6 +886,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/post-daima.html</guid>
       <description>Dragon Ball Daima: El último viaje de Toriyama</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/image-7-1086x1536.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/image-7-1086x1536.png" medium="image" />
     </item>
     <item>
       <title>La Historia del Rock Hecho en México</title>
@@ -870,6 +895,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/rockemx.html</guid>
       <description>La Historia del Rock Hecho en México</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/historia-1.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/historia-1.jpg" medium="image" />
     </item>
     <item>
       <title>Yaot: Cerdópolis en Stop Motion</title>
@@ -877,6 +904,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/yaot.html</guid>
       <description>Yaot: Cerdópolis en Stop Motion</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/yaot-band-photo.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/yaot-band-photo.jpg" medium="image" />
     </item>
     <item>
       <title>Zënn: Yo Soy - El Despertar del Ser</title>
@@ -884,6 +913,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/yosoy.html</guid>
       <description>Zënn: Yo Soy - El Despertar del Ser</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/zenn-yo-soy-promo.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/zenn-yo-soy-promo.jpg" medium="image" />
     </item>
     <item>
       <title>PANTALLAS | Andor: La rebelión como espejo</title>
@@ -891,6 +922,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/post-andor.html</guid>
       <description>PANTALLAS | Andor: La rebelión como espejo</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/andor.jpeg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/andor.jpeg" medium="image" />
     </item>
     <item>
       <title>Mixup Génova: La Última Canción</title>
@@ -898,6 +931,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/nota-mixup.html</guid>
       <description>Mixup Génova: La Última Canción</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/mixup-genova-fachada.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/mixup-genova-fachada.jpg" medium="image" />
     </item>
     <item>
       <title>PANTALLAS | Joker 2: La Decadencia de Arthur Fleck</title>
@@ -905,6 +940,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/post-joker-2.html</guid>
       <description>PANTALLAS | Joker 2: La Decadencia de Arthur Fleck</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/joker3.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/joker3.png" medium="image" />
     </item>
     <item>
       <title>Tragedia en el Ceremonia: Negligencia Criminal</title>
@@ -912,6 +949,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/axeceremonia.html</guid>
       <description>Tragedia en el Ceremonia: Negligencia Criminal</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/accidente-estructura.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/accidente-estructura.jpg" medium="image" />
     </item>
     <item>
       <title>Rebeca Pal — "Vorágine"</title>
@@ -928,6 +967,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/ximbo.html</guid>
       <description>Niña Dioz: Raíces en Casa del Lago</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/nina-dioz-raices.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/nina-dioz-raices.jpg" medium="image" />
     </item>
     <item>
       <title>Conferencia Jumbo: 25 Años y un Nuevo Ciclo</title>
@@ -935,6 +976,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/nota-jumbo2.html</guid>
       <description>Conferencia Jumbo: 25 Años y un Nuevo Ciclo</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/jumbo-conferencia-1.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/jumbo-conferencia-1.jpg" medium="image" />
     </item>
     <item>
       <title>ESCENA NACIONAL | Arusal: Con las mismas armas</title>
@@ -951,6 +994,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/post-pearl-jam-ten.html</guid>
       <description>Pearl Jam: 30 Años del Diez</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/pearljam10.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/pearljam10.jpg" medium="image" />
     </item>
     <item>
       <title>Seguro de Vida para Periodistas: Iniciativa tras Tragedia</title>
@@ -958,6 +1003,17 @@
       <guid>https://elrockdetodoslosdias.com.mx/pan.html</guid>
       <description>Seguro de Vida para Periodistas: Iniciativa tras Tragedia</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/logo-rock-og.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/logo-rock-og.jpg" medium="image" />
+    </item>
+    <item>
+      <title>We Missed Ourselves: Crónica del Primer Festival Emo</title>
+      <link>https://elrockdetodoslosdias.com.mx/we-missed-ourselve.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/we-missed-ourselve.html</guid>
+      <description>We Missed Ourselves: Crónica del Primer Festival Emo</description>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/festival-emo-portada.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/festival-emo-portada.jpg" medium="image" />
     </item>
     <item>
       <title>Pressive x Helian Evans: Prometo estar siempre</title>
@@ -965,6 +1021,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/pressive.html</guid>
       <description>Pressive x Helian Evans: Prometo estar siempre</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/pressive-helian-main.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/pressive-helian-main.jpg" medium="image" />
     </item>
     <item>
       <title>Tercer Mundo</title>
@@ -972,6 +1030,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/nota.html</guid>
       <description>Tercer Mundo</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/logo-rock-og.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/logo-rock-og.jpg" medium="image" />
     </item>
     <item>
       <title>Ace Frehley: De la Tierra a Jendell</title>
@@ -979,6 +1039,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/post-ace-frehley.html</guid>
       <description>Ace Frehley: De la Tierra a Jendell</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/acefre.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/acefre.jpg" medium="image" />
     </item>
     <item>
       <title>Kurt Cobain: 30 Años de Ruido Eterno</title>
@@ -986,6 +1048,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/kurt.html</guid>
       <description>Kurt Cobain: 30 Años de Ruido Eterno</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/kurt-cobain-portrait.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/kurt-cobain-portrait.jpg" medium="image" />
     </item>
     <item>
       <title>Kartis Qatar: Insomnia y el Rock Tumbado</title>
@@ -993,6 +1057,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/kartis.html</guid>
       <description>Kartis Qatar: Insomnia y el Rock Tumbado</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/kartis-qatar-insomnia.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/kartis-qatar-insomnia.jpg" medium="image" />
     </item>
     <item>
       <title>Radiohead: El Regreso y la Distancia</title>
@@ -1000,6 +1066,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/radioheadgira.html</guid>
       <description>Radiohead: El Regreso y la Distancia</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/radiohead-live.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/radiohead-live.jpg" medium="image" />
     </item>
     <item>
       <title>Delinquent Habits: El Regreso de los Delincuentes</title>
@@ -1007,6 +1075,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/delinquents.html</guid>
       <description>Delinquent Habits: El Regreso de los Delincuentes</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/delinquent-1.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/delinquent-1.jpg" medium="image" />
     </item>
     <item>
       <title>Automatic Kafka estrena IMMORTAL</title>
@@ -1014,6 +1084,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/post-automatic-kafka.html</guid>
       <description>Automatic Kafka estrena IMMORTAL</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/portadaau.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/portadaau.jpg" medium="image" />
     </item>
     <item>
       <title>Orígenes del Metal en México: 1975-1984</title>
@@ -1021,6 +1093,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/nota-origenes.html</guid>
       <description>Orígenes del Metal en México: 1975-1984</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/metalsimpsons.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/metalsimpsons.jpg" medium="image" />
     </item>
     <item>
       <title>Expediente Global - Frecuencias Internacionales</title>
@@ -1028,6 +1102,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/global.html</guid>
       <description>Expediente Global - Frecuencias Internacionales</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/logo-rock.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/logo-rock.png" medium="image" />
     </item>
     <item>
       <title>Romance Øn Line: La Cata Alexander</title>
@@ -1035,13 +1111,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/lacata.html</guid>
       <description>Romance Øn Line: La Cata Alexander</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Galería: Aztech Metal Night</title>
-      <link>https://elrockdetodoslosdias.com.mx/nota-aztech metal night.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/nota-aztech metal night.html</guid>
-      <description>Galería: Aztech Metal Night</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/cata-1.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/cata-1.jpg" medium="image" />
     </item>
     <item>
       <title>X-Men ’97: La culminación del Gen Mutante</title>
@@ -1049,6 +1120,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/post-xmen-97.html</guid>
       <description>X-Men ’97: La culminación del Gen Mutante</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/xmen97.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/xmen97.jpg" medium="image" />
     </item>
     <item>
       <title>Inoxia: Estreno de Datura Stramonium</title>
@@ -1056,13 +1129,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/inoxia.html</guid>
       <description>Inoxia: Estreno de Datura Stramonium</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>We Missed Ourselves: Crónica del Primer Festival Emo</title>
-      <link>https://elrockdetodoslosdias.com.mx/We Missed Ourselve.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/We Missed Ourselve.html</guid>
-      <description>We Missed Ourselves: Crónica del Primer Festival Emo</description>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/inoxia-datura-still.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/inoxia-datura-still.jpg" medium="image" />
     </item>
     <item>
       <title>Curandero x Ximbo: Baila en la Oscuridad</title>
@@ -1070,6 +1138,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/curandero.html</guid>
       <description>Curandero x Ximbo: Baila en la Oscuridad</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/curandero-ximbo-cover.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/curandero-ximbo-cover.png" medium="image" />
     </item>
     <item>
       <title>ESCENA NACIONAL | Zoé: Música de Fondo</title>
@@ -1077,6 +1147,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/post-zoe.html</guid>
       <description>ESCENA NACIONAL | Zoé: Música de Fondo</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/zoe-mtv-unplugged.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/zoe-mtv-unplugged.jpg" medium="image" />
     </item>
     <item>
       <title>The Adicts: El Adiós de la Sonrisa del PUNK</title>
@@ -1084,6 +1156,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/post-the-adicts.html</guid>
       <description>The Adicts: El Adiós de la Sonrisa del PUNK</description>
       <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/theadoctsmx.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/theadoctsmx.png" medium="image" />
     </item>
     <item>
       <title>Edición 4.5 (Rock por los Peluditos) - Toy Rockeando</title>
@@ -1091,6 +1165,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/edicion-iv.v.html</guid>
       <description>Edición 4.5 (Rock por los Peluditos) - Toy Rockeando</description>
       <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/cartel-peluditos.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/cartel-peluditos.jpg" medium="image" />
     </item>
     <item>
       <title>Edición V (2025) - Toy Rockeando</title>
@@ -1098,6 +1174,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/edicion-v.html</guid>
       <description>Edición V (2025) - Toy Rockeando</description>
       <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/cartel-v.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/cartel-v.jpg" medium="image" />
     </item>
     <item>
       <title>Edición IV (2025) - Toy Rockeando</title>
@@ -1105,6 +1183,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/edicion-iv.html</guid>
       <description>Edición IV (2025) - Toy Rockeando</description>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/tr4.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/tr4.jpg" medium="image" />
     </item>
     <item>
       <title>Edición III - Toy Rockeando</title>
@@ -1112,6 +1192,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/edicion-iii.html</guid>
       <description>Edición III - Toy Rockeando</description>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/cartel-iii-dia1.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/cartel-iii-dia1.jpg" medium="image" />
     </item>
     <item>
       <title>Edición II (2022) - Toy Rockeando</title>
@@ -1119,6 +1201,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/edicion-ii.html</guid>
       <description>Edición II (2022) - Toy Rockeando</description>
       <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/cartel-ii.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/cartel-ii.jpg" medium="image" />
     </item>
     <item>
       <title>Edición I (2021) - Toy Rockeando</title>
@@ -1126,6 +1210,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/edicion-i.html</guid>
       <description>Edición I (2021) - Toy Rockeando</description>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/cartel-i.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/cartel-i.jpg" medium="image" />
     </item>
   </channel>
 </rss>
