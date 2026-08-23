@@ -555,6 +555,10 @@ body::before {
     display: none;
 }
 
+.radio-player.collapsed .radio-content {
+    display: none;
+}
+
 .radio-toggle {
     display: flex;
     justify-content: center;

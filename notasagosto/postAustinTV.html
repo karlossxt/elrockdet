@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
@@ -378,6 +378,14 @@
             .post-content p { font-size: 0.95rem; }
             .meta-info { font-size: 9px; }
         }
+
+
+        /* Estados del radio player controlados por main.js */
+        .radio-player { transition: transform 0.3s ease; }
+        .radio-player.hidden { display: none; }
+        .radio-player.collapsed .radio-content { display: none; }
+        .radio-toggle { padding: 4px 20px; }
+        .radio-player.player-hidden { transform: translateY(calc(100% - 28px)); }
     </style>
 </head>
 <body>
@@ -393,7 +401,7 @@
             </header>
 
             <div class="img-post">
-                <img src="AUSTIN-TV-PORTADA.png" alt="Austin TV — "La ilusión del tacto"" loading="lazy">
+                <img src="AUSTIN-TV-PORTADA.png" alt="Austin TV — La ilusión del tacto" loading="lazy">
                 <div class="img-label">FOTO 01: Austin TV — "La ilusión del tacto" (ft. Yael Lima)</div>
             </div>
 

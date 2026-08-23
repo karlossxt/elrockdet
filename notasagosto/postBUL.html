@@ -378,6 +378,14 @@
             .post-content p { font-size: 0.95rem; }
             .meta-info { font-size: 9px; }
         }
+
+
+        /* Estados del radio player controlados por main.js */
+        .radio-player { transition: transform 0.3s ease; }
+        .radio-player.hidden { display: none; }
+        .radio-player.collapsed .radio-content { display: none; }
+        .radio-toggle { padding: 4px 20px; }
+        .radio-player.player-hidden { transform: translateY(calc(100% - 28px)); }
     </style>
 </head>
 <body>

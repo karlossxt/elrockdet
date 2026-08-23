@@ -1,64 +1,131 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELROCK | TÍTULO DE LA NOTA</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3H9PZRVX86"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3H9PZRVX86');
+    </script>
+
     <link rel="alternate" type="application/rss+xml" title="Feed RSS de El Rock de todos los Días" href="/feed.xml" />
-    <meta name="description" content="Descripción de la nota para SEO.">
-    <meta property="og:title" content="ELROCK | TÍTULO DE LA NOTA">
-    <meta property="og:description" content="Descripción de la nota.">
+    <meta property="article:published_time" content="2026-01-01">
+
+    <!-- SEO Básico -->
+    <meta name="description" content="Descripción de la nota para SEO y redes sociales.">
+    <link rel="canonical" href="https://elrockdetodoslosdias.com.mx/notasagosto/postEJEMPLO.html">
+
+    <!-- Open Graph / Facebook / WhatsApp / Telegram -->
+    <meta property="fb:app_id" content="1028340583488019">
     <meta property="og:type" content="article">
-    <meta property="og:image" content="IMAGEN_DESTACADA.jpg">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-    <link rel="apple-touch-icon" href="favicon-180.png">
+    <meta property="og:title" content="ELROCK | Título de la nota">
+    <meta property="og:description" content="Descripción corta de la nota.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasagosto/PORTADA.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasagosto/postEJEMPLO.html">
+    <meta property="og:site_name" content="ELROCK">
+    <meta property="og:locale" content="es_MX">
+
+    <!-- Datos de Artículo para Redes -->
+    <meta property="article:section" content="Música">
+    <meta property="article:tag" content="Banda">
+    <meta property="article:tag" content="Género">
+
+    <!-- Twitter Cards (X) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ELROCK | Título de la nota">
+    <meta name="twitter:description" content="Descripción corta de la nota.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasagosto/PORTADA.png">
+
+    <!-- Iconos y Fuentes -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+    <link rel="apple-touch-icon" href="../favicon-180.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../fontawesome-all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+
+    <!--
+        PLANTILLA UNIFICADA — combina las variaciones del sitio:
+        · Layout responsivo y radio player mejorado (estilo agosto)
+        · Head SEO completo con tags de artículo (estilo julio)
+        · Bloques: highlight-box, band-highlight, tracklist, video-container, credits-box
+        CAMBIA SOLO: --accent, título, metas, contenido y color de scanlines.
+    -->
     <style>
         :root {
             --bg: #050505;
-            --accent: #dc2626;
+            --accent: #6366f1; /* Cambia por nota: #dc2626 rojo · #8b5cf6 púrpura · #fbbf24 dorado · #10b981 esmeralda · #3b82f6 azul */
             --white: #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html,
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
 
         body {
             background-color: var(--bg);
             color: var(--white);
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            overflow-x: hidden;
-            padding-bottom: 70px;
+            padding-bottom: 90px; /* Margen para que el reproductor no tape el footer */
         }
 
         .scanlines {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%),
-                        linear-gradient(90deg, rgba(220, 38, 38, 0.02), rgba(255, 255, 255, 0.01), rgba(220, 38, 38, 0.02));
+                        linear-gradient(90deg, rgba(99, 102, 241, 0.02), rgba(255, 255, 255, 0.01), rgba(99, 102, 241, 0.02));
             z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
         }
 
+        /* LAYOUT PRINCIPAL */
         .post-layout {
             display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 50px;
+            grid-template-columns: minmax(0, 1fr) 300px;
+            gap: 40px;
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
+        article {
+            width: 100%;
+            max-width: 760px;
+            margin: auto;
+        }
+
+        /* BOTÓN CERRAR */
         .btn-cerrar {
-            position: fixed; top: 30px; right: 30px;
-            background: var(--accent); color: white;
-            padding: 12px 20px; font-weight: 900;
-            border: 2px solid white; cursor: pointer;
-            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 2000;
+            background: var(--accent);
+            color: white;
+            padding: 10px 16px;
+            font-weight: 900;
+            border: 2px solid white;
+            cursor: pointer;
+            font-family: 'Space Mono';
+            text-transform: uppercase;
             box-shadow: 4px 4px 0px white;
             transition: 0.3s;
+            font-size: .8rem;
+            max-width: calc(100vw - 30px);
+            white-space: nowrap;
         }
 
         .btn-cerrar:hover {
@@ -66,7 +133,7 @@
             box-shadow: 6px 6px 0px var(--accent);
         }
 
-        /* POST HEADER */
+        /* HEADER DEL POST */
         .post-header { margin-bottom: 50px; text-align: left; }
         .tag-cat {
             background: var(--accent); color: white; padding: 5px 15px;
@@ -76,52 +143,177 @@
 
         .post-title {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(2.5rem, 7vw, 5rem);
-            line-height: 0.85; margin-bottom: 40px; text-transform: uppercase;
+            font-size: clamp(1.7rem, 8vw, 4.5rem);
+            word-break: break-word;
+            line-height: 1.0;
+            margin-bottom: 40px;
+            text-transform: uppercase;
         }
         .post-title span { color: var(--accent); font-style: italic; }
 
         /* IMÁGENES */
-        .img-post { border: 1px solid #222; margin: 40px 0; background: #111; position: relative; }
-        .img-post img { width: 100%; display: block; filter: contrast(1.1); transition: 0.4s; }
+        .img-post {
+            border: 1px solid #222;
+            margin: 40px 0;
+            background: #111;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .img-post img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: contrast(1.1);
+            transition: 0.4s;
+        }
         .img-post:hover img { filter: contrast(1) saturate(1.1); }
         .img-label {
             font-family: 'Space Mono'; font-size: 10px; color: var(--accent);
             text-align: right; padding: 10px; text-transform: uppercase; border-top: 1px solid #222;
         }
 
+        /* META */
         .meta-info {
             border-top: 1px solid #222; border-bottom: 1px solid #222;
             padding: 15px 0; margin-bottom: 50px;
             display: flex; justify-content: space-between;
             font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
         }
+        .view-counter {
+            display: inline-flex; align-items: center; gap: 5px;
+            color: #888;
+        }
+        .view-counter i { font-size: 13px; }
+        #view-counter { color: var(--accent); font-weight: 700; }
 
+        /* CONTENIDO */
         .post-content p {
             font-size: 1.2rem; font-weight: 400; color: #ccc;
             margin-bottom: 30px; line-height: 1.7;
         }
 
-        .post-content p:first-of-type::first-letter {
+        .post-content > p:first-of-type::first-letter {
             font-size: 5rem; float: left; margin-right: 15px;
-            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne', sans-serif;
+        }
+
+        .highlight-box p::first-letter,
+        .band-highlight p::first-letter,
+        .tracklist p::first-letter,
+        .credits-box p::first-letter {
+            font-size: inherit; float: none; margin-right: 0;
+            line-height: inherit; color: inherit; font-weight: inherit; font-family: inherit;
         }
 
         .post-content strong { color: white; }
 
-        /* BLOQUES DESTACADOS */
+        /* BLOQUE DESTACADO (citas, datos clave) */
         .highlight-box {
-            background: var(--accent); color: white; padding: 30px;
-            margin: 40px 0; border: 2px solid white; font-family: 'Space Mono';
+            background: var(--accent);
+            color: #fff;
+            padding: clamp(18px, 4vw, 35px);
+            margin: 40px 0;
+            border: 2px solid white;
         }
-        .highlight-box h4 { text-transform: uppercase; margin-bottom: 10px; font-family: 'Syne'; font-size: 1.5rem; }
+        .highlight-box h4 {
+            text-transform: uppercase;
+            margin-bottom: 22px;
+            font-family: 'Syne';
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+        .highlight-box p {
+            font-family: 'Space Mono', monospace;
+            font-size: 1rem;
+            line-height: 1.9;
+            padding-left: 8px;
+            color: #fff;
+        }
 
+        /* BANDA DESTACADA (bloque blanco) */
         .band-highlight {
             background: white; color: black; padding: 40px; margin: 60px 0;
             border-left: 10px solid var(--accent);
         }
         .band-highlight h3 { font-family: 'Syne'; font-size: 2rem; text-transform: uppercase; margin-bottom: 10px; }
         .band-highlight p { font-family: 'Space Mono'; font-weight: 700; color: #111; font-size: 1rem; margin: 0; }
+
+        /* TRACKLIST / FECHAS DE GIRA */
+        .tracklist {
+            border: 2px solid var(--accent);
+            padding: clamp(18px, 4vw, 35px);
+            margin: 40px 0;
+            background: #0a0a0a;
+        }
+        .tracklist h4 {
+            text-transform: uppercase; margin-bottom: 10px; font-family: 'Syne';
+            font-size: 1.5rem; letter-spacing: 2px; color: var(--accent);
+        }
+        .tracklist-subtitle {
+            font-family: 'Space Mono', monospace; font-size: 0.9rem;
+            color: #888; margin-bottom: 20px;
+        }
+        .tracklist-items {
+            font-family: 'Space Mono', monospace; font-size: 1rem; line-height: 2;
+            color: #ccc; margin: 0; display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 25px;
+        }
+
+        /* VIDEO RESPONSIVO (YouTube) */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin: 40px 0;
+            border: 1px solid #222;
+            border-radius: 8px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+
+        /* CRÉDITOS / FICHA TÉCNICA */
+        .credits-box {
+            margin: 60px 0; padding: clamp(18px, 4vw, 40px);
+            border: 5px solid var(--accent);
+            background: rgba(99, 102, 241, 0.05);
+        }
+        .credits-label {
+            font-family: 'Space Mono'; font-size: 14px; color: var(--accent);
+            font-weight: 700; display: block; margin-bottom: 10px;
+        }
+        .credits-main {
+            font-family: 'Syne'; font-size: clamp(2rem, 5vw, 4rem); line-height: 0.9;
+            color: var(--white); text-transform: uppercase; margin-bottom: 20px; display: block;
+        }
+        .credits-details {
+            font-family: 'Space Mono'; font-size: 16px; color: #9ca3af;
+            border-top: 1px solid #333; padding-top: 20px; display: block;
+        }
+
+        /* REDES SOCIALES */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px 0;
+        }
+        .social-links a {
+            flex: 1 1 180px;
+            justify-content: center;
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #111; border: 1px solid #333; padding: 10px 18px;
+            font-family: 'Space Mono'; font-size: 11px; font-weight: 700;
+            color: white; text-decoration: none; text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .social-links a:hover { border-color: var(--accent); background: #1a1a1a; }
+        .social-links a i { color: var(--accent); }
 
         /* SIDEBAR */
         .post-sidebar {
@@ -155,194 +347,150 @@
         }
 
         .sidebar-title i { font-size: 1rem; }
+        .playlist-embed { border-radius: 8px; width: 100%; }
 
-        .playlist-embed {
-            border-radius: 8px;
-            width: 100%;
-        }
-
-        /* OTROS RUIDOS SIDEBAR */
-        .otros-ruidos-sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
+        /* OTROS RUIDOS — SIDEBAR MINI */
+        .otros-ruidos-sidebar { display: flex; flex-direction: column; gap: 15px; }
         .otros-mini-card {
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            gap: 12px;
-            padding: 10px;
-            background: #111;
-            border: 1px solid #222;
-            transition: 0.3s;
+            text-decoration: none; color: inherit;
+            display: flex; gap: 12px; padding: 10px;
+            background: #111; border: 1px solid #222; transition: 0.3s;
         }
+        .otros-mini-card:hover { border-color: var(--accent); transform: translateX(3px); }
+        .otros-mini-img { width: 70px; height: 70px; flex-shrink: 0; overflow: hidden; }
+        .otros-mini-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.4s; }
+        .otros-mini-card:hover .otros-mini-img img { filter: grayscale(0); }
+        .otros-mini-info { display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+        .otros-mini-tag { font-family: 'Space Mono'; font-size: 8px; font-weight: 900; text-transform: uppercase; color: var(--accent); letter-spacing: 1px; }
+        .otros-mini-title { font-family: 'Syne', sans-serif; font-size: 0.75rem; line-height: 1.1; text-transform: uppercase; color: white; }
 
-        .otros-mini-card:hover {
-            border-color: var(--accent);
-            transform: translateX(3px);
-        }
+        /* OTROS RUIDOS — GRID FINAL */
+        .otros-ruidos { margin-top: 80px; padding-top: 40px; border-top: 2px solid #222; }
+        .otros-ruidos-header { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; }
+        .otros-ruidos-header h3 { font-family: 'Syne'; font-size: 2rem; font-weight: 800; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+        .otros-ruidos-line { flex: 1; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); }
+        .otros-ruidos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
 
-        .otros-mini-img {
-            width: 70px;
-            height: 70px;
-            flex-shrink: 0;
-            overflow: hidden;
-        }
+        .otros-card { text-decoration: none; color: inherit; background: #0a0a0a; border: 1px solid #222; padding: 12px; transition: all 0.4s; display: block; }
+        .otros-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15); }
+        .otros-card-img { width: 100%; height: 160px; overflow: hidden; margin-bottom: 12px; }
+        .otros-card-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
+        .otros-card:hover .otros-card-img img { filter: grayscale(0); transform: scale(1.05); }
+        .otros-card-tag { font-family: 'Space Mono'; font-size: 9px; font-weight: 900; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 8px; letter-spacing: 1px; }
+        .otros-card-title { font-family: 'Syne'; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 8px; color: white; }
+        .otros-card-excerpt { font-family: 'Space Mono'; font-size: 10px; color: #555; line-height: 1.4; }
 
-        .otros-mini-img img {
+        .post-footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #222; text-align: center; font-family: 'Space Mono'; color: #444; }
+
+        /* RADIO PLAYER */
+        .radio-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(1);
-            transition: 0.4s;
+            background: #0d0d0d;
+            border-top: 2px solid var(--accent);
+            z-index: 999;
+            transition: transform 0.3s ease;
         }
-
-        .otros-mini-card:hover .otros-mini-img img {
-            filter: grayscale(0);
-        }
-
-        .otros-mini-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 4px;
-        }
-
-        .otros-mini-tag {
-            font-family: 'Space Mono', monospace;
-            font-size: 8px;
-            font-weight: 900;
-            text-transform: uppercase;
-            color: var(--accent);
-            letter-spacing: 1px;
-        }
-
-        .otros-mini-title {
-            font-family: 'Syne', sans-serif;
-            font-size: 0.75rem;
-            line-height: 1.1;
-            text-transform: uppercase;
-            color: white;
-        }
-
-        /* OTROS RUIDOS FINAL */
-        .otros-ruidos {
-            margin-top: 80px;
-            padding-top: 40px;
-            border-top: 2px solid #222;
-        }
-
-        .otros-ruidos-header {
+        .radio-content {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
             gap: 15px;
-            margin-bottom: 30px;
         }
-
-        .otros-ruidos-header h3 {
-            font-family: 'Syne', sans-serif;
-            font-size: 2rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            color: var(--accent);
-            white-space: nowrap;
+        .radio-live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #ff0000;
+            border-radius: 50%;
         }
-
-        .otros-ruidos-line {
-            flex: 1;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent), transparent);
-        }
-
-        .otros-ruidos-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .otros-card {
-            text-decoration: none;
-            color: inherit;
-            background: #0a0a0a;
-            border: 1px solid #222;
-            padding: 12px;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            display: block;
-        }
-
-        .otros-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.15);
-        }
-
-        .otros-card-img {
-            width: 100%;
-            height: 160px;
-            overflow: hidden;
-            margin-bottom: 12px;
-        }
-
-        .otros-card-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(1);
-            transition: 0.5s;
-        }
-
-        .otros-card:hover .otros-card-img img {
-            filter: grayscale(0);
-            transform: scale(1.05);
-        }
-
-        .otros-card-tag {
+        .radio-label {
             font-family: 'Space Mono', monospace;
-            font-size: 9px;
-            font-weight: 900;
+            font-size: 11px;
+            color: #fff;
             text-transform: uppercase;
-            color: var(--accent);
-            display: block;
-            margin-bottom: 8px;
-            letter-spacing: 1px;
+            flex-grow: 1;
+        }
+        .radio-play-btn, .radio-close, .radio-toggle {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .radio-volume {
+            width: 80px;
+            accent-color: var(--accent);
         }
 
-        .otros-card-title {
-            font-family: 'Syne', sans-serif;
-            font-size: 1.1rem;
-            line-height: 1.1;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            color: white;
-        }
+        /* Estados controlados por main.js */
+        .radio-player.hidden { display: none; }
+        .radio-player.collapsed .radio-content { display: none; }
+        .radio-player.collapsed { border-top-width: 2px; }
+        .radio-toggle { padding: 4px 20px; }
+        .radio-player.player-hidden { transform: translateY(calc(100% - 28px)); }
 
-        .otros-card-excerpt {
-            font-family: 'Space Mono', monospace;
-            font-size: 10px;
-            color: #555;
-            line-height: 1.4;
-        }
+        /* MEDIA QUERIES */
 
-        /* POST FOOTER */
-        .post-footer {
-            margin-top: 80px; padding: 40px 0; border-top: 1px solid #222;
-            text-align: center; font-family: 'Space Mono'; color: #444;
-        }
-
-        @media (max-width: 900px) {
+        /* Tablet */
+        @media (max-width: 1000px) {
             .post-layout {
                 grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 20px 15px;
             }
             .post-sidebar {
-                position: static;
+                position: relative;
+                top: 0;
                 order: 2;
             }
-            .post-title { font-size: 3rem; }
-            .meta-info { flex-direction: column; gap: 10px; }
-            .otros-ruidos-grid { grid-template-columns: 1fr; }
-            .btn-cerrar { top: 15px; right: 15px; padding: 8px 14px; font-size: 11px; }
+            .meta-info { flex-direction: column; gap: 8px; font-size: 10px; }
+            .post-content > p:first-of-type::first-letter { font-size: 3.5rem; margin-right: 10px; }
+            .post-content p { font-size: 1rem; margin-bottom: 20px; }
+            .img-post { margin: 25px 0; }
+            .img-label { font-size: 9px; padding: 8px; }
+            .otros-ruidos { margin-top: 50px; padding-top: 25px; }
+            .otros-ruidos-header h3 { font-size: 1.3rem; }
+            .post-footer { margin-top: 50px; padding: 25px 0; }
+            .band-highlight { padding: 25px; margin: 40px 0; }
+            .band-highlight h3 { font-size: 1.5rem; }
+        }
+
+        /* Radio player móvil */
+        @media (max-width: 700px) {
+            .radio-content {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                padding: 12px;
+            }
+            .radio-label {
+                width: 100%;
+                text-align: center;
+            }
+            .radio-volume {
+                width: 100%;
+            }
+        }
+
+        /* Botón cerrar móvil */
+        @media (max-width: 600px) {
+            .btn-cerrar {
+                top: 10px;
+                right: 10px;
+                padding: 8px 12px;
+                font-size: .7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .post-content > p:first-of-type::first-letter { font-size: 3rem; }
+            .post-content p { font-size: 0.95rem; }
+            .meta-info { font-size: 9px; }
         }
     </style>
 </head>
@@ -352,105 +500,140 @@
     <button class="btn-cerrar" onclick="window.history.back()">CERRAR [X]</button>
 
     <div class="post-layout">
-        <!-- CONTENIDO PRINCIPAL -->
         <article>
             <header class="post-header">
                 <span class="tag-cat">CATEGORÍA</span>
-                <h1 class="post-title">TÍTULO DE LA<br><span>NOTA AQUÍ</span></h1>
+                <h1 class="post-title">BANDA O TEMA<br><span>"Subtítulo o canción"</span></h1>
             </header>
 
             <div class="img-post">
-                <img src="IMAGEN_DESTACADA.jpg" alt="Descripción">
+                <img src="PORTADA.jpg" alt="Descripción de la imagen" loading="lazy">
                 <div class="img-label">FOTO 01: LEYENDA DE LA FOTO</div>
             </div>
 
             <div class="meta-info">
-                <span>AUTOR: NOMBRE</span>
-                <span>FECHA: 01 DE ENERO, 2026</span>
-                <span>CATEGORÍA: MÚSICA</span>
+                <span>EL ROCK DE TODOS LOS DÍAS</span>
+                <span>MES, 2026</span>
+                <span>CATEGORÍA</span>
+
+                <span class="view-counter"><i class="fas fa-eye"></i> <span id="view-counter">...</span></span>
             </div>
 
             <div class="post-content">
-                <p>Primer párrafo de la nota. La primera letra se agranda automáticamente con estilo drop-cap.</p>
+                <p>Primer párrafo de la nota. La primera letra se agranda automáticamente con drop-cap. Usa <strong>negritas</strong> para los nombres clave.</p>
 
-                <div class="highlight-box">
-                    <h4>DESTACADO</h4>
-                    <p>Información importante o cita relevante.</p>
-                </div>
+                <p>Párrafos de desarrollo con imágenes intercaladas:</p>
 
                 <div class="img-post">
-                    <img src="OTRA_IMAGEN.jpg" alt="Descripción">
-                    <div class="img-label">FOTO 02: OTRA LEYENDA</div>
+                    <img src="IMAGEN_2.jpg" alt="Descripción" loading="lazy">
+                    <div class="img-label">FOTO 02: LEYENDA</div>
                 </div>
 
-                <p>Más contenido de la nota. Puedes usar <strong>texto en negritas</strong> para énfasis.</p>
+                <div class="highlight-box">
+                    <h4>TÍTULO DEL DESTACADO</h4>
+                    <p>Cita relevante, dato clave o información importante.</p>
+                </div>
 
                 <div class="band-highlight">
                     <h3>NOMBRE DE LA BANDA</h3>
                     <p>Descripción breve de la banda o momento destacado.</p>
                 </div>
 
-                <p>Continúa el contenido de la nota con más párrafos e imágenes.</p>
-
-                <div class="img-post">
-                    <img src="TERCERA_IMAGEN.jpg" alt="Descripción">
-                    <div class="img-label">FOTO 03: ÚLTIMA LEYENDA</div>
+                <div class="tracklist">
+                    <h4>TRACKLIST / GIRA</h4>
+                    <p class="tracklist-subtitle">Nota breve sobre el listado (opcional).</p>
+                    <div class="tracklist-items">
+                        <div>01 — Canción uno<br>02 — Canción dos<br>03 — Canción tres<br>04 — Canción cuatro<br>05 — Canción cinco<br>06 — Canción seis<br>07 — Canción siete</div>
+                        <div>08 — Canción ocho<br>09 — Canción nueve<br>10 — Canción diez<br>11 — Canción once<br>12 — Canción doce<br>13 — Canción trece</div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- OTROS RUIDOS — RECOMENDACIONES -->
+                <div class="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/ID_DEL_VIDEO"
+                        title="Título del video"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="spotify-embed-container" style="margin: 30px 0;">
+                    <iframe
+                        src="https://open.spotify.com/embed/track/ID_DEL_TRACK?utm_source=generator&theme=0"
+                        width="100%"
+                        height="352"
+                        frameBorder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                        style="border-radius: 12px; display: block;">
+                    </iframe>
+                </div>
+
+                <div class="credits-box">
+                    <span class="credits-label">CRÉDITOS</span>
+                    <span class="credits-main">BANDA / ÁLBUM</span>
+                    <span class="credits-details">Sello · Producción · Año · Músicos</span>
+                </div>
+
+                <p>Cierre de la nota con disponibilidad o próximos pasos.</p>
+
+                <div class="social-links">
+                    <a href="URL_SPOTIFY" target="_blank" rel="noopener"><i class="fab fa-spotify"></i> Escuchar en Spotify</a>
+                    <a href="URL_FACEBOOK" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="URL_INSTAGRAM" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+
+            </div>
             <section class="otros-ruidos">
                 <div class="otros-ruidos-header">
                     <h3>OTROS RUIDOS</h3>
                     <span class="otros-ruidos-line"></span>
                 </div>
                 <div class="otros-ruidos-grid">
-                    <!-- REEMPLAZA CON NOTAS REALES DE LA MISMA CATEGORÍA -->
-                    <a href="otra-nota-1.html" class="otros-card">
-                        <div class="otros-card-img"><img src="imagen-1.jpg" alt="Nota 1"></div>
-                        <span class="otros-card-tag">CATEGORÍA</span>
-                        <h4 class="otros-card-title">Título de la Nota Recomendada 1</h4>
-                        <p class="otros-card-excerpt">Breve excerpt de la nota...</p>
+                    <a href="../notasagosto/postAustinTV.html" class="otros-card">
+                        <div class="otros-card-img"><img src="../notasagosto/AUSTIN-TV-PORTADA.png" alt="Austin TV"></div>
+                        <span class="otros-card-tag">INSTRUMENTAL</span>
+                        <h4 class="otros-card-title">AUSTIN TV: La ilusión del tacto</h4>
+                        <p class="otros-card-excerpt">Nuevo sencillo ft. Yael Lima.</p>
                     </a>
-                    <a href="otra-nota-2.html" class="otros-card">
-                        <div class="otros-card-img"><img src="imagen-2.jpg" alt="Nota 2"></div>
-                        <span class="otros-card-tag">CATEGORÍA</span>
-                        <h4 class="otros-card-title">Título de la Nota Recomendada 2</h4>
-                        <p class="otros-card-excerpt">Breve excerpt de la nota...</p>
+                    <a href="../notasjulio/postDark.html" class="otros-card">
+                        <div class="otros-card-img"><img src="../notasjulio/darkshadow-hero.jpg" alt="Dark Shadow"></div>
+                        <span class="otros-card-tag">POWER METAL</span>
+                        <h4 class="otros-card-title">DARK SHADOW: Through Blood or Glory</h4>
+                        <p class="otros-card-excerpt">Segundo adelanto de Chapter Two.</p>
                     </a>
-                    <a href="otra-nota-3.html" class="otros-card">
-                        <div class="otros-card-img"><img src="imagen-3.jpg" alt="Nota 3"></div>
-                        <span class="otros-card-tag">CATEGORÍA</span>
-                        <h4 class="otros-card-title">Título de la Nota Recomendada 3</h4>
-                        <p class="otros-card-excerpt">Breve excerpt de la nota...</p>
+                    <a href="postDeerMX.html" class="otros-card">
+                        <div class="otros-card-img"><img src="../notasjulio/deerportada.jpg" alt="Deer MX"></div>
+                        <span class="otros-card-tag">ELECTRÓNICA</span>
+                        <h4 class="otros-card-title">DEER MX: ITZCUINTLAN</h4>
+                        <p class="otros-card-excerpt">Primer EP completamente en español.</p>
                     </a>
                 </div>
             </section>
 
             <footer class="post-footer">
-                <p>RESEÑA POR: NOMBRE DEL AUTOR</p>
+                <p>RESEÑA POR: EL ROCK DE TODOS LOS DÍAS</p>
                 <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">EL ROCK DE TODOS LOS DÍAS © 2026</p>
             </footer>
         </article>
 
-        <!-- SIDEBAR -->
         <aside class="post-sidebar">
-            <!-- PLAYLIST DE LA SEMANA -->
             <div class="sidebar-section">
                 <h4 class="sidebar-title"><i class="fab fa-spotify"></i> PLAYLIST DE LA SEMANA</h4>
                 <iframe class="playlist-embed"
                     src="https://open.spotify.com/embed/playlist/153Gvei76OaDP0kMY75GQz?utm_source=generator&theme=0"
                     height="380" frameBorder="0"
-                    allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy">
                 </iframe>
             </div>
 
-            <!-- OTROS RUIDOS SIDEBAR -->
             <div class="sidebar-section">
                 <h4 class="sidebar-title"><i class="fas fa-headphones"></i> OTROS RUIDOS</h4>
                 <div class="otros-ruidos-sidebar">
-                    <!-- REEMPLAZA CON NOTAS REALES -->
                     <a href="otra-nota-1.html" class="otros-mini-card">
                         <div class="otros-mini-img"><img src="imagen-1.jpg" alt="Nota 1"></div>
                         <div class="otros-mini-info">
@@ -477,7 +660,6 @@
         </aside>
     </div>
 
-    <!-- RADIO PLAYER -->
     <div class="radio-player" id="radioPlayer">
         <div class="radio-toggle" id="radioToggle"><i class="fas fa-chevron-up"></i></div>
         <div class="radio-content">
@@ -492,6 +674,8 @@
         </div>
     </div>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
     <script src="../main.js"></script>
 </body>
 </html>

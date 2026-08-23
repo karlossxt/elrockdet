@@ -1,4 +1,4 @@
-﻿# EL ROCK DE TODOS LOS DÍAS — robots.txt
+# EL ROCK DE TODOS LOS DÍAS - robots.txt
 # https://elrockdetodoslosdias.com.mx
 
 User-agent: *
@@ -13,6 +13,10 @@ Sitemap: https://elrockdetodoslosdias.com.mx/sitemap.xml
 # Bloquear archivos de sistema
 Disallow: /CNAME
 Disallow: /.git/
+
+# Bloquear archivos internos (no indexar)
+Disallow: /plantilla-nota.html
+Disallow: /generate-rss.py
 
 # Permitir todo a buscadores principales
 User-agent: Googlebot
