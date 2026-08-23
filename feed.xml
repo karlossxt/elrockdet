@@ -5,8 +5,17 @@
     <link>https://elrockdetodoslosdias.com.mx</link>
     <description>Archivo independiente de cultura y ruido. Rock, metal y música underground mexicana.</description>
     <language>es-mx</language>
-    <lastBuildDate>Wed, 19 Aug 2026 22:09:03 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 00:34:36 +0000</lastBuildDate>
     <generator>generate-rss.py</generator>
+    <item>
+      <title>BUL — "Despertar"</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasagosto/postBUL.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasagosto/postBUL.html</guid>
+      <description>BUL presenta 'Despertar', cuarto sencillo de su próximo álbum de estudio. Un tema sobre la transformación y el renacimiento, ya disponible en todas las plataformas digitales.</description>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasagosto/BUL-PORTADA.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasagosto/BUL-PORTADA.png" medium="image" />
+    </item>
     <item>
       <title>Nadie nos va a extrañar: El Soundtrack de los 90</title>
       <link>https://elrockdetodoslosdias.com.mx/notasagosto/postNadieNosVaAExtranar.html</link>
