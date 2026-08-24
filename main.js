@@ -190,4 +190,75 @@
         document.head.appendChild(likesScript);
     }
 
+    /* -----------------------------------------------
+       9. PLAYER UNIFICADO + NOW PLAYING (Zeno)
+       Inyecta el estilo canónico del reproductor en
+       todas las páginas y muestra el tema al aire.
+   ----------------------------------------------- */
+    var radioPlayer2 = document.getElementById('radioPlayer');
+    if (radioPlayer2 && !document.getElementById('erd-player-css')) {
+        var playerCss = document.createElement('style');
+        playerCss.id = 'erd-player-css';
+        playerCss.textContent =
+            '.radio-player{position:fixed;bottom:0;left:0;width:100%;' +
+            'background:rgba(0,0,0,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);' +
+            'border-top:2px solid var(--red,#df2525);z-index:2000;' +
+            'transition:transform .4s cubic-bezier(.4,0,.2,1)}' +
+            '.radio-player.player-hidden{transform:translateY(100%)}' +
+            '.radio-player.hidden{display:none}' +
+            '.radio-player.collapsed .radio-content{display:none}' +
+            '.radio-toggle{display:flex;justify-content:center;padding:4px 0 0;cursor:pointer;color:#555;font-size:10px;transition:.2s}' +
+            '.radio-toggle:hover{color:#fff}' +
+            '.radio-content{display:flex;align-items:center;gap:15px;padding:12px 30px 14px;max-width:none;margin:0}' +
+            '.radio-live-dot{width:8px;height:8px;background:var(--red,#df2525);border-radius:50%;animation:pulse-dot 1.5s ease-in-out infinite;flex-shrink:0}' +
+            '@keyframes pulse-dot{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(220,38,38,.6)}50%{opacity:.7;box-shadow:0 0 0 6px rgba(220,38,38,0)}}' +
+            ".radio-label{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;" +
+            'text-transform:uppercase;color:#888;letter-spacing:1px;white-space:nowrap;flex-grow:0}' +
+            ".radio-now-playing{font-family:'Space Mono',monospace;font-size:10px;font-weight:700;" +
+            'color:#00ff00;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;' +
+            'overflow:hidden;text-overflow:ellipsis;max-width:280px;display:none}' +
+            '.radio-play-btn{background:var(--red,#df2525);color:#fff;border:none;width:36px;height:36px;' +
+            'border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;' +
+            'font-size:14px;transition:.2s;flex-shrink:0}' +
+            '.radio-play-btn:hover{background:#b91c1c;transform:scale(1.1)}' +
+            '.radio-volume{width:80px;height:4px;-webkit-appearance:none;appearance:none;background:#333;' +
+            'border-radius:2px;outline:none;cursor:pointer}' +
+            '.radio-volume::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:12px;height:12px;' +
+            'background:#fff;border-radius:50%;cursor:pointer}' +
+            '.radio-volume::-moz-range-thumb{width:12px;height:12px;background:#fff;border-radius:50%;cursor:pointer;border:none}' +
+            '.radio-close{background:none;border:none;color:#555;cursor:pointer;font-size:14px;transition:.2s;padding:5px}' +
+            '.radio-close:hover{color:#fff}' +
+            '@media(max-width:768px){.radio-content{padding:10px 15px;gap:10px}' +
+            ".radio-label{font-size:8px}.radio-now-playing{font-size:8px;max-width:150px}.radio-volume{width:50px}}" +
+            '@media(max-width:480px){.radio-label{display:none}.radio-now-playing{max-width:200px}.radio-volume{width:40px}}';
+        document.head.appendChild(playerCss);
+
+        var radioContent = radioPlayer2.querySelector('.radio-content');
+        var radioLabel = radioPlayer2.querySelector('.radio-label');
+        var nowPlayingEl = null;
+        if (radioContent && radioLabel && !radioPlayer2.querySelector('.radio-now-playing')) {
+            nowPlayingEl = document.createElement('span');
+            nowPlayingEl.className = 'radio-now-playing';
+            nowPlayingEl.id = 'radioNowPlaying';
+            radioContent.insertBefore(nowPlayingEl, radioLabel.nextSibling);
+        }
+
+        if (nowPlayingEl && typeof EventSource !== 'undefined') {
+            try {
+                var zenoSSE = new EventSource('https://api.zeno.fm/mounts/metadata/subscribe/suqqst6xaq8uv');
+                zenoSSE.addEventListener('message', function (ev) {
+                    try {
+                        var d = JSON.parse(ev.data);
+                        var artist = d.artist || d.artist_name || '';
+                        var track = d.title || d.track || d.song || '';
+                        if (artist || track) {
+                            nowPlayingEl.textContent = artist ? artist + ' \u2014 ' + track : track;
+                            nowPlayingEl.style.display = 'inline-block';
+                        }
+                    } catch (e) {}
+                });
+            } catch (e) {}
+        }
+    }
+
 })();
