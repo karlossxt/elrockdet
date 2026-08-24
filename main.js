@@ -1,4 +1,4 @@
-﻿/* ============================================
+/* ============================================
    EL ROCK DE TODOS LOS DÍAS — main.js
    Radio Player + Scroll Reveal + Playlist Rotation
    ============================================ */
@@ -142,8 +142,29 @@
     });
 
     /* -----------------------------------------------
-       6. VISITOR COUNTER (CounterAPI)
-    ----------------------------------------------- */
+       6. CERRAR NOTA
+       Vuelve atrás si el visitante llegó desde otra
+       página del sitio; si no, va al fallback.
+   ----------------------------------------------- */
+    window.cerrarNota = function (fallback) {
+        var cameFromSite = false;
+        if (document.referrer) {
+            try {
+                cameFromSite = new URL(document.referrer).hostname === window.location.hostname;
+            } catch (e) {
+                cameFromSite = false;
+            }
+        }
+        if (cameFromSite && window.history.length > 1) {
+            window.history.back();
+        } else {
+            window.location.href = fallback || 'index.html';
+        }
+    };
+
+    /* -----------------------------------------------
+       7. VISITOR COUNTER (CounterAPI)
+   ----------------------------------------------- */
     var viewCounterEl = document.getElementById('view-counter');
     if (viewCounterEl && typeof Counter !== 'undefined') {
         var counter = new Counter({ workspace: 'elrockdetodoslosdias' });
