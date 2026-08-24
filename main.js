@@ -261,4 +261,71 @@
         }
     }
 
+    /* -----------------------------------------------
+       10. RADIO CONTINUA ENTRE PÁGINAS
+       Reanuda la transmisión si el usuario estaba
+       escuchando en la página anterior.
+   ----------------------------------------------- */
+    var RADIO_STATE_KEY = 'erd_radio_state';
+    var radioHeartbeat = null;
+
+    function radioSaveState() {
+        try {
+            localStorage.setItem(RADIO_STATE_KEY, JSON.stringify({
+                playing: true,
+                vol: zenoAudio ? zenoAudio.volume : 0.7,
+                t: Date.now()
+            }));
+        } catch (e) {}
+    }
+
+    function radioClearState() {
+        try { localStorage.removeItem(RADIO_STATE_KEY); } catch (e) {}
+        if (radioHeartbeat) {
+            clearInterval(radioHeartbeat);
+            radioHeartbeat = null;
+        }
+    }
+
+    if (zenoAudio && playPauseBtn) {
+        zenoAudio.addEventListener('playing', function () {
+            if (radioHeartbeat) clearInterval(radioHeartbeat);
+            radioSaveState();
+            radioHeartbeat = setInterval(radioSaveState, 1000);
+        });
+
+        zenoAudio.addEventListener('pause', radioClearState);
+        zenoAudio.addEventListener('error', radioClearState);
+
+        var shouldResume = false;
+        try {
+            var rawState = localStorage.getItem(RADIO_STATE_KEY);
+            if (rawState) {
+                var prevState = JSON.parse(rawState);
+                if (prevState && prevState.playing && prevState.t &&
+                    (Date.now() - prevState.t) < 5000) {
+                    shouldResume = true;
+                    if (typeof prevState.vol === 'number') {
+                        zenoAudio.volume = prevState.vol;
+                        if (volumeSlider) volumeSlider.value = String(prevState.vol);
+                    }
+                }
+            }
+        } catch (e) {}
+
+        if (shouldResume) {
+            zenoAudio.load();
+            var resumeAttempt = zenoAudio.play();
+            if (resumeAttempt && resumeAttempt.then) {
+                resumeAttempt.then(function () {
+                    isPlaying = true;
+                    playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                }).catch(function () {
+                    isPlaying = false;
+                    playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                });
+            }
+        }
+    }
+
 })();
