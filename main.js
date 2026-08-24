@@ -179,4 +179,15 @@
             });
     }
 
+    /* -----------------------------------------------
+       8. LIKES DE NOTAS (Supabase)
+----------------------------------------------- */
+    var mainTag = document.querySelector('script[src*="main.js"]');
+    if (mainTag) {
+        var likesScript = document.createElement('script');
+        likesScript.src = new URL('likes.js', mainTag.src).href;
+        likesScript.defer = true;
+        document.head.appendChild(likesScript);
+    }
+
 })();
