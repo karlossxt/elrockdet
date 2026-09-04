@@ -272,50 +272,6 @@
 
         .post-footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #222; text-align: center; font-family: 'Space Mono'; color: #444; }
 
-        /* Estilo base para el reproductor de radio */
-        .radio-player {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #0d0d0d;
-            border-top: 2px solid var(--accent);
-            z-index: 999;
-        }
-        .radio-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 12px 20px;
-            gap: 15px;
-        }
-        .radio-live-dot {
-            width: 8px;
-            height: 8px;
-            background-color: #ff0000;
-            border-radius: 50%;
-        }
-        .radio-label {
-            font-family: 'Space Mono', monospace;
-            font-size: 11px;
-            color: #fff;
-            text-transform: uppercase;
-            flex-grow: 1;
-        }
-        .radio-play-btn, .radio-close, .radio-toggle {
-            background: none;
-            border: none;
-            color: #fff;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        .radio-volume {
-            width: 80px;
-            accent-color: var(--accent);
-        }
-
         /* MEDIA QUERIES COMBINADOS Y OPTIMIZADOS */
         
         /* PUNTO 2: Tablet */
@@ -336,23 +292,6 @@
             .otros-ruidos { margin-top: 50px; padding-top: 25px; }
             .otros-ruidos-header h3 { font-size: 1.3rem; }
             .post-footer { margin-top: 50px; padding: 25px 0; }
-        }
-
-        /* PUNTO 6: Reproductor de radio móvil */
-        @media (max-width: 700px) {
-            .radio-content {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 10px;
-                padding: 12px;
-            }
-            .radio-label {
-                width: 100%;
-                text-align: center;
-            }
-            .radio-volume {
-                width: 100%;
-            }
         }
 
         /* PUNTO 1: Ajuste móvil del botón Cerrar */
