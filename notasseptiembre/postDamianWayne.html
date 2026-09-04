@@ -127,6 +127,46 @@
         .otros-card-excerpt { font-family: 'Space Mono'; font-size: 10px; color: #555; line-height: 1.4; }
 
         @media (max-width: 900px) { .main-layout { grid-template-columns: 1fr; } }
+        @media (max-width: 600px) {
+            .btn-cerrar { top: 15px; right: 15px; padding: 8px 12px; font-size: .7rem; }
+            .post-title { font-size: 1.8rem; }
+            .content p { font-size: 1rem; }
+        }
+
+        .radio-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #0d0d0d;
+            border-top: 2px solid var(--accent);
+            z-index: 999;
+        }
+        .radio-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            gap: 15px;
+        }
+        .radio-live-dot { width: 8px; height: 8px; background-color: #ff0000; border-radius: 50%; }
+        .radio-label { font-family: 'Space Mono', monospace; font-size: 11px; color: #fff; text-transform: uppercase; flex-grow: 1; }
+        .radio-play-btn, .radio-close, .radio-toggle { background: none; border: none; color: #fff; cursor: pointer; font-size: 14px; }
+        .radio-volume { width: 80px; accent-color: var(--accent); }
+
+        @media (max-width: 700px) {
+            .radio-content { flex-wrap: wrap; justify-content: center; gap: 10px; padding: 12px; }
+            .radio-label { width: 100%; text-align: center; }
+            .radio-volume { width: 100%; }
+        }
+
+        .radio-player { transition: transform 0.3s ease; }
+        .radio-player.hidden { display: none; }
+        .radio-player.collapsed .radio-content { display: none; }
+        .radio-toggle { padding: 4px 20px; }
+        .radio-player.player-hidden { transform: translateY(calc(100% - 28px)); }
     </style>
 
     <script type="application/ld+json">
@@ -289,6 +329,20 @@
         </footer>
 
     </article>
+
+    <div class="radio-player" id="radioPlayer">
+        <div class="radio-toggle" id="radioToggle"><i class="fas fa-chevron-up"></i></div>
+        <div class="radio-content">
+            <div class="radio-live-dot"></div>
+            <span class="radio-label">EN VIVO — EL ROCK DE TODOS LOS DÍAS</span>
+            <audio id="zenoAudio" preload="none">
+                <source src="https://stream.zeno.fm/suqqst6xaq8uv" type="audio/mpeg">
+            </audio>
+            <button class="radio-play-btn" id="playPauseBtn"><i class="fas fa-play"></i></button>
+            <input class="radio-volume" type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+            <button class="radio-close" id="radioClose"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
     <script src="../main.js"></script>
