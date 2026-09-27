@@ -32,6 +32,10 @@
         .manifesto-text { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 800; line-height: 1.1; text-transform: uppercase; color: #888; }
         .manifesto-highlight { color: white; text-shadow: 0 0 10px rgba(255,255,255,0.3); }
         .manifesto-detail { font-family: 'Space Mono'; font-size: 14px; line-height: 1.6; color: var(--red); border-left: 4px solid var(--red); padding-left: 20px; margin-top: 50px; font-weight: 700; text-transform: uppercase; }
+        .editorial-card { border-top: 1px solid #444; padding-top: 32px; font-family: 'Space Mono', monospace; }
+        .editorial-card h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 4vw, 3rem); color: white; margin-bottom: 22px; }
+        .editorial-card p { color: #bbb; line-height: 1.7; }
+        .editorial-card a { color: white; text-decoration: underline; }
         @media (max-width: 600px) {
             .section-header { padding: 80px 20px 40px; }
             .section-header::after { font-size: 6rem; bottom: -10px; }
@@ -92,6 +96,11 @@
                 ¡SIN MÚSICA Y ROCK LA VIDA NO TENDRÍA SENTIDO!
             </div>
         </div>
+        <section class="editorial-card" aria-labelledby="equipo-editorial">
+            <h2 id="equipo-editorial">QUIÉNES HACEMOS RUIDO</h2>
+            <p><strong>Carlos Burgos</strong> · Director de El Rock de todos los Días</p>
+            <p>Para propuestas de prensa, estrenos y entrevistas: <a href="mailto:prensa@elrockdetodoslosdias.com.mx">prensa@elrockdetodoslosdias.com.mx</a></p>
+        </section>
     </main>
 
     <footer class="fanzine-footer">
@@ -137,6 +146,7 @@
         </div>
         <div class="f-bottom">
             <span>© 2026 EL ROCK DE TODOS LOS DÍAS</span>
+            <a href="aviso-de-privacidad.html" class="footer-privacy-link">AVISO DE PRIVACIDAD</a>
             <span>EL SILENCIO ES RUIDO QUE NO SE ATREVE A SER ESCUCHADO</span>
         </div>
     </footer>
