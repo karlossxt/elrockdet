@@ -43,6 +43,13 @@
         .post-deck { max-width: 770px; margin-top: 18px; color: #bcbcbc; font-size: 1.1rem; }
         .img-hero { border: 6px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
         .img-hero img { width: 100%; height: auto; display: block; filter: saturate(1.2); }
+
+        /* Embed de Instagram (blockquote + embed.js) */
+        .ig-embed { max-width: 540px; margin: 30px auto; border: 6px solid var(--accent); padding: 5px; background: #000; }
+        .ig-embed .ig-fallback { display: block; padding: 16px; font-family: 'Space Mono', monospace; font-size: .78rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #fff; text-decoration: none; }
+        .ig-embed .ig-fallback:hover { color: var(--accent); }
+        .ig-embed iframe.instagram-media { display: block; width: 100% !important; max-width: 540px !important; margin: 0 auto; border: 0; }
+        .ig-credit { max-width: 540px; margin: -18px auto 30px; font-family: 'Space Mono', monospace; font-size: .72rem; letter-spacing: 1px; text-transform: uppercase; color: #888; text-align: center; }
         .meta-strip { border-top: 1px solid #222; border-bottom: 1px solid #222; padding: 20px 0; margin-bottom: 50px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-family: 'Space Mono'; font-size: 11px; color: var(--accent); }
         .view-counter { display: inline-flex; align-items: center; gap: 5px; color: #888; }
         .view-counter i { font-size: 13px; }
@@ -149,6 +156,15 @@
                     <h3>UNA HISTORIA QUE TAMBIÉN HEMOS SEGUIDO</h3>
 
                     <p>En <strong>2022</strong>, <em>El Rock de Todos los Días</em> apareció entre los nominados a <strong>Radio Metal</strong>. Un año después tuvimos la oportunidad de conversar con Mando Kalani en <a href="https://www.instagram.com/reel/CycXMzyO5LF/" target="_blank" rel="noopener noreferrer">nuestra entrevista de 2023</a>, parte de nuestro seguimiento a la historia de los premios. La <strong>decimotercera entrega</strong> se anunció para noviembre de <strong>2025</strong> en el HDX Circus, foro al que regresará la ceremonia este año.</p>
+
+                    <!-- ENTREVISTA EMBEBIDA: reel de Instagram con Mando Kalani (2023). El enlace dentro del blockquote queda como respaldo si el script de Instagram no carga. -->
+                    <div class="ig-embed">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CycXMzyO5LF/" data-instgrm-version="14">
+                            <a class="ig-fallback" href="https://www.instagram.com/reel/CycXMzyO5LF/" target="_blank" rel="noopener noreferrer">Ver la entrevista con Mando Kalani en Instagram</a>
+                        </blockquote>
+                    </div>
+                    <script async src="//www.instagram.com/embed.js"></script>
+                    <p class="ig-credit">Video: entrevista con Mando Kalani, 2023 — vía Instagram</p>
 
                     <!-- FOTO 03: premios-kalani-2.jpg — retrato / imagen de archivo compartida para esta nota -->
                     <div class="img-hero" style="border-width: 2px; margin: 30px 0;">
