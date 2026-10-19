@@ -262,7 +262,7 @@ body::before {
 
 .decibels-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 15px;
 }
 
@@ -794,6 +794,17 @@ body::before {
     text-decoration: none;
     letter-spacing: 1px;
     transition: opacity 0.2s;
+}
+
+.decibels-modal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    margin-top: 16px;
+}
+
+.decibels-modal-links .decibels-modal-link {
+    margin-top: 0;
 }
 
 .decibels-modal-link:hover {
