@@ -96,8 +96,16 @@
 
         .content h3 { font-family: 'Syne'; color: var(--accent); text-transform: uppercase; margin: 45px 0 20px 0; font-size: 1.6rem; line-height: 1.05; }
         .content p { font-size: 1.2rem; color: #ccc; margin-bottom: 30px; }
-        .content p:first-of-type::first-letter {
-            font-size: 5rem; float: left; margin-right: 15px;
+/* Letra capitular únicamente del primer párrafo del artículo */
+.content > p:first-child::first-letter {
+    font-size: 5rem;
+    float: left;
+    margin-right: 15px;
+    line-height: 0.8;
+    color: var(--accent);
+    font-weight: 900;
+    font-family: 'Syne', sans-serif;
+}            font-size: 5rem; float: left; margin-right: 15px;
             line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
         }
         .content strong { color: #fff; }
