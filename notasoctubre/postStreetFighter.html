@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYTEMOS | Street Fighter: Ganando el primer combate por muy poca ventaja</title>
+
+    <!-- SEO Básico -->
+    <meta name="description" content="Crítica de Street Fighter (2026) de Kitao Sakurai: un homenaje brutal a los salones de arcade de los noventas, con peleas memorables y una banda sonora que eriza la piel... aunque su montaje le cuesta el combate.">
+    <link rel="canonical" href="https://elrockdetodoslosdias.com.mx/notasoctubre/postStreetFighter.html">
+    <meta property="article:published_time" content="2026-10-23">
+    <link rel="alternate" type="application/rss+xml" title="Feed RSS de El Rock de todos los Días" href="/feed.xml" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="fb:app_id" content="1028340583488019">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ELROCK | Street Fighter: Ganando el primer combate por muy poca ventaja">
+    <meta property="og:description" content="Un homenaje brutal a los salones de arcade de los noventas: peleas memorables, fan service por todos lados y una banda sonora que eriza la piel... aunque el montaje le cuesta el combate.">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notasoctubre/street-fighter-hero.webp">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notasoctubre/postStreetFighter.html">
+    <meta property="og:site_name" content="ELROCK">
+    <meta property="og:locale" content="es_MX">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ELROCK | Street Fighter: Ganando el primer combate por muy poca ventaja">
+    <meta name="twitter:description" content="Crítica sin filtros: lo bueno, lo malo y la banda sonora de la nueva película de Street Fighter.">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notasoctubre/street-fighter-hero.webp">
+
+    <!-- Iconos y Estilos -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+    <link rel="apple-touch-icon" href="../favicon-180.png">
+    <link rel="stylesheet" href="../fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        :root {
+            --bg: #080808;
+            --accent: #ff2d2d;
+            --accent-2: #ffd400;
+            --white: #eeeeee;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; }
+
+        .scanlines {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(255, 45, 45, 0.03) 50%, rgba(0, 0, 0, 0.2) 50%);
+            z-index: 1000; background-size: 100% 3px; pointer-events: none;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; position: relative; }
+
+        .btn-cerrar {
+            position: fixed; top: 30px; right: 30px;
+            background: var(--accent-2); color: black;
+            padding: 12px 20px; font-weight: 900; border: none; cursor: pointer;
+            z-index: 1100; font-family: 'Space Mono'; text-transform: uppercase;
+            box-shadow: 4px 4px 0px var(--accent);
+        }
+
+        .post-header { margin-bottom: 60px; border-bottom: 5px solid var(--accent); padding-bottom: 30px; }
+        .tag-sec { font-family: 'Space Mono'; color: var(--accent); font-weight: 900; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; }
+
+        .post-title { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 7vw, 5rem); line-height: 0.9; margin: 10px 0; text-transform: uppercase; }
+        .post-title span { color: var(--accent); }
+
+        .img-hero { border: 6px solid var(--accent); margin-bottom: 40px; padding: 5px; background: #000; }
+        .img-hero img { width: 100%; display: block; filter: saturate(1.2); }
+        .img-hero figcaption {
+            font-family: 'Space Mono'; font-size: 10px; color: #777;
+            padding: 8px 4px 2px; text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        .meta-strip {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 20px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent-2);
+        }
+
+        .view-counter {
+            display: inline-flex; align-items: center; gap: 5px;
+            color: #888;
+        }
+        .view-counter i { font-size: 13px; }
+        #view-counter { color: var(--accent); font-weight: 700; }
+
+        .main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 60px; }
+
+        .content h3 { font-family: 'Syne'; color: var(--accent); text-transform: uppercase; margin: 45px 0 20px 0; font-size: 1.8rem; line-height: 1; }
+        .content p { font-size: 1.2rem; color: #ccc; margin-bottom: 30px; }
+        .content p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne';
+        }
+        .content strong { color: var(--white); }
+        .content em { color: var(--accent-2); font-style: italic; }
+
+        .data-box {
+            background: #111; border: 1px solid #333; padding: 30px; margin: 40px 0;
+            border-left: 10px solid var(--accent);
+        }
+        .data-box h4 { font-family: 'Syne'; text-transform: uppercase; color: var(--accent-2); margin-bottom: 20px; font-size: 1.2rem; letter-spacing: 1px; }
+        .data-box ol { list-style: none; counter-reset: track; }
+        .data-box li {
+            counter-increment: track;
+            font-family: 'Space Mono'; font-size: 0.85rem; color: #bbb;
+            padding: 9px 0 9px 42px; border-bottom: 1px dashed #262626; position: relative;
+        }
+        .data-box li:last-child { border-bottom: none; }
+        .data-box li::before {
+            content: counter(track, decimal-leading-zero);
+            position: absolute; left: 0; top: 8px;
+            color: var(--accent); font-weight: 700; font-size: 0.8rem;
+        }
+        .data-box li b { color: var(--white); text-transform: uppercase; letter-spacing: .5px; }
+
+        .highlight-box {
+            background: var(--accent); color: #fff; padding: clamp(18px, 4vw, 35px);
+            margin: 40px 0; border: 2px solid white;
+        }
+        .highlight-box h4 { text-transform: uppercase; margin-bottom: 22px; font-family: 'Syne'; font-size: 1.5rem; letter-spacing: 2px; color: #000; }
+        .highlight-box p { font-family: 'Space Mono', monospace; font-size: 1rem; line-height: 1.9; padding-left: 8px; color: #fff; }
+        .highlight-box p::first-letter { font-size: inherit; float: none; margin-right: 0; line-height: inherit; color: inherit; font-weight: inherit; font-family: inherit; }
+
+        .queue-box {
+            background: #0d0d0d; border: 2px solid var(--accent-2); padding: 25px 30px; margin: 40px 0;
+            font-family: 'Space Mono'; font-size: .9rem; color: #bbb;
+        }
+        .queue-box b { color: var(--accent-2); text-transform: uppercase; letter-spacing: 1px; }
+        .queue-box a { color: var(--accent); text-decoration: none; font-weight: 700; }
+        .queue-box a:hover { text-decoration: underline; }
+
+        .sidebar-x {
+            background: #0a0a0a; border: 1px solid var(--accent);
+            padding: 25px; position: sticky; top: 100px;
+        }
+        .sidebar-x h4 { font-family: 'Syne'; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; }
+        .intel-card { margin-bottom: 20px; border-bottom: 1px solid #222; padding-bottom: 10px; font-size: 12px; font-family: 'Space Mono'; color: #999; }
+        .intel-card b { display: block; color: var(--accent-2); margin-bottom: 5px; text-transform: uppercase; font-size: 10px; letter-spacing: 1px; }
+
+        .post-footer { margin-top: 80px; padding: 60px 0; border-top: 1px solid #222; text-align: center; }
+        .post-footer h3 { font-family: 'Syne'; font-size: 2.5rem; color: var(--accent); }
+
+        .otros-ruidos { margin-top: 80px; padding-top: 40px; border-top: 2px solid #222; }
+        .otros-ruidos-header { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; }
+        .otros-ruidos-header h3 { font-family: 'Syne'; font-size: 2rem; font-weight: 800; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+        .otros-ruidos-line { flex: 1; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); }
+        .otros-ruidos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+        .otros-card { text-decoration: none; color: inherit; background: #0a0a0a; border: 1px solid #222; padding: 12px; transition: all 0.4s; display: block; }
+        .otros-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 8px 25px rgba(255, 45, 45, 0.15); }
+        .otros-card-img { width: 100%; height: 160px; overflow: hidden; margin-bottom: 12px; }
+        .otros-card-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
+        .otros-card:hover .otros-card-img img { filter: grayscale(0); transform: scale(1.05); }
+        .otros-card-tag { font-family: 'Space Mono'; font-size: 9px; font-weight: 900; text-transform: uppercase; color: var(--accent-2); display: block; margin-bottom: 8px; letter-spacing: 1px; }
+        .otros-card-title { font-family: 'Syne'; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 8px; color: white; }
+        .otros-card-excerpt { font-family: 'Space Mono'; font-size: 10px; color: #555; line-height: 1.4; }
+
+        @media (max-width: 900px) { .main-layout { grid-template-columns: 1fr; } .sidebar-x { position: static; } }
+        @media (max-width: 600px) {
+            .btn-cerrar { top: 15px; right: 15px; padding: 8px 12px; font-size: .7rem; }
+            .post-title { font-size: 1.8rem; }
+            .content p { font-size: 1rem; }
+            .content h3 { font-size: 1.4rem; }
+            .data-box, .queue-box { padding: 20px; }
+            .data-box li { padding-left: 34px; font-size: .78rem; }
+        }
+
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "headline": "Street Fighter: Ganando el primer combate por muy poca ventaja",
+        "description": "Crítica de Street Fighter (2026) de Kitao Sakurai: homenaje noventero, fan service y una banda sonora sobresaliente, lastrada por un montaje caótico.",
+        "image": "https://elrockdetodoslosdias.com.mx/notasoctubre/street-fighter-hero.webp",
+        "url": "https://elrockdetodoslosdias.com.mx/notasoctubre/postStreetFighter.html",
+        "datePublished": "2026-10-23",
+        "dateModified": "2026-10-23",
+        "author": {
+            "@type": "Organization",
+            "name": "ELROCK",
+            "url": "https://elrockdetodoslosdias.com.mx"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "ELROCK",
+            "url": "https://elrockdetodoslosdias.com.mx",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://elrockdetodoslosdias.com.mx/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://elrockdetodoslosdias.com.mx/notasoctubre/postStreetFighter.html"
+        },
+        "itemReviewed": {
+            "@type": "Movie",
+            "name": "Street Fighter",
+            "director": { "@type": "Person", "name": "Kitao Sakurai" },
+            "datePublished": "2026",
+            "genre": "Acción"
+        },
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "7",
+            "bestRating": "10",
+            "worstRating": "1"
+        },
+        "articleSection": "BYTEMOS",
+        "inLanguage": "es-MX"
+    }
+    </script>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="cerrarNota('../escena.html')">CERRAR [X]</button>
+
+
+    <article class="container">
+
+        <header class="post-header">
+            <span class="tag-sec">BYTEMOS // CINE &amp; VIDEOJUEGOS // ROUND 1</span>
+            <h1 class="post-title">STREET FIGHTER: GANANDO EL PRIMER COMBATE<br><span>POR MUY POCA VENTAJA</span></h1>
+        </header>
+
+        <figure class="img-hero">
+            <img src="street-fighter-hero.webp" alt="Ryu interpretado por Andrew Koji en Street Fighter (2026)">
+            <figcaption>Ryu, el eterno buscador del combate // El torneo World Warrior llega al cine</figcaption>
+        </figure>
+
+        <div class="meta-strip">
+            <span>REGISTRO: EL ROCK DE TODOS LOS DÍAS</span>
+            <span>DATA: CAPCOM / PARAMOUNT</span>
+            <span class="view-counter"><i class="fas fa-eye"></i> <span id="view-counter">...</span></span>
+        </div>
+
+        <div class="main-layout">
+
+            <div class="main-content">
+                <div class="content">
+                    <p>Bien sabemos que cuando se anuncia la adaptación de un videojuego al cine, las expectativas suelen ser muy bajas. Esto es especialmente cierto si ya existieron dos intentos fallidos en acción real en los que a los directores les importó poco conocer el material de origen. Por eso, con esta nueva entrega, era lógico pensar que podría pasar lo mismo. Sin embargo, la cinta dirigida por Kitao Sakurai toma una ruta distinta: abraza por completo la estética de los noventas, empapada de neón, luces barrocas y la genial absurdez de los salones de arcade de la época.</p>
+
+                    <p>Tampoco es que debamos esperar una película perfecta, pero algo es seguro: esta cinta cumple con creces para quienes amamos la franquicia. Es un homenaje directo para aquellos que crecimos en las «retas» de las farmacias o papelerías, comprando fichas y esperando el turno para derrotar al rival; para quienes teníamos un peleador favorito con el que nos volvíamos imbatibles, e incluso para quienes imitábamos los golpes especiales sin tener idea de lo que significaban las frases de los personajes. Capcom tardó mucho tiempo en darnos algo digno, donde al menos el <em>fan service</em> está presente en casi todo el metraje.</p>
+
+                    <figure class="img-hero" style="border-width: 2px; margin: 30px 0;">
+                        <img src="street-fighter-reparto.webp" alt="Reparto de Street Fighter: Ryu, Ken, Guile, Blanka, E. Honda, Chun-Li, M. Bison y Dhalsim">
+                        <figcaption>El reparto completo: del World Warrior a la pantalla grande // Fan service en cada rincón</figcaption>
+                    </figure>
+
+                    <h3>🟢 Los golpes certeros (Lo bueno)</h3>
+                    <p>El inicio es brutal y justifica por sí solo quedarse a ver toda la cinta. La icónica pelea de Ryu contra Sagat, emulando aquel juego de 1987 a través de secuencias de animación estilizadas a modo de <em>flashbacks</em>, es una genialidad visual que eriza la piel de cualquier veterano. De ahí, la historia da un salto en el tiempo hacia la época del segundo torneo.</p>
+
+                    <p>La premisa respeta al videojuego que conocemos: Ryu teme sucumbir al <em>Satsui no Hado</em> —la fuerza malvada que lleva dentro—, mientras M. Bison (David Dastmalchian) busca aumentar su poder organizando el torneo World Warrior. El diseño de vestuario y los efectos prácticos son muy disfrutables. Aunque los combates son contados para un largometraje que vive de las peleas, las coreografías están muy bien logradas, destacando los enfrentamientos de E. Honda contra Ryu, Ryu contra Ken, y la intensa batalla entre Chun-Li y Cammy. Las constantes guiñas al espectador —como ver a Jason Momoa como Blanka o el guiño a la mítica fase de destruir el automóvil— demuestran que el director entiende el universo del juego y no se avergüenza de él.</p>
+
+                    <figure class="img-hero" style="border-width: 2px; margin: 30px 0;">
+                        <img src="street-fighter-select.webp" alt="Pantalla de selección de personajes de Ultra Street Fighter II">
+                        <figcaption>Del arcade a la pantalla grande // El videojuego sigue siendo la biblia de la cinta</figcaption>
+                    </figure>
+
+                    <h3>🎵 El combo perfecto: La banda sonora</h3>
+                    <p>Si hay algo que termina por ganarse el corazón del fan, es el apartado sonoro. La banda sonora es una auténtica joya de la nostalgia, un viaje directo a la era de los 16 bits pero con la potencia de una producción moderna. La música no solo acompaña, sino que eleva cada escena al integrar las melodías clásicas del juego —como los icónicos temas de Ryu, Ken y, por supuesto, el inolvidable tema de Guile— reinventadas con guitarras eléctricas y sintetizadores pesados. Escuchar esos acordes mientras se ejecuta un Hadouken en pantalla grande es el combustible perfecto para activar la memoria emotiva de cualquiera que haya gastado sus domingos en las maquinitas.</p>
+
+                    <figure class="img-hero" style="border-width: 2px; margin: 30px 0;">
+                        <img src="street-fighter-arcade.webp" alt="Sesión de arcade noventera con Street Fighter">
+                        <figcaption>16 bits, fichas y domingos enteros en la maquinita // La nostalgia suena a sintetizador</figcaption>
+                    </figure>
+
+                    <div class="data-box">
+                        <h4>🎧 Lista oficial de canciones (OST) destacadas</h4>
+                        <ol>
+                            <li><b>FIGHT!</b> — El tema principal que abre la acción.</li>
+                            <li><b>Ryu: Lost Champion</b> — Una versión imponente y melancólica del clásico tema de Ryu.</li>
+                            <li><b>Guile's Theme</b> — Revisitado con guitarras eléctricas y sintetizadores (y sí, como dice el meme, queda bien con todo).</li>
+                            <li><b>Chun-Li: Woman of Vengeance</b> — Arreglos tradicionales con ritmos de acción modernos.</li>
+                            <li><b>M. Bison</b> — El tema oscuro y amenazante para el líder de Shadaloo.</li>
+                            <li><b>Honda's Wager</b> — La música rítmica y pesada del combate de E. Honda.</li>
+                            <li><b>KEN VS RYU</b> — La pieza central y más emotiva, el choque de los hermanos adoptivos.</li>
+                            <li><b>Akuma's Arrival</b> — Una composición brutal que anuncia al portador del Satsui no Hado.</li>
+                            <li><b>Hadoken!</b> — El clímax musical diseñado para los golpes especiales.</li>
+                            <li><b>The Fight Continues!</b> — El electrizante tema de los créditos finales.</li>
+                        </ol>
+                    </div>
+
+                    <div class="queue-box">
+                        <b>BONUS TRACK:</b> la película también incluye canciones licenciadas de los noventas para ambientar la época —clásicos de White Zombie, The Offspring y hasta el icónico rap de MC Hammer—, sumándole toneladas de nostalgia al metraje.<br><br>
+                        🎧 Escúchala completa: <a href="https://music.apple.com/us/album/street-fighter-original-motion-picture-soundtrack/6816831537" target="_blank" rel="noopener">Street Fighter (Original Motion Picture Soundtrack) en Apple Music</a>
+                    </div>
+
+                    <h3>🔴 Los puntos débiles (Donde falla)</h3>
+                    <p>Donde la película tropieza es en la sala de edición. El montaje es demasiado caótico y apresurado; en su empeño por trocear las escenas para darle dinamismo a la acción, termina quitándole el aire a los personajes y restándole peso a los propios combates. Además, con una lista de personajes tan gigantesca, el guion sufre para armar el rompecabezas. Se siente el enorme potencial dramático en la rivalidad y la reconciliación entre Ryu (Andrew Koji) y Ken (Noah Centineo), pero la historia apresura su conflicto emocional en favor de chistes absurdos que rompen el tono de seriedad que la trama intenta construir.</p>
+
+                    <p>Por momentos, el humor está tan exagerado que la experiencia se desvía hacia una comedia bizarra, con decisiones de guion cuestionables —como una Cammy extrañamente similar a Harley Quinn o un Bison que roza la caricatura exagerada—. En lugar de elevar el material que parodia, la cinta a veces prefiere reírse de sí misma y de lo «cringe» de los noventas, estancándose en la nostalgia en lugar de proponer una narrativa cinematográfica sólida.</p>
+
+                    <h3>🎬 Escena post-créditos: el nacimiento de Shadaloo</h3>
+                    <p>Todo indica que se vendrá una secuela, pues existe una escena post-créditos. En una secuencia perfectamente animada, el grupo de los villanos se acerca al único luchador de <em>Street Fighter II</em> que hasta ese momento había hecho solo un pequeño cameo al inicio: Sagat. Tras ser humillado por Ryu en su combate anterior, la inclusión del villano en el grupo plantea el nacimiento de los <strong>Cuatro Reyes de Shadaloo</strong>.</p>
+
+                    <figure class="img-hero" style="border-width: 2px; margin: 30px 0;">
+                        <img src="street-fighter-logo.webp" alt="Logotipo de Street Fighter sobre fondo oscuro">
+                        <figcaption>Shadaloo se reagrupa // ¿Los Cuatro Reyes en una futura secuela?</figcaption>
+                    </figure>
+
+                    <div class="highlight-box">
+                        <h4>EL VEREDICTO FINAL</h4>
+                        <p>Al final, no estamos ante la peor película de la historia, pero sí ante una agridulce. Para la comunidad de los juegos de pelea y los fans acérrimos, ver los Hadoukens y los ataques Psycho Crusher en la pantalla grande con este nivel de fidelidad visual es una victoria absoluta. Sin embargo, como pieza de cine, queda la frustración de saber que la gran película definitiva de Street Fighter estuvo muy cerca, pero se nos volvió a escapar de las manos por culpa de un guion atiborrado y una edición que no la dejó respirar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="sidebar-layout">
+                <div class="sidebar-x">
+                    <h4>FICHA TÉCNICA</h4>
+
+                    <div class="intel-card" style="text-align:center; border-bottom:2px solid var(--accent); padding-bottom:18px;">
+                        <b>CALIFICACIÓN</b>
+                        <span style="font-family:'Syne'; font-size:3rem; color:var(--accent-2); line-height:1;">7.0</span>
+                        <span style="color:#666;">/ 10</span>
+                        <span style="display:block; color:#777; font-size:10px; margin-top:6px; letter-spacing:1px;">GANA EL ROUND, NO LA PELEA</span>
+                    </div>
+
+                    <div class="intel-card">
+                        <b>DIRECCIÓN</b>
+                        Kitao Sakurai
+                    </div>
+
+                    <div class="intel-card">
+                        <b>REPARTO</b>
+                        Andrew Koji (Ryu), Noah Centineo (Ken), David Dastmalchian (M. Bison), Jason Momoa (Blanka)
+                    </div>
+
+                    <div class="intel-card">
+                        <b>MÚSICA</b>
+                        Leo Birenberg y Zach Robinson (responsables también de <em>Cobra Kai</em>)
+                    </div>
+
+                    <div class="intel-card">
+                        <b>ESTUDIOS</b>
+                        Capcom / Paramount Pictures
+                    </div>
+
+                    <div class="intel-card">
+                        <b>ESTRENO</b>
+                        2026
+                    </div>
+
+                    <div class="intel-card">
+                        <b>LO MEJOR</b>
+                        El opening Ryu vs. Sagat, el vestuario, los efectos prácticos y la banda sonora.
+                    </div>
+
+                    <div class="intel-card">
+                        <b>LO PEOR</b>
+                        El montaje caótico y un humor que rompe el tono dramático.
+                    </div>
+
+                    <button style="width:100%; background:var(--accent); color:black; border:none; padding:12px; margin-top:10px; font-family:'Space Mono'; font-weight:900; cursor:pointer;">LEER MÁS BYTEMOS</button>
+                </div>
+            </aside>
+        </div>
+
+            <section class="otros-ruidos">
+                <div class="otros-ruidos-header">
+                    <h3>OTROS RUIDOS</h3>
+                    <span class="otros-ruidos-line"></span>
+                </div>
+                <div class="otros-ruidos-grid">
+                    <a href="../notasseptiembre/postCapitanAmerica.html" class="otros-card">
+                        <div class="otros-card-img"><img src="../notasseptiembre/capitan-america-hero.webp" alt="Capitán América vs nacionalistas"></div>
+                        <span class="otros-card-tag">BYTEMOS</span>
+                        <h4 class="otros-card-title">Por qué el Capitán América es la peor pesadilla de los nacionalistas</h4>
+                        <p class="otros-card-excerpt">Steve Rogers no es un símbolo de obediencia; es una carta de protesta.</p>
+                    </a>
+                    <a href="../notasseptiembre/postHeroesPoliticos.html" class="otros-card">
+                        <div class="otros-card-img"><img src="../notasseptiembre/heroes-politicos-hero.webp" alt="Héroes políticos del cómic"></div>
+                        <span class="otros-card-tag">CÓMIC Y POLÍTICA</span>
+                        <h4 class="otros-card-title">Los héroes de cómic más políticos de la historia</h4>
+                        <p class="otros-card-excerpt">Izquierda, antifascismo y derechos humanos en las viñetas.</p>
+                    </a>
+                    <a href="../notasseptiembre/postPlasticMan.html" class="otros-card">
+                        <div class="otros-card-img"><img src="../notasseptiembre/plastic-man-hero.webp" alt="Plastic Man"></div>
+                        <span class="otros-card-tag">DC COMICS</span>
+                        <h4 class="otros-card-title">Plastic Man: El héroe más ridículo y peligroso</h4>
+                        <p class="otros-card-excerpt">El personaje más roto de los cómics que nadie toma en serio.</p>
+                    </a>
+                </div>
+            </section>
+
+        <footer class="post-footer">
+            <h3>BYTEMOS // 2026</h3>
+            <p>EL ROCK DE TODOS LOS DÍAS // CULTURA GEEK</p>
+        </footer>
+
+    </article>
+
+    <div class="radio-player" id="radioPlayer">
+        <div class="radio-toggle" id="radioToggle"><i class="fas fa-chevron-up"></i></div>
+        <div class="radio-content">
+            <div class="radio-live-dot"></div>
+            <span class="radio-label">EN VIVO — EL ROCK DE TODOS LOS DÍAS</span>
+            <audio id="zenoAudio" preload="none">
+                <source src="https://stream.zeno.fm/suqqst6xaq8uv" type="audio/mpeg">
+            </audio>
+            <button class="radio-play-btn" id="playPauseBtn"><i class="fas fa-play"></i></button>
+            <input class="radio-volume" type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+            <button class="radio-close" id="radioClose"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>
