@@ -5,7 +5,7 @@
     <link>https://elrockdetodoslosdias.com.mx</link>
     <description>Archivo independiente de cultura y ruido. Rock, metal y música underground mexicana.</description>
     <language>es-mx</language>
-    <lastBuildDate>Sat, 14 Nov 2026 11:36:41 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 11:39:59 +0000</lastBuildDate>
     <generator>generate-rss.py</generator>
     <item>
       <title>ICE NINE KILLS: A Very Vicious Christmas</title>
@@ -49,8 +49,8 @@
       <guid>https://elrockdetodoslosdias.com.mx/notasnoviembre/postSanVenus.html</guid>
       <description>San Venus presenta Amapola, su EP más pesado, con seis canciones y su primer Lunario el 13 de diciembre en el Auditorio Nacional.</description>
       <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasnoviembre/sanvenus-portada.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasnoviembre/sanvenus-portada.jpg" medium="image" />
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasnoviembre/sanvenus-portada.png" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasnoviembre/sanvenus-portada.png" medium="image" />
     </item>
     <item>
       <title>CONJHURA: Noches Heridas</title>
