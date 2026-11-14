@@ -34,6 +34,50 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- NOTAS NOVIEMBRE 2026 -->
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasnoviembre/postEverlight.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasnoviembre/postTommyIommi.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasnoviembre/postIceNineKills.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasnoviembre/postSanVenus.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasnoviembre/postConjhura.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasnoviembre/postLuisEchegollen.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elrockdetodoslosdias.com.mx/notasnoviembre/postDavidHumeda.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- NOTAS OCTUBRE 2026 -->
   <url>
     <loc>https://elrockdetodoslosdias.com.mx/notasoctubre/postStreetFighter.html</loc>
