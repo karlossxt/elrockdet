@@ -5,7 +5,7 @@
     <link>https://elrockdetodoslosdias.com.mx</link>
     <description>Archivo independiente de cultura y ruido. Rock, metal y música underground mexicana.</description>
     <language>es-mx</language>
-    <lastBuildDate>Sat, 14 Nov 2026 22:44:40 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 23:14:16 +0000</lastBuildDate>
     <generator>generate-rss.py</generator>
     <item>
       <title>ICE NINE KILLS: A Very Vicious Christmas</title>
@@ -24,15 +24,6 @@
       <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
       <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasnoviembre/davidhumeda-portada.jpg" />
       <media:content url="https://elrockdetodoslosdias.com.mx/notasnoviembre/davidhumeda-portada.jpg" medium="image" />
-    </item>
-    <item>
-      <title>TOMMY IOMMI: From the Dark</title>
-      <link>https://elrockdetodoslosdias.com.mx/notasnoviembre/postTommyIommi.html</link>
-      <guid>https://elrockdetodoslosdias.com.mx/notasnoviembre/postTommyIommi.html</guid>
-      <description>Tommy Iommi publica From the Dark con Jørn Lande, Becky Baldwin y Karl Brazil: ocho canciones, lyric video de “Over The Violent Sun” y edición deluxe.</description>
-      <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasnoviembre/tommyiommi-portada.jpg" />
-      <media:content url="https://elrockdetodoslosdias.com.mx/notasnoviembre/tommyiommi-portada.jpg" medium="image" />
     </item>
     <item>
       <title>LUIS ECHEGOLLEN: El Universo Que No Es</title>
@@ -69,6 +60,15 @@
       <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
       <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasnoviembre/everlight-portada.jpg" />
       <media:content url="https://elrockdetodoslosdias.com.mx/notasnoviembre/everlight-portada.jpg" medium="image" />
+    </item>
+    <item>
+      <title>TOMMY IOMMI: From the Dark</title>
+      <link>https://elrockdetodoslosdias.com.mx/notasnoviembre/postTommyIommi.html</link>
+      <guid>https://elrockdetodoslosdias.com.mx/notasnoviembre/postTommyIommi.html</guid>
+      <description>Tommy Iommi publica From the Dark con Jørn Lande, Becky Baldwin y Karl Brazil: ocho canciones, lyric video de “Over The Violent Sun” y edición deluxe.</description>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+      <media:thumbnail url="https://elrockdetodoslosdias.com.mx/notasnoviembre/tommyiommi-portada.jpg" />
+      <media:content url="https://elrockdetodoslosdias.com.mx/notasnoviembre/tommyiommi-portada.jpg" medium="image" />
     </item>
     <item>
       <title>Street Fighter: Ganando el primer combate por muy poca ventaja</title>
