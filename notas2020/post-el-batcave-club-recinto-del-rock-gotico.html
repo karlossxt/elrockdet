@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | EL BATCAVE CLUB</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3H9PZRVX86"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3H9PZRVX86');
+    </script>
+
+    <link rel="alternate" type="application/rss+xml" title="Feed RSS de El Rock de todos los Días" href="/feed.xml" />
+    <meta property="article:published_time" content="2020-04-09">
+
+    <!-- SEO Básico -->
+    <meta name="description" content="Recinto del Rock Gótico. La historia del rock está plagada de grande momentos y lugares que han marcado el rumbo de los géneros. Grandes artistas han dado…">
+    <link rel="canonical" href="https://elrockdetodoslosdias.com.mx/notas2020/post-el-batcave-club-recinto-del-rock-gotico.html">
+
+    <!-- Open Graph / Facebook / WhatsApp / Telegram -->
+    <meta property="fb:app_id" content="1028340583488019">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="EL BATCAVE CLUB">
+    <meta property="og:description" content="Recinto del Rock Gótico. La historia del rock está plagada de grande momentos y lugares que han marcado el rumbo de los géneros. Grandes artistas han dado…">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/notas2020/el-batcave-club-recinto-del-rock-gotico-img-07.webp">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="1491">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notas2020/post-el-batcave-club-recinto-del-rock-gotico.html">
+    <meta property="og:site_name" content="ELROCK">
+    <meta property="og:locale" content="es_MX">
+
+    <!-- Datos de Artículo para Redes -->
+    <meta property="article:section" content="Batcave club">
+    <meta property="article:tag" content="BATCAVE CLUB">
+    <meta property="article:tag" content="Deathrock">
+    <meta property="article:tag" content="Gótico">
+
+    <!-- Twitter Cards (X) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EL BATCAVE CLUB">
+    <meta name="twitter:description" content="Recinto del Rock Gótico. La historia del rock está plagada de grande momentos y lugares que han marcado el rumbo de los géneros. Grandes artistas han dado…">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/notas2020/el-batcave-club-recinto-del-rock-gotico-img-07.webp">
+
+    <!-- Iconos y Fuentes -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+    <link rel="apple-touch-icon" href="../favicon-180.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+
+    <!--
+        PLANTILLA UNIFICADA — combina las variaciones del sitio:
+        · Layout responsivo y radio player mejorado (estilo agosto)
+        · Head SEO completo con tags de artículo (estilo julio)
+        · Bloques: highlight-box, band-highlight, tracklist, video-container, credits-box
+        CAMBIA SOLO: --accent, título, metas, contenido y color de scanlines.
+    -->
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #8b5cf6; /* Cambia por nota: #dc2626 rojo · #8b5cf6 púrpura · #fbbf24 dorado · #10b981 esmeralda · #3b82f6 azul */
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html,
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 90px; /* Margen para que el reproductor no tape el footer */
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%),
+                        linear-gradient(90deg, rgba(99, 102, 241, 0.02), rgba(255, 255, 255, 0.01), rgba(99, 102, 241, 0.02));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        /* LAYOUT PRINCIPAL */
+        .post-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 300px;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        article {
+            width: 100%;
+            max-width: 760px;
+            margin: auto;
+        }
+
+        /* BOTÓN CERRAR */
+        .btn-cerrar {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 2000;
+            background: var(--accent);
+            color: white;
+            padding: 10px 16px;
+            font-weight: 900;
+            border: 2px solid white;
+            cursor: pointer;
+            font-family: 'Space Mono';
+            text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            transition: 0.3s;
+            font-size: .8rem;
+            max-width: calc(100vw - 30px);
+            white-space: nowrap;
+        }
+
+        .btn-cerrar:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--accent);
+        }
+
+        /* HEADER DEL POST */
+        .post-header { margin-bottom: 50px; text-align: left; }
+        .tag-cat {
+            background: var(--accent); color: white; padding: 5px 15px;
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px;
+            margin-bottom: 20px; display: inline-block;
+        }
+
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(1.7rem, 8vw, 4.5rem);
+            word-break: break-word;
+            line-height: 1.0;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        .post-title span { color: var(--accent); font-style: italic; }
+
+        /* IMÁGENES */
+        .img-post {
+            border: 1px solid #222;
+            margin: 40px 0;
+            background: #111;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .img-post img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: contrast(1.1);
+            transition: 0.4s;
+        }
+        .img-post:hover img { filter: contrast(1) saturate(1.1); }
+        .img-label {
+            font-family: 'Space Mono'; font-size: 10px; color: var(--accent);
+            text-align: right; padding: 10px; text-transform: uppercase; border-top: 1px solid #222;
+        }
+
+        /* META */
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+        .view-counter {
+            display: inline-flex; align-items: center; gap: 5px;
+            color: #888;
+        }
+        .view-counter i { font-size: 13px; }
+        #view-counter { color: var(--accent); font-weight: 700; }
+
+        /* CONTENIDO */
+        .post-content p {
+            font-size: 1.2rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        .post-content > p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne', sans-serif;
+        }
+
+        .highlight-box p::first-letter,
+        .band-highlight p::first-letter,
+        .tracklist p::first-letter,
+        .credits-box p::first-letter {
+            font-size: inherit; float: none; margin-right: 0;
+            line-height: inherit; color: inherit; font-weight: inherit; font-family: inherit;
+        }
+
+        .post-content strong { color: white; }
+
+        /* BLOQUE DESTACADO (citas, datos clave) */
+        .highlight-box {
+            background: var(--accent);
+            color: #fff;
+            padding: clamp(18px, 4vw, 35px);
+            margin: 40px 0;
+            border: 2px solid white;
+        }
+        .highlight-box h4 {
+            text-transform: uppercase;
+            margin-bottom: 22px;
+            font-family: 'Syne';
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+        .highlight-box p {
+            font-family: 'Space Mono', monospace;
+            font-size: 1rem;
+            line-height: 1.9;
+            padding-left: 8px;
+            color: #fff;
+        }
+
+        /* BANDA DESTACADA (bloque blanco) */
+        .band-highlight {
+            background: white; color: black; padding: 40px; margin: 60px 0;
+            border-left: 10px solid var(--accent);
+        }
+        .band-highlight h3 { font-family: 'Syne'; font-size: 2rem; text-transform: uppercase; margin-bottom: 10px; }
+        .band-highlight p { font-family: 'Space Mono'; font-weight: 700; color: #111; font-size: 1rem; margin: 0; }
+
+        /* TRACKLIST / FECHAS DE GIRA */
+        .tracklist {
+            border: 2px solid var(--accent);
+            padding: clamp(18px, 4vw, 35px);
+            margin: 40px 0;
+            background: #0a0a0a;
+        }
+        .tracklist h4 {
+            text-transform: uppercase; margin-bottom: 10px; font-family: 'Syne';
+            font-size: 1.5rem; letter-spacing: 2px; color: var(--accent);
+        }
+        .tracklist-subtitle {
+            font-family: 'Space Mono', monospace; font-size: 0.9rem;
+            color: #888; margin-bottom: 20px;
+        }
+        .tracklist-items {
+            font-family: 'Space Mono', monospace; font-size: 1rem; line-height: 2;
+            color: #ccc; margin: 0; display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 25px;
+        }
+
+        /* VIDEO RESPONSIVO (YouTube) */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin: 40px 0;
+            border: 1px solid #222;
+            border-radius: 8px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+
+        /* CRÉDITOS / FICHA TÉCNICA */
+        .credits-box {
+            margin: 60px 0; padding: clamp(18px, 4vw, 40px);
+            border: 5px solid var(--accent);
+            background: rgba(99, 102, 241, 0.05);
+        }
+        .credits-label {
+            font-family: 'Space Mono'; font-size: 14px; color: var(--accent);
+            font-weight: 700; display: block; margin-bottom: 10px;
+        }
+        .credits-main {
+            font-family: 'Syne'; font-size: clamp(2rem, 5vw, 4rem); line-height: 0.9;
+            color: var(--white); text-transform: uppercase; margin-bottom: 20px; display: block;
+        }
+        .credits-details {
+            font-family: 'Space Mono'; font-size: 16px; color: #9ca3af;
+            border-top: 1px solid #333; padding-top: 20px; display: block;
+        }
+
+        /* REDES SOCIALES */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px 0;
+        }
+        .social-links a {
+            flex: 1 1 180px;
+            justify-content: center;
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #111; border: 1px solid #333; padding: 10px 18px;
+            font-family: 'Space Mono'; font-size: 11px; font-weight: 700;
+            color: white; text-decoration: none; text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .social-links a:hover { border-color: var(--accent); background: #1a1a1a; }
+        .social-links a i { color: var(--accent); }
+
+        /* SIDEBAR */
+        .post-sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar-section {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            padding: 20px;
+        }
+
+        .sidebar-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #222;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-title i { font-size: 1rem; }
+        .playlist-embed { border-radius: 8px; width: 100%; }
+
+        /* OTROS RUIDOS — SIDEBAR MINI */
+        .otros-ruidos-sidebar { display: flex; flex-direction: column; gap: 15px; }
+        .otros-mini-card {
+            text-decoration: none; color: inherit;
+            display: flex; gap: 12px; padding: 10px;
+            background: #111; border: 1px solid #222; transition: 0.3s;
+        }
+        .otros-mini-card:hover { border-color: var(--accent); transform: translateX(3px); }
+        .otros-mini-img { width: 70px; height: 70px; flex-shrink: 0; overflow: hidden; }
+        .otros-mini-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.4s; }
+        .otros-mini-card:hover .otros-mini-img img { filter: grayscale(0); }
+        .otros-mini-info { display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+        .otros-mini-tag { font-family: 'Space Mono'; font-size: 8px; font-weight: 900; text-transform: uppercase; color: var(--accent); letter-spacing: 1px; }
+        .otros-mini-title { font-family: 'Syne', sans-serif; font-size: 0.75rem; line-height: 1.1; text-transform: uppercase; color: white; }
+
+        /* OTROS RUIDOS — GRID FINAL */
+        .otros-ruidos { margin-top: 80px; padding-top: 40px; border-top: 2px solid #222; }
+        .otros-ruidos-header { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; }
+        .otros-ruidos-header h3 { font-family: 'Syne'; font-size: 2rem; font-weight: 800; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+        .otros-ruidos-line { flex: 1; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); }
+        .otros-ruidos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+
+        .otros-card { text-decoration: none; color: inherit; background: #0a0a0a; border: 1px solid #222; padding: 12px; transition: all 0.4s; display: block; }
+        .otros-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15); }
+        .otros-card-img { width: 100%; height: 160px; overflow: hidden; margin-bottom: 12px; }
+        .otros-card-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
+        .otros-card:hover .otros-card-img img { filter: grayscale(0); transform: scale(1.05); }
+        .otros-card-tag { font-family: 'Space Mono'; font-size: 9px; font-weight: 900; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 8px; letter-spacing: 1px; }
+        .otros-card-title { font-family: 'Syne'; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 8px; color: white; }
+        .otros-card-excerpt { font-family: 'Space Mono'; font-size: 10px; color: #555; line-height: 1.4; }
+
+        .post-footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #222; text-align: center; font-family: 'Space Mono'; color: #444; }
+
+        /* MEDIA QUERIES */
+
+        /* Tablet */
+        @media (max-width: 1000px) {
+            .post-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 20px 15px;
+            }
+            .post-sidebar {
+                position: relative;
+                top: 0;
+                order: 2;
+            }
+            .meta-info { flex-direction: column; gap: 8px; font-size: 10px; }
+            .post-content > p:first-of-type::first-letter { font-size: 3.5rem; margin-right: 10px; }
+            .post-content p { font-size: 1rem; margin-bottom: 20px; }
+            .img-post { margin: 25px 0; }
+            .img-label { font-size: 9px; padding: 8px; }
+            .otros-ruidos { margin-top: 50px; padding-top: 25px; }
+            .otros-ruidos-header h3 { font-size: 1.3rem; }
+            .post-footer { margin-top: 50px; padding: 25px 0; }
+            .band-highlight { padding: 25px; margin: 40px 0; }
+            .band-highlight h3 { font-size: 1.5rem; }
+        }
+
+        /* Botón cerrar móvil */
+        @media (max-width: 600px) {
+            .btn-cerrar {
+                top: 10px;
+                right: 10px;
+                padding: 8px 12px;
+                font-size: .7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .post-content > p:first-of-type::first-letter { font-size: 3rem; }
+            .post-content p { font-size: 0.95rem; }
+            .meta-info { font-size: 9px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="cerrarNota('../index.html')">CERRAR [X]</button>
+
+    <div class="post-layout">
+        <article>
+            <header class="post-header">
+                <span class="tag-cat">BATCAVE CLUB</span>
+                <h1 class="post-title">EL BATCAVE CLUB</h1>
+            </header>
+
+            <div class="img-post">
+                <img src="el-batcave-club-recinto-del-rock-gotico-img-07.webp" alt="EL BATCAVE CLUB" loading="lazy">
+            </div>
+
+            <div class="meta-info">
+                <span>EL ROCK DE TODOS LOS DÍAS</span>
+                <span>2020</span>
+                <span>BATCAVE CLUB</span>
+
+                <span class="view-counter"><i class="fas fa-eye"></i> <span id="view-counter">...</span></span>
+            </div>
+
+            <div class="post-content">
+                <h2>Recinto del Rock Gótico.</h2>
+
+                <p>La historia del rock está plagada de grande momentos y lugares que han marcado el rumbo de los géneros. Grandes artistas han dado sus pasos en estos lugares que al día de hoy siguen reflejando el espíritu de la música. Lugares como el CBGB en New York con el punk rock, la Cavern en Londres con los Beatles o el Whisky a GoGo en Los Ángeles y el movimiento del glam. Cada uno de estos lugares vio crecer a lo que serían las leyendas de cada género y el gótico no se queda atrás.</p>
+
+                <p>La cueva de los vampiros, mejor conocida como The Batcave Club, fue uno de los parteaguas del género gótico a nivel mundial, lugar que le dio pertenencia a estos personajes que parecían sacados de la novel a de Bram Stoker. Ubicada en Meard Street en el barrio del Soho, Londres (Inglaterra), este lugar abrió sus puertas en julio de 1982, considerado la cuna de la subcultura gótica británica y fue uno de los primeros lugares donde se reunían los Góticos o Batcavers, término que se utilizaba para describir a los fans del rock gótico y deathrock donde el uso de negro, estoperoles y las figuras andróginas se mostraban con naturalidad. La iniciativa por parte de  Ollie Wisdom, cantante de la banda de post-punk, Specimen; dirigió el club con la ayuda Hugh Jones, productor de bandas como The Charlatans y The Bluetones.</p>
+
+                <div class="img-post">
+                <img src="el-batcave-club-recinto-del-rock-gotico-img-01.webp" alt="" style="max-width:225px;margin-left:auto;margin-right:auto;" loading="lazy">
+                </div>
+
+                <p>Inicialmente estaba especializado en la música new wave y en el glam rock, más tarde se centró en el rock gótico. Las bandas que solían tocar en la Batcave Club eran cantantes como Robert Smith de The Cure, Siouxsie Sioux, Steve Severin, Foetus, Marc Almond, New Order, Nick Cave, Alien Sex Fiend y también la banda anfitriona Specimen, que estaba influenciada notablemente por el glam rock de la década de 1970 y por Sex Gang Children, contribuyó al posterior desarrollo de estilos musicales como el gothic rock, el dark cabaret y el deathrock. Estas agrupaciones fueron parte de este legado musical del club y que al día de hoy sigue representando el lado más alternativo de la música. Cabe mencionar que el club también se respaldaba por la actuación de los DJ's residentes Hamish 'the paranoid' McDonald y Annie Hogan (miembro de la banda de Marc Almond. En el club también se mostraban películas en blanco y negro en un teatro antiguo y ocasionalmente había un insólito cabaret. En gran medida, la imagen y la moda de la subcultura se deben a las bandas que tocaron en Batcave.</p>
+
+                <p>En 1983, un disco de vinilo titulado The Bat Cave, Young Limbs &amp; Numb Hymns fue lanzado por el sello de grabación de Londres. La recopilación incluye canciones de The Specimen (Dead Mans Autochop), Sexbeat (Sex Beat), Test Dept. (Shockwork), Patti Palladin (The Nuns New Clothes), James T. Pursey (Eyes Shine Killidiscope), Meat of Youth (Meat of Youth), Brilliant (Coming Up For The Downstroke), The Alien Sex Fiend (R.I.P.), y The Venomettes (The Dance of Death).</p>
+
+                <h3><strong><em>En el interior un texto rezaba:</em></strong></h3>
+
+                <p>Look past the slow black rain of a chill night in Soho; Ignore the lures of a thousand neon fire-flies, fall deft to the sighs of street corner sirens - come walk with me between heaven and hell. Here there is a club lost in its own feverish limbo, where sin becomes salvation and only the dark angels tread. For here is a BATCAVE. This screaming legend of blasphemy, Lechery, and Blood persists in the face of adversity. For some the Batcave has become an icon, but for those that know it is an iconoclast, it is the avenging spirit of nightlife's badlands - its shadow looms large over London's demi-Monde: It is a challenge to the false Idol. It Will Endure.</p>
+
+                <div class="img-post">
+                <img src="el-batcave-club-recinto-del-rock-gotico-img-02.webp" alt="" loading="lazy">
+                </div>
+
+                <p>Mira más allá de la lluvia negro lenta de una noche de frío en Soho; No haga caso de los señuelos de un millar de neón luciérnagas, caen hábil a los suspiros de las sirenas de las esquinas de la calle - Ven a caminar conmigo entre el cielo y el infierno. Aquí hay un club perdido en su propio limbo febril, cuando el pecado se convierte en la salvación y sólo los ángeles oscura banda de rodadura. Por aquí hay un BATCAVE. Esta leyenda gritos de blasfemia, Lujuria, y Sangre persiste en medio de la adversidad. Para algunos la Batcave se ha convertido en un icono, pero para aquellos que saben que es un iconoclasta, es el espíritu vengador de tierras baldías de la vida nocturna - su sombra se cierne sobre Londres demi-Monde: Es un desafío a la falsa Idol. Perdurará.</p>
+
+                <p>Post-punk, psicodelia, New Wave y varios Djs sonaban en este pequeño espacio que albergó grandes momentos del gótico, un lugar relativamente pequeño con un aforo de 300 personas, dejó su huella e inspiró a grandes bandas que al día de hoy siguen creando música. Un documental, una marca de ropa y hasta un sello discográfico son parte del legado de este lugar emblemático para el Rock.</p>
+
+                <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Wky5Y7KyHLU" title="Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/t20GtCOOB18" title="Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="img-post">
+                <img src="el-batcave-club-recinto-del-rock-gotico-img-03.webp" alt="" loading="lazy">
+                </div>
+
+                <div class="img-post">
+                <img src="el-batcave-club-recinto-del-rock-gotico-img-04.webp" alt="" style="max-width:288px;margin-left:auto;margin-right:auto;" loading="lazy">
+                </div>
+
+                <div class="img-post">
+                <img src="el-batcave-club-recinto-del-rock-gotico-img-05.webp" alt="" style="max-width:236px;margin-left:auto;margin-right:auto;" loading="lazy">
+                </div>
+
+                <div class="img-post">
+                <img src="el-batcave-club-recinto-del-rock-gotico-img-06.webp" alt="Robert, Batcave 1983" loading="lazy">
+                <div class="img-label">Robert, Batcave 1983</div>
+                </div>
+
+                <div class="img-post">
+                <img src="el-batcave-club-recinto-del-rock-gotico-img-08.webp" alt="" style="max-width:477px;margin-left:auto;margin-right:auto;" loading="lazy">
+                </div>
+
+                <div class="img-post">
+                <img src="el-batcave-club-recinto-del-rock-gotico-img-09.webp" alt="" loading="lazy">
+                </div>
+
+                <div class="img-post">
+                <img src="el-batcave-club-recinto-del-rock-gotico-img-10.webp" alt="" style="max-width:500px;margin-left:auto;margin-right:auto;" loading="lazy">
+                </div>
+            </div>
+            <section class="otros-ruidos">
+                <div class="otros-ruidos-header">
+                    <h3>OTROS RUIDOS</h3>
+                    <span class="otros-ruidos-line"></span>
+                </div>
+                <div class="otros-ruidos-grid">
+                    <a href="../notas2020/post-nirvana-y-el-despues-de-kurt.html" class="otros-card">
+                        <div class="otros-card-img"><img src="../notas2020/nirvana-y-el-despues-de-kurt-img-01.webp" alt="Nirvana y el después de Kurt"></div>
+                        <span class="otros-card-tag">DAVE GROHL</span>
+                        <h4 class="otros-card-title">Nirvana y el después de Kurt</h4>
+                        <p class="otros-card-excerpt">A un aniversario más de su partida, demos un repaso a lo que paso después con Nirvana. Para muc</p>
+                    </a>
+                    <a href="../notas2020/post-gus-rodriguez-estamos-en-contact.html" class="otros-card">
+                        <div class="otros-card-img"><img src="../notas2020/gus-rodriguez-estamos-en-contact-img-01.webp" alt="Gus Rodríguez, “estamos en contact”."></div>
+                        <span class="otros-card-tag">GAMERS</span>
+                        <h4 class="otros-card-title">Gus Rodríguez, “estamos en contact”.</h4>
+                        <p class="otros-card-excerpt">Los sábados en el 7 nunca fueron tan geniales. Hace 25 años existió Nintendomania que era el no</p>
+                    </a>
+                    <a href="../notas2020/post-buffalo-los-padres-del-hard-rock-australiano.html" class="otros-card">
+                        <div class="otros-card-img"><img src="../notas2020/buffalo-los-padres-del-hard-rock-australiano-img-01.webp" alt="Buffalo, los padres del Hard Rock Australiano"></div>
+                        <span class="otros-card-tag">BUFFALO</span>
+                        <h4 class="otros-card-title">Buffalo, los padres del Hard Rock Australiano</h4>
+                        <p class="otros-card-excerpt">Buffalo, los padres del Hard Rock Australiano</p>
+                    </a>
+                </div>
+            </section>
+
+            <footer class="post-footer">
+                <p>RESEÑA POR: EL ROCK DE TODOS LOS DÍAS</p>
+                <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            </footer>
+        </article>
+
+        <aside class="post-sidebar">
+            <div class="sidebar-section">
+                <h4 class="sidebar-title"><i class="fab fa-spotify"></i> PLAYLIST DE LA SEMANA</h4>
+                <iframe class="playlist-embed"
+                    src="https://open.spotify.com/embed/playlist/153Gvei76OaDP0kMY75GQz?utm_source=generator&theme=0"
+                    height="380" frameBorder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="sidebar-section">
+                <h4 class="sidebar-title"><i class="fas fa-headphones"></i> OTROS RUIDOS</h4>
+                <div class="otros-ruidos-sidebar">
+                    <a href="../notas2020/post-nirvana-y-el-despues-de-kurt.html" class="otros-mini-card">
+                        <div class="otros-mini-img"><img src="../notas2020/nirvana-y-el-despues-de-kurt-img-01.webp" alt=""></div>
+                        <div class="otros-mini-info">
+                            <span class="otros-mini-tag">DAVE GROHL</span>
+                            <span class="otros-mini-title">Nirvana y el después de Kurt</span>
+                        </div>
+                    </a>
+                    <a href="../notas2020/post-gus-rodriguez-estamos-en-contact.html" class="otros-mini-card">
+                        <div class="otros-mini-img"><img src="../notas2020/gus-rodriguez-estamos-en-contact-img-01.webp" alt=""></div>
+                        <div class="otros-mini-info">
+                            <span class="otros-mini-tag">GAMERS</span>
+                            <span class="otros-mini-title">Gus Rodríguez, “estamos en contact”.</span>
+                        </div>
+                    </a>
+                    <a href="../notas2020/post-buffalo-los-padres-del-hard-rock-australiano.html" class="otros-mini-card">
+                        <div class="otros-mini-img"><img src="../notas2020/buffalo-los-padres-del-hard-rock-australiano-img-01.webp" alt=""></div>
+                        <div class="otros-mini-info">
+                            <span class="otros-mini-tag">BUFFALO</span>
+                            <span class="otros-mini-title">Buffalo, los padres del Hard Rock Australiano</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <div class="radio-player" id="radioPlayer">
+        <div class="radio-toggle" id="radioToggle"><i class="fas fa-chevron-up"></i></div>
+        <div class="radio-content">
+            <div class="radio-live-dot"></div>
+            <span class="radio-label">EN VIVO — EL ROCK DE TODOS LOS DÍAS</span>
+            <audio id="zenoAudio" preload="none">
+                <source src="https://stream.zeno.fm/suqqst6xaq8uv" type="audio/mpeg">
+            </audio>
+            <button class="radio-play-btn" id="playPauseBtn"><i class="fas fa-play"></i></button>
+            <input type="range" class="radio-volume" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+            <button class="radio-close" id="radioClose"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>

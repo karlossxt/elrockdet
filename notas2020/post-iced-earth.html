@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELROCK | ICED EARTH</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3H9PZRVX86"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3H9PZRVX86');
+    </script>
+
+    <link rel="alternate" type="application/rss+xml" title="Feed RSS de El Rock de todos los Días" href="/feed.xml" />
+    <meta property="article:published_time" content="2020-02-07">
+
+    <!-- SEO Básico -->
+    <meta name="description" content="Este contundente monstruo del metal nace en Estados Unidos en el año 1985, bajo el rotulo de PURGATORY; principalmente la banda fue fundada por el…">
+    <link rel="canonical" href="https://elrockdetodoslosdias.com.mx/notas2020/post-iced-earth.html">
+
+    <!-- Open Graph / Facebook / WhatsApp / Telegram -->
+    <meta property="fb:app_id" content="1028340583488019">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ICED EARTH">
+    <meta property="og:description" content="Este contundente monstruo del metal nace en Estados Unidos en el año 1985, bajo el rotulo de PURGATORY; principalmente la banda fue fundada por el…">
+    <meta property="og:image" content="https://elrockdetodoslosdias.com.mx/logo-rock-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://elrockdetodoslosdias.com.mx/notas2020/post-iced-earth.html">
+    <meta property="og:site_name" content="ELROCK">
+    <meta property="og:locale" content="es_MX">
+
+    <!-- Datos de Artículo para Redes -->
+    <meta property="article:section" content="Rock">
+    <meta property="article:tag" content="Rock">
+
+    <!-- Twitter Cards (X) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ICED EARTH">
+    <meta name="twitter:description" content="Este contundente monstruo del metal nace en Estados Unidos en el año 1985, bajo el rotulo de PURGATORY; principalmente la banda fue fundada por el…">
+    <meta name="twitter:image" content="https://elrockdetodoslosdias.com.mx/logo-rock-og.jpg">
+
+    <!-- Iconos y Fuentes -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+    <link rel="apple-touch-icon" href="../favicon-180.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../fontawesome-all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700;900&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+
+    <!--
+        PLANTILLA UNIFICADA — combina las variaciones del sitio:
+        · Layout responsivo y radio player mejorado (estilo agosto)
+        · Head SEO completo con tags de artículo (estilo julio)
+        · Bloques: highlight-box, band-highlight, tracklist, video-container, credits-box
+        CAMBIA SOLO: --accent, título, metas, contenido y color de scanlines.
+    -->
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #8b5cf6; /* Cambia por nota: #dc2626 rojo · #8b5cf6 púrpura · #fbbf24 dorado · #10b981 esmeralda · #3b82f6 azul */
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html,
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 90px; /* Margen para que el reproductor no tape el footer */
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%),
+                        linear-gradient(90deg, rgba(99, 102, 241, 0.02), rgba(255, 255, 255, 0.01), rgba(99, 102, 241, 0.02));
+            z-index: 1000; background-size: 100% 4px, 4px 100%; pointer-events: none;
+        }
+
+        /* LAYOUT PRINCIPAL */
+        .post-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 300px;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        article {
+            width: 100%;
+            max-width: 760px;
+            margin: auto;
+        }
+
+        /* BOTÓN CERRAR */
+        .btn-cerrar {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 2000;
+            background: var(--accent);
+            color: white;
+            padding: 10px 16px;
+            font-weight: 900;
+            border: 2px solid white;
+            cursor: pointer;
+            font-family: 'Space Mono';
+            text-transform: uppercase;
+            box-shadow: 4px 4px 0px white;
+            transition: 0.3s;
+            font-size: .8rem;
+            max-width: calc(100vw - 30px);
+            white-space: nowrap;
+        }
+
+        .btn-cerrar:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--accent);
+        }
+
+        /* HEADER DEL POST */
+        .post-header { margin-bottom: 50px; text-align: left; }
+        .tag-cat {
+            background: var(--accent); color: white; padding: 5px 15px;
+            font-family: 'Space Mono'; font-weight: 700; font-size: 12px;
+            margin-bottom: 20px; display: inline-block;
+        }
+
+        .post-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(1.7rem, 8vw, 4.5rem);
+            word-break: break-word;
+            line-height: 1.0;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        .post-title span { color: var(--accent); font-style: italic; }
+
+        /* IMÁGENES */
+        .img-post {
+            border: 1px solid #222;
+            margin: 40px 0;
+            background: #111;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .img-post img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: contrast(1.1);
+            transition: 0.4s;
+        }
+        .img-post:hover img { filter: contrast(1) saturate(1.1); }
+        .img-label {
+            font-family: 'Space Mono'; font-size: 10px; color: var(--accent);
+            text-align: right; padding: 10px; text-transform: uppercase; border-top: 1px solid #222;
+        }
+
+        /* META */
+        .meta-info {
+            border-top: 1px solid #222; border-bottom: 1px solid #222;
+            padding: 15px 0; margin-bottom: 50px;
+            display: flex; justify-content: space-between;
+            font-family: 'Space Mono'; font-size: 11px; color: var(--accent);
+        }
+        .view-counter {
+            display: inline-flex; align-items: center; gap: 5px;
+            color: #888;
+        }
+        .view-counter i { font-size: 13px; }
+        #view-counter { color: var(--accent); font-weight: 700; }
+
+        /* CONTENIDO */
+        .post-content p {
+            font-size: 1.2rem; font-weight: 400; color: #ccc;
+            margin-bottom: 30px; line-height: 1.7;
+        }
+
+        .post-content > p:first-of-type::first-letter {
+            font-size: 5rem; float: left; margin-right: 15px;
+            line-height: 0.8; color: var(--accent); font-weight: 900; font-family: 'Syne', sans-serif;
+        }
+
+        .highlight-box p::first-letter,
+        .band-highlight p::first-letter,
+        .tracklist p::first-letter,
+        .credits-box p::first-letter {
+            font-size: inherit; float: none; margin-right: 0;
+            line-height: inherit; color: inherit; font-weight: inherit; font-family: inherit;
+        }
+
+        .post-content strong { color: white; }
+
+        /* BLOQUE DESTACADO (citas, datos clave) */
+        .highlight-box {
+            background: var(--accent);
+            color: #fff;
+            padding: clamp(18px, 4vw, 35px);
+            margin: 40px 0;
+            border: 2px solid white;
+        }
+        .highlight-box h4 {
+            text-transform: uppercase;
+            margin-bottom: 22px;
+            font-family: 'Syne';
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+        .highlight-box p {
+            font-family: 'Space Mono', monospace;
+            font-size: 1rem;
+            line-height: 1.9;
+            padding-left: 8px;
+            color: #fff;
+        }
+
+        /* BANDA DESTACADA (bloque blanco) */
+        .band-highlight {
+            background: white; color: black; padding: 40px; margin: 60px 0;
+            border-left: 10px solid var(--accent);
+        }
+        .band-highlight h3 { font-family: 'Syne'; font-size: 2rem; text-transform: uppercase; margin-bottom: 10px; }
+        .band-highlight p { font-family: 'Space Mono'; font-weight: 700; color: #111; font-size: 1rem; margin: 0; }
+
+        /* TRACKLIST / FECHAS DE GIRA */
+        .tracklist {
+            border: 2px solid var(--accent);
+            padding: clamp(18px, 4vw, 35px);
+            margin: 40px 0;
+            background: #0a0a0a;
+        }
+        .tracklist h4 {
+            text-transform: uppercase; margin-bottom: 10px; font-family: 'Syne';
+            font-size: 1.5rem; letter-spacing: 2px; color: var(--accent);
+        }
+        .tracklist-subtitle {
+            font-family: 'Space Mono', monospace; font-size: 0.9rem;
+            color: #888; margin-bottom: 20px;
+        }
+        .tracklist-items {
+            font-family: 'Space Mono', monospace; font-size: 1rem; line-height: 2;
+            color: #ccc; margin: 0; display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0 25px;
+        }
+
+        /* VIDEO RESPONSIVO (YouTube) */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin: 40px 0;
+            border: 1px solid #222;
+            border-radius: 8px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+
+        /* CRÉDITOS / FICHA TÉCNICA */
+        .credits-box {
+            margin: 60px 0; padding: clamp(18px, 4vw, 40px);
+            border: 5px solid var(--accent);
+            background: rgba(99, 102, 241, 0.05);
+        }
+        .credits-label {
+            font-family: 'Space Mono'; font-size: 14px; color: var(--accent);
+            font-weight: 700; display: block; margin-bottom: 10px;
+        }
+        .credits-main {
+            font-family: 'Syne'; font-size: clamp(2rem, 5vw, 4rem); line-height: 0.9;
+            color: var(--white); text-transform: uppercase; margin-bottom: 20px; display: block;
+        }
+        .credits-details {
+            font-family: 'Space Mono'; font-size: 16px; color: #9ca3af;
+            border-top: 1px solid #333; padding-top: 20px; display: block;
+        }
+
+        /* REDES SOCIALES */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px 0;
+        }
+        .social-links a {
+            flex: 1 1 180px;
+            justify-content: center;
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #111; border: 1px solid #333; padding: 10px 18px;
+            font-family: 'Space Mono'; font-size: 11px; font-weight: 700;
+            color: white; text-decoration: none; text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .social-links a:hover { border-color: var(--accent); background: #1a1a1a; }
+        .social-links a i { color: var(--accent); }
+
+        /* SIDEBAR */
+        .post-sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar-section {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            padding: 20px;
+        }
+
+        .sidebar-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #222;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-title i { font-size: 1rem; }
+        .playlist-embed { border-radius: 8px; width: 100%; }
+
+        /* OTROS RUIDOS — SIDEBAR MINI */
+        .otros-ruidos-sidebar { display: flex; flex-direction: column; gap: 15px; }
+        .otros-mini-card {
+            text-decoration: none; color: inherit;
+            display: flex; gap: 12px; padding: 10px;
+            background: #111; border: 1px solid #222; transition: 0.3s;
+        }
+        .otros-mini-card:hover { border-color: var(--accent); transform: translateX(3px); }
+        .otros-mini-img { width: 70px; height: 70px; flex-shrink: 0; overflow: hidden; }
+        .otros-mini-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.4s; }
+        .otros-mini-card:hover .otros-mini-img img { filter: grayscale(0); }
+        .otros-mini-info { display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+        .otros-mini-tag { font-family: 'Space Mono'; font-size: 8px; font-weight: 900; text-transform: uppercase; color: var(--accent); letter-spacing: 1px; }
+        .otros-mini-title { font-family: 'Syne', sans-serif; font-size: 0.75rem; line-height: 1.1; text-transform: uppercase; color: white; }
+
+        /* OTROS RUIDOS — GRID FINAL */
+        .otros-ruidos { margin-top: 80px; padding-top: 40px; border-top: 2px solid #222; }
+        .otros-ruidos-header { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; }
+        .otros-ruidos-header h3 { font-family: 'Syne'; font-size: 2rem; font-weight: 800; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
+        .otros-ruidos-line { flex: 1; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); }
+        .otros-ruidos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+
+        .otros-card { text-decoration: none; color: inherit; background: #0a0a0a; border: 1px solid #222; padding: 12px; transition: all 0.4s; display: block; }
+        .otros-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15); }
+        .otros-card-img { width: 100%; height: 160px; overflow: hidden; margin-bottom: 12px; }
+        .otros-card-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: 0.5s; }
+        .otros-card:hover .otros-card-img img { filter: grayscale(0); transform: scale(1.05); }
+        .otros-card-tag { font-family: 'Space Mono'; font-size: 9px; font-weight: 900; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 8px; letter-spacing: 1px; }
+        .otros-card-title { font-family: 'Syne'; font-size: 1.1rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 8px; color: white; }
+        .otros-card-excerpt { font-family: 'Space Mono'; font-size: 10px; color: #555; line-height: 1.4; }
+
+        .post-footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid #222; text-align: center; font-family: 'Space Mono'; color: #444; }
+
+        /* MEDIA QUERIES */
+
+        /* Tablet */
+        @media (max-width: 1000px) {
+            .post-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 20px 15px;
+            }
+            .post-sidebar {
+                position: relative;
+                top: 0;
+                order: 2;
+            }
+            .meta-info { flex-direction: column; gap: 8px; font-size: 10px; }
+            .post-content > p:first-of-type::first-letter { font-size: 3.5rem; margin-right: 10px; }
+            .post-content p { font-size: 1rem; margin-bottom: 20px; }
+            .img-post { margin: 25px 0; }
+            .img-label { font-size: 9px; padding: 8px; }
+            .otros-ruidos { margin-top: 50px; padding-top: 25px; }
+            .otros-ruidos-header h3 { font-size: 1.3rem; }
+            .post-footer { margin-top: 50px; padding: 25px 0; }
+            .band-highlight { padding: 25px; margin: 40px 0; }
+            .band-highlight h3 { font-size: 1.5rem; }
+        }
+
+        /* Botón cerrar móvil */
+        @media (max-width: 600px) {
+            .btn-cerrar {
+                top: 10px;
+                right: 10px;
+                padding: 8px 12px;
+                font-size: .7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .post-content > p:first-of-type::first-letter { font-size: 3rem; }
+            .post-content p { font-size: 0.95rem; }
+            .meta-info { font-size: 9px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scanlines"></div>
+    <button class="btn-cerrar" onclick="cerrarNota('../index.html')">CERRAR [X]</button>
+
+    <div class="post-layout">
+        <article>
+            <header class="post-header">
+                <span class="tag-cat">ROCK</span>
+                <h1 class="post-title">ICED EARTH</h1>
+            </header>
+
+            
+
+            <div class="meta-info">
+                <span>EL ROCK DE TODOS LOS DÍAS</span>
+                <span>2020</span>
+                <span>ROCK</span>
+
+                <span class="view-counter"><i class="fas fa-eye"></i> <span id="view-counter">...</span></span>
+            </div>
+
+            <div class="post-content">
+                <p>Este contundente monstruo del metal nace en Estados Unidos en el año 1985, bajo el rotulo de PURGATORY; principalmente la banda fue fundada por el guitarrista Jon Schaffer, quien al mudarse de su ciudad natal a la Florida tuvo que cambiar de nombre, porque en esa ciudad ya existía otra llamada así, Schaffer motivado por desarrollar su banda como un original hito musical dentro del metal, decide cambiar de título definitivamente por el de ICED EARTH.</p>
+
+                <p>Originalmente la agrupación empezó con el vocalista Gene Adam, pero eso solo duraría durante el tiempo de los demos y finalmente hasta el primer disco titulado "Iced Earth" del año 1990, después de eso vendrían varios vocalistas, empezando por John Greely que tan solo participo del segundo disco titulado "Night Of The Stormrider" del año 1991; debido a esas dificultades Schaffer decidió darse un descanso tras el complicado inicio de la banda, sin embargo la música era muy buena. Debido ese punto de la calidad musical, la banda decide volverse activar con normalidad, durando en inactividad durante un periodo de tres años (1992-1995) pero no fue un rompimiento, hay que aclarar que fue una pausa.</p>
+
+                <p>Cuando ICED EARTH normaliza sus actividades vuelve con un nuevo vocalista llamado Matt Barlow, que sería quien más duraría hasta esa fecha que data desde el disco "Burnt Offerings" del año 1995, hasta el "Horror Show" del 2001. Pero esa historia de los integrantes inestables lamentablemente no se mejoraba con el resto de los participantes, quienes no tuvieron nada de continuidad. Sin embargo esa historia no mejoraría con más y más integrantes que llegarían, pero siempre con el estupendo comando de Jon Schaffer. De hecho vinieron muchos discos de altísima calidad y con mucha actividad de integrantes como he repetido varias veces, por ejemplo luego de que Matt Barlow se retirara de la banda, que fue por dedicarse como agente de policía, tras el atentado del 11 de septiembre en Estados Unidos; luego volvió a unirse a la banda en 2007, debido a la partida de Tim Owens (ex-JUDAS PRIEST) quien venía tergiversando mucho el estilo de ICED EARTH, por sus notables influencias de JUDAS PRIEST y el Heavy Metal europeo. Pero Matt Barlow se marcharía por segunda vez en 2011, sin embargo la buena noticia para la banda se daría en ese preciso momento. Ok, el inestable Barlow se marchó, pero en cambio de él, llego el virtuoso Stu Block, que literalmente sorprendió a todo el mundo por su inmensa capacidad vocal, sin duda "pisoteo" a todos los vocalistas anteriores de la banda, ya que hasta la prensa del género empezó a hacer rápidamente comparaciones, concluyendo en que Stu Block con la grabación del álbum titulado "Dystopia" del año 2011, era lo mejor que habría podido pasar a la banda, y además a cualquier banda del mundo en general, ya que Block es potente, melódico, perceptivo y variado; su tono vocal hace de maravilla las veces de la melodía más alta y pegajosa, hasta el segmento más potente y rasgado del género, llevando a ese disco como uno de los mejores de la discografía y sin duda alguna, el mejor vocalmente hablando. La historia de la banda continua, como digna representante del puesto que ha obtenido a lo largo de los años, como una de las mejores de su rama y una de las más conocidas e imprescindibles para cualquier metalero.</p>
+
+                <p>Iced Earth, lanzado en 1990, es el primer álbum de larga duración. Este es un trabajo de mucha controversia, tal como observo en las reacciones de la gente, sobre todo por el vocalista; pero independientemente de eso creo que hay consenso en la gente al afirmar que es un discazo. Principalmente por los riffs que son magistrales, rápidos y melódicos. La batería tiene una actitud buena, no es tan básica como en otras bandas de Thrash, pero tampoco se destaca por su hiperactividad, tampoco es técnica, pero quiero destacar que si es muy coordinada con los demás instrumentos. La voz es lo que marca la polémica, ya que muchos lo odian porque fácil y constantemente hace palabras en forma de gritos agudos, ve gritos y tonos por todo lado, y la sección de tono medio no es el mejor; pero a pesar de todo eso, yo me pongo del lado de los que de cierta forma les gusta el trabajo de Gene Adam, eso de los tonos y medio gritos agudos, no lo veo como un problema sino como una virtud, en el tono medio si es cierto que no lo hace del todo bien. Por último, la producción fue bastante buena, a pesar del año, es muy agradable observar que se esforzaron por hacer todo muy bien hecho, si bien no perfecto y con algo de novatada, pero es muy autóctono de un super debut de una gran banda.</p>
+
+                <p>Night Of The Stormrider, lanzado en 1991, es el segundo álbum de larga duración. Esta versión llego con nuevas ideas, y ademas con nuevos integrantes que le agregan ese factor de cambio, partiendo de lo escrito por Schaffer se puede decir que es un éxito calificado como un Thrash muy potente. La guitarra una vez más deja aclarado que la banda es capaz de crear riffs y solos ultra potentes y brillantes. La batería se sabe compenetrar mejor que en la anterior ocasión; eso se debe a que tiene un nuevo hombre al control, se trata de Rick Secchiari que trajo un poco más de técnica, velocidad y potencia para que la banda sonara mucho más a Thrash y ya no tanto a Power. La voz fue lo que más cambió, ya que también llego un nuevo integrante, John Greely hizo un trabajo fenomenal de variedad, a decir verdad, la anterior voz parecía mucho a Power, mientras que Greely les dio más fuerza a las temáticas. Y la producción sonó como debía sonar, es decir, ajustándose al cambio que experimento la banda, es más dura y claro que se ven errores, pero nada para lamentar.</p>
+
+                <p>Burnt Offerings, lanzado en 1995, es el tercer álbum de larga duración. Después del descanso que se tomó la banda, vuelven con toda la energía recargada para seguir abriéndose camino dentro de la escena metalera; el resultado del gran trabajo, resulto siendo el disco más oscuro y atmosférico de la banda. Los riffs son más poderosos que nunca, se ve un abandono casi totalitario de los tintes Power que venían mostrando a grandes rasgos, para ahora dedicarse más a un Thrash ahora más contundente. La batería tiene un papel bien importante en el sonido, ya que se nota mucho que quieren ser demoledores con esos golpes contundentes de percusión. La voz exhibe a un nuevo integrante, el encargado fue Matt Barlow, quien se desempeñó de forma muy potente y eficaz de acuerdo al contenido más oscuro de la banda. Y por último la producción fue regular, si bien la nueva perspectiva musical de la banda fue positiva y un tanto ambiciosa, la producción no tuvo el mejor resultado, pero se les perdona ya que no fue fatal y de todas formas la banda aún estaba experimentando con su regreso.</p>
+
+                <p>The Dark Saga, lanzado en 1996, es el cuarto álbum de larga duración. Ahora se adentran todavía más en su técnica de Thrash oscuro, composiciones relajadas y con voces netamente melódicas, que claramente les ayudo en el ángulo de conseguir herramientas para el futuro, ya que tienen unas muy buenas canciones, pero por el otro lado también hay secciones que no valen mucho la pena. La guitarra de hecho es un factor de encrucijada bien grande, porque algunos riffs son oscuros, potentes y magistrales, pero también hay algo de relleno o simplemente riffs un poco fuera de base; algo que se vio notorio fue el mayor adicionamiento de guitarra acústica. Por parte de la batería simplemente hace lo que tiene que hacer, hay ocasiones en las que ni se nota la existencia de tambores, muy básica diría yo. La voz fue de primera categoría, Barlow sabe cómo poner el mejor tono en cada uno de los segmentos de las canciones, y en general prolifera una voz muy limpia y melódica. La producción mejoro su técnica, tal parece que el recorrido les ha ayudado en ser más contundentes y claros.</p>
+
+                <p>Something Wicked This Way Comes, lanzado en 1998, es el quinto álbum de larga duración. Siguen en el camino que han venido recorriendo desde que retornaron a la actividad con el disco de 1995, pero da la impresión que van cayendo en desempeño, muchas de las partes instrumentales y con coros no dan de a mucho la talla. La guitarra acústica se volvió costumbre, junto a los riffs tranquilos un tanto oscuros que recorren tempos medios, por mucho medio-rápidos, pero el disco no logra ser potente ni rápido. La batería continúa siendo algo monótona, no es que cubra las líneas a la perfección y pocas veces se le ve variada y viva en la estructura de la música. El color vocal es bueno, pero también se siente que va desmejorando, sencillamente no está siendo muy adecuado con el legado de ICED EARTH. Y de la producción se puede decir que es lo único que va en ascenso, cada vez más fino y nítido el sonido con una buena mezcla y buenos efectos instrumentales realzados.</p>
+
+                <p>Horror Show, lanzado en 2001, es el sexto álbum de larga duración. Interesante como se metieron en una composición temática de forma conceptual, que circula en varios ámbitos a los que le habían trabajado con fuerza en los anteriores discos; fue un buen resultado y con buenas críticas en general. La guitarra es un poco más fuerte y variada que en el pasado con adiciones de atmósferas constantes que vuelven muy rica la música, los solos tienen un buen desempeño que apoyan bastante la buena voz. La batería mejoro levemente, claramente le falta aún más poder, pero al parecer va por buen camino. Por su lado la voz tiene un resurgir, volvió a tener algo más de potencia, que iba en declive en los dos anteriores discos, muy melódica, potente y oportuna. Y por último la producción sonó bastante bien, siento que tiene unos errores de volumen entre los instrumentos, no está perfectamente bien balanceado; pero fue un buen resultado, en resumidas cuentas.</p>
+
+                <p>The Glorious Burden, lanzado en 2004, es el séptimo álbum de larga duración. Esto creo que arruino por completo la trayectoria y paso firme de la banda, aunque hubieron algunos bajones de calidad, con esto verdaderamente cayeron bajo; es un revuelto de un poco de baladas sin mayor inspiración ni poder, y con temática de la historia militar de Estados Unidos, que a muchos (me incluyo), no gusto para nada. La guitarra es un aburrimiento, una que otra vez hay riffs que medio sacan la cara, pero en la gran mayoría es solo relleno. La batería se puede decir que hizo una buena tarea, a pesar de contar con un material que no tiene nada de poder, la batería trato siempre de brindar algo de variedad, coordinación y poder. En la voz ahora esta Tim Owens, que es un buen vocalista, porque se le ve potencia y buena ejecución de tonos bajos, medios y altos. Por último, la producción también tubo errores, algunos graves y los otros no, dentro de los aciertos de producción es que se logra escuchar el bajo, pero dentro de lo malo esta la falta de técnica para resaltar mejor la estructura; aunque con música mala la producción no puede hacer milagros...</p>
+
+                <p>Framing Armageddon, lanzado en 2007, es el octavo álbum de larga duración. La banda una vez más se encuentra en el ojo del huracán, ya que no salen de la controversia, unos admiran los nuevos aires épicos que ha tomado, pero otros sencillamente dicen que los cambios no han sido justificados, porque eso hace que una banda sea difícil de seguir por la gran cantidad de cambios en todos los sentidos. La guitarra mejoro mucho con respecto al pésimo disco anterior, tiene ciertos riffs de artillería que le dan ese toque de pesadez al sonido, que tanto careció el anterior álbum, pero aun se escuchan rellenos; los solos están muy bien estructurados, cumplen su papel de aparecer para darle magistralidad a las canciones. La batería sigue siendo buena dentro de lo que cabe, no logra ser excelente, pero si se notan momentos en los que realmente aporta poder, es interesante ver como no se estanca. La voz sigue estando a cargo de Tim Owens, quien hace un trabajo muy bueno, gracias a la capacidad de adecuarse a las temáticas que fueron de álbum conceptual. Por último, la producción fue muy buena, no tenía muchos retos, así que salió adelante de forma sólida.</p>
+
+                <p>The Crucible Of Man, lanzado en 2008, es el noveno álbum de larga duración. Se ve florecer la confianza una vez más, afortunadamente el optimismo se vio reflejado en todos los ámbitos de la banda para finalmente arrojar este buen disco, con un sonido más potente y de nuevo al cargo de las voces el potente Matt Barlow, quien se retiró para ejercer su carrera de oficial, pero afortunadamente volvió a explotar su voz de excelente forma con ICED EARTH. Los riffs y solos están entrelazados de forma estupenda, así como en los viejos tiempos y con una vitalidad que se percibe gracias a la enorme experiencia que ya tienen. La batería también parece bastante motivada, en esta banda siempre ha sido importante que toda la estructura le ayude, brindándole guías de ritmos y tempos para que la batería pueda trabajar bien, afortunadamente así es en este caso particular, la estructura existe y la percusión se movió como pez en el agua. Con el retorno de Barlow en las vocales era casi seguro el éxito, y de hecho lo fue, la banda parece trabajar muy bien con él, mientras que no lo fue así con Tim Owens, que por decirlo de forma un tanto agresiva, descarrilo a la banda de sus propios rieles. Y por último fue una producción muy perfecta, no logro verle problemas.</p>
+
+                <p>Dystopia, lanzado en 2011, es el décimo álbum de larga duración. ¡Espectacular este disco! Si el anterior resultado estuvo bueno, este fue aún más potente; para quien conozca la banda percibirá que un punto importante para que toda la música cambie, depende directamente del vocalista de turno y a pesar de que el comandante es Schaffer, pareciera que él solo guía, mas no tiene lineamientos en forma de órdenes, digo lo anterior porque me ha resultado más que evidente al examinar detalladamente la historia de la banda con el alto registro de vocalistas en movimiento. La guitarra y la batería están perfectamente compaginadas, nunca hacen cosas por separado, sino que todo el tiempo se mantienen apoyando para la constante hiperactividad de sonidos en una velocidad medio alta, los solos brillan de forma muy buena en la música junto a los coros. El nuevo vocalista se llama Stu Block, que hizo un trabajo magistral con mucha variedad y poder, él por sus influencias en música más pesada sabe cómo hacer notas y gritos rasgados, como también maneja las notas melódicas bajas y en las partes de medio tempo cantadas no se queda atrás; es un tipo terriblemente talentoso que le dio la mejor noticia a la banda, luego de momento un tanto complicados. Por último la producción fue limpia y bien ejecutada, es importante como ayudo a que la banda sacara ciertos momentos atmosféricos y acústicos.</p>
+
+                <p>Plagues Of Babylon, lanzado en 2014, es el décimo primer álbum de larga duración. Es prohibido escuchar esto una sola vez, aseguro que a la primera escucha resultará poco interesante, mientras que a partir de la segunda escucha se apreciará mucho más. Su portada es bien diferente a lo que la banda había mostrado, tal vez trataron de dar a entender que quieren hacer algo un tanto más fuerte; y ciertamente la música así lo confirma. Es lo más cercano que ha hecho de "Burnt Offerings" y con algunas reivindicaciones de "Horror Show", con guitarras fuertes, bajos presentes y baterías constantes; es bueno escuchar que no se olvidan de sus raíces, la atmósfera y estilo general de ICED EARTH están muy presentes, además con el vozarrón de Stu; él está perfectamente en forma, puede cantar con una increíble y pegajosa voz limpia junto al contraste de voz fuerte que se escucha muy potente. En síntesis: un disco recomendado, pero para tenerle paciencia, es un material para escuchar con atención y sin afán...</p>
+
+                <p>Incorruptible, lanzado en 2014, es simplemente fantástico, este trabajo es una combinación del sonido clásico con su sonido característico agregando elementos actuales; las vocales del señor Stu Block son realmente memorables. Parece que ICED EARTH se ha reencontrado, con un Stu Block desatado a lo largo de todo el LP y un Jake Dreyer que parece haber aportado su virtuosismo y el toque progresivo que profesa en su banda a los recuperados riffs de Schaffer, que da sensaciones de haber vuelto al encuentro a su musa habitual del pasado. ¿El resultado? Un disco notable, aun con los más que presentes altibajos, y que nos da lo que cabría esperar de un grupo de esta trayectoria, uno de sus mejores discos, equilibrado, lleno de grandes canciones, cargado de matices y de letras llenas de intensidad, simplemente un disco muy recomendable.</p>
+            </div>
+            <section class="otros-ruidos">
+                <div class="otros-ruidos-header">
+                    <h3>OTROS RUIDOS</h3>
+                    <span class="otros-ruidos-line"></span>
+                </div>
+                <div class="otros-ruidos-grid">
+                    <a href="../notas2020/post-feliz-cumpleanos-vince-neil.html" class="otros-card">
+                        <div class="otros-card-img"><img src="../notas2020/feliz-cumpleanos-vince-neil-img-01.webp" alt="¡Felíz cumpleaños Vince Neil!"></div>
+                        <span class="otros-card-tag">CUMPLEAÑOS</span>
+                        <h4 class="otros-card-title">¡Felíz cumpleaños Vince Neil!</h4>
+                        <p class="otros-card-excerpt">Hoy es el cumpleaños de Vince Neil vocalista de Mötley Crüe, el señor cumple 59 años y sigue ro</p>
+                    </a>
+                    <a href="../notas2020/post-los-documentales-de-rock-que-puedes-ver-en-youtube-para-esta.html" class="otros-card">
+                        <div class="otros-card-img"><img src="../notas2020/" alt="Los documentales de Rock que puedes ver en Youtube para esta"></div>
+                        <span class="otros-card-tag">CINE</span>
+                        <h4 class="otros-card-title">Los documentales de Rock que puedes ver en Youtube para esta cuarenten</h4>
+                        <p class="otros-card-excerpt">Rockumentales para estar en casa</p>
+                    </a>
+                    <a href="../notas2020/post-un-hombre-alado-el-documental-sobre-gustavo-cerati.html" class="otros-card">
+                        <div class="otros-card-img"><img src="../notas2020/un-hombre-alado-el-documental-sobre-gustavo-cerati-img-01.webp" alt="Un Hombre Alado, el documental sobre Gustavo Cerati"></div>
+                        <span class="otros-card-tag">CINE</span>
+                        <h4 class="otros-card-title">Un Hombre Alado, el documental sobre Gustavo Cerati</h4>
+                        <p class="otros-card-excerpt">Un Hombre Alado, el documental sobre Gustavo Cerati</p>
+                    </a>
+                </div>
+            </section>
+
+            <footer class="post-footer">
+                <p>RESEÑA POR: EL ROCK DE TODOS LOS DÍAS</p>
+                <p style="font-size: 10px; margin-top: 10px; letter-spacing: 2px;">EL ROCK DE TODOS LOS DÍAS © 2026</p>
+            </footer>
+        </article>
+
+        <aside class="post-sidebar">
+            <div class="sidebar-section">
+                <h4 class="sidebar-title"><i class="fab fa-spotify"></i> PLAYLIST DE LA SEMANA</h4>
+                <iframe class="playlist-embed"
+                    src="https://open.spotify.com/embed/playlist/153Gvei76OaDP0kMY75GQz?utm_source=generator&theme=0"
+                    height="380" frameBorder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="sidebar-section">
+                <h4 class="sidebar-title"><i class="fas fa-headphones"></i> OTROS RUIDOS</h4>
+                <div class="otros-ruidos-sidebar">
+                    <a href="../notas2020/post-feliz-cumpleanos-vince-neil.html" class="otros-mini-card">
+                        <div class="otros-mini-img"><img src="../notas2020/feliz-cumpleanos-vince-neil-img-01.webp" alt=""></div>
+                        <div class="otros-mini-info">
+                            <span class="otros-mini-tag">CUMPLEAÑOS</span>
+                            <span class="otros-mini-title">¡Felíz cumpleaños Vince Neil!</span>
+                        </div>
+                    </a>
+                    <a href="../notas2020/post-los-documentales-de-rock-que-puedes-ver-en-youtube-para-esta.html" class="otros-mini-card">
+                        <div class="otros-mini-img"><img src="../notas2020/" alt=""></div>
+                        <div class="otros-mini-info">
+                            <span class="otros-mini-tag">CINE</span>
+                            <span class="otros-mini-title">Los documentales de Rock que puedes ver en Youtube p</span>
+                        </div>
+                    </a>
+                    <a href="../notas2020/post-un-hombre-alado-el-documental-sobre-gustavo-cerati.html" class="otros-mini-card">
+                        <div class="otros-mini-img"><img src="../notas2020/un-hombre-alado-el-documental-sobre-gustavo-cerati-img-01.webp" alt=""></div>
+                        <div class="otros-mini-info">
+                            <span class="otros-mini-tag">CINE</span>
+                            <span class="otros-mini-title">Un Hombre Alado, el documental sobre Gustavo Cerati</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <div class="radio-player" id="radioPlayer">
+        <div class="radio-toggle" id="radioToggle"><i class="fas fa-chevron-up"></i></div>
+        <div class="radio-content">
+            <div class="radio-live-dot"></div>
+            <span class="radio-label">EN VIVO — EL ROCK DE TODOS LOS DÍAS</span>
+            <audio id="zenoAudio" preload="none">
+                <source src="https://stream.zeno.fm/suqqst6xaq8uv" type="audio/mpeg">
+            </audio>
+            <button class="radio-play-btn" id="playPauseBtn"><i class="fas fa-play"></i></button>
+            <input type="range" class="radio-volume" id="volumeSlider" min="0" max="1" step="0.01" value="0.7">
+            <button class="radio-close" id="radioClose"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>
