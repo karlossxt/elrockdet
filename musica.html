@@ -90,6 +90,8 @@
         .card-tag { font-family: 'Space Mono'; color: var(--red); font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; }
         .card-title { font-family: 'Syne'; font-size: 1.5rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 15px; }
         .card-excerpt { font-family: 'Space Mono'; font-size: 12px; color: #a1a1aa; line-height: 1.4; }
+        .article-card { min-width: 0; }
+        .card-title, .card-excerpt { overflow-wrap: anywhere; }
 
         .archive-band {
             display: block; text-decoration: none; color: inherit;
@@ -100,6 +102,24 @@
         .archive-band-title { font-family: 'Syne'; font-size: clamp(2rem, 6vw, 3.2rem); font-style: italic; text-transform: uppercase; line-height: 0.9; letter-spacing: -1px; }
         .archive-band-meta { display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap; font-family: 'Space Mono'; font-size: 11px; text-transform: uppercase; color: #a1a1aa; letter-spacing: 1px; margin-top: 14px; }
         .archive-band-cta { color: var(--red); font-weight: 700; }
+
+        .archive-sep {
+            display: flex; justify-content: space-between; align-items: flex-end;
+            gap: 15px; flex-wrap: wrap;
+            border-top: 2px solid #333; border-bottom: 2px solid #333;
+            padding: 22px 0 14px; margin: 90px 0 40px;
+            scroll-margin-top: 90px;
+        }
+        .archive-sep h2 {
+            font-family: 'Syne'; font-size: clamp(1.9rem, 5vw, 2.8rem);
+            font-style: italic; text-transform: uppercase; line-height: 0.95;
+        }
+        .archive-sep-meta {
+            font-family: 'Space Mono'; font-size: 11px; text-transform: uppercase;
+            letter-spacing: 1px; color: #a1a1aa;
+        }
+        .archive-sep-link { color: var(--red); font-weight: 700; text-decoration: none; margin-left: 14px; }
+        .archive-sep-link:hover { text-decoration: underline; }
 
         @media (max-width: 900px) { .article-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) {
@@ -152,11 +172,11 @@
             <span class="archive-count" style="color: var(--red);">● Actualizado hoy</span>
         </div>
 
-        <a href="archivo.html" class="archive-band">
+        <a href="#archivo" class="archive-band">
             <div class="archive-band-title">Archivo<span style="opacity: 0.35;">.</span></div>
             <div class="archive-band-meta">
                 <span>40 notas rescatadas · 2020 — 2021</span>
-                <span class="archive-band-cta">Entrar →</span>
+                <span class="archive-band-cta">Ir al bloque ↓</span>
             </div>
         </a>
 
@@ -301,6 +321,257 @@
                 <span class="card-tag">GIRA</span>
                 <h2 class="card-title">RADIOHEAD</h2>
                 <p class="card-excerpt">El Regreso y la Distancia.</p>
+            </a>
+        </div>
+
+        <div class="archive-sep" id="archivo">
+            <h2>Archivo 2020 — 2021</h2>
+            <div class="archive-sep-meta">
+                40 notas rescatadas
+                <a href="archivo.html" class="archive-sep-link">Solo el archivo →</a>
+            </div>
+        </div>
+
+        <div class="article-grid">
+            <a href="notas2021/post-the-warning-evolve.html" class="article-card">
+                <div class="card-image"><img src="notas2021/the-warning-evolve-img-01.webp" alt="The Warning-Evolve." loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2021</span>
+                <h2 class="card-title">The Warning-Evolve.</h2>
+                <p class="card-excerpt">ESTRENAN NUEVO SENCILLO Y VIDEO…</p>
+            </a>
+            <a href="notas2021/post-el-punk-mexicano-esta-de-luto.html" class="article-card">
+                <div class="card-image"><img src="notas2021/el-punk-mexicano-esta-de-luto-img-02.webp" alt="EL PUNK MEXICANO ESTA DE LUTO" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2021</span>
+                <h2 class="card-title">EL PUNK MEXICANO ESTA DE LUTO</h2>
+                <p class="card-excerpt">FALLECE &quot;ROLO&quot; VOCALISTA DE Atoxxxico UNA DE LAS BANDAS MAS IMPORTANTES DEL PUNK…</p>
+            </a>
+            <a href="notas2021/post-musica-sobre-ruedas.html" class="article-card">
+                <div class="card-image"><img src="notas2021/musica-sobre-ruedas-img-02.webp" alt="Música sobre ruedas." loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2021</span>
+                <h2 class="card-title">Música sobre ruedas.</h2>
+                <p class="card-excerpt">Dos amigos, Alejandro y Alejandro, una casa rodante llamada Camelia, un ukulele, un guitalele y un mundo por recorrer, l</p>
+            </a>
+            <a href="notas2021/post-flores-muertas.html" class="article-card">
+                <div class="card-image"><img src="notas2021/flores-muertas-img-01.webp" alt="&quot;FLORES MUERTAS&quot;" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2021</span>
+                <h2 class="card-title">&quot;FLORES MUERTAS&quot;</h2>
+                <p class="card-excerpt">NOVUS NOS PRESENTA SU NUEVO…</p>
+            </a>
+            <a href="notas2021/post-cuentos-de-los-hermanos-grind.html" class="article-card">
+                <div class="card-image"><img src="notas2021/cuentos-de-los-hermanos-grind-img-02.webp" alt="CUENTOS DE LOS HERMANOS GRIND" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2021</span>
+                <h2 class="card-title">CUENTOS DE LOS HERMANOS GRIND</h2>
+                <p class="card-excerpt">salen nuevamente de su mazmorra con nueva música y su acostumbrado mal gusto en un Live…</p>
+            </a>
+            <a href="notas2021/post-aryem-rompe-sus-cadenas-con-su-nuevo-sencillo.html" class="article-card">
+                <div class="card-image"><img src="notas2021/aryem-rompe-sus-cadenas-con-su-nuevo-sencillo-img-01.webp" alt="ARYEM ROMPE SUS CADENAS CON SU NUEVO SENCILLO" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2021</span>
+                <h2 class="card-title">ARYEM ROMPE SUS CADENAS CON SU NUEVO SENCILLO</h2>
+                <p class="card-excerpt">&quot;REBORN&quot; ES UNA ENORME PROBADA DE LO QUE SERA SU NUEVO…</p>
+            </a>
+            <a href="notas2021/post-introtyl.html" class="article-card">
+                <div class="card-image"><img src="notas2021/introtyl-img-01.webp" alt="INTROTYL" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2021</span>
+                <h2 class="card-title">INTROTYL</h2>
+                <p class="card-excerpt">Desatarán un abismo de brutalidad con su nuevo &quot;Live…</p>
+            </a>
+            <a href="notas2021/post-shout-it-out-loud.html" class="article-card">
+                <div class="card-image"><img src="notas2021/shout-it-out-loud-img-01.webp" alt="&quot;Shout It Out Loud&quot;" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2021</span>
+                <h2 class="card-title">&quot;Shout It Out Loud&quot;</h2>
+                <p class="card-excerpt">QUE SE SABE DE LA PELÍCULA BIOGRÁFICA DE KISS EN…</p>
+            </a>
+            <a href="notas2021/post-morrissey-parodiado-en-los-simpson-y-este-les-da-con-todo.html" class="article-card">
+                <div class="card-image"><img src="notas2021/morrissey-parodiado-en-los-simpson-y-este-les-da-con-todo-img-02.webp" alt="Morrissey parodiado en los Simpson y este les da con todo." loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2021</span>
+                <h2 class="card-title">Morrissey parodiado en los Simpson y este les da con todo.</h2>
+                <p class="card-excerpt">Los acusa de &quot;capitalizar controversias…</p>
+            </a>
+            <a href="notas2021/post-odias-a-alguna-banda-de-rock.html" class="article-card">
+                <div class="card-image"><img src="notas2021/odias-a-alguna-banda-de-rock-img-01.webp" alt="¿ODIAS A ALGUNA BANDA DE ROCK?" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2021</span>
+                <h2 class="card-title">¿ODIAS A ALGUNA BANDA DE ROCK?</h2>
+                <p class="card-excerpt">La revista estadounidense “Best Life” nos cuenta cuales son las mas…</p>
+            </a>
+            <a href="notas2021/post-anima-tempo-celebra-10-anos.html" class="article-card">
+                <div class="card-image"><img src="notas2021/anima-tempo-celebra-10-anos-img-01.webp" alt="ANIMA TEMPO CELEBRA 10 AÑOS" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2021</span>
+                <h2 class="card-title">ANIMA TEMPO CELEBRA 10 AÑOS</h2>
+                <p class="card-excerpt">Ya casi cumplimos un año de que los eventos presenciales y sobretodo de música han sido pospuestos por la endemia que vi</p>
+            </a>
+            <a href="notas2021/post-dead-legacy-ignite.html" class="article-card">
+                <div class="card-image"><img src="notas2021/dead-legacy-ignite-img-03.webp" alt="Dead Legacy, Ignite" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2021</span>
+                <h2 class="card-title">Dead Legacy, Ignite</h2>
+                <p class="card-excerpt">1de febrero la fecha en que le reinicio comienza. Si podemos hablar de Deathcore -Metalcore hecho en México, indiscutibl</p>
+            </a>
+            <a href="notas2021/post-de-rock-perdidas-pandemias-y-reflexion.html" class="article-card">
+                <div class="card-image"><img src="notas2021/de-rock-perdidas-pandemias-y-reflexion-img-01.webp" alt="De rock, pérdidas, pandemias y reflexión" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2021</span>
+                <h2 class="card-title">De rock, pérdidas, pandemias y reflexión</h2>
+                <p class="card-excerpt">Hablemos de rock, pérdidas, pandemias y reflexión. El 2020 se fue más rápido que cualquier otro año, se fue a velocidade</p>
+            </a>
+            <a href="notas2021/post-ely-guerra-y-sus-aromas-una-verdadera-experiencia.html" class="article-card">
+                <div class="card-image"><img src="notas2021/ely-guerra-y-sus-aromas-una-verdadera-experiencia-img-02.webp" alt="ELY GUERRA Y SUS AROMAS: “Una verdadera experiencia”" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2021</span>
+                <h2 class="card-title">ELY GUERRA Y SUS AROMAS: “Una verdadera experiencia”</h2>
+                <p class="card-excerpt">A ti que estás leyendo esta reseña, quiero agradecer profundamente que estés aquí pues quiere decir que, así como yo, er</p>
+            </a>
+            <a href="notas2020/post-rompan-todo-un-documental-que-narra-la-historia-del-rock-en.html" class="article-card">
+                <div class="card-image"><img src="notas2020/rompan-todo-un-documental-que-narra-la-historia-del-rock-en-img-01.webp" alt="“ROMPAN TODO”: Un documental que narra la historia del rock en Latinoa" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">“ROMPAN TODO”: Un documental que narra la historia del rock en Latinoamérica y que nos obliga a buscar con binoculares la participación femenina en secuencia.</h2>
+                <p class="card-excerpt">&quot;Rompan todo&quot; Serie documental de la historia del rock en…</p>
+            </a>
+            <a href="notas2020/post-grinderman-el-lado-rabioso-de-nick-cave.html" class="article-card">
+                <div class="card-image"><img src="notas2020/grinderman-el-lado-rabioso-de-nick-cave-img-02.webp" alt="GRINDERMAN, el lado rabioso de Nick Cave" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">GRINDERMAN, el lado rabioso de Nick Cave</h2>
+                <p class="card-excerpt">El sonido áspero y potente del maestro Últimamente todo ha sido un poco pulcro y ordenado en el Rock, fresco, caras reci</p>
+            </a>
+            <a href="notas2020/post-hasta-siempre-eddie-van-halen-1955-2020.html" class="article-card">
+                <div class="card-image"><img src="notas2020/hasta-siempre-eddie-van-halen-1955-2020-img-03.webp" alt="Hasta siempre Eddie Van Halen, 1955-2020" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Hasta siempre Eddie Van Halen, 1955-2020</h2>
+                <p class="card-excerpt">Uno de los mejores guitarristas de la historia, nos deja a los 65 años. Además, vocalista y miembro fundador de unas de </p>
+            </a>
+            <a href="notas2020/post-rock-hecho-en-mexico.html" class="article-card">
+                <div class="card-image"><img src="notas2020/rock-hecho-en-mexico-img-03.webp" alt="ROCK HECHO EN MÉXICO" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">ROCK HECHO EN MÉXICO</h2>
+                <p class="card-excerpt">Una historia de lucha y constancia Tal vez el Vive Latino, los conciertos, las tocadas en bares, fiestas y ahora en esto</p>
+            </a>
+            <a href="notas2020/post-hard-rock-psicotropico-para-uso-recreativo.html" class="article-card">
+                <div class="card-image"><img src="notas2020/hard-rock-psicotropico-para-uso-recreativo-img-01.webp" alt="Hard Rock Psicotrópico para uso recreativo, guiño guiño 😉" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Hard Rock Psicotrópico para uso recreativo, guiño guiño 😉</h2>
+                <p class="card-excerpt">Ver contenido original ↗ Música para curar, para reír, para orar, para soñar, para pensar, para convivir, para destruir,</p>
+            </a>
+            <a href="notas2020/post-grunge-el-grito-de-una-generacion.html" class="article-card">
+                <div class="card-image"><img src="notas2020/grunge-el-grito-de-una-generacion-img-04.webp" alt="GRUNGE, el grito de una generación" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">GRUNGE, el grito de una generación</h2>
+                <p class="card-excerpt">El Sonido de Seattle Este genero siendo contemporáneo de lo que se llamó La Generación X, nace de una mezcla musical de </p>
+            </a>
+            <a href="notas2020/post-stoner-rock-el-alma-del-desierto.html" class="article-card">
+                <div class="card-image"><img src="notas2020/stoner-rock-el-alma-del-desierto-img-01.webp" alt="STONER ROCK, el alma del desierto." loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">STONER ROCK, el alma del desierto.</h2>
+                <p class="card-excerpt">Psicodelia, distorsión y amplificadores. ¿Cuántos saben que es Stoner?, seguramente son pocos, muy pocos.El Stoner Rock </p>
+            </a>
+            <a href="notas2020/post-ian-curtis-tan-vigente-despues-de-40-anos.html" class="article-card">
+                <div class="card-image"><img src="notas2020/ian-curtis-tan-vigente-despues-de-40-anos-img-02.webp" alt="Ian Curtis, tan vigente después de 40 años." loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Ian Curtis, tan vigente después de 40 años.</h2>
+                <p class="card-excerpt">&quot;Love Will Tear Us Apart&quot; su epitafio. 40 años han pasado y los que seguimos aquí hemos visto una guerra fría, la explor</p>
+            </a>
+            <a href="notas2020/post-buffalo-los-padres-del-hard-rock-australiano.html" class="article-card">
+                <div class="card-image"><img src="notas2020/buffalo-los-padres-del-hard-rock-australiano-img-01.webp" alt="Buffalo, los padres del Hard Rock Australiano" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Buffalo, los padres del Hard Rock Australiano</h2>
+                <p class="card-excerpt">Buffalo, los padres del Hard Rock…</p>
+            </a>
+            <a href="notas2020/post-gus-rodriguez-estamos-en-contact.html" class="article-card">
+                <div class="card-image"><img src="notas2020/gus-rodriguez-estamos-en-contact-img-01.webp" alt="Gus Rodríguez, “estamos en contact”." loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Gus Rodríguez, “estamos en contact”.</h2>
+                <p class="card-excerpt">Los sábados en el 7 nunca fueron tan geniales. Hace 25 años existió Nintendomania que era el nombre de un programa que p</p>
+            </a>
+            <a href="notas2020/post-el-batcave-club-recinto-del-rock-gotico.html" class="article-card">
+                <div class="card-image"><img src="notas2020/el-batcave-club-recinto-del-rock-gotico-img-07.webp" alt="EL BATCAVE CLUB" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">EL BATCAVE CLUB</h2>
+                <p class="card-excerpt">Recinto del Rock Gótico. La historia del rock está plagada de grande momentos y lugares que han marcado el rumbo de los </p>
+            </a>
+            <a href="notas2020/post-nirvana-y-el-despues-de-kurt.html" class="article-card">
+                <div class="card-image"><img src="notas2020/nirvana-y-el-despues-de-kurt-img-01.webp" alt="Nirvana y el después de Kurt" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Nirvana y el después de Kurt</h2>
+                <p class="card-excerpt">A un aniversario más de su partida, demos un repaso a lo que paso después con Nirvana. Para muchos Nirvana fue un parte </p>
+            </a>
+            <a href="notas2020/post-mark-st-john.html" class="article-card">
+                <div class="card-image"><img src="notas2020/mark-st-john-img-01.webp" alt="Mark St. John" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Mark St. John</h2>
+                <p class="card-excerpt">Una mágica guitarra y esporádica en Kiss. El cupo de la guitarra líder en Kiss quedaba libre después de que Paul y Gene </p>
+            </a>
+            <a href="notas2020/post-nick-cave-oscuridad-violencia-caos-y-belleza-desgarradora-a.html" class="article-card">
+                <div class="card-image"><img src="notas2020/nick-cave-oscuridad-violencia-caos-y-belleza-desgarradora-a-img-01.webp" alt="Nick Cave" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Nick Cave</h2>
+                <p class="card-excerpt">Nick Cave, letras desafiantes, sonido violento y melancolía…</p>
+            </a>
+            <a href="notas2020/post-kiss-reprograma-gira-latinoamericana.html" class="article-card">
+                <div class="card-image"><img src="notas2020/kiss-reprograma-gira-latinoamericana-img-02.webp" alt="Kiss reprograma gira latinoamericana." loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Kiss reprograma gira latinoamericana.</h2>
+                <p class="card-excerpt">Ya hay nuevas fechas para los conciertos y serán para los meses finales del 2020. Dadas las circunstancias de la pandemi</p>
+            </a>
+            <a href="notas2020/post-un-hombre-alado-el-documental-sobre-gustavo-cerati.html" class="article-card">
+                <div class="card-image"><img src="notas2020/un-hombre-alado-el-documental-sobre-gustavo-cerati-img-01.webp" alt="Un Hombre Alado, el documental sobre Gustavo Cerati" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Un Hombre Alado, el documental sobre Gustavo Cerati</h2>
+                <p class="card-excerpt">Un Hombre Alado, el documental sobre Gustavo…</p>
+            </a>
+            <a href="notas2020/post-los-documentales-de-rock-que-puedes-ver-en-youtube-para-esta.html" class="article-card">
+                
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Los documentales de Rock que puedes ver en Youtube para esta cuarentena</h2>
+                <p class="card-excerpt">Rockumentales para estar en…</p>
+            </a>
+            <a href="notas2020/post-feliz-cumpleanos-vince-neil.html" class="article-card">
+                <div class="card-image"><img src="notas2020/feliz-cumpleanos-vince-neil-img-01.webp" alt="¡Felíz cumpleaños Vince Neil!" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">¡Felíz cumpleaños Vince Neil!</h2>
+                <p class="card-excerpt">Hoy es el cumpleaños de Vince Neil vocalista de Mötley Crüe, el señor cumple 59 años y sigue rockeando como chamaco de s</p>
+            </a>
+            <a href="notas2020/post-cine-para-inquietos.html" class="article-card">
+                
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">CINE PARA INQUIETOS</h2>
+                <p class="card-excerpt">CINE PARA INQUIETOS Para ti que no dudas ni por un segundo en alinear tu existencia cotidiana con tus más profundos dese</p>
+            </a>
+            <a href="notas2020/post-iced-earth.html" class="article-card">
+                
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">ICED EARTH</h2>
+                <p class="card-excerpt">Este contundente monstruo del metal nace en Estados Unidos en el año 1985, bajo el rotulo de PURGATORY; principalmente l</p>
+            </a>
+            <a href="notas2020/post-sin-la-gloria-del-clasico.html" class="article-card">
+                <div class="card-image"><img src="notas2020/sin-la-gloria-del-clasico-img-01.webp" alt="Sin la gloria del Clásico" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Sin la gloria del Clásico</h2>
+                <p class="card-excerpt">Este enero por fin llegó el juego que Blizzard había anunciado en la blizzcon 2018, warcraft 3: reforged (29/01/2020) Qu</p>
+            </a>
+            <a href="notas2020/post-ronnie-james-dio-el-hombre-con-la-voz-magica.html" class="article-card">
+                <div class="card-image"><img src="notas2020/ronnie-james-dio-el-hombre-con-la-voz-magica-img-04.webp" alt="Ronnie James Dio, El hombre con la voz mágica" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Ronnie James Dio, El hombre con la voz mágica</h2>
+                <p class="card-excerpt">Han pasado 10 años, y todos los 16 de Mayo siguen siendo un día donde recordamos la carrera de Ronnie James Dio. Una de </p>
+            </a>
+            <a href="notas2020/post-llamado-a-la-nostalgia-por-bandai-namco.html" class="article-card">
+                <div class="card-image"><img src="notas2020/llamado-a-la-nostalgia-por-bandai-namco-img-01.webp" alt="Llamado a la nostalgia por Bandai Namco" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Llamado a la nostalgia por Bandai Namco</h2>
+                <p class="card-excerpt">Dragon Ball Z Kakarot llegó a los hogares de los fans desde el 16 de enero. La saga sigue siendo relevante muchos años d</p>
+            </a>
+            <a href="notas2020/post-power-ups-de-los-videojuegos.html" class="article-card">
+                <div class="card-image"><img src="notas2020/power-ups-de-los-videojuegos-img-02.webp" alt="POWER UPS DE LOS VIDEOJUEGOS" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">POWER UPS DE LOS VIDEOJUEGOS</h2>
+                <p class="card-excerpt">Estas primeras semanas se suscitó un lamentable evento, los videojuegos fueron nuevamente mencionados como influencia pa</p>
+            </a>
+            <a href="notas2020/post-los-tenis-panam-ya-tienen-superpoderes.html" class="article-card">
+                <div class="card-image"><img src="notas2020/los-tenis-panam-ya-tienen-superpoderes-img-01.webp" alt="Los Tenis Panam ya tienen superpoderes." loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">Los Tenis Panam ya tienen superpoderes.</h2>
+                <p class="card-excerpt">La marca mexicana llego a un acuerdo con Disney para producir calzado con personajes de Marvel. Así lo anuncia en una en</p>
+            </a>
+            <a href="notas2020/post-en-serio-oasis-se-reune-en-2022.html" class="article-card">
+                <div class="card-image"><img src="notas2020/en-serio-oasis-se-reune-en-2022-img-01.webp" alt="¿En serio? Oasis se reúne en 2022" loading="lazy"></div>
+                <span class="card-tag">ARCHIVO // 2020</span>
+                <h2 class="card-title">¿En serio? Oasis se reúne en 2022</h2>
+                <p class="card-excerpt">Así lo afirma en su cuenta de twitter Liam Gallagher Este miércoles Liam sorprendió a los seguidores de Oasis al citar e</p>
             </a>
         </div>
     </main>
