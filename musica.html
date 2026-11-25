@@ -91,6 +91,16 @@
         .card-title { font-family: 'Syne'; font-size: 1.5rem; line-height: 1.1; text-transform: uppercase; margin-bottom: 15px; }
         .card-excerpt { font-family: 'Space Mono'; font-size: 12px; color: #a1a1aa; line-height: 1.4; }
 
+        .archive-band {
+            display: block; text-decoration: none; color: inherit;
+            background: #0f0f0f; border: 1px solid #222; border-left: 4px solid var(--red);
+            padding: 26px 30px; margin-bottom: 55px; transition: 0.3s;
+        }
+        .archive-band:hover { background: #141414; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        .archive-band-title { font-family: 'Syne'; font-size: clamp(2rem, 6vw, 3.2rem); font-style: italic; text-transform: uppercase; line-height: 0.9; letter-spacing: -1px; }
+        .archive-band-meta { display: flex; justify-content: space-between; align-items: center; gap: 15px; flex-wrap: wrap; font-family: 'Space Mono'; font-size: 11px; text-transform: uppercase; color: #a1a1aa; letter-spacing: 1px; margin-top: 14px; }
+        .archive-band-cta { color: var(--red); font-weight: 700; }
+
         @media (max-width: 900px) { .article-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) {
             .section-header { padding: 80px 20px 40px; }
@@ -141,6 +151,14 @@
             <span class="archive-count">Total de entradas:</span>
             <span class="archive-count" style="color: var(--red);">● Actualizado hoy</span>
         </div>
+
+        <a href="archivo.html" class="archive-band">
+            <div class="archive-band-title">Archivo<span style="opacity: 0.35;">.</span></div>
+            <div class="archive-band-meta">
+                <span>40 notas rescatadas · 2020 — 2021</span>
+                <span class="archive-band-cta">Entrar →</span>
+            </div>
+        </a>
 
         <div class="article-grid">
             <a href="notasnoviembre/postEstrenos2daSemanaNoviembre.html" class="article-card">
